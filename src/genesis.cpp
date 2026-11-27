@@ -1055,7 +1055,7 @@ AssayResult run_heldout_assay(Session &s, const std::vector<GenesisDNA> &seed_dn
 
 int run_evolve(Session &s, u32 pop_n, u32 max_layers, u32 ticks, u32 seed, u32 challenge_tier, bool controls,
                const std::string &load_path, const std::string &save_path,
-               const std::string &video_path = "", const std::string &video_title = "AXION GENESIS V40",
+               const std::string &video_path = "", const std::string &video_title = "AXION GENESIS V41",
                u32 world_size = WORLD_W, u32 max_syn_slabs = 0u) {
     std::vector<GenesisDNA> loaded_dnas;
     u32 base_gen = 1u;
@@ -4560,7 +4560,7 @@ int run_converse(Session &s, const std::string &load_path, const std::string &sc
 
 int command(int argc, char **argv) {
     if (argc < 3 || std::string_view(argv[2]) == "--help") {
-        std::cout << R"(Axion Genesis v40  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
+        std::cout << R"(Axion Genesis v41  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
 
   ./axion genesis bench    [--pop N] [--substeps S] [--repeats R] [--world 256|512|1024]
   ./axion genesis evolve   [--pop N] [--max-areas L] [--max-syn-slabs S] [--world 256|512|1024] [--ticks T] [--seed S] [--challenge 0|1|2] [--controls] [--load FILE] [--save FILE] [--video FILE] [--video-title TITLE]
@@ -4600,7 +4600,7 @@ runtime-scalable 256x256 / 512x512 / 1024x1024 planet.
     if (sub == "evolve") {
         u32 pop_n = 512, max_layers = 0, max_syn_slabs = 0, world_size = WORLD_W, ticks = 2000, seed = 42, challenge = 1;
         bool controls = false;
-        std::string load_path, save_path, video_path, video_title = "AXION GENESIS V40";
+        std::string load_path, save_path, video_path, video_title = "AXION GENESIS V41";
         for (int i = 3; i < argc; ++i) {
             std::string_view f = argv[i];
             if (f == "--controls") { controls = true; continue; }
