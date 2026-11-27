@@ -1090,7 +1090,9 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                             i32 best_g = -100000;
                             u32 n_dirs = (cz != i32(tz) && (rl.dir_mask & 0x30u) != 0u) ? 5u : 4u;
                             u32 cur_col = (u32(cx & 1) | (u32(cy & 1) << 1));
-                            i32 h_step = (cz == i32(tz) && (is_sens_col || is_asc_pyr || is_local_pyr || is_desc_pyr) && cur_col == want_col) ? 2 : 1;
+                            // Stride-2 Sperry column gliding strictly on cortico-cortical tracts (is_asc_pyr / is_local_pyr / is_desc_pyr);
+                            // primary sensory projections (is_sens_col) keep crisp 1-cell bilateral retinotopic/tonotopic topography!
+                            i32 h_step = (cz == i32(tz) && !is_sens_col && (is_asc_pyr || is_local_pyr || is_desc_pyr) && cur_col == want_col) ? 2 : 1;
                             u32 step_r = mix(rng + stp * 17u + br * 97u);
                             rng = step_r;
                             for (u32 dir = 0; dir < n_dirs; ++dir) {
@@ -1137,7 +1139,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                 if (is_sens_col) {
                                     i32 adx = nx - i32(ux); if (adx < 0) adx = -adx;
                                     i32 ady = ny - i32(uy); if (ady < 0) ady = -ady;
-                                    g += (14 - (adx + ady)) + ((n_col == want_col) ? 38 : -16);
+                                    g += (20 - (adx + ady) * 2) + ((n_col == want_col) ? 38 : -16);
                                 } else if (is_asc_pyr) {
                                     g += (n_col == want_col) ? 32 : -14;
                                 } else if (is_local_pyr) {

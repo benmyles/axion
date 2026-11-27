@@ -648,16 +648,14 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
         u32 my_gfold = 0u;
         {
             i32 extra_tau = (layer_idx >= 2u) ? 2 : (slow_tau ? 1 : 0);
-            // Authentic Koch (1999) / Destexhe (2003) Awake In-Vivo Cortical Time Constants + Mongillo (2008) STF:
-            // - Awake cortical pyramidal neurons have fast high-conductance integration (tau_m = 4..8 substeps = 1..2t)
-            //   so trials cool cleanly in darkness (ZERO 16t ghost contamination -> L1..L_top noise < 0.08, high SNR!)
-            // - True 16-32t working memory across delays & distractors lives in activity-silent Prefrontal STF calcium!
+            // Authentic Koch (1999) / Destexhe (2003) Fast Awake Soma (tau_m = 4..8 substeps -> 99% dark cooldown!)
+            // + Larkum (1999) Sustained Apical Ca2+ Plateau (tau_a = 8..16 substeps = 2..4t) + Mongillo STF!
             i32 soma_leak_shift = (layer_idx >= 2u)
                                       ? (2 + (slow_tau ? 1 : 0))
                                       : ((layer_idx == 1u) ? (2 + (dna.bio_params[0] & 1) + (slow_tau ? 1 : 0))
                                                            : ((tk == TK_EYE) ? 2 : (3 + (dna.bio_params[0] & 3))));
             i32 apic_leak_shift = (layer_idx >= 1u)
-                                      ? (2 + (slow_tau ? 1 : 0))
+                                      ? (3 + (slow_tau ? 1 : 0))
                                       : (2 + (dna.bio_params[1] & 3));
             i32 soma_thresh = 700 + i32(dna.bio_params[2]) * 4;
             i32 apic_thresh = 410 + i32(dna.bio_params[3]) * 3;
@@ -772,7 +770,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                 ld_syn_quad(pool.syn_slabs + sbase + u64(g) * TISSUE_CELLS + tid, sq[0], sq[1], sq[2], sq[3]);
                                 if ((sq[0] | sq[1] | sq[2] | sq[3]) == 0u) break;
                                 i32 br_b[4] = {0, 0, 0, 0};
-                                u32 br_e = 0u; // 4x4-bit coincident excitatory hit counters on this 4-synapse NMDA branch!
+                                u32 br_hits = 0u; // Distinct coincident excitatory synapses on this 4-synapse NMDA branch (1-tick window!)
                                 #pragma unroll
                                 for (u32 j = 0; j < 4u; ++j) {
                                     u32 s = sq[j];
@@ -792,18 +790,20 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                         bool is_ap = (s & 0x04000000u) != 0u;
                                         i32 ac = is_ap ? curr : 0;
                                         i32 bc = is_ap ? 0 : curr;
-                                        u32 ex_b = (!is_ap && sw_i > 0) ? 1u : 0u;
-                                        if (win & 8u) { ext_tot[0] += curr; ext_apic[0] += ac; br_b[0] += bc; br_e += ex_b; }
-                                        if (win & 4u) { ext_tot[1] += curr; ext_apic[1] += ac; br_b[1] += bc; br_e += (ex_b << 4); }
-                                        if (win & 2u) { ext_tot[2] += curr; ext_apic[2] += ac; br_b[2] += bc; br_e += (ex_b << 8); }
-                                        if (win & 1u) { ext_tot[3] += curr; ext_apic[3] += ac; br_b[3] += bc; br_e += (ex_b << 12); }
+                                        if (!is_ap && sw_i > 0) ++br_hits;
+                                        if (win & 8u) { ext_tot[0] += curr; ext_apic[0] += ac; br_b[0] += bc; }
+                                        if (win & 4u) { ext_tot[1] += curr; ext_apic[1] += ac; br_b[1] += bc; }
+                                        if (win & 2u) { ext_tot[2] += curr; ext_apic[2] += ac; br_b[2] += bc; }
+                                        if (win & 1u) { ext_tot[3] += curr; ext_apic[3] += ac; br_b[3] += bc; }
                                     }
                                 }
-                                if (do_nmda_br && br_e != 0u) {
-                                    #pragma unroll
-                                    for (u32 sb = 0; sb < 4u; ++sb) {
-                                        if (((br_e >> (sb * 4u)) & 15u) >= 2u && br_b[sb] > 140)
-                                            ext_tot[sb] += (br_b[sb] >> 1) + (br_b[sb] >> 2); // +75% local NMDA dendritic spike!
+                                if (do_nmda_br && br_hits >= 2u) {
+                                    i32 br_sum = br_b[0] + br_b[1] + br_b[2] + br_b[3];
+                                    if (br_sum > 280) {
+                                        #pragma unroll
+                                        for (u32 sb = 0; sb < 4u; ++sb) {
+                                            if (br_b[sb] > 0) ext_tot[sb] += (br_b[sb] >> 2); // +25% Mg2+-unblocked NMDA plateau (1t window!)
+                                        }
                                     }
                                 }
                             }
@@ -821,7 +821,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 } else {
                     for (u32 g = 0; g < st0_qcnt; ++g) {
                         i32 br_b[4] = {0, 0, 0, 0};
-                        u32 br_e = 0u;
+                        u32 br_hits = 0u;
                         #pragma unroll
                         for (u32 j = 0; j < 4u; ++j) {
                             u32 s = syn_reg[g * 4u + j];
@@ -841,18 +841,20 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                 bool is_ap = (s & 0x04000000u) != 0u;
                                 i32 ac = is_ap ? curr : 0;
                                 i32 bc = is_ap ? 0 : curr;
-                                u32 ex_b = (!is_ap && sw_i > 0) ? 1u : 0u;
-                                if (win & 8u) { ext_tot[0] += curr; ext_apic[0] += ac; br_b[0] += bc; br_e += ex_b; }
-                                if (win & 4u) { ext_tot[1] += curr; ext_apic[1] += ac; br_b[1] += bc; br_e += (ex_b << 4); }
-                                if (win & 2u) { ext_tot[2] += curr; ext_apic[2] += ac; br_b[2] += bc; br_e += (ex_b << 8); }
-                                if (win & 1u) { ext_tot[3] += curr; ext_apic[3] += ac; br_b[3] += bc; br_e += (ex_b << 12); }
+                                if (!is_ap && sw_i > 0) ++br_hits;
+                                if (win & 8u) { ext_tot[0] += curr; ext_apic[0] += ac; br_b[0] += bc; }
+                                if (win & 4u) { ext_tot[1] += curr; ext_apic[1] += ac; br_b[1] += bc; }
+                                if (win & 2u) { ext_tot[2] += curr; ext_apic[2] += ac; br_b[2] += bc; }
+                                if (win & 1u) { ext_tot[3] += curr; ext_apic[3] += ac; br_b[3] += bc; }
                             }
                         }
-                        if (do_nmda_br && br_e != 0u) {
-                            #pragma unroll
-                            for (u32 sb = 0; sb < 4u; ++sb) {
-                                if (((br_e >> (sb * 4u)) & 15u) >= 2u && br_b[sb] > 130)
-                                    ext_tot[sb] += br_b[sb];
+                        if (do_nmda_br && br_hits >= 2u) {
+                            i32 br_sum = br_b[0] + br_b[1] + br_b[2] + br_b[3];
+                            if (br_sum > 280) {
+                                #pragma unroll
+                                for (u32 sb = 0; sb < 4u; ++sb) {
+                                    if (br_b[sb] > 0) ext_tot[sb] += (br_b[sb] >> 2);
+                                }
                             }
                         }
                     }
@@ -970,15 +972,15 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         // Authentic Brunel Balanced-Network 1/sqrt(K) Dendritic Scaling on Corticobulbar Vocal Readout:
                         // Calibrated for sparse high-SNR awake cortical coding (tau_m = 4-8 substeps) across 30..8,000 neurons!
                         float g_inv = 1.0f / fast_sqrt(float(max_u32(12u, my_exc_cnt)));
-                        float g_gain = (my_exc_cnt >= 48u) ? 184.0f : 134.0f;
+                        float g_gain = 168.0f;
                         i_basal = i32(float(raw_b) * (g_gain * g_inv));
                         i_apical = abl.silence_apical ? 0 : i32(float(raw_a) * ((g_gain * 0.65f) * g_inv));
                     } else if (layer_idx >= 1u && is_pyr) {
                         // Authentic Brunel (2000) 1/sqrt(K_exc) Balanced-Network Laminar Scaling + 1.5x Class-1A Ascending Drivers
                         // + Strictly Subcritical Local Recurrent STF (0.25x): crisp 16-layer propagation + clean dark cooldown!
                         float p_inv = 1.0f / fast_sqrt(float(max_u32(10u, my_exc_cnt)));
-                        float b_g = (layer_idx >= 2u) ? 3.7f : 3.9f;
-                        float a_g = (layer_idx >= 2u) ? 3.6f : 3.8f;
+                        float b_g = (layer_idx >= 2u) ? 3.45f : 3.65f;
+                        float a_g = (layer_idx >= 2u) ? 4.6f : 4.6f;
                         i_basal = i32(float(raw_b) * (b_g * p_inv));
                         i_apical = abl.silence_apical ? 0 : i32(float(raw_a) * (a_g * p_inv));
                     } else if (my_stripes >= 7u && layer_exc_cnt < 20u) {
@@ -1004,18 +1006,18 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     // sharp orthogonal episodic attractors & sparse coding WITHOUT crushing newborn evolution!
                     u32 pv_div_scale = 4096u;
                     i32 col_shunt = 0;
+                    bool has_topk_pv = (layer_pv_cnt >= 1u && layer_exc_cnt >= 20u);
                     if (layer_idx >= 1u && is_pyr) {
-                        if (pv_cnt > 0u) {
-                            // When PV+ Top-k sparse coding runs (layer_exc_cnt >= 20), keep divisive normalization
-                            // clean & non-redundant so top-k selects crisp winners without double-crushing drive!
-                            u32 pv_sc = (layer_exc_cnt >= 20u)
-                                            ? min_u32(pv_cnt, 16u)
-                                            : ((layer_idx >= 2u)
-                                                   ? min_u32(64u, (pv_cnt * 32u) / max_u32(16u, layer_exc_cnt) + pv_cnt * 2u)
-                                                   : (min_u32(pv_cnt, 24u) * 2u));
+                        if (pv_cnt > 0u && !has_topk_pv) {
+                            // Divisive PV normalization strictly on small sheets (<20 pyr) where instant Top-k doesn't run;
+                            // on cortical sheets (>=20 pyr), instant same-substep Pouille-Scanziani Top-k + anatomical GABA_A
+                            // synapses handle competition cleanly with ZERO substep-lag bias against heterogeneous delays!
+                            u32 pv_sc = (layer_idx >= 2u)
+                                            ? min_u32(64u, (pv_cnt * 32u) / max_u32(16u, layer_exc_cnt) + pv_cnt * 2u)
+                                            : (min_u32(pv_cnt, 24u) * 2u);
                             pv_div_scale = 65536u / (16u + pv_sc);
                             if (i_basal > 0) i_basal = (i_basal * i32(pv_div_scale)) >> 12;
-                            bool do_col = (layer_exc_cnt >= 14u && layer_exc_cnt < 20u && pv_cnt >= 1u);
+                            bool do_col = (layer_exc_cnt >= 14u && pv_cnt >= 1u);
                             if (do_col) {
                                 u32 cpk = s_col_act[cur_b];
                                 u32 c0 = cpk & 0xffu, c1 = (cpk >> 8) & 0xffu;
@@ -1086,19 +1088,19 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         plat = (va >= apic_thresh) ? 1u : 0u;
                     } else { va = 0; plat = 0u; }
                     // Authentic Larkum (1999 Nature / 2013 TINS) Strictly Multiplicative Apical×Basal BAC Coincidence Detection:
-                    // Descending apical feedback (plat==1) is strictly MODULATORY — ZERO autonomous ignition when i_basal <= 110,
-                    // delivering full burst amplification whenever real bottom-up or STF-facilitated basal input (>= 220 pA) arrives!
+                    // Descending apical Ca2+ plateau (plat==1, 2-4t window) is strictly MODULATORY — ZERO autonomous ignition
+                    // when i_basal <= 80, delivering full burst amplification on bottom-up / STF basal coincidences (>= 180 pA)!
                     i32 raw_bac = 0;
                     if (plat) {
-                        if (i_basal >= 220) raw_bac = bac_gain;
-                        else if (i_basal > 110) raw_bac = (bac_gain * (i_basal - 110)) / 110;
+                        if (i_basal >= 180) raw_bac = bac_gain;
+                        else if (i_basal > 80) raw_bac = (bac_gain * (i_basal - 80)) / 100;
                     }
                     i32 bac_curr = (layer_idx >= 2u) ? ((raw_bac * i32(pv_div_scale)) >> 12) : raw_bac;
                     // Authentic Buzsaki sharp-wave sleep ripple (sparse 1/32t subthreshold replay on recently active assemblies)
                     i32 sleep_drive = (is_resting && ((tick & 31u) == 0u) && layer_idx > 0u && is_pyr && ema >= 8u && ema < 20u) ? 18 : 0;
-                    u32 pv_sh_cap = (layer_exc_cnt >= 20u) ? 96u : ((layer_idx >= 2u) ? 200u : 140u);
-                    i32 pv_shunt = (layer_idx >= 1u && is_pyr && pv_cnt > 1u)
-                                       ? i32(min_u32(pv_sh_cap, (pv_cnt - 1u) * ((layer_exc_cnt >= 20u) ? 5u : 10u)))
+                    u32 pv_sh_cap = (layer_idx >= 2u) ? 200u : 140u;
+                    i32 pv_shunt = (layer_idx >= 1u && is_pyr && !has_topk_pv && pv_cnt > 1u)
+                                       ? i32(min_u32(pv_sh_cap, (pv_cnt - 1u) * 10u))
                                        : 0;
                     // Authentic Songbird LMAN Exploratory Switching + Striatal D2-NoGo Immediate Error-Fold Veto (Olveczky 2005):
                     // Strictly on error (-DA) on TK_GLAND: D2-NoGo cleanly vetoes the just-punished fold (s_mod_w[2]) for this
@@ -1176,7 +1178,8 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         }
                         sync_block();
                         if (tid == 0u) {
-                            u32 k_cap = max_u32(10u, min_u32(24u, layer_exc_cnt / 6u));
+                            u32 k_tight = max_u32(10u, min_u32(24u, layer_exc_cnt / 6u));
+                            u32 k_cap = (layer_pv_cnt * 8u >= layer_exc_cnt) ? k_tight : max_u32(k_tight, layer_exc_cnt / 3u);
                             u32 acc = 0u;
                             u32 kth = 0u;
                             u32 trim_mod = 0u;
@@ -1369,15 +1372,16 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         }
                     } else if (pre_inh) {
                         if (!is_eff) {
-                            // Authentic Vogels-Sprekeler (2011) Homeostatic iSTDP across deep interneurons:
-                            if (pre_rec && post_recent && ema > target_ema + 14u)
+                            // Authentic Vogels-Sprekeler (2011) Homeostatic iSTDP strictly against cortical hyper-excitation:
+                            // Prevents epileptic seizure (ema > seizure_ema - 10) without tripling inhibition on healthy foraging!
+                            if (pre_rec && post_recent && ema + 10u > u32(seizure_ema))
                                 dw = (ema > u32(seizure_ema)) ? 2 : 1;
-                            else if (pre_rec && ema < 8u && ((layer_idx < 2u) || abs_w > 10) && ((tick + idx_k) & 1u) == 0u) dw = -1;
+                            else if (pre_rec && ema < 10u && ((layer_idx < 2u) || abs_w > 10) && ((tick + idx_k) & 1u) == 0u) dw = -1;
                         } else if (mod_gate && (elig > 7 || elig < -7)) {
                             i32 esign = (elig > 0) ? 1 : -1;
                             dw = mod_neg ? (esign * (lr > 3 ? 3 : lr)) : (-esign * lr);
                         }
-                        i32 inh_hi = (layer_idx >= 2u && !is_eff) ? 56 : 46;
+                        i32 inh_hi = (layer_idx >= 2u && !is_eff) ? 34 : 36;
                         if (abs_w > inh_hi && dw > 0) dw = ((abs_w < 62 && ((tick + idx_k) & 3u) == 0u) ? 1 : 0);
                         if (dw != 0) elig = (mod_gate ? 0 : (elig >> 1));
                     } else if (bac_gate && (elig > 7 || elig < -7)) {
@@ -1443,7 +1447,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     if (!pre_inh && !is_eff && dw == 0 && layer_idx >= 1u && phasic_ach && plat && post_recent && !pre_rec && abs_w > 10 && ((tick + idx_k) & 3u) == 0u)
                         dw = -1;
                     i32 comp_floor = (layer_idx >= 1u && !is_eff) ? 10 : ((tk == TK_GLAND) ? 12 : 34);
-                    u32 comp_ema_thr = (tk == TK_GLAND) ? 160u : (target_ema + 8u);
+                    u32 comp_ema_thr = (tk == TK_GLAND) ? 160u : (target_ema + 26u);
                     if (!pre_inh && dw == 0 && post_recent && !pre_rec && ema > comp_ema_thr && abs_w > comp_floor && ((tick + idx_k) & 3u) == 0u)
                         dw = -1;
                     i32 signed_dw = pre_inh ? -dw : dw;
@@ -1493,11 +1497,11 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                             }
                         }
                     } else if (layer_idx >= 2u && src_l < layer_idx && !pre_inh) {
-                        u32 dep = (s >= 0xa0000000u) ? (s - 0x20000000u) : s;
+                        u32 dep = (s >= 0xc0000000u) ? (s - 0x20000000u) : s;
                         u32 rec = (((tick & 1u) == 0u) && s < 0xe0000000u) ? (s + 0x20000000u) : s;
                         s_stp = pre_rec ? dep : rec;
                     } else {
-                        u32 min_stp_w = (layer_idx == 1u) ? 0x80000000u : 0x40000000u;
+                        u32 min_stp_w = (layer_idx == 1u && !pre_inh) ? 0xc0000000u : 0x40000000u;
                         u32 dep = (s >= min_stp_w) ? (s - 0x20000000u) : s;
                         u32 rec = (do_rec_tick && s < 0xe0000000u) ? (s + 0x20000000u) : s;
                         s_stp = pre_rec ? dep : rec;
@@ -1510,7 +1514,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     bool homeo_due = (tk != TK_GLAND || ema > 192u) &&
                                      ((homeo_delta < 0 && (tick & homeo_mask) == 0u) || (homeo_delta > 0 && (tick & 31u) == 0u));
                     // 100% Bit-Exact Blackwell Idle-Post External-Stripe STDP Skip:
-                    u32 comp_ema_thr_chk = (tk == TK_GLAND) ? 160u : (target_ema + 8u);
+                    u32 comp_ema_thr_chk = (tk == TK_GLAND) ? 160u : (target_ema + 26u);
                     bool post_het = (post_recent && ((ema > comp_ema_thr_chk) || (post_burst && mod_gate) || (layer_idx >= 1u && !is_eff && phasic_ach && plat))) ||
                                     (tk == TK_GLAND && mod_gate);
                     bool cell_idle = (!post_het && !homeo_due);

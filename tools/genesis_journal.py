@@ -1,4 +1,4 @@
-# Axion Genesis v27 — Publication-Grade Scientific Observatory Plates (plate.webp)
+# Axion Genesis v39 — Publication-Grade Scientific Observatory Plates (plate.webp)
 # 2200x1320 Dark-Observatory high-density vector + hillshaded-PNG field infographics:
 #   - Mode A (bench)    : Blackwell SM 12.0 4B/syn + 8B/neuron bit blueprint, throughput & occupancy
 #   - Mode B (evolve)   : Hillshaded 256x256 GPU world PNG, top-4 species gallery, 3D cortical stack
@@ -383,7 +383,7 @@ def genesis_summary(data):
             _gen_f(r, "alive"),
             " alive",
             [["Survivors", _gen_i(r, "alive")], ["Morphs", _gen_i(r, "species")], ["Max Gen", _gen_i(r, "max_gen")]],
-            ["Inspected saved Genesis v38 unified CA-DNA checkpoint directly on Blackwell GPU."],
+            ["Inspected saved Genesis v39 unified CA-DNA checkpoint directly on Blackwell GPU."],
             [f"Checkpoint: {r.get('path','')}"],
         )
 
