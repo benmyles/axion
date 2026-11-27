@@ -1,0 +1,17 @@
+seed,depth,phase,correct,probes,covered,encounters
+78121,5,unseen,4,16,0,0
+78121,5,learned,4,16,40,240
+78121,5,unobserved_change,4,16,40,240
+78121,5,relearned,4,16,8,288
+159763,5,unseen,4,16,0,0
+159763,5,learned,4,16,40,240
+159763,5,unobserved_change,4,16,40,240
+159763,5,relearned,4,16,8,288
+491023,5,unseen,4,16,0,0
+491023,5,learned,4,16,40,240
+491023,5,unobserved_change,4,16,40,240
+491023,5,relearned,4,16,8,288
+851899,5,unseen,4,16,0,0
+851899,5,learned,4,16,40,240
+851899,5,unobserved_change,4,16,40,240
+851899,5,relearned,4,16,8,288

@@ -1,0 +1,9 @@
+/braid 137
+/braid-worker examples/braid-worker.mind
+/braid-station speaker 0 0000 15
+/braid-station partner 2 0123 15
+/braid-station worker 5 2013 15
+reed spin tuck
+/braid-pass 4
+/braid-view
+/quit

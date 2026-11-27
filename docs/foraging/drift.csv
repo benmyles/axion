@@ -1,0 +1,7 @@
+seed,origin,pressure,breeding,generations,tested_lifetimes,GPU_ms,direct_learned,direct_changed,inferred_learned,inferred_changed,items,single_offspring,paired_offspring,growth_lifetimes
+1277,wild,drift,drift,384,0,6.299,1854,1803,1886,1833,12288,40197,65214,128
+2203,wild,drift,drift,384,0,10.069,1586,1508,1586,1508,12288,10745,17630,128
+3179,wild,drift,drift,384,0,10.050,2386,2424,2464,2482,12288,85286,109286,128
+5711,wild,drift,drift,384,0,5.743,1689,1750,1670,1695,12288,46859,60561,128
+7823,wild,drift,drift,384,0,5.854,1903,1829,2093,2024,12288,29945,32810,128
+9029,wild,drift,drift,384,0,5.632,2020,2028,2002,2011,12288,66831,132070,128

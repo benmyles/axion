@@ -1,0 +1,7 @@
+run,context_kernel,registers,local_bytes,memory_bytes
+living-brook,flood_capillary_context,96,0,12
+living-coast,flood_capillary_context,96,0,12
+shadow-brook-adaptive,flood_capillary_context_audit,122,0,12
+shadow-brook-single,flood_capillaries,88,0,0
+shadow-coast-adaptive,flood_capillary_context_audit,122,0,12
+shadow-coast-single,flood_capillaries,88,0,0

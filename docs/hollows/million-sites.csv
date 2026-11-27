@@ -1,0 +1,2 @@
+side,sites,opening_residents,opening_cells,closing_residents,closing_cells,bytes_per_site,flood_seconds,site_ticks,Msite_ticks_per_s,simulation_seconds,simulation_Msite_ticks_per_s
+1024,1048576,754577,90571008,339406,39179616,737,5.14732,134217728,26.0753,1.26736,105.903

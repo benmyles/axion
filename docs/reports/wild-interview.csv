@@ -1,0 +1,1081 @@
+wire,age,prior,current,spoken,receiver,decoded_prior,correct
+open,0,food north east,food east north,non kin bon men kan,food east north,(uncertain),1
+open,0,food north east,food east south,ban kin bon men kan,food east south,(uncertain),1
+open,0,food north east,food east west,kan kin bon men kan,food east west,(uncertain),1
+open,0,food north east,water north east,mon non bon men gan,water north east,(uncertain),1
+open,0,food north east,water north south,ban non bon men gan,water north south,(uncertain),1
+open,0,food north east,water north west,kan non bon men gan,water north west,(uncertain),1
+open,0,food north east,water east north,non kin bon men gan,water east north,(uncertain),1
+open,0,food north east,water east south,ban kin bon men gan,water east south,(uncertain),1
+open,0,food north east,water east west,kan kin bon men gan,water east west,(uncertain),1
+open,0,food north east,water south north,non len bon men gan,water south north,(uncertain),1
+open,0,food north east,water south east,mon len bon men gan,water south east,(uncertain),1
+open,0,food north east,water south west,kan len bon men gan,water south west,(uncertain),1
+open,0,food north east,water west north,non man bon men gan,water west north,(uncertain),1
+open,0,food north east,water west east,mon man bon men gan,water west east,(uncertain),1
+open,0,food north east,water west south,ban man bon men gan,water west south,(uncertain),1
+open,0,food north south,food south north,non len kan nen kan,food south north,(uncertain),1
+open,0,food north south,food south east,mon len kan nen kan,food south east,(uncertain),1
+open,0,food north south,food south west,kan len kan nen kan,food south west,(uncertain),1
+open,0,food north south,water north east,mon non kan nen gan,water north east,(uncertain),1
+open,0,food north south,water north south,ban non kan nen gan,water north south,(uncertain),1
+open,0,food north south,water north west,kan non kan nen gan,water north west,(uncertain),1
+open,0,food north south,water east north,non kin kan nen gan,water east north,(uncertain),1
+open,0,food north south,water east south,ban kin kan nen gan,water east south,(uncertain),1
+open,0,food north south,water east west,kan kin kan nen gan,water east west,(uncertain),1
+open,0,food north south,water south north,non len kan nen gan,water south north,(uncertain),1
+open,0,food north south,water south east,mon len kan nen gan,water south east,(uncertain),1
+open,0,food north south,water south west,kan len kan nen gan,water south west,(uncertain),1
+open,0,food north south,water west north,non man kan nen gan,water west north,(uncertain),1
+open,0,food north south,water west east,mon man kan nen gan,water west east,(uncertain),1
+open,0,food north south,water west south,ban man kan nen gan,water west south,(uncertain),1
+open,0,food north west,food west north,non man gen kin kan,food west north,(uncertain),1
+open,0,food north west,food west east,mon man gen kin kan,food west east,(uncertain),1
+open,0,food north west,food west south,ban man gen kin kan,food west south,(uncertain),1
+open,0,food north west,water north east,mon non gen kin gan,water north east,(uncertain),1
+open,0,food north west,water north south,ban non gen kin gan,water north south,(uncertain),1
+open,0,food north west,water north west,kan non gen kin gan,water north west,(uncertain),1
+open,0,food north west,water east north,non kin gen kin gan,water east north,(uncertain),1
+open,0,food north west,water east south,ban kin gen kin gan,water east south,(uncertain),1
+open,0,food north west,water east west,kan kin gen kin gan,water east west,(uncertain),1
+open,0,food north west,water south north,non len gen kin gan,water south north,(uncertain),1
+open,0,food north west,water south east,mon len gen kin gan,water south east,(uncertain),1
+open,0,food north west,water south west,kan len gen kin gan,water south west,(uncertain),1
+open,0,food north west,water west north,non man gen kin gan,water west north,(uncertain),1
+open,0,food north west,water west east,mon man gen kin gan,water west east,(uncertain),1
+open,0,food north west,water west south,ban man gen kin gan,water west south,(uncertain),1
+open,0,food east north,food north east,mon non din ben kan,food north east,(uncertain),1
+open,0,food east north,food north south,ban non din ben kan,food north south,(uncertain),1
+open,0,food east north,food north west,kan non din ben kan,food north west,(uncertain),1
+open,0,food east north,water north east,mon non din ben gan,water north east,(uncertain),1
+open,0,food east north,water north south,ban non din ben gan,water north south,(uncertain),1
+open,0,food east north,water north west,kan non din ben gan,water north west,(uncertain),1
+open,0,food east north,water east north,non kin din ben gan,water east north,(uncertain),1
+open,0,food east north,water east south,ban kin din ben gan,water east south,(uncertain),1
+open,0,food east north,water east west,kan kin din ben gan,water east west,(uncertain),1
+open,0,food east north,water south north,non len din ben gan,water south north,(uncertain),1
+open,0,food east north,water south east,mon len din ben gan,water south east,(uncertain),1
+open,0,food east north,water south west,kan len din ben gan,water south west,(uncertain),1
+open,0,food east north,water west north,non man din ben gan,water west north,(uncertain),1
+open,0,food east north,water west east,mon man din ben gan,water west east,(uncertain),1
+open,0,food east north,water west south,ban man din ben gan,water west south,(uncertain),1
+open,0,food east south,food south north,non len kan nen kan,food south north,(uncertain),1
+open,0,food east south,food south east,mon len kan nen kan,food south east,(uncertain),1
+open,0,food east south,food south west,kan len kan nen kan,food south west,(uncertain),1
+open,0,food east south,water north east,mon non kan nen gan,water north east,(uncertain),1
+open,0,food east south,water north south,ban non kan nen gan,water north south,(uncertain),1
+open,0,food east south,water north west,kan non kan nen gan,water north west,(uncertain),1
+open,0,food east south,water east north,non kin kan nen gan,water east north,(uncertain),1
+open,0,food east south,water east south,ban kin kan nen gan,water east south,(uncertain),1
+open,0,food east south,water east west,kan kin kan nen gan,water east west,(uncertain),1
+open,0,food east south,water south north,non len kan nen gan,water south north,(uncertain),1
+open,0,food east south,water south east,mon len kan nen gan,water south east,(uncertain),1
+open,0,food east south,water south west,kan len kan nen gan,water south west,(uncertain),1
+open,0,food east south,water west north,non man kan nen gan,water west north,(uncertain),1
+open,0,food east south,water west east,mon man kan nen gan,water west east,(uncertain),1
+open,0,food east south,water west south,ban man kan nen gan,water west south,(uncertain),1
+open,0,food east west,food west north,non man gen kin kan,food west north,(uncertain),1
+open,0,food east west,food west east,mon man gen kin kan,food west east,(uncertain),1
+open,0,food east west,food west south,ban man gen kin kan,food west south,(uncertain),1
+open,0,food east west,water north east,mon non gen kin gan,water north east,(uncertain),1
+open,0,food east west,water north south,ban non gen kin gan,water north south,(uncertain),1
+open,0,food east west,water north west,kan non gen kin gan,water north west,(uncertain),1
+open,0,food east west,water east north,non kin gen kin gan,water east north,(uncertain),1
+open,0,food east west,water east south,ban kin gen kin gan,water east south,(uncertain),1
+open,0,food east west,water east west,kan kin gen kin gan,water east west,(uncertain),1
+open,0,food east west,water south north,non len gen kin gan,water south north,(uncertain),1
+open,0,food east west,water south east,mon len gen kin gan,water south east,(uncertain),1
+open,0,food east west,water south west,kan len gen kin gan,water south west,(uncertain),1
+open,0,food east west,water west north,non man gen kin gan,water west north,(uncertain),1
+open,0,food east west,water west east,mon man gen kin gan,water west east,(uncertain),1
+open,0,food east west,water west south,ban man gen kin gan,water west south,(uncertain),1
+open,0,food south north,food north east,mon non din ben kan,food north east,(uncertain),1
+open,0,food south north,food north south,ban non din ben kan,food north south,(uncertain),1
+open,0,food south north,food north west,kan non din ben kan,food north west,(uncertain),1
+open,0,food south north,water north east,mon non din ben gan,water north east,(uncertain),1
+open,0,food south north,water north south,ban non din ben gan,water north south,(uncertain),1
+open,0,food south north,water north west,kan non din ben gan,water north west,(uncertain),1
+open,0,food south north,water east north,non kin din ben gan,water east north,(uncertain),1
+open,0,food south north,water east south,ban kin din ben gan,water east south,(uncertain),1
+open,0,food south north,water east west,kan kin din ben gan,water east west,(uncertain),1
+open,0,food south north,water south north,non len din ben gan,water south north,(uncertain),1
+open,0,food south north,water south east,mon len din ben gan,water south east,(uncertain),1
+open,0,food south north,water south west,kan len din ben gan,water south west,(uncertain),1
+open,0,food south north,water west north,non man din ben gan,water west north,(uncertain),1
+open,0,food south north,water west east,mon man din ben gan,water west east,(uncertain),1
+open,0,food south north,water west south,ban man din ben gan,water west south,(uncertain),1
+open,0,food south east,food east north,non kin bon men kan,food east north,(uncertain),1
+open,0,food south east,food east south,ban kin bon men kan,food east south,(uncertain),1
+open,0,food south east,food east west,kan kin bon men kan,food east west,(uncertain),1
+open,0,food south east,water north east,mon non bon men gan,water north east,(uncertain),1
+open,0,food south east,water north south,ban non bon men gan,water north south,(uncertain),1
+open,0,food south east,water north west,kan non bon men gan,water north west,(uncertain),1
+open,0,food south east,water east north,non kin bon men gan,water east north,(uncertain),1
+open,0,food south east,water east south,ban kin bon men gan,water east south,(uncertain),1
+open,0,food south east,water east west,kan kin bon men gan,water east west,(uncertain),1
+open,0,food south east,water south north,non len bon men gan,water south north,(uncertain),1
+open,0,food south east,water south east,mon len bon men gan,water south east,(uncertain),1
+open,0,food south east,water south west,kan len bon men gan,water south west,(uncertain),1
+open,0,food south east,water west north,non man bon men gan,water west north,(uncertain),1
+open,0,food south east,water west east,mon man bon men gan,water west east,(uncertain),1
+open,0,food south east,water west south,ban man bon men gan,water west south,(uncertain),1
+open,0,food south west,food west north,non man gen kin kan,food west north,(uncertain),1
+open,0,food south west,food west east,mon man gen kin kan,food west east,(uncertain),1
+open,0,food south west,food west south,ban man gen kin kan,food west south,(uncertain),1
+open,0,food south west,water north east,mon non gen kin gan,water north east,(uncertain),1
+open,0,food south west,water north south,ban non gen kin gan,water north south,(uncertain),1
+open,0,food south west,water north west,kan non gen kin gan,water north west,(uncertain),1
+open,0,food south west,water east north,non kin gen kin gan,water east north,(uncertain),1
+open,0,food south west,water east south,ban kin gen kin gan,water east south,(uncertain),1
+open,0,food south west,water east west,kan kin gen kin gan,water east west,(uncertain),1
+open,0,food south west,water south north,non len gen kin gan,water south north,(uncertain),1
+open,0,food south west,water south east,mon len gen kin gan,water south east,(uncertain),1
+open,0,food south west,water south west,kan len gen kin gan,water south west,(uncertain),1
+open,0,food south west,water west north,non man gen kin gan,water west north,(uncertain),1
+open,0,food south west,water west east,mon man gen kin gan,water west east,(uncertain),1
+open,0,food south west,water west south,ban man gen kin gan,water west south,(uncertain),1
+open,0,food west north,food north east,mon non din ben kan,food north east,(uncertain),1
+open,0,food west north,food north south,ban non din ben kan,food north south,(uncertain),1
+open,0,food west north,food north west,kan non din ben kan,food north west,(uncertain),1
+open,0,food west north,water north east,mon non din ben gan,water north east,(uncertain),1
+open,0,food west north,water north south,ban non din ben gan,water north south,(uncertain),1
+open,0,food west north,water north west,kan non din ben gan,water north west,(uncertain),1
+open,0,food west north,water east north,non kin din ben gan,water east north,(uncertain),1
+open,0,food west north,water east south,ban kin din ben gan,water east south,(uncertain),1
+open,0,food west north,water east west,kan kin din ben gan,water east west,(uncertain),1
+open,0,food west north,water south north,non len din ben gan,water south north,(uncertain),1
+open,0,food west north,water south east,mon len din ben gan,water south east,(uncertain),1
+open,0,food west north,water south west,kan len din ben gan,water south west,(uncertain),1
+open,0,food west north,water west north,non man din ben gan,water west north,(uncertain),1
+open,0,food west north,water west east,mon man din ben gan,water west east,(uncertain),1
+open,0,food west north,water west south,ban man din ben gan,water west south,(uncertain),1
+open,0,food west east,food east north,non kin bon men kan,food east north,(uncertain),1
+open,0,food west east,food east south,ban kin bon men kan,food east south,(uncertain),1
+open,0,food west east,food east west,kan kin bon men kan,food east west,(uncertain),1
+open,0,food west east,water north east,mon non bon men gan,water north east,(uncertain),1
+open,0,food west east,water north south,ban non bon men gan,water north south,(uncertain),1
+open,0,food west east,water north west,kan non bon men gan,water north west,(uncertain),1
+open,0,food west east,water east north,non kin bon men gan,water east north,(uncertain),1
+open,0,food west east,water east south,ban kin bon men gan,water east south,(uncertain),1
+open,0,food west east,water east west,kan kin bon men gan,water east west,(uncertain),1
+open,0,food west east,water south north,non len bon men gan,water south north,(uncertain),1
+open,0,food west east,water south east,mon len bon men gan,water south east,(uncertain),1
+open,0,food west east,water south west,kan len bon men gan,water south west,(uncertain),1
+open,0,food west east,water west north,non man bon men gan,water west north,(uncertain),1
+open,0,food west east,water west east,mon man bon men gan,water west east,(uncertain),1
+open,0,food west east,water west south,ban man bon men gan,water west south,(uncertain),1
+open,0,food west south,food south north,non len kan nen kan,food south north,(uncertain),1
+open,0,food west south,food south east,mon len kan nen kan,food south east,(uncertain),1
+open,0,food west south,food south west,kan len kan nen kan,food south west,(uncertain),1
+open,0,food west south,water north east,mon non kan nen gan,water north east,(uncertain),1
+open,0,food west south,water north south,ban non kan nen gan,water north south,(uncertain),1
+open,0,food west south,water north west,kan non kan nen gan,water north west,(uncertain),1
+open,0,food west south,water east north,non kin kan nen gan,water east north,(uncertain),1
+open,0,food west south,water east south,ban kin kan nen gan,water east south,(uncertain),1
+open,0,food west south,water east west,kan kin kan nen gan,water east west,(uncertain),1
+open,0,food west south,water south north,non len kan nen gan,water south north,(uncertain),1
+open,0,food west south,water south east,mon len kan nen gan,water south east,(uncertain),1
+open,0,food west south,water south west,kan len kan nen gan,water south west,(uncertain),1
+open,0,food west south,water west north,non man kan nen gan,water west north,(uncertain),1
+open,0,food west south,water west east,mon man kan nen gan,water west east,(uncertain),1
+open,0,food west south,water west south,ban man kan nen gan,water west south,(uncertain),1
+open,0,water north east,food north east,mon non bon men kan,food north east,(uncertain),1
+open,0,water north east,food north south,ban non bon men kan,food north south,(uncertain),1
+open,0,water north east,food north west,kan non bon men kan,food north west,(uncertain),1
+open,0,water north east,food east north,non kin bon men kan,food east north,(uncertain),1
+open,0,water north east,food east south,ban kin bon men kan,food east south,(uncertain),1
+open,0,water north east,food east west,kan kin bon men kan,food east west,(uncertain),1
+open,0,water north east,food south north,non len bon men kan,food south north,(uncertain),1
+open,0,water north east,food south east,mon len bon men kan,food south east,(uncertain),1
+open,0,water north east,food south west,kan len bon men kan,food south west,(uncertain),1
+open,0,water north east,food west north,non man bon men kan,food west north,(uncertain),1
+open,0,water north east,food west east,mon man bon men kan,food west east,(uncertain),1
+open,0,water north east,food west south,ban man bon men kan,food west south,(uncertain),1
+open,0,water north east,water east north,non kin bon men gan,water east north,(uncertain),1
+open,0,water north east,water east south,ban kin bon men gan,water east south,(uncertain),1
+open,0,water north east,water east west,kan kin bon men gan,water east west,(uncertain),1
+open,0,water north south,food north east,mon non kan nen kan,food north east,(uncertain),1
+open,0,water north south,food north south,ban non kan nen kan,food north south,(uncertain),1
+open,0,water north south,food north west,kan non kan nen kan,food north west,(uncertain),1
+open,0,water north south,food east north,non kin kan nen kan,food east north,(uncertain),1
+open,0,water north south,food east south,ban kin kan nen kan,food east south,(uncertain),1
+open,0,water north south,food east west,kan kin kan nen kan,food east west,(uncertain),1
+open,0,water north south,food south north,non len kan nen kan,food south north,(uncertain),1
+open,0,water north south,food south east,mon len kan nen kan,food south east,(uncertain),1
+open,0,water north south,food south west,kan len kan nen kan,food south west,(uncertain),1
+open,0,water north south,food west north,non man kan nen kan,food west north,(uncertain),1
+open,0,water north south,food west east,mon man kan nen kan,food west east,(uncertain),1
+open,0,water north south,food west south,ban man kan nen kan,food west south,(uncertain),1
+open,0,water north south,water south north,non len kan nen gan,water south north,(uncertain),1
+open,0,water north south,water south east,mon len kan nen gan,water south east,(uncertain),1
+open,0,water north south,water south west,kan len kan nen gan,water south west,(uncertain),1
+open,0,water north west,food north east,mon non gen kin kan,food north east,(uncertain),1
+open,0,water north west,food north south,ban non gen kin kan,food north south,(uncertain),1
+open,0,water north west,food north west,kan non gen kin kan,food north west,(uncertain),1
+open,0,water north west,food east north,non kin gen kin kan,food east north,(uncertain),1
+open,0,water north west,food east south,ban kin gen kin kan,food east south,(uncertain),1
+open,0,water north west,food east west,kan kin gen kin kan,food east west,(uncertain),1
+open,0,water north west,food south north,non len gen kin kan,food south north,(uncertain),1
+open,0,water north west,food south east,mon len gen kin kan,food south east,(uncertain),1
+open,0,water north west,food south west,kan len gen kin kan,food south west,(uncertain),1
+open,0,water north west,food west north,non man gen kin kan,food west north,(uncertain),1
+open,0,water north west,food west east,mon man gen kin kan,food west east,(uncertain),1
+open,0,water north west,food west south,ban man gen kin kan,food west south,(uncertain),1
+open,0,water north west,water west north,non man gen kin gan,water west north,(uncertain),1
+open,0,water north west,water west east,mon man gen kin gan,water west east,(uncertain),1
+open,0,water north west,water west south,ban man gen kin gan,water west south,(uncertain),1
+open,0,water east north,food north east,mon non din ben kan,food north east,(uncertain),1
+open,0,water east north,food north south,ban non din ben kan,food north south,(uncertain),1
+open,0,water east north,food north west,kan non din ben kan,food north west,(uncertain),1
+open,0,water east north,food east north,non kin din ben kan,food east north,(uncertain),1
+open,0,water east north,food east south,ban kin din ben kan,food east south,(uncertain),1
+open,0,water east north,food east west,kan kin din ben kan,food east west,(uncertain),1
+open,0,water east north,food south north,non len din ben kan,food south north,(uncertain),1
+open,0,water east north,food south east,mon len din ben kan,food south east,(uncertain),1
+open,0,water east north,food south west,kan len din ben kan,food south west,(uncertain),1
+open,0,water east north,food west north,non man din ben kan,food west north,(uncertain),1
+open,0,water east north,food west east,mon man din ben kan,food west east,(uncertain),1
+open,0,water east north,food west south,ban man din ben kan,food west south,(uncertain),1
+open,0,water east north,water north east,mon non din ben gan,water north east,(uncertain),1
+open,0,water east north,water north south,ban non din ben gan,water north south,(uncertain),1
+open,0,water east north,water north west,kan non din ben gan,water north west,(uncertain),1
+open,0,water east south,food north east,mon non kan nen kan,food north east,(uncertain),1
+open,0,water east south,food north south,ban non kan nen kan,food north south,(uncertain),1
+open,0,water east south,food north west,kan non kan nen kan,food north west,(uncertain),1
+open,0,water east south,food east north,non kin kan nen kan,food east north,(uncertain),1
+open,0,water east south,food east south,ban kin kan nen kan,food east south,(uncertain),1
+open,0,water east south,food east west,kan kin kan nen kan,food east west,(uncertain),1
+open,0,water east south,food south north,non len kan nen kan,food south north,(uncertain),1
+open,0,water east south,food south east,mon len kan nen kan,food south east,(uncertain),1
+open,0,water east south,food south west,kan len kan nen kan,food south west,(uncertain),1
+open,0,water east south,food west north,non man kan nen kan,food west north,(uncertain),1
+open,0,water east south,food west east,mon man kan nen kan,food west east,(uncertain),1
+open,0,water east south,food west south,ban man kan nen kan,food west south,(uncertain),1
+open,0,water east south,water south north,non len kan nen gan,water south north,(uncertain),1
+open,0,water east south,water south east,mon len kan nen gan,water south east,(uncertain),1
+open,0,water east south,water south west,kan len kan nen gan,water south west,(uncertain),1
+open,0,water east west,food north east,mon non gen kin kan,food north east,(uncertain),1
+open,0,water east west,food north south,ban non gen kin kan,food north south,(uncertain),1
+open,0,water east west,food north west,kan non gen kin kan,food north west,(uncertain),1
+open,0,water east west,food east north,non kin gen kin kan,food east north,(uncertain),1
+open,0,water east west,food east south,ban kin gen kin kan,food east south,(uncertain),1
+open,0,water east west,food east west,kan kin gen kin kan,food east west,(uncertain),1
+open,0,water east west,food south north,non len gen kin kan,food south north,(uncertain),1
+open,0,water east west,food south east,mon len gen kin kan,food south east,(uncertain),1
+open,0,water east west,food south west,kan len gen kin kan,food south west,(uncertain),1
+open,0,water east west,food west north,non man gen kin kan,food west north,(uncertain),1
+open,0,water east west,food west east,mon man gen kin kan,food west east,(uncertain),1
+open,0,water east west,food west south,ban man gen kin kan,food west south,(uncertain),1
+open,0,water east west,water west north,non man gen kin gan,water west north,(uncertain),1
+open,0,water east west,water west east,mon man gen kin gan,water west east,(uncertain),1
+open,0,water east west,water west south,ban man gen kin gan,water west south,(uncertain),1
+open,0,water south north,food north east,mon non din ben kan,food north east,(uncertain),1
+open,0,water south north,food north south,ban non din ben kan,food north south,(uncertain),1
+open,0,water south north,food north west,kan non din ben kan,food north west,(uncertain),1
+open,0,water south north,food east north,non kin din ben kan,food east north,(uncertain),1
+open,0,water south north,food east south,ban kin din ben kan,food east south,(uncertain),1
+open,0,water south north,food east west,kan kin din ben kan,food east west,(uncertain),1
+open,0,water south north,food south north,non len din ben kan,food south north,(uncertain),1
+open,0,water south north,food south east,mon len din ben kan,food south east,(uncertain),1
+open,0,water south north,food south west,kan len din ben kan,food south west,(uncertain),1
+open,0,water south north,food west north,non man din ben kan,food west north,(uncertain),1
+open,0,water south north,food west east,mon man din ben kan,food west east,(uncertain),1
+open,0,water south north,food west south,ban man din ben kan,food west south,(uncertain),1
+open,0,water south north,water north east,mon non din ben gan,water north east,(uncertain),1
+open,0,water south north,water north south,ban non din ben gan,water north south,(uncertain),1
+open,0,water south north,water north west,kan non din ben gan,water north west,(uncertain),1
+open,0,water south east,food north east,mon non bon men kan,food north east,(uncertain),1
+open,0,water south east,food north south,ban non bon men kan,food north south,(uncertain),1
+open,0,water south east,food north west,kan non bon men kan,food north west,(uncertain),1
+open,0,water south east,food east north,non kin bon men kan,food east north,(uncertain),1
+open,0,water south east,food east south,ban kin bon men kan,food east south,(uncertain),1
+open,0,water south east,food east west,kan kin bon men kan,food east west,(uncertain),1
+open,0,water south east,food south north,non len bon men kan,food south north,(uncertain),1
+open,0,water south east,food south east,mon len bon men kan,food south east,(uncertain),1
+open,0,water south east,food south west,kan len bon men kan,food south west,(uncertain),1
+open,0,water south east,food west north,non man bon men kan,food west north,(uncertain),1
+open,0,water south east,food west east,mon man bon men kan,food west east,(uncertain),1
+open,0,water south east,food west south,ban man bon men kan,food west south,(uncertain),1
+open,0,water south east,water east north,non kin bon men gan,water east north,(uncertain),1
+open,0,water south east,water east south,ban kin bon men gan,water east south,(uncertain),1
+open,0,water south east,water east west,kan kin bon men gan,water east west,(uncertain),1
+open,0,water south west,food north east,mon non gen kin kan,food north east,(uncertain),1
+open,0,water south west,food north south,ban non gen kin kan,food north south,(uncertain),1
+open,0,water south west,food north west,kan non gen kin kan,food north west,(uncertain),1
+open,0,water south west,food east north,non kin gen kin kan,food east north,(uncertain),1
+open,0,water south west,food east south,ban kin gen kin kan,food east south,(uncertain),1
+open,0,water south west,food east west,kan kin gen kin kan,food east west,(uncertain),1
+open,0,water south west,food south north,non len gen kin kan,food south north,(uncertain),1
+open,0,water south west,food south east,mon len gen kin kan,food south east,(uncertain),1
+open,0,water south west,food south west,kan len gen kin kan,food south west,(uncertain),1
+open,0,water south west,food west north,non man gen kin kan,food west north,(uncertain),1
+open,0,water south west,food west east,mon man gen kin kan,food west east,(uncertain),1
+open,0,water south west,food west south,ban man gen kin kan,food west south,(uncertain),1
+open,0,water south west,water west north,non man gen kin gan,water west north,(uncertain),1
+open,0,water south west,water west east,mon man gen kin gan,water west east,(uncertain),1
+open,0,water south west,water west south,ban man gen kin gan,water west south,(uncertain),1
+open,0,water west north,food north east,mon non din ben kan,food north east,(uncertain),1
+open,0,water west north,food north south,ban non din ben kan,food north south,(uncertain),1
+open,0,water west north,food north west,kan non din ben kan,food north west,(uncertain),1
+open,0,water west north,food east north,non kin din ben kan,food east north,(uncertain),1
+open,0,water west north,food east south,ban kin din ben kan,food east south,(uncertain),1
+open,0,water west north,food east west,kan kin din ben kan,food east west,(uncertain),1
+open,0,water west north,food south north,non len din ben kan,food south north,(uncertain),1
+open,0,water west north,food south east,mon len din ben kan,food south east,(uncertain),1
+open,0,water west north,food south west,kan len din ben kan,food south west,(uncertain),1
+open,0,water west north,food west north,non man din ben kan,food west north,(uncertain),1
+open,0,water west north,food west east,mon man din ben kan,food west east,(uncertain),1
+open,0,water west north,food west south,ban man din ben kan,food west south,(uncertain),1
+open,0,water west north,water north east,mon non din ben gan,water north east,(uncertain),1
+open,0,water west north,water north south,ban non din ben gan,water north south,(uncertain),1
+open,0,water west north,water north west,kan non din ben gan,water north west,(uncertain),1
+open,0,water west east,food north east,mon non bon men kan,food north east,(uncertain),1
+open,0,water west east,food north south,ban non bon men kan,food north south,(uncertain),1
+open,0,water west east,food north west,kan non bon men kan,food north west,(uncertain),1
+open,0,water west east,food east north,non kin bon men kan,food east north,(uncertain),1
+open,0,water west east,food east south,ban kin bon men kan,food east south,(uncertain),1
+open,0,water west east,food east west,kan kin bon men kan,food east west,(uncertain),1
+open,0,water west east,food south north,non len bon men kan,food south north,(uncertain),1
+open,0,water west east,food south east,mon len bon men kan,food south east,(uncertain),1
+open,0,water west east,food south west,kan len bon men kan,food south west,(uncertain),1
+open,0,water west east,food west north,non man bon men kan,food west north,(uncertain),1
+open,0,water west east,food west east,mon man bon men kan,food west east,(uncertain),1
+open,0,water west east,food west south,ban man bon men kan,food west south,(uncertain),1
+open,0,water west east,water east north,non kin bon men gan,water east north,(uncertain),1
+open,0,water west east,water east south,ban kin bon men gan,water east south,(uncertain),1
+open,0,water west east,water east west,kan kin bon men gan,water east west,(uncertain),1
+open,0,water west south,food north east,mon non kan nen kan,food north east,(uncertain),1
+open,0,water west south,food north south,ban non kan nen kan,food north south,(uncertain),1
+open,0,water west south,food north west,kan non kan nen kan,food north west,(uncertain),1
+open,0,water west south,food east north,non kin kan nen kan,food east north,(uncertain),1
+open,0,water west south,food east south,ban kin kan nen kan,food east south,(uncertain),1
+open,0,water west south,food east west,kan kin kan nen kan,food east west,(uncertain),1
+open,0,water west south,food south north,non len kan nen kan,food south north,(uncertain),1
+open,0,water west south,food south east,mon len kan nen kan,food south east,(uncertain),1
+open,0,water west south,food south west,kan len kan nen kan,food south west,(uncertain),1
+open,0,water west south,food west north,non man kan nen kan,food west north,(uncertain),1
+open,0,water west south,food west east,mon man kan nen kan,food west east,(uncertain),1
+open,0,water west south,food west south,ban man kan nen kan,food west south,(uncertain),1
+open,0,water west south,water south north,non len kan nen gan,water south north,(uncertain),1
+open,0,water west south,water south east,mon len kan nen gan,water south east,(uncertain),1
+open,0,water west south,water south west,kan len kan nen gan,water south west,(uncertain),1
+muted,0,food north east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+muted,0,food north east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+muted,0,food north east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+muted,0,food north east,water north east,mon non bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water north south,ban non bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water north west,kan non bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water south north,non len bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water south east,mon len bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water south west,kan len bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water west north,non man bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water west east,mon man bon men gan,(uncertain),(uncertain),0
+muted,0,food north east,water west south,ban man bon men gan,(uncertain),(uncertain),0
+muted,0,food north south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+muted,0,food north south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+muted,0,food north south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+muted,0,food north south,water north east,mon non kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water north south,ban non kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water north west,kan non kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water east north,non kin kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water east south,ban kin kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water east west,kan kin kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water west north,non man kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water west east,mon man kan nen gan,(uncertain),(uncertain),0
+muted,0,food north south,water west south,ban man kan nen gan,(uncertain),(uncertain),0
+muted,0,food north west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+muted,0,food north west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+muted,0,food north west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+muted,0,food north west,water north east,mon non gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water north south,ban non gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water north west,kan non gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water east north,non kin gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water east south,ban kin gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water east west,kan kin gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water south north,non len gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water south east,mon len gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water south west,kan len gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+muted,0,food north west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+muted,0,food east north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+muted,0,food east north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+muted,0,food east north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+muted,0,food east north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water east north,non kin din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water east south,ban kin din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water east west,kan kin din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water south north,non len din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water south east,mon len din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water south west,kan len din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water west north,non man din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water west east,mon man din ben gan,(uncertain),(uncertain),0
+muted,0,food east north,water west south,ban man din ben gan,(uncertain),(uncertain),0
+muted,0,food east south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+muted,0,food east south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+muted,0,food east south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+muted,0,food east south,water north east,mon non kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water north south,ban non kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water north west,kan non kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water east north,non kin kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water east south,ban kin kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water east west,kan kin kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water west north,non man kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water west east,mon man kan nen gan,(uncertain),(uncertain),0
+muted,0,food east south,water west south,ban man kan nen gan,(uncertain),(uncertain),0
+muted,0,food east west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+muted,0,food east west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+muted,0,food east west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+muted,0,food east west,water north east,mon non gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water north south,ban non gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water north west,kan non gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water east north,non kin gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water east south,ban kin gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water east west,kan kin gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water south north,non len gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water south east,mon len gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water south west,kan len gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+muted,0,food east west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+muted,0,food south north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+muted,0,food south north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+muted,0,food south north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+muted,0,food south north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water east north,non kin din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water east south,ban kin din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water east west,kan kin din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water south north,non len din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water south east,mon len din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water south west,kan len din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water west north,non man din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water west east,mon man din ben gan,(uncertain),(uncertain),0
+muted,0,food south north,water west south,ban man din ben gan,(uncertain),(uncertain),0
+muted,0,food south east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+muted,0,food south east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+muted,0,food south east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+muted,0,food south east,water north east,mon non bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water north south,ban non bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water north west,kan non bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water south north,non len bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water south east,mon len bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water south west,kan len bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water west north,non man bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water west east,mon man bon men gan,(uncertain),(uncertain),0
+muted,0,food south east,water west south,ban man bon men gan,(uncertain),(uncertain),0
+muted,0,food south west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+muted,0,food south west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+muted,0,food south west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+muted,0,food south west,water north east,mon non gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water north south,ban non gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water north west,kan non gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water east north,non kin gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water east south,ban kin gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water east west,kan kin gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water south north,non len gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water south east,mon len gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water south west,kan len gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+muted,0,food south west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+muted,0,food west north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+muted,0,food west north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+muted,0,food west north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+muted,0,food west north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water east north,non kin din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water east south,ban kin din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water east west,kan kin din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water south north,non len din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water south east,mon len din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water south west,kan len din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water west north,non man din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water west east,mon man din ben gan,(uncertain),(uncertain),0
+muted,0,food west north,water west south,ban man din ben gan,(uncertain),(uncertain),0
+muted,0,food west east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+muted,0,food west east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+muted,0,food west east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+muted,0,food west east,water north east,mon non bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water north south,ban non bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water north west,kan non bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water south north,non len bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water south east,mon len bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water south west,kan len bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water west north,non man bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water west east,mon man bon men gan,(uncertain),(uncertain),0
+muted,0,food west east,water west south,ban man bon men gan,(uncertain),(uncertain),0
+muted,0,food west south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+muted,0,food west south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+muted,0,food west south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+muted,0,food west south,water north east,mon non kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water north south,ban non kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water north west,kan non kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water east north,non kin kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water east south,ban kin kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water east west,kan kin kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water west north,non man kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water west east,mon man kan nen gan,(uncertain),(uncertain),0
+muted,0,food west south,water west south,ban man kan nen gan,(uncertain),(uncertain),0
+muted,0,water north east,food north east,mon non bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food north south,ban non bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food north west,kan non bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food south north,non len bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food south east,mon len bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food south west,kan len bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food west north,non man bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food west east,mon man bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,food west south,ban man bon men kan,(uncertain),(uncertain),0
+muted,0,water north east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+muted,0,water north east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+muted,0,water north east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+muted,0,water north south,food north east,mon non kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food north south,ban non kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food north west,kan non kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food east north,non kin kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food east south,ban kin kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food east west,kan kin kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food west north,non man kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food west east,mon man kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,food west south,ban man kan nen kan,(uncertain),(uncertain),0
+muted,0,water north south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+muted,0,water north south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+muted,0,water north south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+muted,0,water north west,food north east,mon non gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food north south,ban non gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food north west,kan non gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food east north,non kin gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food east south,ban kin gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food east west,kan kin gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food south north,non len gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food south east,mon len gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food south west,kan len gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+muted,0,water north west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+muted,0,water north west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+muted,0,water north west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+muted,0,water east north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food east north,non kin din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food east south,ban kin din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food east west,kan kin din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food south north,non len din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food south east,mon len din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food south west,kan len din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food west north,non man din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food west east,mon man din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,food west south,ban man din ben kan,(uncertain),(uncertain),0
+muted,0,water east north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+muted,0,water east north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+muted,0,water east north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+muted,0,water east south,food north east,mon non kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food north south,ban non kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food north west,kan non kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food east north,non kin kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food east south,ban kin kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food east west,kan kin kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food west north,non man kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food west east,mon man kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,food west south,ban man kan nen kan,(uncertain),(uncertain),0
+muted,0,water east south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+muted,0,water east south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+muted,0,water east south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+muted,0,water east west,food north east,mon non gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food north south,ban non gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food north west,kan non gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food east north,non kin gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food east south,ban kin gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food east west,kan kin gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food south north,non len gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food south east,mon len gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food south west,kan len gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+muted,0,water east west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+muted,0,water east west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+muted,0,water east west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+muted,0,water south north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food east north,non kin din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food east south,ban kin din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food east west,kan kin din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food south north,non len din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food south east,mon len din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food south west,kan len din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food west north,non man din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food west east,mon man din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,food west south,ban man din ben kan,(uncertain),(uncertain),0
+muted,0,water south north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+muted,0,water south north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+muted,0,water south north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+muted,0,water south east,food north east,mon non bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food north south,ban non bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food north west,kan non bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food south north,non len bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food south east,mon len bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food south west,kan len bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food west north,non man bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food west east,mon man bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,food west south,ban man bon men kan,(uncertain),(uncertain),0
+muted,0,water south east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+muted,0,water south east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+muted,0,water south east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+muted,0,water south west,food north east,mon non gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food north south,ban non gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food north west,kan non gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food east north,non kin gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food east south,ban kin gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food east west,kan kin gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food south north,non len gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food south east,mon len gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food south west,kan len gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+muted,0,water south west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+muted,0,water south west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+muted,0,water south west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+muted,0,water west north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food east north,non kin din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food east south,ban kin din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food east west,kan kin din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food south north,non len din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food south east,mon len din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food south west,kan len din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food west north,non man din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food west east,mon man din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,food west south,ban man din ben kan,(uncertain),(uncertain),0
+muted,0,water west north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+muted,0,water west north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+muted,0,water west north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+muted,0,water west east,food north east,mon non bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food north south,ban non bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food north west,kan non bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food south north,non len bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food south east,mon len bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food south west,kan len bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food west north,non man bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food west east,mon man bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,food west south,ban man bon men kan,(uncertain),(uncertain),0
+muted,0,water west east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+muted,0,water west east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+muted,0,water west east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+muted,0,water west south,food north east,mon non kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food north south,ban non kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food north west,kan non kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food east north,non kin kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food east south,ban kin kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food east west,kan kin kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food west north,non man kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food west east,mon man kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,food west south,ban man kan nen kan,(uncertain),(uncertain),0
+muted,0,water west south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+muted,0,water west south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+muted,0,water west south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+reversed,0,food north east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+reversed,0,food north east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+reversed,0,food north east,water north east,mon non bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water north south,ban non bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water north west,kan non bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water south north,non len bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water south east,mon len bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water south west,kan len bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water west north,non man bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water west east,mon man bon men gan,(uncertain),(uncertain),0
+reversed,0,food north east,water west south,ban man bon men gan,(uncertain),(uncertain),0
+reversed,0,food north south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+reversed,0,food north south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+reversed,0,food north south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+reversed,0,food north south,water north east,mon non kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water north south,ban non kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water north west,kan non kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water east north,non kin kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water east south,ban kin kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water east west,kan kin kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water west north,non man kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water west east,mon man kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north south,water west south,ban man kan nen gan,(uncertain),(uncertain),0
+reversed,0,food north west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+reversed,0,food north west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+reversed,0,food north west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+reversed,0,food north west,water north east,mon non gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water north south,ban non gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water north west,kan non gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water east north,non kin gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water east south,ban kin gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water east west,kan kin gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water south north,non len gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water south east,mon len gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water south west,kan len gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+reversed,0,food north west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+reversed,0,food east north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+reversed,0,food east north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+reversed,0,food east north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water east north,non kin din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water east south,ban kin din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water east west,kan kin din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water south north,non len din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water south east,mon len din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water south west,kan len din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water west north,non man din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water west east,mon man din ben gan,(uncertain),(uncertain),0
+reversed,0,food east north,water west south,ban man din ben gan,(uncertain),(uncertain),0
+reversed,0,food east south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+reversed,0,food east south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+reversed,0,food east south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+reversed,0,food east south,water north east,mon non kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water north south,ban non kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water north west,kan non kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water east north,non kin kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water east south,ban kin kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water east west,kan kin kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water west north,non man kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water west east,mon man kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east south,water west south,ban man kan nen gan,(uncertain),(uncertain),0
+reversed,0,food east west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+reversed,0,food east west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+reversed,0,food east west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+reversed,0,food east west,water north east,mon non gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water north south,ban non gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water north west,kan non gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water east north,non kin gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water east south,ban kin gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water east west,kan kin gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water south north,non len gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water south east,mon len gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water south west,kan len gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+reversed,0,food east west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+reversed,0,food south north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+reversed,0,food south north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+reversed,0,food south north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water east north,non kin din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water east south,ban kin din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water east west,kan kin din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water south north,non len din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water south east,mon len din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water south west,kan len din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water west north,non man din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water west east,mon man din ben gan,(uncertain),(uncertain),0
+reversed,0,food south north,water west south,ban man din ben gan,(uncertain),(uncertain),0
+reversed,0,food south east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+reversed,0,food south east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+reversed,0,food south east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+reversed,0,food south east,water north east,mon non bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water north south,ban non bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water north west,kan non bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water south north,non len bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water south east,mon len bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water south west,kan len bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water west north,non man bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water west east,mon man bon men gan,(uncertain),(uncertain),0
+reversed,0,food south east,water west south,ban man bon men gan,(uncertain),(uncertain),0
+reversed,0,food south west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+reversed,0,food south west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+reversed,0,food south west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+reversed,0,food south west,water north east,mon non gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water north south,ban non gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water north west,kan non gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water east north,non kin gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water east south,ban kin gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water east west,kan kin gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water south north,non len gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water south east,mon len gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water south west,kan len gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+reversed,0,food south west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+reversed,0,food west north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+reversed,0,food west north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+reversed,0,food west north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+reversed,0,food west north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water east north,non kin din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water east south,ban kin din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water east west,kan kin din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water south north,non len din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water south east,mon len din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water south west,kan len din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water west north,non man din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water west east,mon man din ben gan,(uncertain),(uncertain),0
+reversed,0,food west north,water west south,ban man din ben gan,(uncertain),(uncertain),0
+reversed,0,food west east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+reversed,0,food west east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+reversed,0,food west east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+reversed,0,food west east,water north east,mon non bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water north south,ban non bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water north west,kan non bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water south north,non len bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water south east,mon len bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water south west,kan len bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water west north,non man bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water west east,mon man bon men gan,(uncertain),(uncertain),0
+reversed,0,food west east,water west south,ban man bon men gan,(uncertain),(uncertain),0
+reversed,0,food west south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+reversed,0,food west south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+reversed,0,food west south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+reversed,0,food west south,water north east,mon non kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water north south,ban non kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water north west,kan non kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water east north,non kin kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water east south,ban kin kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water east west,kan kin kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water west north,non man kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water west east,mon man kan nen gan,(uncertain),(uncertain),0
+reversed,0,food west south,water west south,ban man kan nen gan,(uncertain),(uncertain),0
+reversed,0,water north east,food north east,mon non bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food north south,ban non bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food north west,kan non bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food south north,non len bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food south east,mon len bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food south west,kan len bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food west north,non man bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food west east,mon man bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,food west south,ban man bon men kan,(uncertain),(uncertain),0
+reversed,0,water north east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+reversed,0,water north east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+reversed,0,water north east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+reversed,0,water north south,food north east,mon non kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food north south,ban non kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food north west,kan non kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food east north,non kin kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food east south,ban kin kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food east west,kan kin kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food west north,non man kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food west east,mon man kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,food west south,ban man kan nen kan,(uncertain),(uncertain),0
+reversed,0,water north south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+reversed,0,water north south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+reversed,0,water north south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+reversed,0,water north west,food north east,mon non gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,food north south,ban non gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,food north west,kan non gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,food east north,non kin gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,food east south,ban kin gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,food east west,kan kin gen kin kan,food east west,(uncertain),1
+reversed,0,water north west,food south north,non len gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,food south east,mon len gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,food south west,kan len gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+reversed,0,water north west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+reversed,0,water north west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+reversed,0,water north west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+reversed,0,water east north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food east north,non kin din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food east south,ban kin din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food east west,kan kin din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food south north,non len din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food south east,mon len din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food south west,kan len din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food west north,non man din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food west east,mon man din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,food west south,ban man din ben kan,(uncertain),(uncertain),0
+reversed,0,water east north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+reversed,0,water east north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+reversed,0,water east north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+reversed,0,water east south,food north east,mon non kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food north south,ban non kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food north west,kan non kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food east north,non kin kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food east south,ban kin kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food east west,kan kin kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food west north,non man kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food west east,mon man kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,food west south,ban man kan nen kan,(uncertain),(uncertain),0
+reversed,0,water east south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+reversed,0,water east south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+reversed,0,water east south,water south west,kan len kan nen gan,(uncertain),(uncertain),0
+reversed,0,water east west,food north east,mon non gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,food north south,ban non gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,food north west,kan non gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,food east north,non kin gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,food east south,ban kin gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,food east west,kan kin gen kin kan,food east west,(uncertain),1
+reversed,0,water east west,food south north,non len gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,food south east,mon len gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,food south west,kan len gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+reversed,0,water east west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+reversed,0,water east west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+reversed,0,water east west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+reversed,0,water south north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food east north,non kin din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food east south,ban kin din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food east west,kan kin din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food south north,non len din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food south east,mon len din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food south west,kan len din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food west north,non man din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food west east,mon man din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,food west south,ban man din ben kan,(uncertain),(uncertain),0
+reversed,0,water south north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+reversed,0,water south north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+reversed,0,water south north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+reversed,0,water south east,food north east,mon non bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food north south,ban non bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food north west,kan non bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food south north,non len bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food south east,mon len bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food south west,kan len bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food west north,non man bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food west east,mon man bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,food west south,ban man bon men kan,(uncertain),(uncertain),0
+reversed,0,water south east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+reversed,0,water south east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+reversed,0,water south east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+reversed,0,water south west,food north east,mon non gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,food north south,ban non gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,food north west,kan non gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,food east north,non kin gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,food east south,ban kin gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,food east west,kan kin gen kin kan,food east west,(uncertain),1
+reversed,0,water south west,food south north,non len gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,food south east,mon len gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,food south west,kan len gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,food west north,non man gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,food west east,mon man gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,food west south,ban man gen kin kan,(uncertain),(uncertain),0
+reversed,0,water south west,water west north,non man gen kin gan,(uncertain),(uncertain),0
+reversed,0,water south west,water west east,mon man gen kin gan,(uncertain),(uncertain),0
+reversed,0,water south west,water west south,ban man gen kin gan,(uncertain),(uncertain),0
+reversed,0,water west north,food north east,mon non din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food north south,ban non din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food north west,kan non din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food east north,non kin din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food east south,ban kin din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food east west,kan kin din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food south north,non len din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food south east,mon len din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food south west,kan len din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food west north,non man din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food west east,mon man din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,food west south,ban man din ben kan,(uncertain),(uncertain),0
+reversed,0,water west north,water north east,mon non din ben gan,(uncertain),(uncertain),0
+reversed,0,water west north,water north south,ban non din ben gan,(uncertain),(uncertain),0
+reversed,0,water west north,water north west,kan non din ben gan,(uncertain),(uncertain),0
+reversed,0,water west east,food north east,mon non bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food north south,ban non bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food north west,kan non bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food east north,non kin bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food east south,ban kin bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food east west,kan kin bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food south north,non len bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food south east,mon len bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food south west,kan len bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food west north,non man bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food west east,mon man bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,food west south,ban man bon men kan,(uncertain),(uncertain),0
+reversed,0,water west east,water east north,non kin bon men gan,(uncertain),(uncertain),0
+reversed,0,water west east,water east south,ban kin bon men gan,(uncertain),(uncertain),0
+reversed,0,water west east,water east west,kan kin bon men gan,(uncertain),(uncertain),0
+reversed,0,water west south,food north east,mon non kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food north south,ban non kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food north west,kan non kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food east north,non kin kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food east south,ban kin kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food east west,kan kin kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food south north,non len kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food south east,mon len kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food south west,kan len kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food west north,non man kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food west east,mon man kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,food west south,ban man kan nen kan,(uncertain),(uncertain),0
+reversed,0,water west south,water south north,non len kan nen gan,(uncertain),(uncertain),0
+reversed,0,water west south,water south east,mon len kan nen gan,(uncertain),(uncertain),0
+reversed,0,water west south,water south west,kan len kan nen gan,(uncertain),(uncertain),0

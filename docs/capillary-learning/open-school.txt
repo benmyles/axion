@@ -1,0 +1,20 @@
+braid_talk=0  person=0  ready=0  understood=0  start=0  expected=0  known=0  end=0  motor=0  strokes=0  word_plan=0  said=0  informed=0  delivered=0  consultations=0  evidence=0  relation=0  incurred=0  spent=0  mouth=0  borrowed=0  writes=0  viewed=0  heard_words=0  source=8192  tutor=8192  stage0=156  stage1=135  stage2=180
+braid_talk=2  person=0  ready=0  understood=0  start=0  expected=0  known=0  end=0  motor=0  strokes=0  word_plan=0  said=0  informed=0  delivered=0  consultations=0  evidence=0  relation=0  incurred=0  spent=0  mouth=1024  borrowed=0  writes=0  viewed=0  heard_words=0  source=7168  tutor=8192  stage0=156  stage1=135  stage2=180
+speaker> ?
+narrative_turn=5  person=0  events=2  trail=144115188075894356  other_trail=0  decoded=0  words=0  prompts=4  heat=0  other_heat=0  edits=0  sprouts=0  palette=0  grain_stock=64  food_stock=64  held=0  eaten=0  settled=0  bite=0  shutters=3
+speaker> ?
+capillary_turn=7  person=0  handles=0  earlier=0  later=1  changed=48  causal_set=0  alternatives=2  words=0  heat=0  pupil_heat=0  on=16141147358992854528  off=1220494122114023695  predicted_on=16717623504459066880  predicted_off=1729120569250484735  plan=0  built=0  considered=0  accepted=0  narrowed=0  target=0  source=0  pad=0  out=0  drops=32  settled=0  eaten=0  got=0  eyes=0  edits=0  spikes=0
+speaker> no
+capillary_turn=7  person=0  handles=0  earlier=0  later=1  changed=48  causal_set=0  alternatives=2  words=1  heat=1  pupil_heat=0  on=16141147358992854528  off=1220494122114023695  predicted_on=16717623504459066880  predicted_off=1729120569250484735  plan=0  built=0  considered=0  accepted=0  narrowed=0  target=0  source=0  pad=0  out=0  drops=32  settled=0  eaten=0  got=0  eyes=0  edits=0  spikes=0
+actor> ?
+braid_talk=6  person=0  ready=0  understood=0  start=0  expected=0  known=0  end=0  motor=0  strokes=0  word_plan=0  said=0  informed=0  delivered=0  consultations=0  evidence=0  relation=0  incurred=0  spent=0  mouth=0  borrowed=0  writes=0  viewed=0  heard_words=5  source=7168  tutor=8192  stage0=156  stage1=135  stage2=180
+speaker> ?
+capillary_turn=7  person=0  handles=0  earlier=0  later=1  changed=48  causal_set=0  alternatives=0  words=0  heat=0  pupil_heat=0  on=16141147358992854528  off=1220494122114023695  predicted_on=16717623504459066880  predicted_off=1729120569250484735  plan=0  built=0  considered=0  accepted=0  narrowed=0  target=0  source=0  pad=0  out=0  drops=32  settled=0  eaten=0  got=0  eyes=0  edits=0  spikes=0
+actor> ?
+braid_talk=6  person=0  ready=0  understood=0  start=0  expected=0  known=0  end=0  motor=0  strokes=0  word_plan=0  said=0  informed=0  delivered=0  consultations=0  evidence=0  relation=0  incurred=0  spent=0  mouth=0  borrowed=0  writes=0  viewed=0  heard_words=7  source=7168  tutor=8192  stage0=156  stage1=135  stage2=180
+actor> ?
+braid_talk=6  person=0  ready=0  understood=0  start=0  expected=0  known=0  end=0  motor=0  strokes=0  word_plan=0  said=0  informed=0  delivered=0  consultations=0  evidence=0  relation=0  incurred=0  spent=0  mouth=0  borrowed=0  writes=0  viewed=0  heard_words=6  source=7168  tutor=8192  stage0=156  stage1=135  stage2=180
+actor> ?
+braid_talk=6  person=0  ready=0  understood=0  start=0  expected=0  known=0  end=0  motor=0  strokes=0  word_plan=0  said=0  informed=0  delivered=0  consultations=0  evidence=0  relation=0  incurred=0  spent=0  mouth=0  borrowed=0  writes=0  viewed=0  heard_words=7  source=7168  tutor=8192  stage0=156  stage1=135  stage2=180
+speaker> amber at south
+narrative_turn=5  person=0  events=2  trail=144115188075894356  other_trail=0  decoded=0  words=3  prompts=4  heat=3  other_heat=0  edits=0  sprouts=0  palette=0  grain_stock=64  food_stock=64  held=0  eaten=0  settled=0  bite=0  shutters=3

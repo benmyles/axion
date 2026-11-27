@@ -1,0 +1,17 @@
+/braid 99137
+/braid-station speaker 23 0123 15
+/braid-feed speaker 512
+/braid-feedback speaker on
+/braid-practice speaker 12
+/braid-gloss speaker 16 57889 north east south west amber jade plum teal
+/braid-pattern speaker before explicit port 96 61668 what was in *
+/braid-pattern speaker actual explicit port 96 65447 what is in *
+/braid-pattern speaker plan explicit port 96 69226 what did you expect in *
+/braid-pattern speaker actual topic either 128 260899 what actually passed there
+/braid-pattern speaker before topic either 128 417079 and before
+/braid-pattern speaker plan topic either 128 679967 what did you expect there
+/braid-pattern speaker before explicit dye 96 792449 where did * start
+/braid-pattern speaker actual explicit dye 96 829733 where did * end
+/braid-pattern speaker before reply either 128 904633 where did that start
+/braid-memory speaker
+/quit

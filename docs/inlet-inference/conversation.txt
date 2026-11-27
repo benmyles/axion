@@ -1,0 +1,24 @@
+STRAIGHT
+inlet_table=table  status=0  practiced=0  sampled=0  inlet=1  pending=0  delivered=0  contacts_before=17476  contacts_after=17476  food_remaining=4096  eaten=0  settled=0  heat=0  rotations=0
+inlet_table=practice  status=0  practiced=24  sampled=7  inlet=1  pending=0  delivered=0  contacts_before=17476  contacts_after=18366  food_remaining=4000  eaten=84  settled=12  heat=24  rotations=0
+inlet_table=stage  status=0  practiced=24  sampled=7  inlet=1  pending=1  delivered=0  contacts_before=18366  contacts_after=18366  food_remaining=4000  eaten=84  settled=12  heat=25  marker=0  forecast_mask=2  reached=0  proximal=3  rotations=0
+speaker> north
+speaker asks> where did amber end?
+inlet_table=pour  status=0  practiced=24  sampled=7  inlet=1  pending=0  delivered=1  contacts_before=18366  contacts_after=55230  food_remaining=3996  eaten=88  settled=12  heat=25  marker=0  forecast_mask=2  reached=0  proximal=3  outlet=0  rotations=0
+speaker> north
+speaker> east
+animal> (silence)
+animal> (silence)
+
+TURNED
+inlet_table=table  status=0  practiced=0  sampled=0  inlet=1  pending=0  delivered=0  contacts_before=17476  contacts_after=17476  food_remaining=4096  eaten=0  settled=0  heat=0  rotations=0
+inlet_table=practice  status=0  practiced=24  sampled=7  inlet=1  pending=0  delivered=0  contacts_before=17476  contacts_after=18366  food_remaining=4000  eaten=84  settled=12  heat=24  rotations=0
+inlet_table=stage  status=0  practiced=24  sampled=7  inlet=1  pending=1  delivered=0  contacts_before=18366  contacts_after=18366  food_remaining=4000  eaten=84  settled=12  heat=25  marker=0  forecast_mask=2  reached=0  proximal=3  rotations=0
+speaker> north
+speaker asks> where did amber end?
+inlet_table=turn  status=0  practiced=24  sampled=7  inlet=1  pending=1  delivered=0  contacts_before=18366  contacts_after=18366  food_remaining=4000  eaten=84  settled=12  heat=25  marker=0  forecast_mask=2  reached=0  proximal=3  rotations=1
+inlet_table=pour  status=0  practiced=24  sampled=7  inlet=1  pending=0  delivered=1  contacts_before=18366  contacts_after=10174  food_remaining=3996  eaten=84  settled=16  heat=25  marker=0  forecast_mask=2  reached=0  proximal=3  outlet=1  rotations=1
+speaker> east
+speaker> east
+animal> (silence)
+animal> (silence)

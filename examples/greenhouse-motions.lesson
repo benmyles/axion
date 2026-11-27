@@ -1,0 +1,70 @@
+mist | @motors soak
+warm | @motors heat
+plant | @motors sow
+brush | @motors tend
+dust | @motors pollinate
+pluck | @motors ripen
+again mist | @motors soak soak
+then mist warm | @motors soak heat
+after mist warm | @motors heat soak
+braid mist warm | @motors soak heat soak
+again warm | @motors heat heat
+then warm plant | @motors heat sow
+after warm plant | @motors sow heat
+braid warm plant | @motors heat sow heat
+again plant | @motors sow sow
+then plant brush | @motors sow tend
+after plant brush | @motors tend sow
+braid plant brush | @motors sow tend sow
+again brush | @motors tend tend
+then brush dust | @motors tend pollinate
+after brush dust | @motors pollinate tend
+braid brush dust | @motors tend pollinate tend
+again dust | @motors pollinate pollinate
+then dust pluck | @motors pollinate ripen
+after dust pluck | @motors ripen pollinate
+braid dust pluck | @motors pollinate ripen pollinate
+again pluck | @motors ripen ripen
+then pluck mist | @motors ripen soak
+after pluck mist | @motors soak ripen
+braid pluck mist | @motors ripen soak ripen
+@view=c8 sense plant else brush | @motors sow
+@view=e3 sense brush else pluck | @motors ripen
+@view=b8 sense plant else dust | @motors sow
+@view=f0 sense mist else dust | @motors soak
+@view=fb sense mist else brush | @motors tend
+@view=b5 sense brush else mist | @motors tend
+@view=8b sense brush else mist | @motors soak
+@view=19 sense warm else dust | @motors pollinate
+@view=64 sense pluck else brush | @motors tend
+@view=c8 sense plant else brush | @motors sow
+@view=2b sense brush else mist | @motors soak
+@view=c0 sense pluck else brush | @motors ripen
+@view=87 sense mist else warm | @motors soak
+@view=fb sense warm else brush | @motors tend
+@view=fb sense dust else mist | @motors soak
+@view=8f sense plant else dust | @motors sow
+@view=a8 sense plant else warm | @motors sow
+@view=b7 sense dust else brush | @motors pollinate
+@view=e9 sense plant else pluck | @motors ripen
+@view=41 sense mist else brush | @motors tend
+@view=d2 sense brush else warm | @motors tend
+@view=22 sense warm else dust | @motors heat
+@view=66 sense warm else pluck | @motors ripen
+@view=9e sense warm else plant | @motors sow
+@view=d5 sense brush else dust | @motors tend
+@view=66 sense mist else warm | @motors heat
+@view=27 sense warm else mist | @motors heat
+@view=37 sense mist else plant | @motors soak
+@view=8a sense brush else mist | @motors tend
+@view=4f sense warm else brush | @motors heat
+@view=6b sense dust else mist | @motors soak
+@view=dc sense pluck else dust | @motors pollinate
+@view=64 sense pluck else plant | @motors sow
+@view=da sense brush else warm | @motors tend
+@view=a0 sense pluck else brush | @motors ripen
+@view=10 sense brush else plant | @motors tend
+@view=07 sense brush else dust | @motors tend
+@view=5d sense plant else pluck | @motors sow
+@view=42 sense mist else dust | @motors soak
+@view=86 sense brush else dust | @motors pollinate

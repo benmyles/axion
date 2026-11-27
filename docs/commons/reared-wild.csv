@@ -1,0 +1,15 @@
+individual,stage,play,task,correct,items,silent
+wild-explorer.mind,from-commons,1024,two_sightings_back,9,32,0
+wild-explorer.mind,from-commons,1024,last_seen,6,32,0
+wild-explorer.mind,from-commons,1024,opposite,9,32,0
+wild-explorer.mind,from-commons,1024,current,4,32,0
+wild-explorer.mind,from-commons,1024,exchange,7,32,0
+wild-explorer.mind,from-commons,1024,shared_past,10,32,0
+wild-explorer.mind,from-commons,1024,clockwise,11,32,0
+wild-explorer.mind,after-play,1024,two_sightings_back,6,32,0
+wild-explorer.mind,after-play,1024,last_seen,10,32,0
+wild-explorer.mind,after-play,1024,opposite,22,32,0
+wild-explorer.mind,after-play,1024,current,14,32,0
+wild-explorer.mind,after-play,1024,exchange,15,32,0
+wild-explorer.mind,after-play,1024,shared_past,5,32,0
+wild-explorer.mind,after-play,1024,clockwise,16,32,0

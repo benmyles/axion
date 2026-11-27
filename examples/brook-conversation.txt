@@ -1,0 +1,11 @@
+/braid 62
+/braid-feed speaker 1280
+/braid-feed partner 1280
+/story-memory speaker
+What happened?
+How did it begin?
+Where did it finish?
+What came after plum?
+What came before teal?
+What came after amber?
+/quit

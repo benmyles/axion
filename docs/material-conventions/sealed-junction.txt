@@ -1,0 +1,6 @@
+sealed_cycle=0  geology=0  input=27  carrier_before=2  bound_before=0  flow=1  carrier_after=0  bound_after=2  remaining=31  paid=2  contacts=1
+sealed_cycle=0  geology=0  input=27  carrier_before=0  bound_before=2  flow=0  carrier_after=0  bound_after=2  remaining=31  paid=2  contacts=1
+sealed_cycle=0  geology=0  input=27  carrier_before=0  bound_before=2  flow=0  carrier_after=0  bound_after=2  remaining=31  paid=2  contacts=1
+sealed_cycle=0  geology=0  input=9  carrier_before=0  bound_before=2  flow=1  carrier_after=2  bound_after=0  remaining=31  paid=2  contacts=1
+sealed_cycle=0  geology=0  input=27  carrier_before=2  bound_before=0  flow=1  carrier_after=0  bound_after=2  remaining=31  paid=2  contacts=1
+sealed_cycle=0  geology=0  input=27  carrier_before=0  bound_before=2  flow=0  carrier_after=0  bound_after=2  remaining=31  paid=2  contacts=1

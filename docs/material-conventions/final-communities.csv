@@ -1,0 +1,17 @@
+selection,width,sender_school,receiver_school,cases,correct,erased,left_convention,right_convention
+first,1,left,left,512,256,256,0,0
+first,1,left,right,512,256,256,0,0
+first,1,right,left,512,256,256,0,0
+first,1,right,right,512,256,256,0,0
+first,4,left,left,8192,4077,4096,137,0
+first,4,left,right,8192,4077,4096,137,0
+first,4,right,left,8192,4077,4096,137,0
+first,4,right,right,8192,4077,4096,137,0
+screened,1,left,left,512,365,256,121,0
+screened,1,left,right,512,365,256,121,0
+screened,1,right,left,512,365,256,121,0
+screened,1,right,right,512,365,256,121,0
+screened,4,left,left,8192,4253,4096,157,0
+screened,4,left,right,8192,3293,4096,0,0
+screened,4,right,left,8192,3840,4096,9,0
+screened,4,right,right,8192,5462,4096,0,1399

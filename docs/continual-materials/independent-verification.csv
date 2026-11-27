@@ -1,0 +1,13 @@
+run,episodes,switches,changed_before,changed_after,stable_after,explained,harvest,heat
+holdout-brook-adaptive,6144,2165,0,2165,3979,6144,6094,314510
+holdout-brook-clamped,6144,2165,0,0,959,1236,3926,314510
+holdout-brook-cleared,6144,2165,0,2165,3979,6144,6094,330813
+holdout-brook-exchanged,6144,2165,2165,0,0,0,549,314510
+holdout-brook-single,6144,2165,634,634,1836,2647,3707,306850
+holdout-brook-unchecked,6144,2165,827,992,2766,3758,3941,303270
+holdout-coast-adaptive,6144,2165,0,2165,3979,6144,6094,317052
+holdout-coast-clamped,6144,2165,0,0,959,1284,4055,317052
+holdout-coast-cleared,6144,2165,0,2165,3979,6144,6094,330813
+holdout-coast-exchanged,6144,2165,2165,0,0,0,549,317052
+holdout-coast-single,6144,2165,411,411,1584,2443,3685,306346
+holdout-coast-unchecked,6144,2165,810,1017,2788,3805,3983,304609

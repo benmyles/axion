@@ -1,0 +1,13 @@
+seed,chain_length,kind,correct,turns,repeat_old_answer,keep_first_referent
+1511,2,named,4,4,1,4
+1511,2,same,1,1,0,1
+1511,2,switch,3,3,2,0
+1511,8,named,4,4,0,4
+1511,8,same,13,13,3,9
+1511,8,switch,15,15,1,7
+1511,32,named,4,4,1,4
+1511,32,same,59,59,11,25
+1511,32,switch,65,65,24,31
+1511,128,named,4,4,1,4
+1511,128,same,251,251,65,120
+1511,128,switch,257,257,68,127

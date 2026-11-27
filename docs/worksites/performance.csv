@@ -1,0 +1,5 @@
+journal_run,measurement,hardware,flood_side,capacity,genome_bytes,resident_bytes_per_site,worksite_deployment,calls,comparisons,differences,receptive_bytes,mutable_bytes,mutable_ms,median_ms,Mmaterial_diagrams_per_s,flood_seconds,site_ticks,Msite_ticks_per_s,simulation_seconds,simulation_Msite_ticks_per_s
+7706,worksite_deployment,RTX PRO 2000 Blackwell Laptop,64,512,240,967,1105,524288,75140,0,9,40,0.57664,0.538304,973.963,,,,,
+7793,worksite_deployment,RTX PRO 2000 Blackwell Laptop,64,512,240,967,1105,1048576,75140,0,9,40,1.1455,1.07274,977.478,,,,,
+7792,flood_seconds,RTX PRO 2000 Blackwell Laptop,128,1024,240,1223,,,,,,,,,,0.471301,33554432,71.1954,0.42565,78.831
+7795,flood_seconds,RTX PRO 2000 Blackwell Laptop,64,512,240,967,,,,,,,,,,0.304064,16777216,55.1765,0.297068,56.4761

@@ -1,0 +1,21 @@
+evidence,original,replay,bytes,SHA-256 of each
+habitat stage 1,native SM 120,"independent reconstruction from Runnels, first 4096 ticks",500960168,4677d29a242d1acfe628fb2b6472b9eb87cc0d904aa467ff23bde12f527442d0
+habitat stage 3,native SM 120,"independent reconstruction from Runnels, two successive vs one 8192-tick diversion",500960168,43cb85a8c50434d512daa5e3b0341e917c615ad5eeb674a6a8b6870a8f2460ba
+habitat stage 4,native SM 120,"independent reconstruction from Runnels, restore both acoustic axes",500960168,4deac98bd6822007b2c140114a316a5c653141b20db5d4163aff3f4ce7044847
+habitat stage 5,native SM 120,"independent reconstruction from Runnels, one grip per inquiry",500960208,231fd88d6eb218122500e68c8fbc83851954f3cb19be25117bc58def89579e96
+habitat stage 6,native SM 120,"independent reconstruction from Runnels, reverse horizontal loading",500960208,fd492301ef144813b3dd428444d5ca763775f626a777a7d736edcca5213a0d76
+habitat stage 7,native SM 120,"independent reconstruction from Runnels, restore loading",500960208,37502e63b6c450bc6afe6387e5a9ce19691a118c7b250272833f2c25d9f896ce
+habitat stage 8,native SM 120,"independent reconstruction from Runnels, permit distal eligibility",500960208,9f39a2aeabc7163af60c042144f09d5b3174468ae03606c3a017c0442be08cbd
+habitat stage 9,native SM 120,"independent reconstruction from Runnels, sediment loading",500960256,d7548743f078ea0939f9d781a7477fbbb170a6610bf0844876e549ac898059a8
+habitat stage 10,native SM 120,"independent reconstruction from Runnels, 8192 vs 1803 and 6389 ticks",500960256,b920b5409f011ebe3ee59b5362dbae3a9b938249e1bce7998edc12925f74fc15
+published complete watershed,4096 final ticks,independent full lineage reconstruction,500960256,1137232ede4d296b5d7c145ddda83daab26ad0de3c170d4125e0b9ce8d57b0c1
+published complete watershed,4096 final ticks,213 and 3883 final ticks,500960256,1137232ede4d296b5d7c145ddda83daab26ad0de3c170d4125e0b9ce8d57b0c1
+cross-compilation flood,native SM 120,SM 80 PTX on the same Blackwell GPU,6347520,fd4c257c2720c5774d5fb704d2e68dac5cf36c5c2ce3d059251e5fef028d6c93
+cross-compilation mind,native SM 120,SM 80 PTX on the same Blackwell GPU,30084,6f171fe36012b6863c861d862a09df9439b4e81de3d19cfd905af574dd990b93
+cross-compilation tsv,native SM 120,SM 80 PTX on the same Blackwell GPU,533050,c2afd136be5d3950da9bc8bb10968ef11d9d32f7716842028880dc261ac5eede
+cross-compilation audit,native SM 120,SM 80 PTX on the same Blackwell GPU,21908,c9bc9a870fd5a9cebb4236cff38164b89bead9ac80b2ddf1c5c69b4cc9baadd6
+paired nursery ancestor,Native SM 120,192 generations from random bodies,6347432,3b04f4db687f60f01b0e5f9beddb03955f7cf2b21361d22a2b235fd01b2bb68f
+single-inquiry descendant,Native SM 120,256 generations after the two-source ancestor,6347472,584d29bbe6512f44f68c42df664f9f82e7af25f4cd1ce2c25118c2b36c2d457f
+unseeded scarce experiment,Native SM 120,2048 successive broods,6347472,f343e461bd7a2c851f0f8994cc9729ecae53b2e27ab33f6a9418208c58c5f9f4
+unseeded speech program,Native SM 120,first occupied slot on the same speech carrier,30084,62d3274d77d74fa272fc142c629872b5c64efd974544ddeda80cd654e44a6944
+complete inhabited watershed,Native SM 120,4096 final full ticks from portable PTX,500960256,1137232ede4d296b5d7c145ddda83daab26ad0de3c170d4125e0b9ce8d57b0c1

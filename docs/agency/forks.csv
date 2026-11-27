@@ -1,0 +1,81 @@
+seed,world,wire,product_states,start,require,value,plan,reference,clause_exact,emission,end,reached
+217217,0,open,6,5,8,8,meli if ravo zori otherwise fumel,meli if ravo zori otherwise fumel,1,meli if ravo zori otherwise fumel,11,1
+217217,0,muted,6,5,8,8,meli if ravo zori otherwise fumel,meli if ravo zori otherwise fumel,1,,5,0
+217217,0,reversed,6,5,8,8,meli if ravo zori otherwise fumel,meli if ravo zori otherwise fumel,1,fumel otherwise zori ravo if meli,1,0
+217217,0,covered,6,5,8,8,meli if ravo zori otherwise fumel,meli if ravo zori otherwise fumel,1,meli if ravo zori otherwise fumel,39,0
+217217,0,self,6,5,8,8,meli if ravo zori otherwise fumel,meli if ravo zori otherwise fumel,1,meli zori,11,1
+217217,1,open,6,5,8,8,meli if ravo zori otherwise fumel,meli if ravo zori otherwise fumel,1,meli if ravo zori otherwise fumel,9,1
+217217,1,muted,6,5,8,8,meli if ravo zori otherwise fumel,meli if ravo zori otherwise fumel,1,,5,0
+217217,1,reversed,6,5,8,8,meli if ravo zori otherwise fumel,meli if ravo zori otherwise fumel,1,fumel otherwise zori ravo if meli,1,0
+217217,1,covered,6,5,8,8,meli if ravo zori otherwise fumel,meli if ravo zori otherwise fumel,1,meli if ravo zori otherwise fumel,37,0
+217217,1,self,6,5,8,8,meli if ravo zori otherwise fumel,meli if ravo zori otherwise fumel,1,meli fumel,9,1
+541197,0,open,6,6,4,0,tari kafo under dato else jema,tari kafo under dato else jema,1,tari kafo under dato else jema,19,1
+541197,0,muted,6,6,4,0,tari kafo under dato else jema,tari kafo under dato else jema,1,,6,0
+541197,0,reversed,6,6,4,0,tari kafo under dato else jema,tari kafo under dato else jema,1,jema else dato under kafo tari,22,0
+541197,0,covered,6,6,4,0,tari kafo under dato else jema,tari kafo under dato else jema,1,tari kafo under dato else jema,39,0
+541197,0,self,6,6,4,0,tari kafo under dato else jema,tari kafo under dato else jema,1,tari jema,19,1
+541197,1,open,6,6,4,0,tari kafo under dato else jema,tari kafo under dato else jema,1,tari kafo under dato else jema,18,1
+541197,1,muted,6,6,4,0,tari kafo under dato else jema,tari kafo under dato else jema,1,,6,0
+541197,1,reversed,6,6,4,0,tari kafo under dato else jema,tari kafo under dato else jema,1,jema else dato under kafo tari,22,0
+541197,1,covered,6,6,4,0,tari kafo under dato else jema,tari kafo under dato else jema,1,tari kafo under dato else jema,38,0
+541197,1,self,6,6,4,0,tari kafo under dato else jema,tari kafo under dato else jema,1,tari kafo,18,1
+811945,0,open,6,14,32,32,vushe if ravo jema otherwise meli,vushe if ravo jema otherwise meli,1,vushe if ravo jema otherwise meli,39,1
+811945,0,muted,6,14,32,32,vushe if ravo jema otherwise meli,vushe if ravo jema otherwise meli,1,,14,0
+811945,0,reversed,6,14,32,32,vushe if ravo jema otherwise meli,vushe if ravo jema otherwise meli,1,meli otherwise jema ravo if vushe,6,0
+811945,0,covered,6,14,32,32,vushe if ravo jema otherwise meli,vushe if ravo jema otherwise meli,1,vushe if ravo jema otherwise meli,13,0
+811945,0,self,6,14,32,32,vushe if ravo jema otherwise meli,vushe if ravo jema otherwise meli,1,vushe jema,39,1
+811945,1,open,6,14,32,32,vushe if ravo jema otherwise meli,vushe if ravo jema otherwise meli,1,vushe if ravo jema otherwise meli,38,1
+811945,1,muted,6,14,32,32,vushe if ravo jema otherwise meli,vushe if ravo jema otherwise meli,1,,14,0
+811945,1,reversed,6,14,32,32,vushe if ravo jema otherwise meli,vushe if ravo jema otherwise meli,1,meli otherwise jema ravo if vushe,6,0
+811945,1,covered,6,14,32,32,vushe if ravo jema otherwise meli,vushe if ravo jema otherwise meli,1,vushe if ravo jema otherwise meli,12,0
+811945,1,self,6,14,32,32,vushe if ravo jema otherwise meli,vushe if ravo jema otherwise meli,1,vushe meli,38,1
+1065553,0,open,6,33,1,0,ravo kafo under tevu else wavu,ravo kafo under tevu else wavu,1,ravo kafo under tevu else wavu,44,1
+1065553,0,muted,6,33,1,0,ravo kafo under tevu else wavu,ravo kafo under tevu else wavu,1,,33,0
+1065553,0,reversed,6,33,1,0,ravo kafo under tevu else wavu,ravo kafo under tevu else wavu,1,wavu else tevu under kafo ravo,41,0
+1065553,0,covered,6,33,1,0,ravo kafo under tevu else wavu,ravo kafo under tevu else wavu,1,ravo kafo under tevu else wavu,39,0
+1065553,0,self,6,33,1,0,ravo kafo under tevu else wavu,ravo kafo under tevu else wavu,1,ravo wavu,44,1
+1065553,1,open,6,33,1,0,ravo kafo under tevu else wavu,ravo kafo under tevu else wavu,1,ravo kafo under tevu else wavu,40,1
+1065553,1,muted,6,33,1,0,ravo kafo under tevu else wavu,ravo kafo under tevu else wavu,1,,33,0
+1065553,1,reversed,6,33,1,0,ravo kafo under tevu else wavu,ravo kafo under tevu else wavu,1,wavu else tevu under kafo ravo,41,0
+1065553,1,covered,6,33,1,0,ravo kafo under tevu else wavu,ravo kafo under tevu else wavu,1,ravo kafo under tevu else wavu,35,0
+1065553,1,self,6,33,1,0,ravo kafo under tevu else wavu,ravo kafo under tevu else wavu,1,ravo kafo,40,1
+1409311,0,open,6,23,8,8,nidu if fumel tevu otherwise suni,nidu if fumel tevu otherwise suni,1,nidu if fumel tevu otherwise suni,14,1
+1409311,0,muted,6,23,8,8,nidu if fumel tevu otherwise suni,nidu if fumel tevu otherwise suni,1,,23,0
+1409311,0,reversed,6,23,8,8,nidu if fumel tevu otherwise suni,nidu if fumel tevu otherwise suni,1,suni otherwise tevu fumel if nidu,7,0
+1409311,0,covered,6,23,8,8,nidu if fumel tevu otherwise suni,nidu if fumel tevu otherwise suni,1,nidu if fumel tevu otherwise suni,20,0
+1409311,0,self,6,23,8,8,nidu if fumel tevu otherwise suni,nidu if fumel tevu otherwise suni,1,nidu suni,14,1
+1409311,1,open,6,23,8,8,nidu if fumel tevu otherwise suni,nidu if fumel tevu otherwise suni,1,nidu if fumel tevu otherwise suni,15,1
+1409311,1,muted,6,23,8,8,nidu if fumel tevu otherwise suni,nidu if fumel tevu otherwise suni,1,,23,0
+1409311,1,reversed,6,23,8,8,nidu if fumel tevu otherwise suni,nidu if fumel tevu otherwise suni,1,suni otherwise tevu fumel if nidu,7,0
+1409311,1,covered,6,23,8,8,nidu if fumel tevu otherwise suni,nidu if fumel tevu otherwise suni,1,nidu if fumel tevu otherwise suni,21,0
+1409311,1,self,6,23,8,8,nidu if fumel tevu otherwise suni,nidu if fumel tevu otherwise suni,1,nidu tevu,15,1
+1810069,0,open,6,12,4,0,weki gepo under tari else ravo,weki gepo under tari else ravo,1,weki gepo under tari else ravo,56,1
+1810069,0,muted,6,12,4,0,weki gepo under tari else ravo,weki gepo under tari else ravo,1,,12,0
+1810069,0,reversed,6,12,4,0,weki gepo under tari else ravo,weki gepo under tari else ravo,1,ravo else tari under gepo weki,28,0
+1810069,0,covered,6,12,4,0,weki gepo under tari else ravo,weki gepo under tari else ravo,1,weki gepo under tari else ravo,36,0
+1810069,0,self,6,12,4,0,weki gepo under tari else ravo,weki gepo under tari else ravo,1,weki ravo,56,1
+1810069,1,open,6,12,4,0,weki gepo under tari else ravo,weki gepo under tari else ravo,1,weki gepo under tari else ravo,24,1
+1810069,1,muted,6,12,4,0,weki gepo under tari else ravo,weki gepo under tari else ravo,1,,12,0
+1810069,1,reversed,6,12,4,0,weki gepo under tari else ravo,weki gepo under tari else ravo,1,ravo else tari under gepo weki,28,0
+1810069,1,covered,6,12,4,0,weki gepo under tari else ravo,weki gepo under tari else ravo,1,weki gepo under tari else ravo,4,0
+1810069,1,self,6,12,4,0,weki gepo under tari else ravo,weki gepo under tari else ravo,1,weki gepo,24,1
+2089363,0,open,6,51,1,0,vepu if vushe femu otherwise zori,vepu if vushe femu otherwise zori,1,vepu if vushe femu otherwise zori,16,1
+2089363,0,muted,6,51,1,0,vepu if vushe femu otherwise zori,vepu if vushe femu otherwise zori,1,,51,0
+2089363,0,reversed,6,51,1,0,vepu if vushe femu otherwise zori,vepu if vushe femu otherwise zori,1,zori otherwise femu vushe if vepu,49,0
+2089363,0,covered,6,51,1,0,vepu if vushe femu otherwise zori,vepu if vushe femu otherwise zori,1,vepu if vushe femu otherwise zori,23,0
+2089363,0,self,6,51,1,0,vepu if vushe femu otherwise zori,vepu if vushe femu otherwise zori,1,vepu zori,16,1
+2089363,1,open,6,51,1,0,vepu if vushe femu otherwise zori,vepu if vushe femu otherwise zori,1,vepu if vushe femu otherwise zori,48,1
+2089363,1,muted,6,51,1,0,vepu if vushe femu otherwise zori,vepu if vushe femu otherwise zori,1,,51,0
+2089363,1,reversed,6,51,1,0,vepu if vushe femu otherwise zori,vepu if vushe femu otherwise zori,1,zori otherwise femu vushe if vepu,49,0
+2089363,1,covered,6,51,1,0,vepu if vushe femu otherwise zori,vepu if vushe femu otherwise zori,1,vepu if vushe femu otherwise zori,55,0
+2089363,1,self,6,51,1,0,vepu if vushe femu otherwise zori,vepu if vushe femu otherwise zori,1,vepu femu,48,1
+2470393,0,open,6,60,32,0,qomi if wavu padu otherwise suni,qomi if wavu padu otherwise suni,1,qomi if wavu padu otherwise suni,22,1
+2470393,0,muted,6,60,32,0,qomi if wavu padu otherwise suni,qomi if wavu padu otherwise suni,1,,60,0
+2470393,0,reversed,6,60,32,0,qomi if wavu padu otherwise suni,qomi if wavu padu otherwise suni,1,suni otherwise padu wavu if qomi,62,0
+2470393,0,covered,6,60,32,0,qomi if wavu padu otherwise suni,qomi if wavu padu otherwise suni,1,qomi if wavu padu otherwise suni,36,0
+2470393,0,self,6,60,32,0,qomi if wavu padu otherwise suni,qomi if wavu padu otherwise suni,1,qomi suni,22,1
+2470393,1,open,6,60,32,0,qomi if wavu padu otherwise suni,qomi if wavu padu otherwise suni,1,qomi if wavu padu otherwise suni,30,1
+2470393,1,muted,6,60,32,0,qomi if wavu padu otherwise suni,qomi if wavu padu otherwise suni,1,,60,0
+2470393,1,reversed,6,60,32,0,qomi if wavu padu otherwise suni,qomi if wavu padu otherwise suni,1,suni otherwise padu wavu if qomi,62,0
+2470393,1,covered,6,60,32,0,qomi if wavu padu otherwise suni,qomi if wavu padu otherwise suni,1,qomi if wavu padu otherwise suni,44,0
+2470393,1,self,6,60,32,0,qomi if wavu padu otherwise suni,qomi if wavu padu otherwise suni,1,qomi padu,30,1

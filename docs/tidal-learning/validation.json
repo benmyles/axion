@@ -1,0 +1,73 @@
+{
+  "gpu": {
+    "name": "NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU",
+    "bytes": 8145141760,
+    "driver": "620.70.06"
+  },
+  "cuda_compiler": "clang version 23.1.5 (Fedora 23.1.5-2.fc45)",
+  "host_compiler": "g++ (GCC) 16.2.1 20261029 (Red Hat 16.2.1-3)",
+  "native_target": "sm_120",
+  "portable_target": "sm_80 PTX executed on the same Blackwell device",
+  "uncompressed_source_habitat_sha256": "710e62d13325f5af11e98ade6612f32b1bebb94f05ddb6b3f3592969628e50bf",
+  "matched_retina_and_cohort_trace_sha256": {
+    "class": "8fdb2e5d305809d33c33ebe02b488d2ddb4370e4ca79605349b061300f2ba22f",
+    "cohort": "e3942106f5d27b84269461a855157704d17dfdf0f84b6fb27b8359df00f641e4"
+  },
+  "replayed_returned_mind_sha256": "7618b51ef0784a28e4105cc9d0e906175d8eb2c3e4d41fc887fffc0ede9e7ee1",
+  "archived_minds_sha256": {
+    "estuary-born-student.mind": "79c010c7831764eac45c8a398343849c645d3791c318e039e9319abff82e4ea6",
+    "estuary-born-speaker.mind": "bf4869313a98deb57e25959635584b2e88cf443ddeef6c765fbee0a9adf2bda7",
+    "estuary-tide-student.mind": "7e7ebd7df37a6048424612bcc8506e6d64fe3febf1e704f15a1d5fd26475539c",
+    "estuary-tide-speaker.mind": "e94fea15fbdfaf2047a77f36e0adc52ec5c779872f13131dc2b1a984eca0b48a"
+  },
+  "preceding_build_comparison": {
+    "side": 1024,
+    "steps": 2048,
+    "closed_checkpoint_byte_equal": true
+  },
+  "native_portable_comparison": {
+    "side": 1024,
+    "steps": 4,
+    "checkpoint_byte_equal": true,
+    "portable_mind_byte_equal": true,
+    "acoustic_trace_byte_equal": true,
+    "cohort_trace_byte_equal": true
+  },
+  "journal": {
+    "first_record": 10311,
+    "last_record": 10410,
+    "matching_receipts": 100,
+    "decoded_images": 203
+  },
+  "passed_targets": [
+    "test-apprentice",
+    "test-floodplain",
+    "test-grounding",
+    "test-pods",
+    "test-growth",
+    "test-materials",
+    "test-shoal",
+    "test-worksites",
+    "test-field-voices",
+    "test-neural-dispatch",
+    "test-gate-trial",
+    "test-parallax",
+    "test-braids",
+    "test",
+    "test-gpu",
+    "test-journal",
+    "test-development",
+    "test-composition",
+    "test-procedures",
+    "test-brine",
+    "test-siphons",
+    "test-clay",
+    "test-press",
+    "test-hollows",
+    "test-effort",
+    "test-linkages",
+    "test-practice",
+    "test-runnels",
+    "test-backwaters"
+  ]
+}

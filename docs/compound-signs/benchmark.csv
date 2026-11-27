@@ -1,0 +1,2 @@
+compound_benchmark,panels,stored_fixtures,repeats,scalar_ms,cooperative_ms,speedup,differing,receipt_bytes,registers,local_bytes,choices_per_s
+4194304,1048576,1024,7,1.24525,0.515936,2.41357,0,2,33,0,8.1295e+09

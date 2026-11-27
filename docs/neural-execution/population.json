@@ -1,0 +1,31 @@
+{
+  "tick": 384384,
+  "side": 1024,
+  "origin": 512,
+  "start": 376192,
+  "shared_forms": 778,
+  "core": {
+    "living": 74927,
+    "born_after": 74927,
+    "cells": 4808128,
+    "largest": 288,
+    "furthest": 0,
+    "fibre_sites": 151559,
+    "founders": 1,
+    "forms": 5224,
+    "oldest_age": 2056,
+    "max_generation": 3302
+  },
+  "outside": {
+    "living": 307032,
+    "born_after": 307032,
+    "cells": 19758176,
+    "largest": 352,
+    "furthest": 512,
+    "fibre_sites": 381373,
+    "founders": 1,
+    "forms": 17137,
+    "oldest_age": 3943,
+    "max_generation": 3317
+  }
+}

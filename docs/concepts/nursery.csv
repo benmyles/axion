@@ -1,0 +1,7 @@
+inference,trials,view_trials,own,other,transfer,recursive,inquiry,naming
+intact,768,6144,6144,6144,749,715,762,768
+no-examples,768,6144,6144,6144,0,0,0,768
+own-view,768,6144,6144,3072,749,715,762,768
+no-reuse,768,6144,6144,6144,749,90,762,768
+fixed,768,6144,6144,6144,0,0,207,768
+random-question,768,6144,6144,6144,749,715,207,768

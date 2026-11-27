@@ -1,0 +1,13 @@
+experiment,original,repeat,bytes_each,sha256_each
+first 4096 wild ticks,native SM 120,native SM 120,494668504,6a6018e48028f5d818c84dd8ef1797c720bbfa9a82f37f07b0d8b92784bc6159
+change of material grain,native SM 120,native SM 120,494668504,898925359755473759bed2eba4ad0de0dd7ff82fe39ebf13039651fe668175c0
+complete 20480-tick trajectory,native SM 120,native SM 120,494668504,26ed07bf3488ce4db75ab263c64f086d2765dc3a2bfd9eeb4227349c5fa8ea14
+4096 final ticks versus 1627 plus 2469,native SM 120,native SM 120,494668504,26ed07bf3488ce4db75ab263c64f086d2765dc3a2bfd9eeb4227349c5fa8ea14
+portable habitat and 231 ticks,native SM 120,SM 80 PTX on Blackwell,6248920,17d933edd1db6ab710377700ee37a3eb3d207482aaea634fa70d04abfb80b6f9
+portable physical matched cuts,native SM 120,SM 80 PTX on Blackwell,6248920,17d933edd1db6ab710377700ee37a3eb3d207482aaea634fa70d04abfb80b6f9
+portable held-out reference trials,native SM 120,SM 80 PTX on Blackwell,42804,2ce2a541723c812082d41e7ab9a19ddc0a3cf529bfd56d64f89158729fe2b61a
+portable acoustic trace,native SM 120,SM 80 PTX on Blackwell,93901,4e1ca1f6f269fe5e5c130511d752c99d83b7fa36c6848ad198f03b566be37506
+independent folding class recreation,native SM 120,native SM 120,6248920,e24da1b5e569512f577a0a9e9900d6685d3da949b418dcdc3fbca32387a07f8a
+second class used for the consultant,native SM 120,native SM 120,6248920,cc0c3160eb8f2ee09afb31ec10d5733f4f7d9e7587bef8ab724256eab92af911
+apprentice from recreated germs and separate tuition,native SM 120,native SM 120,30052,953bf1a565f04c17ecc89b4176066945961fff5f0414ba8d6bb696eb80d46a85
+consultant from recreated germs and separate tuition,native SM 120,native SM 120,30284,8f34da2112917bc2b5af5ac5f5a5b52cf8a0b84bc6385405dd903235595e873d

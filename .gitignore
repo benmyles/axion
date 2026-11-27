@@ -1,0 +1,10 @@
+/axion
+/build/
+__pycache__/
+*.pyc
+*.pyo
+*.tmp
+/journal/.lock
+/journal/.pending-*
+/journal/.write-*
+/journal/.receipt-*

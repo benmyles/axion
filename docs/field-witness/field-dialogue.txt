@@ -1,0 +1,17 @@
+witness> teal
+field_utterance=1  matched=1  answered=1  said=7  wave=395053906035956426  stamp=387735
+witness> amber
+field_utterance=2  matched=1  answered=1  said=4  wave=14772963754820467507  stamp=387735
+witness> teal
+field_utterance=3  matched=1  answered=1  said=7  wave=395053906035956426  stamp=387735
+witness> teal
+field_utterance=4  matched=1  answered=1  said=7  wave=395053906035956426  stamp=387735
+witness> teal
+field_utterance=5  matched=1  answered=1  said=7  wave=395053906035956426  stamp=387735
+witness> teal
+field_utterance=6  matched=1  answered=1  said=7  wave=395053906035956426  stamp=387735
+witness> amber
+field_utterance=7  matched=1  answered=1  said=4  wave=14772963754820467507  stamp=387735
+witness> teal
+field_utterance=8  matched=1  answered=1  said=7  wave=395053906035956426  stamp=387735
+field_interview=present  slot=890939  born=387726  tick=387736  cells=64  generation=3196  images=64575  known=255  stamp=387735  questions=8  answered=8

@@ -1,0 +1,47 @@
+/cap-context speaker adaptive
+/braid 62
+/braid-feed speaker 2048
+/braid-feed partner 2048
+/cap-cell 25 plum teal 0
+/cap-explore speaker 32 8 1946903
+/cap-pour speaker
+/cap-grip speaker 9
+/cap-pour speaker
+Why did the plum turn teal?
+Could the wick have made it teal?
+/cap-cell 25 plum teal 16
+/cap-explore speaker 32 8 1947042
+/cap-pour speaker
+/cap-grip speaker 9
+/cap-pour speaker
+Why did the plum turn teal?
+Could the wick have made it teal?
+/cap-cell 25 plum teal 0
+/cap-explore speaker 32 8 1947181
+/cap-pour speaker
+/cap-grip speaker 9
+/cap-pour speaker
+Why did the plum turn teal?
+Could the wick have made it teal?
+/cap-cell 25 plum teal 16
+/cap-explore speaker 32 8 1947320
+/cap-pour speaker
+/cap-grip speaker 9
+/cap-pour speaker
+Why did the plum turn teal?
+Could the wick have made it teal?
+/cap-cell 25 plum teal 16
+/cap-explore speaker 32 8 1947459
+/cap-pour speaker
+/cap-grip speaker 9
+/cap-pour speaker
+Why did the plum turn teal?
+Could the wick have made it teal?
+/cap-cell 25 plum teal 0
+/cap-explore speaker 32 8 1947598
+/cap-pour speaker
+/cap-grip speaker 9
+/cap-pour speaker
+Why did the plum turn teal?
+Could the wick have made it teal?
+/quit

@@ -1,0 +1,10 @@
+/flume 50069 2 handed
+/flume-layout 23229 2
+/flume-clear speaker
+/flume-clear partner
+/flume-sample speaker 0 0
+/flume-sample speaker 3 0
+/flume-sample speaker 1 0
+/flume-sample partner 3 3
+/flume-view
+/quit

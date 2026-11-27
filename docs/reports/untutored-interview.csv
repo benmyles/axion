@@ -1,0 +1,1081 @@
+wire,age,prior,current,spoken,receiver,decoded_prior,correct
+open,0,food north east,food east north,(silence),(uncertain),(uncertain),0
+open,0,food north east,food east south,(silence),(uncertain),(uncertain),0
+open,0,food north east,food east west,(silence),(uncertain),(uncertain),0
+open,0,food north east,water north east,(silence),(uncertain),(uncertain),0
+open,0,food north east,water north south,(silence),(uncertain),(uncertain),0
+open,0,food north east,water north west,(silence),(uncertain),(uncertain),0
+open,0,food north east,water east north,(silence),(uncertain),(uncertain),0
+open,0,food north east,water east south,(silence),(uncertain),(uncertain),0
+open,0,food north east,water east west,(silence),(uncertain),(uncertain),0
+open,0,food north east,water south north,(silence),(uncertain),(uncertain),0
+open,0,food north east,water south east,(silence),(uncertain),(uncertain),0
+open,0,food north east,water south west,(silence),(uncertain),(uncertain),0
+open,0,food north east,water west north,(silence),(uncertain),(uncertain),0
+open,0,food north east,water west east,(silence),(uncertain),(uncertain),0
+open,0,food north east,water west south,(silence),(uncertain),(uncertain),0
+open,0,food north south,food south north,(silence),(uncertain),(uncertain),0
+open,0,food north south,food south east,(silence),(uncertain),(uncertain),0
+open,0,food north south,food south west,(silence),(uncertain),(uncertain),0
+open,0,food north south,water north east,(silence),(uncertain),(uncertain),0
+open,0,food north south,water north south,(silence),(uncertain),(uncertain),0
+open,0,food north south,water north west,(silence),(uncertain),(uncertain),0
+open,0,food north south,water east north,(silence),(uncertain),(uncertain),0
+open,0,food north south,water east south,(silence),(uncertain),(uncertain),0
+open,0,food north south,water east west,(silence),(uncertain),(uncertain),0
+open,0,food north south,water south north,(silence),(uncertain),(uncertain),0
+open,0,food north south,water south east,(silence),(uncertain),(uncertain),0
+open,0,food north south,water south west,(silence),(uncertain),(uncertain),0
+open,0,food north south,water west north,(silence),(uncertain),(uncertain),0
+open,0,food north south,water west east,(silence),(uncertain),(uncertain),0
+open,0,food north south,water west south,(silence),(uncertain),(uncertain),0
+open,0,food north west,food west north,(silence),(uncertain),(uncertain),0
+open,0,food north west,food west east,(silence),(uncertain),(uncertain),0
+open,0,food north west,food west south,mom pom dem pem pem nam,food west south,food north west,1
+open,0,food north west,water north east,(silence),(uncertain),(uncertain),0
+open,0,food north west,water north south,(silence),(uncertain),(uncertain),0
+open,0,food north west,water north west,mom pom bom pem bam dim,water north west,food north west,1
+open,0,food north west,water east north,mom pom kem pem bam lim,water east north,food north west,1
+open,0,food north west,water east south,(silence),(uncertain),(uncertain),0
+open,0,food north west,water east west,(silence),(uncertain),(uncertain),0
+open,0,food north west,water south north,(silence),(uncertain),(uncertain),0
+open,0,food north west,water south east,mom pom gom pem bam pom,water south east,food north west,1
+open,0,food north west,water south west,(silence),(uncertain),(uncertain),0
+open,0,food north west,water west north,(silence),(uncertain),(uncertain),0
+open,0,food north west,water west east,(silence),(uncertain),(uncertain),0
+open,0,food north west,water west south,mom pom dem pem bam nam,water west south,food north west,1
+open,0,food east north,food north east,(silence),(uncertain),(uncertain),0
+open,0,food east north,food north south,(silence),(uncertain),(uncertain),0
+open,0,food east north,food north west,lim lem bom pem pem dim,food north west,food east north,1
+open,0,food east north,water north east,(silence),(uncertain),(uncertain),0
+open,0,food east north,water north south,(silence),(uncertain),(uncertain),0
+open,0,food east north,water north west,lim lem bom pem bam dim,water north west,food east north,1
+open,0,food east north,water east north,lim lem kem pem bam lim,water east north,food east north,1
+open,0,food east north,water east south,(silence),(uncertain),(uncertain),0
+open,0,food east north,water east west,(silence),(uncertain),(uncertain),0
+open,0,food east north,water south north,(silence),(uncertain),(uncertain),0
+open,0,food east north,water south east,lim lem gom pem bam pom,water south east,food east north,1
+open,0,food east north,water south west,(silence),(uncertain),(uncertain),0
+open,0,food east north,water west north,(silence),(uncertain),(uncertain),0
+open,0,food east north,water west east,(silence),(uncertain),(uncertain),0
+open,0,food east north,water west south,lim lem dem pem bam nam,water west south,food east north,1
+open,0,food east south,food south north,(silence),(uncertain),(uncertain),0
+open,0,food east south,food south east,(silence),(uncertain),(uncertain),0
+open,0,food east south,food south west,(silence),(uncertain),(uncertain),0
+open,0,food east south,water north east,(silence),(uncertain),(uncertain),0
+open,0,food east south,water north south,(silence),(uncertain),(uncertain),0
+open,0,food east south,water north west,(silence),(uncertain),(uncertain),0
+open,0,food east south,water east north,(silence),(uncertain),(uncertain),0
+open,0,food east south,water east south,(silence),(uncertain),(uncertain),0
+open,0,food east south,water east west,(silence),(uncertain),(uncertain),0
+open,0,food east south,water south north,(silence),(uncertain),(uncertain),0
+open,0,food east south,water south east,(silence),(uncertain),(uncertain),0
+open,0,food east south,water south west,(silence),(uncertain),(uncertain),0
+open,0,food east south,water west north,(silence),(uncertain),(uncertain),0
+open,0,food east south,water west east,(silence),(uncertain),(uncertain),0
+open,0,food east south,water west south,(silence),(uncertain),(uncertain),0
+open,0,food east west,food west north,(silence),(uncertain),(uncertain),0
+open,0,food east west,food west east,(silence),(uncertain),(uncertain),0
+open,0,food east west,food west south,(silence),(uncertain),(uncertain),0
+open,0,food east west,water north east,(silence),(uncertain),(uncertain),0
+open,0,food east west,water north south,(silence),(uncertain),(uncertain),0
+open,0,food east west,water north west,(silence),(uncertain),(uncertain),0
+open,0,food east west,water east north,(silence),(uncertain),(uncertain),0
+open,0,food east west,water east south,(silence),(uncertain),(uncertain),0
+open,0,food east west,water east west,(silence),(uncertain),(uncertain),0
+open,0,food east west,water south north,(silence),(uncertain),(uncertain),0
+open,0,food east west,water south east,(silence),(uncertain),(uncertain),0
+open,0,food east west,water south west,(silence),(uncertain),(uncertain),0
+open,0,food east west,water west north,(silence),(uncertain),(uncertain),0
+open,0,food east west,water west east,(silence),(uncertain),(uncertain),0
+open,0,food east west,water west south,(silence),(uncertain),(uncertain),0
+open,0,food south north,food north east,(silence),(uncertain),(uncertain),0
+open,0,food south north,food north south,(silence),(uncertain),(uncertain),0
+open,0,food south north,food north west,(silence),(uncertain),(uncertain),0
+open,0,food south north,water north east,(silence),(uncertain),(uncertain),0
+open,0,food south north,water north south,(silence),(uncertain),(uncertain),0
+open,0,food south north,water north west,(silence),(uncertain),(uncertain),0
+open,0,food south north,water east north,(silence),(uncertain),(uncertain),0
+open,0,food south north,water east south,(silence),(uncertain),(uncertain),0
+open,0,food south north,water east west,(silence),(uncertain),(uncertain),0
+open,0,food south north,water south north,(silence),(uncertain),(uncertain),0
+open,0,food south north,water south east,(silence),(uncertain),(uncertain),0
+open,0,food south north,water south west,(silence),(uncertain),(uncertain),0
+open,0,food south north,water west north,(silence),(uncertain),(uncertain),0
+open,0,food south north,water west east,(silence),(uncertain),(uncertain),0
+open,0,food south north,water west south,(silence),(uncertain),(uncertain),0
+open,0,food south east,food east north,pim mom kem pem pem lim,food east north,food south east,1
+open,0,food south east,food east south,(silence),(uncertain),(uncertain),0
+open,0,food south east,food east west,(silence),(uncertain),(uncertain),0
+open,0,food south east,water north east,(silence),(uncertain),(uncertain),0
+open,0,food south east,water north south,(silence),(uncertain),(uncertain),0
+open,0,food south east,water north west,pim mom bom pem bam dim,water north west,food south east,1
+open,0,food south east,water east north,pim mom kem pem bam lim,water east north,food south east,1
+open,0,food south east,water east south,(silence),(uncertain),(uncertain),0
+open,0,food south east,water east west,(silence),(uncertain),(uncertain),0
+open,0,food south east,water south north,(silence),(uncertain),(uncertain),0
+open,0,food south east,water south east,pim mom gom pem bam pom,water south east,food south east,1
+open,0,food south east,water south west,(silence),(uncertain),(uncertain),0
+open,0,food south east,water west north,(silence),(uncertain),(uncertain),0
+open,0,food south east,water west east,(silence),(uncertain),(uncertain),0
+open,0,food south east,water west south,pim mom dem pem bam nam,water west south,food south east,1
+open,0,food south west,food west north,(silence),(uncertain),(uncertain),0
+open,0,food south west,food west east,(silence),(uncertain),(uncertain),0
+open,0,food south west,food west south,(silence),(uncertain),(uncertain),0
+open,0,food south west,water north east,(silence),(uncertain),(uncertain),0
+open,0,food south west,water north south,(silence),(uncertain),(uncertain),0
+open,0,food south west,water north west,(silence),(uncertain),(uncertain),0
+open,0,food south west,water east north,(silence),(uncertain),(uncertain),0
+open,0,food south west,water east south,(silence),(uncertain),(uncertain),0
+open,0,food south west,water east west,(silence),(uncertain),(uncertain),0
+open,0,food south west,water south north,(silence),(uncertain),(uncertain),0
+open,0,food south west,water south east,(silence),(uncertain),(uncertain),0
+open,0,food south west,water south west,(silence),(uncertain),(uncertain),0
+open,0,food south west,water west north,(silence),(uncertain),(uncertain),0
+open,0,food south west,water west east,(silence),(uncertain),(uncertain),0
+open,0,food south west,water west south,(silence),(uncertain),(uncertain),0
+open,0,food west north,food north east,(silence),(uncertain),(uncertain),0
+open,0,food west north,food north south,(silence),(uncertain),(uncertain),0
+open,0,food west north,food north west,(silence),(uncertain),(uncertain),0
+open,0,food west north,water north east,(silence),(uncertain),(uncertain),0
+open,0,food west north,water north south,(silence),(uncertain),(uncertain),0
+open,0,food west north,water north west,(silence),(uncertain),(uncertain),0
+open,0,food west north,water east north,(silence),(uncertain),(uncertain),0
+open,0,food west north,water east south,(silence),(uncertain),(uncertain),0
+open,0,food west north,water east west,(silence),(uncertain),(uncertain),0
+open,0,food west north,water south north,(silence),(uncertain),(uncertain),0
+open,0,food west north,water south east,(silence),(uncertain),(uncertain),0
+open,0,food west north,water south west,(silence),(uncertain),(uncertain),0
+open,0,food west north,water west north,(silence),(uncertain),(uncertain),0
+open,0,food west north,water west east,(silence),(uncertain),(uncertain),0
+open,0,food west north,water west south,(silence),(uncertain),(uncertain),0
+open,0,food west east,food east north,(silence),(uncertain),(uncertain),0
+open,0,food west east,food east south,(silence),(uncertain),(uncertain),0
+open,0,food west east,food east west,(silence),(uncertain),(uncertain),0
+open,0,food west east,water north east,(silence),(uncertain),(uncertain),0
+open,0,food west east,water north south,(silence),(uncertain),(uncertain),0
+open,0,food west east,water north west,(silence),(uncertain),(uncertain),0
+open,0,food west east,water east north,(silence),(uncertain),(uncertain),0
+open,0,food west east,water east south,(silence),(uncertain),(uncertain),0
+open,0,food west east,water east west,(silence),(uncertain),(uncertain),0
+open,0,food west east,water south north,(silence),(uncertain),(uncertain),0
+open,0,food west east,water south east,(silence),(uncertain),(uncertain),0
+open,0,food west east,water south west,(silence),(uncertain),(uncertain),0
+open,0,food west east,water west north,(silence),(uncertain),(uncertain),0
+open,0,food west east,water west east,(silence),(uncertain),(uncertain),0
+open,0,food west east,water west south,(silence),(uncertain),(uncertain),0
+open,0,food west south,food south north,(silence),(uncertain),(uncertain),0
+open,0,food west south,food south east,gom nem gom pem pem pom,food south east,food west south,1
+open,0,food west south,food south west,(silence),(uncertain),(uncertain),0
+open,0,food west south,water north east,(silence),(uncertain),(uncertain),0
+open,0,food west south,water north south,(silence),(uncertain),(uncertain),0
+open,0,food west south,water north west,gom nem bom pem bam dim,water north west,food west south,1
+open,0,food west south,water east north,gom nem kem pem bam lim,water east north,food west south,1
+open,0,food west south,water east south,(silence),(uncertain),(uncertain),0
+open,0,food west south,water east west,(silence),(uncertain),(uncertain),0
+open,0,food west south,water south north,(silence),(uncertain),(uncertain),0
+open,0,food west south,water south east,gom nem gom pem bam pom,water south east,food west south,1
+open,0,food west south,water south west,(silence),(uncertain),(uncertain),0
+open,0,food west south,water west north,(silence),(uncertain),(uncertain),0
+open,0,food west south,water west east,(silence),(uncertain),(uncertain),0
+open,0,food west south,water west south,gom nem dem pem bam nam,water west south,food west south,1
+open,0,water north east,food north east,(silence),(uncertain),(uncertain),0
+open,0,water north east,food north south,(silence),(uncertain),(uncertain),0
+open,0,water north east,food north west,(silence),(uncertain),(uncertain),0
+open,0,water north east,food east north,(silence),(uncertain),(uncertain),0
+open,0,water north east,food east south,(silence),(uncertain),(uncertain),0
+open,0,water north east,food east west,(silence),(uncertain),(uncertain),0
+open,0,water north east,food south north,(silence),(uncertain),(uncertain),0
+open,0,water north east,food south east,(silence),(uncertain),(uncertain),0
+open,0,water north east,food south west,(silence),(uncertain),(uncertain),0
+open,0,water north east,food west north,(silence),(uncertain),(uncertain),0
+open,0,water north east,food west east,(silence),(uncertain),(uncertain),0
+open,0,water north east,food west south,(silence),(uncertain),(uncertain),0
+open,0,water north east,water east north,(silence),(uncertain),(uncertain),0
+open,0,water north east,water east south,(silence),(uncertain),(uncertain),0
+open,0,water north east,water east west,(silence),(uncertain),(uncertain),0
+open,0,water north south,food north east,(silence),(uncertain),(uncertain),0
+open,0,water north south,food north south,(silence),(uncertain),(uncertain),0
+open,0,water north south,food north west,(silence),(uncertain),(uncertain),0
+open,0,water north south,food east north,(silence),(uncertain),(uncertain),0
+open,0,water north south,food east south,(silence),(uncertain),(uncertain),0
+open,0,water north south,food east west,(silence),(uncertain),(uncertain),0
+open,0,water north south,food south north,(silence),(uncertain),(uncertain),0
+open,0,water north south,food south east,(silence),(uncertain),(uncertain),0
+open,0,water north south,food south west,(silence),(uncertain),(uncertain),0
+open,0,water north south,food west north,(silence),(uncertain),(uncertain),0
+open,0,water north south,food west east,(silence),(uncertain),(uncertain),0
+open,0,water north south,food west south,(silence),(uncertain),(uncertain),0
+open,0,water north south,water south north,(silence),(uncertain),(uncertain),0
+open,0,water north south,water south east,(silence),(uncertain),(uncertain),0
+open,0,water north south,water south west,(silence),(uncertain),(uncertain),0
+open,0,water north west,food north east,(silence),(uncertain),(uncertain),0
+open,0,water north west,food north south,(silence),(uncertain),(uncertain),0
+open,0,water north west,food north west,mom pom bom gam pem dim,food north west,water north west,1
+open,0,water north west,food east north,mom pom kem gam pem lim,food east north,water north west,1
+open,0,water north west,food east south,(silence),(uncertain),(uncertain),0
+open,0,water north west,food east west,(silence),(uncertain),(uncertain),0
+open,0,water north west,food south north,(silence),(uncertain),(uncertain),0
+open,0,water north west,food south east,mom pom gom gam pem pom,food south east,water north west,1
+open,0,water north west,food south west,(silence),(uncertain),(uncertain),0
+open,0,water north west,food west north,(silence),(uncertain),(uncertain),0
+open,0,water north west,food west east,(silence),(uncertain),(uncertain),0
+open,0,water north west,food west south,mom pom dem gam pem nam,food west south,water north west,1
+open,0,water north west,water west north,(silence),(uncertain),(uncertain),0
+open,0,water north west,water west east,(silence),(uncertain),(uncertain),0
+open,0,water north west,water west south,mom pom dem gam bam nam,water west south,water north west,1
+open,0,water east north,food north east,(silence),(uncertain),(uncertain),0
+open,0,water east north,food north south,(silence),(uncertain),(uncertain),0
+open,0,water east north,food north west,lim lem bom gam pem dim,food north west,water east north,1
+open,0,water east north,food east north,lim lem kem gam pem lim,food east north,water east north,1
+open,0,water east north,food east south,(silence),(uncertain),(uncertain),0
+open,0,water east north,food east west,(silence),(uncertain),(uncertain),0
+open,0,water east north,food south north,(silence),(uncertain),(uncertain),0
+open,0,water east north,food south east,lim lem gom gam pem pom,food south east,water east north,1
+open,0,water east north,food south west,(silence),(uncertain),(uncertain),0
+open,0,water east north,food west north,(silence),(uncertain),(uncertain),0
+open,0,water east north,food west east,(silence),(uncertain),(uncertain),0
+open,0,water east north,food west south,lim lem dem gam pem nam,food west south,water east north,1
+open,0,water east north,water north east,(silence),(uncertain),(uncertain),0
+open,0,water east north,water north south,(silence),(uncertain),(uncertain),0
+open,0,water east north,water north west,lim lem bom gam bam dim,water north west,water east north,1
+open,0,water east south,food north east,(silence),(uncertain),(uncertain),0
+open,0,water east south,food north south,(silence),(uncertain),(uncertain),0
+open,0,water east south,food north west,(silence),(uncertain),(uncertain),0
+open,0,water east south,food east north,(silence),(uncertain),(uncertain),0
+open,0,water east south,food east south,(silence),(uncertain),(uncertain),0
+open,0,water east south,food east west,(silence),(uncertain),(uncertain),0
+open,0,water east south,food south north,(silence),(uncertain),(uncertain),0
+open,0,water east south,food south east,(silence),(uncertain),(uncertain),0
+open,0,water east south,food south west,(silence),(uncertain),(uncertain),0
+open,0,water east south,food west north,(silence),(uncertain),(uncertain),0
+open,0,water east south,food west east,(silence),(uncertain),(uncertain),0
+open,0,water east south,food west south,(silence),(uncertain),(uncertain),0
+open,0,water east south,water south north,(silence),(uncertain),(uncertain),0
+open,0,water east south,water south east,(silence),(uncertain),(uncertain),0
+open,0,water east south,water south west,(silence),(uncertain),(uncertain),0
+open,0,water east west,food north east,(silence),(uncertain),(uncertain),0
+open,0,water east west,food north south,(silence),(uncertain),(uncertain),0
+open,0,water east west,food north west,(silence),(uncertain),(uncertain),0
+open,0,water east west,food east north,(silence),(uncertain),(uncertain),0
+open,0,water east west,food east south,(silence),(uncertain),(uncertain),0
+open,0,water east west,food east west,(silence),(uncertain),(uncertain),0
+open,0,water east west,food south north,(silence),(uncertain),(uncertain),0
+open,0,water east west,food south east,(silence),(uncertain),(uncertain),0
+open,0,water east west,food south west,(silence),(uncertain),(uncertain),0
+open,0,water east west,food west north,(silence),(uncertain),(uncertain),0
+open,0,water east west,food west east,(silence),(uncertain),(uncertain),0
+open,0,water east west,food west south,(silence),(uncertain),(uncertain),0
+open,0,water east west,water west north,(silence),(uncertain),(uncertain),0
+open,0,water east west,water west east,(silence),(uncertain),(uncertain),0
+open,0,water east west,water west south,(silence),(uncertain),(uncertain),0
+open,0,water south north,food north east,(silence),(uncertain),(uncertain),0
+open,0,water south north,food north south,(silence),(uncertain),(uncertain),0
+open,0,water south north,food north west,(silence),(uncertain),(uncertain),0
+open,0,water south north,food east north,(silence),(uncertain),(uncertain),0
+open,0,water south north,food east south,(silence),(uncertain),(uncertain),0
+open,0,water south north,food east west,(silence),(uncertain),(uncertain),0
+open,0,water south north,food south north,(silence),(uncertain),(uncertain),0
+open,0,water south north,food south east,(silence),(uncertain),(uncertain),0
+open,0,water south north,food south west,(silence),(uncertain),(uncertain),0
+open,0,water south north,food west north,(silence),(uncertain),(uncertain),0
+open,0,water south north,food west east,(silence),(uncertain),(uncertain),0
+open,0,water south north,food west south,(silence),(uncertain),(uncertain),0
+open,0,water south north,water north east,(silence),(uncertain),(uncertain),0
+open,0,water south north,water north south,(silence),(uncertain),(uncertain),0
+open,0,water south north,water north west,(silence),(uncertain),(uncertain),0
+open,0,water south east,food north east,(silence),(uncertain),(uncertain),0
+open,0,water south east,food north south,(silence),(uncertain),(uncertain),0
+open,0,water south east,food north west,pim mom bom gam pem dim,food north west,water south east,1
+open,0,water south east,food east north,pim mom kem gam pem lim,food east north,water south east,1
+open,0,water south east,food east south,(silence),(uncertain),(uncertain),0
+open,0,water south east,food east west,(silence),(uncertain),(uncertain),0
+open,0,water south east,food south north,(silence),(uncertain),(uncertain),0
+open,0,water south east,food south east,pim mom gom gam pem pom,food south east,water south east,1
+open,0,water south east,food south west,(silence),(uncertain),(uncertain),0
+open,0,water south east,food west north,(silence),(uncertain),(uncertain),0
+open,0,water south east,food west east,(silence),(uncertain),(uncertain),0
+open,0,water south east,food west south,pim mom dem gam pem nam,food west south,water south east,1
+open,0,water south east,water east north,pim mom kem gam bam lim,water east north,water south east,1
+open,0,water south east,water east south,(silence),(uncertain),(uncertain),0
+open,0,water south east,water east west,(silence),(uncertain),(uncertain),0
+open,0,water south west,food north east,(silence),(uncertain),(uncertain),0
+open,0,water south west,food north south,(silence),(uncertain),(uncertain),0
+open,0,water south west,food north west,(silence),(uncertain),(uncertain),0
+open,0,water south west,food east north,(silence),(uncertain),(uncertain),0
+open,0,water south west,food east south,(silence),(uncertain),(uncertain),0
+open,0,water south west,food east west,(silence),(uncertain),(uncertain),0
+open,0,water south west,food south north,(silence),(uncertain),(uncertain),0
+open,0,water south west,food south east,(silence),(uncertain),(uncertain),0
+open,0,water south west,food south west,(silence),(uncertain),(uncertain),0
+open,0,water south west,food west north,(silence),(uncertain),(uncertain),0
+open,0,water south west,food west east,(silence),(uncertain),(uncertain),0
+open,0,water south west,food west south,(silence),(uncertain),(uncertain),0
+open,0,water south west,water west north,(silence),(uncertain),(uncertain),0
+open,0,water south west,water west east,(silence),(uncertain),(uncertain),0
+open,0,water south west,water west south,(silence),(uncertain),(uncertain),0
+open,0,water west north,food north east,(silence),(uncertain),(uncertain),0
+open,0,water west north,food north south,(silence),(uncertain),(uncertain),0
+open,0,water west north,food north west,(silence),(uncertain),(uncertain),0
+open,0,water west north,food east north,(silence),(uncertain),(uncertain),0
+open,0,water west north,food east south,(silence),(uncertain),(uncertain),0
+open,0,water west north,food east west,(silence),(uncertain),(uncertain),0
+open,0,water west north,food south north,(silence),(uncertain),(uncertain),0
+open,0,water west north,food south east,(silence),(uncertain),(uncertain),0
+open,0,water west north,food south west,(silence),(uncertain),(uncertain),0
+open,0,water west north,food west north,(silence),(uncertain),(uncertain),0
+open,0,water west north,food west east,(silence),(uncertain),(uncertain),0
+open,0,water west north,food west south,(silence),(uncertain),(uncertain),0
+open,0,water west north,water north east,(silence),(uncertain),(uncertain),0
+open,0,water west north,water north south,(silence),(uncertain),(uncertain),0
+open,0,water west north,water north west,(silence),(uncertain),(uncertain),0
+open,0,water west east,food north east,(silence),(uncertain),(uncertain),0
+open,0,water west east,food north south,(silence),(uncertain),(uncertain),0
+open,0,water west east,food north west,(silence),(uncertain),(uncertain),0
+open,0,water west east,food east north,(silence),(uncertain),(uncertain),0
+open,0,water west east,food east south,(silence),(uncertain),(uncertain),0
+open,0,water west east,food east west,(silence),(uncertain),(uncertain),0
+open,0,water west east,food south north,(silence),(uncertain),(uncertain),0
+open,0,water west east,food south east,(silence),(uncertain),(uncertain),0
+open,0,water west east,food south west,(silence),(uncertain),(uncertain),0
+open,0,water west east,food west north,(silence),(uncertain),(uncertain),0
+open,0,water west east,food west east,(silence),(uncertain),(uncertain),0
+open,0,water west east,food west south,(silence),(uncertain),(uncertain),0
+open,0,water west east,water east north,(silence),(uncertain),(uncertain),0
+open,0,water west east,water east south,(silence),(uncertain),(uncertain),0
+open,0,water west east,water east west,(silence),(uncertain),(uncertain),0
+open,0,water west south,food north east,(silence),(uncertain),(uncertain),0
+open,0,water west south,food north south,(silence),(uncertain),(uncertain),0
+open,0,water west south,food north west,gom nem bom gam pem dim,food north west,water west south,1
+open,0,water west south,food east north,gom nem kem gam pem lim,food east north,water west south,1
+open,0,water west south,food east south,(silence),(uncertain),(uncertain),0
+open,0,water west south,food east west,(silence),(uncertain),(uncertain),0
+open,0,water west south,food south north,(silence),(uncertain),(uncertain),0
+open,0,water west south,food south east,gom nem gom gam pem pom,food south east,water west south,1
+open,0,water west south,food south west,(silence),(uncertain),(uncertain),0
+open,0,water west south,food west north,(silence),(uncertain),(uncertain),0
+open,0,water west south,food west east,(silence),(uncertain),(uncertain),0
+open,0,water west south,food west south,gom nem dem gam pem nam,food west south,water west south,1
+open,0,water west south,water south north,(silence),(uncertain),(uncertain),0
+open,0,water west south,water south east,gom nem gom gam bam pom,water south east,water west south,1
+open,0,water west south,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food north east,food east north,(silence),(uncertain),(uncertain),0
+muted,0,food north east,food east south,(silence),(uncertain),(uncertain),0
+muted,0,food north east,food east west,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water north west,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water east north,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water south east,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food north east,water west south,(silence),(uncertain),(uncertain),0
+muted,0,food north south,food south north,(silence),(uncertain),(uncertain),0
+muted,0,food north south,food south east,(silence),(uncertain),(uncertain),0
+muted,0,food north south,food south west,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water north west,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water east north,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water south east,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food north south,water west south,(silence),(uncertain),(uncertain),0
+muted,0,food north west,food west north,(silence),(uncertain),(uncertain),0
+muted,0,food north west,food west east,(silence),(uncertain),(uncertain),0
+muted,0,food north west,food west south,mom pom dem pem pem nam,(uncertain),(uncertain),0
+muted,0,food north west,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food north west,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food north west,water north west,mom pom bom pem bam dim,(uncertain),(uncertain),0
+muted,0,food north west,water east north,mom pom kem pem bam lim,(uncertain),(uncertain),0
+muted,0,food north west,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food north west,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food north west,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food north west,water south east,mom pom gom pem bam pom,(uncertain),(uncertain),0
+muted,0,food north west,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food north west,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food north west,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food north west,water west south,mom pom dem pem bam nam,(uncertain),(uncertain),0
+muted,0,food east north,food north east,(silence),(uncertain),(uncertain),0
+muted,0,food east north,food north south,(silence),(uncertain),(uncertain),0
+muted,0,food east north,food north west,lim lem bom pem pem dim,(uncertain),(uncertain),0
+muted,0,food east north,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food east north,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food east north,water north west,lim lem bom pem bam dim,(uncertain),(uncertain),0
+muted,0,food east north,water east north,lim lem kem pem bam lim,(uncertain),(uncertain),0
+muted,0,food east north,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food east north,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food east north,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food east north,water south east,lim lem gom pem bam pom,(uncertain),(uncertain),0
+muted,0,food east north,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food east north,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food east north,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food east north,water west south,lim lem dem pem bam nam,(uncertain),(uncertain),0
+muted,0,food east south,food south north,(silence),(uncertain),(uncertain),0
+muted,0,food east south,food south east,(silence),(uncertain),(uncertain),0
+muted,0,food east south,food south west,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water north west,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water east north,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water south east,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food east south,water west south,(silence),(uncertain),(uncertain),0
+muted,0,food east west,food west north,(silence),(uncertain),(uncertain),0
+muted,0,food east west,food west east,(silence),(uncertain),(uncertain),0
+muted,0,food east west,food west south,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water north west,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water east north,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water south east,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food east west,water west south,(silence),(uncertain),(uncertain),0
+muted,0,food south north,food north east,(silence),(uncertain),(uncertain),0
+muted,0,food south north,food north south,(silence),(uncertain),(uncertain),0
+muted,0,food south north,food north west,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water north west,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water east north,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water south east,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food south north,water west south,(silence),(uncertain),(uncertain),0
+muted,0,food south east,food east north,pim mom kem pem pem lim,(uncertain),(uncertain),0
+muted,0,food south east,food east south,(silence),(uncertain),(uncertain),0
+muted,0,food south east,food east west,(silence),(uncertain),(uncertain),0
+muted,0,food south east,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food south east,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food south east,water north west,pim mom bom pem bam dim,(uncertain),(uncertain),0
+muted,0,food south east,water east north,pim mom kem pem bam lim,(uncertain),(uncertain),0
+muted,0,food south east,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food south east,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food south east,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food south east,water south east,pim mom gom pem bam pom,(uncertain),(uncertain),0
+muted,0,food south east,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food south east,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food south east,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food south east,water west south,pim mom dem pem bam nam,(uncertain),(uncertain),0
+muted,0,food south west,food west north,(silence),(uncertain),(uncertain),0
+muted,0,food south west,food west east,(silence),(uncertain),(uncertain),0
+muted,0,food south west,food west south,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water north west,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water east north,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water south east,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food south west,water west south,(silence),(uncertain),(uncertain),0
+muted,0,food west north,food north east,(silence),(uncertain),(uncertain),0
+muted,0,food west north,food north south,(silence),(uncertain),(uncertain),0
+muted,0,food west north,food north west,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water north west,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water east north,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water south east,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food west north,water west south,(silence),(uncertain),(uncertain),0
+muted,0,food west east,food east north,(silence),(uncertain),(uncertain),0
+muted,0,food west east,food east south,(silence),(uncertain),(uncertain),0
+muted,0,food west east,food east west,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water north west,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water east north,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water south east,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food west east,water west south,(silence),(uncertain),(uncertain),0
+muted,0,food west south,food south north,(silence),(uncertain),(uncertain),0
+muted,0,food west south,food south east,gom nem gom pem pem pom,(uncertain),(uncertain),0
+muted,0,food west south,food south west,(silence),(uncertain),(uncertain),0
+muted,0,food west south,water north east,(silence),(uncertain),(uncertain),0
+muted,0,food west south,water north south,(silence),(uncertain),(uncertain),0
+muted,0,food west south,water north west,gom nem bom pem bam dim,(uncertain),(uncertain),0
+muted,0,food west south,water east north,gom nem kem pem bam lim,(uncertain),(uncertain),0
+muted,0,food west south,water east south,(silence),(uncertain),(uncertain),0
+muted,0,food west south,water east west,(silence),(uncertain),(uncertain),0
+muted,0,food west south,water south north,(silence),(uncertain),(uncertain),0
+muted,0,food west south,water south east,gom nem gom pem bam pom,(uncertain),(uncertain),0
+muted,0,food west south,water south west,(silence),(uncertain),(uncertain),0
+muted,0,food west south,water west north,(silence),(uncertain),(uncertain),0
+muted,0,food west south,water west east,(silence),(uncertain),(uncertain),0
+muted,0,food west south,water west south,gom nem dem pem bam nam,(uncertain),(uncertain),0
+muted,0,water north east,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food north west,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food east north,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food south east,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water north east,food west south,(silence),(uncertain),(uncertain),0
+muted,0,water north east,water east north,(silence),(uncertain),(uncertain),0
+muted,0,water north east,water east south,(silence),(uncertain),(uncertain),0
+muted,0,water north east,water east west,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food north west,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food east north,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food south east,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water north south,food west south,(silence),(uncertain),(uncertain),0
+muted,0,water north south,water south north,(silence),(uncertain),(uncertain),0
+muted,0,water north south,water south east,(silence),(uncertain),(uncertain),0
+muted,0,water north south,water south west,(silence),(uncertain),(uncertain),0
+muted,0,water north west,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water north west,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water north west,food north west,mom pom bom gam pem dim,(uncertain),(uncertain),0
+muted,0,water north west,food east north,mom pom kem gam pem lim,(uncertain),(uncertain),0
+muted,0,water north west,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water north west,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water north west,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water north west,food south east,mom pom gom gam pem pom,(uncertain),(uncertain),0
+muted,0,water north west,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water north west,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water north west,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water north west,food west south,mom pom dem gam pem nam,(uncertain),(uncertain),0
+muted,0,water north west,water west north,(silence),(uncertain),(uncertain),0
+muted,0,water north west,water west east,(silence),(uncertain),(uncertain),0
+muted,0,water north west,water west south,mom pom dem gam bam nam,(uncertain),(uncertain),0
+muted,0,water east north,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water east north,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water east north,food north west,lim lem bom gam pem dim,(uncertain),(uncertain),0
+muted,0,water east north,food east north,lim lem kem gam pem lim,(uncertain),(uncertain),0
+muted,0,water east north,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water east north,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water east north,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water east north,food south east,lim lem gom gam pem pom,(uncertain),(uncertain),0
+muted,0,water east north,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water east north,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water east north,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water east north,food west south,lim lem dem gam pem nam,(uncertain),(uncertain),0
+muted,0,water east north,water north east,(silence),(uncertain),(uncertain),0
+muted,0,water east north,water north south,(silence),(uncertain),(uncertain),0
+muted,0,water east north,water north west,lim lem bom gam bam dim,(uncertain),(uncertain),0
+muted,0,water east south,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food north west,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food east north,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food south east,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water east south,food west south,(silence),(uncertain),(uncertain),0
+muted,0,water east south,water south north,(silence),(uncertain),(uncertain),0
+muted,0,water east south,water south east,(silence),(uncertain),(uncertain),0
+muted,0,water east south,water south west,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food north west,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food east north,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food south east,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water east west,food west south,(silence),(uncertain),(uncertain),0
+muted,0,water east west,water west north,(silence),(uncertain),(uncertain),0
+muted,0,water east west,water west east,(silence),(uncertain),(uncertain),0
+muted,0,water east west,water west south,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food north west,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food east north,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food south east,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water south north,food west south,(silence),(uncertain),(uncertain),0
+muted,0,water south north,water north east,(silence),(uncertain),(uncertain),0
+muted,0,water south north,water north south,(silence),(uncertain),(uncertain),0
+muted,0,water south north,water north west,(silence),(uncertain),(uncertain),0
+muted,0,water south east,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water south east,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water south east,food north west,pim mom bom gam pem dim,(uncertain),(uncertain),0
+muted,0,water south east,food east north,pim mom kem gam pem lim,(uncertain),(uncertain),0
+muted,0,water south east,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water south east,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water south east,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water south east,food south east,pim mom gom gam pem pom,(uncertain),(uncertain),0
+muted,0,water south east,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water south east,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water south east,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water south east,food west south,pim mom dem gam pem nam,(uncertain),(uncertain),0
+muted,0,water south east,water east north,pim mom kem gam bam lim,(uncertain),(uncertain),0
+muted,0,water south east,water east south,(silence),(uncertain),(uncertain),0
+muted,0,water south east,water east west,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food north west,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food east north,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food south east,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water south west,food west south,(silence),(uncertain),(uncertain),0
+muted,0,water south west,water west north,(silence),(uncertain),(uncertain),0
+muted,0,water south west,water west east,(silence),(uncertain),(uncertain),0
+muted,0,water south west,water west south,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food north west,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food east north,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food south east,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water west north,food west south,(silence),(uncertain),(uncertain),0
+muted,0,water west north,water north east,(silence),(uncertain),(uncertain),0
+muted,0,water west north,water north south,(silence),(uncertain),(uncertain),0
+muted,0,water west north,water north west,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food north west,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food east north,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food south east,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water west east,food west south,(silence),(uncertain),(uncertain),0
+muted,0,water west east,water east north,(silence),(uncertain),(uncertain),0
+muted,0,water west east,water east south,(silence),(uncertain),(uncertain),0
+muted,0,water west east,water east west,(silence),(uncertain),(uncertain),0
+muted,0,water west south,food north east,(silence),(uncertain),(uncertain),0
+muted,0,water west south,food north south,(silence),(uncertain),(uncertain),0
+muted,0,water west south,food north west,gom nem bom gam pem dim,(uncertain),(uncertain),0
+muted,0,water west south,food east north,gom nem kem gam pem lim,(uncertain),(uncertain),0
+muted,0,water west south,food east south,(silence),(uncertain),(uncertain),0
+muted,0,water west south,food east west,(silence),(uncertain),(uncertain),0
+muted,0,water west south,food south north,(silence),(uncertain),(uncertain),0
+muted,0,water west south,food south east,gom nem gom gam pem pom,(uncertain),(uncertain),0
+muted,0,water west south,food south west,(silence),(uncertain),(uncertain),0
+muted,0,water west south,food west north,(silence),(uncertain),(uncertain),0
+muted,0,water west south,food west east,(silence),(uncertain),(uncertain),0
+muted,0,water west south,food west south,gom nem dem gam pem nam,(uncertain),(uncertain),0
+muted,0,water west south,water south north,(silence),(uncertain),(uncertain),0
+muted,0,water west south,water south east,gom nem gom gam bam pom,(uncertain),(uncertain),0
+muted,0,water west south,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,food east north,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water north west,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water east north,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water south east,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food north east,water west south,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,food south east,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water north west,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water east north,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water south east,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food north south,water west south,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,food west south,mom pom dem pem pem nam,(uncertain),(uncertain),0
+reversed,0,food north west,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,water north west,mom pom bom pem bam dim,(uncertain),(uncertain),0
+reversed,0,food north west,water east north,mom pom kem pem bam lim,(uncertain),(uncertain),0
+reversed,0,food north west,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,water south east,mom pom gom pem bam pom,(uncertain),(uncertain),0
+reversed,0,food north west,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food north west,water west south,mom pom dem pem bam nam,(uncertain),(uncertain),0
+reversed,0,food east north,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,food east north,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,food east north,food north west,lim lem bom pem pem dim,(uncertain),(uncertain),0
+reversed,0,food east north,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food east north,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food east north,water north west,lim lem bom pem bam dim,(uncertain),(uncertain),0
+reversed,0,food east north,water east north,lim lem kem pem bam lim,(uncertain),(uncertain),0
+reversed,0,food east north,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food east north,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food east north,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food east north,water south east,lim lem gom pem bam pom,(uncertain),(uncertain),0
+reversed,0,food east north,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food east north,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food east north,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food east north,water west south,lim lem dem pem bam nam,(uncertain),(uncertain),0
+reversed,0,food east south,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,food south east,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water north west,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water east north,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water south east,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food east south,water west south,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,food west south,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water north west,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water east north,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water south east,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food east west,water west south,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,food north west,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water north west,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water east north,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water south east,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food south north,water west south,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,food east north,pim mom kem pem pem lim,(uncertain),(uncertain),0
+reversed,0,food south east,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,water north west,pim mom bom pem bam dim,(uncertain),(uncertain),0
+reversed,0,food south east,water east north,pim mom kem pem bam lim,(uncertain),(uncertain),0
+reversed,0,food south east,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,water south east,pim mom gom pem bam pom,(uncertain),(uncertain),0
+reversed,0,food south east,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food south east,water west south,pim mom dem pem bam nam,(uncertain),(uncertain),0
+reversed,0,food south west,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,food west south,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water north west,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water east north,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water south east,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food south west,water west south,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,food north west,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water north west,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water east north,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water south east,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food west north,water west south,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,food east north,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water north west,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water east north,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water south east,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food west east,water west south,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,food south east,gom nem gom pem pem pom,(uncertain),(uncertain),0
+reversed,0,food west south,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,water north west,gom nem bom pem bam dim,(uncertain),(uncertain),0
+reversed,0,food west south,water east north,gom nem kem pem bam lim,(uncertain),(uncertain),0
+reversed,0,food west south,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,water south east,gom nem gom pem bam pom,(uncertain),(uncertain),0
+reversed,0,food west south,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,food west south,water west south,gom nem dem pem bam nam,(uncertain),(uncertain),0
+reversed,0,water north east,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food north west,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food east north,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food south east,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,food west south,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,water east north,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,water north east,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food north west,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food east north,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food south east,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,food west south,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,water south east,(silence),(uncertain),(uncertain),0
+reversed,0,water north south,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,food north west,mom pom bom gam pem dim,(uncertain),(uncertain),0
+reversed,0,water north west,food east north,mom pom kem gam pem lim,(uncertain),(uncertain),0
+reversed,0,water north west,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,food south east,mom pom gom gam pem pom,(uncertain),(uncertain),0
+reversed,0,water north west,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,food west south,mom pom dem gam pem nam,(uncertain),(uncertain),0
+reversed,0,water north west,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,water north west,water west south,mom pom dem gam bam nam,(uncertain),(uncertain),0
+reversed,0,water east north,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water east north,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water east north,food north west,lim lem bom gam pem dim,(uncertain),(uncertain),0
+reversed,0,water east north,food east north,lim lem kem gam pem lim,(uncertain),(uncertain),0
+reversed,0,water east north,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water east north,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water east north,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water east north,food south east,lim lem gom gam pem pom,(uncertain),(uncertain),0
+reversed,0,water east north,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water east north,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water east north,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water east north,food west south,lim lem dem gam pem nam,(uncertain),(uncertain),0
+reversed,0,water east north,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,water east north,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,water east north,water north west,lim lem bom gam bam dim,(uncertain),(uncertain),0
+reversed,0,water east south,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food north west,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food east north,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food south east,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,food west south,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,water south east,(silence),(uncertain),(uncertain),0
+reversed,0,water east south,water south west,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food north west,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food east north,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food south east,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,food west south,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,water east west,water west south,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food north west,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food east north,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food south east,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,food west south,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,water south north,water north west,(silence),(uncertain),(uncertain),0
+reversed,0,water south east,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water south east,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water south east,food north west,pim mom bom gam pem dim,(uncertain),(uncertain),0
+reversed,0,water south east,food east north,pim mom kem gam pem lim,(uncertain),(uncertain),0
+reversed,0,water south east,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water south east,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water south east,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water south east,food south east,pim mom gom gam pem pom,(uncertain),(uncertain),0
+reversed,0,water south east,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water south east,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water south east,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water south east,food west south,pim mom dem gam pem nam,(uncertain),(uncertain),0
+reversed,0,water south east,water east north,pim mom kem gam bam lim,(uncertain),(uncertain),0
+reversed,0,water south east,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,water south east,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food north west,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food east north,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food south east,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,food west south,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,water west north,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,water west east,(silence),(uncertain),(uncertain),0
+reversed,0,water south west,water west south,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food north west,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food east north,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food south east,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,food west south,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,water north east,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,water north south,(silence),(uncertain),(uncertain),0
+reversed,0,water west north,water north west,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food north west,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food east north,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food south east,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,food west south,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,water east north,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,water east south,(silence),(uncertain),(uncertain),0
+reversed,0,water west east,water east west,(silence),(uncertain),(uncertain),0
+reversed,0,water west south,food north east,(silence),(uncertain),(uncertain),0
+reversed,0,water west south,food north south,(silence),(uncertain),(uncertain),0
+reversed,0,water west south,food north west,gom nem bom gam pem dim,(uncertain),(uncertain),0
+reversed,0,water west south,food east north,gom nem kem gam pem lim,(uncertain),(uncertain),0
+reversed,0,water west south,food east south,(silence),(uncertain),(uncertain),0
+reversed,0,water west south,food east west,(silence),(uncertain),(uncertain),0
+reversed,0,water west south,food south north,(silence),(uncertain),(uncertain),0
+reversed,0,water west south,food south east,gom nem gom gam pem pom,(uncertain),(uncertain),0
+reversed,0,water west south,food south west,(silence),(uncertain),(uncertain),0
+reversed,0,water west south,food west north,(silence),(uncertain),(uncertain),0
+reversed,0,water west south,food west east,(silence),(uncertain),(uncertain),0
+reversed,0,water west south,food west south,gom nem dem gam pem nam,(uncertain),(uncertain),0
+reversed,0,water west south,water south north,(silence),(uncertain),(uncertain),0
+reversed,0,water west south,water south east,gom nem gom gam bam pom,(uncertain),(uncertain),0
+reversed,0,water west south,water south west,(silence),(uncertain),(uncertain),0

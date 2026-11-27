@@ -1,0 +1,20 @@
+narrative_turn=1  person=0  events=0  trail=0  other_trail=0  decoded=0  words=0  prompts=4  heat=0  other_heat=0  edits=0  sprouts=0  palette=228  grain_stock=64  food_stock=64  held=0  eaten=0  settled=0  bite=0  shutters=3
+narrative_turn=8  person=1  events=0  trail=0  other_trail=0  decoded=0  words=0  prompts=4  heat=0  other_heat=0  edits=0  sprouts=0  palette=228  grain_stock=64  food_stock=64  held=0  eaten=0  settled=0  bite=0  shutters=1
+narrative_turn=2  person=0  events=1  trail=72057594037928120  other_trail=0  decoded=0  words=0  prompts=4  heat=1  other_heat=0  edits=0  sprouts=0  palette=156  grain_stock=64  food_stock=62  held=2  eaten=0  settled=0  bite=0  shutters=1
+narrative_glint=157  from=1  to=3  visible=184  before=228  after=156  light=7763814
+narrative_turn=2  person=0  events=2  trail=144115188075902999  other_trail=0  decoded=0  words=0  prompts=4  heat=1  other_heat=0  edits=0  sprouts=0  palette=177  grain_stock=64  food_stock=60  held=4  eaten=0  settled=0  bite=0  shutters=1
+narrative_glint=200  from=0  to=2  visible=23  before=156  after=177  light=1398033
+narrative_turn=2  person=0  events=3  trail=216172782125848461  other_trail=0  decoded=0  words=0  prompts=4  heat=1  other_heat=0  edits=0  sprouts=0  palette=210  grain_stock=64  food_stock=58  held=6  eaten=0  settled=0  bite=0  shutters=1
+narrative_glint=178  from=2  to=0  visible=141  before=177  after=210  light=14012821
+narrative_turn=2  person=0  events=4  trail=288230379240263042  other_trail=0  decoded=0  words=0  prompts=4  heat=1  other_heat=0  edits=0  sprouts=0  palette=27  grain_stock=64  food_stock=56  held=8  eaten=0  settled=0  bite=0  shutters=1
+narrative_glint=183  from=3  to=1  visible=130  before=210  after=27  light=5719894
+narrative_turn=2  person=0  events=5  trail=360288760858772103  other_trail=0  decoded=0  words=0  prompts=4  heat=1  other_heat=0  edits=0  sprouts=0  palette=45  grain_stock=64  food_stock=54  held=10  eaten=0  settled=0  bite=0  shutters=1
+narrative_glint=184  from=0  to=2  visible=135  before=27  after=45  light=6102361
+narrative_turn=2  person=0  events=6  trail=432547975525468040  other_trail=0  decoded=0  words=0  prompts=4  heat=1  other_heat=0  edits=0  sprouts=0  palette=177  grain_stock=64  food_stock=52  held=12  eaten=0  settled=0  bite=0  shutters=1
+narrative_glint=189  from=1  to=3  visible=136  before=45  after=177  light=7697509
+pupil> ?
+narrative_turn=5  person=1  events=0  trail=0  other_trail=432547975525468040  decoded=0  words=0  prompts=4  heat=0  other_heat=0  edits=0  sprouts=0  palette=177  grain_stock=64  food_stock=52  held=12  eaten=0  settled=0  bite=0  shutters=1
+speaker> jade went from east to west as plum and then amber went from north to south as teal and then teal went from south to north as plum and then teal went from west to east as plum and then teal went from north to south as plum and then teal went from east to west as plum
+narrative_turn=7  person=0  events=6  trail=432547975525468040  other_trail=432547975525468040  decoded=432547975525468040  words=58  prompts=4  heat=58  other_heat=58  edits=0  sprouts=0  palette=177  grain_stock=64  food_stock=52  held=12  eaten=0  settled=0  bite=0  shutters=1
+narrative_turn=9  person=1  events=6  trail=432547975525468040  other_trail=432547975525468040  decoded=0  words=0  prompts=4  heat=1  other_heat=0  edits=0  sprouts=0  palette=177  grain_stock=64  food_stock=52  held=12  eaten=0  settled=0  bite=0  shutters=1
+narrative_turn=10  person=1  events=6  trail=432547975525468040  other_trail=432547975525468040  decoded=0  words=0  prompts=4  heat=0  other_heat=0  edits=0  sprouts=0  palette=177  grain_stock=64  food_stock=52  held=0  eaten=12  settled=0  bite=12  shutters=1

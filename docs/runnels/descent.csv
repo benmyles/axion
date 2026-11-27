@@ -1,0 +1,13 @@
+run,source,command_seed,saved,treatment,elapsed,reed_descent,group,enabled,living,reserve,peer_samples,peer_contacts
+9535,start-v2.flood,1153,,--reed-contest listen,2048,234880,0,0,41492,2010208,0,0
+9535,start-v2.flood,1153,,--reed-contest listen,2048,234880,1,1,41302,1993670,426,397
+9536,start-v2.flood,1153,,--reed-contest reciprocal,2048,234880,0,1,39844,1921247,412,381
+9536,start-v2.flood,1153,,--reed-contest reciprocal,2048,234880,1,0,42284,2043293,0,0
+9537,start-v2.flood,1153,,--reed-contest sham,2048,234880,0,1,40766,1966585,517,473
+9537,start-v2.flood,1153,,--reed-contest sham,2048,234880,1,1,42083,2038775,449,413
+9538,start-v2.flood,21961,,--reed-contest listen,2048,234880,0,0,41319,1994671,0,0
+9538,start-v2.flood,21961,,--reed-contest listen,2048,234880,1,1,40950,1972407,508,460
+9539,start-v2.flood,21961,,--reed-contest reciprocal,2048,234880,0,1,40193,1943004,488,450
+9539,start-v2.flood,21961,,--reed-contest reciprocal,2048,234880,1,0,42778,2064891,0,0
+9540,start-v2.flood,21961,,--reed-contest sham,2048,234880,0,1,40426,1946882,486,451
+9540,start-v2.flood,21961,,--reed-contest sham,2048,234880,1,1,42423,2058478,480,435

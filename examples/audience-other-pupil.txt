@@ -1,0 +1,7 @@
+/audience 317087 0 second
+/audience-load first teal
+where will teal go?
+/audience-pour
+where did it go?
+where did teal start?
+/quit

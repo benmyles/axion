@@ -1,0 +1,5 @@
+population,condition,detritus_kernel,registers,local_bytes,threads,sites_per_thread
+bank,stained,observed,68,0,128,4
+old,stained,observed,68,0,128,4
+slow,stained,observed,68,0,128,4
+coast,stained,observed,68,0,128,4

@@ -1,0 +1,94 @@
+# Causeways
+
+A creature can now decide whether a patch is worth crossing difficult ground to reach, and whether changing a surface first would save enough work over several crossings. It can also use the learned effects of manipulation to predict changes described in a human question. The released checkpoint contains 85,413 residents in an occupied 512 × 512 watershed at tick 204,160. [Saved ecosystem](../examples/causeways.flood) · [Population history](effort/long-populations.csv)
+
+## Why separate food, effort and the effect of an action?
+
+Kingsbury and colleagues' November 2026 preprint studied mice deciding whether to stay or leave in changing foraging environments. The timing of an expected reward mattered, and manipulating a dopamine signal biased later choices. In a peer-reviewed 2025 study, frontal cortical activity and foraging decisions in mice reflected both reward history and time spent at a patch. A human patch-foraging experiment also found that participants adjusted to the richness and structure of the environment. These studies motivated independent interventions on learned yield, effort and action history. Axion uses these interventions to test its own computational assumptions. [2026 foraging preprint](https://pubmed.ncbi.nlm.nih.gov/42996181/) · [Mouse neural recordings](https://pmc.ncbi.nlm.nih.gov/articles/PMC12784418/) · [Human structure-learning experiment](https://pubmed.ncbi.nlm.nih.gov/36961923/)
+
+Creekways already had useful places and a working location memory. At the opening census 601 of 92,271 residents had a map-directed motor signal. Only 53 of those residents moved during the next tick. Across eight ticks, the 565 survivors in this group took 497 steps and consumed 9,091 units of food. A remembered direction, a realized footfall and a subsequent change in reserve therefore need separate measurements. The starting groups differed in their own reserves and experience, so this observation alone cannot identify the effect of steering. [Independent snapshot measurements](effort/opening-returns.csv)
+
+## What the creature learns
+
+The new organ occupies 60 bytes. Four inherited 32-bit words encode local state transitions, discharge masks, sensory wiring, projection gains, and how experience can change a later action. Each of four sensory cues can leave graded activity across eight binary contacts with two state bits apiece. A mouth learns yield from food actually swallowed. An active step supplies a separate muscular signal for effort actually paid. A third bank can bind the state of an outing to the eventual change in the animal's reserve. A fourth can learn which surface appeared after an actuator fired. All banks begin blank at birth.
+
+The value of a prospective action is a signed sum of its expected rewards, effort and duration, with an optional learned history term. A four-component count vector describes what a prospect contains. Its meanings come from the animal's own contacts. New counts and combinations can be evaluated immediately. A resident can also retain a goal over several ticks, abandon a deteriorating attempt and, when its wiring permits, inhibit an ordinary step. The population determines its learning laws, gains, mutation rate in the nursery and propensities to explore or persist. The repertoire of primitive sensors, integer integration, actuator types and available operations are engineering choices.
+
+## First choices and preparing a surface
+
+Four independent pairs of populations began with random effort genes. Each contained 4,096 creatures and bred for 512 generations. A pair of adults has separate physical resources in the same sampled local conditions. Working through twenty foraging and material offers leaves a reserve after travel and upkeep. A common ration maintains a reproductive floor. Local budgets determine parent choice in the earned arm. The matched uniform arm chooses parents independently of those earnings. Juveniles receive genes and start their own sensory and transition experience. [Recorded reproductive budgets](effort/reproduction.csv)
+
+Taste samples supply food with no crossing, and separate walks sample the four surfaces without presenting a food choice. Food values and surface costs then change independently. The first route offer binds a number of portions to an actual patch and a number of steps to the intervening surface. Scoring uses the actual food and expenditure in the held-out clearing. [All route trials](effort/nursery-routes.csv)
+
+| Held-out condition, 16,384 trials per row | Choices with the best net yield | Carbon remaining after travel |
+| --- | ---: | ---: |
+| Earned populations, both current experiences | 15,653 | 323,297 |
+| Earned populations, previous fruit experience | 9,721 | 232,280 |
+| Earned populations, previous surface experience | 14,853 | 318,370 |
+| Earned populations, both experiences erased | 9,005 | 208,147 |
+| Uniform-parent populations, both current experiences | 8,527 | 199,981 |
+
+Always taking the nearer offer yielded 194,828 carbon across the same tests. Always taking the farther offer yielded 204,863. In 7,718 cases the identity of the better choice had reversed since the previous calibration. The earned populations followed the reversal 7,354 times.
+
+The construction task introduces a four-faced slat with two handles. Handles rotate the piece in opposite directions. A fresh layout independently changes the appearance of the faces, which handle does what and the effort of the different surfaces. A body can observe dry sister pieces, experience the costs of crossing separately, then choose whether to prepare an untouched working piece. Preparation costs energy upfront. The body traverses the result one to eight times before it collects the load. The environment executes both alternatives on separate copies for the observer. Only the chosen action changes the acting animal's reserve.
+
+The earned cohorts chose a least-cost option on **15,907 of 16,384 offers**. They prepared the piece on 4,026 of 4,364 occasions when preparation helped. Their actual work was 158,946, compared with 185,446 for leaving every piece alone. Erasing the learned transitions increased work to 185,753. Supplying an incorrect resulting texture gave 184,318. Uniform parentage produced 8,970 least-cost choices and required 212,221 units of work. [Material controls](effort/nursery-building.csv) · [Physical examples](effort/slat-receipts.csv)
+
+## A conversation with a material consequence
+
+```sh
+./axion talk --speaker examples/causeway-guide.mind --listener examples/loam-a.mind < examples/ford-walk.txt
+```
+
+The speaker inherits the spatial and material vocabulary of the Bank Guide. I grafted the screened, untrained effort genes into this resident, then taught seven operator words by pairing each with a visible manipulation. The study presented 98 demonstrations and no example option lists, explanations, edited comparisons or multi-step surface questions. Two independently taught registers gave the same held-out scores. The grading process keeps the physical answer, perturbed value maps and acceptable spoken word out of the CUDA question inputs. [River register](effort/river-words.csv) · [Moor register](effort/moor-words.csv) · [Untaught operator controls](effort/untaught-words.csv)
+
+Four inherited material names describe portions and four older water names can refer to work on a surface. In a described choice, occurrences of a name add to its corresponding component. The two possible trips can differ from the physical trays currently installed. The resident uses its own culinary and muscular contacts to value each. A reason query removes one component class at a time and reports the class with the largest unique contribution to the decision margin. A spoken removal updates the retained hypothetical offers. The animal can then act in the actual world, which may differ from what was said.
+
+On 128 new mixtures it made 128 correct first choices. On 128 offers whose preferred side reversed after revaluation it made 127 correct choices. After a body turn and a spoken removal it gave the physically correct direction or required silence on **494 of 512** questions. Its named reason or silence matched the external criterion in 456 of 512 cases. In this particular corpus removing the cited component reversed its own preference on 437 voiced explanations. On 128 physically tied offers it stayed silent 73 times and asserted a preference 55 times.
+
+The same speaker can answer *face turn brook turn brook turn mere*. It sees the exposed face and two handle markings. The inference routine receives no hidden face arrangement or handedness. It repeatedly applies its learned action-to-surface contacts. In the replay the answer is **brook**. A real stroke follows. Asked *face*, it again answers **brook**. Asked *face turn mere*, it predicts **mere**. The controlled experiment varied the sequence length from one to five, and the speaker named the correct result on **128 of 128** follow-ups after a real stroke. Erasing the transition contacts gave 0 of 128. Corrupting the observed successor gave 26 of 128. [Surface predictions by length and intervention](effort/river-surfaces.csv) · [Second vocabulary](effort/moor-surfaces.csv) · [Untaught surface words](effort/untaught-surfaces.csv)
+
+The interpreter has designed operations for comparing, subtracting, explaining, rolling and acting. English or alternative word forms come from witnessed contacts. The resident's value judgments and physical consequences come from experience. This is a limited compositional communication experiment. Unrestricted dialogue, invention of language and child-level intelligence remain open goals.
+
+## What happened without a trainer
+
+The watershed adds one byte per site for compaction on its east and south edges. Its update borrows a property of cellular automata. Each pass changes bounded local state on disjoint neighboring pairs, so a crossing can alter a path without a global road grid or a central planner. Footfalls compress the surface, water erodes it and fibre can shelter it. A creature with limbs may spend its own energy to stamp loose material. Compaction changes subsequent crossing costs and modifies local water resistance. The water, clay and metabolic conservation checks continue to cover the full habitat. Compression is a state of the existing material. No food or clay is created by writing a footprint.
+
+In the predictive paving mode a prospective builder learns how its observed surface changes after actual steps and strokes. Its inherited circuit can estimate repeat use from recent traffic and current compaction, compare zero, one and two strokes, and make an exploratory contact when a transition is unknown. The physical trials on sister slats and the live field use the same plastic transition representation. The field imposes crowding, erosion, an irregular stride and competition for the benefit of a better crossing.
+
+- **Physical inheritance.** Fresh populations received either the worked ground of earlier residents or the same ground with compaction washed out. Across four independently seeded catchments, the new bodies paid 12,711 for 3,489 actual steps in their first sixteen ticks with the original paths. They paid 13,042 for 3,478 steps on washed ground. All four paired catchments paid less with the paths intact. Private effort contacts began empty. [Matched ground histories](effort/inherited-paths.csv)
+- **Voluntary return trips.** In the mature 2,048-tick first release, a randomized sixteen-tick assay allowed or suppressed prospective steering on a sample of eligible occasions. When the circuit favored a trip, the 17,483 assigned-trip episodes ended with a mean net reserve change of −2.80, versus −1.85 over 17,028 assigned-ordinary episodes. These are assignments of access to a remembered route. Obstacles, reproduction and death still intervene. Reserve changes credit the parent's allocation to offspring. This measures short-term change in usable energy. The reciprocal lineage experiments separately measure reproductive representation. [Randomized episodes](effort/randomized-episodes.csv) · [Detached one-step comparisons](effort/field-appraisals.csv)
+- **Reproduction in company.** Descendants with ordinary prospective motor regulation occupied 45.7% and 49.8% of the surviving residents after 2,048 ticks in the reciprocal mature contests. With ordinary locomotion also subject to an inherited inhibitory gate, their shares were 46.6% and 48.7%. Labels also drifted strongly in the young controls. The nursery success did not translate into an established reproductive advantage here. [Mature reciprocal contests](effort/mature-contests.csv) · [Young reciprocal contests](effort/young-contests.csv)
+- **Evolution on field resources alone.** Four young worlds started with random effort genes, established spatial germlines and no effort nursery. After 32,768 ticks one population was extinct. The three survivors made 528, 511 and 576 best-yield choices out of 1,024 detached unfamiliar offers. Their opening scores were 507, 517 and 509. The world permits unplanned selection, including extinction. These outcomes fall far short of spontaneously acquiring the calibrated nursery skill. [Population histories](effort/wild-population.csv) · [Wild route transfer](effort/wild-choice.csv) · [Wild preparation transfer](effort/wild-preparation.csv)
+
+The final population reached **generation 2,197**. Its 85,413 residents expressed 5,484,128 somatic spiking cells in 7,249 distinct body forms. At this census, 382 living residents had grown additional cells since birth. The largest living cortex expressed 256 of the 1,024 cells available to it. Among living residents, 84,573 retained effort or yield experience and 49,309 retained local traffic activity. At their most recently recorded eligible opportunities, 1,123 had selected a one-stroke preparation on a learned transition and 67 had selected two. These are last decisions of living individuals, distinct from cumulative work. [Active and natal cell counts](effort/somatic-cells.csv) · [Long population series](effort/long-populations.csv) · [Builder states](effort/working-animals.csv) · [Physical accounts](effort/continuations.csv)
+
+A detached eight-crossing assay on all 57,279 eligible final plots found that the field population's chosen preparations required 940,982 units of work. Leaving the same edges alone would require 945,308. The best physically attainable preparation required 642,570. The population captured 4,326 of 302,738 available units of savings, about 1.4%. Substituting incorrect predicted textures yielded 940,727, slightly better than the normal readout. The value of the specific learned texture mapping in this heterogeneous watershed therefore remains unproven. [Actual and counterfactual edge costs](effort/ground-forecasts.csv)
+
+## GPU cost and reproduction
+
+Two executions of the final 6,144 ticks produced identical habitat bytes and measured 43.41 and 27.33 million full site ticks/s in the simulation. A separate 1,024 × 1,024 run began with 754,577 residents and 90,571,008 active somatic cells. It closed after 128 ticks with 255,397 residents and measured 79.51 million site ticks/s in simulation, or 28.98 million/s including the census loop. [Long-run timing](effort/long-run-speed.csv) · [Million-site run](effort/million.csv)
+
+A frozen organ packs signed gains and routing flags, four yields, four effort estimates, a learned transition map and outcome activity into 20 bytes. Each prospective readout uses unsigned byte dot products on the NVIDIA device followed by signed gains. It can price arbitrary new quantities and mixtures at different poses with unchanged learned contacts. For 8,388,608 two-option comparisons the median writable time was 0.4585 ms and the median compiled time was 0.3227 ms. All **100,663,296 signed currents** matched across the alternating benchmark runs. The 26.0 billion comparisons/s figure covers a locality-friendly readout kernel. It excludes learning, physical simulation and end-to-end speech. [Kernel measurements](effort/packed-inference.csv)
+
+The native Blackwell release and a separately compiled SM 80 PTX version of both the watershed and inference images produced identical 193-tick habitat files. The two builds agreed on all 45 reported effort measurements and all 34 physical and spoken records from the replay. The portable readout contains the unsigned four-byte dot-product instruction. The independent snapshot reader reconstructs actual crossing prices, compaction and the best available physical preparations for one, four and eight subsequent crossings. [Independent verification](../tests/effort.py)
+
+
+```sh
+make -j4 CXX=/usr/bin/g++ CUDA_CLANG=/usr/bin/clang++ NATIVE=1 CUDA_ARCH=sm_120
+make test-effort CXX=/usr/bin/g++ CUDA_CLANG=/usr/bin/clang++ NATIVE=1 CUDA_ARCH=sm_120
+mkdir -p causes
+python3 tools/effort-study.py nursery --output causes/nurseries --germ-directory causes --keep causes/treadbank.flood
+cmp causes/treadbank.flood examples/treadbank.flood
+./axion floodplain --load causes/treadbank.flood --effort-scholar causes/pupil.mind --effort-carrier examples/bank-guide.mind --effort-seed 981277 --steps 0
+python3 tools/effort-language.py --speaker causes/pupil.mind --save causes/guide.mind --output causes/words.csv --surfaces causes/surfaces.csv --stations 128
+cmp causes/guide.mind examples/causeway-guide.mind
+python3 tools/effort-study.py field --source examples/creekways.flood --germs causes/treadbank.flood --seeds 33971 --horizons 256 1024 2048 --arms live --output causes/field --keep causes/active.flood
+./axion floodplain --load causes/active.flood --effort-movement select --effort-assignments same --effort-window 32 --effort-audit randomized --hollow-census --effort-census --steps 4096 --save causes/long.flood
+./axion floodplain --load causes/long.flood --steps 4096 --hollow-census --effort-census --effort-bench 8388608 --save causes/worked.flood
+./axion floodplain --load causes/worked.flood --effort-paving forecast --effort-census --hollow-census --steps 2048 --save causes/builders.flood
+./axion floodplain --load causes/builders.flood --effort-census --hollow-census --steps 6144 --save causes/causeways.flood
+cmp causes/causeways.flood examples/causeways.flood
+```
+
+`tools/effort-study.py legacy` and `contest` accept a directory of earned populations through `--germs causes`. The legacy experiment uses `--horizons 16 128 1024`. To repeat natural selection without the effort nursery use `python3 tools/effort-study.py feral --seeds 30389 46141 72043 92119 --trials 1024 --horizons 2048 8192 32768 --output causes/wild`. The new study, simulator kernels, word acquisition and independent grading code are in the repository. [Independent work, physical geometry and restart tests](../tests/effort.py)

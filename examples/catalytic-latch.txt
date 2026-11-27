@@ -1,0 +1,14 @@
+/braid 62
+/braid-feed speaker 1024
+/braid-feed partner 1024
+/cap-cell 27 plum amber 0
+/cap-seal speaker
+/cap-pour speaker
+/cap-pour speaker
+/cap-pour speaker
+/cap-grip speaker 36
+/cap-pour speaker
+/cap-grip speaker 36
+/cap-pour speaker
+/cap-pour speaker
+/quit

@@ -1,0 +1,5 @@
+run,site_ticks,advance_seconds,advance_million_site_ticks_per_second,advance_sampling_and_checks_seconds
+free-replay,3506438144,58.4242,60.0169,61.7395
+prospective-watcher,3506438144,58.1722,60.2769,62.9441
+released-watcher,3506438144,58.4387,60.002,66.0471
+in-field interview,8388608,0.142592,58.8296,0.995781

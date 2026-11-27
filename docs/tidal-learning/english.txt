@@ -1,0 +1,15 @@
+speech_feedback=on  person=0
+braid_recall=1  person=0  nouns=8  forms=0  offered=96  cost=96  writes=56  asked=0  witnessed=0  received=0  answered=0  from_testimony=0
+braid_recall=2  person=0  nouns=8  forms=1  offered=64  cost=214  writes=15  asked=0  witnessed=0  received=0  answered=0  from_testimony=0
+braid_recall=2  person=0  nouns=8  forms=2  offered=64  cost=224  writes=15  asked=0  witnessed=0  received=0  answered=0  from_testimony=0
+braid_recall=2  person=0  nouns=8  forms=3  offered=64  cost=225  writes=15  asked=0  witnessed=0  received=0  answered=0  from_testimony=0
+braid_recall=2  person=0  nouns=8  forms=4  offered=64  cost=224  writes=15  asked=0  witnessed=0  received=0  answered=0  from_testimony=0
+braid_hand_event=0  before=78  actual=201  unobstructed=177  shortened=201  prediction=177  predicted_mask=15  strokes=3
+speaker> teal
+braid_recall=4  person=0  nouns=8  forms=4  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0
+speaker> plum
+braid_recall=4  person=0  nouns=8  forms=4  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0
+speaker> amber
+braid_recall=4  person=0  nouns=8  forms=4  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0
+speaker> plum
+braid_recall=4  person=0  nouns=8  forms=4  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0

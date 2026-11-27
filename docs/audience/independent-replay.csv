@@ -1,0 +1,21 @@
+trace,kind,encounters,caught_before,caught_after,words_after,fresh,heat,offers,edits,public_choices,samples,initiated,moved,declined,blocked
+all-viewing-histories.tsv.gz,paired encounters,1024,1245,1623,1509,485,970,,,,,,,,
+calibrated-guide.tsv.gz,paired encounters,1024,1371,2048,2048,1024,2048,,,,,,,,
+exchanged-listener.tsv.gz,paired encounters,1024,1371,1371,1371,0,2048,,,,,,,,
+fixed-coastal.tsv.gz,paired encounters,512,675,496,496,512,1024,,,,,,,,
+fixed-hearing.tsv.gz,acoustic contacts,,,,,,,48,0,,,,,,
+juvenile-gestures.tsv.gz,paired encounters,146,192,267,267,111,146,,,,,,,,
+learned-coastal.tsv.gz,paired encounters,512,675,1024,1024,512,1024,,,,,,,,
+paired-hearing.tsv.gz,acoustic contacts,,,,,,,48,56,,,,,,
+rearing-tracers.tsv.gz,watershed,,,,,,,,,3599,4096,3440,2992,656,0
+scarce-exchanged.tsv.gz,paired encounters,1024,1271,1271,1024,0,1024,,,,,,,,
+scarce-food.tsv.gz,paired encounters,1024,1271,1657,1536,512,1024,,,,,,,,
+shifted-coastal.tsv.gz,paired encounters,512,675,675,675,512,1024,,,,,,,,
+shifted-hearing.tsv.gz,acoustic contacts,,,,,,,48,64,,,,,,
+substituted-voice-a.tsv.gz,paired encounters,1024,1272,1078,1078,1024,2048,,,,,,,,
+substituted-voice-b.tsv.gz,paired encounters,1024,1272,1077,1077,474,2042,,,,,,,,
+two-voices-a.tsv.gz,paired encounters,1024,1272,2048,2048,1024,2048,,,,,,,,
+two-voices-b.tsv.gz,paired encounters,1024,1272,1612,1612,474,2042,,,,,,,,
+unobserved-pupil.tsv.gz,paired encounters,1024,1371,1371,1371,0,2048,,,,,,,,
+wild-tracers.tsv.gz,watershed,,,,,,,,,261,558,199,165,359,0
+latest-wild-tracers.tsv.gz,watershed,,,,,,,,,137,278,92,70,186,0

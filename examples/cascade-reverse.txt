@@ -1,0 +1,9 @@
+/cascade 796669 4 4 bright
+/cascade-watch 16
+/cascade-load amber
+cove rill
+where will amber go?
+/cascade-pour 32103
+where did it go?
+where did amber start?
+/quit

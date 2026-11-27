@@ -1,0 +1,10 @@
+regulatory_transplant=865564  tick=387736  band=0  old_first=2121493888  old_second=1901630094  old_law=11  old_hand=4  first=655554888  second=3570513167  law=11  ports=3  nursery_seed=91513  generations=96  ancestor=217330  swallowed=2361  offered=3072
+regulatory_release=387736  placed=512  requested=512  calibrated=1  seed=72901
+regulatory_carriers=387736  start=387736  living=373236  exact=512  strict_birth=1  born_since=0  both_ports=512  one_bit_away=0  first=655554888  second=3570513167
+regulatory_carriers=387768  start=387736  living=351518  exact=461  strict_birth=1  born_since=104  both_ports=461  one_bit_away=4  first=655554888  second=3570513167
+regulatory_carriers=387800  start=387736  living=362204  exact=462  strict_birth=1  born_since=191  both_ports=462  one_bit_away=6  first=655554888  second=3570513167
+regulatory_carriers=387832  start=387736  living=367330  exact=462  strict_birth=1  born_since=245  both_ports=461  one_bit_away=6  first=655554888  second=3570513167
+flood_seconds=4.13487  site_ticks=100663296  Msite_ticks_per_s=24.3449  simulation_seconds=1.74869  simulation_Msite_ticks_per_s=57.5648
+regulatory_field=387832  feedback=1  contacts=1022374  attempted=87239  matched=54912  proposed=3329301  admitted=853461  releases=8318991  soma_changes=16793366  counter_bytes=114688
+field_portrait=858336  tick=387832  born=387808  generation=3208  cells=64  modules=3  body_plan=7584128  legs=7584128  eyes=71936  pores=3389696
+regulatory_survey=387832  living=367330  observing=342341  born_after=387736  carrier_only=1  eligible=213  enrolled=213  dialects=12  qualified_residents=207  best_slot=858336  best_twice=12  best_post=12  best_points=192  seed=72901  cuda_ms=4.51482

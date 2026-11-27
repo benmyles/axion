@@ -1,0 +1,39 @@
+/braid 137
+/braid-station speaker 0 0123
+/braid-feed speaker 300
+/braid-practice speaker 16
+/braid-teach speaker 12 3991 forward reed spin tuck turn
+/braid-gloss speaker 8 913 north east south west amber jade plum teal
+/braid-pattern speaker before explicit dye 48 30011 where did * start
+/braid-pattern speaker before explicit port 48 31008 what was in *
+/braid-pattern speaker actual explicit dye 48 32005 where is *
+/braid-pattern speaker actual explicit port 48 33002 what is in *
+/braid-pattern speaker plan explicit dye 48 33999 where should * be
+/braid-pattern speaker plan explicit port 48 34996 what did you expect in *
+/braid-pattern speaker short explicit dye 48 35993 where would * be without the last pull
+/braid-pattern speaker short explicit port 48 36990 what would be in * without that pull
+/braid-pattern speaker actual topic either 48 37987 and what about it now
+/braid-pattern speaker actual reply either 48 38984 and there now
+/braid-station partner 2 0123
+/braid-feed partner 300
+/braid-practice partner 16
+/braid-teach partner 12 10863 forward loop lift dip roll
+/braid-gloss partner 8 914 north east south west amber jade plum teal
+/braid-pattern partner before explicit dye 48 43338 where did * start
+/braid-pattern partner before explicit port 48 44335 what was in *
+/braid-pattern partner actual explicit dye 48 45332 where is *
+/braid-pattern partner actual explicit port 48 46329 what is in *
+/braid-pattern partner plan explicit dye 48 47326 where should * be
+/braid-pattern partner plan explicit port 48 48323 what did you expect in *
+/braid-pattern partner short explicit dye 48 49320 where would * be without the last pull
+/braid-pattern partner short explicit port 48 50317 what would be in * without that pull
+/braid-pattern partner actual topic either 48 51314 and what about it now
+/braid-pattern partner actual reply either 48 52311 and there now
+/braid-shutters speaker 13
+/braid-shutters partner 3
+/braid-station speaker 0 0123 0
+reed spin tuck
+where did amber start?
+and there now?
+where is amber?
+/quit

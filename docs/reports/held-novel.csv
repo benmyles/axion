@@ -1,0 +1,1153 @@
+seed,dialect,wire,trial,cue,length,current,past,target,spoken,receiver,earlier,exact,decoded
+162337,novel,open,0,vinta,7,water west north,food north east,kele kele daru tora mepo gavi bovi,kele kele daru tora mepo gavi bovi,water west north,food north east,1,1
+162337,novel,open,0,ravo,5,water west north,food north east,bovi daru zuna kele fira,bovi daru zuna kele fira,water west north,(uncertain),1,1
+162337,novel,open,1,vinta,7,food east south,water north east,pemi kele gavi bovi mepo gavi tora,pemi kele gavi bovi mepo gavi tora,food east south,water north east,1,1
+162337,novel,open,1,ravo,7,food east south,water north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,food east south,(uncertain),1,1
+162337,novel,open,2,vinta,7,food west north,food south west,kele pemi daru tora mepo daru tora,kele pemi daru tora mepo daru tora,food west north,food south west,1,1
+162337,novel,open,2,ravo,7,food west north,food south west,tora daru zuna kele fira rika lavo,tora daru zuna kele fira rika lavo,food west north,(uncertain),1,1
+162337,novel,open,3,vinta,7,food north east,water east south,gavi gavi kele bovi mepo pemi tora,gavi gavi kele bovi mepo pemi tora,food north east,water east south,1,1
+162337,novel,open,3,ravo,7,food north east,water east south,tora kele zuna gavi fira rika lavo,tora kele zuna gavi fira rika lavo,food north east,(uncertain),1,1
+162337,novel,open,4,vinta,7,water south west,food east south,daru gavi pemi tora mepo pemi bovi,daru gavi pemi tora mepo pemi bovi,water south west,food east south,1,1
+162337,novel,open,4,ravo,5,water south west,food east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,water south west,(uncertain),1,1
+162337,novel,open,5,vinta,7,water west north,food south west,kele pemi daru tora mepo daru bovi,kele pemi daru tora mepo daru bovi,water west north,food south west,1,1
+162337,novel,open,5,ravo,5,water west north,food south west,bovi daru zuna kele fira,bovi daru zuna kele fira,water west north,(uncertain),1,1
+162337,novel,open,6,vinta,7,food west north,water north east,kele kele daru bovi mepo gavi tora,kele kele daru bovi mepo gavi tora,food west north,water north east,1,1
+162337,novel,open,6,ravo,7,food west north,water north east,tora daru zuna kele fira rika lavo,tora daru zuna kele fira rika lavo,food west north,(uncertain),1,1
+162337,novel,open,7,vinta,7,food east south,food north east,pemi kele gavi tora mepo gavi tora,pemi kele gavi tora mepo gavi tora,food east south,food north east,1,1
+162337,novel,open,7,ravo,7,food east south,food north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,food east south,(uncertain),1,1
+162337,novel,open,8,vinta,7,water south west,water east south,daru gavi pemi bovi mepo pemi bovi,daru gavi pemi bovi mepo pemi bovi,water south west,water east south,1,1
+162337,novel,open,8,ravo,5,water south west,water east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,water south west,(uncertain),1,1
+162337,novel,open,9,vinta,7,water north east,water west north,gavi daru kele bovi mepo kele bovi,gavi daru kele bovi mepo kele bovi,water north east,water west north,1,1
+162337,novel,open,9,ravo,5,water north east,water west north,bovi kele zuna gavi fira,bovi kele zuna gavi fira,water north east,(uncertain),1,1
+162337,novel,open,10,vinta,7,water south west,water east south,daru gavi pemi bovi mepo pemi bovi,daru gavi pemi bovi mepo pemi bovi,water south west,water east south,1,1
+162337,novel,open,10,ravo,5,water south west,water east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,water south west,(uncertain),1,1
+162337,novel,open,11,vinta,7,food west north,food south west,kele pemi daru tora mepo daru tora,kele pemi daru tora mepo daru tora,food west north,food south west,1,1
+162337,novel,open,11,ravo,7,food west north,food south west,tora daru zuna kele fira rika lavo,tora daru zuna kele fira rika lavo,food west north,(uncertain),1,1
+162337,novel,open,12,vinta,7,food east south,food north east,pemi kele gavi tora mepo gavi tora,pemi kele gavi tora mepo gavi tora,food east south,food north east,1,1
+162337,novel,open,12,ravo,7,food east south,food north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,food east south,(uncertain),1,1
+162337,novel,open,13,vinta,7,water west north,food south west,kele pemi daru tora mepo daru bovi,kele pemi daru tora mepo daru bovi,water west north,food south west,1,1
+162337,novel,open,13,ravo,5,water west north,food south west,bovi daru zuna kele fira,bovi daru zuna kele fira,water west north,(uncertain),1,1
+162337,novel,open,14,vinta,7,water east south,water north east,pemi kele gavi bovi mepo gavi bovi,pemi kele gavi bovi mepo gavi bovi,water east south,water north east,1,1
+162337,novel,open,14,ravo,5,water east south,water north east,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,water east south,(uncertain),1,1
+162337,novel,open,15,vinta,7,water south west,food west north,daru daru pemi tora mepo kele bovi,daru daru pemi tora mepo kele bovi,water south west,food west north,1,1
+162337,novel,open,15,ravo,5,water south west,food west north,bovi pemi zuna daru fira,bovi pemi zuna daru fira,water south west,(uncertain),1,1
+162337,novel,open,16,vinta,7,food east south,food north east,pemi kele gavi tora mepo gavi tora,pemi kele gavi tora mepo gavi tora,food east south,food north east,1,1
+162337,novel,open,16,ravo,7,food east south,food north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,food east south,(uncertain),1,1
+162337,novel,open,17,vinta,7,water west north,food south west,kele pemi daru tora mepo daru bovi,kele pemi daru tora mepo daru bovi,water west north,food south west,1,1
+162337,novel,open,17,ravo,5,water west north,food south west,bovi daru zuna kele fira,bovi daru zuna kele fira,water west north,(uncertain),1,1
+162337,novel,open,18,vinta,7,water east south,water north east,pemi kele gavi bovi mepo gavi bovi,pemi kele gavi bovi mepo gavi bovi,water east south,water north east,1,1
+162337,novel,open,18,ravo,5,water east south,water north east,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,water east south,(uncertain),1,1
+162337,novel,open,19,vinta,7,water south west,food west north,daru daru pemi tora mepo kele bovi,daru daru pemi tora mepo kele bovi,water south west,food west north,1,1
+162337,novel,open,19,ravo,5,water south west,food west north,bovi pemi zuna daru fira,bovi pemi zuna daru fira,water south west,(uncertain),1,1
+162337,novel,open,20,vinta,7,food north east,water west north,gavi daru kele bovi mepo kele tora,gavi daru kele bovi mepo kele tora,food north east,water west north,1,1
+162337,novel,open,20,ravo,7,food north east,water west north,tora kele zuna gavi fira rika lavo,tora kele zuna gavi fira rika lavo,food north east,(uncertain),1,1
+162337,novel,open,21,vinta,7,food south west,food east south,daru gavi pemi tora mepo pemi tora,daru gavi pemi tora mepo pemi tora,food south west,food east south,1,1
+162337,novel,open,21,ravo,7,food south west,food east south,tora pemi zuna daru fira rika lavo,tora pemi zuna daru fira rika lavo,food south west,(uncertain),1,1
+162337,novel,open,22,vinta,7,water north east,food west north,gavi daru kele tora mepo kele bovi,gavi daru kele tora mepo kele bovi,water north east,food west north,1,1
+162337,novel,open,22,ravo,5,water north east,food west north,bovi kele zuna gavi fira,bovi kele zuna gavi fira,water north east,(uncertain),1,1
+162337,novel,open,23,vinta,7,water south west,water east south,daru gavi pemi bovi mepo pemi bovi,daru gavi pemi bovi mepo pemi bovi,water south west,water east south,1,1
+162337,novel,open,23,ravo,5,water south west,water east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,water south west,(uncertain),1,1
+162337,novel,muted,0,vinta,7,water west north,food north east,kele kele daru tora mepo gavi bovi,kele kele daru tora mepo gavi bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,0,ravo,5,water west north,food north east,bovi daru zuna kele fira,bovi daru zuna kele fira,(uncertain),(uncertain),1,0
+162337,novel,muted,1,vinta,7,food east south,water north east,pemi kele gavi bovi mepo gavi tora,pemi kele gavi bovi mepo gavi tora,(uncertain),(uncertain),1,0
+162337,novel,muted,1,ravo,7,food east south,water north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,muted,2,vinta,7,food west north,food south west,kele pemi daru tora mepo daru tora,kele pemi daru tora mepo daru tora,(uncertain),(uncertain),1,0
+162337,novel,muted,2,ravo,7,food west north,food south west,tora daru zuna kele fira rika lavo,tora daru zuna kele fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,muted,3,vinta,7,food north east,water east south,gavi gavi kele bovi mepo pemi tora,gavi gavi kele bovi mepo pemi tora,(uncertain),(uncertain),1,0
+162337,novel,muted,3,ravo,7,food north east,water east south,tora kele zuna gavi fira rika lavo,tora kele zuna gavi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,muted,4,vinta,7,water south west,food east south,daru gavi pemi tora mepo pemi bovi,daru gavi pemi tora mepo pemi bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,4,ravo,5,water south west,food east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,muted,5,vinta,7,water west north,food south west,kele pemi daru tora mepo daru bovi,kele pemi daru tora mepo daru bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,5,ravo,5,water west north,food south west,bovi daru zuna kele fira,bovi daru zuna kele fira,(uncertain),(uncertain),1,0
+162337,novel,muted,6,vinta,7,food west north,water north east,kele kele daru bovi mepo gavi tora,kele kele daru bovi mepo gavi tora,(uncertain),(uncertain),1,0
+162337,novel,muted,6,ravo,7,food west north,water north east,tora daru zuna kele fira rika lavo,tora daru zuna kele fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,muted,7,vinta,7,food east south,food north east,pemi kele gavi tora mepo gavi tora,pemi kele gavi tora mepo gavi tora,(uncertain),(uncertain),1,0
+162337,novel,muted,7,ravo,7,food east south,food north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,muted,8,vinta,7,water south west,water east south,daru gavi pemi bovi mepo pemi bovi,daru gavi pemi bovi mepo pemi bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,8,ravo,5,water south west,water east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,muted,9,vinta,7,water north east,water west north,gavi daru kele bovi mepo kele bovi,gavi daru kele bovi mepo kele bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,9,ravo,5,water north east,water west north,bovi kele zuna gavi fira,bovi kele zuna gavi fira,(uncertain),(uncertain),1,0
+162337,novel,muted,10,vinta,7,water south west,water east south,daru gavi pemi bovi mepo pemi bovi,daru gavi pemi bovi mepo pemi bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,10,ravo,5,water south west,water east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,muted,11,vinta,7,food west north,food south west,kele pemi daru tora mepo daru tora,kele pemi daru tora mepo daru tora,(uncertain),(uncertain),1,0
+162337,novel,muted,11,ravo,7,food west north,food south west,tora daru zuna kele fira rika lavo,tora daru zuna kele fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,muted,12,vinta,7,food east south,food north east,pemi kele gavi tora mepo gavi tora,pemi kele gavi tora mepo gavi tora,(uncertain),(uncertain),1,0
+162337,novel,muted,12,ravo,7,food east south,food north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,muted,13,vinta,7,water west north,food south west,kele pemi daru tora mepo daru bovi,kele pemi daru tora mepo daru bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,13,ravo,5,water west north,food south west,bovi daru zuna kele fira,bovi daru zuna kele fira,(uncertain),(uncertain),1,0
+162337,novel,muted,14,vinta,7,water east south,water north east,pemi kele gavi bovi mepo gavi bovi,pemi kele gavi bovi mepo gavi bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,14,ravo,5,water east south,water north east,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,(uncertain),(uncertain),1,0
+162337,novel,muted,15,vinta,7,water south west,food west north,daru daru pemi tora mepo kele bovi,daru daru pemi tora mepo kele bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,15,ravo,5,water south west,food west north,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,muted,16,vinta,7,food east south,food north east,pemi kele gavi tora mepo gavi tora,pemi kele gavi tora mepo gavi tora,(uncertain),(uncertain),1,0
+162337,novel,muted,16,ravo,7,food east south,food north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,muted,17,vinta,7,water west north,food south west,kele pemi daru tora mepo daru bovi,kele pemi daru tora mepo daru bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,17,ravo,5,water west north,food south west,bovi daru zuna kele fira,bovi daru zuna kele fira,(uncertain),(uncertain),1,0
+162337,novel,muted,18,vinta,7,water east south,water north east,pemi kele gavi bovi mepo gavi bovi,pemi kele gavi bovi mepo gavi bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,18,ravo,5,water east south,water north east,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,(uncertain),(uncertain),1,0
+162337,novel,muted,19,vinta,7,water south west,food west north,daru daru pemi tora mepo kele bovi,daru daru pemi tora mepo kele bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,19,ravo,5,water south west,food west north,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,muted,20,vinta,7,food north east,water west north,gavi daru kele bovi mepo kele tora,gavi daru kele bovi mepo kele tora,(uncertain),(uncertain),1,0
+162337,novel,muted,20,ravo,7,food north east,water west north,tora kele zuna gavi fira rika lavo,tora kele zuna gavi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,muted,21,vinta,7,food south west,food east south,daru gavi pemi tora mepo pemi tora,daru gavi pemi tora mepo pemi tora,(uncertain),(uncertain),1,0
+162337,novel,muted,21,ravo,7,food south west,food east south,tora pemi zuna daru fira rika lavo,tora pemi zuna daru fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,muted,22,vinta,7,water north east,food west north,gavi daru kele tora mepo kele bovi,gavi daru kele tora mepo kele bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,22,ravo,5,water north east,food west north,bovi kele zuna gavi fira,bovi kele zuna gavi fira,(uncertain),(uncertain),1,0
+162337,novel,muted,23,vinta,7,water south west,water east south,daru gavi pemi bovi mepo pemi bovi,daru gavi pemi bovi mepo pemi bovi,(uncertain),(uncertain),1,0
+162337,novel,muted,23,ravo,5,water south west,water east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,0,vinta,7,water west north,food north east,kele kele daru tora mepo gavi bovi,kele kele daru tora mepo gavi bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,0,ravo,5,water west north,food north east,bovi daru zuna kele fira,bovi daru zuna kele fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,1,vinta,7,food east south,water north east,pemi kele gavi bovi mepo gavi tora,pemi kele gavi bovi mepo gavi tora,(uncertain),(uncertain),1,0
+162337,novel,reversed,1,ravo,7,food east south,water north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,reversed,2,vinta,7,food west north,food south west,kele pemi daru tora mepo daru tora,kele pemi daru tora mepo daru tora,(uncertain),(uncertain),1,0
+162337,novel,reversed,2,ravo,7,food west north,food south west,tora daru zuna kele fira rika lavo,tora daru zuna kele fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,reversed,3,vinta,7,food north east,water east south,gavi gavi kele bovi mepo pemi tora,gavi gavi kele bovi mepo pemi tora,(uncertain),(uncertain),1,0
+162337,novel,reversed,3,ravo,7,food north east,water east south,tora kele zuna gavi fira rika lavo,tora kele zuna gavi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,reversed,4,vinta,7,water south west,food east south,daru gavi pemi tora mepo pemi bovi,daru gavi pemi tora mepo pemi bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,4,ravo,5,water south west,food east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,5,vinta,7,water west north,food south west,kele pemi daru tora mepo daru bovi,kele pemi daru tora mepo daru bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,5,ravo,5,water west north,food south west,bovi daru zuna kele fira,bovi daru zuna kele fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,6,vinta,7,food west north,water north east,kele kele daru bovi mepo gavi tora,kele kele daru bovi mepo gavi tora,(uncertain),(uncertain),1,0
+162337,novel,reversed,6,ravo,7,food west north,water north east,tora daru zuna kele fira rika lavo,tora daru zuna kele fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,reversed,7,vinta,7,food east south,food north east,pemi kele gavi tora mepo gavi tora,pemi kele gavi tora mepo gavi tora,(uncertain),(uncertain),1,0
+162337,novel,reversed,7,ravo,7,food east south,food north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,reversed,8,vinta,7,water south west,water east south,daru gavi pemi bovi mepo pemi bovi,daru gavi pemi bovi mepo pemi bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,8,ravo,5,water south west,water east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,9,vinta,7,water north east,water west north,gavi daru kele bovi mepo kele bovi,gavi daru kele bovi mepo kele bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,9,ravo,5,water north east,water west north,bovi kele zuna gavi fira,bovi kele zuna gavi fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,10,vinta,7,water south west,water east south,daru gavi pemi bovi mepo pemi bovi,daru gavi pemi bovi mepo pemi bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,10,ravo,5,water south west,water east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,11,vinta,7,food west north,food south west,kele pemi daru tora mepo daru tora,kele pemi daru tora mepo daru tora,(uncertain),(uncertain),1,0
+162337,novel,reversed,11,ravo,7,food west north,food south west,tora daru zuna kele fira rika lavo,tora daru zuna kele fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,reversed,12,vinta,7,food east south,food north east,pemi kele gavi tora mepo gavi tora,pemi kele gavi tora mepo gavi tora,(uncertain),(uncertain),1,0
+162337,novel,reversed,12,ravo,7,food east south,food north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,reversed,13,vinta,7,water west north,food south west,kele pemi daru tora mepo daru bovi,kele pemi daru tora mepo daru bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,13,ravo,5,water west north,food south west,bovi daru zuna kele fira,bovi daru zuna kele fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,14,vinta,7,water east south,water north east,pemi kele gavi bovi mepo gavi bovi,pemi kele gavi bovi mepo gavi bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,14,ravo,5,water east south,water north east,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,15,vinta,7,water south west,food west north,daru daru pemi tora mepo kele bovi,daru daru pemi tora mepo kele bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,15,ravo,5,water south west,food west north,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,16,vinta,7,food east south,food north east,pemi kele gavi tora mepo gavi tora,pemi kele gavi tora mepo gavi tora,(uncertain),(uncertain),1,0
+162337,novel,reversed,16,ravo,7,food east south,food north east,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,reversed,17,vinta,7,water west north,food south west,kele pemi daru tora mepo daru bovi,kele pemi daru tora mepo daru bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,17,ravo,5,water west north,food south west,bovi daru zuna kele fira,bovi daru zuna kele fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,18,vinta,7,water east south,water north east,pemi kele gavi bovi mepo gavi bovi,pemi kele gavi bovi mepo gavi bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,18,ravo,5,water east south,water north east,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,19,vinta,7,water south west,food west north,daru daru pemi tora mepo kele bovi,daru daru pemi tora mepo kele bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,19,ravo,5,water south west,food west north,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,20,vinta,7,food north east,water west north,gavi daru kele bovi mepo kele tora,gavi daru kele bovi mepo kele tora,(uncertain),(uncertain),1,0
+162337,novel,reversed,20,ravo,7,food north east,water west north,tora kele zuna gavi fira rika lavo,tora kele zuna gavi fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,reversed,21,vinta,7,food south west,food east south,daru gavi pemi tora mepo pemi tora,daru gavi pemi tora mepo pemi tora,(uncertain),(uncertain),1,0
+162337,novel,reversed,21,ravo,7,food south west,food east south,tora pemi zuna daru fira rika lavo,tora pemi zuna daru fira rika lavo,(uncertain),(uncertain),1,0
+162337,novel,reversed,22,vinta,7,water north east,food west north,gavi daru kele tora mepo kele bovi,gavi daru kele tora mepo kele bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,22,ravo,5,water north east,food west north,bovi kele zuna gavi fira,bovi kele zuna gavi fira,(uncertain),(uncertain),1,0
+162337,novel,reversed,23,vinta,7,water south west,water east south,daru gavi pemi bovi mepo pemi bovi,daru gavi pemi bovi mepo pemi bovi,(uncertain),(uncertain),1,0
+162337,novel,reversed,23,ravo,5,water south west,water east south,bovi pemi zuna daru fira,bovi pemi zuna daru fira,(uncertain),(uncertain),1,0
+349907,novel,open,0,vinta,7,water north west,food north west,lavo pemi rika samu pemi daru samu,lavo pemi rika samu pemi daru samu,water north west,food north west,1,1
+349907,novel,open,0,ravo,5,water north west,food north west,samu pemi lavo nalu tora,samu pemi lavo nalu tora,water north west,(uncertain),1,1
+349907,novel,open,1,vinta,7,food west south,water west south,rika mepo lavo pemi mepo daru pemi,rika mepo lavo pemi mepo daru pemi,food west south,water west south,1,1
+349907,novel,open,1,ravo,7,food west south,water west south,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,food west south,(uncertain),1,1
+349907,novel,open,2,vinta,7,food south east,water south east,rika gavi lavo mepo gavi daru mepo,rika gavi lavo mepo gavi daru mepo,food south east,water south east,1,1
+349907,novel,open,2,ravo,7,food south east,water south east,mepo gavi rika nalu tora kele jori,mepo gavi rika nalu tora kele jori,food south east,(uncertain),1,1
+349907,novel,open,3,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,food north west,food east north,1,1
+349907,novel,open,3,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,food north west,(uncertain),1,1
+349907,novel,open,4,vinta,7,food west south,water east north,rika mepo lavo gavi samu daru pemi,rika mepo lavo gavi samu daru pemi,food west south,water east north,1,1
+349907,novel,open,4,ravo,7,food west south,water east north,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,food west south,(uncertain),1,1
+349907,novel,open,5,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,water north west,food south east,1,1
+349907,novel,open,5,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,water north west,(uncertain),1,1
+349907,novel,open,6,vinta,7,food east north,water west south,rika samu lavo pemi mepo daru gavi,rika samu lavo pemi mepo daru gavi,food east north,water west south,1,1
+349907,novel,open,6,ravo,7,food east north,water west south,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,food east north,(uncertain),1,1
+349907,novel,open,7,vinta,7,food west south,food north west,rika mepo rika samu pemi daru pemi,rika mepo rika samu pemi daru pemi,food west south,food north west,1,1
+349907,novel,open,7,ravo,7,food west south,food north west,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,food west south,(uncertain),1,1
+349907,novel,open,8,vinta,7,food east north,food south east,rika samu rika mepo gavi daru gavi,rika samu rika mepo gavi daru gavi,food east north,food south east,1,1
+349907,novel,open,8,ravo,7,food east north,food south east,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,food east north,(uncertain),1,1
+349907,novel,open,9,vinta,7,food west south,food north west,rika mepo rika samu pemi daru pemi,rika mepo rika samu pemi daru pemi,food west south,food north west,1,1
+349907,novel,open,9,ravo,7,food west south,food north west,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,food west south,(uncertain),1,1
+349907,novel,open,10,vinta,7,food east north,food south east,rika samu rika mepo gavi daru gavi,rika samu rika mepo gavi daru gavi,food east north,food south east,1,1
+349907,novel,open,10,ravo,7,food east north,food south east,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,food east north,(uncertain),1,1
+349907,novel,open,11,vinta,7,food north west,water south east,rika pemi lavo mepo gavi daru samu,rika pemi lavo mepo gavi daru samu,food north west,water south east,1,1
+349907,novel,open,11,ravo,7,food north west,water south east,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,food north west,(uncertain),1,1
+349907,novel,open,12,vinta,7,food south east,food west south,rika gavi rika pemi mepo daru mepo,rika gavi rika pemi mepo daru mepo,food south east,food west south,1,1
+349907,novel,open,12,ravo,7,food south east,food west south,mepo gavi rika nalu tora kele jori,mepo gavi rika nalu tora kele jori,food south east,(uncertain),1,1
+349907,novel,open,13,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,food north west,food east north,1,1
+349907,novel,open,13,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,food north west,(uncertain),1,1
+349907,novel,open,14,vinta,7,food west south,water east north,rika mepo lavo gavi samu daru pemi,rika mepo lavo gavi samu daru pemi,food west south,water east north,1,1
+349907,novel,open,14,ravo,7,food west south,water east north,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,food west south,(uncertain),1,1
+349907,novel,open,15,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,water north west,food south east,1,1
+349907,novel,open,15,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,water north west,(uncertain),1,1
+349907,novel,open,16,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,food north west,food east north,1,1
+349907,novel,open,16,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,food north west,(uncertain),1,1
+349907,novel,open,17,vinta,7,water south east,water west south,lavo gavi lavo pemi mepo daru mepo,lavo gavi lavo pemi mepo daru mepo,water south east,water west south,1,1
+349907,novel,open,17,ravo,5,water south east,water west south,mepo gavi lavo nalu tora,mepo gavi lavo nalu tora,water south east,(uncertain),1,1
+349907,novel,open,18,vinta,7,water east north,food west south,lavo samu rika pemi mepo daru gavi,lavo samu rika pemi mepo daru gavi,water east north,food west south,1,1
+349907,novel,open,18,ravo,5,water east north,food west south,gavi samu lavo nalu tora,gavi samu lavo nalu tora,water east north,(uncertain),1,1
+349907,novel,open,19,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,water north west,food south east,1,1
+349907,novel,open,19,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,water north west,(uncertain),1,1
+349907,novel,open,20,vinta,7,water south east,water west south,lavo gavi lavo pemi mepo daru mepo,lavo gavi lavo pemi mepo daru mepo,water south east,water west south,1,1
+349907,novel,open,20,ravo,5,water south east,water west south,mepo gavi lavo nalu tora,mepo gavi lavo nalu tora,water south east,(uncertain),1,1
+349907,novel,open,21,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,food north west,food east north,1,1
+349907,novel,open,21,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,food north west,(uncertain),1,1
+349907,novel,open,22,vinta,7,food west south,water east north,rika mepo lavo gavi samu daru pemi,rika mepo lavo gavi samu daru pemi,food west south,water east north,1,1
+349907,novel,open,22,ravo,7,food west south,water east north,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,food west south,(uncertain),1,1
+349907,novel,open,23,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,water north west,food south east,1,1
+349907,novel,open,23,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,water north west,(uncertain),1,1
+349907,novel,muted,0,vinta,7,water north west,food north west,lavo pemi rika samu pemi daru samu,lavo pemi rika samu pemi daru samu,(uncertain),(uncertain),1,0
+349907,novel,muted,0,ravo,5,water north west,food north west,samu pemi lavo nalu tora,samu pemi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,muted,1,vinta,7,food west south,water west south,rika mepo lavo pemi mepo daru pemi,rika mepo lavo pemi mepo daru pemi,(uncertain),(uncertain),1,0
+349907,novel,muted,1,ravo,7,food west south,water west south,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,2,vinta,7,food south east,water south east,rika gavi lavo mepo gavi daru mepo,rika gavi lavo mepo gavi daru mepo,(uncertain),(uncertain),1,0
+349907,novel,muted,2,ravo,7,food south east,water south east,mepo gavi rika nalu tora kele jori,mepo gavi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,3,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,(uncertain),(uncertain),1,0
+349907,novel,muted,3,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,4,vinta,7,food west south,water east north,rika mepo lavo gavi samu daru pemi,rika mepo lavo gavi samu daru pemi,(uncertain),(uncertain),1,0
+349907,novel,muted,4,ravo,7,food west south,water east north,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,5,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,(uncertain),(uncertain),1,0
+349907,novel,muted,5,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,muted,6,vinta,7,food east north,water west south,rika samu lavo pemi mepo daru gavi,rika samu lavo pemi mepo daru gavi,(uncertain),(uncertain),1,0
+349907,novel,muted,6,ravo,7,food east north,water west south,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,7,vinta,7,food west south,food north west,rika mepo rika samu pemi daru pemi,rika mepo rika samu pemi daru pemi,(uncertain),(uncertain),1,0
+349907,novel,muted,7,ravo,7,food west south,food north west,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,8,vinta,7,food east north,food south east,rika samu rika mepo gavi daru gavi,rika samu rika mepo gavi daru gavi,(uncertain),(uncertain),1,0
+349907,novel,muted,8,ravo,7,food east north,food south east,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,9,vinta,7,food west south,food north west,rika mepo rika samu pemi daru pemi,rika mepo rika samu pemi daru pemi,(uncertain),(uncertain),1,0
+349907,novel,muted,9,ravo,7,food west south,food north west,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,10,vinta,7,food east north,food south east,rika samu rika mepo gavi daru gavi,rika samu rika mepo gavi daru gavi,(uncertain),(uncertain),1,0
+349907,novel,muted,10,ravo,7,food east north,food south east,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,11,vinta,7,food north west,water south east,rika pemi lavo mepo gavi daru samu,rika pemi lavo mepo gavi daru samu,(uncertain),(uncertain),1,0
+349907,novel,muted,11,ravo,7,food north west,water south east,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,12,vinta,7,food south east,food west south,rika gavi rika pemi mepo daru mepo,rika gavi rika pemi mepo daru mepo,(uncertain),(uncertain),1,0
+349907,novel,muted,12,ravo,7,food south east,food west south,mepo gavi rika nalu tora kele jori,mepo gavi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,13,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,(uncertain),(uncertain),1,0
+349907,novel,muted,13,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,14,vinta,7,food west south,water east north,rika mepo lavo gavi samu daru pemi,rika mepo lavo gavi samu daru pemi,(uncertain),(uncertain),1,0
+349907,novel,muted,14,ravo,7,food west south,water east north,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,15,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,(uncertain),(uncertain),1,0
+349907,novel,muted,15,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,muted,16,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,(uncertain),(uncertain),1,0
+349907,novel,muted,16,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,17,vinta,7,water south east,water west south,lavo gavi lavo pemi mepo daru mepo,lavo gavi lavo pemi mepo daru mepo,(uncertain),(uncertain),1,0
+349907,novel,muted,17,ravo,5,water south east,water west south,mepo gavi lavo nalu tora,mepo gavi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,muted,18,vinta,7,water east north,food west south,lavo samu rika pemi mepo daru gavi,lavo samu rika pemi mepo daru gavi,(uncertain),(uncertain),1,0
+349907,novel,muted,18,ravo,5,water east north,food west south,gavi samu lavo nalu tora,gavi samu lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,muted,19,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,(uncertain),(uncertain),1,0
+349907,novel,muted,19,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,muted,20,vinta,7,water south east,water west south,lavo gavi lavo pemi mepo daru mepo,lavo gavi lavo pemi mepo daru mepo,(uncertain),(uncertain),1,0
+349907,novel,muted,20,ravo,5,water south east,water west south,mepo gavi lavo nalu tora,mepo gavi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,muted,21,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,(uncertain),(uncertain),1,0
+349907,novel,muted,21,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,22,vinta,7,food west south,water east north,rika mepo lavo gavi samu daru pemi,rika mepo lavo gavi samu daru pemi,(uncertain),(uncertain),1,0
+349907,novel,muted,22,ravo,7,food west south,water east north,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,muted,23,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,(uncertain),(uncertain),1,0
+349907,novel,muted,23,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,reversed,0,vinta,7,water north west,food north west,lavo pemi rika samu pemi daru samu,lavo pemi rika samu pemi daru samu,(uncertain),(uncertain),1,0
+349907,novel,reversed,0,ravo,5,water north west,food north west,samu pemi lavo nalu tora,samu pemi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,reversed,1,vinta,7,food west south,water west south,rika mepo lavo pemi mepo daru pemi,rika mepo lavo pemi mepo daru pemi,(uncertain),(uncertain),1,0
+349907,novel,reversed,1,ravo,7,food west south,water west south,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,2,vinta,7,food south east,water south east,rika gavi lavo mepo gavi daru mepo,rika gavi lavo mepo gavi daru mepo,(uncertain),(uncertain),1,0
+349907,novel,reversed,2,ravo,7,food south east,water south east,mepo gavi rika nalu tora kele jori,mepo gavi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,3,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,(uncertain),(uncertain),1,0
+349907,novel,reversed,3,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,4,vinta,7,food west south,water east north,rika mepo lavo gavi samu daru pemi,rika mepo lavo gavi samu daru pemi,(uncertain),(uncertain),1,0
+349907,novel,reversed,4,ravo,7,food west south,water east north,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,5,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,(uncertain),(uncertain),1,0
+349907,novel,reversed,5,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,reversed,6,vinta,7,food east north,water west south,rika samu lavo pemi mepo daru gavi,rika samu lavo pemi mepo daru gavi,(uncertain),(uncertain),1,0
+349907,novel,reversed,6,ravo,7,food east north,water west south,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,7,vinta,7,food west south,food north west,rika mepo rika samu pemi daru pemi,rika mepo rika samu pemi daru pemi,(uncertain),(uncertain),1,0
+349907,novel,reversed,7,ravo,7,food west south,food north west,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,8,vinta,7,food east north,food south east,rika samu rika mepo gavi daru gavi,rika samu rika mepo gavi daru gavi,(uncertain),(uncertain),1,0
+349907,novel,reversed,8,ravo,7,food east north,food south east,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,9,vinta,7,food west south,food north west,rika mepo rika samu pemi daru pemi,rika mepo rika samu pemi daru pemi,(uncertain),(uncertain),1,0
+349907,novel,reversed,9,ravo,7,food west south,food north west,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,10,vinta,7,food east north,food south east,rika samu rika mepo gavi daru gavi,rika samu rika mepo gavi daru gavi,(uncertain),(uncertain),1,0
+349907,novel,reversed,10,ravo,7,food east north,food south east,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,11,vinta,7,food north west,water south east,rika pemi lavo mepo gavi daru samu,rika pemi lavo mepo gavi daru samu,(uncertain),(uncertain),1,0
+349907,novel,reversed,11,ravo,7,food north west,water south east,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,12,vinta,7,food south east,food west south,rika gavi rika pemi mepo daru mepo,rika gavi rika pemi mepo daru mepo,(uncertain),(uncertain),1,0
+349907,novel,reversed,12,ravo,7,food south east,food west south,mepo gavi rika nalu tora kele jori,mepo gavi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,13,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,(uncertain),(uncertain),1,0
+349907,novel,reversed,13,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,14,vinta,7,food west south,water east north,rika mepo lavo gavi samu daru pemi,rika mepo lavo gavi samu daru pemi,(uncertain),(uncertain),1,0
+349907,novel,reversed,14,ravo,7,food west south,water east north,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,15,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,(uncertain),(uncertain),1,0
+349907,novel,reversed,15,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,reversed,16,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,(uncertain),(uncertain),1,0
+349907,novel,reversed,16,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,17,vinta,7,water south east,water west south,lavo gavi lavo pemi mepo daru mepo,lavo gavi lavo pemi mepo daru mepo,(uncertain),(uncertain),1,0
+349907,novel,reversed,17,ravo,5,water south east,water west south,mepo gavi lavo nalu tora,mepo gavi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,reversed,18,vinta,7,water east north,food west south,lavo samu rika pemi mepo daru gavi,lavo samu rika pemi mepo daru gavi,(uncertain),(uncertain),1,0
+349907,novel,reversed,18,ravo,5,water east north,food west south,gavi samu lavo nalu tora,gavi samu lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,reversed,19,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,(uncertain),(uncertain),1,0
+349907,novel,reversed,19,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,reversed,20,vinta,7,water south east,water west south,lavo gavi lavo pemi mepo daru mepo,lavo gavi lavo pemi mepo daru mepo,(uncertain),(uncertain),1,0
+349907,novel,reversed,20,ravo,5,water south east,water west south,mepo gavi lavo nalu tora,mepo gavi lavo nalu tora,(uncertain),(uncertain),1,0
+349907,novel,reversed,21,vinta,7,food north west,food east north,rika pemi rika gavi samu daru samu,rika pemi rika gavi samu daru samu,(uncertain),(uncertain),1,0
+349907,novel,reversed,21,ravo,7,food north west,food east north,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,22,vinta,7,food west south,water east north,rika mepo lavo gavi samu daru pemi,rika mepo lavo gavi samu daru pemi,(uncertain),(uncertain),1,0
+349907,novel,reversed,22,ravo,7,food west south,water east north,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,(uncertain),(uncertain),1,0
+349907,novel,reversed,23,vinta,7,water north west,food south east,lavo pemi rika mepo gavi daru samu,lavo pemi rika mepo gavi daru samu,(uncertain),(uncertain),1,0
+349907,novel,reversed,23,ravo,5,water north west,food south east,samu pemi lavo nalu tora,samu pemi lavo nalu tora,(uncertain),(uncertain),1,0
+579053,novel,open,0,vinta,7,water south west,water east south,mepo jori vuno gavi tora mepo jori,mepo jori vuno gavi tora mepo jori,water south west,water east south,1,1
+579053,novel,open,0,ravo,5,water south west,water east south,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,water south west,(uncertain),1,1
+579053,novel,open,1,vinta,7,water north east,water west north,mepo tesu gavi vuno tora mepo tesu,mepo tesu gavi vuno tora mepo tesu,water north east,water west north,1,1
+579053,novel,open,1,ravo,5,water north east,water west north,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,water north east,(uncertain),1,1
+579053,novel,open,2,vinta,7,food west north,food south west,lavo vuno tesu jori tora lavo vuno,lavo vuno tesu jori tora lavo vuno,food west north,food south west,1,1
+579053,novel,open,2,ravo,7,food west north,food south west,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,food west north,(uncertain),1,1
+579053,novel,open,3,vinta,7,water south west,water east south,mepo jori vuno gavi tora mepo jori,mepo jori vuno gavi tora mepo jori,water south west,water east south,1,1
+579053,novel,open,3,ravo,5,water south west,water east south,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,water south west,(uncertain),1,1
+579053,novel,open,4,vinta,7,water west north,food north east,lavo vuno tesu tesu tora mepo gavi,lavo vuno tesu tesu tora mepo gavi,water west north,food north east,1,1
+579053,novel,open,4,ravo,5,water west north,food north east,vuno tesu bovi mepo nalu,vuno tesu bovi mepo nalu,water west north,(uncertain),1,1
+579053,novel,open,5,vinta,7,water north east,food east south,lavo tesu gavi gavi tora mepo jori,lavo tesu gavi gavi tora mepo jori,water north east,food east south,1,1
+579053,novel,open,5,ravo,5,water north east,food east south,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,water north east,(uncertain),1,1
+579053,novel,open,6,vinta,7,water east south,food south west,lavo gavi jori jori tora mepo vuno,lavo gavi jori jori tora mepo vuno,water east south,food south west,1,1
+579053,novel,open,6,ravo,5,water east south,food south west,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,water east south,(uncertain),1,1
+579053,novel,open,7,vinta,7,water south west,food west north,lavo jori vuno vuno tora mepo tesu,lavo jori vuno vuno tora mepo tesu,water south west,food west north,1,1
+579053,novel,open,7,ravo,5,water south west,food west north,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,water south west,(uncertain),1,1
+579053,novel,open,8,vinta,7,food north east,water west north,mepo tesu gavi vuno tora lavo tesu,mepo tesu gavi vuno tora lavo tesu,food north east,water west north,1,1
+579053,novel,open,8,ravo,7,food north east,water west north,tesu gavi bovi lavo nalu daru samu,tesu gavi bovi lavo nalu daru samu,food north east,(uncertain),1,1
+579053,novel,open,9,vinta,7,water east south,water north east,mepo gavi jori tesu tora mepo gavi,mepo gavi jori tesu tora mepo gavi,water east south,water north east,1,1
+579053,novel,open,9,ravo,5,water east south,water north east,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,water east south,(uncertain),1,1
+579053,novel,open,10,vinta,7,food south west,food east south,lavo jori vuno gavi tora lavo jori,lavo jori vuno gavi tora lavo jori,food south west,food east south,1,1
+579053,novel,open,10,ravo,7,food south west,food east south,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,food south west,(uncertain),1,1
+579053,novel,open,11,vinta,7,food west north,water south west,mepo vuno tesu jori tora lavo vuno,mepo vuno tesu jori tora lavo vuno,food west north,water south west,1,1
+579053,novel,open,11,ravo,7,food west north,water south west,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,food west north,(uncertain),1,1
+579053,novel,open,12,vinta,7,food east south,food north east,lavo gavi jori tesu tora lavo gavi,lavo gavi jori tesu tora lavo gavi,food east south,food north east,1,1
+579053,novel,open,12,ravo,7,food east south,food north east,gavi jori bovi lavo nalu daru samu,gavi jori bovi lavo nalu daru samu,food east south,(uncertain),1,1
+579053,novel,open,13,vinta,7,food south west,water west north,mepo jori vuno vuno tora lavo tesu,mepo jori vuno vuno tora lavo tesu,food south west,water west north,1,1
+579053,novel,open,13,ravo,7,food south west,water west north,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,food south west,(uncertain),1,1
+579053,novel,open,14,vinta,7,food west north,water north east,mepo vuno tesu tesu tora lavo gavi,mepo vuno tesu tesu tora lavo gavi,food west north,water north east,1,1
+579053,novel,open,14,ravo,7,food west north,water north east,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,food west north,(uncertain),1,1
+579053,novel,open,15,vinta,7,food east south,food north east,lavo gavi jori tesu tora lavo gavi,lavo gavi jori tesu tora lavo gavi,food east south,food north east,1,1
+579053,novel,open,15,ravo,7,food east south,food north east,gavi jori bovi lavo nalu daru samu,gavi jori bovi lavo nalu daru samu,food east south,(uncertain),1,1
+579053,novel,open,16,vinta,7,water east south,food south west,lavo gavi jori jori tora mepo vuno,lavo gavi jori jori tora mepo vuno,water east south,food south west,1,1
+579053,novel,open,16,ravo,5,water east south,food south west,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,water east south,(uncertain),1,1
+579053,novel,open,17,vinta,7,water south west,food west north,lavo jori vuno vuno tora mepo tesu,lavo jori vuno vuno tora mepo tesu,water south west,food west north,1,1
+579053,novel,open,17,ravo,5,water south west,food west north,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,water south west,(uncertain),1,1
+579053,novel,open,18,vinta,7,food north east,water west north,mepo tesu gavi vuno tora lavo tesu,mepo tesu gavi vuno tora lavo tesu,food north east,water west north,1,1
+579053,novel,open,18,ravo,7,food north east,water west north,tesu gavi bovi lavo nalu daru samu,tesu gavi bovi lavo nalu daru samu,food north east,(uncertain),1,1
+579053,novel,open,19,vinta,7,water east south,water north east,mepo gavi jori tesu tora mepo gavi,mepo gavi jori tesu tora mepo gavi,water east south,water north east,1,1
+579053,novel,open,19,ravo,5,water east south,water north east,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,water east south,(uncertain),1,1
+579053,novel,open,20,vinta,7,water west north,water south west,mepo vuno tesu jori tora mepo vuno,mepo vuno tesu jori tora mepo vuno,water west north,water south west,1,1
+579053,novel,open,20,ravo,5,water west north,water south west,vuno tesu bovi mepo nalu,vuno tesu bovi mepo nalu,water west north,(uncertain),1,1
+579053,novel,open,21,vinta,7,food south west,food east south,lavo jori vuno gavi tora lavo jori,lavo jori vuno gavi tora lavo jori,food south west,food east south,1,1
+579053,novel,open,21,ravo,7,food south west,food east south,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,food south west,(uncertain),1,1
+579053,novel,open,22,vinta,7,food north east,food west north,lavo tesu gavi vuno tora lavo tesu,lavo tesu gavi vuno tora lavo tesu,food north east,food west north,1,1
+579053,novel,open,22,ravo,7,food north east,food west north,tesu gavi bovi lavo nalu daru samu,tesu gavi bovi lavo nalu daru samu,food north east,(uncertain),1,1
+579053,novel,open,23,vinta,7,water north east,food east south,lavo tesu gavi gavi tora mepo jori,lavo tesu gavi gavi tora mepo jori,water north east,food east south,1,1
+579053,novel,open,23,ravo,5,water north east,food east south,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,water north east,(uncertain),1,1
+579053,novel,muted,0,vinta,7,water south west,water east south,mepo jori vuno gavi tora mepo jori,mepo jori vuno gavi tora mepo jori,(uncertain),(uncertain),1,0
+579053,novel,muted,0,ravo,5,water south west,water east south,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,1,vinta,7,water north east,water west north,mepo tesu gavi vuno tora mepo tesu,mepo tesu gavi vuno tora mepo tesu,(uncertain),(uncertain),1,0
+579053,novel,muted,1,ravo,5,water north east,water west north,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,2,vinta,7,food west north,food south west,lavo vuno tesu jori tora lavo vuno,lavo vuno tesu jori tora lavo vuno,(uncertain),(uncertain),1,0
+579053,novel,muted,2,ravo,7,food west north,food south west,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,3,vinta,7,water south west,water east south,mepo jori vuno gavi tora mepo jori,mepo jori vuno gavi tora mepo jori,(uncertain),(uncertain),1,0
+579053,novel,muted,3,ravo,5,water south west,water east south,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,4,vinta,7,water west north,food north east,lavo vuno tesu tesu tora mepo gavi,lavo vuno tesu tesu tora mepo gavi,(uncertain),(uncertain),1,0
+579053,novel,muted,4,ravo,5,water west north,food north east,vuno tesu bovi mepo nalu,vuno tesu bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,5,vinta,7,water north east,food east south,lavo tesu gavi gavi tora mepo jori,lavo tesu gavi gavi tora mepo jori,(uncertain),(uncertain),1,0
+579053,novel,muted,5,ravo,5,water north east,food east south,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,6,vinta,7,water east south,food south west,lavo gavi jori jori tora mepo vuno,lavo gavi jori jori tora mepo vuno,(uncertain),(uncertain),1,0
+579053,novel,muted,6,ravo,5,water east south,food south west,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,7,vinta,7,water south west,food west north,lavo jori vuno vuno tora mepo tesu,lavo jori vuno vuno tora mepo tesu,(uncertain),(uncertain),1,0
+579053,novel,muted,7,ravo,5,water south west,food west north,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,8,vinta,7,food north east,water west north,mepo tesu gavi vuno tora lavo tesu,mepo tesu gavi vuno tora lavo tesu,(uncertain),(uncertain),1,0
+579053,novel,muted,8,ravo,7,food north east,water west north,tesu gavi bovi lavo nalu daru samu,tesu gavi bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,9,vinta,7,water east south,water north east,mepo gavi jori tesu tora mepo gavi,mepo gavi jori tesu tora mepo gavi,(uncertain),(uncertain),1,0
+579053,novel,muted,9,ravo,5,water east south,water north east,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,10,vinta,7,food south west,food east south,lavo jori vuno gavi tora lavo jori,lavo jori vuno gavi tora lavo jori,(uncertain),(uncertain),1,0
+579053,novel,muted,10,ravo,7,food south west,food east south,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,11,vinta,7,food west north,water south west,mepo vuno tesu jori tora lavo vuno,mepo vuno tesu jori tora lavo vuno,(uncertain),(uncertain),1,0
+579053,novel,muted,11,ravo,7,food west north,water south west,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,12,vinta,7,food east south,food north east,lavo gavi jori tesu tora lavo gavi,lavo gavi jori tesu tora lavo gavi,(uncertain),(uncertain),1,0
+579053,novel,muted,12,ravo,7,food east south,food north east,gavi jori bovi lavo nalu daru samu,gavi jori bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,13,vinta,7,food south west,water west north,mepo jori vuno vuno tora lavo tesu,mepo jori vuno vuno tora lavo tesu,(uncertain),(uncertain),1,0
+579053,novel,muted,13,ravo,7,food south west,water west north,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,14,vinta,7,food west north,water north east,mepo vuno tesu tesu tora lavo gavi,mepo vuno tesu tesu tora lavo gavi,(uncertain),(uncertain),1,0
+579053,novel,muted,14,ravo,7,food west north,water north east,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,15,vinta,7,food east south,food north east,lavo gavi jori tesu tora lavo gavi,lavo gavi jori tesu tora lavo gavi,(uncertain),(uncertain),1,0
+579053,novel,muted,15,ravo,7,food east south,food north east,gavi jori bovi lavo nalu daru samu,gavi jori bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,16,vinta,7,water east south,food south west,lavo gavi jori jori tora mepo vuno,lavo gavi jori jori tora mepo vuno,(uncertain),(uncertain),1,0
+579053,novel,muted,16,ravo,5,water east south,food south west,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,17,vinta,7,water south west,food west north,lavo jori vuno vuno tora mepo tesu,lavo jori vuno vuno tora mepo tesu,(uncertain),(uncertain),1,0
+579053,novel,muted,17,ravo,5,water south west,food west north,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,18,vinta,7,food north east,water west north,mepo tesu gavi vuno tora lavo tesu,mepo tesu gavi vuno tora lavo tesu,(uncertain),(uncertain),1,0
+579053,novel,muted,18,ravo,7,food north east,water west north,tesu gavi bovi lavo nalu daru samu,tesu gavi bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,19,vinta,7,water east south,water north east,mepo gavi jori tesu tora mepo gavi,mepo gavi jori tesu tora mepo gavi,(uncertain),(uncertain),1,0
+579053,novel,muted,19,ravo,5,water east south,water north east,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,20,vinta,7,water west north,water south west,mepo vuno tesu jori tora mepo vuno,mepo vuno tesu jori tora mepo vuno,(uncertain),(uncertain),1,0
+579053,novel,muted,20,ravo,5,water west north,water south west,vuno tesu bovi mepo nalu,vuno tesu bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,muted,21,vinta,7,food south west,food east south,lavo jori vuno gavi tora lavo jori,lavo jori vuno gavi tora lavo jori,(uncertain),(uncertain),1,0
+579053,novel,muted,21,ravo,7,food south west,food east south,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,22,vinta,7,food north east,food west north,lavo tesu gavi vuno tora lavo tesu,lavo tesu gavi vuno tora lavo tesu,(uncertain),(uncertain),1,0
+579053,novel,muted,22,ravo,7,food north east,food west north,tesu gavi bovi lavo nalu daru samu,tesu gavi bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,muted,23,vinta,7,water north east,food east south,lavo tesu gavi gavi tora mepo jori,lavo tesu gavi gavi tora mepo jori,(uncertain),(uncertain),1,0
+579053,novel,muted,23,ravo,5,water north east,food east south,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,0,vinta,7,water south west,water east south,mepo jori vuno gavi tora mepo jori,mepo jori vuno gavi tora mepo jori,(uncertain),(uncertain),1,0
+579053,novel,reversed,0,ravo,5,water south west,water east south,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,1,vinta,7,water north east,water west north,mepo tesu gavi vuno tora mepo tesu,mepo tesu gavi vuno tora mepo tesu,(uncertain),(uncertain),1,0
+579053,novel,reversed,1,ravo,5,water north east,water west north,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,2,vinta,7,food west north,food south west,lavo vuno tesu jori tora lavo vuno,lavo vuno tesu jori tora lavo vuno,(uncertain),(uncertain),1,0
+579053,novel,reversed,2,ravo,7,food west north,food south west,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,3,vinta,7,water south west,water east south,mepo jori vuno gavi tora mepo jori,mepo jori vuno gavi tora mepo jori,(uncertain),(uncertain),1,0
+579053,novel,reversed,3,ravo,5,water south west,water east south,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,4,vinta,7,water west north,food north east,lavo vuno tesu tesu tora mepo gavi,lavo vuno tesu tesu tora mepo gavi,(uncertain),(uncertain),1,0
+579053,novel,reversed,4,ravo,5,water west north,food north east,vuno tesu bovi mepo nalu,vuno tesu bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,5,vinta,7,water north east,food east south,lavo tesu gavi gavi tora mepo jori,lavo tesu gavi gavi tora mepo jori,(uncertain),(uncertain),1,0
+579053,novel,reversed,5,ravo,5,water north east,food east south,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,6,vinta,7,water east south,food south west,lavo gavi jori jori tora mepo vuno,lavo gavi jori jori tora mepo vuno,(uncertain),(uncertain),1,0
+579053,novel,reversed,6,ravo,5,water east south,food south west,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,7,vinta,7,water south west,food west north,lavo jori vuno vuno tora mepo tesu,lavo jori vuno vuno tora mepo tesu,(uncertain),(uncertain),1,0
+579053,novel,reversed,7,ravo,5,water south west,food west north,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,8,vinta,7,food north east,water west north,mepo tesu gavi vuno tora lavo tesu,mepo tesu gavi vuno tora lavo tesu,(uncertain),(uncertain),1,0
+579053,novel,reversed,8,ravo,7,food north east,water west north,tesu gavi bovi lavo nalu daru samu,tesu gavi bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,9,vinta,7,water east south,water north east,mepo gavi jori tesu tora mepo gavi,mepo gavi jori tesu tora mepo gavi,(uncertain),(uncertain),1,0
+579053,novel,reversed,9,ravo,5,water east south,water north east,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,10,vinta,7,food south west,food east south,lavo jori vuno gavi tora lavo jori,lavo jori vuno gavi tora lavo jori,(uncertain),(uncertain),1,0
+579053,novel,reversed,10,ravo,7,food south west,food east south,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,11,vinta,7,food west north,water south west,mepo vuno tesu jori tora lavo vuno,mepo vuno tesu jori tora lavo vuno,(uncertain),(uncertain),1,0
+579053,novel,reversed,11,ravo,7,food west north,water south west,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,12,vinta,7,food east south,food north east,lavo gavi jori tesu tora lavo gavi,lavo gavi jori tesu tora lavo gavi,(uncertain),(uncertain),1,0
+579053,novel,reversed,12,ravo,7,food east south,food north east,gavi jori bovi lavo nalu daru samu,gavi jori bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,13,vinta,7,food south west,water west north,mepo jori vuno vuno tora lavo tesu,mepo jori vuno vuno tora lavo tesu,(uncertain),(uncertain),1,0
+579053,novel,reversed,13,ravo,7,food south west,water west north,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,14,vinta,7,food west north,water north east,mepo vuno tesu tesu tora lavo gavi,mepo vuno tesu tesu tora lavo gavi,(uncertain),(uncertain),1,0
+579053,novel,reversed,14,ravo,7,food west north,water north east,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,15,vinta,7,food east south,food north east,lavo gavi jori tesu tora lavo gavi,lavo gavi jori tesu tora lavo gavi,(uncertain),(uncertain),1,0
+579053,novel,reversed,15,ravo,7,food east south,food north east,gavi jori bovi lavo nalu daru samu,gavi jori bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,16,vinta,7,water east south,food south west,lavo gavi jori jori tora mepo vuno,lavo gavi jori jori tora mepo vuno,(uncertain),(uncertain),1,0
+579053,novel,reversed,16,ravo,5,water east south,food south west,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,17,vinta,7,water south west,food west north,lavo jori vuno vuno tora mepo tesu,lavo jori vuno vuno tora mepo tesu,(uncertain),(uncertain),1,0
+579053,novel,reversed,17,ravo,5,water south west,food west north,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,18,vinta,7,food north east,water west north,mepo tesu gavi vuno tora lavo tesu,mepo tesu gavi vuno tora lavo tesu,(uncertain),(uncertain),1,0
+579053,novel,reversed,18,ravo,7,food north east,water west north,tesu gavi bovi lavo nalu daru samu,tesu gavi bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,19,vinta,7,water east south,water north east,mepo gavi jori tesu tora mepo gavi,mepo gavi jori tesu tora mepo gavi,(uncertain),(uncertain),1,0
+579053,novel,reversed,19,ravo,5,water east south,water north east,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,20,vinta,7,water west north,water south west,mepo vuno tesu jori tora mepo vuno,mepo vuno tesu jori tora mepo vuno,(uncertain),(uncertain),1,0
+579053,novel,reversed,20,ravo,5,water west north,water south west,vuno tesu bovi mepo nalu,vuno tesu bovi mepo nalu,(uncertain),(uncertain),1,0
+579053,novel,reversed,21,vinta,7,food south west,food east south,lavo jori vuno gavi tora lavo jori,lavo jori vuno gavi tora lavo jori,(uncertain),(uncertain),1,0
+579053,novel,reversed,21,ravo,7,food south west,food east south,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,22,vinta,7,food north east,food west north,lavo tesu gavi vuno tora lavo tesu,lavo tesu gavi vuno tora lavo tesu,(uncertain),(uncertain),1,0
+579053,novel,reversed,22,ravo,7,food north east,food west north,tesu gavi bovi lavo nalu daru samu,tesu gavi bovi lavo nalu daru samu,(uncertain),(uncertain),1,0
+579053,novel,reversed,23,vinta,7,water north east,food east south,lavo tesu gavi gavi tora mepo jori,lavo tesu gavi gavi tora mepo jori,(uncertain),(uncertain),1,0
+579053,novel,reversed,23,ravo,5,water north east,food east south,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,(uncertain),(uncertain),1,0
+886909,novel,open,0,vinta,7,water east south,food south west,rika zuna rika tora vuno pemi bovi,rika zuna rika tora vuno pemi bovi,water east south,food south west,1,1
+886909,novel,open,0,ravo,5,water east south,food south west,zuna daru rika fira vuno,zuna daru rika fira vuno,water east south,(uncertain),1,1
+886909,novel,open,1,vinta,7,food north east,food west north,zuna kele tora kele pemi pemi bovi,zuna kele tora kele pemi pemi bovi,food north east,food west north,1,1
+886909,novel,open,1,ravo,7,food north east,food west north,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,food north east,(uncertain),1,1
+886909,novel,open,2,vinta,7,water west north,water south west,kele tora rika tora vuno vuno bovi,kele tora rika tora vuno vuno bovi,water west north,water south west,1,1
+886909,novel,open,2,ravo,5,water west north,water south west,tora daru kele fira vuno,tora daru kele fira vuno,water west north,(uncertain),1,1
+886909,novel,open,3,vinta,7,water north east,food east south,zuna kele zuna rika vuno pemi bovi,zuna kele zuna rika vuno pemi bovi,water north east,food east south,1,1
+886909,novel,open,3,ravo,5,water north east,food east south,kele daru zuna fira vuno,kele daru zuna fira vuno,water north east,(uncertain),1,1
+886909,novel,open,4,vinta,7,water east south,food south west,rika zuna rika tora vuno pemi bovi,rika zuna rika tora vuno pemi bovi,water east south,food south west,1,1
+886909,novel,open,4,ravo,5,water east south,food south west,zuna daru rika fira vuno,zuna daru rika fira vuno,water east south,(uncertain),1,1
+886909,novel,open,5,vinta,7,water south west,food west north,tora rika tora kele vuno pemi bovi,tora rika tora kele vuno pemi bovi,water south west,food west north,1,1
+886909,novel,open,5,ravo,5,water south west,food west north,rika daru tora fira vuno,rika daru tora fira vuno,water south west,(uncertain),1,1
+886909,novel,open,6,vinta,7,food east south,food north east,rika zuna kele zuna pemi pemi bovi,rika zuna kele zuna pemi pemi bovi,food east south,food north east,1,1
+886909,novel,open,6,ravo,7,food east south,food north east,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,food east south,(uncertain),1,1
+886909,novel,open,7,vinta,7,food west north,food south west,kele tora rika tora pemi pemi bovi,kele tora rika tora pemi pemi bovi,food west north,food south west,1,1
+886909,novel,open,7,ravo,7,food west north,food south west,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,food west north,(uncertain),1,1
+886909,novel,open,8,vinta,7,food north east,water west north,zuna kele tora kele pemi vuno bovi,zuna kele tora kele pemi vuno bovi,food north east,water west north,1,1
+886909,novel,open,8,ravo,7,food north east,water west north,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,food north east,(uncertain),1,1
+886909,novel,open,9,vinta,7,food east south,water north east,rika zuna kele zuna pemi vuno bovi,rika zuna kele zuna pemi vuno bovi,food east south,water north east,1,1
+886909,novel,open,9,ravo,7,food east south,water north east,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,food east south,(uncertain),1,1
+886909,novel,open,10,vinta,7,food west north,food south west,kele tora rika tora pemi pemi bovi,kele tora rika tora pemi pemi bovi,food west north,food south west,1,1
+886909,novel,open,10,ravo,7,food west north,food south west,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,food west north,(uncertain),1,1
+886909,novel,open,11,vinta,7,water south west,water east south,tora rika zuna rika vuno vuno bovi,tora rika zuna rika vuno vuno bovi,water south west,water east south,1,1
+886909,novel,open,11,ravo,5,water south west,water east south,rika daru tora fira vuno,rika daru tora fira vuno,water south west,(uncertain),1,1
+886909,novel,open,12,vinta,7,water north east,water west north,zuna kele tora kele vuno vuno bovi,zuna kele tora kele vuno vuno bovi,water north east,water west north,1,1
+886909,novel,open,12,ravo,5,water north east,water west north,kele daru zuna fira vuno,kele daru zuna fira vuno,water north east,(uncertain),1,1
+886909,novel,open,13,vinta,7,food east south,food north east,rika zuna kele zuna pemi pemi bovi,rika zuna kele zuna pemi pemi bovi,food east south,food north east,1,1
+886909,novel,open,13,ravo,7,food east south,food north east,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,food east south,(uncertain),1,1
+886909,novel,open,14,vinta,7,food south west,water east south,tora rika zuna rika pemi vuno bovi,tora rika zuna rika pemi vuno bovi,food south west,water east south,1,1
+886909,novel,open,14,ravo,7,food south west,water east south,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,food south west,(uncertain),1,1
+886909,novel,open,15,vinta,7,food west north,water south west,kele tora rika tora pemi vuno bovi,kele tora rika tora pemi vuno bovi,food west north,water south west,1,1
+886909,novel,open,15,ravo,7,food west north,water south west,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,food west north,(uncertain),1,1
+886909,novel,open,16,vinta,7,water north east,water west north,zuna kele tora kele vuno vuno bovi,zuna kele tora kele vuno vuno bovi,water north east,water west north,1,1
+886909,novel,open,16,ravo,5,water north east,water west north,kele daru zuna fira vuno,kele daru zuna fira vuno,water north east,(uncertain),1,1
+886909,novel,open,17,vinta,7,water east south,food north east,rika zuna kele zuna vuno pemi bovi,rika zuna kele zuna vuno pemi bovi,water east south,food north east,1,1
+886909,novel,open,17,ravo,5,water east south,food north east,zuna daru rika fira vuno,zuna daru rika fira vuno,water east south,(uncertain),1,1
+886909,novel,open,18,vinta,7,water west north,water south west,kele tora rika tora vuno vuno bovi,kele tora rika tora vuno vuno bovi,water west north,water south west,1,1
+886909,novel,open,18,ravo,5,water west north,water south west,tora daru kele fira vuno,tora daru kele fira vuno,water west north,(uncertain),1,1
+886909,novel,open,19,vinta,7,water north east,food east south,zuna kele zuna rika vuno pemi bovi,zuna kele zuna rika vuno pemi bovi,water north east,food east south,1,1
+886909,novel,open,19,ravo,5,water north east,food east south,kele daru zuna fira vuno,kele daru zuna fira vuno,water north east,(uncertain),1,1
+886909,novel,open,20,vinta,7,water south west,water east south,tora rika zuna rika vuno vuno bovi,tora rika zuna rika vuno vuno bovi,water south west,water east south,1,1
+886909,novel,open,20,ravo,5,water south west,water east south,rika daru tora fira vuno,rika daru tora fira vuno,water south west,(uncertain),1,1
+886909,novel,open,21,vinta,7,food south west,water west north,tora rika tora kele pemi vuno bovi,tora rika tora kele pemi vuno bovi,food south west,water west north,1,1
+886909,novel,open,21,ravo,7,food south west,water west north,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,food south west,(uncertain),1,1
+886909,novel,open,22,vinta,7,food west north,water north east,kele tora kele zuna pemi vuno bovi,kele tora kele zuna pemi vuno bovi,food west north,water north east,1,1
+886909,novel,open,22,ravo,7,food west north,water north east,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,food west north,(uncertain),1,1
+886909,novel,open,23,vinta,7,food north east,water east south,zuna kele zuna rika pemi vuno bovi,zuna kele zuna rika pemi vuno bovi,food north east,water east south,1,1
+886909,novel,open,23,ravo,7,food north east,water east south,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,food north east,(uncertain),1,1
+886909,novel,muted,0,vinta,7,water east south,food south west,rika zuna rika tora vuno pemi bovi,rika zuna rika tora vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,0,ravo,5,water east south,food south west,zuna daru rika fira vuno,zuna daru rika fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,1,vinta,7,food north east,food west north,zuna kele tora kele pemi pemi bovi,zuna kele tora kele pemi pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,1,ravo,7,food north east,food west north,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,2,vinta,7,water west north,water south west,kele tora rika tora vuno vuno bovi,kele tora rika tora vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,2,ravo,5,water west north,water south west,tora daru kele fira vuno,tora daru kele fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,3,vinta,7,water north east,food east south,zuna kele zuna rika vuno pemi bovi,zuna kele zuna rika vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,3,ravo,5,water north east,food east south,kele daru zuna fira vuno,kele daru zuna fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,4,vinta,7,water east south,food south west,rika zuna rika tora vuno pemi bovi,rika zuna rika tora vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,4,ravo,5,water east south,food south west,zuna daru rika fira vuno,zuna daru rika fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,5,vinta,7,water south west,food west north,tora rika tora kele vuno pemi bovi,tora rika tora kele vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,5,ravo,5,water south west,food west north,rika daru tora fira vuno,rika daru tora fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,6,vinta,7,food east south,food north east,rika zuna kele zuna pemi pemi bovi,rika zuna kele zuna pemi pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,6,ravo,7,food east south,food north east,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,7,vinta,7,food west north,food south west,kele tora rika tora pemi pemi bovi,kele tora rika tora pemi pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,7,ravo,7,food west north,food south west,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,8,vinta,7,food north east,water west north,zuna kele tora kele pemi vuno bovi,zuna kele tora kele pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,8,ravo,7,food north east,water west north,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,9,vinta,7,food east south,water north east,rika zuna kele zuna pemi vuno bovi,rika zuna kele zuna pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,9,ravo,7,food east south,water north east,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,10,vinta,7,food west north,food south west,kele tora rika tora pemi pemi bovi,kele tora rika tora pemi pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,10,ravo,7,food west north,food south west,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,11,vinta,7,water south west,water east south,tora rika zuna rika vuno vuno bovi,tora rika zuna rika vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,11,ravo,5,water south west,water east south,rika daru tora fira vuno,rika daru tora fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,12,vinta,7,water north east,water west north,zuna kele tora kele vuno vuno bovi,zuna kele tora kele vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,12,ravo,5,water north east,water west north,kele daru zuna fira vuno,kele daru zuna fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,13,vinta,7,food east south,food north east,rika zuna kele zuna pemi pemi bovi,rika zuna kele zuna pemi pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,13,ravo,7,food east south,food north east,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,14,vinta,7,food south west,water east south,tora rika zuna rika pemi vuno bovi,tora rika zuna rika pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,14,ravo,7,food south west,water east south,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,15,vinta,7,food west north,water south west,kele tora rika tora pemi vuno bovi,kele tora rika tora pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,15,ravo,7,food west north,water south west,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,16,vinta,7,water north east,water west north,zuna kele tora kele vuno vuno bovi,zuna kele tora kele vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,16,ravo,5,water north east,water west north,kele daru zuna fira vuno,kele daru zuna fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,17,vinta,7,water east south,food north east,rika zuna kele zuna vuno pemi bovi,rika zuna kele zuna vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,17,ravo,5,water east south,food north east,zuna daru rika fira vuno,zuna daru rika fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,18,vinta,7,water west north,water south west,kele tora rika tora vuno vuno bovi,kele tora rika tora vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,18,ravo,5,water west north,water south west,tora daru kele fira vuno,tora daru kele fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,19,vinta,7,water north east,food east south,zuna kele zuna rika vuno pemi bovi,zuna kele zuna rika vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,19,ravo,5,water north east,food east south,kele daru zuna fira vuno,kele daru zuna fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,20,vinta,7,water south west,water east south,tora rika zuna rika vuno vuno bovi,tora rika zuna rika vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,20,ravo,5,water south west,water east south,rika daru tora fira vuno,rika daru tora fira vuno,(uncertain),(uncertain),1,0
+886909,novel,muted,21,vinta,7,food south west,water west north,tora rika tora kele pemi vuno bovi,tora rika tora kele pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,21,ravo,7,food south west,water west north,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,22,vinta,7,food west north,water north east,kele tora kele zuna pemi vuno bovi,kele tora kele zuna pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,22,ravo,7,food west north,water north east,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,muted,23,vinta,7,food north east,water east south,zuna kele zuna rika pemi vuno bovi,zuna kele zuna rika pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,muted,23,ravo,7,food north east,water east south,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,0,vinta,7,water east south,food south west,rika zuna rika tora vuno pemi bovi,rika zuna rika tora vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,0,ravo,5,water east south,food south west,zuna daru rika fira vuno,zuna daru rika fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,1,vinta,7,food north east,food west north,zuna kele tora kele pemi pemi bovi,zuna kele tora kele pemi pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,1,ravo,7,food north east,food west north,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,2,vinta,7,water west north,water south west,kele tora rika tora vuno vuno bovi,kele tora rika tora vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,2,ravo,5,water west north,water south west,tora daru kele fira vuno,tora daru kele fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,3,vinta,7,water north east,food east south,zuna kele zuna rika vuno pemi bovi,zuna kele zuna rika vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,3,ravo,5,water north east,food east south,kele daru zuna fira vuno,kele daru zuna fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,4,vinta,7,water east south,food south west,rika zuna rika tora vuno pemi bovi,rika zuna rika tora vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,4,ravo,5,water east south,food south west,zuna daru rika fira vuno,zuna daru rika fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,5,vinta,7,water south west,food west north,tora rika tora kele vuno pemi bovi,tora rika tora kele vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,5,ravo,5,water south west,food west north,rika daru tora fira vuno,rika daru tora fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,6,vinta,7,food east south,food north east,rika zuna kele zuna pemi pemi bovi,rika zuna kele zuna pemi pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,6,ravo,7,food east south,food north east,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,7,vinta,7,food west north,food south west,kele tora rika tora pemi pemi bovi,kele tora rika tora pemi pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,7,ravo,7,food west north,food south west,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,8,vinta,7,food north east,water west north,zuna kele tora kele pemi vuno bovi,zuna kele tora kele pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,8,ravo,7,food north east,water west north,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,9,vinta,7,food east south,water north east,rika zuna kele zuna pemi vuno bovi,rika zuna kele zuna pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,9,ravo,7,food east south,water north east,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,10,vinta,7,food west north,food south west,kele tora rika tora pemi pemi bovi,kele tora rika tora pemi pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,10,ravo,7,food west north,food south west,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,11,vinta,7,water south west,water east south,tora rika zuna rika vuno vuno bovi,tora rika zuna rika vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,11,ravo,5,water south west,water east south,rika daru tora fira vuno,rika daru tora fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,12,vinta,7,water north east,water west north,zuna kele tora kele vuno vuno bovi,zuna kele tora kele vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,12,ravo,5,water north east,water west north,kele daru zuna fira vuno,kele daru zuna fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,13,vinta,7,food east south,food north east,rika zuna kele zuna pemi pemi bovi,rika zuna kele zuna pemi pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,13,ravo,7,food east south,food north east,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,14,vinta,7,food south west,water east south,tora rika zuna rika pemi vuno bovi,tora rika zuna rika pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,14,ravo,7,food south west,water east south,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,15,vinta,7,food west north,water south west,kele tora rika tora pemi vuno bovi,kele tora rika tora pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,15,ravo,7,food west north,water south west,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,16,vinta,7,water north east,water west north,zuna kele tora kele vuno vuno bovi,zuna kele tora kele vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,16,ravo,5,water north east,water west north,kele daru zuna fira vuno,kele daru zuna fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,17,vinta,7,water east south,food north east,rika zuna kele zuna vuno pemi bovi,rika zuna kele zuna vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,17,ravo,5,water east south,food north east,zuna daru rika fira vuno,zuna daru rika fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,18,vinta,7,water west north,water south west,kele tora rika tora vuno vuno bovi,kele tora rika tora vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,18,ravo,5,water west north,water south west,tora daru kele fira vuno,tora daru kele fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,19,vinta,7,water north east,food east south,zuna kele zuna rika vuno pemi bovi,zuna kele zuna rika vuno pemi bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,19,ravo,5,water north east,food east south,kele daru zuna fira vuno,kele daru zuna fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,20,vinta,7,water south west,water east south,tora rika zuna rika vuno vuno bovi,tora rika zuna rika vuno vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,20,ravo,5,water south west,water east south,rika daru tora fira vuno,rika daru tora fira vuno,(uncertain),(uncertain),1,0
+886909,novel,reversed,21,vinta,7,food south west,water west north,tora rika tora kele pemi vuno bovi,tora rika tora kele pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,21,ravo,7,food south west,water west north,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,22,vinta,7,food west north,water north east,kele tora kele zuna pemi vuno bovi,kele tora kele zuna pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,22,ravo,7,food west north,water north east,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,(uncertain),(uncertain),1,0
+886909,novel,reversed,23,vinta,7,food north east,water east south,zuna kele zuna rika pemi vuno bovi,zuna kele zuna rika pemi vuno bovi,(uncertain),(uncertain),1,0
+886909,novel,reversed,23,ravo,7,food north east,water east south,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,(uncertain),(uncertain),1,0
+1105799,novel,open,0,vinta,7,water south west,water east south,nalu rika daru rika bovi bovi tesu,nalu rika daru rika bovi bovi tesu,water south west,water east south,1,1
+1105799,novel,open,0,ravo,5,water south west,water east south,fira rika tesu bovi lavo,fira rika tesu bovi lavo,water south west,(uncertain),1,1
+1105799,novel,open,1,vinta,7,water west north,food east south,nalu rika daru tesu bovi samu kele,nalu rika daru tesu bovi samu kele,water west north,food east south,1,1
+1105799,novel,open,1,ravo,5,water west north,food east south,fira tesu kele bovi lavo,fira tesu kele bovi lavo,water west north,(uncertain),1,1
+1105799,novel,open,2,vinta,7,water north east,food south west,nalu tesu rika kele bovi samu daru,nalu tesu rika kele bovi samu daru,water north east,food south west,1,1
+1105799,novel,open,2,ravo,5,water north east,food south west,fira kele daru bovi lavo,fira kele daru bovi lavo,water north east,(uncertain),1,1
+1105799,novel,open,3,vinta,7,water east south,food west north,nalu kele tesu daru bovi samu rika,nalu kele tesu daru bovi samu rika,water east south,food west north,1,1
+1105799,novel,open,3,ravo,5,water east south,food west north,fira daru rika bovi lavo,fira daru rika bovi lavo,water east south,(uncertain),1,1
+1105799,novel,open,4,vinta,7,water west north,water south west,nalu tesu rika tesu bovi bovi kele,nalu tesu rika tesu bovi bovi kele,water west north,water south west,1,1
+1105799,novel,open,4,ravo,5,water west north,water south west,fira tesu kele bovi lavo,fira tesu kele bovi lavo,water west north,(uncertain),1,1
+1105799,novel,open,5,vinta,7,food north east,water north east,nalu daru kele kele samu bovi daru,nalu daru kele kele samu bovi daru,food north east,water north east,1,1
+1105799,novel,open,5,ravo,7,food north east,water north east,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,food north east,(uncertain),1,1
+1105799,novel,open,6,vinta,7,food east south,water east south,nalu rika daru daru samu bovi rika,nalu rika daru daru samu bovi rika,food east south,water east south,1,1
+1105799,novel,open,6,ravo,7,food east south,water east south,fira daru rika samu lavo jori zuna,fira daru rika samu lavo jori zuna,food east south,(uncertain),1,1
+1105799,novel,open,7,vinta,7,water west north,water south west,nalu tesu rika tesu bovi bovi kele,nalu tesu rika tesu bovi bovi kele,water west north,water south west,1,1
+1105799,novel,open,7,ravo,5,water west north,water south west,fira tesu kele bovi lavo,fira tesu kele bovi lavo,water west north,(uncertain),1,1
+1105799,novel,open,8,vinta,7,water north east,food south west,nalu tesu rika kele bovi samu daru,nalu tesu rika kele bovi samu daru,water north east,food south west,1,1
+1105799,novel,open,8,ravo,5,water north east,food south west,fira kele daru bovi lavo,fira kele daru bovi lavo,water north east,(uncertain),1,1
+1105799,novel,open,9,vinta,7,food north east,food west north,nalu kele tesu kele samu samu daru,nalu kele tesu kele samu samu daru,food north east,food west north,1,1
+1105799,novel,open,9,ravo,7,food north east,food west north,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,food north east,(uncertain),1,1
+1105799,novel,open,10,vinta,7,water east south,food east south,nalu rika daru daru bovi samu rika,nalu rika daru daru bovi samu rika,water east south,food east south,1,1
+1105799,novel,open,10,ravo,5,water east south,food east south,fira daru rika bovi lavo,fira daru rika bovi lavo,water east south,(uncertain),1,1
+1105799,novel,open,11,vinta,7,food west north,food south west,nalu tesu rika tesu samu samu kele,nalu tesu rika tesu samu samu kele,food west north,food south west,1,1
+1105799,novel,open,11,ravo,7,food west north,food south west,fira tesu kele samu lavo jori zuna,fira tesu kele samu lavo jori zuna,food west north,(uncertain),1,1
+1105799,novel,open,12,vinta,7,water west north,water south west,nalu tesu rika tesu bovi bovi kele,nalu tesu rika tesu bovi bovi kele,water west north,water south west,1,1
+1105799,novel,open,12,ravo,5,water west north,water south west,fira tesu kele bovi lavo,fira tesu kele bovi lavo,water west north,(uncertain),1,1
+1105799,novel,open,13,vinta,7,water north east,food north east,nalu daru kele kele bovi samu daru,nalu daru kele kele bovi samu daru,water north east,food north east,1,1
+1105799,novel,open,13,ravo,5,water north east,food north east,fira kele daru bovi lavo,fira kele daru bovi lavo,water north east,(uncertain),1,1
+1105799,novel,open,14,vinta,7,water south west,water east south,nalu rika daru rika bovi bovi tesu,nalu rika daru rika bovi bovi tesu,water south west,water east south,1,1
+1105799,novel,open,14,ravo,5,water south west,water east south,fira rika tesu bovi lavo,fira rika tesu bovi lavo,water south west,(uncertain),1,1
+1105799,novel,open,15,vinta,7,water north east,water west north,nalu kele tesu kele bovi bovi daru,nalu kele tesu kele bovi bovi daru,water north east,water west north,1,1
+1105799,novel,open,15,ravo,5,water north east,water west north,fira kele daru bovi lavo,fira kele daru bovi lavo,water north east,(uncertain),1,1
+1105799,novel,open,16,vinta,7,water south west,water east south,nalu rika daru rika bovi bovi tesu,nalu rika daru rika bovi bovi tesu,water south west,water east south,1,1
+1105799,novel,open,16,ravo,5,water south west,water east south,fira rika tesu bovi lavo,fira rika tesu bovi lavo,water south west,(uncertain),1,1
+1105799,novel,open,17,vinta,7,food south west,food east south,nalu rika daru rika samu samu tesu,nalu rika daru rika samu samu tesu,food south west,food east south,1,1
+1105799,novel,open,17,ravo,7,food south west,food east south,fira rika tesu samu lavo jori zuna,fira rika tesu samu lavo jori zuna,food south west,(uncertain),1,1
+1105799,novel,open,18,vinta,7,water west north,food west north,nalu kele tesu tesu bovi samu kele,nalu kele tesu tesu bovi samu kele,water west north,food west north,1,1
+1105799,novel,open,18,ravo,5,water west north,food west north,fira tesu kele bovi lavo,fira tesu kele bovi lavo,water west north,(uncertain),1,1
+1105799,novel,open,19,vinta,7,food north east,water north east,nalu daru kele kele samu bovi daru,nalu daru kele kele samu bovi daru,food north east,water north east,1,1
+1105799,novel,open,19,ravo,7,food north east,water north east,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,food north east,(uncertain),1,1
+1105799,novel,open,20,vinta,7,food east south,water east south,nalu rika daru daru samu bovi rika,nalu rika daru daru samu bovi rika,food east south,water east south,1,1
+1105799,novel,open,20,ravo,7,food east south,water east south,fira daru rika samu lavo jori zuna,fira daru rika samu lavo jori zuna,food east south,(uncertain),1,1
+1105799,novel,open,21,vinta,7,water south west,food south west,nalu tesu rika rika bovi samu tesu,nalu tesu rika rika bovi samu tesu,water south west,food south west,1,1
+1105799,novel,open,21,ravo,5,water south west,food south west,fira rika tesu bovi lavo,fira rika tesu bovi lavo,water south west,(uncertain),1,1
+1105799,novel,open,22,vinta,7,water west north,food west north,nalu kele tesu tesu bovi samu kele,nalu kele tesu tesu bovi samu kele,water west north,food west north,1,1
+1105799,novel,open,22,ravo,5,water west north,food west north,fira tesu kele bovi lavo,fira tesu kele bovi lavo,water west north,(uncertain),1,1
+1105799,novel,open,23,vinta,7,water north east,food north east,nalu daru kele kele bovi samu daru,nalu daru kele kele bovi samu daru,water north east,food north east,1,1
+1105799,novel,open,23,ravo,5,water north east,food north east,fira kele daru bovi lavo,fira kele daru bovi lavo,water north east,(uncertain),1,1
+1105799,novel,muted,0,vinta,7,water south west,water east south,nalu rika daru rika bovi bovi tesu,nalu rika daru rika bovi bovi tesu,(uncertain),(uncertain),1,0
+1105799,novel,muted,0,ravo,5,water south west,water east south,fira rika tesu bovi lavo,fira rika tesu bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,1,vinta,7,water west north,food east south,nalu rika daru tesu bovi samu kele,nalu rika daru tesu bovi samu kele,(uncertain),(uncertain),1,0
+1105799,novel,muted,1,ravo,5,water west north,food east south,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,2,vinta,7,water north east,food south west,nalu tesu rika kele bovi samu daru,nalu tesu rika kele bovi samu daru,(uncertain),(uncertain),1,0
+1105799,novel,muted,2,ravo,5,water north east,food south west,fira kele daru bovi lavo,fira kele daru bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,3,vinta,7,water east south,food west north,nalu kele tesu daru bovi samu rika,nalu kele tesu daru bovi samu rika,(uncertain),(uncertain),1,0
+1105799,novel,muted,3,ravo,5,water east south,food west north,fira daru rika bovi lavo,fira daru rika bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,4,vinta,7,water west north,water south west,nalu tesu rika tesu bovi bovi kele,nalu tesu rika tesu bovi bovi kele,(uncertain),(uncertain),1,0
+1105799,novel,muted,4,ravo,5,water west north,water south west,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,5,vinta,7,food north east,water north east,nalu daru kele kele samu bovi daru,nalu daru kele kele samu bovi daru,(uncertain),(uncertain),1,0
+1105799,novel,muted,5,ravo,7,food north east,water north east,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,muted,6,vinta,7,food east south,water east south,nalu rika daru daru samu bovi rika,nalu rika daru daru samu bovi rika,(uncertain),(uncertain),1,0
+1105799,novel,muted,6,ravo,7,food east south,water east south,fira daru rika samu lavo jori zuna,fira daru rika samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,muted,7,vinta,7,water west north,water south west,nalu tesu rika tesu bovi bovi kele,nalu tesu rika tesu bovi bovi kele,(uncertain),(uncertain),1,0
+1105799,novel,muted,7,ravo,5,water west north,water south west,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,8,vinta,7,water north east,food south west,nalu tesu rika kele bovi samu daru,nalu tesu rika kele bovi samu daru,(uncertain),(uncertain),1,0
+1105799,novel,muted,8,ravo,5,water north east,food south west,fira kele daru bovi lavo,fira kele daru bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,9,vinta,7,food north east,food west north,nalu kele tesu kele samu samu daru,nalu kele tesu kele samu samu daru,(uncertain),(uncertain),1,0
+1105799,novel,muted,9,ravo,7,food north east,food west north,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,muted,10,vinta,7,water east south,food east south,nalu rika daru daru bovi samu rika,nalu rika daru daru bovi samu rika,(uncertain),(uncertain),1,0
+1105799,novel,muted,10,ravo,5,water east south,food east south,fira daru rika bovi lavo,fira daru rika bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,11,vinta,7,food west north,food south west,nalu tesu rika tesu samu samu kele,nalu tesu rika tesu samu samu kele,(uncertain),(uncertain),1,0
+1105799,novel,muted,11,ravo,7,food west north,food south west,fira tesu kele samu lavo jori zuna,fira tesu kele samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,muted,12,vinta,7,water west north,water south west,nalu tesu rika tesu bovi bovi kele,nalu tesu rika tesu bovi bovi kele,(uncertain),(uncertain),1,0
+1105799,novel,muted,12,ravo,5,water west north,water south west,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,13,vinta,7,water north east,food north east,nalu daru kele kele bovi samu daru,nalu daru kele kele bovi samu daru,(uncertain),(uncertain),1,0
+1105799,novel,muted,13,ravo,5,water north east,food north east,fira kele daru bovi lavo,fira kele daru bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,14,vinta,7,water south west,water east south,nalu rika daru rika bovi bovi tesu,nalu rika daru rika bovi bovi tesu,(uncertain),(uncertain),1,0
+1105799,novel,muted,14,ravo,5,water south west,water east south,fira rika tesu bovi lavo,fira rika tesu bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,15,vinta,7,water north east,water west north,nalu kele tesu kele bovi bovi daru,nalu kele tesu kele bovi bovi daru,(uncertain),(uncertain),1,0
+1105799,novel,muted,15,ravo,5,water north east,water west north,fira kele daru bovi lavo,fira kele daru bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,16,vinta,7,water south west,water east south,nalu rika daru rika bovi bovi tesu,nalu rika daru rika bovi bovi tesu,(uncertain),(uncertain),1,0
+1105799,novel,muted,16,ravo,5,water south west,water east south,fira rika tesu bovi lavo,fira rika tesu bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,17,vinta,7,food south west,food east south,nalu rika daru rika samu samu tesu,nalu rika daru rika samu samu tesu,(uncertain),(uncertain),1,0
+1105799,novel,muted,17,ravo,7,food south west,food east south,fira rika tesu samu lavo jori zuna,fira rika tesu samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,muted,18,vinta,7,water west north,food west north,nalu kele tesu tesu bovi samu kele,nalu kele tesu tesu bovi samu kele,(uncertain),(uncertain),1,0
+1105799,novel,muted,18,ravo,5,water west north,food west north,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,19,vinta,7,food north east,water north east,nalu daru kele kele samu bovi daru,nalu daru kele kele samu bovi daru,(uncertain),(uncertain),1,0
+1105799,novel,muted,19,ravo,7,food north east,water north east,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,muted,20,vinta,7,food east south,water east south,nalu rika daru daru samu bovi rika,nalu rika daru daru samu bovi rika,(uncertain),(uncertain),1,0
+1105799,novel,muted,20,ravo,7,food east south,water east south,fira daru rika samu lavo jori zuna,fira daru rika samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,muted,21,vinta,7,water south west,food south west,nalu tesu rika rika bovi samu tesu,nalu tesu rika rika bovi samu tesu,(uncertain),(uncertain),1,0
+1105799,novel,muted,21,ravo,5,water south west,food south west,fira rika tesu bovi lavo,fira rika tesu bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,22,vinta,7,water west north,food west north,nalu kele tesu tesu bovi samu kele,nalu kele tesu tesu bovi samu kele,(uncertain),(uncertain),1,0
+1105799,novel,muted,22,ravo,5,water west north,food west north,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,muted,23,vinta,7,water north east,food north east,nalu daru kele kele bovi samu daru,nalu daru kele kele bovi samu daru,(uncertain),(uncertain),1,0
+1105799,novel,muted,23,ravo,5,water north east,food north east,fira kele daru bovi lavo,fira kele daru bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,0,vinta,7,water south west,water east south,nalu rika daru rika bovi bovi tesu,nalu rika daru rika bovi bovi tesu,(uncertain),(uncertain),1,0
+1105799,novel,reversed,0,ravo,5,water south west,water east south,fira rika tesu bovi lavo,fira rika tesu bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,1,vinta,7,water west north,food east south,nalu rika daru tesu bovi samu kele,nalu rika daru tesu bovi samu kele,(uncertain),(uncertain),1,0
+1105799,novel,reversed,1,ravo,5,water west north,food east south,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,2,vinta,7,water north east,food south west,nalu tesu rika kele bovi samu daru,nalu tesu rika kele bovi samu daru,(uncertain),(uncertain),1,0
+1105799,novel,reversed,2,ravo,5,water north east,food south west,fira kele daru bovi lavo,fira kele daru bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,3,vinta,7,water east south,food west north,nalu kele tesu daru bovi samu rika,nalu kele tesu daru bovi samu rika,(uncertain),(uncertain),1,0
+1105799,novel,reversed,3,ravo,5,water east south,food west north,fira daru rika bovi lavo,fira daru rika bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,4,vinta,7,water west north,water south west,nalu tesu rika tesu bovi bovi kele,nalu tesu rika tesu bovi bovi kele,(uncertain),(uncertain),1,0
+1105799,novel,reversed,4,ravo,5,water west north,water south west,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,5,vinta,7,food north east,water north east,nalu daru kele kele samu bovi daru,nalu daru kele kele samu bovi daru,(uncertain),(uncertain),1,0
+1105799,novel,reversed,5,ravo,7,food north east,water north east,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,reversed,6,vinta,7,food east south,water east south,nalu rika daru daru samu bovi rika,nalu rika daru daru samu bovi rika,(uncertain),(uncertain),1,0
+1105799,novel,reversed,6,ravo,7,food east south,water east south,fira daru rika samu lavo jori zuna,fira daru rika samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,reversed,7,vinta,7,water west north,water south west,nalu tesu rika tesu bovi bovi kele,nalu tesu rika tesu bovi bovi kele,(uncertain),(uncertain),1,0
+1105799,novel,reversed,7,ravo,5,water west north,water south west,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,8,vinta,7,water north east,food south west,nalu tesu rika kele bovi samu daru,nalu tesu rika kele bovi samu daru,(uncertain),(uncertain),1,0
+1105799,novel,reversed,8,ravo,5,water north east,food south west,fira kele daru bovi lavo,fira kele daru bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,9,vinta,7,food north east,food west north,nalu kele tesu kele samu samu daru,nalu kele tesu kele samu samu daru,(uncertain),(uncertain),1,0
+1105799,novel,reversed,9,ravo,7,food north east,food west north,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,reversed,10,vinta,7,water east south,food east south,nalu rika daru daru bovi samu rika,nalu rika daru daru bovi samu rika,(uncertain),(uncertain),1,0
+1105799,novel,reversed,10,ravo,5,water east south,food east south,fira daru rika bovi lavo,fira daru rika bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,11,vinta,7,food west north,food south west,nalu tesu rika tesu samu samu kele,nalu tesu rika tesu samu samu kele,(uncertain),(uncertain),1,0
+1105799,novel,reversed,11,ravo,7,food west north,food south west,fira tesu kele samu lavo jori zuna,fira tesu kele samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,reversed,12,vinta,7,water west north,water south west,nalu tesu rika tesu bovi bovi kele,nalu tesu rika tesu bovi bovi kele,(uncertain),(uncertain),1,0
+1105799,novel,reversed,12,ravo,5,water west north,water south west,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,13,vinta,7,water north east,food north east,nalu daru kele kele bovi samu daru,nalu daru kele kele bovi samu daru,(uncertain),(uncertain),1,0
+1105799,novel,reversed,13,ravo,5,water north east,food north east,fira kele daru bovi lavo,fira kele daru bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,14,vinta,7,water south west,water east south,nalu rika daru rika bovi bovi tesu,nalu rika daru rika bovi bovi tesu,(uncertain),(uncertain),1,0
+1105799,novel,reversed,14,ravo,5,water south west,water east south,fira rika tesu bovi lavo,fira rika tesu bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,15,vinta,7,water north east,water west north,nalu kele tesu kele bovi bovi daru,nalu kele tesu kele bovi bovi daru,(uncertain),(uncertain),1,0
+1105799,novel,reversed,15,ravo,5,water north east,water west north,fira kele daru bovi lavo,fira kele daru bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,16,vinta,7,water south west,water east south,nalu rika daru rika bovi bovi tesu,nalu rika daru rika bovi bovi tesu,(uncertain),(uncertain),1,0
+1105799,novel,reversed,16,ravo,5,water south west,water east south,fira rika tesu bovi lavo,fira rika tesu bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,17,vinta,7,food south west,food east south,nalu rika daru rika samu samu tesu,nalu rika daru rika samu samu tesu,(uncertain),(uncertain),1,0
+1105799,novel,reversed,17,ravo,7,food south west,food east south,fira rika tesu samu lavo jori zuna,fira rika tesu samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,reversed,18,vinta,7,water west north,food west north,nalu kele tesu tesu bovi samu kele,nalu kele tesu tesu bovi samu kele,(uncertain),(uncertain),1,0
+1105799,novel,reversed,18,ravo,5,water west north,food west north,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,19,vinta,7,food north east,water north east,nalu daru kele kele samu bovi daru,nalu daru kele kele samu bovi daru,(uncertain),(uncertain),1,0
+1105799,novel,reversed,19,ravo,7,food north east,water north east,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,reversed,20,vinta,7,food east south,water east south,nalu rika daru daru samu bovi rika,nalu rika daru daru samu bovi rika,(uncertain),(uncertain),1,0
+1105799,novel,reversed,20,ravo,7,food east south,water east south,fira daru rika samu lavo jori zuna,fira daru rika samu lavo jori zuna,(uncertain),(uncertain),1,0
+1105799,novel,reversed,21,vinta,7,water south west,food south west,nalu tesu rika rika bovi samu tesu,nalu tesu rika rika bovi samu tesu,(uncertain),(uncertain),1,0
+1105799,novel,reversed,21,ravo,5,water south west,food south west,fira rika tesu bovi lavo,fira rika tesu bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,22,vinta,7,water west north,food west north,nalu kele tesu tesu bovi samu kele,nalu kele tesu tesu bovi samu kele,(uncertain),(uncertain),1,0
+1105799,novel,reversed,22,ravo,5,water west north,food west north,fira tesu kele bovi lavo,fira tesu kele bovi lavo,(uncertain),(uncertain),1,0
+1105799,novel,reversed,23,vinta,7,water north east,food north east,nalu daru kele kele bovi samu daru,nalu daru kele kele bovi samu daru,(uncertain),(uncertain),1,0
+1105799,novel,reversed,23,ravo,5,water north east,food north east,fira kele daru bovi lavo,fira kele daru bovi lavo,(uncertain),(uncertain),1,0
+1416191,novel,open,0,vinta,7,water south west,food west north,vuno mepo zuna rika samu vuno jori,vuno mepo zuna rika samu vuno jori,water south west,food west north,1,1
+1416191,novel,open,0,ravo,5,water south west,food west north,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,water south west,(uncertain),1,1
+1416191,novel,open,1,vinta,7,water west north,food north east,rika vuno zuna tesu samu rika jori,rika vuno zuna tesu samu rika jori,water west north,food north east,1,1
+1416191,novel,open,1,ravo,5,water west north,food north east,gavi lavo rika jori vuno,gavi lavo rika jori vuno,water west north,(uncertain),1,1
+1416191,novel,open,2,vinta,7,water east south,water north east,rika tesu jori tesu samu mepo jori,rika tesu jori tesu samu mepo jori,water east south,water north east,1,1
+1416191,novel,open,2,ravo,5,water east south,water north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,water east south,(uncertain),1,1
+1416191,novel,open,3,vinta,7,food east south,water south west,mepo tesu jori vuno samu mepo zuna,mepo tesu jori vuno samu mepo zuna,food east south,water south west,1,1
+1416191,novel,open,3,ravo,7,food east south,water south west,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,food east south,(uncertain),1,1
+1416191,novel,open,4,vinta,7,water north east,water west north,vuno rika jori rika samu tesu jori,vuno rika jori rika samu tesu jori,water north east,water west north,1,1
+1416191,novel,open,4,ravo,5,water north east,water west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,water north east,(uncertain),1,1
+1416191,novel,open,5,vinta,7,food west north,food south west,mepo vuno zuna vuno samu rika zuna,mepo vuno zuna vuno samu rika zuna,food west north,food south west,1,1
+1416191,novel,open,5,ravo,7,food west north,food south west,gavi lavo rika zuna vuno daru bovi,gavi lavo rika zuna vuno daru bovi,food west north,(uncertain),1,1
+1416191,novel,open,6,vinta,7,food east south,food north east,rika tesu zuna tesu samu mepo zuna,rika tesu zuna tesu samu mepo zuna,food east south,food north east,1,1
+1416191,novel,open,6,ravo,7,food east south,food north east,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,food east south,(uncertain),1,1
+1416191,novel,open,7,vinta,7,water south west,water east south,tesu mepo jori mepo samu vuno jori,tesu mepo jori mepo samu vuno jori,water south west,water east south,1,1
+1416191,novel,open,7,ravo,5,water south west,water east south,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,water south west,(uncertain),1,1
+1416191,novel,open,8,vinta,7,water west north,food south west,mepo vuno zuna vuno samu rika jori,mepo vuno zuna vuno samu rika jori,water west north,food south west,1,1
+1416191,novel,open,8,ravo,5,water west north,food south west,gavi lavo rika jori vuno,gavi lavo rika jori vuno,water west north,(uncertain),1,1
+1416191,novel,open,9,vinta,7,water north east,food west north,vuno rika zuna rika samu tesu jori,vuno rika zuna rika samu tesu jori,water north east,food west north,1,1
+1416191,novel,open,9,ravo,5,water north east,food west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,water north east,(uncertain),1,1
+1416191,novel,open,10,vinta,7,water south west,water east south,tesu mepo jori mepo samu vuno jori,tesu mepo jori mepo samu vuno jori,water south west,water east south,1,1
+1416191,novel,open,10,ravo,5,water south west,water east south,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,water south west,(uncertain),1,1
+1416191,novel,open,11,vinta,7,water north east,water west north,vuno rika jori rika samu tesu jori,vuno rika jori rika samu tesu jori,water north east,water west north,1,1
+1416191,novel,open,11,ravo,5,water north east,water west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,water north east,(uncertain),1,1
+1416191,novel,open,12,vinta,7,water south west,water east south,tesu mepo jori mepo samu vuno jori,tesu mepo jori mepo samu vuno jori,water south west,water east south,1,1
+1416191,novel,open,12,ravo,5,water south west,water east south,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,water south west,(uncertain),1,1
+1416191,novel,open,13,vinta,7,food east south,food north east,rika tesu zuna tesu samu mepo zuna,rika tesu zuna tesu samu mepo zuna,food east south,food north east,1,1
+1416191,novel,open,13,ravo,7,food east south,food north east,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,food east south,(uncertain),1,1
+1416191,novel,open,14,vinta,7,food west north,food south west,mepo vuno zuna vuno samu rika zuna,mepo vuno zuna vuno samu rika zuna,food west north,food south west,1,1
+1416191,novel,open,14,ravo,7,food west north,food south west,gavi lavo rika zuna vuno daru bovi,gavi lavo rika zuna vuno daru bovi,food west north,(uncertain),1,1
+1416191,novel,open,15,vinta,7,food north east,water west north,vuno rika jori rika samu tesu zuna,vuno rika jori rika samu tesu zuna,food north east,water west north,1,1
+1416191,novel,open,15,ravo,7,food north east,water west north,gavi lavo tesu zuna rika daru bovi,gavi lavo tesu zuna rika daru bovi,food north east,(uncertain),1,1
+1416191,novel,open,16,vinta,7,water east south,water north east,rika tesu jori tesu samu mepo jori,rika tesu jori tesu samu mepo jori,water east south,water north east,1,1
+1416191,novel,open,16,ravo,5,water east south,water north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,water east south,(uncertain),1,1
+1416191,novel,open,17,vinta,7,food south west,food east south,tesu mepo zuna mepo samu vuno zuna,tesu mepo zuna mepo samu vuno zuna,food south west,food east south,1,1
+1416191,novel,open,17,ravo,7,food south west,food east south,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,food south west,(uncertain),1,1
+1416191,novel,open,18,vinta,7,water south west,food west north,vuno mepo zuna rika samu vuno jori,vuno mepo zuna rika samu vuno jori,water south west,food west north,1,1
+1416191,novel,open,18,ravo,5,water south west,food west north,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,water south west,(uncertain),1,1
+1416191,novel,open,19,vinta,7,water north east,water west north,vuno rika jori rika samu tesu jori,vuno rika jori rika samu tesu jori,water north east,water west north,1,1
+1416191,novel,open,19,ravo,5,water north east,water west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,water north east,(uncertain),1,1
+1416191,novel,open,20,vinta,7,water east south,food north east,rika tesu zuna tesu samu mepo jori,rika tesu zuna tesu samu mepo jori,water east south,food north east,1,1
+1416191,novel,open,20,ravo,5,water east south,food north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,water east south,(uncertain),1,1
+1416191,novel,open,21,vinta,7,water west north,water south west,mepo vuno jori vuno samu rika jori,mepo vuno jori vuno samu rika jori,water west north,water south west,1,1
+1416191,novel,open,21,ravo,5,water west north,water south west,gavi lavo rika jori vuno,gavi lavo rika jori vuno,water west north,(uncertain),1,1
+1416191,novel,open,22,vinta,7,water east south,water north east,rika tesu jori tesu samu mepo jori,rika tesu jori tesu samu mepo jori,water east south,water north east,1,1
+1416191,novel,open,22,ravo,5,water east south,water north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,water east south,(uncertain),1,1
+1416191,novel,open,23,vinta,7,food south west,food east south,tesu mepo zuna mepo samu vuno zuna,tesu mepo zuna mepo samu vuno zuna,food south west,food east south,1,1
+1416191,novel,open,23,ravo,7,food south west,food east south,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,food south west,(uncertain),1,1
+1416191,novel,muted,0,vinta,7,water south west,food west north,vuno mepo zuna rika samu vuno jori,vuno mepo zuna rika samu vuno jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,0,ravo,5,water south west,food west north,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,(uncertain),(uncertain),1,0
+1416191,novel,muted,1,vinta,7,water west north,food north east,rika vuno zuna tesu samu rika jori,rika vuno zuna tesu samu rika jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,1,ravo,5,water west north,food north east,gavi lavo rika jori vuno,gavi lavo rika jori vuno,(uncertain),(uncertain),1,0
+1416191,novel,muted,2,vinta,7,water east south,water north east,rika tesu jori tesu samu mepo jori,rika tesu jori tesu samu mepo jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,2,ravo,5,water east south,water north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,(uncertain),(uncertain),1,0
+1416191,novel,muted,3,vinta,7,food east south,water south west,mepo tesu jori vuno samu mepo zuna,mepo tesu jori vuno samu mepo zuna,(uncertain),(uncertain),1,0
+1416191,novel,muted,3,ravo,7,food east south,water south west,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,muted,4,vinta,7,water north east,water west north,vuno rika jori rika samu tesu jori,vuno rika jori rika samu tesu jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,4,ravo,5,water north east,water west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,(uncertain),(uncertain),1,0
+1416191,novel,muted,5,vinta,7,food west north,food south west,mepo vuno zuna vuno samu rika zuna,mepo vuno zuna vuno samu rika zuna,(uncertain),(uncertain),1,0
+1416191,novel,muted,5,ravo,7,food west north,food south west,gavi lavo rika zuna vuno daru bovi,gavi lavo rika zuna vuno daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,muted,6,vinta,7,food east south,food north east,rika tesu zuna tesu samu mepo zuna,rika tesu zuna tesu samu mepo zuna,(uncertain),(uncertain),1,0
+1416191,novel,muted,6,ravo,7,food east south,food north east,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,muted,7,vinta,7,water south west,water east south,tesu mepo jori mepo samu vuno jori,tesu mepo jori mepo samu vuno jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,7,ravo,5,water south west,water east south,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,(uncertain),(uncertain),1,0
+1416191,novel,muted,8,vinta,7,water west north,food south west,mepo vuno zuna vuno samu rika jori,mepo vuno zuna vuno samu rika jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,8,ravo,5,water west north,food south west,gavi lavo rika jori vuno,gavi lavo rika jori vuno,(uncertain),(uncertain),1,0
+1416191,novel,muted,9,vinta,7,water north east,food west north,vuno rika zuna rika samu tesu jori,vuno rika zuna rika samu tesu jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,9,ravo,5,water north east,food west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,(uncertain),(uncertain),1,0
+1416191,novel,muted,10,vinta,7,water south west,water east south,tesu mepo jori mepo samu vuno jori,tesu mepo jori mepo samu vuno jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,10,ravo,5,water south west,water east south,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,(uncertain),(uncertain),1,0
+1416191,novel,muted,11,vinta,7,water north east,water west north,vuno rika jori rika samu tesu jori,vuno rika jori rika samu tesu jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,11,ravo,5,water north east,water west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,(uncertain),(uncertain),1,0
+1416191,novel,muted,12,vinta,7,water south west,water east south,tesu mepo jori mepo samu vuno jori,tesu mepo jori mepo samu vuno jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,12,ravo,5,water south west,water east south,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,(uncertain),(uncertain),1,0
+1416191,novel,muted,13,vinta,7,food east south,food north east,rika tesu zuna tesu samu mepo zuna,rika tesu zuna tesu samu mepo zuna,(uncertain),(uncertain),1,0
+1416191,novel,muted,13,ravo,7,food east south,food north east,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,muted,14,vinta,7,food west north,food south west,mepo vuno zuna vuno samu rika zuna,mepo vuno zuna vuno samu rika zuna,(uncertain),(uncertain),1,0
+1416191,novel,muted,14,ravo,7,food west north,food south west,gavi lavo rika zuna vuno daru bovi,gavi lavo rika zuna vuno daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,muted,15,vinta,7,food north east,water west north,vuno rika jori rika samu tesu zuna,vuno rika jori rika samu tesu zuna,(uncertain),(uncertain),1,0
+1416191,novel,muted,15,ravo,7,food north east,water west north,gavi lavo tesu zuna rika daru bovi,gavi lavo tesu zuna rika daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,muted,16,vinta,7,water east south,water north east,rika tesu jori tesu samu mepo jori,rika tesu jori tesu samu mepo jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,16,ravo,5,water east south,water north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,(uncertain),(uncertain),1,0
+1416191,novel,muted,17,vinta,7,food south west,food east south,tesu mepo zuna mepo samu vuno zuna,tesu mepo zuna mepo samu vuno zuna,(uncertain),(uncertain),1,0
+1416191,novel,muted,17,ravo,7,food south west,food east south,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,muted,18,vinta,7,water south west,food west north,vuno mepo zuna rika samu vuno jori,vuno mepo zuna rika samu vuno jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,18,ravo,5,water south west,food west north,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,(uncertain),(uncertain),1,0
+1416191,novel,muted,19,vinta,7,water north east,water west north,vuno rika jori rika samu tesu jori,vuno rika jori rika samu tesu jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,19,ravo,5,water north east,water west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,(uncertain),(uncertain),1,0
+1416191,novel,muted,20,vinta,7,water east south,food north east,rika tesu zuna tesu samu mepo jori,rika tesu zuna tesu samu mepo jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,20,ravo,5,water east south,food north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,(uncertain),(uncertain),1,0
+1416191,novel,muted,21,vinta,7,water west north,water south west,mepo vuno jori vuno samu rika jori,mepo vuno jori vuno samu rika jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,21,ravo,5,water west north,water south west,gavi lavo rika jori vuno,gavi lavo rika jori vuno,(uncertain),(uncertain),1,0
+1416191,novel,muted,22,vinta,7,water east south,water north east,rika tesu jori tesu samu mepo jori,rika tesu jori tesu samu mepo jori,(uncertain),(uncertain),1,0
+1416191,novel,muted,22,ravo,5,water east south,water north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,(uncertain),(uncertain),1,0
+1416191,novel,muted,23,vinta,7,food south west,food east south,tesu mepo zuna mepo samu vuno zuna,tesu mepo zuna mepo samu vuno zuna,(uncertain),(uncertain),1,0
+1416191,novel,muted,23,ravo,7,food south west,food east south,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,reversed,0,vinta,7,water south west,food west north,vuno mepo zuna rika samu vuno jori,vuno mepo zuna rika samu vuno jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,0,ravo,5,water south west,food west north,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,(uncertain),(uncertain),1,0
+1416191,novel,reversed,1,vinta,7,water west north,food north east,rika vuno zuna tesu samu rika jori,rika vuno zuna tesu samu rika jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,1,ravo,5,water west north,food north east,gavi lavo rika jori vuno,gavi lavo rika jori vuno,(uncertain),(uncertain),1,0
+1416191,novel,reversed,2,vinta,7,water east south,water north east,rika tesu jori tesu samu mepo jori,rika tesu jori tesu samu mepo jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,2,ravo,5,water east south,water north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,(uncertain),(uncertain),1,0
+1416191,novel,reversed,3,vinta,7,food east south,water south west,mepo tesu jori vuno samu mepo zuna,mepo tesu jori vuno samu mepo zuna,(uncertain),(uncertain),1,0
+1416191,novel,reversed,3,ravo,7,food east south,water south west,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,reversed,4,vinta,7,water north east,water west north,vuno rika jori rika samu tesu jori,vuno rika jori rika samu tesu jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,4,ravo,5,water north east,water west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,(uncertain),(uncertain),1,0
+1416191,novel,reversed,5,vinta,7,food west north,food south west,mepo vuno zuna vuno samu rika zuna,mepo vuno zuna vuno samu rika zuna,(uncertain),(uncertain),1,0
+1416191,novel,reversed,5,ravo,7,food west north,food south west,gavi lavo rika zuna vuno daru bovi,gavi lavo rika zuna vuno daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,reversed,6,vinta,7,food east south,food north east,rika tesu zuna tesu samu mepo zuna,rika tesu zuna tesu samu mepo zuna,(uncertain),(uncertain),1,0
+1416191,novel,reversed,6,ravo,7,food east south,food north east,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,reversed,7,vinta,7,water south west,water east south,tesu mepo jori mepo samu vuno jori,tesu mepo jori mepo samu vuno jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,7,ravo,5,water south west,water east south,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,(uncertain),(uncertain),1,0
+1416191,novel,reversed,8,vinta,7,water west north,food south west,mepo vuno zuna vuno samu rika jori,mepo vuno zuna vuno samu rika jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,8,ravo,5,water west north,food south west,gavi lavo rika jori vuno,gavi lavo rika jori vuno,(uncertain),(uncertain),1,0
+1416191,novel,reversed,9,vinta,7,water north east,food west north,vuno rika zuna rika samu tesu jori,vuno rika zuna rika samu tesu jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,9,ravo,5,water north east,food west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,(uncertain),(uncertain),1,0
+1416191,novel,reversed,10,vinta,7,water south west,water east south,tesu mepo jori mepo samu vuno jori,tesu mepo jori mepo samu vuno jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,10,ravo,5,water south west,water east south,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,(uncertain),(uncertain),1,0
+1416191,novel,reversed,11,vinta,7,water north east,water west north,vuno rika jori rika samu tesu jori,vuno rika jori rika samu tesu jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,11,ravo,5,water north east,water west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,(uncertain),(uncertain),1,0
+1416191,novel,reversed,12,vinta,7,water south west,water east south,tesu mepo jori mepo samu vuno jori,tesu mepo jori mepo samu vuno jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,12,ravo,5,water south west,water east south,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,(uncertain),(uncertain),1,0
+1416191,novel,reversed,13,vinta,7,food east south,food north east,rika tesu zuna tesu samu mepo zuna,rika tesu zuna tesu samu mepo zuna,(uncertain),(uncertain),1,0
+1416191,novel,reversed,13,ravo,7,food east south,food north east,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,reversed,14,vinta,7,food west north,food south west,mepo vuno zuna vuno samu rika zuna,mepo vuno zuna vuno samu rika zuna,(uncertain),(uncertain),1,0
+1416191,novel,reversed,14,ravo,7,food west north,food south west,gavi lavo rika zuna vuno daru bovi,gavi lavo rika zuna vuno daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,reversed,15,vinta,7,food north east,water west north,vuno rika jori rika samu tesu zuna,vuno rika jori rika samu tesu zuna,(uncertain),(uncertain),1,0
+1416191,novel,reversed,15,ravo,7,food north east,water west north,gavi lavo tesu zuna rika daru bovi,gavi lavo tesu zuna rika daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,reversed,16,vinta,7,water east south,water north east,rika tesu jori tesu samu mepo jori,rika tesu jori tesu samu mepo jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,16,ravo,5,water east south,water north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,(uncertain),(uncertain),1,0
+1416191,novel,reversed,17,vinta,7,food south west,food east south,tesu mepo zuna mepo samu vuno zuna,tesu mepo zuna mepo samu vuno zuna,(uncertain),(uncertain),1,0
+1416191,novel,reversed,17,ravo,7,food south west,food east south,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,(uncertain),(uncertain),1,0
+1416191,novel,reversed,18,vinta,7,water south west,food west north,vuno mepo zuna rika samu vuno jori,vuno mepo zuna rika samu vuno jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,18,ravo,5,water south west,food west north,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,(uncertain),(uncertain),1,0
+1416191,novel,reversed,19,vinta,7,water north east,water west north,vuno rika jori rika samu tesu jori,vuno rika jori rika samu tesu jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,19,ravo,5,water north east,water west north,gavi lavo tesu jori rika,gavi lavo tesu jori rika,(uncertain),(uncertain),1,0
+1416191,novel,reversed,20,vinta,7,water east south,food north east,rika tesu zuna tesu samu mepo jori,rika tesu zuna tesu samu mepo jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,20,ravo,5,water east south,food north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,(uncertain),(uncertain),1,0
+1416191,novel,reversed,21,vinta,7,water west north,water south west,mepo vuno jori vuno samu rika jori,mepo vuno jori vuno samu rika jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,21,ravo,5,water west north,water south west,gavi lavo rika jori vuno,gavi lavo rika jori vuno,(uncertain),(uncertain),1,0
+1416191,novel,reversed,22,vinta,7,water east south,water north east,rika tesu jori tesu samu mepo jori,rika tesu jori tesu samu mepo jori,(uncertain),(uncertain),1,0
+1416191,novel,reversed,22,ravo,5,water east south,water north east,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,(uncertain),(uncertain),1,0
+1416191,novel,reversed,23,vinta,7,food south west,food east south,tesu mepo zuna mepo samu vuno zuna,tesu mepo zuna mepo samu vuno zuna,(uncertain),(uncertain),1,0
+1416191,novel,reversed,23,ravo,7,food south west,food east south,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,(uncertain),(uncertain),1,0
+1771193,novel,open,0,vinta,7,water west east,food south north,tora kele bovi zuna daru mepo fira,tora kele bovi zuna daru mepo fira,water west east,food south north,1,1
+1771193,novel,open,0,ravo,5,water west east,food south north,tora fira nalu samu mepo,tora fira nalu samu mepo,water west east,(uncertain),1,1
+1771193,novel,open,1,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,food south north,food north south,1,1
+1771193,novel,open,1,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,food south north,(uncertain),1,1
+1771193,novel,open,2,vinta,7,water west east,water east west,tora fira mepo zuna tora mepo fira,tora fira mepo zuna tora mepo fira,water west east,water east west,1,1
+1771193,novel,open,2,ravo,5,water west east,water east west,tora fira nalu samu mepo,tora fira nalu samu mepo,water west east,(uncertain),1,1
+1771193,novel,open,3,vinta,7,water west east,water east west,tora fira mepo zuna tora mepo fira,tora fira mepo zuna tora mepo fira,water west east,water east west,1,1
+1771193,novel,open,3,ravo,5,water west east,water east west,tora fira nalu samu mepo,tora fira nalu samu mepo,water west east,(uncertain),1,1
+1771193,novel,open,4,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,food south north,food north south,1,1
+1771193,novel,open,4,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,food south north,(uncertain),1,1
+1771193,novel,open,5,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,food south north,food north south,1,1
+1771193,novel,open,5,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,food south north,(uncertain),1,1
+1771193,novel,open,6,vinta,7,water west east,water east west,tora fira mepo zuna tora mepo fira,tora fira mepo zuna tora mepo fira,water west east,water east west,1,1
+1771193,novel,open,6,ravo,5,water west east,water east west,tora fira nalu samu mepo,tora fira nalu samu mepo,water west east,(uncertain),1,1
+1771193,novel,open,7,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,food south north,food north south,1,1
+1771193,novel,open,7,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,food south north,(uncertain),1,1
+1771193,novel,open,8,vinta,7,water east west,food north south,fira daru bovi zuna kele mepo tora,fira daru bovi zuna kele mepo tora,water east west,food north south,1,1
+1771193,novel,open,8,ravo,5,water east west,food north south,fira tora nalu samu mepo,fira tora nalu samu mepo,water east west,(uncertain),1,1
+1771193,novel,open,9,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,food south north,water west east,1,1
+1771193,novel,open,9,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,food south north,(uncertain),1,1
+1771193,novel,open,10,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,food north south,water east west,1,1
+1771193,novel,open,10,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,food north south,(uncertain),1,1
+1771193,novel,open,11,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,food south north,water west east,1,1
+1771193,novel,open,11,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,food south north,(uncertain),1,1
+1771193,novel,open,12,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,food north south,water east west,1,1
+1771193,novel,open,12,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,food north south,(uncertain),1,1
+1771193,novel,open,13,vinta,7,food north south,food south north,daru kele bovi zuna daru bovi kele,daru kele bovi zuna daru bovi kele,food north south,food south north,1,1
+1771193,novel,open,13,ravo,7,food north south,food south north,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,food north south,(uncertain),1,1
+1771193,novel,open,14,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,food south north,water west east,1,1
+1771193,novel,open,14,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,food south north,(uncertain),1,1
+1771193,novel,open,15,vinta,7,water east west,food north south,fira daru bovi zuna kele mepo tora,fira daru bovi zuna kele mepo tora,water east west,food north south,1,1
+1771193,novel,open,15,ravo,5,water east west,food north south,fira tora nalu samu mepo,fira tora nalu samu mepo,water east west,(uncertain),1,1
+1771193,novel,open,16,vinta,7,water east west,water west east,fira tora mepo zuna fira mepo tora,fira tora mepo zuna fira mepo tora,water east west,water west east,1,1
+1771193,novel,open,16,ravo,5,water east west,water west east,fira tora nalu samu mepo,fira tora nalu samu mepo,water east west,(uncertain),1,1
+1771193,novel,open,17,vinta,7,water east west,water west east,fira tora mepo zuna fira mepo tora,fira tora mepo zuna fira mepo tora,water east west,water west east,1,1
+1771193,novel,open,17,ravo,5,water east west,water west east,fira tora nalu samu mepo,fira tora nalu samu mepo,water east west,(uncertain),1,1
+1771193,novel,open,18,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,food south north,water west east,1,1
+1771193,novel,open,18,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,food south north,(uncertain),1,1
+1771193,novel,open,19,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,food south north,food north south,1,1
+1771193,novel,open,19,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,food south north,(uncertain),1,1
+1771193,novel,open,20,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,food north south,water east west,1,1
+1771193,novel,open,20,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,food north south,(uncertain),1,1
+1771193,novel,open,21,vinta,7,food north south,food south north,daru kele bovi zuna daru bovi kele,daru kele bovi zuna daru bovi kele,food north south,food south north,1,1
+1771193,novel,open,21,ravo,7,food north south,food south north,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,food north south,(uncertain),1,1
+1771193,novel,open,22,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,food south north,water west east,1,1
+1771193,novel,open,22,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,food south north,(uncertain),1,1
+1771193,novel,open,23,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,food north south,water east west,1,1
+1771193,novel,open,23,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,food north south,(uncertain),1,1
+1771193,novel,muted,0,vinta,7,water west east,food south north,tora kele bovi zuna daru mepo fira,tora kele bovi zuna daru mepo fira,(uncertain),(uncertain),1,0
+1771193,novel,muted,0,ravo,5,water west east,food south north,tora fira nalu samu mepo,tora fira nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,muted,1,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,muted,1,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,2,vinta,7,water west east,water east west,tora fira mepo zuna tora mepo fira,tora fira mepo zuna tora mepo fira,(uncertain),(uncertain),1,0
+1771193,novel,muted,2,ravo,5,water west east,water east west,tora fira nalu samu mepo,tora fira nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,muted,3,vinta,7,water west east,water east west,tora fira mepo zuna tora mepo fira,tora fira mepo zuna tora mepo fira,(uncertain),(uncertain),1,0
+1771193,novel,muted,3,ravo,5,water west east,water east west,tora fira nalu samu mepo,tora fira nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,muted,4,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,muted,4,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,5,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,muted,5,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,6,vinta,7,water west east,water east west,tora fira mepo zuna tora mepo fira,tora fira mepo zuna tora mepo fira,(uncertain),(uncertain),1,0
+1771193,novel,muted,6,ravo,5,water west east,water east west,tora fira nalu samu mepo,tora fira nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,muted,7,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,muted,7,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,8,vinta,7,water east west,food north south,fira daru bovi zuna kele mepo tora,fira daru bovi zuna kele mepo tora,(uncertain),(uncertain),1,0
+1771193,novel,muted,8,ravo,5,water east west,food north south,fira tora nalu samu mepo,fira tora nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,muted,9,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,muted,9,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,10,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,muted,10,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,11,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,muted,11,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,12,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,muted,12,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,13,vinta,7,food north south,food south north,daru kele bovi zuna daru bovi kele,daru kele bovi zuna daru bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,muted,13,ravo,7,food north south,food south north,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,14,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,muted,14,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,15,vinta,7,water east west,food north south,fira daru bovi zuna kele mepo tora,fira daru bovi zuna kele mepo tora,(uncertain),(uncertain),1,0
+1771193,novel,muted,15,ravo,5,water east west,food north south,fira tora nalu samu mepo,fira tora nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,muted,16,vinta,7,water east west,water west east,fira tora mepo zuna fira mepo tora,fira tora mepo zuna fira mepo tora,(uncertain),(uncertain),1,0
+1771193,novel,muted,16,ravo,5,water east west,water west east,fira tora nalu samu mepo,fira tora nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,muted,17,vinta,7,water east west,water west east,fira tora mepo zuna fira mepo tora,fira tora mepo zuna fira mepo tora,(uncertain),(uncertain),1,0
+1771193,novel,muted,17,ravo,5,water east west,water west east,fira tora nalu samu mepo,fira tora nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,muted,18,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,muted,18,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,19,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,muted,19,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,20,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,muted,20,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,21,vinta,7,food north south,food south north,daru kele bovi zuna daru bovi kele,daru kele bovi zuna daru bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,muted,21,ravo,7,food north south,food south north,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,22,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,muted,22,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,muted,23,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,muted,23,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,0,vinta,7,water west east,food south north,tora kele bovi zuna daru mepo fira,tora kele bovi zuna daru mepo fira,(uncertain),(uncertain),1,0
+1771193,novel,reversed,0,ravo,5,water west east,food south north,tora fira nalu samu mepo,tora fira nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,1,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,reversed,1,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,2,vinta,7,water west east,water east west,tora fira mepo zuna tora mepo fira,tora fira mepo zuna tora mepo fira,(uncertain),(uncertain),1,0
+1771193,novel,reversed,2,ravo,5,water west east,water east west,tora fira nalu samu mepo,tora fira nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,3,vinta,7,water west east,water east west,tora fira mepo zuna tora mepo fira,tora fira mepo zuna tora mepo fira,(uncertain),(uncertain),1,0
+1771193,novel,reversed,3,ravo,5,water west east,water east west,tora fira nalu samu mepo,tora fira nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,4,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,reversed,4,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,5,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,reversed,5,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,6,vinta,7,water west east,water east west,tora fira mepo zuna tora mepo fira,tora fira mepo zuna tora mepo fira,(uncertain),(uncertain),1,0
+1771193,novel,reversed,6,ravo,5,water west east,water east west,tora fira nalu samu mepo,tora fira nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,7,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,reversed,7,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,8,vinta,7,water east west,food north south,fira daru bovi zuna kele mepo tora,fira daru bovi zuna kele mepo tora,(uncertain),(uncertain),1,0
+1771193,novel,reversed,8,ravo,5,water east west,food north south,fira tora nalu samu mepo,fira tora nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,9,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,reversed,9,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,10,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,reversed,10,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,11,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,reversed,11,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,12,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,reversed,12,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,13,vinta,7,food north south,food south north,daru kele bovi zuna daru bovi kele,daru kele bovi zuna daru bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,reversed,13,ravo,7,food north south,food south north,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,14,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,reversed,14,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,15,vinta,7,water east west,food north south,fira daru bovi zuna kele mepo tora,fira daru bovi zuna kele mepo tora,(uncertain),(uncertain),1,0
+1771193,novel,reversed,15,ravo,5,water east west,food north south,fira tora nalu samu mepo,fira tora nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,16,vinta,7,water east west,water west east,fira tora mepo zuna fira mepo tora,fira tora mepo zuna fira mepo tora,(uncertain),(uncertain),1,0
+1771193,novel,reversed,16,ravo,5,water east west,water west east,fira tora nalu samu mepo,fira tora nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,17,vinta,7,water east west,water west east,fira tora mepo zuna fira mepo tora,fira tora mepo zuna fira mepo tora,(uncertain),(uncertain),1,0
+1771193,novel,reversed,17,ravo,5,water east west,water west east,fira tora nalu samu mepo,fira tora nalu samu mepo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,18,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,reversed,18,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,19,vinta,7,food south north,food north south,kele daru bovi zuna kele bovi daru,kele daru bovi zuna kele bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,reversed,19,ravo,7,food south north,food north south,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,20,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,reversed,20,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,21,vinta,7,food north south,food south north,daru kele bovi zuna daru bovi kele,daru kele bovi zuna daru bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,reversed,21,ravo,7,food north south,food south north,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,22,vinta,7,food south north,water west east,kele tora mepo zuna fira bovi daru,kele tora mepo zuna fira bovi daru,(uncertain),(uncertain),1,0
+1771193,novel,reversed,22,ravo,7,food south north,water west east,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+1771193,novel,reversed,23,vinta,7,food north south,water east west,daru fira mepo zuna tora bovi kele,daru fira mepo zuna tora bovi kele,(uncertain),(uncertain),1,0
+1771193,novel,reversed,23,ravo,7,food north south,water east west,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,(uncertain),(uncertain),1,0
+2095213,novel,open,0,vinta,7,food west south,water north west,nalu tesu pemi bovi bovi zuna jori,nalu tesu pemi bovi bovi zuna jori,food west south,water north west,1,1
+2095213,novel,open,0,ravo,7,food west south,water north west,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,food west south,(uncertain),1,1
+2095213,novel,open,1,vinta,7,water south east,water west south,nalu nalu bovi jori jori zuna vuno,nalu nalu bovi jori jori zuna vuno,water south east,water west south,1,1
+2095213,novel,open,1,ravo,5,water south east,water west south,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,water south east,(uncertain),1,1
+2095213,novel,open,2,vinta,7,food south east,water east north,nalu tesu vuno jori pemi zuna vuno,nalu tesu vuno jori pemi zuna vuno,food south east,water east north,1,1
+2095213,novel,open,2,ravo,7,food south east,water east north,tesu gavi mepo jori vuno tora rika,tesu gavi mepo jori vuno tora rika,food south east,(uncertain),1,1
+2095213,novel,open,3,vinta,7,food east north,water north west,nalu tesu pemi vuno bovi zuna pemi,nalu tesu pemi vuno bovi zuna pemi,food east north,water north west,1,1
+2095213,novel,open,3,ravo,7,food east north,water north west,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,food east north,(uncertain),1,1
+2095213,novel,open,4,vinta,7,water west south,food north west,tesu nalu pemi bovi bovi zuna jori,tesu nalu pemi bovi bovi zuna jori,water west south,food north west,1,1
+2095213,novel,open,4,ravo,5,water west south,food north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,water west south,(uncertain),1,1
+2095213,novel,open,5,vinta,7,food west south,water south east,nalu tesu jori bovi vuno zuna jori,nalu tesu jori bovi vuno zuna jori,food west south,water south east,1,1
+2095213,novel,open,5,ravo,7,food west south,water south east,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,food west south,(uncertain),1,1
+2095213,novel,open,6,vinta,7,food south east,water east north,nalu tesu vuno jori pemi zuna vuno,nalu tesu vuno jori pemi zuna vuno,food south east,water east north,1,1
+2095213,novel,open,6,ravo,7,food south east,water east north,tesu gavi mepo jori vuno tora rika,tesu gavi mepo jori vuno tora rika,food south east,(uncertain),1,1
+2095213,novel,open,7,vinta,7,water west south,water north west,nalu nalu pemi bovi bovi zuna jori,nalu nalu pemi bovi bovi zuna jori,water west south,water north west,1,1
+2095213,novel,open,7,ravo,5,water west south,water north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,water west south,(uncertain),1,1
+2095213,novel,open,8,vinta,7,water south east,food east north,tesu nalu vuno jori pemi zuna vuno,tesu nalu vuno jori pemi zuna vuno,water south east,food east north,1,1
+2095213,novel,open,8,ravo,5,water south east,food east north,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,water south east,(uncertain),1,1
+2095213,novel,open,9,vinta,7,food north west,water east north,nalu tesu vuno pemi pemi zuna bovi,nalu tesu vuno pemi pemi zuna bovi,food north west,water east north,1,1
+2095213,novel,open,9,ravo,7,food north west,water east north,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,food north west,(uncertain),1,1
+2095213,novel,open,10,vinta,7,food west south,water north west,nalu tesu pemi bovi bovi zuna jori,nalu tesu pemi bovi bovi zuna jori,food west south,water north west,1,1
+2095213,novel,open,10,ravo,7,food west south,water north west,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,food west south,(uncertain),1,1
+2095213,novel,open,11,vinta,7,water west south,food south east,tesu nalu jori bovi vuno zuna jori,tesu nalu jori bovi vuno zuna jori,water west south,food south east,1,1
+2095213,novel,open,11,ravo,5,water west south,food south east,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,water west south,(uncertain),1,1
+2095213,novel,open,12,vinta,7,food east north,water south east,nalu tesu jori vuno vuno zuna pemi,nalu tesu jori vuno vuno zuna pemi,food east north,water south east,1,1
+2095213,novel,open,12,ravo,7,food east north,water south east,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,food east north,(uncertain),1,1
+2095213,novel,open,13,vinta,7,water north west,water east north,nalu nalu vuno pemi pemi zuna bovi,nalu nalu vuno pemi pemi zuna bovi,water north west,water east north,1,1
+2095213,novel,open,13,ravo,5,water north west,water east north,nalu gavi mepo pemi bovi,nalu gavi mepo pemi bovi,water north west,(uncertain),1,1
+2095213,novel,open,14,vinta,7,water south east,water west south,nalu nalu bovi jori jori zuna vuno,nalu nalu bovi jori jori zuna vuno,water south east,water west south,1,1
+2095213,novel,open,14,ravo,5,water south east,water west south,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,water south east,(uncertain),1,1
+2095213,novel,open,15,vinta,7,food west south,food north west,tesu tesu pemi bovi bovi zuna jori,tesu tesu pemi bovi bovi zuna jori,food west south,food north west,1,1
+2095213,novel,open,15,ravo,7,food west south,food north west,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,food west south,(uncertain),1,1
+2095213,novel,open,16,vinta,7,food east north,food south east,tesu tesu jori vuno vuno zuna pemi,tesu tesu jori vuno vuno zuna pemi,food east north,food south east,1,1
+2095213,novel,open,16,ravo,7,food east north,food south east,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,food east north,(uncertain),1,1
+2095213,novel,open,17,vinta,7,food north west,water east north,nalu tesu vuno pemi pemi zuna bovi,nalu tesu vuno pemi pemi zuna bovi,food north west,water east north,1,1
+2095213,novel,open,17,ravo,7,food north west,water east north,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,food north west,(uncertain),1,1
+2095213,novel,open,18,vinta,7,water west south,water north west,nalu nalu pemi bovi bovi zuna jori,nalu nalu pemi bovi bovi zuna jori,water west south,water north west,1,1
+2095213,novel,open,18,ravo,5,water west south,water north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,water west south,(uncertain),1,1
+2095213,novel,open,19,vinta,7,water south east,food west south,tesu nalu bovi jori jori zuna vuno,tesu nalu bovi jori jori zuna vuno,water south east,food west south,1,1
+2095213,novel,open,19,ravo,5,water south east,food west south,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,water south east,(uncertain),1,1
+2095213,novel,open,20,vinta,7,water east north,food south east,tesu nalu jori vuno vuno zuna pemi,tesu nalu jori vuno vuno zuna pemi,water east north,food south east,1,1
+2095213,novel,open,20,ravo,5,water east north,food south east,nalu gavi mepo vuno pemi,nalu gavi mepo vuno pemi,water east north,(uncertain),1,1
+2095213,novel,open,21,vinta,7,food north west,food east north,tesu tesu vuno pemi pemi zuna bovi,tesu tesu vuno pemi pemi zuna bovi,food north west,food east north,1,1
+2095213,novel,open,21,ravo,7,food north west,food east north,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,food north west,(uncertain),1,1
+2095213,novel,open,22,vinta,7,water west south,water north west,nalu nalu pemi bovi bovi zuna jori,nalu nalu pemi bovi bovi zuna jori,water west south,water north west,1,1
+2095213,novel,open,22,ravo,5,water west south,water north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,water west south,(uncertain),1,1
+2095213,novel,open,23,vinta,7,food west south,water south east,nalu tesu jori bovi vuno zuna jori,nalu tesu jori bovi vuno zuna jori,food west south,water south east,1,1
+2095213,novel,open,23,ravo,7,food west south,water south east,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,food west south,(uncertain),1,1
+2095213,novel,muted,0,vinta,7,food west south,water north west,nalu tesu pemi bovi bovi zuna jori,nalu tesu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,0,ravo,7,food west south,water north west,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,1,vinta,7,water south east,water west south,nalu nalu bovi jori jori zuna vuno,nalu nalu bovi jori jori zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,muted,1,ravo,5,water south east,water west south,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,(uncertain),(uncertain),1,0
+2095213,novel,muted,2,vinta,7,food south east,water east north,nalu tesu vuno jori pemi zuna vuno,nalu tesu vuno jori pemi zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,muted,2,ravo,7,food south east,water east north,tesu gavi mepo jori vuno tora rika,tesu gavi mepo jori vuno tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,3,vinta,7,food east north,water north west,nalu tesu pemi vuno bovi zuna pemi,nalu tesu pemi vuno bovi zuna pemi,(uncertain),(uncertain),1,0
+2095213,novel,muted,3,ravo,7,food east north,water north west,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,4,vinta,7,water west south,food north west,tesu nalu pemi bovi bovi zuna jori,tesu nalu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,4,ravo,5,water west south,food north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,5,vinta,7,food west south,water south east,nalu tesu jori bovi vuno zuna jori,nalu tesu jori bovi vuno zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,5,ravo,7,food west south,water south east,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,6,vinta,7,food south east,water east north,nalu tesu vuno jori pemi zuna vuno,nalu tesu vuno jori pemi zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,muted,6,ravo,7,food south east,water east north,tesu gavi mepo jori vuno tora rika,tesu gavi mepo jori vuno tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,7,vinta,7,water west south,water north west,nalu nalu pemi bovi bovi zuna jori,nalu nalu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,7,ravo,5,water west south,water north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,8,vinta,7,water south east,food east north,tesu nalu vuno jori pemi zuna vuno,tesu nalu vuno jori pemi zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,muted,8,ravo,5,water south east,food east north,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,(uncertain),(uncertain),1,0
+2095213,novel,muted,9,vinta,7,food north west,water east north,nalu tesu vuno pemi pemi zuna bovi,nalu tesu vuno pemi pemi zuna bovi,(uncertain),(uncertain),1,0
+2095213,novel,muted,9,ravo,7,food north west,water east north,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,10,vinta,7,food west south,water north west,nalu tesu pemi bovi bovi zuna jori,nalu tesu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,10,ravo,7,food west south,water north west,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,11,vinta,7,water west south,food south east,tesu nalu jori bovi vuno zuna jori,tesu nalu jori bovi vuno zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,11,ravo,5,water west south,food south east,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,12,vinta,7,food east north,water south east,nalu tesu jori vuno vuno zuna pemi,nalu tesu jori vuno vuno zuna pemi,(uncertain),(uncertain),1,0
+2095213,novel,muted,12,ravo,7,food east north,water south east,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,13,vinta,7,water north west,water east north,nalu nalu vuno pemi pemi zuna bovi,nalu nalu vuno pemi pemi zuna bovi,(uncertain),(uncertain),1,0
+2095213,novel,muted,13,ravo,5,water north west,water east north,nalu gavi mepo pemi bovi,nalu gavi mepo pemi bovi,(uncertain),(uncertain),1,0
+2095213,novel,muted,14,vinta,7,water south east,water west south,nalu nalu bovi jori jori zuna vuno,nalu nalu bovi jori jori zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,muted,14,ravo,5,water south east,water west south,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,(uncertain),(uncertain),1,0
+2095213,novel,muted,15,vinta,7,food west south,food north west,tesu tesu pemi bovi bovi zuna jori,tesu tesu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,15,ravo,7,food west south,food north west,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,16,vinta,7,food east north,food south east,tesu tesu jori vuno vuno zuna pemi,tesu tesu jori vuno vuno zuna pemi,(uncertain),(uncertain),1,0
+2095213,novel,muted,16,ravo,7,food east north,food south east,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,17,vinta,7,food north west,water east north,nalu tesu vuno pemi pemi zuna bovi,nalu tesu vuno pemi pemi zuna bovi,(uncertain),(uncertain),1,0
+2095213,novel,muted,17,ravo,7,food north west,water east north,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,18,vinta,7,water west south,water north west,nalu nalu pemi bovi bovi zuna jori,nalu nalu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,18,ravo,5,water west south,water north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,19,vinta,7,water south east,food west south,tesu nalu bovi jori jori zuna vuno,tesu nalu bovi jori jori zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,muted,19,ravo,5,water south east,food west south,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,(uncertain),(uncertain),1,0
+2095213,novel,muted,20,vinta,7,water east north,food south east,tesu nalu jori vuno vuno zuna pemi,tesu nalu jori vuno vuno zuna pemi,(uncertain),(uncertain),1,0
+2095213,novel,muted,20,ravo,5,water east north,food south east,nalu gavi mepo vuno pemi,nalu gavi mepo vuno pemi,(uncertain),(uncertain),1,0
+2095213,novel,muted,21,vinta,7,food north west,food east north,tesu tesu vuno pemi pemi zuna bovi,tesu tesu vuno pemi pemi zuna bovi,(uncertain),(uncertain),1,0
+2095213,novel,muted,21,ravo,7,food north west,food east north,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,muted,22,vinta,7,water west south,water north west,nalu nalu pemi bovi bovi zuna jori,nalu nalu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,22,ravo,5,water west south,water north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,23,vinta,7,food west south,water south east,nalu tesu jori bovi vuno zuna jori,nalu tesu jori bovi vuno zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,muted,23,ravo,7,food west south,water south east,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,0,vinta,7,food west south,water north west,nalu tesu pemi bovi bovi zuna jori,nalu tesu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,0,ravo,7,food west south,water north west,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,1,vinta,7,water south east,water west south,nalu nalu bovi jori jori zuna vuno,nalu nalu bovi jori jori zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,reversed,1,ravo,5,water south east,water west south,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,(uncertain),(uncertain),1,0
+2095213,novel,reversed,2,vinta,7,food south east,water east north,nalu tesu vuno jori pemi zuna vuno,nalu tesu vuno jori pemi zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,reversed,2,ravo,7,food south east,water east north,tesu gavi mepo jori vuno tora rika,tesu gavi mepo jori vuno tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,3,vinta,7,food east north,water north west,nalu tesu pemi vuno bovi zuna pemi,nalu tesu pemi vuno bovi zuna pemi,(uncertain),(uncertain),1,0
+2095213,novel,reversed,3,ravo,7,food east north,water north west,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,4,vinta,7,water west south,food north west,tesu nalu pemi bovi bovi zuna jori,tesu nalu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,4,ravo,5,water west south,food north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,5,vinta,7,food west south,water south east,nalu tesu jori bovi vuno zuna jori,nalu tesu jori bovi vuno zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,5,ravo,7,food west south,water south east,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,6,vinta,7,food south east,water east north,nalu tesu vuno jori pemi zuna vuno,nalu tesu vuno jori pemi zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,reversed,6,ravo,7,food south east,water east north,tesu gavi mepo jori vuno tora rika,tesu gavi mepo jori vuno tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,7,vinta,7,water west south,water north west,nalu nalu pemi bovi bovi zuna jori,nalu nalu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,7,ravo,5,water west south,water north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,8,vinta,7,water south east,food east north,tesu nalu vuno jori pemi zuna vuno,tesu nalu vuno jori pemi zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,reversed,8,ravo,5,water south east,food east north,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,(uncertain),(uncertain),1,0
+2095213,novel,reversed,9,vinta,7,food north west,water east north,nalu tesu vuno pemi pemi zuna bovi,nalu tesu vuno pemi pemi zuna bovi,(uncertain),(uncertain),1,0
+2095213,novel,reversed,9,ravo,7,food north west,water east north,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,10,vinta,7,food west south,water north west,nalu tesu pemi bovi bovi zuna jori,nalu tesu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,10,ravo,7,food west south,water north west,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,11,vinta,7,water west south,food south east,tesu nalu jori bovi vuno zuna jori,tesu nalu jori bovi vuno zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,11,ravo,5,water west south,food south east,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,12,vinta,7,food east north,water south east,nalu tesu jori vuno vuno zuna pemi,nalu tesu jori vuno vuno zuna pemi,(uncertain),(uncertain),1,0
+2095213,novel,reversed,12,ravo,7,food east north,water south east,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,13,vinta,7,water north west,water east north,nalu nalu vuno pemi pemi zuna bovi,nalu nalu vuno pemi pemi zuna bovi,(uncertain),(uncertain),1,0
+2095213,novel,reversed,13,ravo,5,water north west,water east north,nalu gavi mepo pemi bovi,nalu gavi mepo pemi bovi,(uncertain),(uncertain),1,0
+2095213,novel,reversed,14,vinta,7,water south east,water west south,nalu nalu bovi jori jori zuna vuno,nalu nalu bovi jori jori zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,reversed,14,ravo,5,water south east,water west south,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,(uncertain),(uncertain),1,0
+2095213,novel,reversed,15,vinta,7,food west south,food north west,tesu tesu pemi bovi bovi zuna jori,tesu tesu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,15,ravo,7,food west south,food north west,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,16,vinta,7,food east north,food south east,tesu tesu jori vuno vuno zuna pemi,tesu tesu jori vuno vuno zuna pemi,(uncertain),(uncertain),1,0
+2095213,novel,reversed,16,ravo,7,food east north,food south east,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,17,vinta,7,food north west,water east north,nalu tesu vuno pemi pemi zuna bovi,nalu tesu vuno pemi pemi zuna bovi,(uncertain),(uncertain),1,0
+2095213,novel,reversed,17,ravo,7,food north west,water east north,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,18,vinta,7,water west south,water north west,nalu nalu pemi bovi bovi zuna jori,nalu nalu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,18,ravo,5,water west south,water north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,19,vinta,7,water south east,food west south,tesu nalu bovi jori jori zuna vuno,tesu nalu bovi jori jori zuna vuno,(uncertain),(uncertain),1,0
+2095213,novel,reversed,19,ravo,5,water south east,food west south,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,(uncertain),(uncertain),1,0
+2095213,novel,reversed,20,vinta,7,water east north,food south east,tesu nalu jori vuno vuno zuna pemi,tesu nalu jori vuno vuno zuna pemi,(uncertain),(uncertain),1,0
+2095213,novel,reversed,20,ravo,5,water east north,food south east,nalu gavi mepo vuno pemi,nalu gavi mepo vuno pemi,(uncertain),(uncertain),1,0
+2095213,novel,reversed,21,vinta,7,food north west,food east north,tesu tesu vuno pemi pemi zuna bovi,tesu tesu vuno pemi pemi zuna bovi,(uncertain),(uncertain),1,0
+2095213,novel,reversed,21,ravo,7,food north west,food east north,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,(uncertain),(uncertain),1,0
+2095213,novel,reversed,22,vinta,7,water west south,water north west,nalu nalu pemi bovi bovi zuna jori,nalu nalu pemi bovi bovi zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,22,ravo,5,water west south,water north west,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,23,vinta,7,food west south,water south east,nalu tesu jori bovi vuno zuna jori,nalu tesu jori bovi vuno zuna jori,(uncertain),(uncertain),1,0
+2095213,novel,reversed,23,ravo,7,food west south,water south east,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,(uncertain),(uncertain),1,0

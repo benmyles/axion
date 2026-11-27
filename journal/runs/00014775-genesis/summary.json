@@ -1,0 +1,59 @@
+{
+  "kind": "genesis",
+  "command": "genesis",
+  "title": "Axion Genesis v38 · Blackwell GPU Benchmark",
+  "subtitle": "Neocortex Scale (≤32L, ≤192 syn/cell) + Burstprop + dPC + NMDA + k-WTA · 4 B/syn · 512x512 world · 0 B spill",
+  "performance": {
+    "device": "NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU",
+    "command": "genesis",
+    "wall": 4.423994764000001,
+    "interactive": false,
+    "work": 1073741824,
+    "rate": 273019999999.99997,
+    "unit": "syn-ops/s",
+    "seconds": 0.003933,
+    "time_scope": "Blackwell SM 12.0 in-register SNN",
+    "bytes": 23552,
+    "byte_scope": "Full embodied creature (4B/syn)"
+  },
+  "source": "",
+  "archive": "",
+  "family": "Synaptic throughput",
+  "measure": 273.02,
+  "unit": " GSynOps/s",
+  "stats": [
+    [
+      "Inference GSynOps/s",
+      273.0
+    ],
+    [
+      "Plastic GSynOps/s",
+      181.4
+    ],
+    [
+      "Bytes / synapse",
+      4
+    ]
+  ],
+  "scores": [],
+  "narrative": [
+    "Blackwell SM 12.0 sustained 273.0 GSynOps/s (17.06 Gneuron-ticks/s) across 1024 layers with 0 B spill.",
+    "Live 4-receptor Bittner BTSP + active apical BAC + 8-tick axonal delays ran at 181.4 GSynOps/s (4 B/synapse).",
+    "512x512 world stepped in 120.73 µs; CA+growth-cones grew 1024 bodies+brains in 181.869 ms; ALife hit 82 ticks/s."
+  ],
+  "bullets": [
+    "Coupled 512x512 world + brains + ecology = 0.084 Mcreature-ticks/s."
+  ],
+  "receipt": "18b47b96c63bf82fad3d9b68b4e9d38f5cf9569392f9a3827a31c92520d16300",
+  "activity": {},
+  "alive": null,
+  "capacity": 0,
+  "depth": 0,
+  "peak": 0,
+  "observations": 0,
+  "id": 14775,
+  "path": "runs/00014775-genesis",
+  "date": "2026-11-27T01:50:54Z",
+  "version": 1,
+  "genesis_mode": "bench"
+}

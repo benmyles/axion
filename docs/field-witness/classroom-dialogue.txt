@@ -1,0 +1,16 @@
+speaker> jade
+braid_recall=4  person=0  nouns=8  forms=2  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0
+speaker> amber
+braid_recall=4  person=0  nouns=8  forms=2  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0
+speaker> plum
+braid_recall=4  person=0  nouns=8  forms=2  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0
+speaker> jade
+braid_recall=4  person=0  nouns=8  forms=2  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0
+speaker> amber
+braid_recall=4  person=0  nouns=8  forms=2  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0
+speaker> teal
+braid_recall=4  person=0  nouns=8  forms=2  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0
+speaker> teal
+braid_recall=4  person=0  nouns=8  forms=2  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0
+speaker> plum
+braid_recall=4  person=0  nouns=8  forms=2  offered=0  cost=0  writes=0  asked=0  witnessed=0  received=0  answered=1  from_testimony=0

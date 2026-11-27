@@ -1,0 +1,577 @@
+seed,trial,condition,input,expected,reply,correct
+162337,0,extract,pemi kele gavi bovi mepo gavi bovi,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,1
+162337,0,exchanged_bearings,gavi kele pemi bovi mepo gavi bovi,bovi pemi zuna gavi fira,bovi pemi zuna gavi fira,1
+162337,0,missing_previous,bovi gavi zuna pemi fira,(silence),(silence),1
+162337,1,extract,pemi pemi gavi bovi mepo daru tora,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,1
+162337,1,exchanged_bearings,gavi pemi pemi bovi mepo daru tora,tora pemi zuna gavi fira rika lavo,tora pemi zuna gavi fira rika lavo,1
+162337,1,missing_previous,tora gavi zuna pemi fira rika lavo,(silence),(silence),1
+162337,2,extract,gavi daru kele tora mepo kele bovi,bovi kele zuna gavi fira,bovi kele zuna gavi fira,1
+162337,2,exchanged_bearings,kele daru gavi tora mepo kele bovi,bovi gavi zuna kele fira,bovi gavi zuna kele fira,1
+162337,2,missing_previous,bovi kele zuna gavi fira,(silence),(silence),1
+162337,3,extract,pemi kele gavi bovi mepo gavi bovi,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,1
+162337,3,exchanged_bearings,gavi kele pemi bovi mepo gavi bovi,bovi pemi zuna gavi fira,bovi pemi zuna gavi fira,1
+162337,3,missing_previous,bovi gavi zuna pemi fira,(silence),(silence),1
+162337,4,extract,kele daru daru tora mepo kele bovi,bovi daru zuna kele fira,bovi daru zuna kele fira,1
+162337,4,exchanged_bearings,daru daru kele tora mepo kele bovi,bovi kele zuna daru fira,bovi kele zuna daru fira,1
+162337,4,missing_previous,bovi daru zuna kele fira,(silence),(silence),1
+162337,5,extract,pemi kele gavi bovi mepo gavi bovi,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,1
+162337,5,exchanged_bearings,gavi kele pemi bovi mepo gavi bovi,bovi pemi zuna gavi fira,bovi pemi zuna gavi fira,1
+162337,5,missing_previous,bovi gavi zuna pemi fira,(silence),(silence),1
+162337,6,extract,daru pemi pemi tora mepo daru bovi,bovi pemi zuna daru fira,bovi pemi zuna daru fira,1
+162337,6,exchanged_bearings,pemi pemi daru tora mepo daru bovi,bovi daru zuna pemi fira,bovi daru zuna pemi fira,1
+162337,6,missing_previous,bovi pemi zuna daru fira,(silence),(silence),1
+162337,7,extract,kele gavi daru tora mepo pemi bovi,bovi daru zuna kele fira,bovi daru zuna kele fira,1
+162337,7,exchanged_bearings,daru gavi kele tora mepo pemi bovi,bovi kele zuna daru fira,bovi kele zuna daru fira,1
+162337,7,missing_previous,bovi daru zuna kele fira,(silence),(silence),1
+162337,8,extract,pemi kele gavi tora mepo gavi bovi,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,1
+162337,8,exchanged_bearings,gavi kele pemi tora mepo gavi bovi,bovi pemi zuna gavi fira,bovi pemi zuna gavi fira,1
+162337,8,missing_previous,bovi gavi zuna pemi fira,(silence),(silence),1
+162337,9,extract,pemi gavi gavi bovi mepo pemi tora,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,1
+162337,9,exchanged_bearings,gavi gavi pemi bovi mepo pemi tora,tora pemi zuna gavi fira rika lavo,tora pemi zuna gavi fira rika lavo,1
+162337,9,missing_previous,tora gavi zuna pemi fira rika lavo,(silence),(silence),1
+162337,10,extract,pemi pemi gavi bovi mepo daru tora,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,1
+162337,10,exchanged_bearings,gavi pemi pemi bovi mepo daru tora,tora pemi zuna gavi fira rika lavo,tora pemi zuna gavi fira rika lavo,1
+162337,10,missing_previous,tora gavi zuna pemi fira rika lavo,(silence),(silence),1
+162337,11,extract,gavi kele kele tora mepo gavi bovi,bovi kele zuna gavi fira,bovi kele zuna gavi fira,1
+162337,11,exchanged_bearings,kele kele gavi tora mepo gavi bovi,bovi gavi zuna kele fira,bovi gavi zuna kele fira,1
+162337,11,missing_previous,bovi kele zuna gavi fira,(silence),(silence),1
+162337,12,extract,kele gavi daru tora mepo pemi bovi,bovi daru zuna kele fira,bovi daru zuna kele fira,1
+162337,12,exchanged_bearings,daru gavi kele tora mepo pemi bovi,bovi kele zuna daru fira,bovi kele zuna daru fira,1
+162337,12,missing_previous,bovi daru zuna kele fira,(silence),(silence),1
+162337,13,extract,kele pemi daru tora mepo daru tora,tora daru zuna kele fira rika lavo,tora daru zuna kele fira rika lavo,1
+162337,13,exchanged_bearings,daru pemi kele tora mepo daru tora,tora kele zuna daru fira rika lavo,tora kele zuna daru fira rika lavo,1
+162337,13,missing_previous,tora daru zuna kele fira rika lavo,(silence),(silence),1
+162337,14,extract,gavi kele kele bovi mepo gavi tora,tora kele zuna gavi fira rika lavo,tora kele zuna gavi fira rika lavo,1
+162337,14,exchanged_bearings,kele kele gavi bovi mepo gavi tora,tora gavi zuna kele fira rika lavo,tora gavi zuna kele fira rika lavo,1
+162337,14,missing_previous,tora kele zuna gavi fira rika lavo,(silence),(silence),1
+162337,15,extract,gavi kele kele tora mepo gavi bovi,bovi kele zuna gavi fira,bovi kele zuna gavi fira,1
+162337,15,exchanged_bearings,kele kele gavi tora mepo gavi bovi,bovi gavi zuna kele fira,bovi gavi zuna kele fira,1
+162337,15,missing_previous,bovi kele zuna gavi fira,(silence),(silence),1
+162337,16,extract,daru gavi pemi tora mepo pemi tora,tora pemi zuna daru fira rika lavo,tora pemi zuna daru fira rika lavo,1
+162337,16,exchanged_bearings,pemi gavi daru tora mepo pemi tora,tora daru zuna pemi fira rika lavo,tora daru zuna pemi fira rika lavo,1
+162337,16,missing_previous,tora pemi zuna daru fira rika lavo,(silence),(silence),1
+162337,17,extract,daru gavi pemi tora mepo pemi tora,tora pemi zuna daru fira rika lavo,tora pemi zuna daru fira rika lavo,1
+162337,17,exchanged_bearings,pemi gavi daru tora mepo pemi tora,tora daru zuna pemi fira rika lavo,tora daru zuna pemi fira rika lavo,1
+162337,17,missing_previous,tora pemi zuna daru fira rika lavo,(silence),(silence),1
+162337,18,extract,pemi kele gavi tora mepo gavi tora,tora gavi zuna pemi fira rika lavo,tora gavi zuna pemi fira rika lavo,1
+162337,18,exchanged_bearings,gavi kele pemi tora mepo gavi tora,tora pemi zuna gavi fira rika lavo,tora pemi zuna gavi fira rika lavo,1
+162337,18,missing_previous,tora gavi zuna pemi fira rika lavo,(silence),(silence),1
+162337,19,extract,kele pemi daru bovi mepo daru bovi,bovi daru zuna kele fira,bovi daru zuna kele fira,1
+162337,19,exchanged_bearings,daru pemi kele bovi mepo daru bovi,bovi kele zuna daru fira,bovi kele zuna daru fira,1
+162337,19,missing_previous,bovi daru zuna kele fira,(silence),(silence),1
+162337,20,extract,pemi kele gavi bovi mepo gavi bovi,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,1
+162337,20,exchanged_bearings,gavi kele pemi bovi mepo gavi bovi,bovi pemi zuna gavi fira,bovi pemi zuna gavi fira,1
+162337,20,missing_previous,bovi gavi zuna pemi fira,(silence),(silence),1
+162337,21,extract,daru gavi pemi bovi mepo pemi bovi,bovi pemi zuna daru fira,bovi pemi zuna daru fira,1
+162337,21,exchanged_bearings,pemi gavi daru bovi mepo pemi bovi,bovi daru zuna pemi fira,bovi daru zuna pemi fira,1
+162337,21,missing_previous,bovi pemi zuna daru fira,(silence),(silence),1
+162337,22,extract,pemi kele gavi bovi mepo gavi bovi,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,1
+162337,22,exchanged_bearings,gavi kele pemi bovi mepo gavi bovi,bovi pemi zuna gavi fira,bovi pemi zuna gavi fira,1
+162337,22,missing_previous,bovi gavi zuna pemi fira,(silence),(silence),1
+162337,23,extract,pemi daru gavi tora mepo kele bovi,bovi gavi zuna pemi fira,bovi gavi zuna pemi fira,1
+162337,23,exchanged_bearings,gavi daru pemi tora mepo kele bovi,bovi pemi zuna gavi fira,bovi pemi zuna gavi fira,1
+162337,23,missing_previous,bovi gavi zuna pemi fira,(silence),(silence),1
+349907,0,extract,rika pemi rika gavi samu daru samu,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,1
+349907,0,exchanged_bearings,rika samu rika gavi samu daru pemi,pemi samu rika nalu tora kele jori,pemi samu rika nalu tora kele jori,1
+349907,0,missing_previous,samu pemi rika nalu tora kele jori,(silence),(silence),1
+349907,1,extract,rika gavi lavo mepo gavi daru mepo,mepo gavi rika nalu tora kele jori,mepo gavi rika nalu tora kele jori,1
+349907,1,exchanged_bearings,rika mepo lavo mepo gavi daru gavi,gavi mepo rika nalu tora kele jori,gavi mepo rika nalu tora kele jori,1
+349907,1,missing_previous,mepo gavi rika nalu tora kele jori,(silence),(silence),1
+349907,2,extract,rika samu rika mepo gavi daru gavi,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,1
+349907,2,exchanged_bearings,rika gavi rika mepo gavi daru samu,samu gavi rika nalu tora kele jori,samu gavi rika nalu tora kele jori,1
+349907,2,missing_previous,gavi samu rika nalu tora kele jori,(silence),(silence),1
+349907,3,extract,rika pemi lavo gavi samu daru samu,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,1
+349907,3,exchanged_bearings,rika samu lavo gavi samu daru pemi,pemi samu rika nalu tora kele jori,pemi samu rika nalu tora kele jori,1
+349907,3,missing_previous,samu pemi rika nalu tora kele jori,(silence),(silence),1
+349907,4,extract,lavo samu lavo mepo gavi daru gavi,gavi samu lavo nalu tora,gavi samu lavo nalu tora,1
+349907,4,exchanged_bearings,lavo gavi lavo mepo gavi daru samu,samu gavi lavo nalu tora,samu gavi lavo nalu tora,1
+349907,4,missing_previous,gavi samu lavo nalu tora,(silence),(silence),1
+349907,5,extract,rika pemi rika gavi samu daru samu,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,1
+349907,5,exchanged_bearings,rika samu rika gavi samu daru pemi,pemi samu rika nalu tora kele jori,pemi samu rika nalu tora kele jori,1
+349907,5,missing_previous,samu pemi rika nalu tora kele jori,(silence),(silence),1
+349907,6,extract,rika pemi rika gavi samu daru samu,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,1
+349907,6,exchanged_bearings,rika samu rika gavi samu daru pemi,pemi samu rika nalu tora kele jori,pemi samu rika nalu tora kele jori,1
+349907,6,missing_previous,samu pemi rika nalu tora kele jori,(silence),(silence),1
+349907,7,extract,rika pemi rika gavi samu daru samu,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,1
+349907,7,exchanged_bearings,rika samu rika gavi samu daru pemi,pemi samu rika nalu tora kele jori,pemi samu rika nalu tora kele jori,1
+349907,7,missing_previous,samu pemi rika nalu tora kele jori,(silence),(silence),1
+349907,8,extract,rika samu rika mepo gavi daru gavi,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,1
+349907,8,exchanged_bearings,rika gavi rika mepo gavi daru samu,samu gavi rika nalu tora kele jori,samu gavi rika nalu tora kele jori,1
+349907,8,missing_previous,gavi samu rika nalu tora kele jori,(silence),(silence),1
+349907,9,extract,rika mepo rika samu pemi daru pemi,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,1
+349907,9,exchanged_bearings,rika pemi rika samu pemi daru mepo,mepo pemi rika nalu tora kele jori,mepo pemi rika nalu tora kele jori,1
+349907,9,missing_previous,pemi mepo rika nalu tora kele jori,(silence),(silence),1
+349907,10,extract,rika gavi rika pemi mepo daru mepo,mepo gavi rika nalu tora kele jori,mepo gavi rika nalu tora kele jori,1
+349907,10,exchanged_bearings,rika mepo rika pemi mepo daru gavi,gavi mepo rika nalu tora kele jori,gavi mepo rika nalu tora kele jori,1
+349907,10,missing_previous,mepo gavi rika nalu tora kele jori,(silence),(silence),1
+349907,11,extract,rika samu rika mepo gavi daru gavi,gavi samu rika nalu tora kele jori,gavi samu rika nalu tora kele jori,1
+349907,11,exchanged_bearings,rika gavi rika mepo gavi daru samu,samu gavi rika nalu tora kele jori,samu gavi rika nalu tora kele jori,1
+349907,11,missing_previous,gavi samu rika nalu tora kele jori,(silence),(silence),1
+349907,12,extract,rika mepo lavo pemi mepo daru pemi,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,1
+349907,12,exchanged_bearings,rika pemi lavo pemi mepo daru mepo,mepo pemi rika nalu tora kele jori,mepo pemi rika nalu tora kele jori,1
+349907,12,missing_previous,pemi mepo rika nalu tora kele jori,(silence),(silence),1
+349907,13,extract,lavo mepo rika pemi mepo daru pemi,pemi mepo lavo nalu tora,pemi mepo lavo nalu tora,1
+349907,13,exchanged_bearings,lavo pemi rika pemi mepo daru mepo,mepo pemi lavo nalu tora,mepo pemi lavo nalu tora,1
+349907,13,missing_previous,pemi mepo lavo nalu tora,(silence),(silence),1
+349907,14,extract,rika mepo lavo pemi mepo daru pemi,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,1
+349907,14,exchanged_bearings,rika pemi lavo pemi mepo daru mepo,mepo pemi rika nalu tora kele jori,mepo pemi rika nalu tora kele jori,1
+349907,14,missing_previous,pemi mepo rika nalu tora kele jori,(silence),(silence),1
+349907,15,extract,rika pemi lavo mepo gavi daru samu,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,1
+349907,15,exchanged_bearings,rika samu lavo mepo gavi daru pemi,pemi samu rika nalu tora kele jori,pemi samu rika nalu tora kele jori,1
+349907,15,missing_previous,samu pemi rika nalu tora kele jori,(silence),(silence),1
+349907,16,extract,lavo gavi lavo pemi mepo daru mepo,mepo gavi lavo nalu tora,mepo gavi lavo nalu tora,1
+349907,16,exchanged_bearings,lavo mepo lavo pemi mepo daru gavi,gavi mepo lavo nalu tora,gavi mepo lavo nalu tora,1
+349907,16,missing_previous,mepo gavi lavo nalu tora,(silence),(silence),1
+349907,17,extract,lavo pemi rika mepo gavi daru samu,samu pemi lavo nalu tora,samu pemi lavo nalu tora,1
+349907,17,exchanged_bearings,lavo samu rika mepo gavi daru pemi,pemi samu lavo nalu tora,pemi samu lavo nalu tora,1
+349907,17,missing_previous,samu pemi lavo nalu tora,(silence),(silence),1
+349907,18,extract,rika pemi rika gavi samu daru samu,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,1
+349907,18,exchanged_bearings,rika samu rika gavi samu daru pemi,pemi samu rika nalu tora kele jori,pemi samu rika nalu tora kele jori,1
+349907,18,missing_previous,samu pemi rika nalu tora kele jori,(silence),(silence),1
+349907,19,extract,rika gavi lavo gavi samu daru mepo,mepo gavi rika nalu tora kele jori,mepo gavi rika nalu tora kele jori,1
+349907,19,exchanged_bearings,rika mepo lavo gavi samu daru gavi,gavi mepo rika nalu tora kele jori,gavi mepo rika nalu tora kele jori,1
+349907,19,missing_previous,mepo gavi rika nalu tora kele jori,(silence),(silence),1
+349907,20,extract,lavo pemi rika samu pemi daru samu,samu pemi lavo nalu tora,samu pemi lavo nalu tora,1
+349907,20,exchanged_bearings,lavo samu rika samu pemi daru pemi,pemi samu lavo nalu tora,pemi samu lavo nalu tora,1
+349907,20,missing_previous,samu pemi lavo nalu tora,(silence),(silence),1
+349907,21,extract,rika pemi lavo pemi mepo daru samu,samu pemi rika nalu tora kele jori,samu pemi rika nalu tora kele jori,1
+349907,21,exchanged_bearings,rika samu lavo pemi mepo daru pemi,pemi samu rika nalu tora kele jori,pemi samu rika nalu tora kele jori,1
+349907,21,missing_previous,samu pemi rika nalu tora kele jori,(silence),(silence),1
+349907,22,extract,rika mepo lavo samu pemi daru pemi,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,1
+349907,22,exchanged_bearings,rika pemi lavo samu pemi daru mepo,mepo pemi rika nalu tora kele jori,mepo pemi rika nalu tora kele jori,1
+349907,22,missing_previous,pemi mepo rika nalu tora kele jori,(silence),(silence),1
+349907,23,extract,rika mepo lavo mepo gavi daru pemi,pemi mepo rika nalu tora kele jori,pemi mepo rika nalu tora kele jori,1
+349907,23,exchanged_bearings,rika pemi lavo mepo gavi daru mepo,mepo pemi rika nalu tora kele jori,mepo pemi rika nalu tora kele jori,1
+349907,23,missing_previous,pemi mepo rika nalu tora kele jori,(silence),(silence),1
+579053,0,extract,lavo vuno tesu jori tora lavo vuno,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,1
+579053,0,exchanged_bearings,lavo tesu vuno jori tora lavo vuno,tesu vuno bovi lavo nalu daru samu,tesu vuno bovi lavo nalu daru samu,1
+579053,0,missing_previous,vuno tesu bovi lavo nalu daru samu,(silence),(silence),1
+579053,1,extract,mepo tesu gavi vuno tora mepo tesu,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,1
+579053,1,exchanged_bearings,mepo gavi tesu vuno tora mepo tesu,gavi tesu bovi mepo nalu,gavi tesu bovi mepo nalu,1
+579053,1,missing_previous,tesu gavi bovi mepo nalu,(silence),(silence),1
+579053,2,extract,lavo tesu gavi vuno tora mepo tesu,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,1
+579053,2,exchanged_bearings,lavo gavi tesu vuno tora mepo tesu,gavi tesu bovi mepo nalu,gavi tesu bovi mepo nalu,1
+579053,2,missing_previous,tesu gavi bovi mepo nalu,(silence),(silence),1
+579053,3,extract,lavo vuno tesu jori tora lavo vuno,vuno tesu bovi lavo nalu daru samu,vuno tesu bovi lavo nalu daru samu,1
+579053,3,exchanged_bearings,lavo tesu vuno jori tora lavo vuno,tesu vuno bovi lavo nalu daru samu,tesu vuno bovi lavo nalu daru samu,1
+579053,3,missing_previous,vuno tesu bovi lavo nalu daru samu,(silence),(silence),1
+579053,4,extract,mepo jori vuno gavi tora lavo jori,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,1
+579053,4,exchanged_bearings,mepo vuno jori gavi tora lavo jori,vuno jori bovi lavo nalu daru samu,vuno jori bovi lavo nalu daru samu,1
+579053,4,missing_previous,jori vuno bovi lavo nalu daru samu,(silence),(silence),1
+579053,5,extract,mepo tesu gavi vuno tora mepo tesu,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,1
+579053,5,exchanged_bearings,mepo gavi tesu vuno tora mepo tesu,gavi tesu bovi mepo nalu,gavi tesu bovi mepo nalu,1
+579053,5,missing_previous,tesu gavi bovi mepo nalu,(silence),(silence),1
+579053,6,extract,lavo jori vuno gavi tora lavo jori,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,1
+579053,6,exchanged_bearings,lavo vuno jori gavi tora lavo jori,vuno jori bovi lavo nalu daru samu,vuno jori bovi lavo nalu daru samu,1
+579053,6,missing_previous,jori vuno bovi lavo nalu daru samu,(silence),(silence),1
+579053,7,extract,lavo jori vuno tesu tora mepo gavi,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,1
+579053,7,exchanged_bearings,lavo vuno jori tesu tora mepo gavi,vuno jori bovi mepo nalu,vuno jori bovi mepo nalu,1
+579053,7,missing_previous,jori vuno bovi mepo nalu,(silence),(silence),1
+579053,8,extract,mepo tesu gavi vuno tora mepo tesu,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,1
+579053,8,exchanged_bearings,mepo gavi tesu vuno tora mepo tesu,gavi tesu bovi mepo nalu,gavi tesu bovi mepo nalu,1
+579053,8,missing_previous,tesu gavi bovi mepo nalu,(silence),(silence),1
+579053,9,extract,mepo tesu gavi tesu tora lavo gavi,tesu gavi bovi lavo nalu daru samu,tesu gavi bovi lavo nalu daru samu,1
+579053,9,exchanged_bearings,mepo gavi tesu tesu tora lavo gavi,gavi tesu bovi lavo nalu daru samu,gavi tesu bovi lavo nalu daru samu,1
+579053,9,missing_previous,tesu gavi bovi lavo nalu daru samu,(silence),(silence),1
+579053,10,extract,mepo gavi jori vuno tora lavo tesu,gavi jori bovi lavo nalu daru samu,gavi jori bovi lavo nalu daru samu,1
+579053,10,exchanged_bearings,mepo jori gavi vuno tora lavo tesu,jori gavi bovi lavo nalu daru samu,jori gavi bovi lavo nalu daru samu,1
+579053,10,missing_previous,gavi jori bovi lavo nalu daru samu,(silence),(silence),1
+579053,11,extract,lavo jori vuno gavi tora lavo jori,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,1
+579053,11,exchanged_bearings,lavo vuno jori gavi tora lavo jori,vuno jori bovi lavo nalu daru samu,vuno jori bovi lavo nalu daru samu,1
+579053,11,missing_previous,jori vuno bovi lavo nalu daru samu,(silence),(silence),1
+579053,12,extract,mepo gavi jori tesu tora mepo gavi,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,1
+579053,12,exchanged_bearings,mepo jori gavi tesu tora mepo gavi,jori gavi bovi mepo nalu,jori gavi bovi mepo nalu,1
+579053,12,missing_previous,gavi jori bovi mepo nalu,(silence),(silence),1
+579053,13,extract,mepo jori vuno gavi tora mepo jori,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,1
+579053,13,exchanged_bearings,mepo vuno jori gavi tora mepo jori,vuno jori bovi mepo nalu,vuno jori bovi mepo nalu,1
+579053,13,missing_previous,jori vuno bovi mepo nalu,(silence),(silence),1
+579053,14,extract,mepo jori vuno jori tora lavo vuno,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,1
+579053,14,exchanged_bearings,mepo vuno jori jori tora lavo vuno,vuno jori bovi lavo nalu daru samu,vuno jori bovi lavo nalu daru samu,1
+579053,14,missing_previous,jori vuno bovi lavo nalu daru samu,(silence),(silence),1
+579053,15,extract,lavo gavi jori vuno tora mepo tesu,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,1
+579053,15,exchanged_bearings,lavo jori gavi vuno tora mepo tesu,jori gavi bovi mepo nalu,jori gavi bovi mepo nalu,1
+579053,15,missing_previous,gavi jori bovi mepo nalu,(silence),(silence),1
+579053,16,extract,mepo jori vuno gavi tora lavo jori,jori vuno bovi lavo nalu daru samu,jori vuno bovi lavo nalu daru samu,1
+579053,16,exchanged_bearings,mepo vuno jori gavi tora lavo jori,vuno jori bovi lavo nalu daru samu,vuno jori bovi lavo nalu daru samu,1
+579053,16,missing_previous,jori vuno bovi lavo nalu daru samu,(silence),(silence),1
+579053,17,extract,mepo tesu gavi vuno tora mepo tesu,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,1
+579053,17,exchanged_bearings,mepo gavi tesu vuno tora mepo tesu,gavi tesu bovi mepo nalu,gavi tesu bovi mepo nalu,1
+579053,17,missing_previous,tesu gavi bovi mepo nalu,(silence),(silence),1
+579053,18,extract,lavo jori vuno vuno tora mepo tesu,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,1
+579053,18,exchanged_bearings,lavo vuno jori vuno tora mepo tesu,vuno jori bovi mepo nalu,vuno jori bovi mepo nalu,1
+579053,18,missing_previous,jori vuno bovi mepo nalu,(silence),(silence),1
+579053,19,extract,lavo vuno tesu tesu tora mepo gavi,vuno tesu bovi mepo nalu,vuno tesu bovi mepo nalu,1
+579053,19,exchanged_bearings,lavo tesu vuno tesu tora mepo gavi,tesu vuno bovi mepo nalu,tesu vuno bovi mepo nalu,1
+579053,19,missing_previous,vuno tesu bovi mepo nalu,(silence),(silence),1
+579053,20,extract,lavo jori vuno gavi tora mepo jori,jori vuno bovi mepo nalu,jori vuno bovi mepo nalu,1
+579053,20,exchanged_bearings,lavo vuno jori gavi tora mepo jori,vuno jori bovi mepo nalu,vuno jori bovi mepo nalu,1
+579053,20,missing_previous,jori vuno bovi mepo nalu,(silence),(silence),1
+579053,21,extract,lavo tesu gavi gavi tora mepo jori,tesu gavi bovi mepo nalu,tesu gavi bovi mepo nalu,1
+579053,21,exchanged_bearings,lavo gavi tesu gavi tora mepo jori,gavi tesu bovi mepo nalu,gavi tesu bovi mepo nalu,1
+579053,21,missing_previous,tesu gavi bovi mepo nalu,(silence),(silence),1
+579053,22,extract,mepo gavi jori tesu tora mepo gavi,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,1
+579053,22,exchanged_bearings,mepo jori gavi tesu tora mepo gavi,jori gavi bovi mepo nalu,jori gavi bovi mepo nalu,1
+579053,22,missing_previous,gavi jori bovi mepo nalu,(silence),(silence),1
+579053,23,extract,mepo gavi jori tesu tora mepo gavi,gavi jori bovi mepo nalu,gavi jori bovi mepo nalu,1
+579053,23,exchanged_bearings,mepo jori gavi tesu tora mepo gavi,jori gavi bovi mepo nalu,jori gavi bovi mepo nalu,1
+579053,23,missing_previous,gavi jori bovi mepo nalu,(silence),(silence),1
+886909,0,extract,rika zuna kele zuna pemi pemi bovi,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,1
+886909,0,exchanged_bearings,zuna rika kele zuna pemi pemi bovi,rika daru zuna fira pemi nalu tesu,rika daru zuna fira pemi nalu tesu,1
+886909,0,missing_previous,zuna daru rika fira pemi nalu tesu,(silence),(silence),1
+886909,1,extract,kele tora zuna rika pemi vuno bovi,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,1
+886909,1,exchanged_bearings,tora kele zuna rika pemi vuno bovi,kele daru tora fira pemi nalu tesu,kele daru tora fira pemi nalu tesu,1
+886909,1,missing_previous,tora daru kele fira pemi nalu tesu,(silence),(silence),1
+886909,2,extract,zuna kele rika tora pemi vuno bovi,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,1
+886909,2,exchanged_bearings,kele zuna rika tora pemi vuno bovi,zuna daru kele fira pemi nalu tesu,zuna daru kele fira pemi nalu tesu,1
+886909,2,missing_previous,kele daru zuna fira pemi nalu tesu,(silence),(silence),1
+886909,3,extract,tora rika zuna rika pemi pemi bovi,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,1
+886909,3,exchanged_bearings,rika tora zuna rika pemi pemi bovi,tora daru rika fira pemi nalu tesu,tora daru rika fira pemi nalu tesu,1
+886909,3,missing_previous,rika daru tora fira pemi nalu tesu,(silence),(silence),1
+886909,4,extract,zuna kele tora kele pemi vuno bovi,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,1
+886909,4,exchanged_bearings,kele zuna tora kele pemi vuno bovi,zuna daru kele fira pemi nalu tesu,zuna daru kele fira pemi nalu tesu,1
+886909,4,missing_previous,kele daru zuna fira pemi nalu tesu,(silence),(silence),1
+886909,5,extract,zuna kele kele zuna pemi vuno bovi,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,1
+886909,5,exchanged_bearings,kele zuna kele zuna pemi vuno bovi,zuna daru kele fira pemi nalu tesu,zuna daru kele fira pemi nalu tesu,1
+886909,5,missing_previous,kele daru zuna fira pemi nalu tesu,(silence),(silence),1
+886909,6,extract,rika zuna zuna rika vuno pemi bovi,zuna daru rika fira vuno,zuna daru rika fira vuno,1
+886909,6,exchanged_bearings,zuna rika zuna rika vuno pemi bovi,rika daru zuna fira vuno,rika daru zuna fira vuno,1
+886909,6,missing_previous,zuna daru rika fira vuno,(silence),(silence),1
+886909,7,extract,tora rika zuna rika pemi pemi bovi,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,1
+886909,7,exchanged_bearings,rika tora zuna rika pemi pemi bovi,tora daru rika fira pemi nalu tesu,tora daru rika fira pemi nalu tesu,1
+886909,7,missing_previous,rika daru tora fira pemi nalu tesu,(silence),(silence),1
+886909,8,extract,tora rika tora kele pemi vuno bovi,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,1
+886909,8,exchanged_bearings,rika tora tora kele pemi vuno bovi,tora daru rika fira pemi nalu tesu,tora daru rika fira pemi nalu tesu,1
+886909,8,missing_previous,rika daru tora fira pemi nalu tesu,(silence),(silence),1
+886909,9,extract,tora rika kele zuna pemi vuno bovi,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,1
+886909,9,exchanged_bearings,rika tora kele zuna pemi vuno bovi,tora daru rika fira pemi nalu tesu,tora daru rika fira pemi nalu tesu,1
+886909,9,missing_previous,rika daru tora fira pemi nalu tesu,(silence),(silence),1
+886909,10,extract,zuna kele zuna rika pemi vuno bovi,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,1
+886909,10,exchanged_bearings,kele zuna zuna rika pemi vuno bovi,zuna daru kele fira pemi nalu tesu,zuna daru kele fira pemi nalu tesu,1
+886909,10,missing_previous,kele daru zuna fira pemi nalu tesu,(silence),(silence),1
+886909,11,extract,tora rika tora kele vuno pemi bovi,rika daru tora fira vuno,rika daru tora fira vuno,1
+886909,11,exchanged_bearings,rika tora tora kele vuno pemi bovi,tora daru rika fira vuno,tora daru rika fira vuno,1
+886909,11,missing_previous,rika daru tora fira vuno,(silence),(silence),1
+886909,12,extract,zuna kele tora kele vuno vuno bovi,kele daru zuna fira vuno,kele daru zuna fira vuno,1
+886909,12,exchanged_bearings,kele zuna tora kele vuno vuno bovi,zuna daru kele fira vuno,zuna daru kele fira vuno,1
+886909,12,missing_previous,kele daru zuna fira vuno,(silence),(silence),1
+886909,13,extract,rika zuna rika tora vuno pemi bovi,zuna daru rika fira vuno,zuna daru rika fira vuno,1
+886909,13,exchanged_bearings,zuna rika rika tora vuno pemi bovi,rika daru zuna fira vuno,rika daru zuna fira vuno,1
+886909,13,missing_previous,zuna daru rika fira vuno,(silence),(silence),1
+886909,14,extract,tora rika tora kele pemi vuno bovi,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,1
+886909,14,exchanged_bearings,rika tora tora kele pemi vuno bovi,tora daru rika fira pemi nalu tesu,tora daru rika fira pemi nalu tesu,1
+886909,14,missing_previous,rika daru tora fira pemi nalu tesu,(silence),(silence),1
+886909,15,extract,zuna kele rika tora pemi vuno bovi,kele daru zuna fira pemi nalu tesu,kele daru zuna fira pemi nalu tesu,1
+886909,15,exchanged_bearings,kele zuna rika tora pemi vuno bovi,zuna daru kele fira pemi nalu tesu,zuna daru kele fira pemi nalu tesu,1
+886909,15,missing_previous,kele daru zuna fira pemi nalu tesu,(silence),(silence),1
+886909,16,extract,tora rika zuna rika pemi pemi bovi,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,1
+886909,16,exchanged_bearings,rika tora zuna rika pemi pemi bovi,tora daru rika fira pemi nalu tesu,tora daru rika fira pemi nalu tesu,1
+886909,16,missing_previous,rika daru tora fira pemi nalu tesu,(silence),(silence),1
+886909,17,extract,tora rika zuna rika pemi pemi bovi,rika daru tora fira pemi nalu tesu,rika daru tora fira pemi nalu tesu,1
+886909,17,exchanged_bearings,rika tora zuna rika pemi pemi bovi,tora daru rika fira pemi nalu tesu,tora daru rika fira pemi nalu tesu,1
+886909,17,missing_previous,rika daru tora fira pemi nalu tesu,(silence),(silence),1
+886909,18,extract,zuna kele tora kele vuno pemi bovi,kele daru zuna fira vuno,kele daru zuna fira vuno,1
+886909,18,exchanged_bearings,kele zuna tora kele vuno pemi bovi,zuna daru kele fira vuno,zuna daru kele fira vuno,1
+886909,18,missing_previous,kele daru zuna fira vuno,(silence),(silence),1
+886909,19,extract,kele tora kele zuna pemi vuno bovi,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,1
+886909,19,exchanged_bearings,tora kele kele zuna pemi vuno bovi,kele daru tora fira pemi nalu tesu,kele daru tora fira pemi nalu tesu,1
+886909,19,missing_previous,tora daru kele fira pemi nalu tesu,(silence),(silence),1
+886909,20,extract,tora rika zuna rika vuno vuno bovi,rika daru tora fira vuno,rika daru tora fira vuno,1
+886909,20,exchanged_bearings,rika tora zuna rika vuno vuno bovi,tora daru rika fira vuno,tora daru rika fira vuno,1
+886909,20,missing_previous,rika daru tora fira vuno,(silence),(silence),1
+886909,21,extract,kele tora rika tora pemi pemi bovi,tora daru kele fira pemi nalu tesu,tora daru kele fira pemi nalu tesu,1
+886909,21,exchanged_bearings,tora kele rika tora pemi pemi bovi,kele daru tora fira pemi nalu tesu,kele daru tora fira pemi nalu tesu,1
+886909,21,missing_previous,tora daru kele fira pemi nalu tesu,(silence),(silence),1
+886909,22,extract,rika zuna rika tora pemi vuno bovi,zuna daru rika fira pemi nalu tesu,zuna daru rika fira pemi nalu tesu,1
+886909,22,exchanged_bearings,zuna rika rika tora pemi vuno bovi,rika daru zuna fira pemi nalu tesu,rika daru zuna fira pemi nalu tesu,1
+886909,22,missing_previous,zuna daru rika fira pemi nalu tesu,(silence),(silence),1
+886909,23,extract,kele tora rika tora vuno pemi bovi,tora daru kele fira vuno,tora daru kele fira vuno,1
+886909,23,exchanged_bearings,tora kele rika tora vuno pemi bovi,kele daru tora fira vuno,kele daru tora fira vuno,1
+886909,23,missing_previous,tora daru kele fira vuno,(silence),(silence),1
+1105799,0,extract,nalu daru kele rika samu bovi tesu,fira rika tesu samu lavo jori zuna,fira rika tesu samu lavo jori zuna,1
+1105799,0,exchanged_bearings,nalu daru kele tesu samu bovi rika,fira tesu rika samu lavo jori zuna,fira tesu rika samu lavo jori zuna,1
+1105799,0,missing_previous,fira rika tesu samu lavo jori zuna,(silence),(silence),1
+1105799,1,extract,nalu daru kele tesu samu bovi kele,fira tesu kele samu lavo jori zuna,fira tesu kele samu lavo jori zuna,1
+1105799,1,exchanged_bearings,nalu daru kele kele samu bovi tesu,fira kele tesu samu lavo jori zuna,fira kele tesu samu lavo jori zuna,1
+1105799,1,missing_previous,fira tesu kele samu lavo jori zuna,(silence),(silence),1
+1105799,2,extract,nalu kele tesu kele bovi samu daru,fira kele daru bovi lavo,fira kele daru bovi lavo,1
+1105799,2,exchanged_bearings,nalu kele tesu daru bovi samu kele,fira daru kele bovi lavo,fira daru kele bovi lavo,1
+1105799,2,missing_previous,fira kele daru bovi lavo,(silence),(silence),1
+1105799,3,extract,nalu tesu rika tesu bovi bovi kele,fira tesu kele bovi lavo,fira tesu kele bovi lavo,1
+1105799,3,exchanged_bearings,nalu tesu rika kele bovi bovi tesu,fira kele tesu bovi lavo,fira kele tesu bovi lavo,1
+1105799,3,missing_previous,fira tesu kele bovi lavo,(silence),(silence),1
+1105799,4,extract,nalu kele tesu rika samu bovi tesu,fira rika tesu samu lavo jori zuna,fira rika tesu samu lavo jori zuna,1
+1105799,4,exchanged_bearings,nalu kele tesu tesu samu bovi rika,fira tesu rika samu lavo jori zuna,fira tesu rika samu lavo jori zuna,1
+1105799,4,missing_previous,fira rika tesu samu lavo jori zuna,(silence),(silence),1
+1105799,5,extract,nalu kele tesu rika bovi samu tesu,fira rika tesu bovi lavo,fira rika tesu bovi lavo,1
+1105799,5,exchanged_bearings,nalu kele tesu tesu bovi samu rika,fira tesu rika bovi lavo,fira tesu rika bovi lavo,1
+1105799,5,missing_previous,fira rika tesu bovi lavo,(silence),(silence),1
+1105799,6,extract,nalu kele tesu rika bovi samu tesu,fira rika tesu bovi lavo,fira rika tesu bovi lavo,1
+1105799,6,exchanged_bearings,nalu kele tesu tesu bovi samu rika,fira tesu rika bovi lavo,fira tesu rika bovi lavo,1
+1105799,6,missing_previous,fira rika tesu bovi lavo,(silence),(silence),1
+1105799,7,extract,nalu daru kele daru samu samu rika,fira daru rika samu lavo jori zuna,fira daru rika samu lavo jori zuna,1
+1105799,7,exchanged_bearings,nalu daru kele rika samu samu daru,fira rika daru samu lavo jori zuna,fira rika daru samu lavo jori zuna,1
+1105799,7,missing_previous,fira daru rika samu lavo jori zuna,(silence),(silence),1
+1105799,8,extract,nalu tesu rika tesu samu samu kele,fira tesu kele samu lavo jori zuna,fira tesu kele samu lavo jori zuna,1
+1105799,8,exchanged_bearings,nalu tesu rika kele samu samu tesu,fira kele tesu samu lavo jori zuna,fira kele tesu samu lavo jori zuna,1
+1105799,8,missing_previous,fira tesu kele samu lavo jori zuna,(silence),(silence),1
+1105799,9,extract,nalu rika daru tesu samu bovi kele,fira tesu kele samu lavo jori zuna,fira tesu kele samu lavo jori zuna,1
+1105799,9,exchanged_bearings,nalu rika daru kele samu bovi tesu,fira kele tesu samu lavo jori zuna,fira kele tesu samu lavo jori zuna,1
+1105799,9,missing_previous,fira tesu kele samu lavo jori zuna,(silence),(silence),1
+1105799,10,extract,nalu kele tesu kele bovi bovi daru,fira kele daru bovi lavo,fira kele daru bovi lavo,1
+1105799,10,exchanged_bearings,nalu kele tesu daru bovi bovi kele,fira daru kele bovi lavo,fira daru kele bovi lavo,1
+1105799,10,missing_previous,fira kele daru bovi lavo,(silence),(silence),1
+1105799,11,extract,nalu daru kele daru bovi bovi rika,fira daru rika bovi lavo,fira daru rika bovi lavo,1
+1105799,11,exchanged_bearings,nalu daru kele rika bovi bovi daru,fira rika daru bovi lavo,fira rika daru bovi lavo,1
+1105799,11,missing_previous,fira daru rika bovi lavo,(silence),(silence),1
+1105799,12,extract,nalu tesu rika tesu samu samu kele,fira tesu kele samu lavo jori zuna,fira tesu kele samu lavo jori zuna,1
+1105799,12,exchanged_bearings,nalu tesu rika kele samu samu tesu,fira kele tesu samu lavo jori zuna,fira kele tesu samu lavo jori zuna,1
+1105799,12,missing_previous,fira tesu kele samu lavo jori zuna,(silence),(silence),1
+1105799,13,extract,nalu kele tesu kele bovi bovi daru,fira kele daru bovi lavo,fira kele daru bovi lavo,1
+1105799,13,exchanged_bearings,nalu kele tesu daru bovi bovi kele,fira daru kele bovi lavo,fira daru kele bovi lavo,1
+1105799,13,missing_previous,fira kele daru bovi lavo,(silence),(silence),1
+1105799,14,extract,nalu tesu rika kele samu bovi daru,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,1
+1105799,14,exchanged_bearings,nalu tesu rika daru samu bovi kele,fira daru kele samu lavo jori zuna,fira daru kele samu lavo jori zuna,1
+1105799,14,missing_previous,fira kele daru samu lavo jori zuna,(silence),(silence),1
+1105799,15,extract,nalu kele tesu kele samu bovi daru,fira kele daru samu lavo jori zuna,fira kele daru samu lavo jori zuna,1
+1105799,15,exchanged_bearings,nalu kele tesu daru samu bovi kele,fira daru kele samu lavo jori zuna,fira daru kele samu lavo jori zuna,1
+1105799,15,missing_previous,fira kele daru samu lavo jori zuna,(silence),(silence),1
+1105799,16,extract,nalu kele tesu tesu bovi samu kele,fira tesu kele bovi lavo,fira tesu kele bovi lavo,1
+1105799,16,exchanged_bearings,nalu kele tesu kele bovi samu tesu,fira kele tesu bovi lavo,fira kele tesu bovi lavo,1
+1105799,16,missing_previous,fira tesu kele bovi lavo,(silence),(silence),1
+1105799,17,extract,nalu tesu rika tesu samu bovi kele,fira tesu kele samu lavo jori zuna,fira tesu kele samu lavo jori zuna,1
+1105799,17,exchanged_bearings,nalu tesu rika kele samu bovi tesu,fira kele tesu samu lavo jori zuna,fira kele tesu samu lavo jori zuna,1
+1105799,17,missing_previous,fira tesu kele samu lavo jori zuna,(silence),(silence),1
+1105799,18,extract,nalu daru kele tesu samu bovi kele,fira tesu kele samu lavo jori zuna,fira tesu kele samu lavo jori zuna,1
+1105799,18,exchanged_bearings,nalu daru kele kele samu bovi tesu,fira kele tesu samu lavo jori zuna,fira kele tesu samu lavo jori zuna,1
+1105799,18,missing_previous,fira tesu kele samu lavo jori zuna,(silence),(silence),1
+1105799,19,extract,nalu daru kele tesu samu bovi kele,fira tesu kele samu lavo jori zuna,fira tesu kele samu lavo jori zuna,1
+1105799,19,exchanged_bearings,nalu daru kele kele samu bovi tesu,fira kele tesu samu lavo jori zuna,fira kele tesu samu lavo jori zuna,1
+1105799,19,missing_previous,fira tesu kele samu lavo jori zuna,(silence),(silence),1
+1105799,20,extract,nalu tesu rika tesu bovi bovi kele,fira tesu kele bovi lavo,fira tesu kele bovi lavo,1
+1105799,20,exchanged_bearings,nalu tesu rika kele bovi bovi tesu,fira kele tesu bovi lavo,fira kele tesu bovi lavo,1
+1105799,20,missing_previous,fira tesu kele bovi lavo,(silence),(silence),1
+1105799,21,extract,nalu tesu rika kele bovi samu daru,fira kele daru bovi lavo,fira kele daru bovi lavo,1
+1105799,21,exchanged_bearings,nalu tesu rika daru bovi samu kele,fira daru kele bovi lavo,fira daru kele bovi lavo,1
+1105799,21,missing_previous,fira kele daru bovi lavo,(silence),(silence),1
+1105799,22,extract,nalu daru kele daru bovi bovi rika,fira daru rika bovi lavo,fira daru rika bovi lavo,1
+1105799,22,exchanged_bearings,nalu daru kele rika bovi bovi daru,fira rika daru bovi lavo,fira rika daru bovi lavo,1
+1105799,22,missing_previous,fira daru rika bovi lavo,(silence),(silence),1
+1105799,23,extract,nalu kele tesu kele bovi bovi daru,fira kele daru bovi lavo,fira kele daru bovi lavo,1
+1105799,23,exchanged_bearings,nalu kele tesu daru bovi bovi kele,fira daru kele bovi lavo,fira daru kele bovi lavo,1
+1105799,23,missing_previous,fira kele daru bovi lavo,(silence),(silence),1
+1416191,0,extract,tesu mepo jori mepo samu vuno jori,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,1
+1416191,0,exchanged_bearings,tesu vuno jori mepo samu mepo jori,gavi lavo mepo jori vuno,gavi lavo mepo jori vuno,1
+1416191,0,missing_previous,gavi lavo vuno jori mepo,(silence),(silence),1
+1416191,1,extract,mepo tesu jori vuno samu mepo zuna,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,1
+1416191,1,exchanged_bearings,mepo mepo jori vuno samu tesu zuna,gavi lavo tesu zuna mepo daru bovi,gavi lavo tesu zuna mepo daru bovi,1
+1416191,1,missing_previous,gavi lavo mepo zuna tesu daru bovi,(silence),(silence),1
+1416191,2,extract,mepo tesu jori vuno samu mepo zuna,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,1
+1416191,2,exchanged_bearings,mepo mepo jori vuno samu tesu zuna,gavi lavo tesu zuna mepo daru bovi,gavi lavo tesu zuna mepo daru bovi,1
+1416191,2,missing_previous,gavi lavo mepo zuna tesu daru bovi,(silence),(silence),1
+1416191,3,extract,rika vuno jori tesu samu rika zuna,gavi lavo rika zuna vuno daru bovi,gavi lavo rika zuna vuno daru bovi,1
+1416191,3,exchanged_bearings,rika rika jori tesu samu vuno zuna,gavi lavo vuno zuna rika daru bovi,gavi lavo vuno zuna rika daru bovi,1
+1416191,3,missing_previous,gavi lavo rika zuna vuno daru bovi,(silence),(silence),1
+1416191,4,extract,tesu mepo jori mepo samu vuno zuna,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,1
+1416191,4,exchanged_bearings,tesu vuno jori mepo samu mepo zuna,gavi lavo mepo zuna vuno daru bovi,gavi lavo mepo zuna vuno daru bovi,1
+1416191,4,missing_previous,gavi lavo vuno zuna mepo daru bovi,(silence),(silence),1
+1416191,5,extract,rika tesu zuna tesu samu mepo jori,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,1
+1416191,5,exchanged_bearings,rika mepo zuna tesu samu tesu jori,gavi lavo tesu jori mepo,gavi lavo tesu jori mepo,1
+1416191,5,missing_previous,gavi lavo mepo jori tesu,(silence),(silence),1
+1416191,6,extract,rika tesu zuna tesu samu mepo jori,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,1
+1416191,6,exchanged_bearings,rika mepo zuna tesu samu tesu jori,gavi lavo tesu jori mepo,gavi lavo tesu jori mepo,1
+1416191,6,missing_previous,gavi lavo mepo jori tesu,(silence),(silence),1
+1416191,7,extract,mepo vuno jori vuno samu rika jori,gavi lavo rika jori vuno,gavi lavo rika jori vuno,1
+1416191,7,exchanged_bearings,mepo rika jori vuno samu vuno jori,gavi lavo vuno jori rika,gavi lavo vuno jori rika,1
+1416191,7,missing_previous,gavi lavo rika jori vuno,(silence),(silence),1
+1416191,8,extract,tesu mepo zuna mepo samu vuno zuna,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,1
+1416191,8,exchanged_bearings,tesu vuno zuna mepo samu mepo zuna,gavi lavo mepo zuna vuno daru bovi,gavi lavo mepo zuna vuno daru bovi,1
+1416191,8,missing_previous,gavi lavo vuno zuna mepo daru bovi,(silence),(silence),1
+1416191,9,extract,vuno rika jori rika samu tesu jori,gavi lavo tesu jori rika,gavi lavo tesu jori rika,1
+1416191,9,exchanged_bearings,vuno tesu jori rika samu rika jori,gavi lavo rika jori tesu,gavi lavo rika jori tesu,1
+1416191,9,missing_previous,gavi lavo tesu jori rika,(silence),(silence),1
+1416191,10,extract,mepo rika zuna vuno samu tesu jori,gavi lavo tesu jori rika,gavi lavo tesu jori rika,1
+1416191,10,exchanged_bearings,mepo tesu zuna vuno samu rika jori,gavi lavo rika jori tesu,gavi lavo rika jori tesu,1
+1416191,10,missing_previous,gavi lavo tesu jori rika,(silence),(silence),1
+1416191,11,extract,tesu mepo jori mepo samu vuno zuna,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,1
+1416191,11,exchanged_bearings,tesu vuno jori mepo samu mepo zuna,gavi lavo mepo zuna vuno daru bovi,gavi lavo mepo zuna vuno daru bovi,1
+1416191,11,missing_previous,gavi lavo vuno zuna mepo daru bovi,(silence),(silence),1
+1416191,12,extract,rika tesu jori tesu samu mepo zuna,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,1
+1416191,12,exchanged_bearings,rika mepo jori tesu samu tesu zuna,gavi lavo tesu zuna mepo daru bovi,gavi lavo tesu zuna mepo daru bovi,1
+1416191,12,missing_previous,gavi lavo mepo zuna tesu daru bovi,(silence),(silence),1
+1416191,13,extract,vuno rika jori rika samu tesu jori,gavi lavo tesu jori rika,gavi lavo tesu jori rika,1
+1416191,13,exchanged_bearings,vuno tesu jori rika samu rika jori,gavi lavo rika jori tesu,gavi lavo rika jori tesu,1
+1416191,13,missing_previous,gavi lavo tesu jori rika,(silence),(silence),1
+1416191,14,extract,tesu mepo jori mepo samu vuno zuna,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,1
+1416191,14,exchanged_bearings,tesu vuno jori mepo samu mepo zuna,gavi lavo mepo zuna vuno daru bovi,gavi lavo mepo zuna vuno daru bovi,1
+1416191,14,missing_previous,gavi lavo vuno zuna mepo daru bovi,(silence),(silence),1
+1416191,15,extract,vuno mepo jori rika samu vuno zuna,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,1
+1416191,15,exchanged_bearings,vuno vuno jori rika samu mepo zuna,gavi lavo mepo zuna vuno daru bovi,gavi lavo mepo zuna vuno daru bovi,1
+1416191,15,missing_previous,gavi lavo vuno zuna mepo daru bovi,(silence),(silence),1
+1416191,16,extract,rika tesu zuna tesu samu mepo zuna,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,1
+1416191,16,exchanged_bearings,rika mepo zuna tesu samu tesu zuna,gavi lavo tesu zuna mepo daru bovi,gavi lavo tesu zuna mepo daru bovi,1
+1416191,16,missing_previous,gavi lavo mepo zuna tesu daru bovi,(silence),(silence),1
+1416191,17,extract,rika tesu zuna tesu samu mepo zuna,gavi lavo mepo zuna tesu daru bovi,gavi lavo mepo zuna tesu daru bovi,1
+1416191,17,exchanged_bearings,rika mepo zuna tesu samu tesu zuna,gavi lavo tesu zuna mepo daru bovi,gavi lavo tesu zuna mepo daru bovi,1
+1416191,17,missing_previous,gavi lavo mepo zuna tesu daru bovi,(silence),(silence),1
+1416191,18,extract,rika tesu jori tesu samu mepo jori,gavi lavo mepo jori tesu,gavi lavo mepo jori tesu,1
+1416191,18,exchanged_bearings,rika mepo jori tesu samu tesu jori,gavi lavo tesu jori mepo,gavi lavo tesu jori mepo,1
+1416191,18,missing_previous,gavi lavo mepo jori tesu,(silence),(silence),1
+1416191,19,extract,vuno rika jori rika samu tesu jori,gavi lavo tesu jori rika,gavi lavo tesu jori rika,1
+1416191,19,exchanged_bearings,vuno tesu jori rika samu rika jori,gavi lavo rika jori tesu,gavi lavo rika jori tesu,1
+1416191,19,missing_previous,gavi lavo tesu jori rika,(silence),(silence),1
+1416191,20,extract,vuno mepo jori rika samu vuno zuna,gavi lavo vuno zuna mepo daru bovi,gavi lavo vuno zuna mepo daru bovi,1
+1416191,20,exchanged_bearings,vuno vuno jori rika samu mepo zuna,gavi lavo mepo zuna vuno daru bovi,gavi lavo mepo zuna vuno daru bovi,1
+1416191,20,missing_previous,gavi lavo vuno zuna mepo daru bovi,(silence),(silence),1
+1416191,21,extract,tesu mepo jori mepo samu vuno jori,gavi lavo vuno jori mepo,gavi lavo vuno jori mepo,1
+1416191,21,exchanged_bearings,tesu vuno jori mepo samu mepo jori,gavi lavo mepo jori vuno,gavi lavo mepo jori vuno,1
+1416191,21,missing_previous,gavi lavo vuno jori mepo,(silence),(silence),1
+1416191,22,extract,mepo vuno zuna vuno samu rika jori,gavi lavo rika jori vuno,gavi lavo rika jori vuno,1
+1416191,22,exchanged_bearings,mepo rika zuna vuno samu vuno jori,gavi lavo vuno jori rika,gavi lavo vuno jori rika,1
+1416191,22,missing_previous,gavi lavo rika jori vuno,(silence),(silence),1
+1416191,23,extract,vuno rika jori rika samu tesu jori,gavi lavo tesu jori rika,gavi lavo tesu jori rika,1
+1416191,23,exchanged_bearings,vuno tesu jori rika samu rika jori,gavi lavo rika jori tesu,gavi lavo rika jori tesu,1
+1416191,23,missing_previous,gavi lavo tesu jori rika,(silence),(silence),1
+1771193,0,extract,daru kele mepo zuna daru mepo kele,daru kele nalu samu mepo,daru kele nalu samu mepo,1
+1771193,0,exchanged_bearings,kele kele mepo zuna daru mepo daru,kele daru nalu samu mepo,kele daru nalu samu mepo,1
+1771193,0,missing_previous,daru kele nalu samu mepo,(silence),(silence),1
+1771193,1,extract,daru kele bovi zuna daru bovi kele,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,1
+1771193,1,exchanged_bearings,kele kele bovi zuna daru bovi daru,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,1
+1771193,1,missing_previous,daru kele nalu samu bovi gavi lavo,(silence),(silence),1
+1771193,2,extract,fira tora mepo zuna fira mepo tora,fira tora nalu samu mepo,fira tora nalu samu mepo,1
+1771193,2,exchanged_bearings,tora tora mepo zuna fira mepo fira,tora fira nalu samu mepo,tora fira nalu samu mepo,1
+1771193,2,missing_previous,fira tora nalu samu mepo,(silence),(silence),1
+1771193,3,extract,fira kele bovi zuna daru mepo tora,fira tora nalu samu mepo,fira tora nalu samu mepo,1
+1771193,3,exchanged_bearings,tora kele bovi zuna daru mepo fira,tora fira nalu samu mepo,tora fira nalu samu mepo,1
+1771193,3,missing_previous,fira tora nalu samu mepo,(silence),(silence),1
+1771193,4,extract,kele daru mepo zuna kele mepo daru,kele daru nalu samu mepo,kele daru nalu samu mepo,1
+1771193,4,exchanged_bearings,daru daru mepo zuna kele mepo kele,daru kele nalu samu mepo,daru kele nalu samu mepo,1
+1771193,4,missing_previous,kele daru nalu samu mepo,(silence),(silence),1
+1771193,5,extract,kele daru mepo zuna kele bovi daru,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,1
+1771193,5,exchanged_bearings,daru daru mepo zuna kele bovi kele,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,1
+1771193,5,missing_previous,kele daru nalu samu bovi gavi lavo,(silence),(silence),1
+1771193,6,extract,tora daru bovi zuna kele mepo fira,tora fira nalu samu mepo,tora fira nalu samu mepo,1
+1771193,6,exchanged_bearings,fira daru bovi zuna kele mepo tora,fira tora nalu samu mepo,fira tora nalu samu mepo,1
+1771193,6,missing_previous,tora fira nalu samu mepo,(silence),(silence),1
+1771193,7,extract,tora tora mepo zuna fira bovi fira,tora fira nalu samu bovi gavi lavo,tora fira nalu samu bovi gavi lavo,1
+1771193,7,exchanged_bearings,fira tora mepo zuna fira bovi tora,fira tora nalu samu bovi gavi lavo,fira tora nalu samu bovi gavi lavo,1
+1771193,7,missing_previous,tora fira nalu samu bovi gavi lavo,(silence),(silence),1
+1771193,8,extract,kele daru mepo zuna kele mepo daru,kele daru nalu samu mepo,kele daru nalu samu mepo,1
+1771193,8,exchanged_bearings,daru daru mepo zuna kele mepo kele,daru kele nalu samu mepo,daru kele nalu samu mepo,1
+1771193,8,missing_previous,kele daru nalu samu mepo,(silence),(silence),1
+1771193,9,extract,daru tora bovi zuna fira mepo kele,daru kele nalu samu mepo,daru kele nalu samu mepo,1
+1771193,9,exchanged_bearings,kele tora bovi zuna fira mepo daru,kele daru nalu samu mepo,kele daru nalu samu mepo,1
+1771193,9,missing_previous,daru kele nalu samu mepo,(silence),(silence),1
+1771193,10,extract,daru kele bovi zuna daru bovi kele,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,1
+1771193,10,exchanged_bearings,kele kele bovi zuna daru bovi daru,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,1
+1771193,10,missing_previous,daru kele nalu samu bovi gavi lavo,(silence),(silence),1
+1771193,11,extract,fira tora mepo zuna fira bovi tora,fira tora nalu samu bovi gavi lavo,fira tora nalu samu bovi gavi lavo,1
+1771193,11,exchanged_bearings,tora tora mepo zuna fira bovi fira,tora fira nalu samu bovi gavi lavo,tora fira nalu samu bovi gavi lavo,1
+1771193,11,missing_previous,fira tora nalu samu bovi gavi lavo,(silence),(silence),1
+1771193,12,extract,tora kele mepo zuna daru bovi fira,tora fira nalu samu bovi gavi lavo,tora fira nalu samu bovi gavi lavo,1
+1771193,12,exchanged_bearings,fira kele mepo zuna daru bovi tora,fira tora nalu samu bovi gavi lavo,fira tora nalu samu bovi gavi lavo,1
+1771193,12,missing_previous,tora fira nalu samu bovi gavi lavo,(silence),(silence),1
+1771193,13,extract,kele fira mepo zuna tora bovi daru,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,1
+1771193,13,exchanged_bearings,daru fira mepo zuna tora bovi kele,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,1
+1771193,13,missing_previous,kele daru nalu samu bovi gavi lavo,(silence),(silence),1
+1771193,14,extract,tora fira bovi zuna tora bovi fira,tora fira nalu samu bovi gavi lavo,tora fira nalu samu bovi gavi lavo,1
+1771193,14,exchanged_bearings,fira fira bovi zuna tora bovi tora,fira tora nalu samu bovi gavi lavo,fira tora nalu samu bovi gavi lavo,1
+1771193,14,missing_previous,tora fira nalu samu bovi gavi lavo,(silence),(silence),1
+1771193,15,extract,tora tora bovi zuna fira mepo fira,tora fira nalu samu mepo,tora fira nalu samu mepo,1
+1771193,15,exchanged_bearings,fira tora bovi zuna fira mepo tora,fira tora nalu samu mepo,fira tora nalu samu mepo,1
+1771193,15,missing_previous,tora fira nalu samu mepo,(silence),(silence),1
+1771193,16,extract,daru fira bovi zuna tora mepo kele,daru kele nalu samu mepo,daru kele nalu samu mepo,1
+1771193,16,exchanged_bearings,kele fira bovi zuna tora mepo daru,kele daru nalu samu mepo,kele daru nalu samu mepo,1
+1771193,16,missing_previous,daru kele nalu samu mepo,(silence),(silence),1
+1771193,17,extract,tora fira mepo zuna tora mepo fira,tora fira nalu samu mepo,tora fira nalu samu mepo,1
+1771193,17,exchanged_bearings,fira fira mepo zuna tora mepo tora,fira tora nalu samu mepo,fira tora nalu samu mepo,1
+1771193,17,missing_previous,tora fira nalu samu mepo,(silence),(silence),1
+1771193,18,extract,daru kele bovi zuna daru bovi kele,daru kele nalu samu bovi gavi lavo,daru kele nalu samu bovi gavi lavo,1
+1771193,18,exchanged_bearings,kele kele bovi zuna daru bovi daru,kele daru nalu samu bovi gavi lavo,kele daru nalu samu bovi gavi lavo,1
+1771193,18,missing_previous,daru kele nalu samu bovi gavi lavo,(silence),(silence),1
+1771193,19,extract,tora fira mepo zuna tora bovi fira,tora fira nalu samu bovi gavi lavo,tora fira nalu samu bovi gavi lavo,1
+1771193,19,exchanged_bearings,fira fira mepo zuna tora bovi tora,fira tora nalu samu bovi gavi lavo,fira tora nalu samu bovi gavi lavo,1
+1771193,19,missing_previous,tora fira nalu samu bovi gavi lavo,(silence),(silence),1
+1771193,20,extract,tora daru bovi zuna kele mepo fira,tora fira nalu samu mepo,tora fira nalu samu mepo,1
+1771193,20,exchanged_bearings,fira daru bovi zuna kele mepo tora,fira tora nalu samu mepo,fira tora nalu samu mepo,1
+1771193,20,missing_previous,tora fira nalu samu mepo,(silence),(silence),1
+1771193,21,extract,kele daru mepo zuna kele mepo daru,kele daru nalu samu mepo,kele daru nalu samu mepo,1
+1771193,21,exchanged_bearings,daru daru mepo zuna kele mepo kele,daru kele nalu samu mepo,daru kele nalu samu mepo,1
+1771193,21,missing_previous,kele daru nalu samu mepo,(silence),(silence),1
+1771193,22,extract,tora fira mepo zuna tora mepo fira,tora fira nalu samu mepo,tora fira nalu samu mepo,1
+1771193,22,exchanged_bearings,fira fira mepo zuna tora mepo tora,fira tora nalu samu mepo,fira tora nalu samu mepo,1
+1771193,22,missing_previous,tora fira nalu samu mepo,(silence),(silence),1
+1771193,23,extract,tora tora bovi zuna fira mepo fira,tora fira nalu samu mepo,tora fira nalu samu mepo,1
+1771193,23,exchanged_bearings,fira tora bovi zuna fira mepo tora,fira tora nalu samu mepo,fira tora nalu samu mepo,1
+1771193,23,missing_previous,tora fira nalu samu mepo,(silence),(silence),1
+2095213,0,extract,nalu nalu pemi bovi bovi zuna jori,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,1
+2095213,0,exchanged_bearings,nalu nalu pemi jori bovi zuna bovi,nalu gavi mepo jori bovi,nalu gavi mepo jori bovi,1
+2095213,0,missing_previous,nalu gavi mepo bovi jori,(silence),(silence),1
+2095213,1,extract,nalu nalu bovi jori jori zuna vuno,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,1
+2095213,1,exchanged_bearings,nalu nalu bovi vuno jori zuna jori,nalu gavi mepo vuno jori,nalu gavi mepo vuno jori,1
+2095213,1,missing_previous,nalu gavi mepo jori vuno,(silence),(silence),1
+2095213,2,extract,tesu nalu jori jori vuno zuna vuno,nalu gavi mepo jori vuno,nalu gavi mepo jori vuno,1
+2095213,2,exchanged_bearings,tesu nalu jori vuno vuno zuna jori,nalu gavi mepo vuno jori,nalu gavi mepo vuno jori,1
+2095213,2,missing_previous,nalu gavi mepo jori vuno,(silence),(silence),1
+2095213,3,extract,tesu nalu vuno vuno pemi zuna pemi,nalu gavi mepo vuno pemi,nalu gavi mepo vuno pemi,1
+2095213,3,exchanged_bearings,tesu nalu vuno pemi pemi zuna vuno,nalu gavi mepo pemi vuno,nalu gavi mepo pemi vuno,1
+2095213,3,missing_previous,nalu gavi mepo vuno pemi,(silence),(silence),1
+2095213,4,extract,tesu nalu jori vuno vuno zuna pemi,nalu gavi mepo vuno pemi,nalu gavi mepo vuno pemi,1
+2095213,4,exchanged_bearings,tesu nalu jori pemi vuno zuna vuno,nalu gavi mepo pemi vuno,nalu gavi mepo pemi vuno,1
+2095213,4,missing_previous,nalu gavi mepo vuno pemi,(silence),(silence),1
+2095213,5,extract,nalu nalu pemi bovi bovi zuna jori,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,1
+2095213,5,exchanged_bearings,nalu nalu pemi jori bovi zuna bovi,nalu gavi mepo jori bovi,nalu gavi mepo jori bovi,1
+2095213,5,missing_previous,nalu gavi mepo bovi jori,(silence),(silence),1
+2095213,6,extract,nalu nalu vuno pemi pemi zuna bovi,nalu gavi mepo pemi bovi,nalu gavi mepo pemi bovi,1
+2095213,6,exchanged_bearings,nalu nalu vuno bovi pemi zuna pemi,nalu gavi mepo bovi pemi,nalu gavi mepo bovi pemi,1
+2095213,6,missing_previous,nalu gavi mepo pemi bovi,(silence),(silence),1
+2095213,7,extract,nalu tesu bovi vuno jori zuna pemi,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,1
+2095213,7,exchanged_bearings,nalu tesu bovi pemi jori zuna vuno,tesu gavi mepo pemi vuno tora rika,tesu gavi mepo pemi vuno tora rika,1
+2095213,7,missing_previous,tesu gavi mepo vuno pemi tora rika,(silence),(silence),1
+2095213,8,extract,nalu nalu jori vuno vuno zuna pemi,nalu gavi mepo vuno pemi,nalu gavi mepo vuno pemi,1
+2095213,8,exchanged_bearings,nalu nalu jori pemi vuno zuna vuno,nalu gavi mepo pemi vuno,nalu gavi mepo pemi vuno,1
+2095213,8,missing_previous,nalu gavi mepo vuno pemi,(silence),(silence),1
+2095213,9,extract,nalu nalu pemi bovi bovi zuna jori,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,1
+2095213,9,exchanged_bearings,nalu nalu pemi jori bovi zuna bovi,nalu gavi mepo jori bovi,nalu gavi mepo jori bovi,1
+2095213,9,missing_previous,nalu gavi mepo bovi jori,(silence),(silence),1
+2095213,10,extract,nalu tesu bovi bovi jori zuna jori,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,1
+2095213,10,exchanged_bearings,nalu tesu bovi jori jori zuna bovi,tesu gavi mepo jori bovi tora rika,tesu gavi mepo jori bovi tora rika,1
+2095213,10,missing_previous,tesu gavi mepo bovi jori tora rika,(silence),(silence),1
+2095213,11,extract,tesu tesu pemi bovi bovi zuna jori,tesu gavi mepo bovi jori tora rika,tesu gavi mepo bovi jori tora rika,1
+2095213,11,exchanged_bearings,tesu tesu pemi jori bovi zuna bovi,tesu gavi mepo jori bovi tora rika,tesu gavi mepo jori bovi tora rika,1
+2095213,11,missing_previous,tesu gavi mepo bovi jori tora rika,(silence),(silence),1
+2095213,12,extract,tesu nalu bovi pemi jori zuna bovi,nalu gavi mepo pemi bovi,nalu gavi mepo pemi bovi,1
+2095213,12,exchanged_bearings,tesu nalu bovi bovi jori zuna pemi,nalu gavi mepo bovi pemi,nalu gavi mepo bovi pemi,1
+2095213,12,missing_previous,nalu gavi mepo pemi bovi,(silence),(silence),1
+2095213,13,extract,tesu nalu bovi vuno jori zuna pemi,nalu gavi mepo vuno pemi,nalu gavi mepo vuno pemi,1
+2095213,13,exchanged_bearings,tesu nalu bovi pemi jori zuna vuno,nalu gavi mepo pemi vuno,nalu gavi mepo pemi vuno,1
+2095213,13,missing_previous,nalu gavi mepo vuno pemi,(silence),(silence),1
+2095213,14,extract,nalu tesu jori pemi vuno zuna bovi,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,1
+2095213,14,exchanged_bearings,nalu tesu jori bovi vuno zuna pemi,tesu gavi mepo bovi pemi tora rika,tesu gavi mepo bovi pemi tora rika,1
+2095213,14,missing_previous,tesu gavi mepo pemi bovi tora rika,(silence),(silence),1
+2095213,15,extract,nalu nalu pemi bovi bovi zuna jori,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,1
+2095213,15,exchanged_bearings,nalu nalu pemi jori bovi zuna bovi,nalu gavi mepo jori bovi,nalu gavi mepo jori bovi,1
+2095213,15,missing_previous,nalu gavi mepo bovi jori,(silence),(silence),1
+2095213,16,extract,tesu nalu jori bovi vuno zuna jori,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,1
+2095213,16,exchanged_bearings,tesu nalu jori jori vuno zuna bovi,nalu gavi mepo jori bovi,nalu gavi mepo jori bovi,1
+2095213,16,missing_previous,nalu gavi mepo bovi jori,(silence),(silence),1
+2095213,17,extract,tesu tesu jori vuno vuno zuna pemi,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,1
+2095213,17,exchanged_bearings,tesu tesu jori pemi vuno zuna vuno,tesu gavi mepo pemi vuno tora rika,tesu gavi mepo pemi vuno tora rika,1
+2095213,17,missing_previous,tesu gavi mepo vuno pemi tora rika,(silence),(silence),1
+2095213,18,extract,tesu nalu jori pemi vuno zuna bovi,nalu gavi mepo pemi bovi,nalu gavi mepo pemi bovi,1
+2095213,18,exchanged_bearings,tesu nalu jori bovi vuno zuna pemi,nalu gavi mepo bovi pemi,nalu gavi mepo bovi pemi,1
+2095213,18,missing_previous,nalu gavi mepo pemi bovi,(silence),(silence),1
+2095213,19,extract,tesu tesu vuno pemi pemi zuna bovi,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,1
+2095213,19,exchanged_bearings,tesu tesu vuno bovi pemi zuna pemi,tesu gavi mepo bovi pemi tora rika,tesu gavi mepo bovi pemi tora rika,1
+2095213,19,missing_previous,tesu gavi mepo pemi bovi tora rika,(silence),(silence),1
+2095213,20,extract,tesu tesu vuno pemi pemi zuna bovi,tesu gavi mepo pemi bovi tora rika,tesu gavi mepo pemi bovi tora rika,1
+2095213,20,exchanged_bearings,tesu tesu vuno bovi pemi zuna pemi,tesu gavi mepo bovi pemi tora rika,tesu gavi mepo bovi pemi tora rika,1
+2095213,20,missing_previous,tesu gavi mepo pemi bovi tora rika,(silence),(silence),1
+2095213,21,extract,tesu nalu bovi bovi jori zuna jori,nalu gavi mepo bovi jori,nalu gavi mepo bovi jori,1
+2095213,21,exchanged_bearings,tesu nalu bovi jori jori zuna bovi,nalu gavi mepo jori bovi,nalu gavi mepo jori bovi,1
+2095213,21,missing_previous,nalu gavi mepo bovi jori,(silence),(silence),1
+2095213,22,extract,nalu tesu bovi jori jori zuna vuno,tesu gavi mepo jori vuno tora rika,tesu gavi mepo jori vuno tora rika,1
+2095213,22,exchanged_bearings,nalu tesu bovi vuno jori zuna jori,tesu gavi mepo vuno jori tora rika,tesu gavi mepo vuno jori tora rika,1
+2095213,22,missing_previous,tesu gavi mepo jori vuno tora rika,(silence),(silence),1
+2095213,23,extract,nalu tesu pemi vuno bovi zuna pemi,tesu gavi mepo vuno pemi tora rika,tesu gavi mepo vuno pemi tora rika,1
+2095213,23,exchanged_bearings,nalu tesu pemi pemi bovi zuna vuno,tesu gavi mepo pemi vuno tora rika,tesu gavi mepo pemi vuno tora rika,1
+2095213,23,missing_previous,tesu gavi mepo vuno pemi tora rika,(silence),(silence),1

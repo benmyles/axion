@@ -1,0 +1,8 @@
+run,flood_seconds,site_ticks,Msite_ticks_per_s,simulation_seconds,simulation_Msite_ticks_per_s,daylight_kernel,registers,local_bytes,ledger_bytes,field_ink,releases,moved,stained,changed_surfaces,seen,partial,full_histories,calls,syllables,listeners,spike_edits,vocal_heat,ear_heat,association_edits,reaches,blind_reaches,food,blind_food,heard_order_changed,grip_heat,reversed,living_witnesses,longest,witness,resident_bytes
+coast-stabilized,44.485,2147483648,48.2744,40.7367,52.7162,flood_fast_public_ink,150,0,72704,416152,13829,11180,7413,10270,2625,12503,0,2116,7543,795,12418,7543,2086,360,1,1,0,0,8,1,0,148,3,701227,8
+coast-cost-0,10.8206,536870912,49.6154,9.97601,53.8162,flood_audiences,127,0,52224,,,,,,,,,,,,,,,,,,,,,,,,,,
+coast-cost-1,10.81,536870912,49.6643,9.97605,53.816,flood_fast_public_ink,150,0,72704,414616,3484,2854,1883,2614,657,3163,0,530,1932,189,2962,1932,517,132,0,0,0,0,1,0,0,148,2,225244,8
+coast-cost-2,10.9444,536870912,49.0545,10.0442,53.451,flood_fast_public_ink,150,0,72704,414616,3464,2798,1851,2561,650,3155,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,164,2,601613,8
+coast-cost-3,10.7264,536870912,50.0515,9.92211,54.1086,flood_fast_public_ink,150,0,72704,414616,3484,2854,1883,2614,657,3163,0,530,1932,189,2962,1932,517,132,0,0,0,0,1,0,0,148,2,225244,8
+coast-cost-4,10.5412,536870912,50.9305,9.78438,54.8702,flood_audiences,127,0,52224,,,,,,,,,,,,,,,,,,,,,,,,,,
+coast-cost-5,10.4913,536870912,51.1731,9.76824,54.9609,flood_fast_public_ink,150,0,72704,414616,3464,2798,1851,2561,650,3155,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,164,2,601613,8

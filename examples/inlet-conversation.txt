@@ -1,0 +1,12 @@
+/inlet-table 112073 channels contextual 0 7
+/inlet-practice 24
+/inlet-stage amber
+where will amber go?
+where did it go?
+/inlet-turn
+/inlet-pour
+where did it go?
+where did amber start?
+why did you choose that outlet?
+what will the world look like tomorrow?
+/quit

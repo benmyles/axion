@@ -1,0 +1,32 @@
+voiced_encounter=1  person=0  cue=3  mark=1  sensation=2  interpreted=4  reached=4  words=0  portions=0  transmitted_words=0  questions=0  answers=0  candidates=15  remaining=64  memory_changed=1
+voiced_encounter=2  person=0  cue=4  mark=0  sensation=2  interpreted=0  reached=2  words=2  portions=0  transmitted_words=1  questions=1  answers=1  candidates=1  remaining=64  memory_changed=2
+speaker> tap ring
+pupil> tick?
+speaker> tick
+audible_clarification=0  requester=1  question=5137972200645306383  reply=5137972200645306383  possibilities_before=5  possibilities_after=1  initial_actions=12
+voiced_encounter=3  person=1  cue=4  mark=0  sensation=2  interpreted=4  reached=4  words=2  portions=0  transmitted_words=0  questions=0  answers=0  candidates=15  remaining=64  memory_changed=0
+pupil> south west
+voiced_encounter=1  person=0  cue=0  mark=2  sensation=1  interpreted=4  reached=4  words=0  portions=0  transmitted_words=0  questions=0  answers=0  candidates=15  remaining=64  memory_changed=1
+voiced_encounter=2  person=0  cue=4  mark=0  sensation=1  interpreted=3  reached=1  words=2  portions=0  transmitted_words=1  questions=1  answers=1  candidates=8  remaining=64  memory_changed=2
+speaker> hum tick
+pupil> tick?
+speaker> ring
+audible_clarification=0  requester=1  question=5137972200645306383  reply=18406534034089553625  possibilities_before=10  possibilities_after=8  initial_actions=3
+voiced_encounter=3  person=1  cue=4  mark=0  sensation=1  interpreted=4  reached=4  words=2  portions=0  transmitted_words=0  questions=0  answers=0  candidates=15  remaining=64  memory_changed=0
+pupil> north east
+voiced_encounter=1  person=0  cue=1  mark=0  sensation=3  interpreted=4  reached=4  words=0  portions=0  transmitted_words=0  questions=0  answers=0  candidates=15  remaining=64  memory_changed=1
+voiced_encounter=2  person=0  cue=4  mark=0  sensation=3  interpreted=1  reached=0  words=2  portions=0  transmitted_words=1  questions=1  answers=1  candidates=2  remaining=64  memory_changed=2
+speaker> hum ring
+pupil> tick?
+speaker> tick
+audible_clarification=0  requester=1  question=5137972200645306383  reply=5137972200645306383  possibilities_before=10  possibilities_after=2  initial_actions=3
+voiced_encounter=3  person=1  cue=4  mark=0  sensation=0  interpreted=4  reached=4  words=2  portions=0  transmitted_words=0  questions=0  answers=0  candidates=15  remaining=64  memory_changed=0
+pupil> north west
+voiced_encounter=1  person=0  cue=2  mark=3  sensation=0  interpreted=4  reached=4  words=0  portions=0  transmitted_words=0  questions=0  answers=0  candidates=15  remaining=64  memory_changed=1
+voiced_encounter=2  person=0  cue=4  mark=0  sensation=0  interpreted=2  reached=3  words=2  portions=0  transmitted_words=1  questions=1  answers=1  candidates=4  remaining=64  memory_changed=2
+speaker> tap tick
+pupil> tick?
+speaker> ring
+audible_clarification=0  requester=1  question=5137972200645306383  reply=18406534034089553625  possibilities_before=5  possibilities_after=4  initial_actions=12
+voiced_encounter=3  person=1  cue=4  mark=0  sensation=3  interpreted=4  reached=4  words=2  portions=0  transmitted_words=0  questions=0  answers=0  candidates=15  remaining=64  memory_changed=0
+pupil> south east

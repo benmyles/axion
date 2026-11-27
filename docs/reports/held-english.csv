@@ -1,0 +1,1153 @@
+seed,dialect,wire,trial,cue,length,current,past,target,spoken,receiver,earlier,exact,decoded
+162337,english,open,0,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+162337,english,open,0,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),water west south,1,1
+162337,english,open,1,happened,6,water east north,food east north,water moved from east to north,water moved from east to north,water east north,(uncertain),1,1
+162337,english,open,1,earlier,6,water east north,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+162337,english,open,2,happened,6,water north west,food north west,water moved from north to west,water moved from north to west,water north west,(uncertain),1,1
+162337,english,open,2,earlier,6,water north west,food north west,food moved from north to west,food moved from north to west,(uncertain),food north west,1,1
+162337,english,open,3,happened,6,water west south,food west south,water moved from west to south,water moved from west to south,water west south,(uncertain),1,1
+162337,english,open,3,earlier,6,water west south,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+162337,english,open,4,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,water east north,(uncertain),1,1
+162337,english,open,4,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),water south east,1,1
+162337,english,open,5,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,water west south,(uncertain),1,1
+162337,english,open,5,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),water north west,1,1
+162337,english,open,6,happened,6,food south east,water south east,food moved from south to east,food moved from south to east,food south east,(uncertain),1,1
+162337,english,open,6,earlier,6,food south east,water south east,water moved from south to east,water moved from south to east,(uncertain),water south east,1,1
+162337,english,open,7,happened,6,food east north,water east north,food moved from east to north,food moved from east to north,food east north,(uncertain),1,1
+162337,english,open,7,earlier,6,food east north,water east north,water moved from east to north,water moved from east to north,(uncertain),water east north,1,1
+162337,english,open,8,happened,6,food north west,water north west,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+162337,english,open,8,earlier,6,food north west,water north west,water moved from north to west,water moved from north to west,(uncertain),water north west,1,1
+162337,english,open,9,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+162337,english,open,9,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),water west south,1,1
+162337,english,open,10,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,water north west,(uncertain),1,1
+162337,english,open,10,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),water east north,1,1
+162337,english,open,11,happened,6,food west south,water west south,food moved from west to south,food moved from west to south,food west south,(uncertain),1,1
+162337,english,open,11,earlier,6,food west south,water west south,water moved from west to south,water moved from west to south,(uncertain),water west south,1,1
+162337,english,open,12,happened,6,food south east,water south east,food moved from south to east,food moved from south to east,food south east,(uncertain),1,1
+162337,english,open,12,earlier,6,food south east,water south east,water moved from south to east,water moved from south to east,(uncertain),water south east,1,1
+162337,english,open,13,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,water north west,(uncertain),1,1
+162337,english,open,13,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),water east north,1,1
+162337,english,open,14,happened,6,food east north,water west south,food moved from east to north,food moved from east to north,food east north,(uncertain),1,1
+162337,english,open,14,earlier,6,food east north,water west south,water moved from west to south,water moved from west to south,(uncertain),water west south,1,1
+162337,english,open,15,happened,6,food north west,water south east,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+162337,english,open,15,earlier,6,food north west,water south east,water moved from south to east,water moved from south to east,(uncertain),water south east,1,1
+162337,english,open,16,happened,6,water east north,food west south,water moved from east to north,water moved from east to north,water east north,(uncertain),1,1
+162337,english,open,16,earlier,6,water east north,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+162337,english,open,17,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,food east north,(uncertain),1,1
+162337,english,open,17,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),food south east,1,1
+162337,english,open,18,happened,6,food north west,water north west,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+162337,english,open,18,earlier,6,food north west,water north west,water moved from north to west,water moved from north to west,(uncertain),water north west,1,1
+162337,english,open,19,happened,6,food west south,water west south,food moved from west to south,food moved from west to south,food west south,(uncertain),1,1
+162337,english,open,19,earlier,6,food west south,water west south,water moved from west to south,water moved from west to south,(uncertain),water west south,1,1
+162337,english,open,20,happened,6,water south east,food south east,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+162337,english,open,20,earlier,6,water south east,food south east,food moved from south to east,food moved from south to east,(uncertain),food south east,1,1
+162337,english,open,21,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+162337,english,open,21,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+162337,english,open,22,happened,6,water east north,food west south,water moved from east to north,water moved from east to north,water east north,(uncertain),1,1
+162337,english,open,22,earlier,6,water east north,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+162337,english,open,23,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,food east north,(uncertain),1,1
+162337,english,open,23,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),food south east,1,1
+162337,english,muted,0,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,0,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,1,happened,6,water east north,food east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,1,earlier,6,water east north,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,2,happened,6,water north west,food north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,2,earlier,6,water north west,food north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,3,happened,6,water west south,food west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,3,earlier,6,water west south,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,4,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,4,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,5,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,5,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,6,happened,6,food south east,water south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,6,earlier,6,food south east,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,7,happened,6,food east north,water east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,7,earlier,6,food east north,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,8,happened,6,food north west,water north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,8,earlier,6,food north west,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,9,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,9,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,10,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,10,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,11,happened,6,food west south,water west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,11,earlier,6,food west south,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,12,happened,6,food south east,water south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,12,earlier,6,food south east,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,13,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,13,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,14,happened,6,food east north,water west south,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,14,earlier,6,food east north,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,15,happened,6,food north west,water south east,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,15,earlier,6,food north west,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,16,happened,6,water east north,food west south,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,16,earlier,6,water east north,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,17,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,17,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,18,happened,6,food north west,water north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,18,earlier,6,food north west,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,19,happened,6,food west south,water west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,19,earlier,6,food west south,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,20,happened,6,water south east,food south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,20,earlier,6,water south east,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+162337,english,muted,21,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+162337,english,muted,21,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,22,happened,6,water east north,food west south,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,22,earlier,6,water east north,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+162337,english,muted,23,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,muted,23,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,0,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,0,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,1,happened,6,water east north,food east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,1,earlier,6,water east north,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,2,happened,6,water north west,food north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,2,earlier,6,water north west,food north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,3,happened,6,water west south,food west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,3,earlier,6,water west south,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,4,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,4,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,5,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,5,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,6,happened,6,food south east,water south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,6,earlier,6,food south east,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,7,happened,6,food east north,water east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,7,earlier,6,food east north,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,8,happened,6,food north west,water north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,8,earlier,6,food north west,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,9,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,9,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,10,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,10,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,11,happened,6,food west south,water west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,11,earlier,6,food west south,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,12,happened,6,food south east,water south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,12,earlier,6,food south east,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,13,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,13,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,14,happened,6,food east north,water west south,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,14,earlier,6,food east north,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,15,happened,6,food north west,water south east,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,15,earlier,6,food north west,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,16,happened,6,water east north,food west south,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,16,earlier,6,water east north,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,17,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,17,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,18,happened,6,food north west,water north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,18,earlier,6,food north west,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,19,happened,6,food west south,water west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,19,earlier,6,food west south,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,20,happened,6,water south east,food south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,20,earlier,6,water south east,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+162337,english,reversed,21,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+162337,english,reversed,21,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,22,happened,6,water east north,food west south,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,22,earlier,6,water east north,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+162337,english,reversed,23,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+162337,english,reversed,23,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+349907,english,open,0,happened,6,water north south,water south north,water moved from north to south,water moved from north to south,water north south,(uncertain),1,1
+349907,english,open,0,earlier,6,water north south,water south north,water moved from south to north,water moved from south to north,(uncertain),water south north,1,1
+349907,english,open,1,happened,6,water north south,water south north,water moved from north to south,water moved from north to south,water north south,(uncertain),1,1
+349907,english,open,1,earlier,6,water north south,water south north,water moved from south to north,water moved from south to north,(uncertain),water south north,1,1
+349907,english,open,2,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+349907,english,open,2,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+349907,english,open,3,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+349907,english,open,3,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+349907,english,open,4,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+349907,english,open,4,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+349907,english,open,5,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+349907,english,open,5,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+349907,english,open,6,happened,6,water north south,food south north,water moved from north to south,water moved from north to south,water north south,(uncertain),1,1
+349907,english,open,6,earlier,6,water north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+349907,english,open,7,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+349907,english,open,7,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+349907,english,open,8,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+349907,english,open,8,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+349907,english,open,9,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+349907,english,open,9,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+349907,english,open,10,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+349907,english,open,10,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+349907,english,open,11,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+349907,english,open,11,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+349907,english,open,12,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+349907,english,open,12,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+349907,english,open,13,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+349907,english,open,13,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+349907,english,open,14,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+349907,english,open,14,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+349907,english,open,15,happened,6,water north south,food south north,water moved from north to south,water moved from north to south,water north south,(uncertain),1,1
+349907,english,open,15,earlier,6,water north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+349907,english,open,16,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+349907,english,open,16,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+349907,english,open,17,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+349907,english,open,17,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+349907,english,open,18,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+349907,english,open,18,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+349907,english,open,19,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+349907,english,open,19,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+349907,english,open,20,happened,6,food south north,water north south,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+349907,english,open,20,earlier,6,food south north,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+349907,english,open,21,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+349907,english,open,21,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+349907,english,open,22,happened,6,food south north,water north south,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+349907,english,open,22,earlier,6,food south north,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+349907,english,open,23,happened,6,food north south,water south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+349907,english,open,23,earlier,6,food north south,water south north,water moved from south to north,water moved from south to north,(uncertain),water south north,1,1
+349907,english,muted,0,happened,6,water north south,water south north,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,0,earlier,6,water north south,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,1,happened,6,water north south,water south north,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,1,earlier,6,water north south,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,2,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,2,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,3,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,3,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,4,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,4,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,5,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,5,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,6,happened,6,water north south,food south north,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,6,earlier,6,water north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,7,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,7,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,8,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,8,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,9,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,9,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,10,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,10,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,11,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,11,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,12,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,12,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,13,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,13,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,14,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,14,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,15,happened,6,water north south,food south north,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,15,earlier,6,water north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,16,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,16,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,17,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,17,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,18,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,18,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,19,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,19,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,20,happened,6,food south north,water north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,20,earlier,6,food south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,21,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,21,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,22,happened,6,food south north,water north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,muted,22,earlier,6,food south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,23,happened,6,food north south,water south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,muted,23,earlier,6,food north south,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,0,happened,6,water north south,water south north,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,0,earlier,6,water north south,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,1,happened,6,water north south,water south north,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,1,earlier,6,water north south,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,2,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,2,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,3,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,3,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,4,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,4,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,5,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,5,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,6,happened,6,water north south,food south north,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,6,earlier,6,water north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,7,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,7,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,8,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,8,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,9,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,9,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,10,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,10,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,11,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,11,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,12,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,12,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,13,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,13,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,14,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,14,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,15,happened,6,water north south,food south north,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,15,earlier,6,water north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,16,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,16,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,17,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,17,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,18,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,18,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,19,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,19,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,20,happened,6,food south north,water north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,20,earlier,6,food south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,21,happened,6,water south north,food north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,21,earlier,6,water south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,22,happened,6,food south north,water north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+349907,english,reversed,22,earlier,6,food south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,23,happened,6,food north south,water south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+349907,english,reversed,23,earlier,6,food north south,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,open,0,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,food east west,(uncertain),1,1
+579053,english,open,0,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+579053,english,open,1,happened,6,water north south,water south north,water moved from north to south,water moved from north to south,water north south,(uncertain),1,1
+579053,english,open,1,earlier,6,water north south,water south north,water moved from south to north,water moved from south to north,(uncertain),water south north,1,1
+579053,english,open,2,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+579053,english,open,2,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),water south north,1,1
+579053,english,open,3,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+579053,english,open,3,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+579053,english,open,4,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+579053,english,open,4,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+579053,english,open,5,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+579053,english,open,5,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+579053,english,open,6,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+579053,english,open,6,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+579053,english,open,7,happened,6,food east west,water north south,food moved from east to west,food moved from east to west,food east west,(uncertain),1,1
+579053,english,open,7,earlier,6,food east west,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+579053,english,open,8,happened,6,water south north,food west east,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+579053,english,open,8,earlier,6,water south north,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+579053,english,open,9,happened,6,food east west,water north south,food moved from east to west,food moved from east to west,food east west,(uncertain),1,1
+579053,english,open,9,earlier,6,food east west,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+579053,english,open,10,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+579053,english,open,10,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),water south north,1,1
+579053,english,open,11,happened,6,food east west,water north south,food moved from east to west,food moved from east to west,food east west,(uncertain),1,1
+579053,english,open,11,earlier,6,food east west,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+579053,english,open,12,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+579053,english,open,12,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),water south north,1,1
+579053,english,open,13,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+579053,english,open,13,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+579053,english,open,14,happened,6,water north south,food east west,water moved from north to south,water moved from north to south,water north south,(uncertain),1,1
+579053,english,open,14,earlier,6,water north south,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+579053,english,open,15,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+579053,english,open,15,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),water south north,1,1
+579053,english,open,16,happened,6,water north south,food east west,water moved from north to south,water moved from north to south,water north south,(uncertain),1,1
+579053,english,open,16,earlier,6,water north south,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+579053,english,open,17,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,food east west,(uncertain),1,1
+579053,english,open,17,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+579053,english,open,18,happened,6,water south north,food west east,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+579053,english,open,18,earlier,6,water south north,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+579053,english,open,19,happened,6,water north south,food east west,water moved from north to south,water moved from north to south,water north south,(uncertain),1,1
+579053,english,open,19,earlier,6,water north south,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+579053,english,open,20,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,food east west,(uncertain),1,1
+579053,english,open,20,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+579053,english,open,21,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,food east west,(uncertain),1,1
+579053,english,open,21,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+579053,english,open,22,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+579053,english,open,22,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),water south north,1,1
+579053,english,open,23,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,water south north,(uncertain),1,1
+579053,english,open,23,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),water north south,1,1
+579053,english,muted,0,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,0,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,1,happened,6,water north south,water south north,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,1,earlier,6,water north south,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,2,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,2,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,3,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,3,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,4,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,4,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,5,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,5,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,6,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,6,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,7,happened,6,food east west,water north south,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,7,earlier,6,food east west,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,8,happened,6,water south north,food west east,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,8,earlier,6,water south north,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,9,happened,6,food east west,water north south,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,9,earlier,6,food east west,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,10,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,10,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,11,happened,6,food east west,water north south,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,11,earlier,6,food east west,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,12,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,12,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,13,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,13,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,14,happened,6,water north south,food east west,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,14,earlier,6,water north south,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,15,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,15,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,16,happened,6,water north south,food east west,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,16,earlier,6,water north south,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,17,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,17,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,18,happened,6,water south north,food west east,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,18,earlier,6,water south north,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,19,happened,6,water north south,food east west,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,muted,19,earlier,6,water north south,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,20,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,20,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,21,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,muted,21,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,22,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,muted,22,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,23,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,muted,23,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,0,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,0,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,1,happened,6,water north south,water south north,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,1,earlier,6,water north south,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,2,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,2,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,3,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,3,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,4,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,4,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,5,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,5,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,6,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,6,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,7,happened,6,food east west,water north south,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,7,earlier,6,food east west,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,8,happened,6,water south north,food west east,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,8,earlier,6,water south north,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,9,happened,6,food east west,water north south,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,9,earlier,6,food east west,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,10,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,10,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,11,happened,6,food east west,water north south,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,11,earlier,6,food east west,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,12,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,12,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,13,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,13,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,14,happened,6,water north south,food east west,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,14,earlier,6,water north south,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,15,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,15,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,16,happened,6,water north south,food east west,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,16,earlier,6,water north south,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,17,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,17,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,18,happened,6,water south north,food west east,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,18,earlier,6,water south north,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,19,happened,6,water north south,food east west,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+579053,english,reversed,19,earlier,6,water north south,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,20,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,20,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,21,happened,6,food east west,food west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+579053,english,reversed,21,earlier,6,food east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,22,happened,6,food west east,water south north,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+579053,english,reversed,22,earlier,6,food west east,water south north,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,23,happened,6,water south north,water north south,water moved from south to north,water moved from south to north,(uncertain),(uncertain),1,0
+579053,english,reversed,23,earlier,6,water south north,water north south,water moved from north to south,water moved from north to south,(uncertain),(uncertain),1,0
+886909,english,open,0,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,water west south,(uncertain),1,1
+886909,english,open,0,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),water north west,1,1
+886909,english,open,1,happened,6,water south east,food west south,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+886909,english,open,1,earlier,6,water south east,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+886909,english,open,2,happened,6,food south east,water east north,food moved from south to east,food moved from south to east,food south east,(uncertain),1,1
+886909,english,open,2,earlier,6,food south east,water east north,water moved from east to north,water moved from east to north,(uncertain),water east north,1,1
+886909,english,open,3,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+886909,english,open,3,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+886909,english,open,4,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,food south east,(uncertain),1,1
+886909,english,open,4,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+886909,english,open,5,happened,6,water north west,food east north,water moved from north to west,water moved from north to west,water north west,(uncertain),1,1
+886909,english,open,5,earlier,6,water north west,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+886909,english,open,6,happened,6,food north west,water west south,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+886909,english,open,6,earlier,6,food north west,water west south,water moved from west to south,water moved from west to south,(uncertain),water west south,1,1
+886909,english,open,7,happened,6,water south east,food west south,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+886909,english,open,7,earlier,6,water south east,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+886909,english,open,8,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,food east north,(uncertain),1,1
+886909,english,open,8,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),food south east,1,1
+886909,english,open,9,happened,6,food west south,food north west,food moved from west to south,food moved from west to south,food west south,(uncertain),1,1
+886909,english,open,9,earlier,6,food west south,food north west,food moved from north to west,food moved from north to west,(uncertain),food north west,1,1
+886909,english,open,10,happened,6,water east north,food south east,water moved from east to north,water moved from east to north,water east north,(uncertain),1,1
+886909,english,open,10,earlier,6,water east north,food south east,food moved from south to east,food moved from south to east,(uncertain),food south east,1,1
+886909,english,open,11,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+886909,english,open,11,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+886909,english,open,12,happened,6,food west south,water north west,food moved from west to south,food moved from west to south,food west south,(uncertain),1,1
+886909,english,open,12,earlier,6,food west south,water north west,water moved from north to west,water moved from north to west,(uncertain),water north west,1,1
+886909,english,open,13,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,food east north,(uncertain),1,1
+886909,english,open,13,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),food south east,1,1
+886909,english,open,14,happened,6,food north west,water west south,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+886909,english,open,14,earlier,6,food north west,water west south,water moved from west to south,water moved from west to south,(uncertain),water west south,1,1
+886909,english,open,15,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,food south east,(uncertain),1,1
+886909,english,open,15,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+886909,english,open,16,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,water east north,(uncertain),1,1
+886909,english,open,16,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),water south east,1,1
+886909,english,open,17,happened,6,water north west,food east north,water moved from north to west,water moved from north to west,water north west,(uncertain),1,1
+886909,english,open,17,earlier,6,water north west,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+886909,english,open,18,happened,6,food north west,water west south,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+886909,english,open,18,earlier,6,food north west,water west south,water moved from west to south,water moved from west to south,(uncertain),water west south,1,1
+886909,english,open,19,happened,6,water south east,food west south,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+886909,english,open,19,earlier,6,water south east,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+886909,english,open,20,happened,6,water east north,food south east,water moved from east to north,water moved from east to north,water east north,(uncertain),1,1
+886909,english,open,20,earlier,6,water east north,food south east,food moved from south to east,food moved from south to east,(uncertain),food south east,1,1
+886909,english,open,21,happened,6,water north west,food east north,water moved from north to west,water moved from north to west,water north west,(uncertain),1,1
+886909,english,open,21,earlier,6,water north west,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+886909,english,open,22,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+886909,english,open,22,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),water west south,1,1
+886909,english,open,23,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,water north west,(uncertain),1,1
+886909,english,open,23,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),water east north,1,1
+886909,english,muted,0,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,0,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,1,happened,6,water south east,food west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,1,earlier,6,water south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,2,happened,6,food south east,water east north,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,2,earlier,6,food south east,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,3,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,3,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,4,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,4,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,5,happened,6,water north west,food east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,5,earlier,6,water north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,6,happened,6,food north west,water west south,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,6,earlier,6,food north west,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,7,happened,6,water south east,food west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,7,earlier,6,water south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,8,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,8,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,9,happened,6,food west south,food north west,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,9,earlier,6,food west south,food north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,10,happened,6,water east north,food south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,10,earlier,6,water east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,11,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,11,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,12,happened,6,food west south,water north west,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,12,earlier,6,food west south,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,13,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,13,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,14,happened,6,food north west,water west south,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,14,earlier,6,food north west,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,15,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,15,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,16,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,16,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,17,happened,6,water north west,food east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,17,earlier,6,water north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,18,happened,6,food north west,water west south,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,18,earlier,6,food north west,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,19,happened,6,water south east,food west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,19,earlier,6,water south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,20,happened,6,water east north,food south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,20,earlier,6,water east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,21,happened,6,water north west,food east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,21,earlier,6,water north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,muted,22,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+886909,english,muted,22,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+886909,english,muted,23,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,muted,23,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,0,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,0,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,1,happened,6,water south east,food west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,1,earlier,6,water south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,2,happened,6,food south east,water east north,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,2,earlier,6,food south east,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,3,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,3,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,4,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,4,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,5,happened,6,water north west,food east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,5,earlier,6,water north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,6,happened,6,food north west,water west south,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,6,earlier,6,food north west,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,7,happened,6,water south east,food west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,7,earlier,6,water south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,8,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,8,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,9,happened,6,food west south,food north west,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,9,earlier,6,food west south,food north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,10,happened,6,water east north,food south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,10,earlier,6,water east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,11,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,11,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,12,happened,6,food west south,water north west,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,12,earlier,6,food west south,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,13,happened,6,food east north,food south east,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,13,earlier,6,food east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,14,happened,6,food north west,water west south,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,14,earlier,6,food north west,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,15,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,15,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,16,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,16,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,17,happened,6,water north west,food east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,17,earlier,6,water north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,18,happened,6,food north west,water west south,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,18,earlier,6,food north west,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,19,happened,6,water south east,food west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,19,earlier,6,water south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,20,happened,6,water east north,food south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,20,earlier,6,water east north,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,21,happened,6,water north west,food east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,21,earlier,6,water north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+886909,english,reversed,22,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+886909,english,reversed,22,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+886909,english,reversed,23,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+886909,english,reversed,23,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+1105799,english,open,0,happened,6,food south north,water east west,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+1105799,english,open,0,earlier,6,food south north,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1105799,english,open,1,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1105799,english,open,1,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1105799,english,open,2,happened,6,food north south,water west east,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+1105799,english,open,2,earlier,6,food north south,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1105799,english,open,3,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+1105799,english,open,3,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+1105799,english,open,4,happened,6,water east west,food south north,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1105799,english,open,4,earlier,6,water east west,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+1105799,english,open,5,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+1105799,english,open,5,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+1105799,english,open,6,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1105799,english,open,6,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1105799,english,open,7,happened,6,water west east,food north south,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1105799,english,open,7,earlier,6,water west east,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+1105799,english,open,8,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1105799,english,open,8,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1105799,english,open,9,happened,6,water east west,food south north,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1105799,english,open,9,earlier,6,water east west,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+1105799,english,open,10,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1105799,english,open,10,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1105799,english,open,11,happened,6,water west east,food north south,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1105799,english,open,11,earlier,6,water west east,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+1105799,english,open,12,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+1105799,english,open,12,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),food south north,1,1
+1105799,english,open,13,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1105799,english,open,13,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1105799,english,open,14,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1105799,english,open,14,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1105799,english,open,15,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1105799,english,open,15,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1105799,english,open,16,happened,6,food south north,water east west,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+1105799,english,open,16,earlier,6,food south north,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1105799,english,open,17,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+1105799,english,open,17,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+1105799,english,open,18,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+1105799,english,open,18,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),food north south,1,1
+1105799,english,open,19,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1105799,english,open,19,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1105799,english,open,20,happened,6,food north south,water west east,food moved from north to south,food moved from north to south,food north south,(uncertain),1,1
+1105799,english,open,20,earlier,6,food north south,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1105799,english,open,21,happened,6,food south north,water east west,food moved from south to north,food moved from south to north,food south north,(uncertain),1,1
+1105799,english,open,21,earlier,6,food south north,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1105799,english,open,22,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1105799,english,open,22,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1105799,english,open,23,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1105799,english,open,23,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1105799,english,muted,0,happened,6,food south north,water east west,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,muted,0,earlier,6,food south north,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,1,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,1,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,2,happened,6,food north south,water west east,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,muted,2,earlier,6,food north south,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,3,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,muted,3,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,muted,4,happened,6,water east west,food south north,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,4,earlier,6,water east west,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,muted,5,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,muted,5,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,muted,6,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,6,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,7,happened,6,water west east,food north south,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,7,earlier,6,water west east,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,muted,8,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,8,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,9,happened,6,water east west,food south north,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,9,earlier,6,water east west,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,muted,10,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,10,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,11,happened,6,water west east,food north south,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,11,earlier,6,water west east,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,muted,12,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,muted,12,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,muted,13,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,13,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,14,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,14,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,15,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,15,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,16,happened,6,food south north,water east west,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,muted,16,earlier,6,food south north,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,17,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,muted,17,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,muted,18,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,muted,18,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,muted,19,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,19,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,20,happened,6,food north south,water west east,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,muted,20,earlier,6,food north south,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,21,happened,6,food south north,water east west,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,muted,21,earlier,6,food south north,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,22,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,22,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,muted,23,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,muted,23,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,0,happened,6,food south north,water east west,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,reversed,0,earlier,6,food south north,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,1,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,1,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,2,happened,6,food north south,water west east,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,reversed,2,earlier,6,food north south,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,3,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,reversed,3,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,reversed,4,happened,6,water east west,food south north,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,4,earlier,6,water east west,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,reversed,5,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,reversed,5,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,reversed,6,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,6,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,7,happened,6,water west east,food north south,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,7,earlier,6,water west east,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,reversed,8,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,8,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,9,happened,6,water east west,food south north,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,9,earlier,6,water east west,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,reversed,10,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,10,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,11,happened,6,water west east,food north south,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,11,earlier,6,water west east,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,reversed,12,happened,6,food north south,food south north,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,reversed,12,earlier,6,food north south,food south north,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,reversed,13,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,13,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,14,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,14,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,15,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,15,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,16,happened,6,food south north,water east west,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,reversed,16,earlier,6,food south north,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,17,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,reversed,17,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,reversed,18,happened,6,food south north,food north south,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,reversed,18,earlier,6,food south north,food north south,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,reversed,19,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,19,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,20,happened,6,food north south,water west east,food moved from north to south,food moved from north to south,(uncertain),(uncertain),1,0
+1105799,english,reversed,20,earlier,6,food north south,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,21,happened,6,food south north,water east west,food moved from south to north,food moved from south to north,(uncertain),(uncertain),1,0
+1105799,english,reversed,21,earlier,6,food south north,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,22,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,22,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1105799,english,reversed,23,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1105799,english,reversed,23,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1416191,english,open,0,happened,6,water east south,water north east,water moved from east to south,water moved from east to south,water east south,(uncertain),1,1
+1416191,english,open,0,earlier,6,water east south,water north east,water moved from north to east,water moved from north to east,(uncertain),water north east,1,1
+1416191,english,open,1,happened,6,water west north,water south west,water moved from west to north,water moved from west to north,water west north,(uncertain),1,1
+1416191,english,open,1,earlier,6,water west north,water south west,water moved from south to west,water moved from south to west,(uncertain),water south west,1,1
+1416191,english,open,2,happened,6,food south west,water north east,food moved from south to west,food moved from south to west,food south west,(uncertain),1,1
+1416191,english,open,2,earlier,6,food south west,water north east,water moved from north to east,water moved from north to east,(uncertain),water north east,1,1
+1416191,english,open,3,happened,6,food north east,food west north,food moved from north to east,food moved from north to east,food north east,(uncertain),1,1
+1416191,english,open,3,earlier,6,food north east,food west north,food moved from west to north,food moved from west to north,(uncertain),food west north,1,1
+1416191,english,open,4,happened,6,food south west,food east south,food moved from south to west,food moved from south to west,food south west,(uncertain),1,1
+1416191,english,open,4,earlier,6,food south west,food east south,food moved from east to south,food moved from east to south,(uncertain),food east south,1,1
+1416191,english,open,5,happened,6,water south west,water east south,water moved from south to west,water moved from south to west,water south west,(uncertain),1,1
+1416191,english,open,5,earlier,6,water south west,water east south,water moved from east to south,water moved from east to south,(uncertain),water east south,1,1
+1416191,english,open,6,happened,6,water west north,food west north,water moved from west to north,water moved from west to north,water west north,(uncertain),1,1
+1416191,english,open,6,earlier,6,water west north,food west north,food moved from west to north,food moved from west to north,(uncertain),food west north,1,1
+1416191,english,open,7,happened,6,food east south,food north east,food moved from east to south,food moved from east to south,food east south,(uncertain),1,1
+1416191,english,open,7,earlier,6,food east south,food north east,food moved from north to east,food moved from north to east,(uncertain),food north east,1,1
+1416191,english,open,8,happened,6,food south west,water north east,food moved from south to west,food moved from south to west,food south west,(uncertain),1,1
+1416191,english,open,8,earlier,6,food south west,water north east,water moved from north to east,water moved from north to east,(uncertain),water north east,1,1
+1416191,english,open,9,happened,6,water south west,water east south,water moved from south to west,water moved from south to west,water south west,(uncertain),1,1
+1416191,english,open,9,earlier,6,water south west,water east south,water moved from east to south,water moved from east to south,(uncertain),water east south,1,1
+1416191,english,open,10,happened,6,water west north,food west north,water moved from west to north,water moved from west to north,water west north,(uncertain),1,1
+1416191,english,open,10,earlier,6,water west north,food west north,food moved from west to north,food moved from west to north,(uncertain),food west north,1,1
+1416191,english,open,11,happened,6,food north east,water north east,food moved from north to east,food moved from north to east,food north east,(uncertain),1,1
+1416191,english,open,11,earlier,6,food north east,water north east,water moved from north to east,water moved from north to east,(uncertain),water north east,1,1
+1416191,english,open,12,happened,6,food south west,food east south,food moved from south to west,food moved from south to west,food south west,(uncertain),1,1
+1416191,english,open,12,earlier,6,food south west,food east south,food moved from east to south,food moved from east to south,(uncertain),food east south,1,1
+1416191,english,open,13,happened,6,food west north,water east south,food moved from west to north,food moved from west to north,food west north,(uncertain),1,1
+1416191,english,open,13,earlier,6,food west north,water east south,water moved from east to south,water moved from east to south,(uncertain),water east south,1,1
+1416191,english,open,14,happened,6,water south west,food north east,water moved from south to west,water moved from south to west,water south west,(uncertain),1,1
+1416191,english,open,14,earlier,6,water south west,food north east,food moved from north to east,food moved from north to east,(uncertain),food north east,1,1
+1416191,english,open,15,happened,6,water north east,water west north,water moved from north to east,water moved from north to east,water north east,(uncertain),1,1
+1416191,english,open,15,earlier,6,water north east,water west north,water moved from west to north,water moved from west to north,(uncertain),water west north,1,1
+1416191,english,open,16,happened,6,food east south,water east south,food moved from east to south,food moved from east to south,food east south,(uncertain),1,1
+1416191,english,open,16,earlier,6,food east south,water east south,water moved from east to south,water moved from east to south,(uncertain),water east south,1,1
+1416191,english,open,17,happened,6,food west north,food south west,food moved from west to north,food moved from west to north,food west north,(uncertain),1,1
+1416191,english,open,17,earlier,6,food west north,food south west,food moved from south to west,food moved from south to west,(uncertain),food south west,1,1
+1416191,english,open,18,happened,6,water south west,food north east,water moved from south to west,water moved from south to west,water south west,(uncertain),1,1
+1416191,english,open,18,earlier,6,water south west,food north east,food moved from north to east,food moved from north to east,(uncertain),food north east,1,1
+1416191,english,open,19,happened,6,water north east,water west north,water moved from north to east,water moved from north to east,water north east,(uncertain),1,1
+1416191,english,open,19,earlier,6,water north east,water west north,water moved from west to north,water moved from west to north,(uncertain),water west north,1,1
+1416191,english,open,20,happened,6,water east south,food east south,water moved from east to south,water moved from east to south,water east south,(uncertain),1,1
+1416191,english,open,20,earlier,6,water east south,food east south,food moved from east to south,food moved from east to south,(uncertain),food east south,1,1
+1416191,english,open,21,happened,6,water west north,water south west,water moved from west to north,water moved from west to north,water west north,(uncertain),1,1
+1416191,english,open,21,earlier,6,water west north,water south west,water moved from south to west,water moved from south to west,(uncertain),water south west,1,1
+1416191,english,open,22,happened,6,food west north,food south west,food moved from west to north,food moved from west to north,food west north,(uncertain),1,1
+1416191,english,open,22,earlier,6,food west north,food south west,food moved from south to west,food moved from south to west,(uncertain),food south west,1,1
+1416191,english,open,23,happened,6,food north east,water north east,food moved from north to east,food moved from north to east,food north east,(uncertain),1,1
+1416191,english,open,23,earlier,6,food north east,water north east,water moved from north to east,water moved from north to east,(uncertain),water north east,1,1
+1416191,english,muted,0,happened,6,water east south,water north east,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,0,earlier,6,water east south,water north east,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,1,happened,6,water west north,water south west,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,1,earlier,6,water west north,water south west,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,2,happened,6,food south west,water north east,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,2,earlier,6,food south west,water north east,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,3,happened,6,food north east,food west north,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,3,earlier,6,food north east,food west north,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,4,happened,6,food south west,food east south,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,4,earlier,6,food south west,food east south,food moved from east to south,food moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,5,happened,6,water south west,water east south,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,5,earlier,6,water south west,water east south,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,6,happened,6,water west north,food west north,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,6,earlier,6,water west north,food west north,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,7,happened,6,food east south,food north east,food moved from east to south,food moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,7,earlier,6,food east south,food north east,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,8,happened,6,food south west,water north east,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,8,earlier,6,food south west,water north east,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,9,happened,6,water south west,water east south,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,9,earlier,6,water south west,water east south,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,10,happened,6,water west north,food west north,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,10,earlier,6,water west north,food west north,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,11,happened,6,food north east,water north east,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,11,earlier,6,food north east,water north east,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,12,happened,6,food south west,food east south,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,12,earlier,6,food south west,food east south,food moved from east to south,food moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,13,happened,6,food west north,water east south,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,13,earlier,6,food west north,water east south,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,14,happened,6,water south west,food north east,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,14,earlier,6,water south west,food north east,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,15,happened,6,water north east,water west north,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,15,earlier,6,water north east,water west north,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,16,happened,6,food east south,water east south,food moved from east to south,food moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,16,earlier,6,food east south,water east south,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,17,happened,6,food west north,food south west,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,17,earlier,6,food west north,food south west,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,18,happened,6,water south west,food north east,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,18,earlier,6,water south west,food north east,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,19,happened,6,water north east,water west north,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,19,earlier,6,water north east,water west north,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,20,happened,6,water east south,food east south,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,20,earlier,6,water east south,food east south,food moved from east to south,food moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,muted,21,happened,6,water west north,water south west,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,21,earlier,6,water west north,water south west,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,22,happened,6,food west north,food south west,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,muted,22,earlier,6,food west north,food south west,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,muted,23,happened,6,food north east,water north east,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,muted,23,earlier,6,food north east,water north east,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,0,happened,6,water east south,water north east,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,0,earlier,6,water east south,water north east,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,1,happened,6,water west north,water south west,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,1,earlier,6,water west north,water south west,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,2,happened,6,food south west,water north east,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,2,earlier,6,food south west,water north east,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,3,happened,6,food north east,food west north,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,3,earlier,6,food north east,food west north,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,4,happened,6,food south west,food east south,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,4,earlier,6,food south west,food east south,food moved from east to south,food moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,5,happened,6,water south west,water east south,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,5,earlier,6,water south west,water east south,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,6,happened,6,water west north,food west north,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,6,earlier,6,water west north,food west north,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,7,happened,6,food east south,food north east,food moved from east to south,food moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,7,earlier,6,food east south,food north east,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,8,happened,6,food south west,water north east,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,8,earlier,6,food south west,water north east,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,9,happened,6,water south west,water east south,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,9,earlier,6,water south west,water east south,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,10,happened,6,water west north,food west north,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,10,earlier,6,water west north,food west north,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,11,happened,6,food north east,water north east,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,11,earlier,6,food north east,water north east,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,12,happened,6,food south west,food east south,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,12,earlier,6,food south west,food east south,food moved from east to south,food moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,13,happened,6,food west north,water east south,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,13,earlier,6,food west north,water east south,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,14,happened,6,water south west,food north east,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,14,earlier,6,water south west,food north east,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,15,happened,6,water north east,water west north,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,15,earlier,6,water north east,water west north,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,16,happened,6,food east south,water east south,food moved from east to south,food moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,16,earlier,6,food east south,water east south,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,17,happened,6,food west north,food south west,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,17,earlier,6,food west north,food south west,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,18,happened,6,water south west,food north east,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,18,earlier,6,water south west,food north east,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,19,happened,6,water north east,water west north,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,19,earlier,6,water north east,water west north,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,20,happened,6,water east south,food east south,water moved from east to south,water moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,20,earlier,6,water east south,food east south,food moved from east to south,food moved from east to south,(uncertain),(uncertain),1,0
+1416191,english,reversed,21,happened,6,water west north,water south west,water moved from west to north,water moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,21,earlier,6,water west north,water south west,water moved from south to west,water moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,22,happened,6,food west north,food south west,food moved from west to north,food moved from west to north,(uncertain),(uncertain),1,0
+1416191,english,reversed,22,earlier,6,food west north,food south west,food moved from south to west,food moved from south to west,(uncertain),(uncertain),1,0
+1416191,english,reversed,23,happened,6,food north east,water north east,food moved from north to east,food moved from north to east,(uncertain),(uncertain),1,0
+1416191,english,reversed,23,earlier,6,food north east,water north east,water moved from north to east,water moved from north to east,(uncertain),(uncertain),1,0
+1771193,english,open,0,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1771193,english,open,0,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1771193,english,open,1,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1771193,english,open,1,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+1771193,english,open,2,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+1771193,english,open,2,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+1771193,english,open,3,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1771193,english,open,3,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+1771193,english,open,4,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1771193,english,open,4,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+1771193,english,open,5,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1771193,english,open,5,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1771193,english,open,6,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+1771193,english,open,6,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+1771193,english,open,7,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1771193,english,open,7,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+1771193,english,open,8,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1771193,english,open,8,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1771193,english,open,9,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1771193,english,open,9,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+1771193,english,open,10,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1771193,english,open,10,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+1771193,english,open,11,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1771193,english,open,11,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1771193,english,open,12,happened,6,food west east,water east west,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+1771193,english,open,12,earlier,6,food west east,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1771193,english,open,13,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+1771193,english,open,13,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+1771193,english,open,14,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1771193,english,open,14,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1771193,english,open,15,happened,6,food east west,water west east,food moved from east to west,food moved from east to west,food east west,(uncertain),1,1
+1771193,english,open,15,earlier,6,food east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1771193,english,open,16,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1771193,english,open,16,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+1771193,english,open,17,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1771193,english,open,17,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1771193,english,open,18,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1771193,english,open,18,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+1771193,english,open,19,happened,6,food west east,water east west,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+1771193,english,open,19,earlier,6,food west east,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1771193,english,open,20,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,food west east,(uncertain),1,1
+1771193,english,open,20,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),food east west,1,1
+1771193,english,open,21,happened,6,food east west,water west east,food moved from east to west,food moved from east to west,food east west,(uncertain),1,1
+1771193,english,open,21,earlier,6,food east west,water west east,water moved from west to east,water moved from west to east,(uncertain),water west east,1,1
+1771193,english,open,22,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,water west east,(uncertain),1,1
+1771193,english,open,22,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),water east west,1,1
+1771193,english,open,23,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,water east west,(uncertain),1,1
+1771193,english,open,23,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),food west east,1,1
+1771193,english,muted,0,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,0,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,1,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,1,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,2,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,2,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,3,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,3,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,4,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,4,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,5,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,5,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,6,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,6,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,7,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,7,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,8,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,8,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,9,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,9,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,10,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,10,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,11,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,11,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,12,happened,6,food west east,water east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,12,earlier,6,food west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,13,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,13,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,14,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,14,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,15,happened,6,food east west,water west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,15,earlier,6,food east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,16,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,16,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,17,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,17,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,18,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,18,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,19,happened,6,food west east,water east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,19,earlier,6,food west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,20,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,20,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,21,happened,6,food east west,water west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,21,earlier,6,food east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,22,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,muted,22,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,23,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,muted,23,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,0,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,0,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,1,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,1,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,2,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,2,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,3,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,3,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,4,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,4,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,5,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,5,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,6,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,6,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,7,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,7,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,8,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,8,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,9,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,9,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,10,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,10,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,11,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,11,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,12,happened,6,food west east,water east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,12,earlier,6,food west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,13,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,13,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,14,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,14,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,15,happened,6,food east west,water west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,15,earlier,6,food east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,16,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,16,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,17,happened,6,water east west,water west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,17,earlier,6,water east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,18,happened,6,water west east,food east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,18,earlier,6,water west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,19,happened,6,food west east,water east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,19,earlier,6,food west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,20,happened,6,food west east,food east west,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,20,earlier,6,food west east,food east west,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,21,happened,6,food east west,water west east,food moved from east to west,food moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,21,earlier,6,food east west,water west east,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,22,happened,6,water west east,water east west,water moved from west to east,water moved from west to east,(uncertain),(uncertain),1,0
+1771193,english,reversed,22,earlier,6,water west east,water east west,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,23,happened,6,water east west,food west east,water moved from east to west,water moved from east to west,(uncertain),(uncertain),1,0
+1771193,english,reversed,23,earlier,6,water east west,food west east,food moved from west to east,food moved from west to east,(uncertain),(uncertain),1,0
+2095213,english,open,0,happened,6,water west south,food west south,water moved from west to south,water moved from west to south,water west south,(uncertain),1,1
+2095213,english,open,0,earlier,6,water west south,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+2095213,english,open,1,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,water east north,(uncertain),1,1
+2095213,english,open,1,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),water south east,1,1
+2095213,english,open,2,happened,6,water north west,food south east,water moved from north to west,water moved from north to west,water north west,(uncertain),1,1
+2095213,english,open,2,earlier,6,water north west,food south east,food moved from south to east,food moved from south to east,(uncertain),food south east,1,1
+2095213,english,open,3,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+2095213,english,open,3,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+2095213,english,open,4,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+2095213,english,open,4,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),water west south,1,1
+2095213,english,open,5,happened,6,water east north,food west south,water moved from east to north,water moved from east to north,water east north,(uncertain),1,1
+2095213,english,open,5,earlier,6,water east north,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+2095213,english,open,6,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,water west south,(uncertain),1,1
+2095213,english,open,6,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),water north west,1,1
+2095213,english,open,7,happened,6,water south east,food south east,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+2095213,english,open,7,earlier,6,water south east,food south east,food moved from south to east,food moved from south to east,(uncertain),food south east,1,1
+2095213,english,open,8,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+2095213,english,open,8,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+2095213,english,open,9,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,water north west,(uncertain),1,1
+2095213,english,open,9,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),water east north,1,1
+2095213,english,open,10,happened,6,water west south,food west south,water moved from west to south,water moved from west to south,water west south,(uncertain),1,1
+2095213,english,open,10,earlier,6,water west south,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+2095213,english,open,11,happened,6,water south east,food south east,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+2095213,english,open,11,earlier,6,water south east,food south east,food moved from south to east,food moved from south to east,(uncertain),food south east,1,1
+2095213,english,open,12,happened,6,food east north,water east north,food moved from east to north,food moved from east to north,food east north,(uncertain),1,1
+2095213,english,open,12,earlier,6,food east north,water east north,water moved from east to north,water moved from east to north,(uncertain),water east north,1,1
+2095213,english,open,13,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,water west south,(uncertain),1,1
+2095213,english,open,13,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),water north west,1,1
+2095213,english,open,14,happened,6,water south east,food north west,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+2095213,english,open,14,earlier,6,water south east,food north west,food moved from north to west,food moved from north to west,(uncertain),food north west,1,1
+2095213,english,open,15,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,food south east,(uncertain),1,1
+2095213,english,open,15,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+2095213,english,open,16,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,water north west,(uncertain),1,1
+2095213,english,open,16,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),water east north,1,1
+2095213,english,open,17,happened,6,water west south,food east north,water moved from west to south,water moved from west to south,water west south,(uncertain),1,1
+2095213,english,open,17,earlier,6,water west south,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+2095213,english,open,18,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,water east north,(uncertain),1,1
+2095213,english,open,18,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),water south east,1,1
+2095213,english,open,19,happened,6,food north west,water north west,food moved from north to west,food moved from north to west,food north west,(uncertain),1,1
+2095213,english,open,19,earlier,6,food north west,water north west,water moved from north to west,water moved from north to west,(uncertain),water north west,1,1
+2095213,english,open,20,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,food south east,(uncertain),1,1
+2095213,english,open,20,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),food west south,1,1
+2095213,english,open,21,happened,6,water west south,food east north,water moved from west to south,water moved from west to south,water west south,(uncertain),1,1
+2095213,english,open,21,earlier,6,water west south,food east north,food moved from east to north,food moved from east to north,(uncertain),food east north,1,1
+2095213,english,open,22,happened,6,water south east,food north west,water moved from south to east,water moved from south to east,water south east,(uncertain),1,1
+2095213,english,open,22,earlier,6,water south east,food north west,food moved from north to west,food moved from north to west,(uncertain),food north west,1,1
+2095213,english,open,23,happened,6,food west south,water east north,food moved from west to south,food moved from west to south,food west south,(uncertain),1,1
+2095213,english,open,23,earlier,6,food west south,water east north,water moved from east to north,water moved from east to north,(uncertain),water east north,1,1
+2095213,english,muted,0,happened,6,water west south,food west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,0,earlier,6,water west south,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,1,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,1,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,2,happened,6,water north west,food south east,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,2,earlier,6,water north west,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,3,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,3,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,4,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,4,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,5,happened,6,water east north,food west south,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,5,earlier,6,water east north,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,6,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,6,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,7,happened,6,water south east,food south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,7,earlier,6,water south east,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,8,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,8,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,9,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,9,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,10,happened,6,water west south,food west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,10,earlier,6,water west south,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,11,happened,6,water south east,food south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,11,earlier,6,water south east,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,12,happened,6,food east north,water east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,12,earlier,6,food east north,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,13,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,13,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,14,happened,6,water south east,food north west,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,14,earlier,6,water south east,food north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,15,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,15,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,16,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,16,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,17,happened,6,water west south,food east north,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,17,earlier,6,water west south,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,18,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,18,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,19,happened,6,food north west,water north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,19,earlier,6,food north west,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,20,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,20,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,21,happened,6,water west south,food east north,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,21,earlier,6,water west south,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,muted,22,happened,6,water south east,food north west,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,muted,22,earlier,6,water south east,food north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,muted,23,happened,6,food west south,water east north,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,muted,23,earlier,6,food west south,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,0,happened,6,water west south,food west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,0,earlier,6,water west south,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,1,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,1,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,2,happened,6,water north west,food south east,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,2,earlier,6,water north west,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,3,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,3,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,4,happened,6,water south east,water west south,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,4,earlier,6,water south east,water west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,5,happened,6,water east north,food west south,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,5,earlier,6,water east north,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,6,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,6,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,7,happened,6,water south east,food south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,7,earlier,6,water south east,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,8,happened,6,food north west,food east north,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,8,earlier,6,food north west,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,9,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,9,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,10,happened,6,water west south,food west south,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,10,earlier,6,water west south,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,11,happened,6,water south east,food south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,11,earlier,6,water south east,food south east,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,12,happened,6,food east north,water east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,12,earlier,6,food east north,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,13,happened,6,water west south,water north west,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,13,earlier,6,water west south,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,14,happened,6,water south east,food north west,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,14,earlier,6,water south east,food north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,15,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,15,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,16,happened,6,water north west,water east north,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,16,earlier,6,water north west,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,17,happened,6,water west south,food east north,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,17,earlier,6,water west south,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,18,happened,6,water east north,water south east,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,18,earlier,6,water east north,water south east,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,19,happened,6,food north west,water north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,19,earlier,6,food north west,water north west,water moved from north to west,water moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,20,happened,6,food south east,food west south,food moved from south to east,food moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,20,earlier,6,food south east,food west south,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,21,happened,6,water west south,food east north,water moved from west to south,water moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,21,earlier,6,water west south,food east north,food moved from east to north,food moved from east to north,(uncertain),(uncertain),1,0
+2095213,english,reversed,22,happened,6,water south east,food north west,water moved from south to east,water moved from south to east,(uncertain),(uncertain),1,0
+2095213,english,reversed,22,earlier,6,water south east,food north west,food moved from north to west,food moved from north to west,(uncertain),(uncertain),1,0
+2095213,english,reversed,23,happened,6,food west south,water east north,food moved from west to south,food moved from west to south,(uncertain),(uncertain),1,0
+2095213,english,reversed,23,earlier,6,food west south,water east north,water moved from east to north,water moved from east to north,(uncertain),(uncertain),1,0

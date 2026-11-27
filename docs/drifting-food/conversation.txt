@@ -1,0 +1,44 @@
+what actually passed there?
+?
+
+what did you expect in east?
+jade
+
+what actually passed there?
+amber
+
+and before?
+amber
+
+what did you expect in west?
+teal
+
+what actually passed there?
+jade
+
+and before?
+teal
+
+where did amber start?
+east
+
+where did teal start?
+west
+
+what is in east?
+amber
+
+where did that start?
+east
+
+what is in west?
+jade
+
+where did that start?
+?
+
+why did you reach there?
+(silence)
+
+what will you do tomorrow?
+(silence)

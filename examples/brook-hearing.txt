@@ -1,0 +1,16 @@
+/braid 62
+/braid-feed speaker 1280
+/braid-feed partner 1280
+/story-bed 0123 2301 15
+/story-curtain pupil closed
+/story-pour 1
+/story-pour 0
+/story-pour 2
+/story-pour 3
+/story-pour 0
+/story-pour 1
+/story-ask pupil what happened?
+/story-pass speaker what happened?
+/story-net pupil
+/story-serve pupil
+/quit

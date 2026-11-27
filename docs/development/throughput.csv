@@ -1,0 +1,4 @@
+sequence_batch,replicas,ticks,learned_models,stored_graphs,graph_bytes,waveform_bytes,contact_bits,median_ms,Gtransitions_per_s
+shared,1048576,128,32,32,2052,136,8,0.736352,182.274
+pooled,1048576,128,32,32,288,136,8,0.848768,158.132
+private,1048576,128,32,1048576,288,136,8,5.90045,22.747

@@ -1,0 +1,2241 @@
+seed,condition,question,truth,spoken,correct
+213097,walk_1,Which zeli for chest?,wren,wren,1
+213097,affirmation,Does chest zeli wren?,yes,yes,1
+213097,denial,Does chest zeli pouch?,no,no,1
+213097,walk_1,Which raku for chest?,acorn,acorn,1
+213097,affirmation,Does chest raku acorn?,yes,yes,1
+213097,denial,Does chest raku pearl?,no,no,1
+213097,walk_1,Which moru for chest?,cove,cove,1
+213097,affirmation,Does chest moru cove?,yes,yes,1
+213097,denial,Does chest moru wren?,no,no,1
+213097,walk_2,Which fodi for chest?,ibis,ibis,1
+213097,affirmation,Does chest fodi ibis?,yes,yes,1
+213097,denial,Does chest fodi inlet?,no,no,1
+213097,walk_3,Which jipa for chest?,crate,crate,1
+213097,affirmation,Does chest jipa crate?,yes,yes,1
+213097,denial,Does chest jipa pearl?,no,no,1
+213097,walk_4,Which vosa for chest?,crate,crate,1
+213097,affirmation,Does chest vosa crate?,yes,yes,1
+213097,denial,Does chest vosa inlet?,no,no,1
+213097,walk_8,Which ketu for chest?,inlet,inlet,1
+213097,affirmation,Does chest ketu inlet?,yes,yes,1
+213097,denial,Does chest ketu delta?,no,no,1
+213097,walk_1,Which gavu for chest?,flint,flint,1
+213097,affirmation,Does chest gavu flint?,yes,yes,1
+213097,denial,Does chest gavu delta?,no,no,1
+213097,composition,chest through ketu then ketu then fodi then jipa then vosa then gavu then ketu then raku then raku then vosa then moru then jipa?,chest,chest,1
+213097,own_witness,What jipa for chest?,ibis,ibis,1
+213097,peer_witness,What jipa would raven expect for chest?,crate,crate,1
+213097,own_peer,What jipa for chest?,crate,crate,1
+213097,peer_peer,What jipa would raven expect for chest?,unsure,unsure,1
+213097,own_both,What jipa for chest?,ibis,ibis,1
+213097,peer_both,What jipa would raven expect for chest?,ibis,ibis,1
+213097,own_neither,What jipa for chest?,crate,crate,1
+213097,peer_neither,What jipa would raven expect for chest?,crate,crate,1
+213097,private_statement,What moru for acorn?,unsure,unsure,1
+213097,private_recipient,What moru would raven expect for acorn?,quay,quay,1
+213097,walk_1,Which zeli for shell?,shell,shell,1
+213097,affirmation,Does shell zeli shell?,yes,yes,1
+213097,denial,Does shell zeli ibis?,no,no,1
+213097,walk_1,Which raku for shell?,cove,cove,1
+213097,affirmation,Does shell raku cove?,yes,yes,1
+213097,denial,Does shell raku delta?,no,no,1
+213097,walk_1,Which moru for shell?,acorn,acorn,1
+213097,affirmation,Does shell moru acorn?,yes,yes,1
+213097,denial,Does shell moru ibis?,no,no,1
+213097,walk_2,Which fodi for shell?,cove,cove,1
+213097,affirmation,Does shell fodi cove?,yes,yes,1
+213097,denial,Does shell fodi shell?,no,no,1
+213097,walk_3,Which jipa for shell?,tern,tern,1
+213097,affirmation,Does shell jipa tern?,yes,yes,1
+213097,denial,Does shell jipa inlet?,no,no,1
+213097,walk_4,Which vosa for shell?,acorn,acorn,1
+213097,affirmation,Does shell vosa acorn?,yes,yes,1
+213097,denial,Does shell vosa pouch?,no,no,1
+213097,walk_8,Which ketu for shell?,delta,delta,1
+213097,affirmation,Does shell ketu delta?,yes,yes,1
+213097,denial,Does shell ketu pearl?,no,no,1
+213097,walk_1,Which gavu for shell?,wren,wren,1
+213097,affirmation,Does shell gavu wren?,yes,yes,1
+213097,denial,Does shell gavu ibis?,no,no,1
+213097,composition,shell through zeli then jipa then gavu then moru then vosa then jipa then ketu then raku then zeli then jipa then jipa then zeli?,chest,chest,1
+213097,own_witness,What jipa for shell?,flint,flint,1
+213097,peer_witness,What jipa would raven expect for shell?,tern,tern,1
+213097,own_peer,What jipa for shell?,tern,tern,1
+213097,peer_peer,What jipa would raven expect for shell?,unsure,unsure,1
+213097,own_both,What jipa for shell?,flint,flint,1
+213097,peer_both,What jipa would raven expect for shell?,flint,flint,1
+213097,own_neither,What jipa for shell?,tern,tern,1
+213097,peer_neither,What jipa would raven expect for shell?,tern,tern,1
+213097,private_statement,What moru for wren?,unsure,unsure,1
+213097,private_recipient,What moru would raven expect for wren?,shell,shell,1
+213097,walk_1,Which zeli for ibis?,cove,cove,1
+213097,affirmation,Does ibis zeli cove?,yes,yes,1
+213097,denial,Does ibis zeli quay?,no,no,1
+213097,walk_1,Which raku for ibis?,pearl,pearl,1
+213097,affirmation,Does ibis raku pearl?,yes,yes,1
+213097,denial,Does ibis raku flint?,no,no,1
+213097,walk_1,Which moru for ibis?,crate,crate,1
+213097,affirmation,Does ibis moru crate?,yes,yes,1
+213097,denial,Does ibis moru pearl?,no,no,1
+213097,walk_2,Which fodi for ibis?,swift,swift,1
+213097,affirmation,Does ibis fodi swift?,yes,yes,1
+213097,denial,Does ibis fodi crate?,no,no,1
+213097,walk_3,Which jipa for ibis?,quay,quay,1
+213097,affirmation,Does ibis jipa quay?,yes,yes,1
+213097,denial,Does ibis jipa chest?,no,no,1
+213097,walk_4,Which vosa for ibis?,crate,crate,1
+213097,affirmation,Does ibis vosa crate?,yes,yes,1
+213097,denial,Does ibis vosa tern?,no,no,1
+213097,walk_8,Which ketu for ibis?,pouch,pouch,1
+213097,affirmation,Does ibis ketu pouch?,yes,yes,1
+213097,denial,Does ibis ketu cove?,no,no,1
+213097,walk_1,Which gavu for ibis?,wren,wren,1
+213097,affirmation,Does ibis gavu wren?,yes,yes,1
+213097,denial,Does ibis gavu pearl?,no,no,1
+213097,composition,ibis through fodi then vosa then moru then raku then vosa then ketu then ketu then jipa then moru then vosa then gavu then raku?,wren,wren,1
+213097,own_witness,What jipa for ibis?,chest,chest,1
+213097,peer_witness,What jipa would raven expect for ibis?,quay,quay,1
+213097,own_peer,What jipa for ibis?,quay,quay,1
+213097,peer_peer,What jipa would raven expect for ibis?,unsure,unsure,1
+213097,own_both,What jipa for ibis?,chest,chest,1
+213097,peer_both,What jipa would raven expect for ibis?,chest,chest,1
+213097,own_neither,What jipa for ibis?,quay,quay,1
+213097,peer_neither,What jipa would raven expect for ibis?,quay,quay,1
+213097,private_statement,What moru for chest?,unsure,unsure,1
+213097,private_recipient,What moru would raven expect for chest?,cove,cove,1
+213097,walk_1,Which zeli for swift?,shell,shell,1
+213097,affirmation,Does swift zeli shell?,yes,yes,1
+213097,denial,Does swift zeli pearl?,no,no,1
+213097,walk_1,Which raku for swift?,delta,delta,1
+213097,affirmation,Does swift raku delta?,yes,yes,1
+213097,denial,Does swift raku pearl?,no,no,1
+213097,walk_1,Which moru for swift?,flint,flint,1
+213097,affirmation,Does swift moru flint?,yes,yes,1
+213097,denial,Does swift moru tern?,no,no,1
+213097,walk_2,Which fodi for swift?,basket,basket,1
+213097,affirmation,Does swift fodi basket?,yes,yes,1
+213097,denial,Does swift fodi ibis?,no,no,1
+213097,walk_3,Which jipa for swift?,shell,shell,1
+213097,affirmation,Does swift jipa shell?,yes,yes,1
+213097,denial,Does swift jipa flint?,no,no,1
+213097,walk_4,Which vosa for swift?,delta,delta,1
+213097,affirmation,Does swift vosa delta?,yes,yes,1
+213097,denial,Does swift vosa inlet?,no,no,1
+213097,walk_8,Which ketu for swift?,cove,cove,1
+213097,affirmation,Does swift ketu cove?,yes,yes,1
+213097,denial,Does swift ketu chest?,no,no,1
+213097,walk_1,Which gavu for swift?,pouch,pouch,1
+213097,affirmation,Does swift gavu pouch?,yes,yes,1
+213097,denial,Does swift gavu ibis?,no,no,1
+213097,composition,swift through ketu then ketu then moru then raku then zeli then raku then fodi then vosa then ketu then zeli then raku then zeli?,basket,basket,1
+213097,own_witness,What jipa for swift?,quay,quay,1
+213097,peer_witness,What jipa would raven expect for swift?,shell,shell,1
+213097,own_peer,What jipa for swift?,shell,shell,1
+213097,peer_peer,What jipa would raven expect for swift?,unsure,unsure,1
+213097,own_both,What jipa for swift?,quay,quay,1
+213097,peer_both,What jipa would raven expect for swift?,quay,quay,1
+213097,own_neither,What jipa for swift?,shell,shell,1
+213097,peer_neither,What jipa would raven expect for swift?,shell,shell,1
+213097,private_statement,What moru for pouch?,unsure,unsure,1
+213097,private_recipient,What moru would raven expect for pouch?,swift,swift,1
+213097,walk_1,Which zeli for chest?,swift,swift,1
+213097,affirmation,Does chest zeli swift?,yes,yes,1
+213097,denial,Does chest zeli chest?,no,no,1
+213097,walk_1,Which raku for chest?,flint,flint,1
+213097,affirmation,Does chest raku flint?,yes,yes,1
+213097,denial,Does chest raku quay?,no,no,1
+213097,walk_1,Which moru for chest?,pearl,pearl,1
+213097,affirmation,Does chest moru pearl?,yes,yes,1
+213097,denial,Does chest moru swift?,no,no,1
+213097,walk_2,Which fodi for chest?,pouch,pouch,1
+213097,affirmation,Does chest fodi pouch?,yes,yes,1
+213097,denial,Does chest fodi cove?,no,no,1
+213097,walk_3,Which jipa for chest?,pouch,pouch,1
+213097,affirmation,Does chest jipa pouch?,yes,yes,1
+213097,denial,Does chest jipa inlet?,no,no,1
+213097,walk_4,Which vosa for chest?,flint,flint,1
+213097,affirmation,Does chest vosa flint?,yes,yes,1
+213097,denial,Does chest vosa tern?,no,no,1
+213097,walk_8,Which ketu for chest?,shell,shell,1
+213097,affirmation,Does chest ketu shell?,yes,yes,1
+213097,denial,Does chest ketu crate?,no,no,1
+213097,walk_1,Which gavu for chest?,quay,quay,1
+213097,affirmation,Does chest gavu quay?,yes,yes,1
+213097,denial,Does chest gavu delta?,no,no,1
+213097,composition,chest through gavu then zeli then fodi then gavu then raku then moru then ketu then vosa then gavu then fodi then fodi then ketu?,delta,delta,1
+213097,own_witness,What jipa for chest?,ibis,ibis,1
+213097,peer_witness,What jipa would raven expect for chest?,pouch,pouch,1
+213097,own_peer,What jipa for chest?,pouch,pouch,1
+213097,peer_peer,What jipa would raven expect for chest?,unsure,unsure,1
+213097,own_both,What jipa for chest?,ibis,ibis,1
+213097,peer_both,What jipa would raven expect for chest?,ibis,ibis,1
+213097,own_neither,What jipa for chest?,pouch,pouch,1
+213097,peer_neither,What jipa would raven expect for chest?,pouch,pouch,1
+213097,private_statement,What moru for cove?,unsure,unsure,1
+213097,private_recipient,What moru would raven expect for cove?,swift,swift,1
+213097,walk_1,Which zeli for shell?,pouch,pouch,1
+213097,affirmation,Does shell zeli pouch?,yes,yes,1
+213097,denial,Does shell zeli chest?,no,no,1
+213097,walk_1,Which raku for shell?,pearl,pearl,1
+213097,affirmation,Does shell raku pearl?,yes,yes,1
+213097,denial,Does shell raku acorn?,no,no,1
+213097,walk_1,Which moru for shell?,chest,chest,1
+213097,affirmation,Does shell moru chest?,yes,yes,1
+213097,denial,Does shell moru basket?,no,no,1
+213097,walk_2,Which fodi for shell?,quay,quay,1
+213097,affirmation,Does shell fodi quay?,yes,yes,1
+213097,denial,Does shell fodi chest?,no,no,1
+213097,walk_3,Which jipa for shell?,swift,swift,1
+213097,affirmation,Does shell jipa swift?,yes,yes,1
+213097,denial,Does shell jipa quay?,no,no,1
+213097,walk_4,Which vosa for shell?,delta,delta,1
+213097,affirmation,Does shell vosa delta?,yes,yes,1
+213097,denial,Does shell vosa acorn?,no,no,1
+213097,walk_8,Which ketu for shell?,tern,tern,1
+213097,affirmation,Does shell ketu tern?,yes,yes,1
+213097,denial,Does shell ketu wren?,no,no,1
+213097,walk_1,Which gavu for shell?,pearl,pearl,1
+213097,affirmation,Does shell gavu pearl?,yes,yes,1
+213097,denial,Does shell gavu acorn?,no,no,1
+213097,composition,shell through zeli then moru then fodi then vosa then fodi then fodi then vosa then vosa then ketu then moru then moru then fodi?,pouch,pouch,1
+213097,own_witness,What jipa for shell?,flint,flint,1
+213097,peer_witness,What jipa would raven expect for shell?,swift,swift,1
+213097,own_peer,What jipa for shell?,swift,swift,1
+213097,peer_peer,What jipa would raven expect for shell?,unsure,unsure,1
+213097,own_both,What jipa for shell?,flint,flint,1
+213097,peer_both,What jipa would raven expect for shell?,flint,flint,1
+213097,own_neither,What jipa for shell?,swift,swift,1
+213097,peer_neither,What jipa would raven expect for shell?,swift,swift,1
+213097,private_statement,What moru for flint?,unsure,unsure,1
+213097,private_recipient,What moru would raven expect for flint?,cove,cove,1
+213097,walk_1,Which zeli for chest?,basket,basket,1
+213097,affirmation,Does chest zeli basket?,yes,yes,1
+213097,denial,Does chest zeli swift?,no,no,1
+213097,walk_1,Which raku for chest?,inlet,inlet,1
+213097,affirmation,Does chest raku inlet?,yes,yes,1
+213097,denial,Does chest raku pearl?,no,no,1
+213097,walk_1,Which moru for chest?,crate,crate,1
+213097,affirmation,Does chest moru crate?,yes,yes,1
+213097,denial,Does chest moru inlet?,no,no,1
+213097,walk_2,Which fodi for chest?,chest,chest,1
+213097,affirmation,Does chest fodi chest?,yes,yes,1
+213097,denial,Does chest fodi pouch?,no,no,1
+213097,walk_3,Which jipa for chest?,crate,crate,1
+213097,affirmation,Does chest jipa crate?,yes,yes,1
+213097,denial,Does chest jipa flint?,no,no,1
+213097,walk_4,Which vosa for chest?,cove,cove,1
+213097,affirmation,Does chest vosa cove?,yes,yes,1
+213097,denial,Does chest vosa chest?,no,no,1
+213097,walk_8,Which ketu for chest?,pearl,pearl,1
+213097,affirmation,Does chest ketu pearl?,yes,yes,1
+213097,denial,Does chest ketu pouch?,no,no,1
+213097,walk_1,Which gavu for chest?,shell,shell,1
+213097,affirmation,Does chest gavu shell?,yes,yes,1
+213097,denial,Does chest gavu wren?,no,no,1
+213097,composition,chest through jipa then vosa then moru then gavu then zeli then zeli then vosa then ketu then raku then moru then gavu then jipa?,wren,wren,1
+213097,own_witness,What jipa for chest?,quay,quay,1
+213097,peer_witness,What jipa would raven expect for chest?,crate,crate,1
+213097,own_peer,What jipa for chest?,crate,crate,1
+213097,peer_peer,What jipa would raven expect for chest?,unsure,unsure,1
+213097,own_both,What jipa for chest?,quay,quay,1
+213097,peer_both,What jipa would raven expect for chest?,quay,quay,1
+213097,own_neither,What jipa for chest?,crate,crate,1
+213097,peer_neither,What jipa would raven expect for chest?,crate,crate,1
+213097,private_statement,What moru for crate?,unsure,unsure,1
+213097,private_recipient,What moru would raven expect for crate?,pouch,pouch,1
+213097,walk_1,Which zeli for swift?,inlet,inlet,1
+213097,affirmation,Does swift zeli inlet?,yes,yes,1
+213097,denial,Does swift zeli cove?,no,no,1
+213097,walk_1,Which raku for swift?,quay,quay,1
+213097,affirmation,Does swift raku quay?,yes,yes,1
+213097,denial,Does swift raku ibis?,no,no,1
+213097,walk_1,Which moru for swift?,wren,wren,1
+213097,affirmation,Does swift moru wren?,yes,yes,1
+213097,denial,Does swift moru flint?,no,no,1
+213097,walk_2,Which fodi for swift?,wren,wren,1
+213097,affirmation,Does swift fodi wren?,yes,yes,1
+213097,denial,Does swift fodi swift?,no,no,1
+213097,walk_3,Which jipa for swift?,swift,swift,1
+213097,affirmation,Does swift jipa swift?,yes,yes,1
+213097,denial,Does swift jipa delta?,no,no,1
+213097,walk_4,Which vosa for swift?,chest,chest,1
+213097,affirmation,Does swift vosa chest?,yes,yes,1
+213097,denial,Does swift vosa crate?,no,no,1
+213097,walk_8,Which ketu for swift?,wren,wren,1
+213097,affirmation,Does swift ketu wren?,yes,yes,1
+213097,denial,Does swift ketu cove?,no,no,1
+213097,walk_1,Which gavu for swift?,wren,wren,1
+213097,affirmation,Does swift gavu wren?,yes,yes,1
+213097,denial,Does swift gavu pearl?,no,no,1
+213097,composition,swift through raku then zeli then fodi then raku then vosa then fodi then gavu then fodi then jipa then jipa then vosa then raku?,cove,cove,1
+213097,own_witness,What jipa for swift?,pearl,pearl,1
+213097,peer_witness,What jipa would raven expect for swift?,swift,swift,1
+213097,own_peer,What jipa for swift?,swift,swift,1
+213097,peer_peer,What jipa would raven expect for swift?,unsure,unsure,1
+213097,own_both,What jipa for swift?,pearl,pearl,1
+213097,peer_both,What jipa would raven expect for swift?,pearl,pearl,1
+213097,own_neither,What jipa for swift?,swift,swift,1
+213097,peer_neither,What jipa would raven expect for swift?,swift,swift,1
+213097,private_statement,What moru for crate?,unsure,unsure,1
+213097,private_recipient,What moru would raven expect for crate?,inlet,inlet,1
+437531,walk_1,Which zeli for inlet?,acorn,acorn,1
+437531,affirmation,Does inlet zeli acorn?,yes,yes,1
+437531,denial,Does inlet zeli quay?,no,no,1
+437531,walk_1,Which jipa for inlet?,pouch,pouch,1
+437531,affirmation,Does inlet jipa pouch?,yes,yes,1
+437531,denial,Does inlet jipa cove?,no,no,1
+437531,walk_1,Which raku for inlet?,inlet,inlet,1
+437531,affirmation,Does inlet raku inlet?,yes,yes,1
+437531,denial,Does inlet raku pearl?,no,no,1
+437531,walk_2,Which gavu for inlet?,flint,flint,1
+437531,affirmation,Does inlet gavu flint?,yes,yes,1
+437531,denial,Does inlet gavu cove?,no,no,1
+437531,walk_3,Which fodi for inlet?,acorn,acorn,1
+437531,affirmation,Does inlet fodi acorn?,yes,yes,1
+437531,denial,Does inlet fodi cove?,no,no,1
+437531,walk_4,Which vosa for inlet?,chest,chest,1
+437531,affirmation,Does inlet vosa chest?,yes,yes,1
+437531,denial,Does inlet vosa basket?,no,no,1
+437531,walk_8,Which moru for inlet?,pouch,pouch,1
+437531,affirmation,Does inlet moru pouch?,yes,yes,1
+437531,denial,Does inlet moru pearl?,no,no,1
+437531,walk_1,Which ketu for inlet?,inlet,inlet,1
+437531,affirmation,Does inlet ketu inlet?,yes,yes,1
+437531,denial,Does inlet ketu delta?,no,no,1
+437531,composition,inlet through jipa then gavu then ketu then jipa then vosa then moru then vosa then ketu then moru then vosa then gavu then gavu?,quay,quay,1
+437531,own_witness,What fodi for inlet?,shell,shell,1
+437531,peer_witness,What fodi would raven expect for inlet?,acorn,acorn,1
+437531,own_peer,What fodi for inlet?,acorn,acorn,1
+437531,peer_peer,What fodi would raven expect for inlet?,unsure,unsure,1
+437531,own_both,What fodi for inlet?,shell,shell,1
+437531,peer_both,What fodi would raven expect for inlet?,shell,shell,1
+437531,own_neither,What fodi for inlet?,acorn,acorn,1
+437531,peer_neither,What fodi would raven expect for inlet?,acorn,acorn,1
+437531,private_statement,What raku for acorn?,wren,wren,1
+437531,private_recipient,What raku would raven expect for acorn?,cove,cove,1
+437531,walk_1,Which zeli for ibis?,cove,cove,1
+437531,affirmation,Does ibis zeli cove?,yes,yes,1
+437531,denial,Does ibis zeli flint?,no,no,1
+437531,walk_1,Which jipa for ibis?,tern,tern,1
+437531,affirmation,Does ibis jipa tern?,yes,yes,1
+437531,denial,Does ibis jipa flint?,no,no,1
+437531,walk_1,Which raku for ibis?,flint,flint,1
+437531,affirmation,Does ibis raku flint?,yes,yes,1
+437531,denial,Does ibis raku ibis?,no,no,1
+437531,walk_2,Which gavu for ibis?,basket,basket,1
+437531,affirmation,Does ibis gavu basket?,yes,yes,1
+437531,denial,Does ibis gavu delta?,no,no,1
+437531,walk_3,Which fodi for ibis?,crate,crate,1
+437531,affirmation,Does ibis fodi crate?,yes,yes,1
+437531,denial,Does ibis fodi ibis?,no,no,1
+437531,walk_4,Which vosa for ibis?,chest,chest,1
+437531,affirmation,Does ibis vosa chest?,yes,yes,1
+437531,denial,Does ibis vosa acorn?,no,no,1
+437531,walk_8,Which moru for ibis?,swift,swift,1
+437531,affirmation,Does ibis moru swift?,yes,yes,1
+437531,denial,Does ibis moru pouch?,no,no,1
+437531,walk_1,Which ketu for ibis?,cove,cove,1
+437531,affirmation,Does ibis ketu cove?,yes,yes,1
+437531,denial,Does ibis ketu shell?,no,no,1
+437531,composition,ibis through gavu then ketu then raku then vosa then ketu then raku then ketu then ketu then jipa then gavu then jipa then raku?,shell,shell,1
+437531,own_witness,What fodi for ibis?,chest,chest,1
+437531,peer_witness,What fodi would raven expect for ibis?,crate,crate,1
+437531,own_peer,What fodi for ibis?,crate,crate,1
+437531,peer_peer,What fodi would raven expect for ibis?,unsure,unsure,1
+437531,own_both,What fodi for ibis?,chest,chest,1
+437531,peer_both,What fodi would raven expect for ibis?,chest,chest,1
+437531,own_neither,What fodi for ibis?,crate,crate,1
+437531,peer_neither,What fodi would raven expect for ibis?,crate,crate,1
+437531,private_statement,What raku for delta?,swift,swift,1
+437531,private_recipient,What raku would raven expect for delta?,pearl,pearl,1
+437531,walk_1,Which zeli for pearl?,cove,cove,1
+437531,affirmation,Does pearl zeli cove?,yes,yes,1
+437531,denial,Does pearl zeli ibis?,no,no,1
+437531,walk_1,Which jipa for pearl?,pouch,pouch,1
+437531,affirmation,Does pearl jipa pouch?,yes,yes,1
+437531,denial,Does pearl jipa quay?,no,no,1
+437531,walk_1,Which raku for pearl?,cove,cove,1
+437531,affirmation,Does pearl raku cove?,yes,yes,1
+437531,denial,Does pearl raku pearl?,no,no,1
+437531,walk_2,Which gavu for pearl?,quay,quay,1
+437531,affirmation,Does pearl gavu quay?,yes,yes,1
+437531,denial,Does pearl gavu pearl?,no,no,1
+437531,walk_3,Which fodi for pearl?,swift,swift,1
+437531,affirmation,Does pearl fodi swift?,yes,yes,1
+437531,denial,Does pearl fodi pouch?,no,no,1
+437531,walk_4,Which vosa for pearl?,acorn,acorn,1
+437531,affirmation,Does pearl vosa acorn?,yes,yes,1
+437531,denial,Does pearl vosa crate?,no,no,1
+437531,walk_8,Which moru for pearl?,wren,wren,1
+437531,affirmation,Does pearl moru wren?,yes,yes,1
+437531,denial,Does pearl moru swift?,no,no,1
+437531,walk_1,Which ketu for pearl?,basket,basket,1
+437531,affirmation,Does pearl ketu basket?,yes,yes,1
+437531,denial,Does pearl ketu shell?,no,no,1
+437531,composition,pearl through raku then zeli then gavu then gavu then zeli then fodi then gavu then fodi then vosa then gavu then moru then moru?,chest,chest,1
+437531,own_witness,What fodi for pearl?,shell,shell,1
+437531,peer_witness,What fodi would raven expect for pearl?,swift,swift,1
+437531,own_peer,What fodi for pearl?,swift,swift,1
+437531,peer_peer,What fodi would raven expect for pearl?,unsure,unsure,1
+437531,own_both,What fodi for pearl?,shell,shell,1
+437531,peer_both,What fodi would raven expect for pearl?,shell,shell,1
+437531,own_neither,What fodi for pearl?,swift,swift,1
+437531,peer_neither,What fodi would raven expect for pearl?,swift,swift,1
+437531,private_statement,What raku for pearl?,wren,wren,1
+437531,private_recipient,What raku would raven expect for pearl?,cove,cove,1
+437531,walk_1,Which zeli for tern?,quay,quay,1
+437531,affirmation,Does tern zeli quay?,yes,yes,1
+437531,denial,Does tern zeli tern?,no,no,1
+437531,walk_1,Which jipa for tern?,inlet,inlet,1
+437531,affirmation,Does tern jipa inlet?,yes,yes,1
+437531,denial,Does tern jipa crate?,no,no,1
+437531,walk_1,Which raku for tern?,tern,tern,1
+437531,affirmation,Does tern raku tern?,yes,yes,1
+437531,denial,Does tern raku swift?,no,no,1
+437531,walk_2,Which gavu for tern?,quay,quay,1
+437531,affirmation,Does tern gavu quay?,yes,yes,1
+437531,denial,Does tern gavu tern?,no,no,1
+437531,walk_3,Which fodi for tern?,pearl,pearl,1
+437531,affirmation,Does tern fodi pearl?,yes,yes,1
+437531,denial,Does tern fodi swift?,no,no,1
+437531,walk_4,Which vosa for tern?,basket,basket,1
+437531,affirmation,Does tern vosa basket?,yes,yes,1
+437531,denial,Does tern vosa acorn?,no,no,1
+437531,walk_8,Which moru for tern?,wren,wren,1
+437531,affirmation,Does tern moru wren?,yes,yes,1
+437531,denial,Does tern moru tern?,no,no,1
+437531,walk_1,Which ketu for tern?,tern,tern,1
+437531,affirmation,Does tern ketu tern?,yes,yes,1
+437531,denial,Does tern ketu crate?,no,no,1
+437531,composition,tern through raku then jipa then ketu then raku then gavu then vosa then vosa then moru then moru then vosa then zeli then jipa?,ibis,ibis,1
+437531,own_witness,What fodi for tern?,wren,wren,1
+437531,peer_witness,What fodi would raven expect for tern?,pearl,pearl,1
+437531,own_peer,What fodi for tern?,pearl,pearl,1
+437531,peer_peer,What fodi would raven expect for tern?,unsure,unsure,1
+437531,own_both,What fodi for tern?,wren,wren,1
+437531,peer_both,What fodi would raven expect for tern?,wren,wren,1
+437531,own_neither,What fodi for tern?,pearl,pearl,1
+437531,peer_neither,What fodi would raven expect for tern?,pearl,pearl,1
+437531,private_statement,What raku for quay?,swift,swift,1
+437531,private_recipient,What raku would raven expect for quay?,pearl,pearl,1
+437531,walk_1,Which zeli for shell?,ibis,ibis,1
+437531,affirmation,Does shell zeli ibis?,yes,yes,1
+437531,denial,Does shell zeli swift?,no,no,1
+437531,walk_1,Which jipa for shell?,wren,wren,1
+437531,affirmation,Does shell jipa wren?,yes,yes,1
+437531,denial,Does shell jipa shell?,no,no,1
+437531,walk_1,Which raku for shell?,ibis,ibis,1
+437531,affirmation,Does shell raku ibis?,yes,yes,1
+437531,denial,Does shell raku quay?,no,no,1
+437531,walk_2,Which gavu for shell?,delta,delta,1
+437531,affirmation,Does shell gavu delta?,yes,yes,1
+437531,denial,Does shell gavu tern?,no,no,1
+437531,walk_3,Which fodi for shell?,swift,swift,1
+437531,affirmation,Does shell fodi swift?,yes,yes,1
+437531,denial,Does shell fodi delta?,no,no,1
+437531,walk_4,Which vosa for shell?,pearl,pearl,1
+437531,affirmation,Does shell vosa pearl?,yes,yes,1
+437531,denial,Does shell vosa cove?,no,no,1
+437531,walk_8,Which moru for shell?,delta,delta,1
+437531,affirmation,Does shell moru delta?,yes,yes,1
+437531,denial,Does shell moru crate?,no,no,1
+437531,walk_1,Which ketu for shell?,swift,swift,1
+437531,affirmation,Does shell ketu swift?,yes,yes,1
+437531,denial,Does shell ketu basket?,no,no,1
+437531,composition,shell through ketu then moru then fodi then moru then jipa then fodi then raku then ketu then vosa then gavu then vosa then fodi?,shell,shell,1
+437531,own_witness,What fodi for shell?,shell,shell,1
+437531,peer_witness,What fodi would raven expect for shell?,swift,swift,1
+437531,own_peer,What fodi for shell?,swift,swift,1
+437531,peer_peer,What fodi would raven expect for shell?,unsure,unsure,1
+437531,own_both,What fodi for shell?,shell,shell,1
+437531,peer_both,What fodi would raven expect for shell?,shell,shell,1
+437531,own_neither,What fodi for shell?,swift,swift,1
+437531,peer_neither,What fodi would raven expect for shell?,swift,swift,1
+437531,private_statement,What raku for flint?,pouch,pouch,1
+437531,private_recipient,What raku would raven expect for flint?,chest,chest,1
+437531,walk_1,Which zeli for wren?,pouch,pouch,1
+437531,affirmation,Does wren zeli pouch?,yes,yes,1
+437531,denial,Does wren zeli flint?,no,no,1
+437531,walk_1,Which jipa for wren?,cove,cove,1
+437531,affirmation,Does wren jipa cove?,yes,yes,1
+437531,denial,Does wren jipa wren?,no,no,1
+437531,walk_1,Which raku for wren?,swift,swift,1
+437531,affirmation,Does wren raku swift?,yes,yes,1
+437531,denial,Does wren raku cove?,no,no,1
+437531,walk_2,Which gavu for wren?,inlet,inlet,1
+437531,affirmation,Does wren gavu inlet?,yes,yes,1
+437531,denial,Does wren gavu wren?,no,no,1
+437531,walk_3,Which fodi for wren?,flint,flint,1
+437531,affirmation,Does wren fodi flint?,yes,yes,1
+437531,denial,Does wren fodi cove?,no,no,1
+437531,walk_4,Which vosa for wren?,chest,chest,1
+437531,affirmation,Does wren vosa chest?,yes,yes,1
+437531,denial,Does wren vosa tern?,no,no,1
+437531,walk_8,Which moru for wren?,flint,flint,1
+437531,affirmation,Does wren moru flint?,yes,yes,1
+437531,denial,Does wren moru wren?,no,no,1
+437531,walk_1,Which ketu for wren?,swift,swift,1
+437531,affirmation,Does wren ketu swift?,yes,yes,1
+437531,denial,Does wren ketu pouch?,no,no,1
+437531,composition,wren through vosa then fodi then jipa then fodi then jipa then moru then moru then jipa then gavu then raku then ketu then raku?,flint,flint,1
+437531,own_witness,What fodi for wren?,basket,basket,1
+437531,peer_witness,What fodi would raven expect for wren?,flint,flint,1
+437531,own_peer,What fodi for wren?,flint,flint,1
+437531,peer_peer,What fodi would raven expect for wren?,unsure,unsure,1
+437531,own_both,What fodi for wren?,basket,basket,1
+437531,peer_both,What fodi would raven expect for wren?,basket,basket,1
+437531,own_neither,What fodi for wren?,flint,flint,1
+437531,peer_neither,What fodi would raven expect for wren?,flint,flint,1
+437531,private_statement,What raku for shell?,chest,chest,1
+437531,private_recipient,What raku would raven expect for shell?,delta,delta,1
+437531,walk_1,Which zeli for tern?,quay,quay,1
+437531,affirmation,Does tern zeli quay?,yes,yes,1
+437531,denial,Does tern zeli wren?,no,no,1
+437531,walk_1,Which jipa for tern?,chest,chest,1
+437531,affirmation,Does tern jipa chest?,yes,yes,1
+437531,denial,Does tern jipa cove?,no,no,1
+437531,walk_1,Which raku for tern?,pearl,pearl,1
+437531,affirmation,Does tern raku pearl?,yes,yes,1
+437531,denial,Does tern raku acorn?,no,no,1
+437531,walk_2,Which gavu for tern?,pearl,pearl,1
+437531,affirmation,Does tern gavu pearl?,yes,yes,1
+437531,denial,Does tern gavu ibis?,no,no,1
+437531,walk_3,Which fodi for tern?,shell,shell,1
+437531,affirmation,Does tern fodi shell?,yes,yes,1
+437531,denial,Does tern fodi delta?,no,no,1
+437531,walk_4,Which vosa for tern?,swift,swift,1
+437531,affirmation,Does tern vosa swift?,yes,yes,1
+437531,denial,Does tern vosa delta?,no,no,1
+437531,walk_8,Which moru for tern?,wren,wren,1
+437531,affirmation,Does tern moru wren?,yes,yes,1
+437531,denial,Does tern moru quay?,no,no,1
+437531,walk_1,Which ketu for tern?,ibis,ibis,1
+437531,affirmation,Does tern ketu ibis?,yes,yes,1
+437531,denial,Does tern ketu acorn?,no,no,1
+437531,composition,tern through gavu then gavu then raku then gavu then raku then raku then raku then jipa then ketu then raku then gavu then fodi?,tern,tern,1
+437531,own_witness,What fodi for tern?,acorn,acorn,1
+437531,peer_witness,What fodi would raven expect for tern?,shell,shell,1
+437531,own_peer,What fodi for tern?,shell,shell,1
+437531,peer_peer,What fodi would raven expect for tern?,unsure,unsure,1
+437531,own_both,What fodi for tern?,acorn,acorn,1
+437531,peer_both,What fodi would raven expect for tern?,acorn,acorn,1
+437531,own_neither,What fodi for tern?,shell,shell,1
+437531,peer_neither,What fodi would raven expect for tern?,shell,shell,1
+437531,private_statement,What raku for tern?,swift,swift,1
+437531,private_recipient,What raku would raven expect for tern?,pearl,pearl,1
+437531,walk_1,Which zeli for pearl?,tern,tern,1
+437531,affirmation,Does pearl zeli tern?,yes,yes,1
+437531,denial,Does pearl zeli ibis?,no,no,1
+437531,walk_1,Which jipa for pearl?,crate,crate,1
+437531,affirmation,Does pearl jipa crate?,yes,yes,1
+437531,denial,Does pearl jipa quay?,no,no,1
+437531,walk_1,Which raku for pearl?,shell,shell,1
+437531,affirmation,Does pearl raku shell?,yes,yes,1
+437531,denial,Does pearl raku pouch?,no,no,1
+437531,walk_2,Which gavu for pearl?,quay,quay,1
+437531,affirmation,Does pearl gavu quay?,yes,yes,1
+437531,denial,Does pearl gavu ibis?,no,no,1
+437531,walk_3,Which fodi for pearl?,swift,swift,1
+437531,affirmation,Does pearl fodi swift?,yes,yes,1
+437531,denial,Does pearl fodi flint?,no,no,1
+437531,walk_4,Which vosa for pearl?,shell,shell,1
+437531,affirmation,Does pearl vosa shell?,yes,yes,1
+437531,denial,Does pearl vosa swift?,no,no,1
+437531,walk_8,Which moru for pearl?,pearl,pearl,1
+437531,affirmation,Does pearl moru pearl?,yes,yes,1
+437531,denial,Does pearl moru ibis?,no,no,1
+437531,walk_1,Which ketu for pearl?,acorn,acorn,1
+437531,affirmation,Does pearl ketu acorn?,yes,yes,1
+437531,denial,Does pearl ketu tern?,no,no,1
+437531,composition,pearl through raku then zeli then vosa then vosa then zeli then raku then moru then fodi then vosa then jipa then raku then fodi?,ibis,ibis,1
+437531,own_witness,What fodi for pearl?,wren,wren,1
+437531,peer_witness,What fodi would raven expect for pearl?,swift,swift,1
+437531,own_peer,What fodi for pearl?,swift,swift,1
+437531,peer_peer,What fodi would raven expect for pearl?,unsure,unsure,1
+437531,own_both,What fodi for pearl?,wren,wren,1
+437531,peer_both,What fodi would raven expect for pearl?,wren,wren,1
+437531,own_neither,What fodi for pearl?,swift,swift,1
+437531,peer_neither,What fodi would raven expect for pearl?,swift,swift,1
+437531,private_statement,What raku for inlet?,pouch,pouch,1
+437531,private_recipient,What raku would raven expect for inlet?,chest,chest,1
+658741,walk_1,Which vosa for swift?,tern,tern,1
+658741,affirmation,Does swift vosa tern?,yes,yes,1
+658741,denial,Does swift vosa flint?,no,no,1
+658741,walk_1,Which fodi for swift?,flint,flint,1
+658741,affirmation,Does swift fodi flint?,yes,yes,1
+658741,denial,Does swift fodi acorn?,no,no,1
+658741,walk_1,Which gavu for swift?,wren,wren,1
+658741,affirmation,Does swift gavu wren?,yes,yes,1
+658741,denial,Does swift gavu inlet?,no,no,1
+658741,walk_2,Which ketu for swift?,delta,delta,1
+658741,affirmation,Does swift ketu delta?,yes,yes,1
+658741,denial,Does swift ketu wren?,no,no,1
+658741,walk_3,Which zeli for swift?,pearl,pearl,1
+658741,affirmation,Does swift zeli pearl?,yes,yes,1
+658741,denial,Does swift zeli acorn?,no,no,1
+658741,walk_4,Which raku for swift?,inlet,inlet,1
+658741,affirmation,Does swift raku inlet?,yes,yes,1
+658741,denial,Does swift raku ibis?,no,no,1
+658741,walk_8,Which jipa for swift?,wren,wren,1
+658741,affirmation,Does swift jipa wren?,yes,yes,1
+658741,denial,Does swift jipa inlet?,no,no,1
+658741,walk_1,Which moru for swift?,basket,basket,1
+658741,affirmation,Does swift moru basket?,yes,yes,1
+658741,denial,Does swift moru swift?,no,no,1
+658741,composition,swift through fodi then moru then raku then vosa then moru then moru then ketu then fodi then moru then fodi then fodi then gavu?,acorn,acorn,1
+658741,own_witness,What zeli for swift?,delta,delta,1
+658741,peer_witness,What zeli would raven expect for swift?,pearl,pearl,1
+658741,own_peer,What zeli for swift?,pearl,pearl,1
+658741,peer_peer,What zeli would raven expect for swift?,unsure,unsure,1
+658741,own_both,What zeli for swift?,delta,delta,1
+658741,peer_both,What zeli would raven expect for swift?,delta,delta,1
+658741,own_neither,What zeli for swift?,pearl,pearl,1
+658741,peer_neither,What zeli would raven expect for swift?,pearl,pearl,1
+658741,private_statement,What gavu for tern?,quay,quay,1
+658741,private_recipient,What gavu would raven expect for tern?,crate,crate,1
+658741,walk_1,Which vosa for swift?,delta,delta,1
+658741,affirmation,Does swift vosa delta?,yes,yes,1
+658741,denial,Does swift vosa quay?,no,no,1
+658741,walk_1,Which fodi for swift?,inlet,inlet,1
+658741,affirmation,Does swift fodi inlet?,yes,yes,1
+658741,denial,Does swift fodi delta?,no,no,1
+658741,walk_1,Which gavu for swift?,chest,chest,1
+658741,affirmation,Does swift gavu chest?,yes,yes,1
+658741,denial,Does swift gavu pouch?,no,no,1
+658741,walk_2,Which ketu for swift?,pouch,pouch,1
+658741,affirmation,Does swift ketu pouch?,yes,yes,1
+658741,denial,Does swift ketu chest?,no,no,1
+658741,walk_3,Which zeli for swift?,inlet,inlet,1
+658741,affirmation,Does swift zeli inlet?,yes,yes,1
+658741,denial,Does swift zeli tern?,no,no,1
+658741,walk_4,Which raku for swift?,wren,wren,1
+658741,affirmation,Does swift raku wren?,yes,yes,1
+658741,denial,Does swift raku pearl?,no,no,1
+658741,walk_8,Which jipa for swift?,flint,flint,1
+658741,affirmation,Does swift jipa flint?,yes,yes,1
+658741,denial,Does swift jipa quay?,no,no,1
+658741,walk_1,Which moru for swift?,basket,basket,1
+658741,affirmation,Does swift moru basket?,yes,yes,1
+658741,denial,Does swift moru flint?,no,no,1
+658741,composition,swift through gavu then moru then moru then raku then moru then ketu then moru then jipa then jipa then fodi then moru then zeli?,crate,crate,1
+658741,own_witness,What zeli for swift?,wren,wren,1
+658741,peer_witness,What zeli would raven expect for swift?,inlet,inlet,1
+658741,own_peer,What zeli for swift?,inlet,inlet,1
+658741,peer_peer,What zeli would raven expect for swift?,unsure,unsure,1
+658741,own_both,What zeli for swift?,wren,wren,1
+658741,peer_both,What zeli would raven expect for swift?,wren,wren,1
+658741,own_neither,What zeli for swift?,inlet,inlet,1
+658741,peer_neither,What zeli would raven expect for swift?,inlet,inlet,1
+658741,private_statement,What gavu for ibis?,basket,basket,1
+658741,private_recipient,What gavu would raven expect for ibis?,pearl,pearl,1
+658741,walk_1,Which vosa for inlet?,flint,flint,1
+658741,affirmation,Does inlet vosa flint?,yes,yes,1
+658741,denial,Does inlet vosa cove?,no,no,1
+658741,walk_1,Which fodi for inlet?,tern,tern,1
+658741,affirmation,Does inlet fodi tern?,yes,yes,1
+658741,denial,Does inlet fodi quay?,no,no,1
+658741,walk_1,Which gavu for inlet?,cove,cove,1
+658741,affirmation,Does inlet gavu cove?,yes,yes,1
+658741,denial,Does inlet gavu crate?,no,no,1
+658741,walk_2,Which ketu for inlet?,pouch,pouch,1
+658741,affirmation,Does inlet ketu pouch?,yes,yes,1
+658741,denial,Does inlet ketu swift?,no,no,1
+658741,walk_3,Which zeli for inlet?,shell,shell,1
+658741,affirmation,Does inlet zeli shell?,yes,yes,1
+658741,denial,Does inlet zeli wren?,no,no,1
+658741,walk_4,Which raku for inlet?,tern,tern,1
+658741,affirmation,Does inlet raku tern?,yes,yes,1
+658741,denial,Does inlet raku shell?,no,no,1
+658741,walk_8,Which jipa for inlet?,pearl,pearl,1
+658741,affirmation,Does inlet jipa pearl?,yes,yes,1
+658741,denial,Does inlet jipa basket?,no,no,1
+658741,walk_1,Which moru for inlet?,wren,wren,1
+658741,affirmation,Does inlet moru wren?,yes,yes,1
+658741,denial,Does inlet moru quay?,no,no,1
+658741,composition,inlet through moru then vosa then fodi then fodi then vosa then zeli then vosa then moru then zeli then fodi then moru then zeli?,pearl,pearl,1
+658741,own_witness,What zeli for inlet?,delta,delta,1
+658741,peer_witness,What zeli would raven expect for inlet?,shell,shell,1
+658741,own_peer,What zeli for inlet?,shell,shell,1
+658741,peer_peer,What zeli would raven expect for inlet?,unsure,unsure,1
+658741,own_both,What zeli for inlet?,delta,delta,1
+658741,peer_both,What zeli would raven expect for inlet?,delta,delta,1
+658741,own_neither,What zeli for inlet?,shell,shell,1
+658741,peer_neither,What zeli would raven expect for inlet?,shell,shell,1
+658741,private_statement,What gavu for chest?,shell,shell,1
+658741,private_recipient,What gavu would raven expect for chest?,ibis,ibis,1
+658741,walk_1,Which vosa for pearl?,swift,swift,1
+658741,affirmation,Does pearl vosa swift?,yes,yes,1
+658741,denial,Does pearl vosa pearl?,no,no,1
+658741,walk_1,Which fodi for pearl?,pearl,pearl,1
+658741,affirmation,Does pearl fodi pearl?,yes,yes,1
+658741,denial,Does pearl fodi flint?,no,no,1
+658741,walk_1,Which gavu for pearl?,cove,cove,1
+658741,affirmation,Does pearl gavu cove?,yes,yes,1
+658741,denial,Does pearl gavu flint?,no,no,1
+658741,walk_2,Which ketu for pearl?,acorn,acorn,1
+658741,affirmation,Does pearl ketu acorn?,yes,yes,1
+658741,denial,Does pearl ketu basket?,no,no,1
+658741,walk_3,Which zeli for pearl?,flint,flint,1
+658741,affirmation,Does pearl zeli flint?,yes,yes,1
+658741,denial,Does pearl zeli quay?,no,no,1
+658741,walk_4,Which raku for pearl?,delta,delta,1
+658741,affirmation,Does pearl raku delta?,yes,yes,1
+658741,denial,Does pearl raku flint?,no,no,1
+658741,walk_8,Which jipa for pearl?,crate,crate,1
+658741,affirmation,Does pearl jipa crate?,yes,yes,1
+658741,denial,Does pearl jipa acorn?,no,no,1
+658741,walk_1,Which moru for pearl?,chest,chest,1
+658741,affirmation,Does pearl moru chest?,yes,yes,1
+658741,denial,Does pearl moru delta?,no,no,1
+658741,composition,pearl through raku then ketu then moru then fodi then gavu then vosa then fodi then jipa then raku then moru then moru then zeli?,delta,delta,1
+658741,own_witness,What zeli for pearl?,inlet,inlet,1
+658741,peer_witness,What zeli would raven expect for pearl?,flint,flint,1
+658741,own_peer,What zeli for pearl?,flint,flint,1
+658741,peer_peer,What zeli would raven expect for pearl?,unsure,unsure,1
+658741,own_both,What zeli for pearl?,inlet,inlet,1
+658741,peer_both,What zeli would raven expect for pearl?,inlet,inlet,1
+658741,own_neither,What zeli for pearl?,flint,flint,1
+658741,peer_neither,What zeli would raven expect for pearl?,flint,flint,1
+658741,private_statement,What gavu for quay?,cove,cove,1
+658741,private_recipient,What gavu would raven expect for quay?,chest,chest,1
+658741,walk_1,Which vosa for shell?,pearl,pearl,1
+658741,affirmation,Does shell vosa pearl?,yes,yes,1
+658741,denial,Does shell vosa cove?,no,no,1
+658741,walk_1,Which fodi for shell?,acorn,acorn,1
+658741,affirmation,Does shell fodi acorn?,yes,yes,1
+658741,denial,Does shell fodi shell?,no,no,1
+658741,walk_1,Which gavu for shell?,basket,basket,1
+658741,affirmation,Does shell gavu basket?,yes,yes,1
+658741,denial,Does shell gavu tern?,no,no,1
+658741,walk_2,Which ketu for shell?,delta,delta,1
+658741,affirmation,Does shell ketu delta?,yes,yes,1
+658741,denial,Does shell ketu inlet?,no,no,1
+658741,walk_3,Which zeli for shell?,tern,tern,1
+658741,affirmation,Does shell zeli tern?,yes,yes,1
+658741,denial,Does shell zeli acorn?,no,no,1
+658741,walk_4,Which raku for shell?,delta,delta,1
+658741,affirmation,Does shell raku delta?,yes,yes,1
+658741,denial,Does shell raku ibis?,no,no,1
+658741,walk_8,Which jipa for shell?,ibis,ibis,1
+658741,affirmation,Does shell jipa ibis?,yes,yes,1
+658741,denial,Does shell jipa tern?,no,no,1
+658741,walk_1,Which moru for shell?,basket,basket,1
+658741,affirmation,Does shell moru basket?,yes,yes,1
+658741,denial,Does shell moru cove?,no,no,1
+658741,composition,shell through jipa then jipa then ketu then vosa then jipa then gavu then moru then zeli then fodi then zeli then vosa then jipa?,cove,cove,1
+658741,own_witness,What zeli for shell?,swift,swift,1
+658741,peer_witness,What zeli would raven expect for shell?,tern,tern,1
+658741,own_peer,What zeli for shell?,tern,tern,1
+658741,peer_peer,What zeli would raven expect for shell?,unsure,unsure,1
+658741,own_both,What zeli for shell?,swift,swift,1
+658741,peer_both,What zeli would raven expect for shell?,swift,swift,1
+658741,own_neither,What zeli for shell?,tern,tern,1
+658741,peer_neither,What zeli would raven expect for shell?,tern,tern,1
+658741,private_statement,What gavu for basket?,flint,flint,1
+658741,private_recipient,What gavu would raven expect for basket?,shell,shell,1
+658741,walk_1,Which vosa for wren?,basket,basket,1
+658741,affirmation,Does wren vosa basket?,yes,yes,1
+658741,denial,Does wren vosa wren?,no,no,1
+658741,walk_1,Which fodi for wren?,cove,cove,1
+658741,affirmation,Does wren fodi cove?,yes,yes,1
+658741,denial,Does wren fodi delta?,no,no,1
+658741,walk_1,Which gavu for wren?,cove,cove,1
+658741,affirmation,Does wren gavu cove?,yes,yes,1
+658741,denial,Does wren gavu quay?,no,no,1
+658741,walk_2,Which ketu for wren?,delta,delta,1
+658741,affirmation,Does wren ketu delta?,yes,yes,1
+658741,denial,Does wren ketu flint?,no,no,1
+658741,walk_3,Which zeli for wren?,pouch,pouch,1
+658741,affirmation,Does wren zeli pouch?,yes,yes,1
+658741,denial,Does wren zeli wren?,no,no,1
+658741,walk_4,Which raku for wren?,inlet,inlet,1
+658741,affirmation,Does wren raku inlet?,yes,yes,1
+658741,denial,Does wren raku basket?,no,no,1
+658741,walk_8,Which jipa for wren?,pearl,pearl,1
+658741,affirmation,Does wren jipa pearl?,yes,yes,1
+658741,denial,Does wren jipa wren?,no,no,1
+658741,walk_1,Which moru for wren?,tern,tern,1
+658741,affirmation,Does wren moru tern?,yes,yes,1
+658741,denial,Does wren moru chest?,no,no,1
+658741,composition,wren through gavu then moru then gavu then gavu then jipa then zeli then jipa then jipa then gavu then raku then jipa then fodi?,ibis,ibis,1
+658741,own_witness,What zeli for wren?,chest,chest,1
+658741,peer_witness,What zeli would raven expect for wren?,pouch,pouch,1
+658741,own_peer,What zeli for wren?,pouch,pouch,1
+658741,peer_peer,What zeli would raven expect for wren?,unsure,unsure,1
+658741,own_both,What zeli for wren?,chest,chest,1
+658741,peer_both,What zeli would raven expect for wren?,chest,chest,1
+658741,own_neither,What zeli for wren?,pouch,pouch,1
+658741,peer_neither,What zeli would raven expect for wren?,pouch,pouch,1
+658741,private_statement,What gavu for quay?,basket,basket,1
+658741,private_recipient,What gavu would raven expect for quay?,pearl,pearl,1
+658741,walk_1,Which vosa for cove?,swift,swift,1
+658741,affirmation,Does cove vosa swift?,yes,yes,1
+658741,denial,Does cove vosa acorn?,no,no,1
+658741,walk_1,Which fodi for cove?,shell,shell,1
+658741,affirmation,Does cove fodi shell?,yes,yes,1
+658741,denial,Does cove fodi pouch?,no,no,1
+658741,walk_1,Which gavu for cove?,acorn,acorn,1
+658741,affirmation,Does cove gavu acorn?,yes,yes,1
+658741,denial,Does cove gavu crate?,no,no,1
+658741,walk_2,Which ketu for cove?,acorn,acorn,1
+658741,affirmation,Does cove ketu acorn?,yes,yes,1
+658741,denial,Does cove ketu pouch?,no,no,1
+658741,walk_3,Which zeli for cove?,chest,chest,1
+658741,affirmation,Does cove zeli chest?,yes,yes,1
+658741,denial,Does cove zeli cove?,no,no,1
+658741,walk_4,Which raku for cove?,swift,swift,1
+658741,affirmation,Does cove raku swift?,yes,yes,1
+658741,denial,Does cove raku inlet?,no,no,1
+658741,walk_8,Which jipa for cove?,inlet,inlet,1
+658741,affirmation,Does cove jipa inlet?,yes,yes,1
+658741,denial,Does cove jipa basket?,no,no,1
+658741,walk_1,Which moru for cove?,quay,quay,1
+658741,affirmation,Does cove moru quay?,yes,yes,1
+658741,denial,Does cove moru ibis?,no,no,1
+658741,composition,cove through gavu then gavu then jipa then moru then raku then fodi then zeli then ketu then jipa then vosa then raku then jipa?,wren,wren,1
+658741,own_witness,What zeli for cove?,crate,crate,1
+658741,peer_witness,What zeli would raven expect for cove?,chest,chest,1
+658741,own_peer,What zeli for cove?,chest,chest,1
+658741,peer_peer,What zeli would raven expect for cove?,unsure,unsure,1
+658741,own_both,What zeli for cove?,crate,crate,1
+658741,peer_both,What zeli would raven expect for cove?,crate,crate,1
+658741,own_neither,What zeli for cove?,chest,chest,1
+658741,peer_neither,What zeli would raven expect for cove?,chest,chest,1
+658741,private_statement,What gavu for swift?,flint,flint,1
+658741,private_recipient,What gavu would raven expect for swift?,shell,shell,1
+658741,walk_1,Which vosa for inlet?,acorn,acorn,1
+658741,affirmation,Does inlet vosa acorn?,yes,yes,1
+658741,denial,Does inlet vosa chest?,no,no,1
+658741,walk_1,Which fodi for inlet?,cove,cove,1
+658741,affirmation,Does inlet fodi cove?,yes,yes,1
+658741,denial,Does inlet fodi wren?,no,no,1
+658741,walk_1,Which gavu for inlet?,wren,wren,1
+658741,affirmation,Does inlet gavu wren?,yes,yes,1
+658741,denial,Does inlet gavu quay?,no,no,1
+658741,walk_2,Which ketu for inlet?,tern,tern,1
+658741,affirmation,Does inlet ketu tern?,yes,yes,1
+658741,denial,Does inlet ketu flint?,no,no,1
+658741,walk_3,Which zeli for inlet?,chest,chest,1
+658741,affirmation,Does inlet zeli chest?,yes,yes,1
+658741,denial,Does inlet zeli pouch?,no,no,1
+658741,walk_4,Which raku for inlet?,acorn,acorn,1
+658741,affirmation,Does inlet raku acorn?,yes,yes,1
+658741,denial,Does inlet raku wren?,no,no,1
+658741,walk_8,Which jipa for inlet?,pearl,pearl,1
+658741,affirmation,Does inlet jipa pearl?,yes,yes,1
+658741,denial,Does inlet jipa flint?,no,no,1
+658741,walk_1,Which moru for inlet?,acorn,acorn,1
+658741,affirmation,Does inlet moru acorn?,yes,yes,1
+658741,denial,Does inlet moru crate?,no,no,1
+658741,composition,inlet through gavu then zeli then jipa then gavu then raku then fodi then fodi then gavu then fodi then fodi then ketu then ketu?,tern,tern,1
+658741,own_witness,What zeli for inlet?,acorn,acorn,1
+658741,peer_witness,What zeli would raven expect for inlet?,chest,chest,1
+658741,own_peer,What zeli for inlet?,chest,chest,1
+658741,peer_peer,What zeli would raven expect for inlet?,unsure,unsure,1
+658741,own_both,What zeli for inlet?,acorn,acorn,1
+658741,peer_both,What zeli would raven expect for inlet?,acorn,acorn,1
+658741,own_neither,What zeli for inlet?,chest,chest,1
+658741,peer_neither,What zeli would raven expect for inlet?,chest,chest,1
+658741,private_statement,What gavu for crate?,delta,delta,1
+658741,private_recipient,What gavu would raven expect for crate?,cove,cove,1
+936931,walk_1,Which zeli for crate?,crate,crate,1
+936931,affirmation,Does crate zeli crate?,yes,yes,1
+936931,denial,Does crate zeli pouch?,no,no,1
+936931,walk_1,Which vosa for crate?,basket,basket,1
+936931,affirmation,Does crate vosa basket?,yes,yes,1
+936931,denial,Does crate vosa shell?,no,no,1
+936931,walk_1,Which raku for crate?,ibis,ibis,1
+936931,affirmation,Does crate raku ibis?,yes,yes,1
+936931,denial,Does crate raku crate?,no,no,1
+936931,walk_2,Which fodi for crate?,basket,basket,1
+936931,affirmation,Does crate fodi basket?,yes,yes,1
+936931,denial,Does crate fodi ibis?,no,no,1
+936931,walk_3,Which gavu for crate?,chest,chest,1
+936931,affirmation,Does crate gavu chest?,yes,yes,1
+936931,denial,Does crate gavu swift?,no,no,1
+936931,walk_4,Which ketu for crate?,ibis,ibis,1
+936931,affirmation,Does crate ketu ibis?,yes,yes,1
+936931,denial,Does crate ketu crate?,no,no,1
+936931,walk_8,Which jipa for crate?,tern,tern,1
+936931,affirmation,Does crate jipa tern?,yes,yes,1
+936931,denial,Does crate jipa pouch?,no,no,1
+936931,walk_1,Which moru for crate?,flint,flint,1
+936931,affirmation,Does crate moru flint?,yes,yes,1
+936931,denial,Does crate moru swift?,no,no,1
+936931,composition,crate through gavu then gavu then raku then raku then vosa then vosa then moru then raku then jipa then fodi then zeli then jipa?,delta,delta,1
+936931,own_witness,What gavu for crate?,cove,cove,1
+936931,peer_witness,What gavu would raven expect for crate?,chest,chest,1
+936931,own_peer,What gavu for crate?,chest,chest,1
+936931,peer_peer,What gavu would raven expect for crate?,unsure,unsure,1
+936931,own_both,What gavu for crate?,cove,cove,1
+936931,peer_both,What gavu would raven expect for crate?,cove,cove,1
+936931,own_neither,What gavu for crate?,chest,chest,1
+936931,peer_neither,What gavu would raven expect for crate?,chest,chest,1
+936931,private_statement,What raku for swift?,unsure,unsure,1
+936931,private_recipient,What raku would raven expect for swift?,shell,shell,1
+936931,walk_1,Which zeli for inlet?,acorn,acorn,1
+936931,affirmation,Does inlet zeli acorn?,yes,yes,1
+936931,denial,Does inlet zeli inlet?,no,no,1
+936931,walk_1,Which vosa for inlet?,swift,swift,1
+936931,affirmation,Does inlet vosa swift?,yes,yes,1
+936931,denial,Does inlet vosa acorn?,no,no,1
+936931,walk_1,Which raku for inlet?,shell,shell,1
+936931,affirmation,Does inlet raku shell?,yes,yes,1
+936931,denial,Does inlet raku delta?,no,no,1
+936931,walk_2,Which fodi for inlet?,acorn,acorn,1
+936931,affirmation,Does inlet fodi acorn?,yes,yes,1
+936931,denial,Does inlet fodi inlet?,no,no,1
+936931,walk_3,Which gavu for inlet?,delta,delta,1
+936931,affirmation,Does inlet gavu delta?,yes,yes,1
+936931,denial,Does inlet gavu pouch?,no,no,1
+936931,walk_4,Which ketu for inlet?,wren,wren,1
+936931,affirmation,Does inlet ketu wren?,yes,yes,1
+936931,denial,Does inlet ketu pouch?,no,no,1
+936931,walk_8,Which jipa for inlet?,crate,crate,1
+936931,affirmation,Does inlet jipa crate?,yes,yes,1
+936931,denial,Does inlet jipa pouch?,no,no,1
+936931,walk_1,Which moru for inlet?,quay,quay,1
+936931,affirmation,Does inlet moru quay?,yes,yes,1
+936931,denial,Does inlet moru ibis?,no,no,1
+936931,composition,inlet through vosa then moru then moru then zeli then gavu then moru then gavu then fodi then fodi then moru then jipa then raku?,pouch,pouch,1
+936931,own_witness,What gavu for inlet?,flint,flint,1
+936931,peer_witness,What gavu would raven expect for inlet?,delta,delta,1
+936931,own_peer,What gavu for inlet?,delta,delta,1
+936931,peer_peer,What gavu would raven expect for inlet?,unsure,unsure,1
+936931,own_both,What gavu for inlet?,flint,flint,1
+936931,peer_both,What gavu would raven expect for inlet?,flint,flint,1
+936931,own_neither,What gavu for inlet?,delta,delta,1
+936931,peer_neither,What gavu would raven expect for inlet?,delta,delta,1
+936931,private_statement,What raku for pearl?,unsure,unsure,1
+936931,private_recipient,What raku would raven expect for pearl?,tern,tern,1
+936931,walk_1,Which zeli for pearl?,swift,swift,1
+936931,affirmation,Does pearl zeli swift?,yes,yes,1
+936931,denial,Does pearl zeli chest?,no,no,1
+936931,walk_1,Which vosa for pearl?,flint,flint,1
+936931,affirmation,Does pearl vosa flint?,yes,yes,1
+936931,denial,Does pearl vosa chest?,no,no,1
+936931,walk_1,Which raku for pearl?,delta,delta,1
+936931,affirmation,Does pearl raku delta?,yes,yes,1
+936931,denial,Does pearl raku wren?,no,no,1
+936931,walk_2,Which fodi for pearl?,pearl,pearl,1
+936931,affirmation,Does pearl fodi pearl?,yes,yes,1
+936931,denial,Does pearl fodi acorn?,no,no,1
+936931,walk_3,Which gavu for pearl?,delta,delta,1
+936931,affirmation,Does pearl gavu delta?,yes,yes,1
+936931,denial,Does pearl gavu tern?,no,no,1
+936931,walk_4,Which ketu for pearl?,swift,swift,1
+936931,affirmation,Does pearl ketu swift?,yes,yes,1
+936931,denial,Does pearl ketu pouch?,no,no,1
+936931,walk_8,Which jipa for pearl?,basket,basket,1
+936931,affirmation,Does pearl jipa basket?,yes,yes,1
+936931,denial,Does pearl jipa acorn?,no,no,1
+936931,walk_1,Which moru for pearl?,delta,delta,1
+936931,affirmation,Does pearl moru delta?,yes,yes,1
+936931,denial,Does pearl moru wren?,no,no,1
+936931,composition,pearl through zeli then jipa then gavu then vosa then fodi then jipa then ketu then ketu then raku then zeli then gavu then ketu?,acorn,acorn,1
+936931,own_witness,What gavu for pearl?,wren,wren,1
+936931,peer_witness,What gavu would raven expect for pearl?,delta,delta,1
+936931,own_peer,What gavu for pearl?,delta,delta,1
+936931,peer_peer,What gavu would raven expect for pearl?,unsure,unsure,1
+936931,own_both,What gavu for pearl?,wren,wren,1
+936931,peer_both,What gavu would raven expect for pearl?,wren,wren,1
+936931,own_neither,What gavu for pearl?,delta,delta,1
+936931,peer_neither,What gavu would raven expect for pearl?,delta,delta,1
+936931,private_statement,What raku for delta?,unsure,unsure,1
+936931,private_recipient,What raku would raven expect for delta?,pearl,pearl,1
+936931,walk_1,Which zeli for pearl?,acorn,acorn,1
+936931,affirmation,Does pearl zeli acorn?,yes,yes,1
+936931,denial,Does pearl zeli tern?,no,no,1
+936931,walk_1,Which vosa for pearl?,cove,cove,1
+936931,affirmation,Does pearl vosa cove?,yes,yes,1
+936931,denial,Does pearl vosa swift?,no,no,1
+936931,walk_1,Which raku for pearl?,delta,delta,1
+936931,affirmation,Does pearl raku delta?,yes,yes,1
+936931,denial,Does pearl raku crate?,no,no,1
+936931,walk_2,Which fodi for pearl?,wren,wren,1
+936931,affirmation,Does pearl fodi wren?,yes,yes,1
+936931,denial,Does pearl fodi acorn?,no,no,1
+936931,walk_3,Which gavu for pearl?,chest,chest,1
+936931,affirmation,Does pearl gavu chest?,yes,yes,1
+936931,denial,Does pearl gavu pouch?,no,no,1
+936931,walk_4,Which ketu for pearl?,crate,crate,1
+936931,affirmation,Does pearl ketu crate?,yes,yes,1
+936931,denial,Does pearl ketu quay?,no,no,1
+936931,walk_8,Which jipa for pearl?,shell,shell,1
+936931,affirmation,Does pearl jipa shell?,yes,yes,1
+936931,denial,Does pearl jipa swift?,no,no,1
+936931,walk_1,Which moru for pearl?,chest,chest,1
+936931,affirmation,Does pearl moru chest?,yes,yes,1
+936931,denial,Does pearl moru quay?,no,no,1
+936931,composition,pearl through fodi then vosa then vosa then ketu then fodi then vosa then fodi then ketu then moru then vosa then fodi then zeli?,acorn,acorn,1
+936931,own_witness,What gavu for pearl?,pouch,pouch,1
+936931,peer_witness,What gavu would raven expect for pearl?,chest,chest,1
+936931,own_peer,What gavu for pearl?,chest,chest,1
+936931,peer_peer,What gavu would raven expect for pearl?,unsure,unsure,1
+936931,own_both,What gavu for pearl?,pouch,pouch,1
+936931,peer_both,What gavu would raven expect for pearl?,pouch,pouch,1
+936931,own_neither,What gavu for pearl?,chest,chest,1
+936931,peer_neither,What gavu would raven expect for pearl?,chest,chest,1
+936931,private_statement,What raku for tern?,unsure,unsure,1
+936931,private_recipient,What raku would raven expect for tern?,quay,quay,1
+936931,walk_1,Which zeli for flint?,inlet,inlet,1
+936931,affirmation,Does flint zeli inlet?,yes,yes,1
+936931,denial,Does flint zeli cove?,no,no,1
+936931,walk_1,Which vosa for flint?,inlet,inlet,1
+936931,affirmation,Does flint vosa inlet?,yes,yes,1
+936931,denial,Does flint vosa ibis?,no,no,1
+936931,walk_1,Which raku for flint?,chest,chest,1
+936931,affirmation,Does flint raku chest?,yes,yes,1
+936931,denial,Does flint raku delta?,no,no,1
+936931,walk_2,Which fodi for flint?,wren,wren,1
+936931,affirmation,Does flint fodi wren?,yes,yes,1
+936931,denial,Does flint fodi inlet?,no,no,1
+936931,walk_3,Which gavu for flint?,pearl,pearl,1
+936931,affirmation,Does flint gavu pearl?,yes,yes,1
+936931,denial,Does flint gavu basket?,no,no,1
+936931,walk_4,Which ketu for flint?,cove,cove,1
+936931,affirmation,Does flint ketu cove?,yes,yes,1
+936931,denial,Does flint ketu pearl?,no,no,1
+936931,walk_8,Which jipa for flint?,chest,chest,1
+936931,affirmation,Does flint jipa chest?,yes,yes,1
+936931,denial,Does flint jipa crate?,no,no,1
+936931,walk_1,Which moru for flint?,chest,chest,1
+936931,affirmation,Does flint moru chest?,yes,yes,1
+936931,denial,Does flint moru ibis?,no,no,1
+936931,composition,flint through gavu then gavu then moru then raku then gavu then raku then zeli then ketu then moru then moru then gavu then gavu?,pearl,pearl,1
+936931,own_witness,What gavu for flint?,inlet,inlet,1
+936931,peer_witness,What gavu would raven expect for flint?,pearl,pearl,1
+936931,own_peer,What gavu for flint?,pearl,pearl,1
+936931,peer_peer,What gavu would raven expect for flint?,unsure,unsure,1
+936931,own_both,What gavu for flint?,inlet,inlet,1
+936931,peer_both,What gavu would raven expect for flint?,inlet,inlet,1
+936931,own_neither,What gavu for flint?,pearl,pearl,1
+936931,peer_neither,What gavu would raven expect for flint?,pearl,pearl,1
+936931,private_statement,What raku for pearl?,unsure,unsure,1
+936931,private_recipient,What raku would raven expect for pearl?,tern,tern,1
+936931,walk_1,Which zeli for pouch?,tern,tern,1
+936931,affirmation,Does pouch zeli tern?,yes,yes,1
+936931,denial,Does pouch zeli pearl?,no,no,1
+936931,walk_1,Which vosa for pouch?,shell,shell,1
+936931,affirmation,Does pouch vosa shell?,yes,yes,1
+936931,denial,Does pouch vosa chest?,no,no,1
+936931,walk_1,Which raku for pouch?,tern,tern,1
+936931,affirmation,Does pouch raku tern?,yes,yes,1
+936931,denial,Does pouch raku wren?,no,no,1
+936931,walk_2,Which fodi for pouch?,ibis,ibis,1
+936931,affirmation,Does pouch fodi ibis?,yes,yes,1
+936931,denial,Does pouch fodi cove?,no,no,1
+936931,walk_3,Which gavu for pouch?,basket,basket,1
+936931,affirmation,Does pouch gavu basket?,yes,yes,1
+936931,denial,Does pouch gavu cove?,no,no,1
+936931,walk_4,Which ketu for pouch?,wren,wren,1
+936931,affirmation,Does pouch ketu wren?,yes,yes,1
+936931,denial,Does pouch ketu acorn?,no,no,1
+936931,walk_8,Which jipa for pouch?,chest,chest,1
+936931,affirmation,Does pouch jipa chest?,yes,yes,1
+936931,denial,Does pouch jipa flint?,no,no,1
+936931,walk_1,Which moru for pouch?,tern,tern,1
+936931,affirmation,Does pouch moru tern?,yes,yes,1
+936931,denial,Does pouch moru pearl?,no,no,1
+936931,composition,pouch through jipa then zeli then vosa then moru then moru then ketu then vosa then moru then gavu then jipa then fodi then vosa?,basket,basket,1
+936931,own_witness,What gavu for pouch?,inlet,inlet,1
+936931,peer_witness,What gavu would raven expect for pouch?,basket,basket,1
+936931,own_peer,What gavu for pouch?,basket,basket,1
+936931,peer_peer,What gavu would raven expect for pouch?,unsure,unsure,1
+936931,own_both,What gavu for pouch?,inlet,inlet,1
+936931,peer_both,What gavu would raven expect for pouch?,inlet,inlet,1
+936931,own_neither,What gavu for pouch?,basket,basket,1
+936931,peer_neither,What gavu would raven expect for pouch?,basket,basket,1
+936931,private_statement,What raku for chest?,unsure,unsure,1
+936931,private_recipient,What raku would raven expect for chest?,crate,crate,1
+936931,walk_1,Which zeli for crate?,crate,crate,1
+936931,affirmation,Does crate zeli crate?,yes,yes,1
+936931,denial,Does crate zeli shell?,no,no,1
+936931,walk_1,Which vosa for crate?,cove,cove,1
+936931,affirmation,Does crate vosa cove?,yes,yes,1
+936931,denial,Does crate vosa acorn?,no,no,1
+936931,walk_1,Which raku for crate?,inlet,inlet,1
+936931,affirmation,Does crate raku inlet?,yes,yes,1
+936931,denial,Does crate raku flint?,no,no,1
+936931,walk_2,Which fodi for crate?,cove,cove,1
+936931,affirmation,Does crate fodi cove?,yes,yes,1
+936931,denial,Does crate fodi shell?,no,no,1
+936931,walk_3,Which gavu for crate?,pouch,pouch,1
+936931,affirmation,Does crate gavu pouch?,yes,yes,1
+936931,denial,Does crate gavu crate?,no,no,1
+936931,walk_4,Which ketu for crate?,pearl,pearl,1
+936931,affirmation,Does crate ketu pearl?,yes,yes,1
+936931,denial,Does crate ketu inlet?,no,no,1
+936931,walk_8,Which jipa for crate?,cove,cove,1
+936931,affirmation,Does crate jipa cove?,yes,yes,1
+936931,denial,Does crate jipa swift?,no,no,1
+936931,walk_1,Which moru for crate?,shell,shell,1
+936931,affirmation,Does crate moru shell?,yes,yes,1
+936931,denial,Does crate moru acorn?,no,no,1
+936931,composition,crate through gavu then zeli then gavu then fodi then jipa then moru then zeli then gavu then raku then fodi then vosa then jipa?,wren,wren,1
+936931,own_witness,What gavu for crate?,ibis,ibis,1
+936931,peer_witness,What gavu would raven expect for crate?,pouch,pouch,1
+936931,own_peer,What gavu for crate?,pouch,pouch,1
+936931,peer_peer,What gavu would raven expect for crate?,unsure,unsure,1
+936931,own_both,What gavu for crate?,ibis,ibis,1
+936931,peer_both,What gavu would raven expect for crate?,ibis,ibis,1
+936931,own_neither,What gavu for crate?,pouch,pouch,1
+936931,peer_neither,What gavu would raven expect for crate?,pouch,pouch,1
+936931,private_statement,What raku for pouch?,unsure,unsure,1
+936931,private_recipient,What raku would raven expect for pouch?,pearl,pearl,1
+936931,walk_1,Which zeli for swift?,crate,crate,1
+936931,affirmation,Does swift zeli crate?,yes,yes,1
+936931,denial,Does swift zeli inlet?,no,no,1
+936931,walk_1,Which vosa for swift?,tern,tern,1
+936931,affirmation,Does swift vosa tern?,yes,yes,1
+936931,denial,Does swift vosa ibis?,no,no,1
+936931,walk_1,Which raku for swift?,flint,flint,1
+936931,affirmation,Does swift raku flint?,yes,yes,1
+936931,denial,Does swift raku cove?,no,no,1
+936931,walk_2,Which fodi for swift?,quay,quay,1
+936931,affirmation,Does swift fodi quay?,yes,yes,1
+936931,denial,Does swift fodi ibis?,no,no,1
+936931,walk_3,Which gavu for swift?,crate,crate,1
+936931,affirmation,Does swift gavu crate?,yes,yes,1
+936931,denial,Does swift gavu cove?,no,no,1
+936931,walk_4,Which ketu for swift?,chest,chest,1
+936931,affirmation,Does swift ketu chest?,yes,yes,1
+936931,denial,Does swift ketu flint?,no,no,1
+936931,walk_8,Which jipa for swift?,tern,tern,1
+936931,affirmation,Does swift jipa tern?,yes,yes,1
+936931,denial,Does swift jipa ibis?,no,no,1
+936931,walk_1,Which moru for swift?,flint,flint,1
+936931,affirmation,Does swift moru flint?,yes,yes,1
+936931,denial,Does swift moru chest?,no,no,1
+936931,composition,swift through fodi then vosa then jipa then moru then gavu then ketu then raku then ketu then moru then raku then jipa then ketu?,ibis,ibis,1
+936931,own_witness,What gavu for swift?,swift,swift,1
+936931,peer_witness,What gavu would raven expect for swift?,crate,crate,1
+936931,own_peer,What gavu for swift?,crate,crate,1
+936931,peer_peer,What gavu would raven expect for swift?,unsure,unsure,1
+936931,own_both,What gavu for swift?,swift,swift,1
+936931,peer_both,What gavu would raven expect for swift?,swift,swift,1
+936931,own_neither,What gavu for swift?,crate,crate,1
+936931,peer_neither,What gavu would raven expect for swift?,crate,crate,1
+936931,private_statement,What raku for swift?,unsure,unsure,1
+936931,private_recipient,What raku would raven expect for swift?,flint,flint,1
+1216019,walk_1,Which raku for swift?,delta,delta,1
+1216019,affirmation,Does swift raku delta?,yes,yes,1
+1216019,denial,Does swift raku inlet?,no,no,1
+1216019,walk_1,Which gavu for swift?,delta,delta,1
+1216019,affirmation,Does swift gavu delta?,yes,yes,1
+1216019,denial,Does swift gavu quay?,no,no,1
+1216019,walk_1,Which zeli for swift?,inlet,inlet,1
+1216019,affirmation,Does swift zeli inlet?,yes,yes,1
+1216019,denial,Does swift zeli cove?,no,no,1
+1216019,walk_2,Which fodi for swift?,cove,cove,1
+1216019,affirmation,Does swift fodi cove?,yes,yes,1
+1216019,denial,Does swift fodi inlet?,no,no,1
+1216019,walk_3,Which moru for swift?,cove,cove,1
+1216019,affirmation,Does swift moru cove?,yes,yes,1
+1216019,denial,Does swift moru pearl?,no,no,1
+1216019,walk_4,Which ketu for swift?,pouch,unsure,0
+1216019,affirmation,Does swift ketu pouch?,yes,unsure,0
+1216019,denial,Does swift ketu quay?,no,no,1
+1216019,walk_8,Which jipa for swift?,acorn,unsure,0
+1216019,affirmation,Does swift jipa acorn?,yes,unsure,0
+1216019,denial,Does swift jipa inlet?,no,unsure,0
+1216019,walk_1,Which vosa for swift?,ibis,ibis,1
+1216019,affirmation,Does swift vosa ibis?,yes,yes,1
+1216019,denial,Does swift vosa basket?,no,no,1
+1216019,composition,swift through fodi then gavu then fodi then ketu then zeli then zeli then moru then gavu then moru then ketu then vosa then vosa?,acorn,unsure,0
+1216019,own_witness,What moru for swift?,acorn,acorn,1
+1216019,peer_witness,What moru would raven expect for swift?,cove,cove,1
+1216019,own_peer,What moru for swift?,cove,cove,1
+1216019,peer_peer,What moru would raven expect for swift?,unsure,unsure,1
+1216019,own_both,What moru for swift?,acorn,acorn,1
+1216019,peer_both,What moru would raven expect for swift?,acorn,acorn,1
+1216019,own_neither,What moru for swift?,cove,cove,1
+1216019,peer_neither,What moru would raven expect for swift?,cove,cove,1
+1216019,private_statement,What zeli for inlet?,swift,swift,1
+1216019,private_recipient,What zeli would raven expect for inlet?,chest,chest,1
+1216019,walk_1,Which raku for wren?,delta,delta,1
+1216019,affirmation,Does wren raku delta?,yes,yes,1
+1216019,denial,Does wren raku pearl?,no,no,1
+1216019,walk_1,Which gavu for wren?,delta,delta,1
+1216019,affirmation,Does wren gavu delta?,yes,yes,1
+1216019,denial,Does wren gavu wren?,no,no,1
+1216019,walk_1,Which zeli for wren?,swift,swift,1
+1216019,affirmation,Does wren zeli swift?,yes,yes,1
+1216019,denial,Does wren zeli flint?,no,no,1
+1216019,walk_2,Which fodi for wren?,swift,swift,1
+1216019,affirmation,Does wren fodi swift?,yes,yes,1
+1216019,denial,Does wren fodi chest?,no,no,1
+1216019,walk_3,Which moru for wren?,wren,wren,1
+1216019,affirmation,Does wren moru wren?,yes,yes,1
+1216019,denial,Does wren moru flint?,no,no,1
+1216019,walk_4,Which ketu for wren?,wren,wren,1
+1216019,affirmation,Does wren ketu wren?,yes,yes,1
+1216019,denial,Does wren ketu chest?,no,no,1
+1216019,walk_8,Which jipa for wren?,wren,unsure,0
+1216019,affirmation,Does wren jipa wren?,yes,unsure,0
+1216019,denial,Does wren jipa tern?,no,unsure,0
+1216019,walk_1,Which vosa for wren?,swift,swift,1
+1216019,affirmation,Does wren vosa swift?,yes,yes,1
+1216019,denial,Does wren vosa crate?,no,no,1
+1216019,composition,wren through jipa then jipa then vosa then zeli then raku then gavu then ketu then moru then ketu then ketu then jipa then ketu?,pearl,unsure,0
+1216019,own_witness,What moru for wren?,pearl,pearl,1
+1216019,peer_witness,What moru would raven expect for wren?,wren,wren,1
+1216019,own_peer,What moru for wren?,wren,wren,1
+1216019,peer_peer,What moru would raven expect for wren?,unsure,unsure,1
+1216019,own_both,What moru for wren?,pearl,pearl,1
+1216019,peer_both,What moru would raven expect for wren?,pearl,pearl,1
+1216019,own_neither,What moru for wren?,wren,wren,1
+1216019,peer_neither,What moru would raven expect for wren?,wren,wren,1
+1216019,private_statement,What zeli for delta?,tern,tern,1
+1216019,private_recipient,What zeli would raven expect for delta?,shell,shell,1
+1216019,walk_1,Which raku for tern?,tern,tern,1
+1216019,affirmation,Does tern raku tern?,yes,yes,1
+1216019,denial,Does tern raku acorn?,no,no,1
+1216019,walk_1,Which gavu for tern?,pearl,pearl,1
+1216019,affirmation,Does tern gavu pearl?,yes,yes,1
+1216019,denial,Does tern gavu acorn?,no,no,1
+1216019,walk_1,Which zeli for tern?,tern,tern,1
+1216019,affirmation,Does tern zeli tern?,yes,yes,1
+1216019,denial,Does tern zeli swift?,no,no,1
+1216019,walk_2,Which fodi for tern?,pearl,pearl,1
+1216019,affirmation,Does tern fodi pearl?,yes,yes,1
+1216019,denial,Does tern fodi tern?,no,no,1
+1216019,walk_3,Which moru for tern?,pouch,pouch,1
+1216019,affirmation,Does tern moru pouch?,yes,yes,1
+1216019,denial,Does tern moru crate?,no,no,1
+1216019,walk_4,Which ketu for tern?,pearl,unsure,0
+1216019,affirmation,Does tern ketu pearl?,yes,unsure,0
+1216019,denial,Does tern ketu inlet?,no,no,1
+1216019,walk_8,Which jipa for tern?,wren,unsure,0
+1216019,affirmation,Does tern jipa wren?,yes,unsure,0
+1216019,denial,Does tern jipa tern?,no,unsure,0
+1216019,walk_1,Which vosa for tern?,tern,tern,1
+1216019,affirmation,Does tern vosa tern?,yes,yes,1
+1216019,denial,Does tern vosa flint?,no,no,1
+1216019,composition,tern through vosa then jipa then zeli then zeli then jipa then fodi then ketu then moru then ketu then raku then gavu then vosa?,pearl,unsure,0
+1216019,own_witness,What moru for tern?,wren,wren,1
+1216019,peer_witness,What moru would raven expect for tern?,pouch,pouch,1
+1216019,own_peer,What moru for tern?,pouch,pouch,1
+1216019,peer_peer,What moru would raven expect for tern?,unsure,unsure,1
+1216019,own_both,What moru for tern?,wren,wren,1
+1216019,peer_both,What moru would raven expect for tern?,wren,wren,1
+1216019,own_neither,What moru for tern?,pouch,pouch,1
+1216019,peer_neither,What moru would raven expect for tern?,pouch,pouch,1
+1216019,private_statement,What zeli for pouch?,pearl,pearl,1
+1216019,private_recipient,What zeli would raven expect for pouch?,ibis,ibis,1
+1216019,walk_1,Which raku for cove?,quay,quay,1
+1216019,affirmation,Does cove raku quay?,yes,yes,1
+1216019,denial,Does cove raku basket?,no,no,1
+1216019,walk_1,Which gavu for cove?,cove,cove,1
+1216019,affirmation,Does cove gavu cove?,yes,yes,1
+1216019,denial,Does cove gavu basket?,no,no,1
+1216019,walk_1,Which zeli for cove?,ibis,ibis,1
+1216019,affirmation,Does cove zeli ibis?,yes,yes,1
+1216019,denial,Does cove zeli wren?,no,no,1
+1216019,walk_2,Which fodi for cove?,wren,wren,1
+1216019,affirmation,Does cove fodi wren?,yes,yes,1
+1216019,denial,Does cove fodi cove?,no,no,1
+1216019,walk_3,Which moru for cove?,basket,basket,1
+1216019,affirmation,Does cove moru basket?,yes,yes,1
+1216019,denial,Does cove moru inlet?,no,no,1
+1216019,walk_4,Which ketu for cove?,crate,unsure,0
+1216019,affirmation,Does cove ketu crate?,yes,unsure,0
+1216019,denial,Does cove ketu wren?,no,no,1
+1216019,walk_8,Which jipa for cove?,inlet,unsure,0
+1216019,affirmation,Does cove jipa inlet?,yes,unsure,0
+1216019,denial,Does cove jipa basket?,no,unsure,0
+1216019,walk_1,Which vosa for cove?,shell,shell,1
+1216019,affirmation,Does cove vosa shell?,yes,yes,1
+1216019,denial,Does cove vosa acorn?,no,no,1
+1216019,composition,cove through vosa then gavu then moru then ketu then fodi then moru then zeli then moru then moru then raku then jipa then moru?,shell,unsure,0
+1216019,own_witness,What moru for cove?,ibis,ibis,1
+1216019,peer_witness,What moru would raven expect for cove?,basket,basket,1
+1216019,own_peer,What moru for cove?,basket,basket,1
+1216019,peer_peer,What moru would raven expect for cove?,unsure,unsure,1
+1216019,own_both,What moru for cove?,ibis,ibis,1
+1216019,peer_both,What moru would raven expect for cove?,ibis,ibis,1
+1216019,own_neither,What moru for cove?,basket,basket,1
+1216019,peer_neither,What moru would raven expect for cove?,basket,basket,1
+1216019,private_statement,What zeli for flint?,quay,quay,1
+1216019,private_recipient,What zeli would raven expect for flint?,acorn,acorn,1
+1216019,walk_1,Which raku for tern?,delta,delta,1
+1216019,affirmation,Does tern raku delta?,yes,yes,1
+1216019,denial,Does tern raku chest?,no,no,1
+1216019,walk_1,Which gavu for tern?,flint,flint,1
+1216019,affirmation,Does tern gavu flint?,yes,yes,1
+1216019,denial,Does tern gavu pouch?,no,no,1
+1216019,walk_1,Which zeli for tern?,tern,tern,1
+1216019,affirmation,Does tern zeli tern?,yes,yes,1
+1216019,denial,Does tern zeli pearl?,no,no,1
+1216019,walk_2,Which fodi for tern?,tern,tern,1
+1216019,affirmation,Does tern fodi tern?,yes,yes,1
+1216019,denial,Does tern fodi inlet?,no,no,1
+1216019,walk_3,Which moru for tern?,tern,tern,1
+1216019,affirmation,Does tern moru tern?,yes,yes,1
+1216019,denial,Does tern moru pearl?,no,no,1
+1216019,walk_4,Which ketu for tern?,inlet,unsure,0
+1216019,affirmation,Does tern ketu inlet?,yes,unsure,0
+1216019,denial,Does tern ketu flint?,no,no,1
+1216019,walk_8,Which jipa for tern?,shell,unsure,0
+1216019,affirmation,Does tern jipa shell?,yes,unsure,0
+1216019,denial,Does tern jipa cove?,no,unsure,0
+1216019,walk_1,Which vosa for tern?,tern,tern,1
+1216019,affirmation,Does tern vosa tern?,yes,yes,1
+1216019,denial,Does tern vosa ibis?,no,no,1
+1216019,composition,tern through moru then ketu then gavu then zeli then jipa then gavu then vosa then gavu then moru then moru then moru then ketu?,tern,unsure,0
+1216019,own_witness,What moru for tern?,swift,swift,1
+1216019,peer_witness,What moru would raven expect for tern?,tern,tern,1
+1216019,own_peer,What moru for tern?,tern,tern,1
+1216019,peer_peer,What moru would raven expect for tern?,unsure,unsure,1
+1216019,own_both,What moru for tern?,swift,swift,1
+1216019,peer_both,What moru would raven expect for tern?,swift,swift,1
+1216019,own_neither,What moru for tern?,tern,tern,1
+1216019,peer_neither,What moru would raven expect for tern?,tern,tern,1
+1216019,private_statement,What zeli for inlet?,acorn,acorn,1
+1216019,private_recipient,What zeli would raven expect for inlet?,swift,swift,1
+1216019,walk_1,Which raku for pearl?,chest,chest,1
+1216019,affirmation,Does pearl raku chest?,yes,yes,1
+1216019,denial,Does pearl raku crate?,no,no,1
+1216019,walk_1,Which gavu for pearl?,chest,chest,1
+1216019,affirmation,Does pearl gavu chest?,yes,yes,1
+1216019,denial,Does pearl gavu inlet?,no,no,1
+1216019,walk_1,Which zeli for pearl?,wren,wren,1
+1216019,affirmation,Does pearl zeli wren?,yes,yes,1
+1216019,denial,Does pearl zeli chest?,no,no,1
+1216019,walk_2,Which fodi for pearl?,swift,swift,1
+1216019,affirmation,Does pearl fodi swift?,yes,yes,1
+1216019,denial,Does pearl fodi delta?,no,no,1
+1216019,walk_3,Which moru for pearl?,pouch,pouch,1
+1216019,affirmation,Does pearl moru pouch?,yes,yes,1
+1216019,denial,Does pearl moru cove?,no,no,1
+1216019,walk_4,Which ketu for pearl?,swift,unsure,0
+1216019,affirmation,Does pearl ketu swift?,yes,unsure,0
+1216019,denial,Does pearl ketu delta?,no,no,1
+1216019,walk_8,Which jipa for pearl?,cove,unsure,0
+1216019,affirmation,Does pearl jipa cove?,yes,unsure,0
+1216019,denial,Does pearl jipa shell?,no,unsure,0
+1216019,walk_1,Which vosa for pearl?,tern,tern,1
+1216019,affirmation,Does pearl vosa tern?,yes,yes,1
+1216019,denial,Does pearl vosa chest?,no,no,1
+1216019,composition,pearl through vosa then raku then zeli then ketu then raku then jipa then moru then jipa then moru then moru then raku then fodi?,chest,unsure,0
+1216019,own_witness,What moru for pearl?,swift,swift,1
+1216019,peer_witness,What moru would raven expect for pearl?,pouch,pouch,1
+1216019,own_peer,What moru for pearl?,pouch,pouch,1
+1216019,peer_peer,What moru would raven expect for pearl?,unsure,unsure,1
+1216019,own_both,What moru for pearl?,swift,swift,1
+1216019,peer_both,What moru would raven expect for pearl?,swift,swift,1
+1216019,own_neither,What moru for pearl?,pouch,pouch,1
+1216019,peer_neither,What moru would raven expect for pearl?,pouch,pouch,1
+1216019,private_statement,What zeli for crate?,ibis,ibis,1
+1216019,private_recipient,What zeli would raven expect for crate?,crate,crate,1
+1216019,walk_1,Which raku for tern?,quay,quay,1
+1216019,affirmation,Does tern raku quay?,yes,yes,1
+1216019,denial,Does tern raku chest?,no,no,1
+1216019,walk_1,Which gavu for tern?,pouch,pouch,1
+1216019,affirmation,Does tern gavu pouch?,yes,yes,1
+1216019,denial,Does tern gavu basket?,no,no,1
+1216019,walk_1,Which zeli for tern?,acorn,acorn,1
+1216019,affirmation,Does tern zeli acorn?,yes,yes,1
+1216019,denial,Does tern zeli pouch?,no,no,1
+1216019,walk_2,Which fodi for tern?,wren,wren,1
+1216019,affirmation,Does tern fodi wren?,yes,yes,1
+1216019,denial,Does tern fodi chest?,no,no,1
+1216019,walk_3,Which moru for tern?,tern,tern,1
+1216019,affirmation,Does tern moru tern?,yes,yes,1
+1216019,denial,Does tern moru flint?,no,no,1
+1216019,walk_4,Which ketu for tern?,basket,unsure,0
+1216019,affirmation,Does tern ketu basket?,yes,unsure,0
+1216019,denial,Does tern ketu wren?,no,no,1
+1216019,walk_8,Which jipa for tern?,chest,unsure,0
+1216019,affirmation,Does tern jipa chest?,yes,unsure,0
+1216019,denial,Does tern jipa pouch?,no,unsure,0
+1216019,walk_1,Which vosa for tern?,wren,wren,1
+1216019,affirmation,Does tern vosa wren?,yes,yes,1
+1216019,denial,Does tern vosa basket?,no,no,1
+1216019,composition,tern through raku then vosa then gavu then vosa then gavu then vosa then fodi then vosa then raku then jipa then fodi then vosa?,shell,unsure,0
+1216019,own_witness,What moru for tern?,swift,swift,1
+1216019,peer_witness,What moru would raven expect for tern?,tern,tern,1
+1216019,own_peer,What moru for tern?,tern,tern,1
+1216019,peer_peer,What moru would raven expect for tern?,unsure,unsure,1
+1216019,own_both,What moru for tern?,swift,swift,1
+1216019,peer_both,What moru would raven expect for tern?,swift,swift,1
+1216019,own_neither,What moru for tern?,tern,tern,1
+1216019,peer_neither,What moru would raven expect for tern?,tern,tern,1
+1216019,private_statement,What zeli for shell?,cove,cove,1
+1216019,private_recipient,What zeli would raven expect for shell?,delta,delta,1
+1216019,walk_1,Which raku for tern?,crate,crate,1
+1216019,affirmation,Does tern raku crate?,yes,yes,1
+1216019,denial,Does tern raku delta?,no,no,1
+1216019,walk_1,Which gavu for tern?,inlet,inlet,1
+1216019,affirmation,Does tern gavu inlet?,yes,yes,1
+1216019,denial,Does tern gavu delta?,no,no,1
+1216019,walk_1,Which zeli for tern?,chest,chest,1
+1216019,affirmation,Does tern zeli chest?,yes,yes,1
+1216019,denial,Does tern zeli cove?,no,no,1
+1216019,walk_2,Which fodi for tern?,chest,chest,1
+1216019,affirmation,Does tern fodi chest?,yes,yes,1
+1216019,denial,Does tern fodi shell?,no,no,1
+1216019,walk_3,Which moru for tern?,ibis,ibis,1
+1216019,affirmation,Does tern moru ibis?,yes,yes,1
+1216019,denial,Does tern moru chest?,no,no,1
+1216019,walk_4,Which ketu for tern?,chest,unsure,0
+1216019,affirmation,Does tern ketu chest?,yes,unsure,0
+1216019,denial,Does tern ketu crate?,no,no,1
+1216019,walk_8,Which jipa for tern?,swift,unsure,0
+1216019,affirmation,Does tern jipa swift?,yes,unsure,0
+1216019,denial,Does tern jipa acorn?,no,unsure,0
+1216019,walk_1,Which vosa for tern?,shell,shell,1
+1216019,affirmation,Does tern vosa shell?,yes,yes,1
+1216019,denial,Does tern vosa delta?,no,no,1
+1216019,composition,tern through moru then fodi then ketu then vosa then ketu then zeli then jipa then fodi then gavu then raku then raku then zeli?,tern,unsure,0
+1216019,own_witness,What moru for tern?,tern,tern,1
+1216019,peer_witness,What moru would raven expect for tern?,ibis,ibis,1
+1216019,own_peer,What moru for tern?,ibis,ibis,1
+1216019,peer_peer,What moru would raven expect for tern?,unsure,unsure,1
+1216019,own_both,What moru for tern?,tern,tern,1
+1216019,peer_both,What moru would raven expect for tern?,tern,tern,1
+1216019,own_neither,What moru for tern?,ibis,ibis,1
+1216019,peer_neither,What moru would raven expect for tern?,ibis,ibis,1
+1216019,private_statement,What zeli for shell?,delta,delta,1
+1216019,private_recipient,What zeli would raven expect for shell?,tern,tern,1
+1542853,walk_1,Which jipa for delta?,crate,crate,1
+1542853,affirmation,Does delta jipa crate?,yes,yes,1
+1542853,denial,Does delta jipa wren?,no,no,1
+1542853,walk_1,Which ketu for delta?,cove,cove,1
+1542853,affirmation,Does delta ketu cove?,yes,yes,1
+1542853,denial,Does delta ketu pouch?,no,no,1
+1542853,walk_1,Which fodi for delta?,pearl,pearl,1
+1542853,affirmation,Does delta fodi pearl?,yes,yes,1
+1542853,denial,Does delta fodi pouch?,no,no,1
+1542853,walk_2,Which raku for delta?,tern,tern,1
+1542853,affirmation,Does delta raku tern?,yes,yes,1
+1542853,denial,Does delta raku shell?,no,no,1
+1542853,walk_3,Which vosa for delta?,chest,chest,1
+1542853,affirmation,Does delta vosa chest?,yes,yes,1
+1542853,denial,Does delta vosa tern?,no,no,1
+1542853,walk_4,Which moru for delta?,pouch,pouch,1
+1542853,affirmation,Does delta moru pouch?,yes,yes,1
+1542853,denial,Does delta moru pearl?,no,no,1
+1542853,walk_8,Which zeli for delta?,inlet,inlet,1
+1542853,affirmation,Does delta zeli inlet?,yes,yes,1
+1542853,denial,Does delta zeli pearl?,no,no,1
+1542853,walk_1,Which gavu for delta?,acorn,acorn,1
+1542853,affirmation,Does delta gavu acorn?,yes,yes,1
+1542853,denial,Does delta gavu cove?,no,no,1
+1542853,composition,delta through jipa then raku then vosa then jipa then jipa then moru then gavu then fodi then gavu then zeli then gavu then gavu?,flint,flint,1
+1542853,own_witness,What vosa for delta?,tern,tern,1
+1542853,peer_witness,What vosa would raven expect for delta?,chest,chest,1
+1542853,own_peer,What vosa for delta?,chest,chest,1
+1542853,peer_peer,What vosa would raven expect for delta?,unsure,unsure,1
+1542853,own_both,What vosa for delta?,tern,tern,1
+1542853,peer_both,What vosa would raven expect for delta?,tern,tern,1
+1542853,own_neither,What vosa for delta?,chest,chest,1
+1542853,peer_neither,What vosa would raven expect for delta?,chest,chest,1
+1542853,private_statement,What fodi for shell?,unsure,unsure,1
+1542853,private_recipient,What fodi would raven expect for shell?,ibis,ibis,1
+1542853,walk_1,Which jipa for pearl?,delta,delta,1
+1542853,affirmation,Does pearl jipa delta?,yes,yes,1
+1542853,denial,Does pearl jipa swift?,no,no,1
+1542853,walk_1,Which ketu for pearl?,tern,tern,1
+1542853,affirmation,Does pearl ketu tern?,yes,yes,1
+1542853,denial,Does pearl ketu crate?,no,no,1
+1542853,walk_1,Which fodi for pearl?,basket,basket,1
+1542853,affirmation,Does pearl fodi basket?,yes,yes,1
+1542853,denial,Does pearl fodi ibis?,no,no,1
+1542853,walk_2,Which raku for pearl?,flint,flint,1
+1542853,affirmation,Does pearl raku flint?,yes,yes,1
+1542853,denial,Does pearl raku basket?,no,no,1
+1542853,walk_3,Which vosa for pearl?,ibis,ibis,1
+1542853,affirmation,Does pearl vosa ibis?,yes,yes,1
+1542853,denial,Does pearl vosa quay?,no,no,1
+1542853,walk_4,Which moru for pearl?,cove,cove,1
+1542853,affirmation,Does pearl moru cove?,yes,yes,1
+1542853,denial,Does pearl moru chest?,no,no,1
+1542853,walk_8,Which zeli for pearl?,flint,flint,1
+1542853,affirmation,Does pearl zeli flint?,yes,yes,1
+1542853,denial,Does pearl zeli shell?,no,no,1
+1542853,walk_1,Which gavu for pearl?,swift,swift,1
+1542853,affirmation,Does pearl gavu swift?,yes,yes,1
+1542853,denial,Does pearl gavu pearl?,no,no,1
+1542853,composition,pearl through fodi then fodi then ketu then moru then jipa then fodi then gavu then zeli then fodi then fodi then jipa then zeli?,delta,delta,1
+1542853,own_witness,What vosa for pearl?,wren,wren,1
+1542853,peer_witness,What vosa would raven expect for pearl?,ibis,ibis,1
+1542853,own_peer,What vosa for pearl?,ibis,ibis,1
+1542853,peer_peer,What vosa would raven expect for pearl?,unsure,unsure,1
+1542853,own_both,What vosa for pearl?,wren,wren,1
+1542853,peer_both,What vosa would raven expect for pearl?,wren,wren,1
+1542853,own_neither,What vosa for pearl?,ibis,ibis,1
+1542853,peer_neither,What vosa would raven expect for pearl?,ibis,ibis,1
+1542853,private_statement,What fodi for quay?,unsure,unsure,1
+1542853,private_recipient,What fodi would raven expect for quay?,chest,chest,1
+1542853,walk_1,Which jipa for delta?,basket,basket,1
+1542853,affirmation,Does delta jipa basket?,yes,yes,1
+1542853,denial,Does delta jipa swift?,no,no,1
+1542853,walk_1,Which ketu for delta?,shell,shell,1
+1542853,affirmation,Does delta ketu shell?,yes,yes,1
+1542853,denial,Does delta ketu swift?,no,no,1
+1542853,walk_1,Which fodi for delta?,quay,quay,1
+1542853,affirmation,Does delta fodi quay?,yes,yes,1
+1542853,denial,Does delta fodi swift?,no,no,1
+1542853,walk_2,Which raku for delta?,crate,crate,1
+1542853,affirmation,Does delta raku crate?,yes,yes,1
+1542853,denial,Does delta raku chest?,no,no,1
+1542853,walk_3,Which vosa for delta?,pouch,pouch,1
+1542853,affirmation,Does delta vosa pouch?,yes,yes,1
+1542853,denial,Does delta vosa basket?,no,no,1
+1542853,walk_4,Which moru for delta?,chest,chest,1
+1542853,affirmation,Does delta moru chest?,yes,yes,1
+1542853,denial,Does delta moru ibis?,no,no,1
+1542853,walk_8,Which zeli for delta?,shell,shell,1
+1542853,affirmation,Does delta zeli shell?,yes,yes,1
+1542853,denial,Does delta zeli inlet?,no,no,1
+1542853,walk_1,Which gavu for delta?,acorn,acorn,1
+1542853,affirmation,Does delta gavu acorn?,yes,yes,1
+1542853,denial,Does delta gavu ibis?,no,no,1
+1542853,composition,delta through fodi then vosa then moru then zeli then zeli then moru then moru then vosa then raku then jipa then raku then vosa?,shell,shell,1
+1542853,own_witness,What vosa for delta?,delta,delta,1
+1542853,peer_witness,What vosa would raven expect for delta?,pouch,pouch,1
+1542853,own_peer,What vosa for delta?,pouch,pouch,1
+1542853,peer_peer,What vosa would raven expect for delta?,unsure,unsure,1
+1542853,own_both,What vosa for delta?,delta,delta,1
+1542853,peer_both,What vosa would raven expect for delta?,delta,delta,1
+1542853,own_neither,What vosa for delta?,pouch,pouch,1
+1542853,peer_neither,What vosa would raven expect for delta?,pouch,pouch,1
+1542853,private_statement,What fodi for ibis?,unsure,unsure,1
+1542853,private_recipient,What fodi would raven expect for ibis?,swift,swift,1
+1542853,walk_1,Which jipa for delta?,inlet,inlet,1
+1542853,affirmation,Does delta jipa inlet?,yes,yes,1
+1542853,denial,Does delta jipa ibis?,no,no,1
+1542853,walk_1,Which ketu for delta?,tern,tern,1
+1542853,affirmation,Does delta ketu tern?,yes,yes,1
+1542853,denial,Does delta ketu basket?,no,no,1
+1542853,walk_1,Which fodi for delta?,pouch,pouch,1
+1542853,affirmation,Does delta fodi pouch?,yes,yes,1
+1542853,denial,Does delta fodi swift?,no,no,1
+1542853,walk_2,Which raku for delta?,basket,basket,1
+1542853,affirmation,Does delta raku basket?,yes,yes,1
+1542853,denial,Does delta raku delta?,no,no,1
+1542853,walk_3,Which vosa for delta?,swift,swift,1
+1542853,affirmation,Does delta vosa swift?,yes,yes,1
+1542853,denial,Does delta vosa cove?,no,no,1
+1542853,walk_4,Which moru for delta?,inlet,inlet,1
+1542853,affirmation,Does delta moru inlet?,yes,yes,1
+1542853,denial,Does delta moru flint?,no,no,1
+1542853,walk_8,Which zeli for delta?,cove,cove,1
+1542853,affirmation,Does delta zeli cove?,yes,yes,1
+1542853,denial,Does delta zeli ibis?,no,no,1
+1542853,walk_1,Which gavu for delta?,tern,tern,1
+1542853,affirmation,Does delta gavu tern?,yes,yes,1
+1542853,denial,Does delta gavu pearl?,no,no,1
+1542853,composition,delta through fodi then raku then jipa then fodi then moru then vosa then fodi then jipa then vosa then jipa then ketu then raku?,pearl,pearl,1
+1542853,own_witness,What vosa for delta?,pearl,pearl,1
+1542853,peer_witness,What vosa would raven expect for delta?,swift,swift,1
+1542853,own_peer,What vosa for delta?,swift,swift,1
+1542853,peer_peer,What vosa would raven expect for delta?,unsure,unsure,1
+1542853,own_both,What vosa for delta?,pearl,pearl,1
+1542853,peer_both,What vosa would raven expect for delta?,pearl,pearl,1
+1542853,own_neither,What vosa for delta?,swift,swift,1
+1542853,peer_neither,What vosa would raven expect for delta?,swift,swift,1
+1542853,private_statement,What fodi for tern?,unsure,unsure,1
+1542853,private_recipient,What fodi would raven expect for tern?,delta,delta,1
+1542853,walk_1,Which jipa for swift?,inlet,inlet,1
+1542853,affirmation,Does swift jipa inlet?,yes,yes,1
+1542853,denial,Does swift jipa ibis?,no,no,1
+1542853,walk_1,Which ketu for swift?,chest,chest,1
+1542853,affirmation,Does swift ketu chest?,yes,yes,1
+1542853,denial,Does swift ketu acorn?,no,no,1
+1542853,walk_1,Which fodi for swift?,crate,crate,1
+1542853,affirmation,Does swift fodi crate?,yes,yes,1
+1542853,denial,Does swift fodi wren?,no,no,1
+1542853,walk_2,Which raku for swift?,basket,basket,1
+1542853,affirmation,Does swift raku basket?,yes,yes,1
+1542853,denial,Does swift raku swift?,no,no,1
+1542853,walk_3,Which vosa for swift?,pouch,pouch,1
+1542853,affirmation,Does swift vosa pouch?,yes,yes,1
+1542853,denial,Does swift vosa crate?,no,no,1
+1542853,walk_4,Which moru for swift?,shell,shell,1
+1542853,affirmation,Does swift moru shell?,yes,yes,1
+1542853,denial,Does swift moru tern?,no,no,1
+1542853,walk_8,Which zeli for swift?,pearl,pearl,1
+1542853,affirmation,Does swift zeli pearl?,yes,yes,1
+1542853,denial,Does swift zeli flint?,no,no,1
+1542853,walk_1,Which gavu for swift?,ibis,ibis,1
+1542853,affirmation,Does swift gavu ibis?,yes,yes,1
+1542853,denial,Does swift gavu cove?,no,no,1
+1542853,composition,swift through vosa then fodi then ketu then gavu then moru then jipa then jipa then ketu then raku then ketu then zeli then raku?,delta,delta,1
+1542853,own_witness,What vosa for swift?,ibis,ibis,1
+1542853,peer_witness,What vosa would raven expect for swift?,pouch,pouch,1
+1542853,own_peer,What vosa for swift?,pouch,pouch,1
+1542853,peer_peer,What vosa would raven expect for swift?,unsure,unsure,1
+1542853,own_both,What vosa for swift?,ibis,ibis,1
+1542853,peer_both,What vosa would raven expect for swift?,ibis,ibis,1
+1542853,own_neither,What vosa for swift?,pouch,pouch,1
+1542853,peer_neither,What vosa would raven expect for swift?,pouch,pouch,1
+1542853,private_statement,What fodi for chest?,unsure,unsure,1
+1542853,private_recipient,What fodi would raven expect for chest?,flint,flint,1
+1542853,walk_1,Which jipa for cove?,pearl,pearl,1
+1542853,affirmation,Does cove jipa pearl?,yes,yes,1
+1542853,denial,Does cove jipa flint?,no,no,1
+1542853,walk_1,Which ketu for cove?,pearl,pearl,1
+1542853,affirmation,Does cove ketu pearl?,yes,yes,1
+1542853,denial,Does cove ketu basket?,no,no,1
+1542853,walk_1,Which fodi for cove?,chest,chest,1
+1542853,affirmation,Does cove fodi chest?,yes,yes,1
+1542853,denial,Does cove fodi pouch?,no,no,1
+1542853,walk_2,Which raku for cove?,swift,swift,1
+1542853,affirmation,Does cove raku swift?,yes,yes,1
+1542853,denial,Does cove raku pouch?,no,no,1
+1542853,walk_3,Which vosa for cove?,pouch,pouch,1
+1542853,affirmation,Does cove vosa pouch?,yes,yes,1
+1542853,denial,Does cove vosa quay?,no,no,1
+1542853,walk_4,Which moru for cove?,cove,cove,1
+1542853,affirmation,Does cove moru cove?,yes,yes,1
+1542853,denial,Does cove moru acorn?,no,no,1
+1542853,walk_8,Which zeli for cove?,cove,cove,1
+1542853,affirmation,Does cove zeli cove?,yes,yes,1
+1542853,denial,Does cove zeli inlet?,no,no,1
+1542853,walk_1,Which gavu for cove?,chest,chest,1
+1542853,affirmation,Does cove gavu chest?,yes,yes,1
+1542853,denial,Does cove gavu basket?,no,no,1
+1542853,composition,cove through gavu then ketu then gavu then zeli then jipa then fodi then jipa then vosa then moru then jipa then moru then jipa?,acorn,acorn,1
+1542853,own_witness,What vosa for cove?,cove,cove,1
+1542853,peer_witness,What vosa would raven expect for cove?,pouch,pouch,1
+1542853,own_peer,What vosa for cove?,pouch,pouch,1
+1542853,peer_peer,What vosa would raven expect for cove?,unsure,unsure,1
+1542853,own_both,What vosa for cove?,cove,cove,1
+1542853,peer_both,What vosa would raven expect for cove?,cove,cove,1
+1542853,own_neither,What vosa for cove?,pouch,pouch,1
+1542853,peer_neither,What vosa would raven expect for cove?,pouch,pouch,1
+1542853,private_statement,What fodi for inlet?,unsure,unsure,1
+1542853,private_recipient,What fodi would raven expect for inlet?,pearl,pearl,1
+1542853,walk_1,Which jipa for pouch?,chest,chest,1
+1542853,affirmation,Does pouch jipa chest?,yes,yes,1
+1542853,denial,Does pouch jipa swift?,no,no,1
+1542853,walk_1,Which ketu for pouch?,crate,crate,1
+1542853,affirmation,Does pouch ketu crate?,yes,yes,1
+1542853,denial,Does pouch ketu quay?,no,no,1
+1542853,walk_1,Which fodi for pouch?,cove,cove,1
+1542853,affirmation,Does pouch fodi cove?,yes,yes,1
+1542853,denial,Does pouch fodi chest?,no,no,1
+1542853,walk_2,Which raku for pouch?,quay,quay,1
+1542853,affirmation,Does pouch raku quay?,yes,yes,1
+1542853,denial,Does pouch raku basket?,no,no,1
+1542853,walk_3,Which vosa for pouch?,inlet,inlet,1
+1542853,affirmation,Does pouch vosa inlet?,yes,yes,1
+1542853,denial,Does pouch vosa basket?,no,no,1
+1542853,walk_4,Which moru for pouch?,quay,quay,1
+1542853,affirmation,Does pouch moru quay?,yes,yes,1
+1542853,denial,Does pouch moru wren?,no,no,1
+1542853,walk_8,Which zeli for pouch?,tern,tern,1
+1542853,affirmation,Does pouch zeli tern?,yes,yes,1
+1542853,denial,Does pouch zeli inlet?,no,no,1
+1542853,walk_1,Which gavu for pouch?,delta,delta,1
+1542853,affirmation,Does pouch gavu delta?,yes,yes,1
+1542853,denial,Does pouch gavu swift?,no,no,1
+1542853,composition,pouch through vosa then zeli then moru then jipa then gavu then zeli then gavu then ketu then raku then jipa then zeli then gavu?,crate,crate,1
+1542853,own_witness,What vosa for pouch?,pouch,pouch,1
+1542853,peer_witness,What vosa would raven expect for pouch?,inlet,inlet,1
+1542853,own_peer,What vosa for pouch?,inlet,inlet,1
+1542853,peer_peer,What vosa would raven expect for pouch?,unsure,unsure,1
+1542853,own_both,What vosa for pouch?,pouch,pouch,1
+1542853,peer_both,What vosa would raven expect for pouch?,pouch,pouch,1
+1542853,own_neither,What vosa for pouch?,inlet,inlet,1
+1542853,peer_neither,What vosa would raven expect for pouch?,inlet,inlet,1
+1542853,private_statement,What fodi for flint?,unsure,unsure,1
+1542853,private_recipient,What fodi would raven expect for flint?,tern,tern,1
+1542853,walk_1,Which jipa for pearl?,delta,delta,1
+1542853,affirmation,Does pearl jipa delta?,yes,yes,1
+1542853,denial,Does pearl jipa crate?,no,no,1
+1542853,walk_1,Which ketu for pearl?,inlet,inlet,1
+1542853,affirmation,Does pearl ketu inlet?,yes,yes,1
+1542853,denial,Does pearl ketu acorn?,no,no,1
+1542853,walk_1,Which fodi for pearl?,ibis,ibis,1
+1542853,affirmation,Does pearl fodi ibis?,yes,yes,1
+1542853,denial,Does pearl fodi pouch?,no,no,1
+1542853,walk_2,Which raku for pearl?,pearl,pearl,1
+1542853,affirmation,Does pearl raku pearl?,yes,yes,1
+1542853,denial,Does pearl raku acorn?,no,no,1
+1542853,walk_3,Which vosa for pearl?,ibis,ibis,1
+1542853,affirmation,Does pearl vosa ibis?,yes,yes,1
+1542853,denial,Does pearl vosa cove?,no,no,1
+1542853,walk_4,Which moru for pearl?,quay,quay,1
+1542853,affirmation,Does pearl moru quay?,yes,yes,1
+1542853,denial,Does pearl moru cove?,no,no,1
+1542853,walk_8,Which zeli for pearl?,swift,swift,1
+1542853,affirmation,Does pearl zeli swift?,yes,yes,1
+1542853,denial,Does pearl zeli chest?,no,no,1
+1542853,walk_1,Which gavu for pearl?,swift,swift,1
+1542853,affirmation,Does pearl gavu swift?,yes,yes,1
+1542853,denial,Does pearl gavu flint?,no,no,1
+1542853,composition,pearl through raku then vosa then moru then moru then gavu then jipa then moru then moru then vosa then vosa then zeli then vosa?,shell,shell,1
+1542853,own_witness,What vosa for pearl?,wren,wren,1
+1542853,peer_witness,What vosa would raven expect for pearl?,ibis,ibis,1
+1542853,own_peer,What vosa for pearl?,ibis,ibis,1
+1542853,peer_peer,What vosa would raven expect for pearl?,unsure,unsure,1
+1542853,own_both,What vosa for pearl?,wren,wren,1
+1542853,peer_both,What vosa would raven expect for pearl?,wren,wren,1
+1542853,own_neither,What vosa for pearl?,ibis,ibis,1
+1542853,peer_neither,What vosa would raven expect for pearl?,ibis,ibis,1
+1542853,private_statement,What fodi for acorn?,unsure,unsure,1
+1542853,private_recipient,What fodi would raven expect for acorn?,quay,quay,1
+1834021,walk_1,Which raku for inlet?,inlet,inlet,1
+1834021,affirmation,Does inlet raku inlet?,yes,yes,1
+1834021,denial,Does inlet raku chest?,no,no,1
+1834021,walk_1,Which vosa for inlet?,tern,tern,1
+1834021,affirmation,Does inlet vosa tern?,yes,yes,1
+1834021,denial,Does inlet vosa shell?,no,no,1
+1834021,walk_1,Which moru for inlet?,basket,basket,1
+1834021,affirmation,Does inlet moru basket?,yes,yes,1
+1834021,denial,Does inlet moru ibis?,no,no,1
+1834021,walk_2,Which jipa for inlet?,tern,tern,1
+1834021,affirmation,Does inlet jipa tern?,yes,yes,1
+1834021,denial,Does inlet jipa cove?,no,no,1
+1834021,walk_3,Which zeli for inlet?,quay,quay,1
+1834021,affirmation,Does inlet zeli quay?,yes,yes,1
+1834021,denial,Does inlet zeli inlet?,no,no,1
+1834021,walk_4,Which fodi for inlet?,pearl,pearl,1
+1834021,affirmation,Does inlet fodi pearl?,yes,yes,1
+1834021,denial,Does inlet fodi quay?,no,no,1
+1834021,walk_8,Which gavu for inlet?,wren,wren,1
+1834021,affirmation,Does inlet gavu wren?,yes,yes,1
+1834021,denial,Does inlet gavu delta?,no,no,1
+1834021,walk_1,Which ketu for inlet?,acorn,acorn,1
+1834021,affirmation,Does inlet ketu acorn?,yes,yes,1
+1834021,denial,Does inlet ketu inlet?,no,no,1
+1834021,composition,inlet through fodi then ketu then vosa then gavu then fodi then gavu then jipa then raku then jipa then vosa then fodi then ketu?,delta,delta,1
+1834021,own_witness,What zeli for inlet?,crate,crate,1
+1834021,peer_witness,What zeli would raven expect for inlet?,quay,quay,1
+1834021,own_peer,What zeli for inlet?,quay,quay,1
+1834021,peer_peer,What zeli would raven expect for inlet?,unsure,unsure,1
+1834021,own_both,What zeli for inlet?,crate,crate,1
+1834021,peer_both,What zeli would raven expect for inlet?,crate,crate,1
+1834021,own_neither,What zeli for inlet?,quay,quay,1
+1834021,peer_neither,What zeli would raven expect for inlet?,quay,quay,1
+1834021,private_statement,What moru for crate?,unsure,unsure,1
+1834021,private_recipient,What moru would raven expect for crate?,flint,flint,1
+1834021,walk_1,Which raku for shell?,flint,flint,1
+1834021,affirmation,Does shell raku flint?,yes,yes,1
+1834021,denial,Does shell raku pearl?,no,no,1
+1834021,walk_1,Which vosa for shell?,acorn,acorn,1
+1834021,affirmation,Does shell vosa acorn?,yes,yes,1
+1834021,denial,Does shell vosa quay?,no,no,1
+1834021,walk_1,Which moru for shell?,swift,swift,1
+1834021,affirmation,Does shell moru swift?,yes,yes,1
+1834021,denial,Does shell moru quay?,no,no,1
+1834021,walk_2,Which jipa for shell?,basket,basket,1
+1834021,affirmation,Does shell jipa basket?,yes,yes,1
+1834021,denial,Does shell jipa crate?,no,no,1
+1834021,walk_3,Which zeli for shell?,chest,chest,1
+1834021,affirmation,Does shell zeli chest?,yes,yes,1
+1834021,denial,Does shell zeli inlet?,no,no,1
+1834021,walk_4,Which fodi for shell?,swift,swift,1
+1834021,affirmation,Does shell fodi swift?,yes,yes,1
+1834021,denial,Does shell fodi crate?,no,no,1
+1834021,walk_8,Which gavu for shell?,inlet,inlet,1
+1834021,affirmation,Does shell gavu inlet?,yes,yes,1
+1834021,denial,Does shell gavu pearl?,no,no,1
+1834021,walk_1,Which ketu for shell?,ibis,ibis,1
+1834021,affirmation,Does shell ketu ibis?,yes,yes,1
+1834021,denial,Does shell ketu chest?,no,no,1
+1834021,composition,shell through raku then gavu then zeli then zeli then moru then fodi then moru then ketu then vosa then gavu then vosa then moru?,swift,swift,1
+1834021,own_witness,What zeli for shell?,inlet,inlet,1
+1834021,peer_witness,What zeli would raven expect for shell?,chest,chest,1
+1834021,own_peer,What zeli for shell?,chest,chest,1
+1834021,peer_peer,What zeli would raven expect for shell?,unsure,unsure,1
+1834021,own_both,What zeli for shell?,inlet,inlet,1
+1834021,peer_both,What zeli would raven expect for shell?,inlet,inlet,1
+1834021,own_neither,What zeli for shell?,chest,chest,1
+1834021,peer_neither,What zeli would raven expect for shell?,chest,chest,1
+1834021,private_statement,What moru for quay?,unsure,unsure,1
+1834021,private_recipient,What moru would raven expect for quay?,pouch,pouch,1
+1834021,walk_1,Which raku for chest?,swift,swift,1
+1834021,affirmation,Does chest raku swift?,yes,yes,1
+1834021,denial,Does chest raku basket?,no,no,1
+1834021,walk_1,Which vosa for chest?,acorn,acorn,1
+1834021,affirmation,Does chest vosa acorn?,yes,yes,1
+1834021,denial,Does chest vosa inlet?,no,no,1
+1834021,walk_1,Which moru for chest?,basket,basket,1
+1834021,affirmation,Does chest moru basket?,yes,yes,1
+1834021,denial,Does chest moru swift?,no,no,1
+1834021,walk_2,Which jipa for chest?,quay,quay,1
+1834021,affirmation,Does chest jipa quay?,yes,yes,1
+1834021,denial,Does chest jipa acorn?,no,no,1
+1834021,walk_3,Which zeli for chest?,delta,delta,1
+1834021,affirmation,Does chest zeli delta?,yes,yes,1
+1834021,denial,Does chest zeli cove?,no,no,1
+1834021,walk_4,Which fodi for chest?,flint,flint,1
+1834021,affirmation,Does chest fodi flint?,yes,yes,1
+1834021,denial,Does chest fodi shell?,no,no,1
+1834021,walk_8,Which gavu for chest?,inlet,inlet,1
+1834021,affirmation,Does chest gavu inlet?,yes,yes,1
+1834021,denial,Does chest gavu wren?,no,no,1
+1834021,walk_1,Which ketu for chest?,crate,crate,1
+1834021,affirmation,Does chest ketu crate?,yes,yes,1
+1834021,denial,Does chest ketu pearl?,no,no,1
+1834021,composition,chest through gavu then zeli then moru then ketu then vosa then ketu then gavu then vosa then raku then zeli then jipa then ketu?,tern,tern,1
+1834021,own_witness,What zeli for chest?,pouch,pouch,1
+1834021,peer_witness,What zeli would raven expect for chest?,delta,delta,1
+1834021,own_peer,What zeli for chest?,delta,delta,1
+1834021,peer_peer,What zeli would raven expect for chest?,unsure,unsure,1
+1834021,own_both,What zeli for chest?,pouch,pouch,1
+1834021,peer_both,What zeli would raven expect for chest?,pouch,pouch,1
+1834021,own_neither,What zeli for chest?,delta,delta,1
+1834021,peer_neither,What zeli would raven expect for chest?,delta,delta,1
+1834021,private_statement,What moru for chest?,unsure,unsure,1
+1834021,private_recipient,What moru would raven expect for chest?,basket,basket,1
+1834021,walk_1,Which raku for inlet?,basket,basket,1
+1834021,affirmation,Does inlet raku basket?,yes,yes,1
+1834021,denial,Does inlet raku delta?,no,no,1
+1834021,walk_1,Which vosa for inlet?,ibis,ibis,1
+1834021,affirmation,Does inlet vosa ibis?,yes,yes,1
+1834021,denial,Does inlet vosa quay?,no,no,1
+1834021,walk_1,Which moru for inlet?,cove,cove,1
+1834021,affirmation,Does inlet moru cove?,yes,yes,1
+1834021,denial,Does inlet moru tern?,no,no,1
+1834021,walk_2,Which jipa for inlet?,pearl,pearl,1
+1834021,affirmation,Does inlet jipa pearl?,yes,yes,1
+1834021,denial,Does inlet jipa cove?,no,no,1
+1834021,walk_3,Which zeli for inlet?,basket,basket,1
+1834021,affirmation,Does inlet zeli basket?,yes,yes,1
+1834021,denial,Does inlet zeli crate?,no,no,1
+1834021,walk_4,Which fodi for inlet?,delta,delta,1
+1834021,affirmation,Does inlet fodi delta?,yes,yes,1
+1834021,denial,Does inlet fodi pouch?,no,no,1
+1834021,walk_8,Which gavu for inlet?,pouch,pouch,1
+1834021,affirmation,Does inlet gavu pouch?,yes,yes,1
+1834021,denial,Does inlet gavu tern?,no,no,1
+1834021,walk_1,Which ketu for inlet?,acorn,acorn,1
+1834021,affirmation,Does inlet ketu acorn?,yes,yes,1
+1834021,denial,Does inlet ketu basket?,no,no,1
+1834021,composition,inlet through fodi then zeli then gavu then gavu then vosa then raku then raku then gavu then jipa then vosa then moru then raku?,ibis,ibis,1
+1834021,own_witness,What zeli for inlet?,pearl,pearl,1
+1834021,peer_witness,What zeli would raven expect for inlet?,basket,basket,1
+1834021,own_peer,What zeli for inlet?,basket,basket,1
+1834021,peer_peer,What zeli would raven expect for inlet?,unsure,unsure,1
+1834021,own_both,What zeli for inlet?,pearl,pearl,1
+1834021,peer_both,What zeli would raven expect for inlet?,pearl,pearl,1
+1834021,own_neither,What zeli for inlet?,basket,basket,1
+1834021,peer_neither,What zeli would raven expect for inlet?,basket,basket,1
+1834021,private_statement,What moru for inlet?,unsure,unsure,1
+1834021,private_recipient,What moru would raven expect for inlet?,cove,cove,1
+1834021,walk_1,Which raku for tern?,cove,cove,1
+1834021,affirmation,Does tern raku cove?,yes,yes,1
+1834021,denial,Does tern raku delta?,no,no,1
+1834021,walk_1,Which vosa for tern?,quay,quay,1
+1834021,affirmation,Does tern vosa quay?,yes,yes,1
+1834021,denial,Does tern vosa ibis?,no,no,1
+1834021,walk_1,Which moru for tern?,cove,cove,1
+1834021,affirmation,Does tern moru cove?,yes,yes,1
+1834021,denial,Does tern moru shell?,no,no,1
+1834021,walk_2,Which jipa for tern?,ibis,ibis,1
+1834021,affirmation,Does tern jipa ibis?,yes,yes,1
+1834021,denial,Does tern jipa flint?,no,no,1
+1834021,walk_3,Which zeli for tern?,tern,tern,1
+1834021,affirmation,Does tern zeli tern?,yes,yes,1
+1834021,denial,Does tern zeli quay?,no,no,1
+1834021,walk_4,Which fodi for tern?,ibis,ibis,1
+1834021,affirmation,Does tern fodi ibis?,yes,yes,1
+1834021,denial,Does tern fodi pearl?,no,no,1
+1834021,walk_8,Which gavu for tern?,quay,quay,1
+1834021,affirmation,Does tern gavu quay?,yes,yes,1
+1834021,denial,Does tern gavu tern?,no,no,1
+1834021,walk_1,Which ketu for tern?,ibis,ibis,1
+1834021,affirmation,Does tern ketu ibis?,yes,yes,1
+1834021,denial,Does tern ketu flint?,no,no,1
+1834021,composition,tern through fodi then raku then jipa then gavu then moru then raku then raku then ketu then gavu then moru then moru then moru?,quay,quay,1
+1834021,own_witness,What zeli for tern?,delta,delta,1
+1834021,peer_witness,What zeli would raven expect for tern?,tern,tern,1
+1834021,own_peer,What zeli for tern?,tern,tern,1
+1834021,peer_peer,What zeli would raven expect for tern?,unsure,unsure,1
+1834021,own_both,What zeli for tern?,delta,delta,1
+1834021,peer_both,What zeli would raven expect for tern?,delta,delta,1
+1834021,own_neither,What zeli for tern?,tern,tern,1
+1834021,peer_neither,What zeli would raven expect for tern?,tern,tern,1
+1834021,private_statement,What moru for acorn?,unsure,unsure,1
+1834021,private_recipient,What moru would raven expect for acorn?,shell,shell,1
+1834021,walk_1,Which raku for tern?,chest,chest,1
+1834021,affirmation,Does tern raku chest?,yes,yes,1
+1834021,denial,Does tern raku cove?,no,no,1
+1834021,walk_1,Which vosa for tern?,basket,basket,1
+1834021,affirmation,Does tern vosa basket?,yes,yes,1
+1834021,denial,Does tern vosa acorn?,no,no,1
+1834021,walk_1,Which moru for tern?,quay,quay,1
+1834021,affirmation,Does tern moru quay?,yes,yes,1
+1834021,denial,Does tern moru ibis?,no,no,1
+1834021,walk_2,Which jipa for tern?,pearl,pearl,1
+1834021,affirmation,Does tern jipa pearl?,yes,yes,1
+1834021,denial,Does tern jipa chest?,no,no,1
+1834021,walk_3,Which zeli for tern?,inlet,inlet,1
+1834021,affirmation,Does tern zeli inlet?,yes,yes,1
+1834021,denial,Does tern zeli basket?,no,no,1
+1834021,walk_4,Which fodi for tern?,acorn,acorn,1
+1834021,affirmation,Does tern fodi acorn?,yes,yes,1
+1834021,denial,Does tern fodi pouch?,no,no,1
+1834021,walk_8,Which gavu for tern?,delta,delta,1
+1834021,affirmation,Does tern gavu delta?,yes,yes,1
+1834021,denial,Does tern gavu chest?,no,no,1
+1834021,walk_1,Which ketu for tern?,basket,basket,1
+1834021,affirmation,Does tern ketu basket?,yes,yes,1
+1834021,denial,Does tern ketu pearl?,no,no,1
+1834021,composition,tern through gavu then jipa then ketu then moru then raku then ketu then fodi then jipa then vosa then fodi then gavu then gavu?,pearl,pearl,1
+1834021,own_witness,What zeli for tern?,shell,shell,1
+1834021,peer_witness,What zeli would raven expect for tern?,inlet,inlet,1
+1834021,own_peer,What zeli for tern?,inlet,inlet,1
+1834021,peer_peer,What zeli would raven expect for tern?,unsure,unsure,1
+1834021,own_both,What zeli for tern?,shell,shell,1
+1834021,peer_both,What zeli would raven expect for tern?,shell,shell,1
+1834021,own_neither,What zeli for tern?,inlet,inlet,1
+1834021,peer_neither,What zeli would raven expect for tern?,inlet,inlet,1
+1834021,private_statement,What moru for swift?,unsure,unsure,1
+1834021,private_recipient,What moru would raven expect for swift?,cove,cove,1
+1834021,walk_1,Which raku for swift?,crate,crate,1
+1834021,affirmation,Does swift raku crate?,yes,yes,1
+1834021,denial,Does swift raku pearl?,no,no,1
+1834021,walk_1,Which vosa for swift?,pouch,pouch,1
+1834021,affirmation,Does swift vosa pouch?,yes,yes,1
+1834021,denial,Does swift vosa wren?,no,no,1
+1834021,walk_1,Which moru for swift?,quay,quay,1
+1834021,affirmation,Does swift moru quay?,yes,yes,1
+1834021,denial,Does swift moru crate?,no,no,1
+1834021,walk_2,Which jipa for swift?,acorn,acorn,1
+1834021,affirmation,Does swift jipa acorn?,yes,yes,1
+1834021,denial,Does swift jipa pouch?,no,no,1
+1834021,walk_3,Which zeli for swift?,acorn,acorn,1
+1834021,affirmation,Does swift zeli acorn?,yes,yes,1
+1834021,denial,Does swift zeli inlet?,no,no,1
+1834021,walk_4,Which fodi for swift?,inlet,inlet,1
+1834021,affirmation,Does swift fodi inlet?,yes,yes,1
+1834021,denial,Does swift fodi shell?,no,no,1
+1834021,walk_8,Which gavu for swift?,tern,tern,1
+1834021,affirmation,Does swift gavu tern?,yes,yes,1
+1834021,denial,Does swift gavu swift?,no,no,1
+1834021,walk_1,Which ketu for swift?,chest,chest,1
+1834021,affirmation,Does swift ketu chest?,yes,yes,1
+1834021,denial,Does swift ketu quay?,no,no,1
+1834021,composition,swift through fodi then vosa then ketu then moru then vosa then jipa then raku then vosa then ketu then zeli then moru then zeli?,quay,quay,1
+1834021,own_witness,What zeli for swift?,ibis,ibis,1
+1834021,peer_witness,What zeli would raven expect for swift?,acorn,acorn,1
+1834021,own_peer,What zeli for swift?,acorn,acorn,1
+1834021,peer_peer,What zeli would raven expect for swift?,unsure,unsure,1
+1834021,own_both,What zeli for swift?,ibis,ibis,1
+1834021,peer_both,What zeli would raven expect for swift?,ibis,ibis,1
+1834021,own_neither,What zeli for swift?,acorn,acorn,1
+1834021,peer_neither,What zeli would raven expect for swift?,acorn,acorn,1
+1834021,private_statement,What moru for swift?,unsure,unsure,1
+1834021,private_recipient,What moru would raven expect for swift?,quay,quay,1
+1834021,walk_1,Which raku for ibis?,shell,shell,1
+1834021,affirmation,Does ibis raku shell?,yes,yes,1
+1834021,denial,Does ibis raku swift?,no,no,1
+1834021,walk_1,Which vosa for ibis?,tern,tern,1
+1834021,affirmation,Does ibis vosa tern?,yes,yes,1
+1834021,denial,Does ibis vosa flint?,no,no,1
+1834021,walk_1,Which moru for ibis?,crate,crate,1
+1834021,affirmation,Does ibis moru crate?,yes,yes,1
+1834021,denial,Does ibis moru pearl?,no,no,1
+1834021,walk_2,Which jipa for ibis?,pearl,pearl,1
+1834021,affirmation,Does ibis jipa pearl?,yes,yes,1
+1834021,denial,Does ibis jipa delta?,no,no,1
+1834021,walk_3,Which zeli for ibis?,swift,swift,1
+1834021,affirmation,Does ibis zeli swift?,yes,yes,1
+1834021,denial,Does ibis zeli flint?,no,no,1
+1834021,walk_4,Which fodi for ibis?,cove,cove,1
+1834021,affirmation,Does ibis fodi cove?,yes,yes,1
+1834021,denial,Does ibis fodi basket?,no,no,1
+1834021,walk_8,Which gavu for ibis?,delta,delta,1
+1834021,affirmation,Does ibis gavu delta?,yes,yes,1
+1834021,denial,Does ibis gavu cove?,no,no,1
+1834021,walk_1,Which ketu for ibis?,pouch,pouch,1
+1834021,affirmation,Does ibis ketu pouch?,yes,yes,1
+1834021,denial,Does ibis ketu pearl?,no,no,1
+1834021,composition,ibis through raku then vosa then ketu then fodi then raku then raku then raku then raku then gavu then zeli then zeli then gavu?,pouch,pouch,1
+1834021,own_witness,What zeli for ibis?,shell,shell,1
+1834021,peer_witness,What zeli would raven expect for ibis?,swift,swift,1
+1834021,own_peer,What zeli for ibis?,swift,swift,1
+1834021,peer_peer,What zeli would raven expect for ibis?,unsure,unsure,1
+1834021,own_both,What zeli for ibis?,shell,shell,1
+1834021,peer_both,What zeli would raven expect for ibis?,shell,shell,1
+1834021,own_neither,What zeli for ibis?,swift,swift,1
+1834021,peer_neither,What zeli would raven expect for ibis?,swift,swift,1
+1834021,private_statement,What moru for acorn?,unsure,unsure,1
+1834021,private_recipient,What moru would raven expect for acorn?,pearl,pearl,1
+2198659,walk_1,Which jipa for flint?,pearl,pearl,1
+2198659,affirmation,Does flint jipa pearl?,yes,yes,1
+2198659,denial,Does flint jipa tern?,no,no,1
+2198659,walk_1,Which fodi for flint?,tern,tern,1
+2198659,affirmation,Does flint fodi tern?,yes,yes,1
+2198659,denial,Does flint fodi acorn?,no,no,1
+2198659,walk_1,Which zeli for flint?,quay,quay,1
+2198659,affirmation,Does flint zeli quay?,yes,yes,1
+2198659,denial,Does flint zeli acorn?,no,no,1
+2198659,walk_2,Which moru for flint?,swift,swift,1
+2198659,affirmation,Does flint moru swift?,yes,yes,1
+2198659,denial,Does flint moru pearl?,no,no,1
+2198659,walk_3,Which gavu for flint?,acorn,acorn,1
+2198659,affirmation,Does flint gavu acorn?,yes,yes,1
+2198659,denial,Does flint gavu pouch?,no,no,1
+2198659,walk_4,Which ketu for flint?,shell,shell,1
+2198659,affirmation,Does flint ketu shell?,yes,yes,1
+2198659,denial,Does flint ketu quay?,no,no,1
+2198659,walk_8,Which vosa for flint?,acorn,acorn,1
+2198659,affirmation,Does flint vosa acorn?,yes,yes,1
+2198659,denial,Does flint vosa chest?,no,no,1
+2198659,walk_1,Which raku for flint?,acorn,acorn,1
+2198659,affirmation,Does flint raku acorn?,yes,yes,1
+2198659,denial,Does flint raku quay?,no,no,1
+2198659,composition,flint through zeli then fodi then fodi then vosa then ketu then moru then fodi then moru then gavu then fodi then moru then jipa?,wren,wren,1
+2198659,own_witness,What gavu for flint?,inlet,inlet,1
+2198659,peer_witness,What gavu would raven expect for flint?,acorn,acorn,1
+2198659,own_peer,What gavu for flint?,acorn,acorn,1
+2198659,peer_peer,What gavu would raven expect for flint?,unsure,unsure,1
+2198659,own_both,What gavu for flint?,inlet,inlet,1
+2198659,peer_both,What gavu would raven expect for flint?,inlet,inlet,1
+2198659,own_neither,What gavu for flint?,acorn,acorn,1
+2198659,peer_neither,What gavu would raven expect for flint?,acorn,acorn,1
+2198659,private_statement,What zeli for acorn?,unsure,unsure,1
+2198659,private_recipient,What zeli would raven expect for acorn?,flint,flint,1
+2198659,walk_1,Which jipa for basket?,wren,wren,1
+2198659,affirmation,Does basket jipa wren?,yes,yes,1
+2198659,denial,Does basket jipa shell?,no,no,1
+2198659,walk_1,Which fodi for basket?,wren,wren,1
+2198659,affirmation,Does basket fodi wren?,yes,yes,1
+2198659,denial,Does basket fodi flint?,no,no,1
+2198659,walk_1,Which zeli for basket?,swift,swift,1
+2198659,affirmation,Does basket zeli swift?,yes,yes,1
+2198659,denial,Does basket zeli quay?,no,no,1
+2198659,walk_2,Which moru for basket?,flint,flint,1
+2198659,affirmation,Does basket moru flint?,yes,yes,1
+2198659,denial,Does basket moru shell?,no,no,1
+2198659,walk_3,Which gavu for basket?,inlet,inlet,1
+2198659,affirmation,Does basket gavu inlet?,yes,yes,1
+2198659,denial,Does basket gavu delta?,no,no,1
+2198659,walk_4,Which ketu for basket?,acorn,acorn,1
+2198659,affirmation,Does basket ketu acorn?,yes,yes,1
+2198659,denial,Does basket ketu pouch?,no,no,1
+2198659,walk_8,Which vosa for basket?,cove,cove,1
+2198659,affirmation,Does basket vosa cove?,yes,yes,1
+2198659,denial,Does basket vosa delta?,no,no,1
+2198659,walk_1,Which raku for basket?,delta,delta,1
+2198659,affirmation,Does basket raku delta?,yes,yes,1
+2198659,denial,Does basket raku basket?,no,no,1
+2198659,composition,basket through ketu then zeli then gavu then ketu then vosa then fodi then gavu then ketu then vosa then zeli then raku then zeli?,pouch,pouch,1
+2198659,own_witness,What gavu for basket?,quay,quay,1
+2198659,peer_witness,What gavu would raven expect for basket?,inlet,inlet,1
+2198659,own_peer,What gavu for basket?,inlet,inlet,1
+2198659,peer_peer,What gavu would raven expect for basket?,unsure,unsure,1
+2198659,own_both,What gavu for basket?,quay,quay,1
+2198659,peer_both,What gavu would raven expect for basket?,quay,quay,1
+2198659,own_neither,What gavu for basket?,inlet,inlet,1
+2198659,peer_neither,What gavu would raven expect for basket?,inlet,inlet,1
+2198659,private_statement,What zeli for acorn?,unsure,unsure,1
+2198659,private_recipient,What zeli would raven expect for acorn?,shell,shell,1
+2198659,walk_1,Which jipa for pearl?,inlet,inlet,1
+2198659,affirmation,Does pearl jipa inlet?,yes,yes,1
+2198659,denial,Does pearl jipa tern?,no,no,1
+2198659,walk_1,Which fodi for pearl?,shell,shell,1
+2198659,affirmation,Does pearl fodi shell?,yes,yes,1
+2198659,denial,Does pearl fodi pouch?,no,no,1
+2198659,walk_1,Which zeli for pearl?,acorn,acorn,1
+2198659,affirmation,Does pearl zeli acorn?,yes,yes,1
+2198659,denial,Does pearl zeli inlet?,no,no,1
+2198659,walk_2,Which moru for pearl?,tern,tern,1
+2198659,affirmation,Does pearl moru tern?,yes,yes,1
+2198659,denial,Does pearl moru swift?,no,no,1
+2198659,walk_3,Which gavu for pearl?,delta,delta,1
+2198659,affirmation,Does pearl gavu delta?,yes,yes,1
+2198659,denial,Does pearl gavu tern?,no,no,1
+2198659,walk_4,Which ketu for pearl?,tern,tern,1
+2198659,affirmation,Does pearl ketu tern?,yes,yes,1
+2198659,denial,Does pearl ketu swift?,no,no,1
+2198659,walk_8,Which vosa for pearl?,ibis,ibis,1
+2198659,affirmation,Does pearl vosa ibis?,yes,yes,1
+2198659,denial,Does pearl vosa shell?,no,no,1
+2198659,walk_1,Which raku for pearl?,cove,cove,1
+2198659,affirmation,Does pearl raku cove?,yes,yes,1
+2198659,denial,Does pearl raku acorn?,no,no,1
+2198659,composition,pearl through jipa then ketu then jipa then moru then moru then jipa then moru then ketu then moru then zeli then vosa then ketu?,flint,flint,1
+2198659,own_witness,What gavu for pearl?,quay,quay,1
+2198659,peer_witness,What gavu would raven expect for pearl?,delta,delta,1
+2198659,own_peer,What gavu for pearl?,delta,delta,1
+2198659,peer_peer,What gavu would raven expect for pearl?,unsure,unsure,1
+2198659,own_both,What gavu for pearl?,quay,quay,1
+2198659,peer_both,What gavu would raven expect for pearl?,quay,quay,1
+2198659,own_neither,What gavu for pearl?,delta,delta,1
+2198659,peer_neither,What gavu would raven expect for pearl?,delta,delta,1
+2198659,private_statement,What zeli for wren?,unsure,unsure,1
+2198659,private_recipient,What zeli would raven expect for wren?,pouch,pouch,1
+2198659,walk_1,Which jipa for quay?,swift,swift,1
+2198659,affirmation,Does quay jipa swift?,yes,yes,1
+2198659,denial,Does quay jipa pearl?,no,no,1
+2198659,walk_1,Which fodi for quay?,flint,flint,1
+2198659,affirmation,Does quay fodi flint?,yes,yes,1
+2198659,denial,Does quay fodi acorn?,no,no,1
+2198659,walk_1,Which zeli for quay?,chest,chest,1
+2198659,affirmation,Does quay zeli chest?,yes,yes,1
+2198659,denial,Does quay zeli crate?,no,no,1
+2198659,walk_2,Which moru for quay?,basket,basket,1
+2198659,affirmation,Does quay moru basket?,yes,yes,1
+2198659,denial,Does quay moru wren?,no,no,1
+2198659,walk_3,Which gavu for quay?,flint,flint,1
+2198659,affirmation,Does quay gavu flint?,yes,yes,1
+2198659,denial,Does quay gavu delta?,no,no,1
+2198659,walk_4,Which ketu for quay?,pouch,pouch,1
+2198659,affirmation,Does quay ketu pouch?,yes,yes,1
+2198659,denial,Does quay ketu crate?,no,no,1
+2198659,walk_8,Which vosa for quay?,acorn,acorn,1
+2198659,affirmation,Does quay vosa acorn?,yes,yes,1
+2198659,denial,Does quay vosa ibis?,no,no,1
+2198659,walk_1,Which raku for quay?,pearl,pearl,1
+2198659,affirmation,Does quay raku pearl?,yes,yes,1
+2198659,denial,Does quay raku basket?,no,no,1
+2198659,composition,quay through gavu then fodi then moru then raku then fodi then gavu then fodi then gavu then gavu then moru then fodi then vosa?,inlet,inlet,1
+2198659,own_witness,What gavu for quay?,acorn,acorn,1
+2198659,peer_witness,What gavu would raven expect for quay?,flint,flint,1
+2198659,own_peer,What gavu for quay?,flint,flint,1
+2198659,peer_peer,What gavu would raven expect for quay?,unsure,unsure,1
+2198659,own_both,What gavu for quay?,acorn,acorn,1
+2198659,peer_both,What gavu would raven expect for quay?,acorn,acorn,1
+2198659,own_neither,What gavu for quay?,flint,flint,1
+2198659,peer_neither,What gavu would raven expect for quay?,flint,flint,1
+2198659,private_statement,What zeli for cove?,unsure,unsure,1
+2198659,private_recipient,What zeli would raven expect for cove?,ibis,ibis,1
+2198659,walk_1,Which jipa for acorn?,inlet,inlet,1
+2198659,affirmation,Does acorn jipa inlet?,yes,yes,1
+2198659,denial,Does acorn jipa pearl?,no,no,1
+2198659,walk_1,Which fodi for acorn?,crate,crate,1
+2198659,affirmation,Does acorn fodi crate?,yes,yes,1
+2198659,denial,Does acorn fodi cove?,no,no,1
+2198659,walk_1,Which zeli for acorn?,pearl,pearl,1
+2198659,affirmation,Does acorn zeli pearl?,yes,yes,1
+2198659,denial,Does acorn zeli delta?,no,no,1
+2198659,walk_2,Which moru for acorn?,wren,wren,1
+2198659,affirmation,Does acorn moru wren?,yes,yes,1
+2198659,denial,Does acorn moru quay?,no,no,1
+2198659,walk_3,Which gavu for acorn?,quay,quay,1
+2198659,affirmation,Does acorn gavu quay?,yes,yes,1
+2198659,denial,Does acorn gavu inlet?,no,no,1
+2198659,walk_4,Which ketu for acorn?,chest,chest,1
+2198659,affirmation,Does acorn ketu chest?,yes,yes,1
+2198659,denial,Does acorn ketu crate?,no,no,1
+2198659,walk_8,Which vosa for acorn?,wren,wren,1
+2198659,affirmation,Does acorn vosa wren?,yes,yes,1
+2198659,denial,Does acorn vosa ibis?,no,no,1
+2198659,walk_1,Which raku for acorn?,cove,cove,1
+2198659,affirmation,Does acorn raku cove?,yes,yes,1
+2198659,denial,Does acorn raku crate?,no,no,1
+2198659,composition,acorn through fodi then moru then moru then raku then jipa then moru then moru then zeli then ketu then fodi then ketu then gavu?,chest,chest,1
+2198659,own_witness,What gavu for acorn?,flint,flint,1
+2198659,peer_witness,What gavu would raven expect for acorn?,quay,quay,1
+2198659,own_peer,What gavu for acorn?,quay,quay,1
+2198659,peer_peer,What gavu would raven expect for acorn?,unsure,unsure,1
+2198659,own_both,What gavu for acorn?,flint,flint,1
+2198659,peer_both,What gavu would raven expect for acorn?,flint,flint,1
+2198659,own_neither,What gavu for acorn?,quay,quay,1
+2198659,peer_neither,What gavu would raven expect for acorn?,quay,quay,1
+2198659,private_statement,What zeli for tern?,unsure,unsure,1
+2198659,private_recipient,What zeli would raven expect for tern?,delta,delta,1
+2198659,walk_1,Which jipa for chest?,flint,flint,1
+2198659,affirmation,Does chest jipa flint?,yes,yes,1
+2198659,denial,Does chest jipa basket?,no,no,1
+2198659,walk_1,Which fodi for chest?,wren,wren,1
+2198659,affirmation,Does chest fodi wren?,yes,yes,1
+2198659,denial,Does chest fodi crate?,no,no,1
+2198659,walk_1,Which zeli for chest?,basket,basket,1
+2198659,affirmation,Does chest zeli basket?,yes,yes,1
+2198659,denial,Does chest zeli tern?,no,no,1
+2198659,walk_2,Which moru for chest?,inlet,inlet,1
+2198659,affirmation,Does chest moru inlet?,yes,yes,1
+2198659,denial,Does chest moru tern?,no,no,1
+2198659,walk_3,Which gavu for chest?,pouch,pouch,1
+2198659,affirmation,Does chest gavu pouch?,yes,yes,1
+2198659,denial,Does chest gavu basket?,no,no,1
+2198659,walk_4,Which ketu for chest?,acorn,acorn,1
+2198659,affirmation,Does chest ketu acorn?,yes,yes,1
+2198659,denial,Does chest ketu pearl?,no,no,1
+2198659,walk_8,Which vosa for chest?,pouch,pouch,1
+2198659,affirmation,Does chest vosa pouch?,yes,yes,1
+2198659,denial,Does chest vosa cove?,no,no,1
+2198659,walk_1,Which raku for chest?,quay,quay,1
+2198659,affirmation,Does chest raku quay?,yes,yes,1
+2198659,denial,Does chest raku pearl?,no,no,1
+2198659,composition,chest through zeli then fodi then raku then moru then jipa then ketu then zeli then vosa then jipa then raku then moru then vosa?,pouch,pouch,1
+2198659,own_witness,What gavu for chest?,crate,crate,1
+2198659,peer_witness,What gavu would raven expect for chest?,pouch,pouch,1
+2198659,own_peer,What gavu for chest?,pouch,pouch,1
+2198659,peer_peer,What gavu would raven expect for chest?,unsure,unsure,1
+2198659,own_both,What gavu for chest?,crate,crate,1
+2198659,peer_both,What gavu would raven expect for chest?,crate,crate,1
+2198659,own_neither,What gavu for chest?,pouch,pouch,1
+2198659,peer_neither,What gavu would raven expect for chest?,pouch,pouch,1
+2198659,private_statement,What zeli for wren?,unsure,unsure,1
+2198659,private_recipient,What zeli would raven expect for wren?,crate,crate,1
+2198659,walk_1,Which jipa for pearl?,swift,swift,1
+2198659,affirmation,Does pearl jipa swift?,yes,yes,1
+2198659,denial,Does pearl jipa basket?,no,no,1
+2198659,walk_1,Which fodi for pearl?,cove,cove,1
+2198659,affirmation,Does pearl fodi cove?,yes,yes,1
+2198659,denial,Does pearl fodi tern?,no,no,1
+2198659,walk_1,Which zeli for pearl?,quay,quay,1
+2198659,affirmation,Does pearl zeli quay?,yes,yes,1
+2198659,denial,Does pearl zeli shell?,no,no,1
+2198659,walk_2,Which moru for pearl?,basket,basket,1
+2198659,affirmation,Does pearl moru basket?,yes,yes,1
+2198659,denial,Does pearl moru pearl?,no,no,1
+2198659,walk_3,Which gavu for pearl?,chest,chest,1
+2198659,affirmation,Does pearl gavu chest?,yes,yes,1
+2198659,denial,Does pearl gavu swift?,no,no,1
+2198659,walk_4,Which ketu for pearl?,ibis,ibis,1
+2198659,affirmation,Does pearl ketu ibis?,yes,yes,1
+2198659,denial,Does pearl ketu flint?,no,no,1
+2198659,walk_8,Which vosa for pearl?,basket,basket,1
+2198659,affirmation,Does pearl vosa basket?,yes,yes,1
+2198659,denial,Does pearl vosa pouch?,no,no,1
+2198659,walk_1,Which raku for pearl?,crate,crate,1
+2198659,affirmation,Does pearl raku crate?,yes,yes,1
+2198659,denial,Does pearl raku flint?,no,no,1
+2198659,composition,pearl through ketu then gavu then jipa then moru then zeli then raku then moru then vosa then raku then moru then jipa then vosa?,ibis,ibis,1
+2198659,own_witness,What gavu for pearl?,swift,swift,1
+2198659,peer_witness,What gavu would raven expect for pearl?,chest,chest,1
+2198659,own_peer,What gavu for pearl?,chest,chest,1
+2198659,peer_peer,What gavu would raven expect for pearl?,unsure,unsure,1
+2198659,own_both,What gavu for pearl?,swift,swift,1
+2198659,peer_both,What gavu would raven expect for pearl?,swift,swift,1
+2198659,own_neither,What gavu for pearl?,chest,chest,1
+2198659,peer_neither,What gavu would raven expect for pearl?,chest,chest,1
+2198659,private_statement,What zeli for crate?,unsure,unsure,1
+2198659,private_recipient,What zeli would raven expect for crate?,pearl,pearl,1
+2198659,walk_1,Which jipa for quay?,basket,basket,1
+2198659,affirmation,Does quay jipa basket?,yes,yes,1
+2198659,denial,Does quay jipa acorn?,no,no,1
+2198659,walk_1,Which fodi for quay?,shell,shell,1
+2198659,affirmation,Does quay fodi shell?,yes,yes,1
+2198659,denial,Does quay fodi swift?,no,no,1
+2198659,walk_1,Which zeli for quay?,acorn,acorn,1
+2198659,affirmation,Does quay zeli acorn?,yes,yes,1
+2198659,denial,Does quay zeli chest?,no,no,1
+2198659,walk_2,Which moru for quay?,inlet,inlet,1
+2198659,affirmation,Does quay moru inlet?,yes,yes,1
+2198659,denial,Does quay moru basket?,no,no,1
+2198659,walk_3,Which gavu for quay?,flint,flint,1
+2198659,affirmation,Does quay gavu flint?,yes,yes,1
+2198659,denial,Does quay gavu quay?,no,no,1
+2198659,walk_4,Which ketu for quay?,chest,chest,1
+2198659,affirmation,Does quay ketu chest?,yes,yes,1
+2198659,denial,Does quay ketu cove?,no,no,1
+2198659,walk_8,Which vosa for quay?,ibis,ibis,1
+2198659,affirmation,Does quay vosa ibis?,yes,yes,1
+2198659,denial,Does quay vosa wren?,no,no,1
+2198659,walk_1,Which raku for quay?,tern,tern,1
+2198659,affirmation,Does quay raku tern?,yes,yes,1
+2198659,denial,Does quay raku chest?,no,no,1
+2198659,composition,quay through jipa then jipa then fodi then ketu then ketu then jipa then vosa then raku then gavu then gavu then vosa then zeli?,ibis,ibis,1
+2198659,own_witness,What gavu for quay?,wren,wren,1
+2198659,peer_witness,What gavu would raven expect for quay?,flint,flint,1
+2198659,own_peer,What gavu for quay?,flint,flint,1
+2198659,peer_peer,What gavu would raven expect for quay?,unsure,unsure,1
+2198659,own_both,What gavu for quay?,wren,wren,1
+2198659,peer_both,What gavu would raven expect for quay?,wren,wren,1
+2198659,own_neither,What gavu for quay?,flint,flint,1
+2198659,peer_neither,What gavu would raven expect for quay?,flint,flint,1
+2198659,private_statement,What zeli for basket?,unsure,unsure,1
+2198659,private_recipient,What zeli would raven expect for basket?,cove,cove,1

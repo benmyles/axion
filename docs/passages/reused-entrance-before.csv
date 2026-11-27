@@ -1,0 +1,17 @@
+seed,distinct,destination,practice_delay,delay,noise,hidden,phase,correct,items,distinct_actions
+72869,1,landmark,2,4,0,0,naive,4,16,4
+72869,1,landmark,2,4,0,0,learned,9,16,6
+72869,1,landmark,2,4,0,0,surprise,0,16,5
+72869,1,landmark,2,4,0,0,revised,7,16,5
+219377,1,landmark,2,4,0,0,naive,4,16,4
+219377,1,landmark,2,4,0,0,learned,9,16,5
+219377,1,landmark,2,4,0,0,surprise,0,16,5
+219377,1,landmark,2,4,0,0,revised,9,16,6
+491591,1,landmark,2,4,0,0,naive,4,16,4
+491591,1,landmark,2,4,0,0,learned,9,16,6
+491591,1,landmark,2,4,0,0,surprise,4,16,4
+491591,1,landmark,2,4,0,0,revised,8,16,5
+873139,1,landmark,2,4,0,0,naive,4,16,4
+873139,1,landmark,2,4,0,0,learned,9,16,6
+873139,1,landmark,2,4,0,0,surprise,3,16,5
+873139,1,landmark,2,4,0,0,revised,7,16,5

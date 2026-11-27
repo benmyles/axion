@@ -1,0 +1,38 @@
+run,source,command_seed,saved,treatment,elapsed,flood_seconds,site_ticks,Msite_ticks_per_s,simulation_seconds,simulation_Msite_ticks_per_s
+9459,fresh.flood,,first512.flood,,512,3.91701,134217728,34.2654,3.22829,41.5755
+9470,fresh.flood,,abundant.flood,--reeds live,4096,32.163,1073741824,33.3844,25.1809,42.6412
+9476,fresh.flood,,,--reeds private,4096,31.9537,1073741824,33.6031,24.6962,43.478
+9477,fresh.flood,,,--reeds blind,4096,31.9071,1073741824,33.6521,24.5,43.8262
+9478,fresh.flood,,,--reeds scrambled,4096,31.1116,1073741824,34.5126,24.5984,43.6508
+9479,abundant.flood,,,--reeds rest --reed-current shaped,512,3.98723,134217728,33.6619,3.22746,41.5861
+9480,abundant.flood,,,--reeds rest --reed-current free,512,3.75629,134217728,35.7315,3.22348,41.6376
+9481,abundant.flood,,,--reeds rest --reed-current reversed,512,4.35322,134217728,30.8319,3.21277,41.7763
+9482,abundant.flood,,,--reeds rest --reed-tide quiet,512,3.79949,134217728,35.3252,3.22182,41.6589
+9483,abundant.flood,,,--reeds rest,512,3.93589,134217728,34.101,3.21997,41.6829
+9484,abundant.flood,,long.flood,,4096,31.6937,1073741824,33.8787,24.4736,43.8735
+9522,start-v2.flood,,works.flood,,4096,33.3478,1073741824,32.1983,25.124,42.7377
+9529,start-v2.flood,,,--reeds private,4096,32.9402,1073741824,32.5967,24.8069,43.284
+9530,start-v2.flood,,,--reeds scrambled,4096,33.8987,1073741824,31.675,25.4569,42.1788
+9531,works.flood,,,--reeds rest --reed-current shaped,512,3.88664,134217728,34.5331,3.2347,41.4931
+9532,works.flood,,,--reeds rest --reed-current free,512,4.02327,134217728,33.3604,3.2268,41.5947
+9533,works.flood,,,--reeds rest --reed-tide quiet,512,4.04857,134217728,33.1519,3.22456,41.6236
+9534,works.flood,,,--reeds rest,512,4.01225,134217728,33.452,3.22456,41.6235
+9535,start-v2.flood,1153,,--reed-contest listen,2048,16.2784,536870912,32.9806,12.3979,43.3034
+9536,start-v2.flood,1153,,--reed-contest reciprocal,2048,16.3309,536870912,32.8745,12.4405,43.1552
+9537,start-v2.flood,1153,,--reed-contest sham,2048,16.5256,536870912,32.4872,12.3616,43.4304
+9538,start-v2.flood,21961,,--reed-contest listen,2048,16.3489,536870912,32.8383,12.6118,42.569
+9539,start-v2.flood,21961,,--reed-contest reciprocal,2048,16.0263,536870912,33.4994,12.4826,43.0097
+9540,start-v2.flood,21961,,--reed-contest sham,2048,16.4364,536870912,32.6635,12.6066,42.5864
+9541,works.flood,,channel.flood,--reed-grain handed --reed-strata 57163,4096,31.6943,1073741824,33.878,24.5412,43.7526
+9542,channel.flood,,,,128,3.27726,134217728,40.9542,1.22408,109.648
+9573,channel.flood,21583,,--reeds rest --reed-cut observed,512,4.03946,134217728,33.2266,3.28656,40.8383
+9579,channel.flood,21583,,--reeds rest --reed-cut matched,512,4.18004,134217728,32.1092,3.22424,41.6277
+9586,channel.flood,21583,,--reeds rest --reed-cut sham,512,4.04973,134217728,33.1424,3.21941,41.6901
+9593,channel.flood,70921,,--reeds rest --reed-cut observed,512,4.24952,134217728,31.5842,3.35393,40.018
+9598,channel.flood,70921,,--reeds rest --reed-cut matched,512,4.34514,134217728,30.8892,3.38133,39.6937
+9601,channel.flood,70921,,--reeds rest --reed-cut sham,512,4.19279,134217728,32.0116,3.21115,41.7974
+9602,channel.flood,,patrol.flood,--reed-patrol learned,4096,43.6407,1073741824,24.6041,26.0099,41.282
+9603,channel.flood,,,,4096,37.3884,1073741824,28.7186,25.936,41.3997
+9604,patrol.flood,,,,128,3.98227,134217728,33.7038,1.22251,109.789
+9614,patrol.flood,,closing.flood,,4096,35.3079,1073741824,30.4108,25.7963,41.6238
+9618,closing.flood,,runnels.flood,,4096,34.5341,1073741824,31.0922,24.8786,43.1592

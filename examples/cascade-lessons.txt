@@ -1,0 +1,7 @@
+/braid-feedback speaker auditory
+/cascade 796669 4 8 bright
+/cascade-name rill 01 6 crowded
+/cascade-name cove 123 6 crowded
+/cascade-name loam 20 6 crowded
+/cascade-name fern 32 6 crowded
+/quit

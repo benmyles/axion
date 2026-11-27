@@ -1,0 +1,5 @@
+run,probes,recovered,correct,heat,reservoir_heat
+reservoir-brook-adaptive,244,240,215,498,240
+reservoir-brook-single,244,240,0,503,240
+reservoir-coast-adaptive,244,240,228,489,240
+reservoir-coast-single,244,240,0,489,240

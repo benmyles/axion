@@ -1,0 +1,10 @@
+/cascade-works docs/observational-learning/coast-beds.txt 881 2697486678 203 natural
+/cascade-rack 64
+/cascade-load teal
+amber jade
+where will teal go?
+where did it go?
+/cascade-pour 10
+where did it go?
+where did teal start?
+/quit
