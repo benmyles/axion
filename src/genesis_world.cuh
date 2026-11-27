@@ -112,8 +112,8 @@ AX_FN void world_step_tile(WorldBuffers wb, u32 tick, u32 shift_chem, u32 challe
 
     u32 flat = ly * 16u + lx;
     u32 bloom_phase = ((tick / 180u) ^ shift_chem) & 1u;
-    u32 n_reefs = min_u32(wb.num_reefs ? wb.num_reefs : 16u, 128u);
-    u32 n_storms = min_u32(wb.num_storms ? wb.num_storms : 3u, 24u);
+    u32 n_reefs = (challenge_tier == 0u && wb.num_reefs == 0u) ? 0u : min_u32(wb.num_reefs ? wb.num_reefs : 16u, 128u);
+    u32 n_storms = (challenge_tier == 0u) ? 0u : min_u32(wb.num_storms ? wb.num_storms : 3u, 24u);
     if (flat < n_reefs) {
         u32 rf = flat;
         u32 reef_epoch = (tick + rf * 59u) / 360u; // Nomadic oceanic blooms migrate every 360t -> rewards active swimmers!

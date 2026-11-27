@@ -258,6 +258,8 @@ struct GenesisGpu {
         for (u32 i = 0; i < pop_n; ++i) {
             for (u32 l = 0; l < MAX_LAYERS_PER_CREATURE; ++l) crs[i].layer_slabs[l] = INVALID_SLAB;
             crs[i].carried_obj = INVALID_OBJ;
+            crs[i].peer_tpl_band = 3u;
+            crs[i].peer_tpl_age = 255u;
             if (i >= spawn_n || next_sl >= max_layers) continue;
             full[i] = dnas_in[i % dnas_in.size()];
             u32 sl = next_sl++;
@@ -2343,19 +2345,26 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
         }
         GenesisGpu gpu(s, 64u, 64u * 24u);
         gpu.init_world(mix(seed ^ 0xbbb1u), 0u);
+        gpu.wb.num_reefs = 0u; // Calm anechoic chamber: pure 2D GPU acoustic wavefield with zero toxic decoy reefs or apex predators!
+        gpu.wb.num_storms = 0u;
+        gpu.wb.max_objects = 0u;
         gpu.upload_dnas_and_spawn(pt_cohort, 64u, mix(seed ^ 0xbbb1u));
         gpu.step_develop(mix(seed ^ 0xbbb1u));
         AblationFlags abl{}; abl.challenge_tier = 0u;
 
         std::vector<float> flat_t(WORLD_CELLS, 0.50f), flat_l(WORLD_CELLS, 0.70f), flat_w(WORLD_CELLS, 1.0f);
-        std::vector<float> flat_ter(WORLD_CELLS, 1.1f), zero_f(WORLD_CELLS, 0.0f), pulse_buf(WORLD_CELLS, 0.0f);
+        std::vector<float> flat_ter(WORLD_CELLS, 1.1f), zero_f(WORLD_CELLS, 0.0f), flat_p(WORLD_CELLS, 1.6f);
+        std::vector<u8> flat_mat(WORLD_CELLS, MAT_LOAM);
         s.d.check(s.d.upload(DevicePtr(gpu.wb.temp), flat_t.data(), WORLD_CELLS * sizeof(float)), "pt t");
         s.d.check(s.d.upload(DevicePtr(gpu.wb.light), flat_l.data(), WORLD_CELLS * sizeof(float)), "pt l");
         s.d.check(s.d.upload(DevicePtr(gpu.wb.water), flat_w.data(), WORLD_CELLS * sizeof(float)), "pt w");
         s.d.check(s.d.upload(DevicePtr(gpu.wb.terrain), flat_ter.data(), WORLD_CELLS * sizeof(float)), "pt ter");
+        s.d.check(s.d.upload(DevicePtr(gpu.wb.material), flat_mat.data(), WORLD_CELLS * sizeof(u8)), "pt mat");
+        s.d.check(s.d.zero(DevicePtr(gpu.wb.chem_a), 0, WORLD_CELLS * sizeof(float)), "pt ca");
         s.d.check(s.d.zero(DevicePtr(gpu.wb.chem_b), 0, WORLD_CELLS * sizeof(float)), "pt cb");
         s.d.check(s.d.zero(DevicePtr(gpu.wb.chem_c), 0, WORLD_CELLS * sizeof(float)), "pt cc");
         s.d.check(s.d.zero(DevicePtr(gpu.wb.chem_d), 0, WORLD_CELLS * sizeof(float)), "pt cd");
+        s.d.check(s.d.zero(DevicePtr(gpu.wb.tile_obj_id), 0, WORLD_CELLS * sizeof(u32)), "pt oid");
 
         std::vector<CreatureState> cs(64u);
         s.d.check(s.d.download(cs.data(), gpu.d_creatures.ptr, 64u * sizeof(CreatureState)), "pt dl");
@@ -2372,30 +2381,19 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
         }
         s.d.check(s.d.upload(gpu.d_creatures.ptr, cs.data(), 64u * sizeof(CreatureState)), "pt ul");
 
-        auto fill_pairs = [&](float val) -> const float * {
-            std::fill(pulse_buf.begin(), pulse_buf.end(), 0.0f);
-            for (u32 i = 0; i < 64u; ++i) {
-                u32 cx = u32(i32(cs[i].x + 512.0f) & i32(WORLD_MASK));
-                u32 cy = u32(i32(cs[i].y + 512.0f) & i32(WORLD_MASK));
-                for (int dy = -5; dy <= 5; ++dy)
-                    for (int dx = -5; dx <= 5; ++dx)
-                        pulse_buf[u32((int(cy) + dy) & int(WORLD_MASK)) * WORLD_W + u32((int(cx) + dx) & int(WORLD_MASK))] = val;
-            }
-            return pulse_buf.data();
-        };
-
         u32 sim_t = 0u;
         // Returns (stu_v0, stu_v2, stu_hit, tut_hit)
-        auto run_pt = [&](bool is_q1, bool tutor_da) -> std::tuple<double, double, double, double> {
+        auto run_pt = [&](bool is_q1, bool tutor_da, bool together) -> std::tuple<double, double, double, double> {
             s.d.check(s.d.download(cs.data(), gpu.d_creatures.ptr, 64u * sizeof(CreatureState)), "pt r dl");
             for (u32 p = 0; p < 32u; ++p) {
                 float bx = 18.0f + float((p & 7u) * 30u);
                 float by = 24.0f + float((p >> 3) * 60u);
                 u32 ti = p * 2u, si = p * 2u + 1u;
-                // Keep pairs within physical earshot (~2.5 tiles) without telepathic shortcuts!
-                if (std::fabs(cs[si].x - cs[ti].x) > 5.0f || std::fabs(cs[si].y - cs[ti].y) > 5.0f) {
-                    cs[ti].x = bx; cs[ti].y = by; cs[si].x = bx + 2.5f; cs[si].y = by;
-                }
+                // Place Tutor & Student either within physical earshot (2.5 tiles, Phase B apprenticeship)
+                // or well out of acoustic range (Phase A solo tutor / Phase C independent solo student test!)
+                cs[ti].x = bx; cs[ti].y = by; cs[ti].vx = 0.0f; cs[ti].vy = 0.0f; cs[ti].theta = 0.0f;
+                cs[si].x = bx + (together ? 2.5f : 15.0f); cs[si].y = by + (together ? 0.0f : 28.0f);
+                cs[si].vx = 0.0f; cs[si].vy = 0.0f; cs[si].theta = 3.14159f;
                 for (u32 idx_u : {ti, si}) if (cs[idx_u].alive == 1u) {
                     cs[idx_u].hp = 100.0f; cs[idx_u].body_temp = 0.50f;
                     cs[idx_u].atp = 24.0f; cs[idx_u].prev_atp = 24.0f; cs[idx_u].da_baseline = 0.0f;
@@ -2403,18 +2401,39 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
                 }
             }
             s.d.check(s.d.upload(gpu.d_creatures.ptr, cs.data(), 64u * sizeof(CreatureState)), "pt r ul");
-            const float *p1 = fill_pairs(1.6f);
-            s.d.check(s.d.upload(DevicePtr(gpu.wb.acoust_v0), is_q1 ? p1 : zero_f.data(), WORLD_CELLS * sizeof(float)), "pt 1v0");
-            s.d.check(s.d.upload(DevicePtr(gpu.wb.acoust_v1), is_q1 ? zero_f.data() : p1, WORLD_CELLS * sizeof(float)), "pt 1v1");
-            s.d.check(s.d.zero(DevicePtr(gpu.wb.acoust_v2), 0, WORLD_CELLS * sizeof(float)), "pt 1v2");
+            s.d.check(s.d.upload(DevicePtr(gpu.wb.temp), flat_t.data(), WORLD_CELLS * sizeof(float)), "pt rt");
+            s.d.check(s.d.upload(DevicePtr(gpu.wb.light), flat_l.data(), WORLD_CELLS * sizeof(float)), "pt rl");
+            auto set_pt_plane = [&](int band) {
+                const float *v0d = (band == 0) ? flat_p.data() : zero_f.data();
+                const float *v1d = (band == 1) ? flat_p.data() : zero_f.data();
+                s.d.check(s.d.upload(DevicePtr(gpu.wb.acoust_v0), v0d, WORLD_CELLS * sizeof(float)), "pt v0");
+                s.d.check(s.d.upload(DevicePtr(gpu.wb.acoust_v0_prev), v0d, WORLD_CELLS * sizeof(float)), "pt v0p");
+                s.d.check(s.d.upload(DevicePtr(gpu.wb.acoust_v1), v1d, WORLD_CELLS * sizeof(float)), "pt v1");
+                s.d.check(s.d.upload(DevicePtr(gpu.wb.acoust_v1_prev), v1d, WORLD_CELLS * sizeof(float)), "pt v1p");
+                s.d.check(s.d.zero(DevicePtr(gpu.wb.acoust_v2), 0, WORLD_CELLS * sizeof(float)), "pt v2");
+                s.d.check(s.d.zero(DevicePtr(gpu.wb.acoust_v2_prev), 0, WORLD_CELLS * sizeof(float)), "pt v2p");
+                s.d.check(s.d.zero(DevicePtr(gpu.wb.acoust_p), 0, WORLD_CELLS * sizeof(float)), "pt p");
+                s.d.check(s.d.zero(DevicePtr(gpu.wb.acoust_prev), 0, WORLD_CELLS * sizeof(float)), "pt pp");
+            };
+            // Phase 1 (4 ticks): Uniform plane wave (lap==0 -> zero box diffraction!) initializes Syl 1 ONCE, then propagates live!
+            set_pt_plane(is_q1 ? 0 : 1);
             for (u32 k = 0; k < 4u; ++k, ++sim_t) {
                 gpu.step_world(sim_t, 0u, 0u, seed);
                 gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl);
             }
-            s.d.check(s.d.download(cs.data(), gpu.d_creatures.ptr, 64u * sizeof(CreatureState)), "pt r2");
-            const float *p2 = fill_pairs(1.6f);
-            s.d.check(s.d.upload(DevicePtr(gpu.wb.acoust_v0), is_q1 ? zero_f.data() : p2, WORLD_CELLS * sizeof(float)), "pt 2v0");
-            s.d.check(s.d.upload(DevicePtr(gpu.wb.acoust_v1), is_q1 ? p2 : zero_f.data(), WORLD_CELLS * sizeof(float)), "pt 2v1");
+            // Phase 2 (8 ticks): Uniform plane wave initializes Syl 2 ONCE at k=0; keep Tutor & Student perched at 2.5t
+            // while step_world propagates BOTH clean ambient prompt (1.60 -> 1.15) AND Tutor's point-source voice (+0.72)!
+            s.d.check(s.d.download(cs.data(), gpu.d_creatures.ptr, 64u * sizeof(CreatureState)), "pt p2 dl");
+            for (u32 p = 0; p < 32u; ++p) {
+                float bx = 18.0f + float((p & 7u) * 30u);
+                float by = 24.0f + float((p >> 3) * 60u);
+                u32 ti = p * 2u, si = p * 2u + 1u;
+                cs[ti].x = bx; cs[ti].y = by; cs[ti].vx = 0.0f; cs[ti].vy = 0.0f;
+                cs[si].x = bx + (together ? 2.5f : 15.0f); cs[si].y = by + (together ? 0.0f : 28.0f);
+                cs[si].vx = 0.0f; cs[si].vy = 0.0f;
+            }
+            s.d.check(s.d.upload(gpu.d_creatures.ptr, cs.data(), 64u * sizeof(CreatureState)), "pt p2 ul");
+            set_pt_plane(is_q1 ? 1 : 0);
             double sv0 = 0.0, sv2 = 0.0; u32 sn = 0u, sh = 0u, tn = 0u, th = 0u;
             std::vector<u8> rew(64u, 0u);
             for (u32 k = 0; k < 8u; ++k, ++sim_t) {
@@ -2425,16 +2444,18 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
                     bool dirty = false;
                     for (u32 i = 0; i < 64u; ++i) if (cs[i].alive == 1u) {
                         bool is_tut = ((i & 1u) == 0u);
-                        bool ans_v2 = (cs[i].mot_vocal2 > cs[i].mot_vocal0 + 0.02f && cs[i].mot_vocal2 > 0.12f);
-                        bool ans_v0 = (cs[i].mot_vocal0 > cs[i].mot_vocal2 + 0.02f && cs[i].mot_vocal0 > 0.12f);
-                        bool chord_m = (!ans_v2 && !ans_v0 && cs[i].mot_vocal0 > 0.12f && cs[i].mot_vocal2 > 0.12f);
+                        bool ans_v2 = (cs[i].mot_vocal2 > cs[i].mot_vocal0 + 0.02f && cs[i].mot_vocal2 > cs[i].mot_vocal1 + 0.02f && cs[i].mot_vocal2 > 0.12f);
+                        bool ans_v0 = (cs[i].mot_vocal0 > cs[i].mot_vocal2 + 0.02f && cs[i].mot_vocal0 > cs[i].mot_vocal1 + 0.02f && cs[i].mot_vocal0 > 0.12f);
+                        bool off_v1 = (cs[i].mot_vocal1 > 0.12f && cs[i].mot_vocal1 >= cs[i].mot_vocal0 && cs[i].mot_vocal1 >= cs[i].mot_vocal2);
+                        bool chord_m = (!ans_v2 && !ans_v0 && !off_v1 && (cs[i].mot_vocal0 > 0.12f || cs[i].mot_vocal2 > 0.12f));
                         bool ok = is_q1 ? ans_v2 : ans_v0;
-                        bool bad = (is_q1 ? ans_v0 : ans_v2) || chord_m;
+                        bool bad = (is_q1 ? ans_v0 : ans_v2) || off_v1 || chord_m;
                         if (is_tut) {
                             ++tn; if (ok) ++th;
-                            if (tutor_da && k <= 5u && !rew[i]) {
-                                if (ok) { cs[i].atp += 2.4f; rew[i] = 1u; dirty = true; }
-                                else if (bad) { cs[i].atp = std::max(10.0f, cs[i].atp - 1.8f); rew[i] = 1u; dirty = true; }
+                            if (tutor_da && k <= 6u) {
+                                if (ok && (rew[i] & 1u) == 0u) { cs[i].atp += 2.4f; rew[i] |= 1u; dirty = true; }
+                                else if (bad && rew[i] == 0u) { cs[i].atp = std::max(10.0f, cs[i].atp - 1.6f); rew[i] |= 2u; dirty = true; }
+                                else if (k == 5u && rew[i] == 0u) { cs[i].atp = std::max(10.0f, cs[i].atp - 0.9f); rew[i] |= 2u; dirty = true; }
                             }
                         } else {
                             // STRICTLY ZERO DA to Student! Pure unsupervised acoustic wavefield social imprinting!
@@ -2446,25 +2467,31 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
                 }
                 gpu.step_bodies(sim_t, seed, abl);
             }
-            s.d.check(s.d.zero(DevicePtr(gpu.wb.acoust_v0), 0, WORLD_CELLS * sizeof(float)), "pt w0");
-            s.d.check(s.d.zero(DevicePtr(gpu.wb.acoust_v1), 0, WORLD_CELLS * sizeof(float)), "pt w1");
-            s.d.check(s.d.zero(DevicePtr(gpu.wb.acoust_v2), 0, WORLD_CELLS * sizeof(float)), "pt w2");
-            for (u32 k = 0; k < 3u; ++k, ++sim_t) { gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl); }
+            for (u32 k = 0; k < 5u; ++k, ++sim_t) { set_pt_plane(-1); gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl); }
             return {sn ? sv0 / sn : 0.0, sn ? sv2 / sn : 0.0, sn ? double(sh) / sn : 0.0, tn ? double(th) / tn : 0.0};
         };
 
-        auto [pr1_v0, pr1_v2, pr1_h, pr1_th] = run_pt(true, false);
-        auto [pr2_v0, pr2_v2, pr2_h, pr2_th] = run_pt(false, false);
+        // Authentic 2-Phase Songbird / Infant Cultural Apprenticeship (Feher 2009 / Brainard & Doupe 2013):
+        // Phase A (12 solo tutor trials): Adult Tutors learn Q1->v2, Q2->v0 while Naive Students wait out of earshot (ZERO training!).
+        // Phase B (14 paired apprenticeship trials): Naive Students (age<120, STRICTLY ZERO DA!) listen 2.5 tiles from skilled Tutors
+        //   over the live 2D GPU acoustic wavefield.
+        // Phase C (Solo Test): Students are tested SOLO (out of Tutor earshot, ZERO DA!) to measure pure learned cultural knowledge!
+        auto [pr1_v0, pr1_v2, pr1_h, pr1_th] = run_pt(true, false, false);
+        auto [pr2_v0, pr2_v2, pr2_h, pr2_th] = run_pt(false, false, false);
         double pre_stu_sep = std::fabs((pr1_v2 - pr1_v0) - (pr2_v2 - pr2_v0));
         double pre_stu_hit = 0.5 * (pr1_h + pr2_h);
-        for (u32 tr = 0; tr < 8u; ++tr) { run_pt(true, true); run_pt(false, true); }
-        auto [po1_v0, po1_v2, po1_h, po1_th] = run_pt(true, false);
-        auto [po2_v0, po2_v2, po2_h, po2_th] = run_pt(false, false);
+        // Phase A: Adult Tutors master Q1->v2, Q2->v0 solo (16 trials, Students out of earshot, ZERO DA!)
+        for (u32 tr = 0; tr < 16u; ++tr) { run_pt(true, true, false); run_pt(false, true, false); }
+        // Phase B: Naive Juvenile Students move within 2.5 tiles for pure unsupervised acoustic-wavefield apprenticeship (ZERO DA to Student!)
+        for (u32 tr = 0; tr < 16u; ++tr) { run_pt(true, true, true); run_pt(false, true, true); }
+        // Phase C: Independent Solo Test (Students separated out of Tutor earshot, ZERO DA!)
+        auto [po1_v0, po1_v2, po1_h, po1_th] = run_pt(true, false, false);
+        auto [po2_v0, po2_v2, po2_h, po2_th] = run_pt(false, false, false);
         double post_stu_sep = std::fabs((po1_v2 - po1_v0) - (po2_v2 - po2_v0));
         double post_stu_hit = 0.5 * (po1_h + po2_h);
         double tut_hit = 0.5 * (po1_th + po2_th);
         auto pt_ctr = gpu.read_counters();
-        std::cout << "genesis_probe=cultural_peer_teaching  pairs=32  trials=8"
+        std::cout << "genesis_probe=cultural_peer_teaching  pairs=32  trials=16"
                   << "  tutor_hit=" << std::fixed << std::setprecision(3) << tut_hit
                   << "  pre_stu_sep=" << pre_stu_sep << "  post_stu_sep=" << post_stu_sep
                   << "  pre_stu_hit=" << pre_stu_hit << "  post_stu_hit=" << post_stu_hit
@@ -4568,7 +4595,7 @@ int run_converse(Session &s, const std::string &load_path, const std::string &sc
 
 int command(int argc, char **argv) {
     if (argc < 3 || std::string_view(argv[2]) == "--help") {
-        std::cout << R"(Axion Genesis v48  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
+        std::cout << R"(Axion Genesis v49  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
 
   ./axion genesis bench    [--pop N] [--substeps S] [--repeats R] [--world 256|512|1024]
   ./axion genesis evolve   [--pop N] [--max-areas L] [--max-syn-slabs S] [--world 256|512|1024] [--ticks T] [--seed S] [--challenge 0|1|2] [--controls] [--load FILE] [--save FILE] [--video FILE] [--video-title TITLE]
@@ -4608,7 +4635,7 @@ runtime-scalable 256x256 / 512x512 / 1024x1024 planet.
     if (sub == "evolve") {
         u32 pop_n = 512, max_layers = 0, max_syn_slabs = 0, world_size = WORLD_W, ticks = 2000, seed = 42, challenge = 1;
         bool controls = false;
-        std::string load_path, save_path, video_path, video_title = "AXION GENESIS V48";
+        std::string load_path, save_path, video_path, video_title = "AXION GENESIS V49";
         for (int i = 3; i < argc; ++i) {
             std::string_view f = argv[i];
             if (f == "--controls") { controls = true; continue; }

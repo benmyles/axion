@@ -1119,10 +1119,12 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                     }
                     // Authentic Braitenberg & Schuz (1998) Scale-Invariant Cortical Convergence
                     // + 3-Tier Rigotti (2013 Nature) 4-Column Prefrontal Mixed-Selectivity Executive Feedback (L5->L4, L5->L3, L4->L3)
+                    // + Perin-Markram (2011 PNAS) Clustered Prefrontal Recurrent Micro-Assemblies (L2..L5 local basal STF!)
                     // + Supramodal BA10 L5 Corticobulbar Speech Readout (L5->GLAND without 60-tick tonic motor jamming on MUSCLE/GRASP!)
                     bool is_desc_mix = (is_desc_pyr && ((tz == 3u && sz == 4u) || (tz == 4u && sz == 5u) || (tz == 3u && sz == 5u)));
                     bool is_ba10_voc = (is_corticobulb && !is_hvc_extra && sz == 5u &&
                                         !(sz == final_L - 1u || (final_L >= 3u && sz == final_L - 2u)));
+                    bool is_pfc_loc = (is_local_pyr && tz >= 2u && tz <= 5u);
                     u32 n_br = is_hvc_extra ? 6u
                                             : (is_thalamo ? (is_maturation ? 2u : 10u)
                                                           : (is_maturation ? 2u
@@ -1229,9 +1231,11 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                 } else if (is_asc_pyr) {
                                     g += (n_col == want_col) ? 32 : -14;
                                 } else if (is_local_pyr) {
+                                    // Perin-Markram (2011 PNAS) spatially clustered prefrontal micro-assemblies (tight intra-column
+                                    // neighborhood on L2..L5 -> balanced reciprocal Hebbian STF cell assemblies + full PV/SST!)
                                     i32 adx = nx - i32(ux); if (adx < 0) adx = -adx;
                                     i32 ady = ny - i32(uy); if (ady < 0) ady = -ady;
-                                    g += (14 - (adx + ady)) + ((n_col == want_col) ? 36 : -18);
+                                    g += (is_pfc_loc ? (18 - (adx + ady) * 2) : (14 - (adx + ady))) + ((n_col == want_col) ? 36 : -18);
                                 } else if (sz == tz && tz >= 1u && is_inh) {
                                     g += (n_col != s_col) ? 18 : 4; // Broad cross-column PV+/SST+ competitive surround inhibition!
                                 }
@@ -1315,11 +1319,12 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                         else if (s_tk == TK_NEU_SST) comp = 1u;
                                         else if (s_tk == TK_NEU_PV || tk_is_sensor(s_tk)) comp = 0u;
                                         else if (t_tk == TK_NEU_EXC) {
-                                            // Canonical Larkum (2013) cortical compartmentalization:
-                                            // Ascending labeled-line (br<4) & proximal local collaterals (stp<3) drive BASAL dendrites (comp=0);
-                                            // Descending predictions (sz>tz), cross-column conjunctions (br>=4) & long-range lateral
-                                            // context (stp>=3) target APICAL BAC tufts (comp=1) — zero spontaneous dark ignition!
-                                            comp = (sz > tz || (is_asc_pyr && br >= 4u) || (sz == tz && (rl.param1 > 0 || stp >= 3u))) ? 1u : 0u;
+                                            // Canonical Larkum (2013) + Thomson & Bannister (2003) Cortical Compartmentalization:
+                                            // Ascending labeled-line (br<4) & proximal intra-column micro-assemblies (sz==tz && p_col==s_col && stp<=2u)
+                                            // terminate on BASAL dendrites (comp=0 -> reliable Mongillo-Wang prefrontal STF on ALL genomes regardless of param1!);
+                                            // Descending predictions (sz>tz), cross-column ascending conjunctions (br>=4) & mid/long-range lateral
+                                            // context (p_col!=s_col || stp>=3u) target APICAL BAC tufts (comp=1 -> preserves full BAC amplification!)
+                                            comp = (sz > tz || (is_asc_pyr && br >= 4u) || (sz == tz && (p_col != s_col || stp >= 3u))) ? 1u : 0u;
                                         }
                                         // Real mammalian Class-1A Driver vs Modulator & heavy-tailed spine-size diversity (Sherman 1998 / Song 2005):
                                         // - Thalamocortical sensory -> L1 drivers: crisp 1-synapse ignition EPSPs (28..48) -> high sensory SNR!

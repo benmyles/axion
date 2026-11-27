@@ -254,9 +254,10 @@ struct alignas(16) CreatureState {
     // Unified 3D Cellular Tissue Layer Slabs & Post-Natal Maturation Stage!
     u16 num_layers;
     u16 carried_obj; // INVALID_OBJ or index into WorldObjects
-    u8 growth_stage; // 0=hatchling, 1=juvenile, 2=adult (grows live during life!)
-    i8 voc_da_q;     // Dedicated Songbird VTA -> Area-X vocal performance RPE (-64..+64; isolates vocal from locomotor DA!)
-    u8 _pad_cs[2];
+    u8 growth_stage;  // 0=hatchling, 1=juvenile, 2=adult (grows live during life!)
+    i8 voc_da_q;      // Dedicated Songbird VTA -> Area-X vocal performance RPE (-64..+64; isolates vocal from locomotor DA!)
+    u8 peer_tpl_band; // LSO-localized nearby peer auditory vocal template (0|1|2, 3=none; pure 2D wavefield excess!)
+    u8 peer_tpl_age;  // Ticks since localized peer template arrived (0..255; >4=stale)
     u32 layer_slabs[MAX_LAYERS_PER_CREATURE]; // GPU TissueSlab indices (up to 32 layers = 8,192 cells/neurons!)
 };
 

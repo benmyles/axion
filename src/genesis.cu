@@ -33,6 +33,8 @@ KERNEL void genesis_pop_init(GenesisDNA *dnas, CreatureState *creatures, u8 *nee
     if (i >= pop_n) return;
     CreatureState cr{};
     cr.carried_obj = INVALID_OBJ;
+    cr.peer_tpl_band = 3u;
+    cr.peer_tpl_age = 255u;
     for (u32 l = 0; l < MAX_LAYERS_PER_CREATURE; ++l) cr.layer_slabs[l] = INVALID_SLAB;
     if (i < initial_alive) {
         u32 r = mix(seed ^ (i * 0x9e3779b9u + 1337u));

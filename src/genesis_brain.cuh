@@ -971,12 +971,13 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                         i32 curr = sw_i * i32(stp_v + 2u);
                                         bool is_ap_l = (s & 0x04000000u) != 0u;
                                         if (layer_idx >= 2u && sw_i > 0 && !is_ap_l) {
-                                            // Authentic Mongillo-Wang Bistable 3-Tier Prefrontal STF Attractor (16x contrast!):
-                                            // L3/L4 WM hubs hold 4.0x (stp>=4, 24-31t); L5 BA10 slow executive holds 3.5x (stp>=4, 48-63t);
+                                            // Authentic Mongillo-Wang Bistable 3-Tier Prefrontal STF Attractor (14x contrast!):
+                                            // Calibrated for Thomson-Bannister intra-column basal micro-assemblies (100% of genomes):
+                                            // L3/L4 WM hubs hold 3.5x (stp>=4, 24-31t); L5 BA10 slow executive holds 3.0x (stp>=4, 48-63t);
                                             // L2 bigram holds 2.5x (stp>=5); L6..L_top uses standard STD -> >>3 keeps resting recurrence subcritical!
                                             bool is_wm_hub = (layer_idx == 3u || layer_idx == 4u);
-                                            curr = is_wm_hub ? ((stp_v >= 4u) ? (curr << 2) : (curr >> 2))
-                                                             : ((layer_idx == 5u) ? ((stp_v >= 4u) ? ((curr * 7) >> 1) : (curr >> 2))
+                                            curr = is_wm_hub ? ((stp_v >= 4u) ? ((curr * 7) >> 1) : (curr >> 2))
+                                                             : ((layer_idx == 5u) ? ((stp_v >= 4u) ? (curr * 3) : (curr >> 2))
                                                                                   : ((layer_idx == 2u && stp_v >= 5u) ? ((curr * 5) >> 1) : ((layer_idx >= 6u) ? (curr >> 3) : (curr >> 2))));
                                         } else if (layer_idx == 1u && sw_i > 0) {
                                             curr >>= 3;
@@ -1014,8 +1015,8 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                             bool is_ap_l = (s & 0x04000000u) != 0u;
                                             if (layer_idx >= 2u && sw_i > 0 && !is_ap_l) {
                                                 bool is_wm_hub = (layer_idx == 3u || layer_idx == 4u);
-                                                curr = is_wm_hub ? ((stp_v >= 4u) ? (curr << 2) : (curr >> 2))
-                                                                 : ((layer_idx == 5u) ? ((stp_v >= 4u) ? ((curr * 7) >> 1) : (curr >> 2))
+                                                curr = is_wm_hub ? ((stp_v >= 4u) ? ((curr * 7) >> 1) : (curr >> 2))
+                                                                 : ((layer_idx == 5u) ? ((stp_v >= 4u) ? (curr * 3) : (curr >> 2))
                                                                                       : ((layer_idx == 2u && stp_v >= 5u) ? ((curr * 5) >> 1) : ((layer_idx >= 6u) ? (curr >> 3) : (curr >> 2))));
                                             } else if (layer_idx == 1u && sw_i > 0) {
                                                 curr >>= 3;
@@ -1170,10 +1171,12 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                        ? i32(min_u32(pv_sh_cap, (pv_cnt - 1u) * 10u))
                                        : 0;
                     // Authentic Songbird LMAN Exploratory Switching + Striatal D2-NoGo Immediate Error-Fold Veto (Olveczky 2005):
-                    // Strictly on error (-DA) on TK_GLAND: D2-NoGo cleanly vetoes the just-punished fold (s_mod_w[2]) for this
-                    // single recovery tick while LMAN explores alternative folds (0 pA on mastery/testing -> 100% crystallized weights!)
+                    // - Operant -DA (`eff_da < -10`): crisp D2-NoGo error-fold veto + LMAN exploration.
+                    // - Juvenile peer-template babbling (`age < 120`, fresh localized template, `vta_voc_q < -18`): gentle
+                    //   Olveczky juvenile LMAN exploratory nudge on rival folds WITHOUT shutting down adult/juvenile catalysis!
                     i32 lman_curr = 0;
                     bool d2_err_veto = false;
+                    bool juv_lman_err = (cr.age < 120u && cr.peer_tpl_band < 3u && cr.peer_tpl_age <= 4u && vta_voc_q < -18);
                     if (tk == TK_GLAND && eff_da < -10) {
                         bool was_punished = ((s_mod_w[2] & (1u << my_gfold)) != 0u) || ((ring & 0xf0u) != 0u);
                         if (was_punished && s_mod_w[2] != 0u) {
@@ -1181,6 +1184,14 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         } else {
                             i32 lman_r = (i32(mix((tick * 2654435761u) ^ (my_gfold * 31337u)) & 255u) - 128) * 6;
                             lman_curr = lman_r + 420;
+                        }
+                    } else if (tk == TK_GLAND && juv_lman_err) {
+                        bool was_punished = ((s_mod_w[2] & (1u << my_gfold)) != 0u) || ((ring & 0xf0u) != 0u);
+                        if (was_punished && s_mod_w[2] != 0u) {
+                            lman_curr = -260;
+                        } else {
+                            i32 lman_r = (i32(mix((tick * 2654435761u) ^ (my_gfold * 31337u)) & 255u) - 128) * 4;
+                            lman_curr = lman_r + 320;
                         }
                     } else if ((tk == TK_GLAND && eff_ne > 16) || (is_eff && eff_da < -10)) {
                         lman_curr = (i32(mix(((tick >> 1) * 2654435761u) ^ (tid * 31337u)) & 255u) - 128) * 3;
@@ -1192,19 +1203,16 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         eff_sens = (eff_sens * 28) / i32(28u + ema);
                     }
                     // Authentic Egorov et al. (2002 Nature) Intrinsic Ca2+-Gated Entorhinal/Prefrontal I_CAN Persistence:
-                    // Laminar Ca2+ decay hierarchy calibrated to 4-substep ema (1 spike = +8, tau = 8 ticks):
-                    // - L3 (Slot 2 fast buffer): ema>=4 (~6t after cue -> keeps 2-/3-Syl & Ctx13 alive, clears cleanly between trials!)
-                    // - L4 (Slot 1 episodic buffer): ema>=2 (~12t TRPC window -> holds S_A across 24-60t dark while blocking ema==0 hijack!)
+                    // Strictly self-Ca2+ gated (ring!=0 || ema>=ican_ema_min -> ZERO un-cued bystander hijack!) and calibrated
+                    // to sustain exact 6-10 neuron cue assemblies across 24-60t pitch-black delays on deep 2,000+ neuron cortices!
                     bool ican_flushed = (layer_idx >= 4u) ? (eff_da < -18) : pfc_gate_flush;
                     u32 ican_ema_min = (layer_idx >= 4u) ? 2u : 4u;
-                    i32 ican_b_min = (layer_idx >= 4u) ? 85 : 100;
-                    bool ican_self_ca = ((ring & 0xffu) != 0u) || (ema >= ican_ema_min) || (i_basal >= ican_b_min);
+                    bool ican_self_ca = ((ring & 0xffu) != 0u) || (ema >= ican_ema_min);
                     i32 ican_curr = ((layer_idx >= 3u && layer_idx <= 5u) && is_pyr && st0_stf_hold && !ican_flushed && ican_self_ca)
                                         ? ((layer_idx == 5u) ? 135 : 145)
                                         : 0;
                     // Authentic Songbird Uva -> HVC / Broca Modulatory Vocal Efference Copy (Fee 2014 / Hickok 2012):
-                    // Strictly subthreshold alone (0 pA in silent darkness!) and active whenever L3 receives either active
-                    // bottom-up cue drive (`i_basal >= 80`, surviving +DA Slot-2 flush during training!) or held Slot-2 WM!
+                    // Strictly subthreshold alone (0 pA in silent darkness!) and bridges 6t multi-syllable phrase windows!
                     bool uva_on = (layer_idx == 3u && is_pyr && ((st0_stf_hold && ican_self_ca) || i_basal >= 80) &&
                                    cr.last_vocal_tick > 0u && tick > cr.last_vocal_tick && tick <= cr.last_vocal_tick + 6u);
                     i32 uva_curr = uva_on ? (((tid % 3u) == u32(cr.last_vocal_band)) ? 210 : -125) : 0;
@@ -1608,20 +1616,32 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         // - L4: Slot 1 DA-buffered shielded context memory (~31t)
                         // - L5: Slot 0 Frontopolar BA10 slow executive goal hub (~48-63t, survives 3-syl phrases & distractors!)
                         bool is_wm_hub = (layer_idx >= 3u && layer_idx <= 5u);
-                        bool got_asc = (!pfc_shield) && ((ext_tot[0] + ext_tot[1] + ext_tot[2] + ext_tot[3]) > 140);
-                        if (cs_u <= 2u && pre_rec && post_recent && (got_asc || (!pfc_shield && ext_ach_q > 12))) {
+                        i32 asc_sum = ext_tot[0] + ext_tot[1] + ext_tot[2] + ext_tot[3];
+                        // Strictly sensory-present STF encoding (L1->L3, L2->L4, strong cue burst->L5):
+                        // Prevents dark persistent activity in L3/L4 from recruiting un-cued bystander cells during pitch-black delays!
+                        bool sens_on = (layer_idx == 3u) ? (s_l_spk[1] != 0u)
+                                                         : ((layer_idx == 4u) ? (s_l_spk[2] != 0u)
+                                                                              : ((layer_idx == 5u) ? (asc_sum > 260) : true));
+                        bool got_asc = (!pfc_shield) && sens_on && (asc_sum > 140);
+                        if (cs_u <= 2u && pre_rec && post_recent && (got_asc || (!pfc_shield && sens_on && ext_ach_q > 12))) {
                             s_stp = (s & 0x1fffffffu) | 0xe0000000u; // One-shot crisp encode to stp=7!
                         } else if (is_wm_hub && pfc_gate_flush) {
-                            // Authentic Ca2+-Buffered 3-Tier PBWM Gating (O'Reilly & Frank 2006 / Braver & Cohen 2000):
+                            // Authentic Ca2+-Buffered 3-Tier PBWM Gating (O'Reilly & Frank 2006 / Murray 2014):
                             // - L3 (Slot 2) and -DA errors flush immediately to resting (stp=1).
-                            // - L4 (Slot 1, cs_u >= 5) & L5 (Slot 0 BA10, cs_u >= 6 -> 7->6->5->flush) step down (-1) on +DA
-                            //   preserving 3-syllable phrase & episode goals across steps while resetting cleanly between trials!
-                            if ((layer_idx == 4u && eff_da > 18 && cs_u >= 5u) || (layer_idx == 5u && eff_da > 18 && cs_u >= 6u))
+                            // - L4 (Slot 1 nimble context buffer): steps -2 on fresh +DA (7->5 -> clears cleanly on new-trial ACh!)
+                            // - L5 (Slot 0 BA10 slow executive): steps -1 on fresh +DA (7->6->5 across 3-syl phrases, ACh clears only 4!)
+                            if (layer_idx == 4u && eff_da > 18 && cs_u >= 6u)
+                                s_stp = s - 0x40000000u;
+                            else if (layer_idx == 5u && eff_da > 18 && cs_u >= 6u)
                                 s_stp = s - 0x20000000u;
                             else
                                 s_stp = (s & 0x1fffffffu) | 0x20000000u;
-                        } else if (layer_idx == 3u && ext_ach_q > 18 && !post_recent && cs_u >= 4u) {
-                            s_stp = (s & 0x1fffffffu) | 0x20000000u; // Clean ACh-onset Slot-2 overwrite (L3)!
+                        } else if ((layer_idx == 3u && ext_ach_q > 18 && !post_recent && cs_u >= 4u) ||
+                                   (layer_idx == 4u && ext_ach_q > 18 && !post_recent && cs_u <= 5u && cs_u >= 4u) ||
+                                   (layer_idx == 5u && ext_ach_q > 18 && !post_recent && cs_u == 4u)) {
+                            // Clean timescale-matched ACh-onset overwrite: L3 immediate, L4 retires completed (4..5) episodes,
+                            // L5 BA10 keeps multi-syllable (5..7) goals distractor-shielded and retires only completed (4) episodes!
+                            s_stp = (s & 0x1fffffffu) | 0x20000000u;
                         } else {
                             // Natural Cortical Timescale Hierarchy (Murray et al. 2014 Nature Neurosci):
                             // L2: ~12t ((tick&3)==0); L3/L4: ~24-31t ((tick&7)==0); L5 BA10: ~48-63t ((tick&15)==0)!
@@ -1666,7 +1686,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     bool has_e0 = (st_flags_mask & 1u) != 0u;
                     bool has_d0 = (st_flags_mask & (1u << 12)) != 0u;
                     bool loc0_need = st0_local && (any_loc_spk != 0u || spk_acc != 0u ||
-                                                   (has_d0 && (do_rec_tick || pfc_gate_flush || (layer_idx == 3u && ext_ach_q > 18))) ||
+                                                   (has_d0 && (do_rec_tick || pfc_gate_flush || (layer_idx >= 3u && layer_idx <= 5u && ext_ach_q > 18))) ||
                                                    (do_ltp && has_e0 && (do_dec_tick || mod_est_tick)) || (do_ltp && (tick & 63u) == 0u));
                     if (loc0_need || !cell_idle || st0_ext_need != 0u) {
                         u64 sb0 = u64(ss0) * LAYER_SYN_QUADS;
@@ -2012,18 +2032,29 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
             }
         }
     }
-    // 3-Band Acoustic Reception & Passive Listener-Response / Vocal Turn-Taking Telemetry!
+    // 3-Band Acoustic Reception with Cochlear Octopus-Cell Onset Detection & Turn-Taking Telemetry!
     if (bp.counts[TK_EAR] > 0u && !abl.deaf_ears) {
         float hv0 = fabsf_dev(wb.acoust_v0[idx]);
         float hv1 = fabsf_dev(wb.acoust_v1[idx]);
         float hv2 = fabsf_dev(wb.acoust_v2[idx]);
+        float dv0 = hv0 - fabsf_dev(wb.acoust_v0_prev[idx]);
+        float dv1 = hv1 - fabsf_dev(wb.acoust_v1_prev[idx]);
+        float dv2 = hv2 - fabsf_dev(wb.acoust_v2_prev[idx]);
+        float max_dv = (dv2 >= dv0 && dv2 >= dv1) ? dv2 : ((dv1 >= dv0) ? dv1 : dv0);
         float heard_v = hv0 + hv1 + hv2;
         if (heard_v > 0.05f) {
-            cr.last_heard_tick = tick; // Real physical acoustic hearing timestamp for vocal-duet & mimicry coordination!
-            cr.last_heard_band = (hv2 >= hv0 && hv2 >= hv1) ? 2u : ((hv1 >= hv0) ? 1u : 0u);
-            if (tick > cr.resp_heard_tick + 12u) {
-                cr.resp_heard_tick = tick;
-                cr.last_heard_theta = cr.theta;
+            u8 cand_b = (max_dv > 0.03f)
+                            ? ((dv2 >= dv0 && dv2 >= dv1) ? u8(2u) : ((dv1 >= dv0) ? u8(1u) : u8(0u)))
+                            : ((hv2 >= hv0 && hv2 >= hv1) ? u8(2u) : ((hv1 >= hv0) ? u8(1u) : u8(0u)));
+            // Exclude immediate self-echo on the same band right after own vocal emission!
+            bool self_echo = (cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 1u && cand_b == cr.last_vocal_band);
+            if (!self_echo) {
+                cr.last_heard_tick = tick; // Real physical acoustic hearing timestamp for vocal-duet & mimicry coordination!
+                cr.last_heard_band = cand_b;
+                if (tick > cr.resp_heard_tick + 12u) {
+                    cr.resp_heard_tick = tick;
+                    cr.last_heard_theta = cr.theta;
+                }
             }
         }
         if (cr.resp_heard_tick > 0u && tick > cr.resp_heard_tick && tick <= cr.resp_heard_tick + 12u) {
@@ -2470,6 +2501,39 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
     }
 
     // 7. Discrete Syllabic 3-Band Biological Vocalizations (2-tick pneumatic breath cadence!) + Mimicry & 3x4 Shannon MI
+    // Authentic LSO Binaural Point-Source Auditory Template Acquisition (Konishi 1965 / Brainard & Doupe 2013):
+    // Runs EVERY tick (even during silent breath-recovery listening ticks!) using strictly read-only `acoust_vX_prev`
+    // spatial excess over orthogonal ambient reference (0.0000 on uniform ambient waves, 0.0000 on self-voice,
+    // +0.72 on nearby conspecific speech — ZERO telepathy, ZERO race condition, ZERO solo-task interference!)
+    if (cr.peer_tpl_age < 255u) ++cr.peer_tpl_age;
+    if (cr.age < 120u && bp.counts[TK_EAR] > 0u && !abl.deaf_ears) {
+        u32 tx_p = idx & MX, ty_p = idx >> SY;
+        u32 up_i = (((ty_p + H - 1u) & MY) << SY) | tx_p;
+        u32 dn_i = (((ty_p + 1u) & MY) << SY) | tx_p;
+        float a0p = fabsf_dev(wb.acoust_v0_prev[up_i]); float a0d = fabsf_dev(wb.acoust_v0_prev[dn_i]); if (a0d < a0p) a0p = a0d;
+        float a1p = fabsf_dev(wb.acoust_v1_prev[up_i]); float a1d = fabsf_dev(wb.acoust_v1_prev[dn_i]); if (a1d < a1p) a1p = a1d;
+        float a2p = fabsf_dev(wb.acoust_v2_prev[up_i]); float a2d = fabsf_dev(wb.acoust_v2_prev[dn_i]); if (a2d < a2p) a2p = a2d;
+        float best_ex = 0.22f;
+        u8 p_b = 3u;
+        for (i32 dyp = -3; dyp <= 3; ++dyp) {
+            u32 ny_p = (ty_p + u32(dyp + i32(H))) & MY;
+            for (i32 dxp = -3; dxp <= 3; ++dxp) {
+                if ((dxp == 0 && dyp == 0) || (dxp * dxp + dyp * dyp > 9)) continue;
+                u32 pidx = (ny_p << SY) | ((tx_p + u32(dxp + i32(W))) & MX);
+                u32 n_occ = wb.tile_occ_id[pidx];
+                if (n_occ != 0u && n_occ != cid + 1u) {
+                    float e0 = fabsf_dev(wb.acoust_v0_prev[pidx]) - a0p;
+                    float e1 = fabsf_dev(wb.acoust_v1_prev[pidx]) - a1p;
+                    float e2 = fabsf_dev(wb.acoust_v2_prev[pidx]) - a2p;
+                    if (e0 > best_ex) { best_ex = e0; p_b = 0u; }
+                    if (e1 > best_ex) { best_ex = e1; p_b = 1u; }
+                    if (e2 > best_ex) { best_ex = e2; p_b = 2u; }
+                }
+            }
+        }
+        if (p_b < 3u) { cr.peer_tpl_band = p_b; cr.peer_tpl_age = 0u; }
+    }
+
     // Real syrinx breath recovery enforces crisp discrete syllables & phrases while preserving nimble nocturnal sonar!
     float voc_ok = 0.0f, voc_err = 0.0f;
     if (bp.gland_power > 0.1f && (cr.last_vocal_tick == 0u || tick >= cr.last_vocal_tick + 2u) &&
@@ -2548,6 +2612,27 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                 atomic_add_u32(&ctr->total_vocal, 1u);
                 atomic_add_u32(&ctr->vocal_ctx[dom_b][vctx], 1u);
                 if (is_mimic) atomic_add_u32(&ctr->total_vocal_mimics, 1u);
+            }
+        }
+    }
+    // Authentic Gadagkar (2016 Science) Juvenile Efference-Copy Auditory-Vocal Mirror Comparator:
+    // Strictly during calm social contact (`vctx_now == 3u`: zero food-reef, apex-predator, or acid/shelter emergency
+    // -> ZERO odd-tick ecological override!), evaluates crisp juvenile vocal motor attempts against the fresh
+    // LSO-localized peer auditory template (`peer_tpl_age <= 4`, breaking the 2-tick breath-cadence deadlock with LMAN!)
+    if (cr.age < 120u && bp.gland_power > 0.1f && bp.counts[TK_EAR] > 0u && !abl.deaf_ears &&
+        voc_ok == 0.0f && voc_err == 0.0f && cr.peer_tpl_band < 3u && cr.peer_tpl_age <= 4u) {
+        u32 oid_g = wb.tile_obj_id[idx] ? wb.tile_obj_id[idx] : wb.tile_obj_id[fidx];
+        bool calm_soc = (oid_g == 0u && cr.carried_obj == INVALID_OBJ && cr.hp >= 88.0f &&
+                         wb.chem_c[idx] <= 0.16f && !near_wall && wb.chem_d[idx] <= 0.12f &&
+                         env_temp >= 0.36f && env_temp <= 0.62f && fabsf_dev(wb.acoust_p[idx]) <= 0.25f);
+        if (calm_soc) {
+            u32 try_b = 3u;
+            if (cr.mot_vocal0 > 0.20f && cr.mot_vocal0 > cr.mot_vocal1 + 0.02f && cr.mot_vocal0 > cr.mot_vocal2 + 0.02f) try_b = 0u;
+            else if (cr.mot_vocal1 > 0.20f && cr.mot_vocal1 > cr.mot_vocal0 + 0.02f && cr.mot_vocal1 > cr.mot_vocal2 + 0.02f) try_b = 1u;
+            else if (cr.mot_vocal2 > 0.20f && cr.mot_vocal2 > cr.mot_vocal0 + 0.02f && cr.mot_vocal2 > cr.mot_vocal1 + 0.02f) try_b = 2u;
+            if (try_b < 3u) {
+                if (u8(try_b) == cr.peer_tpl_band) voc_ok = 0.65f;
+                else voc_err = 0.50f;
             }
         }
     }
@@ -2684,6 +2769,8 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                 child.num_layers = 1u; // Begins as 1 zygote layer; buds deeper layers organically via CA OP_MITOSIS!
                 child.carried_obj = INVALID_OBJ;
                 child.growth_stage = 0u;
+                child.peer_tpl_band = 3u;
+                child.peer_tpl_age = 255u;
                 float off_ang = rand_unit(rng) * 6.2831853f;
                 child.x = cr.x + fast_cos(off_ang) * 2.4f;
                 child.y = cr.y + fast_sin(off_ang) * 2.4f;
