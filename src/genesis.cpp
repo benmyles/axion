@@ -64,7 +64,7 @@ struct GenesisGpu {
     // Population & Unified 3D Tissue + Variable Fan-In Synapse Slab Pool
     Temporary d_dnas, d_bodies, d_creatures, d_needs_dev, d_counters;
     Temporary d_layer_bitmap, d_syn_bitmap;
-    Temporary d_tissue, d_neurons, d_spike_ring, d_cell_stripes;
+    Temporary d_tissue, d_neurons, d_spike_ring, d_spike_ring_next, d_cell_stripes;
     Temporary d_layer_syn_slabs, d_syn_slabs, d_stripe_src_layer;
     Temporary d_work_list, d_work_count, d_dev_list, d_dev_meta;
 
@@ -136,6 +136,7 @@ struct GenesisGpu {
           d_tissue(s.d, size_t(max_layers) * TISSUE_CELLS * sizeof(u64)),
           d_neurons(s.d, size_t(max_layers) * TISSUE_CELLS * sizeof(u64)),
           d_spike_ring(s.d, size_t(max_layers) * TISSUE_CELLS * sizeof(u8)),
+          d_spike_ring_next(s.d, size_t(max_layers) * TISSUE_CELLS * sizeof(u8)),
           d_cell_stripes(s.d, size_t(max_layers) * TISSUE_CELLS * sizeof(u8)),
           d_layer_syn_slabs(s.d, size_t(max_layers) * MAX_STRIPES_PER_LAYER * sizeof(u32)),
           d_syn_slabs(s.d, size_t(max_syn_slabs) * LAYER_SYN_QUADS * sizeof(SynQuad)),
@@ -208,6 +209,7 @@ struct GenesisGpu {
         pool.tissue = reinterpret_cast<u64 *>(d_tissue.ptr);
         pool.neurons = reinterpret_cast<u64 *>(d_neurons.ptr);
         pool.spike_ring = reinterpret_cast<u8 *>(d_spike_ring.ptr);
+        pool.spike_ring_next = reinterpret_cast<u8 *>(d_spike_ring_next.ptr);
         pool.cell_stripes = reinterpret_cast<u8 *>(d_cell_stripes.ptr);
         pool.layer_syn_slabs = reinterpret_cast<u32 *>(d_layer_syn_slabs.ptr);
         pool.syn_slabs = reinterpret_cast<SynQuad *>(d_syn_slabs.ptr);
@@ -222,6 +224,7 @@ struct GenesisGpu {
         s.d.check(s.d.zero(d_layer_bitmap.ptr, 0, size_t((max_layers + 31u) / 32u) * sizeof(u32)), "zero lbm");
         s.d.check(s.d.zero(d_syn_bitmap.ptr, 0, size_t((max_syn_slabs + 31u) / 32u) * sizeof(u32)), "zero sbm");
         s.d.check(s.d.zero(d_spike_ring.ptr, 0, size_t(max_layers) * TISSUE_CELLS * sizeof(u8)), "zero ring");
+        s.d.check(s.d.zero(d_spike_ring_next.ptr, 0, size_t(max_layers) * TISSUE_CELLS * sizeof(u8)), "zero ring next");
         s.d.check(s.d.zero(d_cell_stripes.ptr, 0, size_t(max_layers) * TISSUE_CELLS * sizeof(u8)), "zero cs");
         std::vector<u32> inv(size_t(max_layers) * MAX_STRIPES_PER_LAYER, INVALID_SLAB);
         s.d.check(s.d.upload(d_layer_syn_slabs.ptr, inv.data(), inv.size() * sizeof(u32)), "init lss");
@@ -328,6 +331,7 @@ struct GenesisGpu {
         void *args[]{&d_dnas.ptr, &d_bodies.ptr, &d_creatures.ptr, &wb, &pool, &d_counters.ptr, &tick, &abl};
         s.d.check(s.d.launch(fn_brain_step, brain_blocks, 1, 1, TISSUE_CELLS, 1, 1, 0, nullptr, args, nullptr),
                   "genesis brain step");
+        std::swap(pool.spike_ring, pool.spike_ring_next);
         maybe_sync("sync brain_step");
     }
 
@@ -381,6 +385,7 @@ struct GenesisGpu {
         tp.tissue = reinterpret_cast<u64 *>(ttis.ptr);
         tp.neurons = reinterpret_cast<u64 *>(tneu.ptr);
         tp.spike_ring = reinterpret_cast<u8 *>(tring.ptr);
+        tp.spike_ring_next = reinterpret_cast<u8 *>(tring.ptr);
         tp.cell_stripes = reinterpret_cast<u8 *>(tcs.ptr);
         tp.layer_syn_slabs = reinterpret_cast<u32 *>(tlss.ptr);
         tp.syn_slabs = reinterpret_cast<SynQuad *>(tsyn.ptr);
@@ -1050,7 +1055,7 @@ AssayResult run_heldout_assay(Session &s, const std::vector<GenesisDNA> &seed_dn
 
 int run_evolve(Session &s, u32 pop_n, u32 max_layers, u32 ticks, u32 seed, u32 challenge_tier, bool controls,
                const std::string &load_path, const std::string &save_path,
-               const std::string &video_path = "", const std::string &video_title = "AXION GENESIS V38",
+               const std::string &video_path = "", const std::string &video_title = "AXION GENESIS V40",
                u32 world_size = WORLD_W, u32 max_syn_slabs = 0u) {
     std::vector<GenesisDNA> loaded_dnas;
     u32 base_gen = 1u;
@@ -2558,11 +2563,12 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
             for (u32 k = 0; k < 5u; ++k, ++sim_t) { set_dm_aud(-1); gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl); }
         }
 
-        // Now run TWO 24-tick TRUE ANECHOIC pitch-black delayed-recall probes (A=Q1 vs B=Q2)!
+        // Now run THREE 24-tick TRUE ANECHOIC pitch-black delayed-recall probes (A1=Q1, A2=Q1 repeat, B=Q2)
+        // measuring BOTH cue-phase and dark-delay Representation SNR = cos(A,B) / max(0.01, cos(A,A'))!
         constexpr u32 DM_DELAY = 24u;
         std::vector<u8> all_rings(size_t(gpu.max_layers) * TISSUE_CELLS);
-        auto eval_dark_delay = [&](bool is_q1, std::vector<float> &pop_vec) -> std::tuple<double, double, double, double> {
-            // 10-tick truly anechoic silent washout so both trials start from identical quiet baseline
+        auto eval_dark_delay = [&](bool is_q1, std::vector<float> &cue_vec, std::vector<float> &pop_vec) -> std::tuple<double, double, double, double> {
+            // 10-tick truly anechoic silent washout so trials start from identical quiet baseline
             s.d.check(s.d.upload(DevicePtr(gpu.wb.light), dark_l.data(), WORLD_CELLS * sizeof(float)), "dm dlgt");
             for (u32 k = 0; k < 10u; ++k, ++sim_t) { set_dm_aud(-1); gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl); }
             s.d.check(s.d.download(cs.data(), gpu.d_creatures.ptr, 64u * sizeof(CreatureState)), "dm ed dl");
@@ -2571,9 +2577,23 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
                 if (cs[i].atp < 22.0f) { cs[i].atp = 22.0f; cs[i].prev_atp = 22.0f; }
             }
             s.d.check(s.d.upload(gpu.d_creatures.ptr, cs.data(), 64u * sizeof(CreatureState)), "dm ed ul");
-            // Present 8-tick stimulus (Q1 or Q2), then extinguish into 24 ticks of TRUE pitch-black silence!
+            // Present 8-tick stimulus (Q1 or Q2) while recording Cue-phase cortical representation, then 24t pitch-black silence!
+            cue_vec.assign(64u * 4u * TISSUE_CELLS, 0.0f);
             for (u32 k = 0; k < 4u; ++k, ++sim_t) { set_dm_aud(is_q1 ? 0 : 1); gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl); }
-            for (u32 k = 0; k < 4u; ++k, ++sim_t) { set_dm_aud(is_q1 ? 1 : 0); gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl); }
+            for (u32 k = 0; k < 4u; ++k, ++sim_t) {
+                set_dm_aud(is_q1 ? 1 : 0); gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl);
+                s.d.check(s.d.download(all_rings.data(), DevicePtr(gpu.pool.spike_ring), all_rings.size()), "dm cu sr");
+                for (u32 i = 0; i < 64u; ++i) if (cs[i].alive == 1u) {
+                    u32 lim_z = std::min<u32>(cs[i].num_layers, 5u);
+                    for (u32 z = 1u; z < lim_z; ++z) {
+                        u32 sl = cs[i].layer_slabs[z];
+                        if (sl == INVALID_SLAB || sl >= gpu.max_layers) continue;
+                        const u8 *sr = all_rings.data() + size_t(sl) * TISSUE_CELLS;
+                        float *dst = cue_vec.data() + (size_t(i) * 4u + size_t(z - 1u)) * TISSUE_CELLS;
+                        for (u32 c = 0; c < TISSUE_CELLS; ++c) dst[c] += float(__builtin_popcount(u32(sr[c] & 0x0fu)));
+                    }
+                }
+            }
 
             pop_vec.assign(64u * 4u * TISSUE_CELLS, 0.0f);
             u64 s0 = gpu.read_counters().total_spikes;
@@ -2583,7 +2603,7 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
                 gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl);
                 if (k >= DM_DELAY - 8u) {
                     s.d.check(s.d.download(cs.data(), gpu.d_creatures.ptr, 64u * sizeof(CreatureState)), "dm dr cs");
-                    s.d.check(s.d.download(all_rings.data(), gpu.d_spike_ring.ptr, all_rings.size()), "dm dr sr");
+                    s.d.check(s.d.download(all_rings.data(), DevicePtr(gpu.pool.spike_ring), all_rings.size()), "dm dr sr");
                     for (u32 i = 0; i < 64u; ++i) if (cs[i].alive == 1u) {
                         v0_s += double(cs[i].mot_vocal0); v2_s += double(cs[i].mot_vocal2); ++sn;
                         bool av2 = (cs[i].mot_vocal2 > cs[i].mot_vocal0 + 0.02f && cs[i].mot_vocal2 > 0.12f);
@@ -2605,36 +2625,79 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
             return {spk_t, v0_s * inv, v2_s * inv, double(hits) * inv};
         };
 
-        std::vector<float> vec_a, vec_b;
-        auto [spk_a, a_v0, a_v2, a_hit] = eval_dark_delay(true, vec_a);
-        auto [spk_b, b_v0, b_v2, b_hit] = eval_dark_delay(false, vec_b);
-        double cos_sum = 0.0; u32 cos_n = 0u;
-        for (u32 i = 0; i < 64u; ++i) {
-            double dot = 0.0, na = 0.0, nb = 0.0;
-            const float *pa = vec_a.data() + size_t(i) * 4u * TISSUE_CELLS;
-            const float *pb = vec_b.data() + size_t(i) * 4u * TISSUE_CELLS;
-            for (u32 j = 0; j < 4u * TISSUE_CELLS; ++j) {
-                dot += double(pa[j]) * double(pb[j]);
-                na += double(pa[j]) * double(pa[j]);
-                nb += double(pb[j]) * double(pb[j]);
+        auto mean_cos_dist = [&](const std::vector<float> &va, const std::vector<float> &vb) -> double {
+            double cos_sum = 0.0; u32 cos_n = 0u;
+            for (u32 i = 0; i < 64u; ++i) {
+                double dot = 0.0, na = 0.0, nb = 0.0;
+                const float *pa = va.data() + size_t(i) * 4u * TISSUE_CELLS;
+                const float *pb = vb.data() + size_t(i) * 4u * TISSUE_CELLS;
+                for (u32 j = 0; j < 4u * TISSUE_CELLS; ++j) {
+                    dot += double(pa[j]) * double(pb[j]);
+                    na += double(pa[j]) * double(pa[j]);
+                    nb += double(pb[j]) * double(pb[j]);
+                }
+                if (na > 1.0 && nb > 1.0) {
+                    cos_sum += (1.0 - std::clamp(dot / std::sqrt(na * nb), -1.0, 1.0));
+                    ++cos_n;
+                }
             }
-            if (na > 1.0 && nb > 1.0) {
-                double cs_sim = std::clamp(dot / std::sqrt(na * nb), -1.0, 1.0);
-                cos_sum += (1.0 - cs_sim);
-                ++cos_n;
-            }
-        }
-        double cos_dist = cos_n ? (cos_sum / double(cos_n)) : 0.0;
+            return cos_n ? (cos_sum / double(cos_n)) : 0.0;
+        };
+
+        std::vector<float> cue_a1, vec_a1, cue_a2, vec_a2, cue_b, vec_b;
+        auto [spk_a, a_v0, a_v2, a_hit] = eval_dark_delay(true, cue_a1, vec_a1);
+        auto [spk_b, b_v0, b_v2, b_hit] = eval_dark_delay(false, cue_b, vec_b);
+        eval_dark_delay(true, cue_a2, vec_a2);
+        double cue_ab = mean_cos_dist(cue_a1, cue_b);
+        double cue_aa = mean_cos_dist(cue_a1, cue_a2);
+        double cue_snr = cue_ab / std::max(0.01, cue_aa);
+        double cos_dist = mean_cos_dist(vec_a1, vec_b);
+        double cos_aa = mean_cos_dist(vec_a1, vec_a2);
+        double dark_snr = cos_dist / std::max(0.01, cos_aa);
         double rec_sep = std::fabs((a_v2 - a_v0) - (b_v2 - b_v0));
         double rec_hit = 0.5 * (a_hit + b_hit);
         u64 dm_ed = gpu.read_counters().total_edits;
         std::cout << "genesis_probe=episodic_delayed_recall  delay_ticks=" << DM_DELAY
                   << "  cos_dist=" << std::fixed << std::setprecision(3) << cos_dist
+                  << "  cos_aa=" << cos_aa << "  snr=" << std::setprecision(2) << dark_snr
+                  << "  cue_cos=" << std::setprecision(3) << cue_ab << "  cue_aa=" << cue_aa
+                  << "  cue_snr=" << std::setprecision(2) << cue_snr
                   << "  dark_spk_a=" << std::setprecision(1) << spk_a
                   << "  dark_spk_b=" << spk_b
                   << "  recall_sep=" << std::setprecision(3) << rec_sep
                   << "  recall_hit=" << rec_hit
                   << "  stdp_edits=" << dm_ed << '\n';
+        // Per-layer laminar SNR X-ray diagnostic (L1..L4 cue & pitch-black dark SNR + firing activity!)
+        auto layer_cos = [&](const std::vector<float> &va, const std::vector<float> &vb, u32 lz, double &mean_norm) -> double {
+            double csum = 0.0, nsum = 0.0; u32 cn = 0u;
+            for (u32 i = 0; i < 64u; ++i) {
+                double dot = 0.0, na = 0.0, nb = 0.0;
+                const float *pa = va.data() + (size_t(i) * 4u + lz) * TISSUE_CELLS;
+                const float *pb = vb.data() + (size_t(i) * 4u + lz) * TISSUE_CELLS;
+                for (u32 j = 0; j < TISSUE_CELLS; ++j) {
+                    dot += double(pa[j]) * double(pb[j]);
+                    na += double(pa[j]) * double(pa[j]);
+                    nb += double(pb[j]) * double(pb[j]);
+                }
+                nsum += std::sqrt(na);
+                if (na > 1.0 && nb > 1.0) { csum += (1.0 - std::clamp(dot / std::sqrt(na * nb), -1.0, 1.0)); ++cn; }
+            }
+            mean_norm = nsum / 64.0;
+            return cn ? (csum / double(cn)) : 0.0;
+        };
+        std::cout << "genesis_probe=laminar_snr";
+        for (u32 lz = 0; lz < 4u; ++lz) {
+            double cn_c = 0.0, cn_d = 0.0, d_tmp = 0.0;
+            double cab = layer_cos(cue_a1, cue_b, lz, cn_c);
+            double caa = layer_cos(cue_a1, cue_a2, lz, d_tmp);
+            double dab = layer_cos(vec_a1, vec_b, lz, cn_d);
+            double daa = layer_cos(vec_a1, vec_a2, lz, d_tmp);
+            std::cout << "  L" << (lz + 1u) << "_cue=" << std::fixed << std::setprecision(2) << cab << "/" << caa
+                      << "(" << (cab / std::max(0.01, caa)) << "x,n=" << std::setprecision(1) << cn_c << ")"
+                      << "  L" << (lz + 1u) << "_dk=" << std::setprecision(2) << dab << "/" << daa
+                      << "(" << (dab / std::max(0.01, daa)) << "x,n=" << std::setprecision(1) << cn_d << ")";
+        }
+        std::cout << '\n';
     }
 
     // Assay 13: Multi-Turn Stateful Context-Dependent Dialogue (XOR / Context-Gated Conversation — ZERO LLMs!)
@@ -3650,7 +3713,7 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
                 set_e19_aud(k < 4u ? 1 : -1, 0.8f);
                 gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl);
                 if (pop_vec && k >= 4u) {
-                    s.d.check(s.d.download(all_rings.data(), gpu.d_spike_ring.ptr, all_rings.size()), "e19 sr");
+                    s.d.check(s.d.download(all_rings.data(), DevicePtr(gpu.pool.spike_ring), all_rings.size()), "e19 sr");
                     for (u32 i = 0; i < 64u; ++i) if (cs[i].alive == 1u) {
                         u32 lim_z = std::min<u32>(cs[i].num_layers, 5u);
                         for (u32 z = 1u; z < lim_z; ++z) {
@@ -4441,7 +4504,7 @@ int run_converse(Session &s, const std::string &load_path, const std::string &sc
             u32 sl = cs[0].layer_slabs[z];
             if (sl == INVALID_SLAB) continue;
             std::vector<u8> sr(TISSUE_CELLS);
-            s.d.check(s.d.download(sr.data(), gpu.d_spike_ring.ptr + size_t(sl) * TISSUE_CELLS, TISSUE_CELLS), "conv sr");
+            s.d.check(s.d.download(sr.data(), DevicePtr(gpu.pool.spike_ring) + size_t(sl) * TISSUE_CELLS, TISSUE_CELLS), "conv sr");
             u32 act_cells = 0u;
             for (u8 r : sr) if (r != 0u) ++act_cells;
             if (z) lstr << ',';
@@ -4497,7 +4560,7 @@ int run_converse(Session &s, const std::string &load_path, const std::string &sc
 
 int command(int argc, char **argv) {
     if (argc < 3 || std::string_view(argv[2]) == "--help") {
-        std::cout << R"(Axion Genesis v38  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
+        std::cout << R"(Axion Genesis v40  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
 
   ./axion genesis bench    [--pop N] [--substeps S] [--repeats R] [--world 256|512|1024]
   ./axion genesis evolve   [--pop N] [--max-areas L] [--max-syn-slabs S] [--world 256|512|1024] [--ticks T] [--seed S] [--challenge 0|1|2] [--controls] [--load FILE] [--save FILE] [--video FILE] [--video-title TITLE]
@@ -4537,7 +4600,7 @@ runtime-scalable 256x256 / 512x512 / 1024x1024 planet.
     if (sub == "evolve") {
         u32 pop_n = 512, max_layers = 0, max_syn_slabs = 0, world_size = WORLD_W, ticks = 2000, seed = 42, challenge = 1;
         bool controls = false;
-        std::string load_path, save_path, video_path, video_title = "AXION GENESIS V38";
+        std::string load_path, save_path, video_path, video_title = "AXION GENESIS V40";
         for (int i = 3; i < argc; ++i) {
             std::string_view f = argv[i];
             if (f == "--controls") { controls = true; continue; }

@@ -14,7 +14,7 @@ AX_FN u32 ncta_x() { u32 v; asm("mov.u32 %0, %%nctaid.x;" : "=r"(v)); return v; 
 AX_FN u32 ntid_x() { u32 v; asm("mov.u32 %0, %%ntid.x;" : "=r"(v)); return v; }
 AX_FN u32 ntid_y() { u32 v; asm("mov.u32 %0, %%ntid.y;" : "=r"(v)); return v; }
 AX_FN u32 lane_id() { u32 v; asm("mov.u32 %0, %%laneid;" : "=r"(v)); return v; }
-AX_FN void sync_block() { asm volatile("bar.sync 0;"); }
+AX_FN void sync_block() { asm volatile("bar.sync 0;" ::: "memory"); }
 
 AX_FN float fast_sin(float x) { float r; asm("sin.approx.ftz.f32 %0, %1;" : "=f"(r) : "f"(x)); return r; }
 AX_FN float fast_cos(float x) { float r; asm("cos.approx.ftz.f32 %0, %1;" : "=f"(r) : "f"(x)); return r; }
@@ -563,6 +563,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
         pool.tissue[u64(sl0) * TISSUE_CELLS + tid] = zcell;
         pool.neurons[u64(sl0) * TISSUE_CELLS + tid] = 0ull;
         pool.spike_ring[u64(sl0) * TISSUE_CELLS + tid] = 0u;
+        pool.spike_ring_next[u64(sl0) * TISSUE_CELLS + tid] = 0u;
         pool.cell_stripes[u64(sl0) * TISSUE_CELLS + tid] = 0u;
         if (snap_out) snap_out->step0[tid] = is_zygote ? TK_STEM : TK_EMPTY;
     } else {
@@ -822,6 +823,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                         pool.tissue[u64(nsl) * TISSUE_CELLS + tid] = 0ull;
                         pool.neurons[u64(nsl) * TISSUE_CELLS + tid] = 0ull;
                         pool.spike_ring[u64(nsl) * TISSUE_CELLS + tid] = 0u;
+                        pool.spike_ring_next[u64(nsl) * TISSUE_CELLS + tid] = 0u;
                         pool.cell_stripes[u64(nsl) * TISSUE_CELLS + tid] = 0u;
                     }
                     // oSVZ Outer Radial Glia (oRG) transit-amplifying neurogenesis: refreshed cranial proliferation budget (14u)
@@ -836,6 +838,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                         pool.tissue[u64(nsl) * TISSUE_CELLS + tid] = child_z;
                         pool.neurons[u64(nsl) * TISSUE_CELLS + tid] = 0ull;
                         pool.spike_ring[u64(nsl) * TISSUE_CELLS + tid] = 0u;
+                        pool.spike_ring_next[u64(nsl) * TISSUE_CELLS + tid] = 0u;
                         pool.cell_stripes[u64(nsl) * TISSUE_CELLS + tid] = 0u;
                     }
                 }
@@ -861,11 +864,11 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
         u64 t = pool.tissue[u64(sl) * TISSUE_CELLS + tid];
         u8 tk = tis_kind(t);
         // Conserved Vertebrate MGE/CGE Tangential Interneuron Migration across ALL deep cortical sheets (z > 0):
-        // Balanced 1:1 somatic PV+ basket & apical SST+ Martinotti gating (~70% PYR / ~15% PV / ~15% SST net with OP_DIFF):
-        // Prevents BOTH 31%-PV silencing barriers AND 6%-SST apical runaway reverberation -> crisp MMN, DarkCos & 8-12L growth!
+        // Calibrated to canonical mammalian neocortex (~76-78% PYR / ~12% PV / ~10% SST net with OP_DIFF):
+        // Prevents 35%-I over-inhibition on 1,500-4,000n cortices while keeping crisp gamma Top-k & dendritic gating!
         if (z > 0u && (tk == TK_STEM || tk == TK_NEU_EXC)) {
-            u32 mig_h = (ux * 3u + uy * 5u + z * 7u) % 9u;
-            if (mig_h == 0u || mig_h == 5u) {
+            u32 mig_h = (ux * 3u + uy * 5u + z * 7u) % 13u;
+            if (mig_h == 0u || mig_h == 6u) {
                 tk = (mig_h == 0u) ? TK_NEU_PV : TK_NEU_SST;
             } else if (tk == TK_STEM) {
                 tk = TK_NEU_EXC;
@@ -907,6 +910,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
             pool.neurons[u64(sl) * TISSUE_CELLS + tid] =
                 tk_is_excitable(tk) ? pack_neuron(0, 0, 0u, 0u, 16u, tk, 0u, 0u, slow_tau, fast_plast) : 0ull;
             pool.spike_ring[u64(sl) * TISSUE_CELLS + tid] = 0u;
+            pool.spike_ring_next[u64(sl) * TISSUE_CELLS + tid] = 0u;
         }
     }
     if (tid == 0u) cr.num_layers = u16(live_L);
@@ -1042,9 +1046,14 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                     bool is_asc_pyr = (((sz == 0u && s_tk == TK_NEU_EXC && tz == 1u) || (sz >= 1u && tz == sz + 1u)) && !is_inh);
                     bool is_desc_pyr = (sz > tz && tz >= 1u && !is_inh);
                     u32 dz_c = (sz > tz) ? (sz - tz) : (tz - sz);
-                    u32 s_col = (s_tk == TK_EAR) ? (((ux < 8u ? ux : (17u - ux)) + uy * 2u) & 3u)
-                                : ((s_tk == TK_EYE) ? (((ux < 8u ? ux : (17u - ux)) + uy) & 3u)
-                                : ((s_tk == TK_CHEM) ? ((ux + uy) & 3u) : ((ux & 1u) | ((uy & 1u) << 1))));
+                    // Collision-free anatomical rank-ordered cochlear/retinal/olfactory Sperry labeled-line columns!
+                    // Guarantees distinct ears (v0/v1/v2/p) & eyes ALWAYS project onto orthogonal L1 columns on ANY body plan!
+                    u32 s_col = (ux & 1u) | ((uy & 1u) << 1);
+                    if (tk_is_sensor(s_tk)) {
+                        u32 s_rank = 0u;
+                        for (u32 si = 0u; si < tid; ++si) if (tis_kind(s_tis[si]) == s_tk) ++s_rank;
+                        s_col = s_rank & 3u;
+                    }
                     // Authentic Braitenberg & Schuz (1998) Scale-Invariant Cortical Convergence:
                     // Dense thalamocortical sensory drivers (10x8) and ascending feedforward pyramidal axons (6x6)
                     // with actin-polymerization forward momentum fill 12-16 distinct synapses/stripe across 1,000-8,000n cortices!

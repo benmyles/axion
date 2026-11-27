@@ -271,7 +271,8 @@ struct TissuePool {
     // Per-Layer Unified Cellular Tissue & Spiking State [max_layers * 256]
     u64 *tissue;          // Persistent discrete CA state: kind, gene_state, budget/tau, surface_tag, 4x i8 morphogens
     u64 *neurons;         // Packed 8-byte multi-compartment spiking state (vs, va, ua, ring, ema, meta)
-    u8 *spike_ring;       // 256 B/layer L2-resident 8-substep spike history for arbitrary cross-layer delayed routing!
+    u8 *spike_ring;       // 256 B/layer read-only previous-tick 8-substep spike history (100% race-free cross-layer reads!)
+    u8 *spike_ring_next;  // 256 B/layer write-only current-tick spike history (swapped with spike_ring after step_brains!)
     u8 *cell_stripes;     // [max_layers * 256] low nibble: stripe count (0..12), high nibble: exc_q (R_in ~ 1/K scaling!)
 
     // Variable Fan-In Blocked Coalesced v4.u32 Synapse Table!
