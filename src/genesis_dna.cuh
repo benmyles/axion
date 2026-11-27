@@ -364,8 +364,8 @@ AX_FN GenesisDNA make_founder_dna(u32 seed) {
     for (u32 i = 0; i < 12u; ++i) d.bio_params[i] = rand_i8(r, -56, 56);
     d.bio_params[7] = rand_i8(r, -16, 64); // bilateral symmetry gene (evolvable!)
     d.num_rules = u8(nr);
-    d.max_layers_gene = u8(8u + (mix(r += 91u) % 3u)); // Founders start 8-10 cortical layers (~1,000-1,600 neurons!), expand freely up to 32 (8,192 neurons)!
-    d.birth_steps = u8(15u + (mix(r += 97u) & 1u));
+    d.max_layers_gene = u8(8u + (mix(r += 91u) % 3u)); // Founders start 8-10 cortical layers (~1,200-2,000 neurons!), expand freely up to 32 (8,192 neurons)!
+    d.birth_steps = u8(18u + (mix(r += 97u) & 1u)); // Decoupled oSVZ proliferation (z=0 finishes <8; z>=1 grows full 120-200n deep cortical sheets!)
     d.adult_steps = u8(2u + (mix(r += 101u) & 1u));
     return d;
 }
@@ -463,7 +463,7 @@ AX_FN GenesisDNA mutate_dna(const GenesisDNA &pa, const GenesisDNA &pb, u32 seed
     else if (lroll >= 244u && ml > 1u) --ml;
     out.max_layers_gene = u8(ml);
 
-    if ((lroll & 63u) == 1u) out.birth_steps = u8(clamp_i32(i32(out.birth_steps) + ((lroll & 128u) ? 1 : -1), 8, 22));
+    if ((lroll & 63u) == 1u) out.birth_steps = u8(clamp_i32(i32(out.birth_steps) + ((lroll & 128u) ? 1 : -1), 8, 26));
     if ((lroll & 63u) == 2u) out.adult_steps = u8(clamp_i32(i32(out.adult_steps) + ((lroll & 128u) ? 1 : -1), 1, 6));
     return out;
 }
@@ -588,7 +588,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
     sync_block();
 
     // 2. RUN DISCRETE CA-GRN CELLULAR GROWTH (Asymmetric Mitosis, oSVZ Cortical Sheet Expansion, Morphogens, Diff!)
-    u32 n_steps = is_maturation ? clamp_i32(i32(dna.adult_steps), 1, 6) : clamp_i32(i32(dna.birth_steps), 8, 22);
+    u32 n_steps = is_maturation ? clamp_i32(i32(dna.adult_steps), 1, 6) : clamp_i32(i32(dna.birth_steps), 8, 26);
     u32 diff_start = is_maturation ? 1u : ((n_steps >= 6u) ? (n_steps - 4u) : 2u);
     u32 stage_flag = is_maturation ? 1u : 0u;
 

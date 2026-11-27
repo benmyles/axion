@@ -736,10 +736,11 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 src_l0 = u32(packed_src_l & 31ull);
                 st0_ext = (has_st0 && src_l0 != layer_idx && s_cr_slabs[src_l0] != INVALID_SLAB);
                 st0_local = (has_st0 && !st0_ext);
-                // Authentic O'Reilly & Frank (2006) PBWM Working-Memory Gating (1 free bit 0x80 in stripe_src_layer!):
-                // Empty L4+ stays 100% OPEN to encode Item X at full gain; the instant local STF calcium latches (stp>=5 -> bit 7 = 1),
-                // pfc_shield CLOSES bottom-up overwrite (0.375x vs 1.25x) until stp decays or VTA DA flushes the gate!
-                pfc_shield = (layer_idx >= 4u && is_pyr && st0_local && st0_stf_hold && !pfc_gate_flush && ext_ach_q < 26);
+                // Authentic O'Reilly & Frank (2006) + Miller & Cohen (2001) Two-Slot Prefrontal PBWM Working Memory:
+                // - L3 = Fast ACh-gated working-memory buffer (encodes new Probe Y / Syllable 2 on phasic ACh onset!)
+                // - L4..L_top = Deep DA-gated shielded executive slot (holds Context X / Episode A at 0.25x bottom-up shield
+                //   against BOTH distractors AND incoming Probe Y until natural 24-32t STF decay or VTA DA RPE flushes it!)
+                pfc_shield = (layer_idx >= 4u && is_pyr && st0_local && st0_stf_hold && !pfc_gate_flush);
                 if (has_st0) {
                     if (st0_local || s_l_spk[src_l0] != 0u) {
                         u64 sb0 = u64(ss0) * LAYER_SYN_QUADS;
@@ -960,10 +961,11 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                         i32 curr = sw_i * i32(stp_v + 2u);
                                         bool is_ap_l = (s & 0x04000000u) != 0u;
                                         if (layer_idx >= 2u && sw_i > 0 && !is_ap_l) {
-                                            // Authentic Mongillo-Wang Bistable Prefrontal STF Attractor (14x contrast!):
-                                            // Resting (stp<=4) is strictly subcritical (>>2 -> 0 dark drift);
-                                            // Hebbian pre*post facilitated engram (stp>=5) boosts 3.5x on L3+ / 2.5x on L2 -> crisp assembly persistence!
-                                            curr = (stp_v >= 5u) ? ((layer_idx >= 3u) ? ((curr * 7) >> 1) : ((curr * 5) >> 1)) : (curr >> 2);
+                                            // Authentic Mongillo-Wang Bistable Prefrontal STF Attractor (16x contrast!):
+                                            // Resting (stp<=3 on L3+, stp<=4 on L2) is strictly subcritical (>>2 -> 0 dark drift);
+                                            // Hebbian pre*post facilitated engram (stp>=4 on L3+, stp>=5 on L2) boosts 4.0x / 2.5x -> crisp 24-31t persistence!
+                                            curr = (layer_idx >= 3u) ? ((stp_v >= 4u) ? (curr << 2) : (curr >> 2))
+                                                                     : ((stp_v >= 5u) ? ((curr * 5) >> 1) : (curr >> 2));
                                         } else if (layer_idx == 1u && sw_i > 0) {
                                             curr >>= 3;
                                         } else if (layer_idx == 0u && !is_eff && sw_i > 0 && !tk_is_sensor(s_tk[pre])) {
@@ -999,7 +1001,8 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                             i32 curr = sw_i * i32(stp_v + 2u);
                                             bool is_ap_l = (s & 0x04000000u) != 0u;
                                             if (layer_idx >= 2u && sw_i > 0 && !is_ap_l) {
-                                                curr = (stp_v >= 5u) ? ((layer_idx >= 3u) ? ((curr * 7) >> 1) : ((curr * 5) >> 1)) : (curr >> 2);
+                                                curr = (layer_idx >= 3u) ? ((stp_v >= 4u) ? (curr << 2) : (curr >> 2))
+                                                                         : ((stp_v >= 5u) ? ((curr * 5) >> 1) : (curr >> 2));
                                             } else if (layer_idx == 1u && sw_i > 0) {
                                                 curr >>= 3;
                                             } else if (layer_idx == 0u && !is_eff && sw_i > 0 && !tk_is_sensor(s_tk[pre])) {
@@ -1166,9 +1169,9 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         eff_sens = (eff_sens * 20) / i32(20u + (ema << 1));
                     }
                     // Authentic Egorov et al. (2002 Nature) Entorhinal/Prefrontal Intrinsic I_CAN Graded Persistence:
-                    // Strictly subthreshold alone (110*4 = 440 << 700 pA -> ZERO spontaneous runaway!) and ONLY active
-                    // on deep L3+ Hebbian engram members (`st0_stf_hold==true`) while local peers fire (L2 cools fast -> ZERO infinite recharge!)
-                    i32 ican_curr = (layer_idx >= 3u && is_pyr && st0_stf_hold && !pfc_gate_flush && s_any_spk[cur_b] != 0u) ? 110 : 0;
+                    // Strictly subthreshold alone (150*3.2 = 480 << 700 pA -> ZERO spontaneous firing without S_A spike!)
+                    // and ONLY active on deep L3+ Hebbian engram members (`st0_stf_hold==true`) while local peers fire!
+                    i32 ican_curr = (layer_idx >= 3u && is_pyr && st0_stf_hold && !pfc_gate_flush && s_any_spk[cur_b] != 0u) ? 150 : 0;
                     i32 inp = is_sens ? eff_sens : (i_basal + bac_curr + ican_curr + sleep_drive + lman_curr + sens_curr - pv_shunt - col_shunt);
                     if (is_eff) inp += (i_apical >> 2);
                     if (d2_err_veto) {
@@ -1512,6 +1515,12 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                             }
                         }
                     }
+                    // Authentic Marr (1971) / Hopfield (1982) / Buzsaki (2015) CA3 One-Shot Hebbian Auto-Associative Binding:
+                    // During positive-onset phasic ACh encoding (`!pfc_shield && ext_ach_q > 14`), co-active winning assembly
+                    // pairs inside L3..L_top strengthen gently (+1 up to l2_loc_cap) -> rock-solid self-completing engrams!
+                    if (layer_idx >= 3u && !is_ext && is_pyr && !pre_inh && !is_ap_syn && dw == 0 &&
+                        !pfc_shield && ext_ach_q > 14 && pre_rec && post_recent && abs_w < l2_loc_cap && ((tick + idx_k) & 1u) == 0u)
+                        dw = 1;
                     // Gentle phasic-ACh unsupervised Oja sharpening ONLY on over-active hubs (ZERO passive erosion of calm detectors!):
                     if (!pre_inh && !is_eff && dw == 0 && layer_idx >= 1u && phasic_ach && plat && post_recent && !pre_rec && ema > target_ema + 14u && abs_w > 10 && ((tick + idx_k) & 3u) == 0u)
                         dw = -1;
@@ -1547,16 +1556,16 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         s_stp = (s & 0x1fffffffu) | 0xe0000000u;
                     } else if (layer_idx >= 2u && !is_ext && is_pyr && !pre_inh && !is_ap_syn) {
                         u32 cs_u = s >> 29;
-                        // True One-Shot Associative Hebbian-PBWM Cell-Assembly STF (Mongillo 2008 + Hasselmo 2006):
+                        // True Two-Slot One-Shot Associative Hebbian-PBWM Cell-Assembly STF (Mongillo 2008 + Hasselmo 2006):
                         // - ONLY charges from resting (`cs_u <= 2u`, ZERO infinite dark self-recharging!) on co-active winning pairs
                         //   (`pre_rec && post_recent`) under unshielded ascending drive (`got_asc`).
-                        // - Phasic ACh novelty (`ext_ach_q > 10`) flushes stale non-matching synapses (`!post_recent -> stp=1`)
-                        //   so new Stimulus B cleanly overwrites S_A instead of merging attractors across zero-DA trials!
+                        // - Positive-onset ACh novelty (`ext_ach_q > 18`) flushes stale non-matching engrams on L3 (Slot 2) ONLY;
+                        //   L4..L_top (Slot 1) stays shielded until natural 24-32t decay or VTA DA RPE (`pfc_gate_flush`)!
                         bool got_asc = (!pfc_shield) && ((ext_tot[0] + ext_tot[1] + ext_tot[2] + ext_tot[3]) > 140);
                         if (cs_u <= 2u && pre_rec && post_recent && (got_asc || (!pfc_shield && ext_ach_q > 12))) {
                             s_stp = (s & 0x1fffffffu) | 0xe0000000u; // One-shot crisp encode to stp=7!
-                        } else if ((layer_idx >= 3u && pfc_gate_flush) || (!pfc_shield && ext_ach_q > 18 && !post_recent && cs_u >= 5u)) {
-                            s_stp = (s & 0x1fffffffu) | 0x20000000u; // Clean DA or strong ACh-novelty stale-engram flush to stp=1!
+                        } else if ((layer_idx >= 3u && pfc_gate_flush) || (layer_idx == 3u && ext_ach_q > 18 && !post_recent && cs_u >= 4u)) {
+                            s_stp = (s & 0x1fffffffu) | 0x20000000u; // Clean DA flush (L3+) or ACh-onset Slot-2 overwrite (L3)!
                         } else {
                             // Natural Cortical Timescale Hierarchy (Murray et al. 2014 Nature Neurosci):
                             // L2 bigram echo: ~12t ((tick&3)==0); L3+/L4+ shielded PBWM HOLD: ~24-32t ((tick&7)==0)!
@@ -1593,14 +1602,14 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         if (nw == 0u) return 0u;
                         bool stf_n = (loc_st && layer_idx >= 2u && is_pyr && bfe_s32(nw, 8u, 8u) > 0 && ((nw & 0x04000000u) == 0u));
                         u32 dep_f = stf_n ? (((nw >> 29) != 1u) ? 0x40u : 0u) : ((nw < 0xe0000000u) ? 0x40u : 0u);
-                        u32 hold_f = (stf_n && (nw >> 29) >= 5u) ? 0x80u : 0u; // Exact 1-bit PBWM active-STF hold indicator!
+                        u32 hold_f = (stf_n && (nw >> 29) >= (layer_idx >= 3u ? 4u : 5u)) ? 0x80u : 0u; // Exact 1-bit PBWM active-STF hold (24-31t on L3+!)
                         return ((((nw >> 16) & 0x7fu) != 64u) ? 0x20u : 0u) | dep_f | hold_f;
                     };
                     // Stripe 0: bit-exact zero-work skip for BOTH external AND silent-layer local stripes!
                     bool has_e0 = (st_flags_mask & 1u) != 0u;
                     bool has_d0 = (st_flags_mask & (1u << 12)) != 0u;
                     bool loc0_need = st0_local && (any_loc_spk != 0u || spk_acc != 0u ||
-                                                   (has_d0 && (do_rec_tick || pfc_gate_flush || (!pfc_shield && ext_ach_q > 18))) ||
+                                                   (has_d0 && (do_rec_tick || pfc_gate_flush || (layer_idx == 3u && ext_ach_q > 18))) ||
                                                    (do_ltp && has_e0 && (do_dec_tick || mod_est_tick)) || (do_ltp && (tick & 63u) == 0u));
                     if (loc0_need || !cell_idle || st0_ext_need != 0u) {
                         u64 sb0 = u64(ss0) * LAYER_SYN_QUADS;
@@ -1827,8 +1836,11 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 cr.mot_vocal2 = air_sac(rv2);
                 cr.mot_secrete = clampf(float(eu[8]) / (85.0f * nl), 0.0f, 1.0f);
 
+                // Authentic Nucleus Basalis Positive-Onset Cholinergic Novelty (Hasselmo 2006 / Yu & Dayan 2005):
+                // Phasic ACh fires on NEW sensory appearance (`snorm > prev_sens`), NEVER on cue offset into silence
+                // (prevents dark delay tick 0 from falsely firing ACh and wiping L3/L4 working memory engrams!)
                 float snorm = float(tot_spk) * 0.01f;
-                cr.mod_ach = clampf(fabsf_dev(snorm - cr.prev_sens) * 2.2f, 0.0f, 1.0f);
+                cr.mod_ach = clampf((snorm > cr.prev_sens ? (snorm - cr.prev_sens) : 0.0f) * 2.4f, 0.0f, 1.0f);
                 cr.prev_sens = snorm;
             }
             if (ctr) {
@@ -2002,7 +2014,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
 
     // 3. Selective Active Foraging, Essential Endocrine/Digestive & 3-Fold Vocal-Syrinx Glands (3 glands saturate!) & Catalysis
     float gland_sat = clampf(float(bp.counts[TK_GLAND]) * 0.34f, 0.0f, 1.0f);
-    float digest_mul = 0.84f + 0.44f * gland_sat;
+    float digest_mul = 0.65f + 0.63f * gland_sat;
     float detox_mul = 1.12f - 0.37f * gland_sat;
     // Authentic Vogel (1994) Hydrodynamic Boundary-Layer Ventilation:
     // Muscular swimming/ram-ventilation sweeps fresh nutrient-rich water across the mouth (1.00x);
