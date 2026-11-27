@@ -316,7 +316,7 @@ AX_FN GenesisDNA make_founder_dna(u32 seed) {
     // Lateral pair on state 1/8 + posterior-trunk midline glottal fold on state 1 (m1 in [-20,-7], m2<=4) -> full 3-fold anatomy + full muscles!
     d.rules[nr++] = make_rule(1u, 1u, -6, 127, 7, 20, OP_DIFF, 0u, TK_GLAND, 0u, 0, 0, 0x21u, 9u, 0x0044u);
     d.rules[nr++] = make_rule(8u, 1u, -48, 24, 15, 22, OP_DIFF, 0u, TK_GLAND, 0u, 0, 0, 0x21u, 9u, 0x0044u);
-    d.rules[nr++] = make_rule(1u, 1u, -20, -7, -120, 4, OP_DIFF, 0u, TK_GLAND, 0u, 0, 0, 0x21u, 9u, 0x0044u);
+    d.rules[nr++] = make_rule(1u, 1u, -24, 4, -120, 4, OP_DIFF, 0u, TK_GLAND, 0u, 0, 0, 0x21u, 9u, 0x0044u);
     d.rules[nr++] = make_rule(8u, 1u, -120, -16, 23, 127, OP_DIFF, 0u, TK_STRUCT, 0u, 0, 0, 0x21u, 8u, 0x0048u);
 
     // 4. Crawling Discrete Axon Growth Cones with Authentic Mammalian Receptor Families (stage_pri bits 6..7 = rule_id 0..3!):
@@ -1034,7 +1034,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
             }
             if (tz == 0u && !is_hvc_extra) {
                 bool deep_pt = (sz == final_L - 1u) || (final_L >= 3u && sz == final_L - 2u);
-                if (sz > 4u && !deep_pt) continue;
+                if (sz > 5u && !deep_pt) continue;
             } else if (sz == 0u) {
                 if (tz > 1u) continue; // Primary sensory axons terminate in L1 primary sensory cortex (V1/A1)!
             } else if (!is_hvc_extra) {
@@ -1118,20 +1118,23 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                         s_col = s_rank & 3u;
                     }
                     // Authentic Braitenberg & Schuz (1998) Scale-Invariant Cortical Convergence
-                    // + Rigotti (2013 Nature) 4-Column Prefrontal Mixed-Selectivity Apical Feedback strictly on L4->L3 context hub
-                    // + Pan-Cortical Corticobulbar (HVC->GLAND) & Excitatory Corticospinal (PFC/M1->MUSCLE) Multi-Tract Readout:
-                    bool is_desc_mix = (is_desc_pyr && tz == 3u && sz == 4u);
+                    // + 3-Tier Rigotti (2013 Nature) 4-Column Prefrontal Mixed-Selectivity Executive Feedback (L5->L4, L5->L3, L4->L3)
+                    // + Supramodal BA10 L5 Corticobulbar Speech Readout (L5->GLAND without 60-tick tonic motor jamming on MUSCLE/GRASP!)
+                    bool is_desc_mix = (is_desc_pyr && ((tz == 3u && sz == 4u) || (tz == 4u && sz == 5u) || (tz == 3u && sz == 5u)));
+                    bool is_ba10_voc = (is_corticobulb && !is_hvc_extra && sz == 5u &&
+                                        !(sz == final_L - 1u || (final_L >= 3u && sz == final_L - 2u)));
                     u32 n_br = is_hvc_extra ? 6u
                                             : (is_thalamo ? (is_maturation ? 2u : 10u)
                                                           : (is_maturation ? 2u
                                                                            : ((is_corticobulb && is_inh) ? 1u
-                                                                                                         : (is_corticobulb ? 8u
-                                                                                                                           : ((sz == tz && tz >= 1u && is_inh) ? 4u
-                                                                                                                                                               : (is_asc_pyr ? 6u
-                                                                                                                                                                             : (is_local_pyr ? 4u
-                                                                                                                                                                                             : ((sz == tz) ? 4u
-                                                                                                                                                                                                           : (is_desc_mix ? 4u
-                                                                                                                                                                                                                          : ((dz_c >= 2u && tz > 0u) ? 1u : 3u))))))))));
+                                                                                                         : (is_ba10_voc ? 3u
+                                                                                                                        : (is_corticobulb ? 8u
+                                                                                                                                          : ((sz == tz && tz >= 1u && is_inh) ? 4u
+                                                                                                                                                                              : (is_asc_pyr ? 6u
+                                                                                                                                                                                            : (is_local_pyr ? 4u
+                                                                                                                                                                                                            : ((sz == tz) ? 4u
+                                                                                                                                                                                                                          : (is_desc_mix ? 4u
+                                                                                                                                                                                                                                         : ((dz_c >= 2u && tz > 0u) ? 1u : 3u)))))))))));
                     u32 max_land = is_thalamo ? 8u
                                               : ((is_corticobulb && is_inh) ? 1u
                                                                             : (is_corticobulb ? 5u
@@ -1346,9 +1349,9 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                         // Authentic Wang (2006) / Mongillo (2008) Activity-Silent Prefrontal STF Specialization:
                                         // Local deep prefrontal recurrent excitatory synapses (sz==tz>=2, basal) initialize at
                                         // subcritical resting STF (stp=1 -> 3x base, facilitates to 5 -> 7x = 2.33x WM gain!);
-                                        // Local recurrent L2..L4 pyramidal synapses start at resting STF (stp=1);
-                                        // feedforward sensory/ascending, L5+ executive & inhibitory synapses initialize at full STD (stp=6)!
-                                        u32 init_stp = (sz == tz && tz >= 2u && tz <= 4u && t_tk == TK_NEU_EXC && !is_inh && comp == 0u) ? 1u : 6u;
+                                        // Local recurrent L2..L5 pyramidal synapses start at resting STF (stp=1 -> 3-Tier Executive Hierarchy!);
+                                        // feedforward sensory/ascending, L6+ global workspace & inhibitory synapses initialize at full STD (stp=6)!
+                                        u32 init_stp = (sz == tz && tz >= 2u && tz <= 5u && t_tk == TK_NEU_EXC && !is_inh && comp == 0u) ? 1u : 6u;
                                         u32 syn_w = pack_synapse(tid, w, 0, delay, comp, rule_id & 3u, init_stp);
                                         if (is_cb_res) atomic_exch_gen_u32(&s_in_syn[post * SYN_PER_STRIPE + dst_slot], syn_w);
                                         else s_in_syn[post * SYN_PER_STRIPE + dst_slot] = syn_w;
@@ -1624,7 +1627,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
         u32 ex_str = (body.counts[TK_STRUCT] > 6u) ? (body.counts[TK_STRUCT] - 6u) : 0u;
         u32 ex_grp = (body.counts[TK_GRASP] > 6u) ? (body.counts[TK_GRASP] - 6u) : 0u;
         u32 ex_mod = (body.counts[TK_NEU_MOD] > 6u) ? (body.counts[TK_NEU_MOD] - 6u) : 0u;
-        float sens_tumor = 0.0028f * float(ex_eye * ex_eye) + 0.0018f * float(ex_ear * ex_ear) +
+        float sens_tumor = 0.0028f * float(ex_eye * ex_eye) + 0.0028f * float(ex_ear * ex_ear) +
                            0.0036f * float(ex_gld * ex_gld) +
                            0.0024f * float(ex_chm * ex_chm) +
                            0.0022f * float(ex_stem * ex_stem) +

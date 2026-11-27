@@ -107,13 +107,13 @@ AX_FN void world_step_tile(WorldBuffers wb, u32 tick, u32 shift_chem, u32 challe
     __attribute__((shared)) float s_av2[18][18];
     __attribute__((shared)) float s_ter[18][18];
     __attribute__((shared)) u8 s_mat[18][18];
-    __attribute__((shared)) u32 s_reef[64];  // Up to 64 nomadic reefs (10-bit x | 10-bit y | flags<<20, supports 1024x1024!)
-    __attribute__((shared)) u32 s_storm[12]; // Up to 12 barometric storms (10-bit x | 10-bit y | mode<<20!)
+    __attribute__((shared)) u32 s_reef[128]; // Up to 128 nomadic reefs (10-bit x | 10-bit y | flags<<20, full 1024x1024 density!)
+    __attribute__((shared)) u32 s_storm[24]; // Up to 24 barometric storms (10-bit x | 10-bit y | mode<<20!)
 
     u32 flat = ly * 16u + lx;
     u32 bloom_phase = ((tick / 180u) ^ shift_chem) & 1u;
-    u32 n_reefs = min_u32(wb.num_reefs ? wb.num_reefs : 16u, 64u);
-    u32 n_storms = min_u32(wb.num_storms ? wb.num_storms : 3u, 12u);
+    u32 n_reefs = min_u32(wb.num_reefs ? wb.num_reefs : 16u, 128u);
+    u32 n_storms = min_u32(wb.num_storms ? wb.num_storms : 3u, 24u);
     if (flat < n_reefs) {
         u32 rf = flat;
         u32 reef_epoch = (tick + rf * 59u) / 360u; // Nomadic oceanic blooms migrate every 360t -> rewards active swimmers!
@@ -457,7 +457,7 @@ AX_FN void world_step_objects(WorldBuffers wb, const CreatureState *creatures, S
     if (oid >= wb.max_objects) return;
     u32 W = wb.w, H = wb.h, MX = wb.mask_x, MY = wb.mask_y, SY = wb.shift_y;
     float WF = float(W), HF = float(H);
-    u32 n_reefs = min_u32(wb.num_reefs ? wb.num_reefs : 16u, 64u);
+    u32 n_reefs = min_u32(wb.num_reefs ? wb.num_reefs : 16u, 128u);
     u32 half_reefs = max_u32(1u, n_reefs >> 1);
     u32 s_pod = (wb.max_objects * 7u) >> 5;   // 224 @ 1024, 896 @ 4096
     u32 s_mega = (wb.max_objects * 11u) >> 5; // 352 @ 1024, 1408 @ 4096

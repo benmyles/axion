@@ -198,9 +198,9 @@ struct GenesisGpu {
         wb.mask_x = world_w - 1u;
         wb.mask_y = world_h - 1u;
         wb.shift_y = (world_w >= 1024u) ? 10u : ((world_w >= 512u) ? 9u : 8u);
-        wb.num_reefs = (world_w >= 512u) ? 64u : 16u;
-        wb.num_vents = (world_w >= 1024u) ? 40u : ((world_w >= 512u) ? 28u : 10u);
-        wb.num_storms = (world_w >= 1024u) ? 12u : ((world_w >= 512u) ? 8u : 3u);
+        wb.num_reefs = (world_w >= 1024u) ? 76u : ((world_w >= 512u) ? 64u : 16u);
+        wb.num_vents = (world_w >= 1024u) ? 38u : ((world_w >= 512u) ? 28u : 10u);
+        wb.num_storms = (world_w >= 1024u) ? 20u : ((world_w >= 512u) ? 8u : 3u);
 
         pool.max_layers = max_layers;
         pool.max_syn_slabs = max_syn_slabs;
@@ -2577,25 +2577,25 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
                 if (cs[i].atp < 22.0f) { cs[i].atp = 22.0f; cs[i].prev_atp = 22.0f; }
             }
             s.d.check(s.d.upload(gpu.d_creatures.ptr, cs.data(), 64u * sizeof(CreatureState)), "dm ed ul");
-            // Present 8-tick stimulus (Q1 or Q2) while recording Cue-phase cortical representation, then 24t pitch-black silence!
-            cue_vec.assign(64u * 4u * TISSUE_CELLS, 0.0f);
+            // Present 8-tick stimulus (Q1 or Q2) while recording Cue-phase cortical representation (L1..L5), then 24t pitch-black silence!
+            cue_vec.assign(64u * 5u * TISSUE_CELLS, 0.0f);
             for (u32 k = 0; k < 4u; ++k, ++sim_t) { set_dm_aud(is_q1 ? 0 : 1); gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl); }
             for (u32 k = 0; k < 4u; ++k, ++sim_t) {
                 set_dm_aud(is_q1 ? 1 : 0); gpu.step_brains(sim_t, abl); gpu.step_bodies(sim_t, seed, abl);
                 s.d.check(s.d.download(all_rings.data(), DevicePtr(gpu.pool.spike_ring), all_rings.size()), "dm cu sr");
                 for (u32 i = 0; i < 64u; ++i) if (cs[i].alive == 1u) {
-                    u32 lim_z = std::min<u32>(cs[i].num_layers, 5u);
+                    u32 lim_z = std::min<u32>(cs[i].num_layers, 6u);
                     for (u32 z = 1u; z < lim_z; ++z) {
                         u32 sl = cs[i].layer_slabs[z];
                         if (sl == INVALID_SLAB || sl >= gpu.max_layers) continue;
                         const u8 *sr = all_rings.data() + size_t(sl) * TISSUE_CELLS;
-                        float *dst = cue_vec.data() + (size_t(i) * 4u + size_t(z - 1u)) * TISSUE_CELLS;
+                        float *dst = cue_vec.data() + (size_t(i) * 5u + size_t(z - 1u)) * TISSUE_CELLS;
                         for (u32 c = 0; c < TISSUE_CELLS; ++c) dst[c] += float(__builtin_popcount(u32(sr[c] & 0x0fu)));
                     }
                 }
             }
 
-            pop_vec.assign(64u * 4u * TISSUE_CELLS, 0.0f);
+            pop_vec.assign(64u * 5u * TISSUE_CELLS, 0.0f);
             u64 s0 = gpu.read_counters().total_spikes;
             double v0_s = 0.0, v2_s = 0.0; u32 sn = 0u, hits = 0u;
             for (u32 k = 0; k < DM_DELAY; ++k, ++sim_t) {
@@ -2609,12 +2609,12 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
                         bool av2 = (cs[i].mot_vocal2 > cs[i].mot_vocal0 + 0.02f && cs[i].mot_vocal2 > 0.12f);
                         bool av0 = (cs[i].mot_vocal0 > cs[i].mot_vocal2 + 0.02f && cs[i].mot_vocal0 > 0.12f);
                         if (is_q1 ? av2 : av0) ++hits;
-                        u32 lim_z = std::min<u32>(cs[i].num_layers, 5u);
+                        u32 lim_z = std::min<u32>(cs[i].num_layers, 6u);
                         for (u32 z = 1u; z < lim_z; ++z) {
                             u32 sl = cs[i].layer_slabs[z];
                             if (sl == INVALID_SLAB || sl >= gpu.max_layers) continue;
                             const u8 *sr = all_rings.data() + size_t(sl) * TISSUE_CELLS;
-                            float *dst = pop_vec.data() + (size_t(i) * 4u + size_t(z - 1u)) * TISSUE_CELLS;
+                            float *dst = pop_vec.data() + (size_t(i) * 5u + size_t(z - 1u)) * TISSUE_CELLS;
                             for (u32 c = 0; c < TISSUE_CELLS; ++c) dst[c] += float(__builtin_popcount(u32(sr[c] & 0x0fu)));
                         }
                     }
@@ -2629,9 +2629,9 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
             double cos_sum = 0.0; u32 cos_n = 0u;
             for (u32 i = 0; i < 64u; ++i) {
                 double dot = 0.0, na = 0.0, nb = 0.0;
-                const float *pa = va.data() + size_t(i) * 4u * TISSUE_CELLS;
-                const float *pb = vb.data() + size_t(i) * 4u * TISSUE_CELLS;
-                for (u32 j = 0; j < 4u * TISSUE_CELLS; ++j) {
+                const float *pa = va.data() + size_t(i) * 5u * TISSUE_CELLS;
+                const float *pb = vb.data() + size_t(i) * 5u * TISSUE_CELLS;
+                for (u32 j = 0; j < 5u * TISSUE_CELLS; ++j) {
                     dot += double(pa[j]) * double(pb[j]);
                     na += double(pa[j]) * double(pa[j]);
                     nb += double(pb[j]) * double(pb[j]);
@@ -2667,13 +2667,13 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
                   << "  recall_sep=" << std::setprecision(3) << rec_sep
                   << "  recall_hit=" << rec_hit
                   << "  stdp_edits=" << dm_ed << '\n';
-        // Per-layer laminar SNR X-ray diagnostic (L1..L4 cue & pitch-black dark SNR + firing activity!)
+        // Per-layer laminar SNR X-ray diagnostic (L1..L5 cue & pitch-black dark SNR + firing activity!)
         auto layer_cos = [&](const std::vector<float> &va, const std::vector<float> &vb, u32 lz, double &mean_norm) -> double {
             double csum = 0.0, nsum = 0.0; u32 cn = 0u;
             for (u32 i = 0; i < 64u; ++i) {
                 double dot = 0.0, na = 0.0, nb = 0.0;
-                const float *pa = va.data() + (size_t(i) * 4u + lz) * TISSUE_CELLS;
-                const float *pb = vb.data() + (size_t(i) * 4u + lz) * TISSUE_CELLS;
+                const float *pa = va.data() + (size_t(i) * 5u + lz) * TISSUE_CELLS;
+                const float *pb = vb.data() + (size_t(i) * 5u + lz) * TISSUE_CELLS;
                 for (u32 j = 0; j < TISSUE_CELLS; ++j) {
                     dot += double(pa[j]) * double(pb[j]);
                     na += double(pa[j]) * double(pa[j]);
@@ -2686,7 +2686,7 @@ int run_probe(Session &s, const std::string &load_path, u32 ticks, u32 seed) {
             return cn ? (csum / double(cn)) : 0.0;
         };
         std::cout << "genesis_probe=laminar_snr";
-        for (u32 lz = 0; lz < 4u; ++lz) {
+        for (u32 lz = 0; lz < 5u; ++lz) {
             double cn_c = 0.0, cn_d = 0.0, d_tmp = 0.0;
             double cab = layer_cos(cue_a1, cue_b, lz, cn_c);
             double caa = layer_cos(cue_a1, cue_a2, lz, d_tmp);
@@ -4568,7 +4568,7 @@ int run_converse(Session &s, const std::string &load_path, const std::string &sc
 
 int command(int argc, char **argv) {
     if (argc < 3 || std::string_view(argv[2]) == "--help") {
-        std::cout << R"(Axion Genesis v47  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
+        std::cout << R"(Axion Genesis v48  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
 
   ./axion genesis bench    [--pop N] [--substeps S] [--repeats R] [--world 256|512|1024]
   ./axion genesis evolve   [--pop N] [--max-areas L] [--max-syn-slabs S] [--world 256|512|1024] [--ticks T] [--seed S] [--challenge 0|1|2] [--controls] [--load FILE] [--save FILE] [--video FILE] [--video-title TITLE]
@@ -4608,7 +4608,7 @@ runtime-scalable 256x256 / 512x512 / 1024x1024 planet.
     if (sub == "evolve") {
         u32 pop_n = 512, max_layers = 0, max_syn_slabs = 0, world_size = WORLD_W, ticks = 2000, seed = 42, challenge = 1;
         bool controls = false;
-        std::string load_path, save_path, video_path, video_title = "AXION GENESIS V45";
+        std::string load_path, save_path, video_path, video_title = "AXION GENESIS V48";
         for (int i = 3; i < argc; ++i) {
             std::string_view f = argv[i];
             if (f == "--controls") { controls = true; continue; }
