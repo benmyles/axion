@@ -3991,11 +3991,19 @@ int run_converse(Session &s, const std::string &load_path, const std::string &sc
     s.d.check(s.d.download(top_bps.data(), gpu.d_bodies.ptr, 256u * sizeof(BodyPhenotype)), "conv scan bp");
 
     std::vector<u32> picked;
-    // Prefer full multimodal stereo/3-fold deep-cortex speakers (EYE + EAR>=2 + GLAND>=3 + MUSCLE + deep cortex) honestly from GPU!
+    // Prefer full multimodal stereo/3-fold deep-cortex speakers (EYE + EAR>=2 + GLAND>=3 + MUSCLE + >=6L deep cortex) honestly from GPU!
     for (u32 i = 0; i < n_eval && picked.size() < group_n; ++i) {
         if (top_bps[i].counts[TK_EYE] > 0u && top_bps[i].counts[TK_EAR] >= 2u &&
-            top_bps[i].counts[TK_GLAND] >= 3u && top_bps[i].counts[TK_MUSCLE] > 0u && top_bps[i].active_neurons >= 64u)
+            top_bps[i].counts[TK_GLAND] >= 3u && top_bps[i].counts[TK_MUSCLE] > 0u &&
+            top_bps[i].grown_layers >= 6u && top_bps[i].active_neurons >= 400u)
             picked.push_back(cand_idx[i]);
+    }
+    for (u32 i = 0; i < n_eval && picked.size() < group_n; ++i) {
+        u32 idx_c = cand_idx[i];
+        if (std::find(picked.begin(), picked.end(), idx_c) == picked.end() &&
+            top_bps[i].counts[TK_EYE] > 0u && top_bps[i].counts[TK_EAR] >= 2u &&
+            top_bps[i].counts[TK_GLAND] >= 3u && top_bps[i].counts[TK_MUSCLE] > 0u && top_bps[i].active_neurons >= 64u)
+            picked.push_back(idx_c);
     }
     for (u32 i = 0; i < n_eval && picked.size() < group_n; ++i) {
         u32 idx_c = cand_idx[i];
@@ -4560,7 +4568,7 @@ int run_converse(Session &s, const std::string &load_path, const std::string &sc
 
 int command(int argc, char **argv) {
     if (argc < 3 || std::string_view(argv[2]) == "--help") {
-        std::cout << R"(Axion Genesis v46  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
+        std::cout << R"(Axion Genesis v47  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
 
   ./axion genesis bench    [--pop N] [--substeps S] [--repeats R] [--world 256|512|1024]
   ./axion genesis evolve   [--pop N] [--max-areas L] [--max-syn-slabs S] [--world 256|512|1024] [--ticks T] [--seed S] [--challenge 0|1|2] [--controls] [--load FILE] [--save FILE] [--video FILE] [--video-title TITLE]

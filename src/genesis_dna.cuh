@@ -289,11 +289,11 @@ AX_FN GenesisDNA make_founder_dna(u32 seed) {
     //   - Anterior optic brow (state 5: m1>=6, m2 in [4, 22]) + forebrain optic-vesicle (state 4: m1 in [22, 33], m2 in [4, 22]) -> paired stereo Eyes!
     //   - Lateral otic brow (state 5: m2 >= 23) + posterior temporal (state 5: m1 <= 5, m2 >= 12) + lateral-line flank (state 3: m2 >= 18) -> paired binaural Ears!
     //   - Midline snout contact Chem (state 5: m1 >= 10, m2 <= 3)
-    d.rules[nr++] = make_rule(5u, 1u, 6, 127, 4, 22, OP_DIFF, 0u, TK_EYE, 0u, 0, 0, 0x21u, 11u, 0x0011u);
-    d.rules[nr++] = make_rule(4u, 1u, 22, 33, 4, 22, OP_DIFF, 0u, TK_EYE, 0u, 0, 0, 0x21u, 10u, 0x0011u);
-    d.rules[nr++] = make_rule(5u, 1u, -2, 127, 23, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 11u, 0x0012u);
-    d.rules[nr++] = make_rule(5u, 1u, -24, 5, 12, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 11u, 0x0012u);
-    d.rules[nr++] = make_rule(3u, 1u, -16, 127, 18, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 10u, 0x0012u);
+    d.rules[nr++] = make_rule(5u, 1u, 6, 127, 4, 17, OP_DIFF, 0u, TK_EYE, 0u, 0, 0, 0x21u, 11u, 0x0011u);
+    d.rules[nr++] = make_rule(4u, 1u, 22, 33, 4, 17, OP_DIFF, 0u, TK_EYE, 0u, 0, 0, 0x21u, 10u, 0x0011u);
+    d.rules[nr++] = make_rule(5u, 1u, -2, 127, 18, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 11u, 0x0012u);
+    d.rules[nr++] = make_rule(5u, 1u, -24, 5, 10, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 11u, 0x0012u);
+    d.rules[nr++] = make_rule(3u, 1u, -16, 127, 13, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 10u, 0x0012u);
     d.rules[nr++] = make_rule(5u, 1u, 10, 127, -120, 1, OP_DIFF, 0u, TK_CHEM, 0u, 0, 0, 0x21u, 10u, 0x0014u);
     // Neural primordia (L0 state 4 + deep CNS states 6, 7):
     // Tight peripheral morphogen PV/SST domains paired with MGE/CGE tangential migration (`mig_h % 13`) ->
@@ -1313,9 +1313,9 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                         else if (s_tk == TK_NEU_PV || tk_is_sensor(s_tk)) comp = 0u;
                                         else if (t_tk == TK_NEU_EXC) {
                                             // Canonical Larkum (2013) cortical compartmentalization:
-                                            // Ascending labeled-line (br<6) drives BASAL dendrites (comp=0);
-                                            // Descending predictions (sz>tz), cross-column conjunctions (is_asc_pyr && br>=6)
-                                            // & long-range lateral context target APICAL BAC tufts (comp=1) — zero basal smearing!
+                                            // Ascending labeled-line (br<4) & proximal local collaterals (stp<3) drive BASAL dendrites (comp=0);
+                                            // Descending predictions (sz>tz), cross-column conjunctions (br>=4) & long-range lateral
+                                            // context (stp>=3) target APICAL BAC tufts (comp=1) — zero spontaneous dark ignition!
                                             comp = (sz > tz || (is_asc_pyr && br >= 4u) || (sz == tz && (rl.param1 > 0 || stp >= 3u))) ? 1u : 0u;
                                         }
                                         // Real mammalian Class-1A Driver vs Modulator & heavy-tailed spine-size diversity (Sherman 1998 / Song 2005):
@@ -1624,7 +1624,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
         u32 ex_str = (body.counts[TK_STRUCT] > 6u) ? (body.counts[TK_STRUCT] - 6u) : 0u;
         u32 ex_grp = (body.counts[TK_GRASP] > 6u) ? (body.counts[TK_GRASP] - 6u) : 0u;
         u32 ex_mod = (body.counts[TK_NEU_MOD] > 6u) ? (body.counts[TK_NEU_MOD] - 6u) : 0u;
-        float sens_tumor = 0.0012f * float(ex_eye * ex_eye + ex_ear * ex_ear) +
+        float sens_tumor = 0.0028f * float(ex_eye * ex_eye) + 0.0018f * float(ex_ear * ex_ear) +
                            0.0036f * float(ex_gld * ex_gld) +
                            0.0024f * float(ex_chm * ex_chm) +
                            0.0022f * float(ex_stem * ex_stem) +
