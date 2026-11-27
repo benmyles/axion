@@ -971,14 +971,14 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                         i32 curr = sw_i * i32(stp_v + 2u);
                                         bool is_ap_l = (s & 0x04000000u) != 0u;
                                         if (layer_idx >= 2u && sw_i > 0 && !is_ap_l) {
-                                            // Authentic Mongillo-Wang Bistable 3-Tier Prefrontal STF Attractor (14x contrast!):
-                                            // Calibrated for Thomson-Bannister intra-column basal micro-assemblies (100% of genomes):
-                                            // L3/L4 WM hubs hold 3.5x (stp>=4, 24-31t); L5 BA10 slow executive holds 3.0x (stp>=4, 48-63t);
-                                            // L2 bigram holds 2.5x (stp>=5); L6..L_top uses standard STD -> >>3 keeps resting recurrence subcritical!
+                                            // Authentic Mongillo-Wang Bistable 3-Tier Prefrontal STF Attractor (10x contrast!):
+                                            // Calibrated to edge-of-chaos criticality for Perin-Markram clustered intra-column basal micro-assemblies:
+                                            // L3/L4 WM hubs hold 2.5x (stp>=4, 24-31t); L5 BA10 slow executive holds 2.25x (stp>=4, 48-63t);
+                                            // L2 bigram holds 2.0x (stp>=5); L6..L_top uses standard STD -> >>3 keeps resting recurrence subcritical!
                                             bool is_wm_hub = (layer_idx == 3u || layer_idx == 4u);
-                                            curr = is_wm_hub ? ((stp_v >= 4u) ? ((curr * 7) >> 1) : (curr >> 2))
-                                                             : ((layer_idx == 5u) ? ((stp_v >= 4u) ? (curr * 3) : (curr >> 2))
-                                                                                  : ((layer_idx == 2u && stp_v >= 5u) ? ((curr * 5) >> 1) : ((layer_idx >= 6u) ? (curr >> 3) : (curr >> 2))));
+                                            curr = is_wm_hub ? ((stp_v >= 4u) ? ((curr * 5) >> 1) : (curr >> 2))
+                                                             : ((layer_idx == 5u) ? ((stp_v >= 4u) ? ((curr * 9) >> 2) : (curr >> 2))
+                                                                                  : ((layer_idx == 2u && stp_v >= 5u) ? (curr << 1) : ((layer_idx >= 6u) ? (curr >> 3) : (curr >> 2))));
                                         } else if (layer_idx == 1u && sw_i > 0) {
                                             curr >>= 3;
                                         } else if (layer_idx == 0u && !is_eff && sw_i > 0 && !tk_is_sensor(s_tk[pre])) {
@@ -1015,9 +1015,9 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                             bool is_ap_l = (s & 0x04000000u) != 0u;
                                             if (layer_idx >= 2u && sw_i > 0 && !is_ap_l) {
                                                 bool is_wm_hub = (layer_idx == 3u || layer_idx == 4u);
-                                                curr = is_wm_hub ? ((stp_v >= 4u) ? ((curr * 7) >> 1) : (curr >> 2))
-                                                                 : ((layer_idx == 5u) ? ((stp_v >= 4u) ? (curr * 3) : (curr >> 2))
-                                                                                      : ((layer_idx == 2u && stp_v >= 5u) ? ((curr * 5) >> 1) : ((layer_idx >= 6u) ? (curr >> 3) : (curr >> 2))));
+                                                curr = is_wm_hub ? ((stp_v >= 4u) ? ((curr * 5) >> 1) : (curr >> 2))
+                                                                 : ((layer_idx == 5u) ? ((stp_v >= 4u) ? ((curr * 9) >> 2) : (curr >> 2))
+                                                                                      : ((layer_idx == 2u && stp_v >= 5u) ? (curr << 1) : ((layer_idx >= 6u) ? (curr >> 3) : (curr >> 2))));
                                             } else if (layer_idx == 1u && sw_i > 0) {
                                                 curr >>= 3;
                                             } else if (layer_idx == 0u && !is_eff && sw_i > 0 && !tk_is_sensor(s_tk[pre])) {
@@ -1042,8 +1042,8 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                             // Keeps 6-10 muscle predators brisk & adaptive while preventing STDP hyper-saturation on 140-synapse
                             // deep cortices (TK_MUSCLE: 32/26; TK_GRASP: 24/20 prevents runaway dig/bite ATP waste!).
                             float m_inv = 1.0f / fast_sqrt(float(my_exc_cnt));
-                            float mg_b = (tk == TK_MUSCLE) ? 32.0f : 24.0f;
-                            float mg_a = (tk == TK_MUSCLE) ? 26.0f : 20.0f;
+                            float mg_b = (tk == TK_MUSCLE) ? 30.0f : 20.0f;
+                            float mg_a = (tk == TK_MUSCLE) ? 24.0f : 16.0f;
                             i_basal = i32(float(raw_b) * (mg_b * m_inv));
                             i_apical = abl.silence_apical ? 0 : i32(float(raw_a) * (mg_a * m_inv));
                         } else {
@@ -1209,7 +1209,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     u32 ican_ema_min = (layer_idx >= 4u) ? 2u : 4u;
                     bool ican_self_ca = ((ring & 0xffu) != 0u) || (ema >= ican_ema_min);
                     i32 ican_curr = ((layer_idx >= 3u && layer_idx <= 5u) && is_pyr && st0_stf_hold && !ican_flushed && ican_self_ca)
-                                        ? ((layer_idx == 5u) ? 135 : 145)
+                                        ? ((layer_idx == 5u) ? 115 : 125)
                                         : 0;
                     // Authentic Songbird Uva -> HVC / Broca Modulatory Vocal Efference Copy (Fee 2014 / Hickok 2012):
                     // Strictly subthreshold alone (0 pA in silent darkness!) and bridges 6t multi-syllable phrase windows!
@@ -1442,12 +1442,12 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     // Class-1A Thalamocortical Drivers (L0->L1: 44) > Ascending Feedforward (src<L: 30)
                     // > Cortico-Cortical Feedback/Local (L1: 18, L2+: 18 ext / 16 local, >=48n: 16/13)
                     // Vocal syrinx keeps lean L0 reflex cap (18) while L1..L4 cortical tracts & skeletal muscles get full [1..64]!
-                    i32 l2_loc_cap = (layer_exc_cnt >= 20u) ? 16 : 18;
+                    i32 l2_loc_cap = (layer_exc_cnt >= 20u) ? 12 : 14;
                     i32 l2_ext_cap = (layer_exc_cnt >= 20u) ? 26 : 22;
                     i32 w_hi = (tk == TK_GLAND && src_l == 0u)
                                    ? 10
                                    : ((tk == TK_GLAND) ? 60
-                                                       : (is_eff ? 56
+                                                       : (is_eff ? 42
                                                                  : ((layer_idx == 1u && src_l == 0u)
                                                                         ? 44
                                                                         : ((layer_idx >= 1u && src_l < layer_idx)
@@ -1523,7 +1523,8 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         else if (sleep_gate && (elig > 14 || elig < -14)) dw = esign;
                         if (dw > 0) {
                             if (abs_w >= w_hi) {
-                                dw = (abs_w < w_hi + 6 && abs_da > 40 && ((tick + idx_k) & 3u) == 0u) ? 1 : 0;
+                                bool no_over = is_eff || (layer_idx >= 2u && !is_ext && !is_ap_syn);
+                                dw = (!no_over && abs_w < w_hi + 6 && abs_da > 40 && ((tick + idx_k) & 3u) == 0u) ? 1 : 0;
                             } else if (abs_w > w_hi - 6 && dw > 2) {
                                 dw = 2;
                             }

@@ -198,7 +198,7 @@ struct GenesisGpu {
         wb.mask_x = world_w - 1u;
         wb.mask_y = world_h - 1u;
         wb.shift_y = (world_w >= 1024u) ? 10u : ((world_w >= 512u) ? 9u : 8u);
-        wb.num_reefs = (world_w >= 1024u) ? 76u : ((world_w >= 512u) ? 64u : 16u);
+        wb.num_reefs = (world_w >= 1024u) ? 64u : ((world_w >= 512u) ? 64u : 16u);
         wb.num_vents = (world_w >= 1024u) ? 38u : ((world_w >= 512u) ? 28u : 10u);
         wb.num_storms = (world_w >= 1024u) ? 20u : ((world_w >= 512u) ? 8u : 3u);
 
