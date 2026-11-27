@@ -1147,8 +1147,12 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         else if (i_basal > 80) raw_bac = (bac_gain * (i_basal - 80)) / 100;
                     }
                     i32 bac_curr = (layer_idx >= 2u) ? ((raw_bac * i32(pv_div_scale)) >> 12) : raw_bac;
-                    // Authentic Buzsaki sharp-wave sleep ripple (sparse 1/32t subthreshold replay on recently active assemblies)
-                    i32 sleep_drive = (is_resting && ((tick & 31u) == 0u) && layer_idx > 0u && is_pyr && ema >= 8u && ema < 20u) ? 18 : 0;
+                    // Authentic Buzsaki (2015) / Jadhav (2012 Science) Sleep & Awake Consummatory-Pause Hippocampal SWR:
+                    // Gentle subthreshold consolidation pulse on recently active L3/L4 WM assemblies during resting pauses
+                    // OR awake rewarded consummatory pauses (mot_thrust < 0.25, suppressed by locomotor theta during running!)
+                    i32 sleep_drive = (is_resting && ((tick & 31u) == 0u) && layer_idx > 0u && is_pyr && ema >= 8u && ema < 20u)
+                                          ? 18
+                                          : (((layer_idx == 3u || layer_idx == 4u) && is_pyr && st0_stf_hold && eff_da > 24 && cr.mot_thrust < 0.25f && ema >= 6u && ema < 24u) ? 45 : 0);
                     u32 pv_sh_cap = (layer_idx >= 2u) ? 200u : 140u;
                     i32 pv_shunt = (layer_idx >= 1u && is_pyr && !has_topk_pv && pv_cnt > 1u)
                                        ? i32(min_u32(pv_sh_cap, (pv_cnt - 1u) * 10u))
@@ -1443,7 +1447,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                 if (mod_pos) {
                                     if (!pre_inh) {
                                         if (prev_post && prev_pre && abs_w < w_hi) dw = p_mag;
-                                        else if (is_prev_rival && prev_pre && abs_w > 12) dw = -p_riv;
+                                        else if (is_prev_rival && prev_pre && abs_w > 6) dw = -p_riv;
                                     } else {
                                         if (is_prev_rival && prev_pre && abs_w < 14) dw = 1;
                                         else if (prev_post && prev_pre && abs_w > 2) dw = -1;

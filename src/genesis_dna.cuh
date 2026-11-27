@@ -370,7 +370,7 @@ AX_FN GenesisDNA make_founder_dna(u32 seed) {
     for (u32 i = 0; i < 12u; ++i) d.bio_params[i] = rand_i8(r, -56, 56);
     d.bio_params[7] = rand_i8(r, -16, 64); // bilateral symmetry gene (evolvable!)
     d.num_rules = u8(nr);
-    d.max_layers_gene = u8(8u + (mix(r += 91u) % 3u)); // Founders start 8-10 cortical layers (~1,200-2,000 neurons!), expand freely up to 32 (8,192 neurons)!
+    d.max_layers_gene = u8(10u + (mix(r += 91u) % 3u)); // Founders start 10-12 cortical layers (~1,700-2,300 neurons!), expand freely up to 32 (8,192 neurons)!
     d.birth_steps = u8(18u + (mix(r += 97u) & 1u)); // Decoupled oSVZ proliferation (z=0 finishes <8; z>=1 grows full 120-200n deep cortical sheets!)
     d.adult_steps = u8(2u + (mix(r += 101u) & 1u));
     return d;
@@ -1001,27 +1001,31 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
             n_gl = min_u32(s_n_glands, 16u);
         }
 
-        for (u32 sz_ord = 0; sz_ord < final_L; ++sz_ord) {
-            // Canonical Mammalian Laminar Hierarchy (Felleman & Van Essen 1991 / Sherman & Guillery 1998):
+        u32 sz_ord_lim = (tz == 0u && !is_maturation && n_gl > 0u) ? (final_L + 3u) : final_L;
+        for (u32 sz_ord = 0; sz_ord < sz_ord_lim; ++sz_ord) {
+            // Canonical Mammalian Laminar Hierarchy (Felleman & Van Essen 1991 / Sherman & Guillery 1998)
+            // + Dense Songbird/Human HVC/Broca -> RA/nXIIts Multi-Tract Corticobulbar Readout (Hahnloser 2002 / Jarvis 2019):
             // - L1 Primary Sensory Cortex visits L0 Thalamocortical Sensors FIRST (dedicated Stripe-0 sensory driver!)
             // - All other layers visit local recurrent (sz == tz) FIRST so Stripe 0 stays in registers!
-            // - Eliminates K_N complete-graph soup (which drowned 0.8% sensory signal in 99.2% self-echo!):
-            //   * Primary sensors (L0) project to L0 (local reflexes) & L1 (Primary Sensory Cortex V1/A1)
-            //   * Cortico-cortical layers connect bidirectionally to adjacent areas (|sz-tz|<=1) + sparse 2-hop skips (|sz-tz|==2)
-            //   * Descending corticospinal / HVC->RA readout (tz==0) draws from L0, L1, L2 & top executive layer (final_L-1)!
+            // - On tz==0, 3 extra dedicated corticobulbar passes from L2, L3, L4 double prefrontal WM/context fan-in
+            //   onto TK_GLAND vocal folds (30 distinct pyramidal synapses per hub layer, 0 B extra VRAM!)
+            bool is_hvc_extra = (tz == 0u && sz_ord >= final_L);
             u32 sz;
-            if (tz == 1u) {
+            if (is_hvc_extra) {
+                sz = 2u + (sz_ord - final_L); // Dedicated 2nd HVC/Broca corticobulbar pass from L2, L3, L4 -> TK_GLAND!
+                if (sz >= final_L) continue;
+            } else if (tz == 1u) {
                 sz = (sz_ord == 0u) ? 0u : sz_ord;
             } else {
                 sz = (sz_ord == 0u) ? tz : ((sz_ord <= tz) ? (sz_ord - 1u) : sz_ord);
             }
-            if (tz == 0u) {
+            if (tz == 0u && !is_hvc_extra) {
                 // Descending Layer-5 PT corticobulbar & corticospinal projections from L0..L4 + deep prefrontal STF areas!
                 bool deep_pt = (sz == final_L - 1u) || (final_L >= 3u && sz == final_L - 2u) || ((sz & 1u) == 0u && sz <= 10u);
                 if (sz > 4u && !deep_pt) continue;
             } else if (sz == 0u) {
                 if (tz > 1u) continue; // Primary sensory axons terminate in L1 primary sensory cortex (V1/A1)!
-            } else {
+            } else if (!is_hvc_extra) {
                 u32 dz = (sz > tz) ? (sz - tz) : (tz - sz);
                 if (dz > 2u) continue; // Authentic laminar cortical hierarchy (no K_N all-to-all soup!)
             }
@@ -1054,7 +1058,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
             // Every living sensor or neuron in `sz` crawls its growth cones across the unified 3D tissue!
             if (tk_is_sensor(s_tk) || tk_is_neuron(s_tk)) {
                 bool is_inh = tk_is_inhibitory(s_tk);
-                u32 rng = mix(dev_seed ^ (sz * 0x85ebca6bu) ^ (tz * 0x9e3779b9u) ^ (tid * 31337u));
+                u32 rng = mix(dev_seed ^ (sz * 0x85ebca6bu) ^ (tz * 0x9e3779b9u) ^ (sz_ord * 0x517cc1b7u) ^ (tid * 31337u));
                 u32 cones_run = 0u;
                 bool ran_sens_cone = false;
                 bool ran_pyr_cort_cone = false;
@@ -1063,9 +1067,10 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                 // Deep GABAergic PV+/SST+ interneurons arborize strictly locally (sz==tz), EXCEPT sparse (~25%) Striatal
                 // D2-NoGo collaterals (sz in 1..3 -> tz==0, (tid&3)==0) targeting dedicated D2 vocal slots (14..15) so
                 // 30..8,000-neuron cortices keep ~88% pan-cortical pyramidal features + ~12% D2 veto per vocal fold!
-                if (is_inh && sz >= 1u && sz != tz && !(tz == 0u && sz <= 3u && ((tid & 3u) == 0u))) cones_run = 4u;
+                if (is_hvc_extra && (is_inh || s_tk != TK_NEU_EXC)) cones_run = 4u;
+                else if (is_inh && sz >= 1u && sz != tz && !(tz == 0u && sz <= 3u && ((tid & 3u) == 0u))) cones_run = 4u;
 
-                for (u32 k_c = 0; k_c < n_cone && cones_run < 4u; ++k_c) {
+                for (u32 k_c = 0; k_c < n_cone && cones_run < (is_hvc_extra ? 1u : 4u); ++k_c) {
                     const CARule &rl = s_rules[s_cone_idx[k_c]];
                     // Skip strictly horizontal growth cones when targeting a different cortical layer,
                     // AND skip effector-only rules (arg_a==2) on deep layers tz>0 where zero effectors exist (100% bit-exact)!
@@ -1100,18 +1105,20 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                         for (u32 si = 0u; si < tid; ++si) if (tis_kind(s_tis[si]) == s_tk) ++s_rank;
                         s_col = s_rank & 3u;
                     }
-                    // Authentic Braitenberg & Schuz (1998) Scale-Invariant Cortical Convergence:
-                    // Dense thalamocortical sensory drivers (10x8) and ascending feedforward pyramidal axons (6x6)
-                    // with actin-polymerization forward momentum fill 12-16 distinct synapses/stripe across 1,000-8,000n cortices!
-                    u32 n_br = is_thalamo ? (is_maturation ? 2u : 10u)
-                                          : (is_maturation ? 2u
-                                                           : ((is_corticobulb && is_inh) ? 1u
-                                                                                         : (is_corticobulb ? 8u
-                                                                                                           : ((sz == tz && tz >= 1u && is_inh) ? 4u
-                                                                                                                                               : (is_asc_pyr ? 6u
-                                                                                                                                                             : (is_local_pyr ? 4u
-                                                                                                                                                                             : ((sz == tz) ? 4u
-                                                                                                                                                                                           : ((dz_c >= 2u && tz > 0u) ? 1u : 3u))))))));
+                    // Authentic Braitenberg & Schuz (1998) Scale-Invariant Cortical Convergence
+                    // + Rigotti (2013 Nature) 4-Column Prefrontal Mixed-Selectivity Apical Feedback strictly on L4->L3 context hub!
+                    bool is_desc_mix = (is_desc_pyr && tz == 3u && sz == 4u);
+                    u32 n_br = is_hvc_extra ? 3u
+                                            : (is_thalamo ? (is_maturation ? 2u : 10u)
+                                                          : (is_maturation ? 2u
+                                                                           : ((is_corticobulb && is_inh) ? 1u
+                                                                                                         : (is_corticobulb ? 8u
+                                                                                                                           : ((sz == tz && tz >= 1u && is_inh) ? 4u
+                                                                                                                                                               : (is_asc_pyr ? 6u
+                                                                                                                                                                             : (is_local_pyr ? 4u
+                                                                                                                                                                                             : ((sz == tz) ? 4u
+                                                                                                                                                                                                           : (is_desc_mix ? 4u
+                                                                                                                                                                                                                          : ((dz_c >= 2u && tz > 0u) ? 1u : 3u))))))))));
                     u32 max_land = is_thalamo ? 8u
                                               : ((is_corticobulb && is_inh) ? 1u
                                                                             : (is_corticobulb ? 5u
@@ -1120,12 +1127,13 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                                                                                                                                 : (is_local_pyr ? 4u : 5u)))));
                     for (u32 br = 0; br < n_br; ++br) {
                         u32 want_col = (is_asc_pyr && br >= 4u) ? ((s_col + 1u) & 3u)
-                                       : ((is_desc_pyr && br >= 2u) ? ((s_col + 1u) & 3u) : s_col);
+                                       : (is_desc_mix ? ((s_col + br) & 3u)
+                                                      : ((is_desc_pyr && br >= 2u) ? ((s_col + 1u) & 3u) : s_col));
                         bool is_vocal_br = (is_corticobulb && ((!is_inh && br < 3u) || is_inh));
                         u32 br_max_land = is_vocal_br ? (is_inh ? 1u : 2u) : max_land;
                         i32 gx_t = 8, gy_t = 12;
                         if (is_vocal_br && n_gl > 0u) {
-                            u32 gpos = u32(s_gland_pos[(tid + br + sz * 3u) % n_gl]);
+                            u32 gpos = u32(s_gland_pos[(tid + br + sz * 3u + (is_hvc_extra ? 1u : 0u)) % n_gl]);
                             gx_t = i32(gpos & 15u);
                             gy_t = i32(gpos >> 4);
                         }
@@ -1264,11 +1272,12 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                         if (is_inh) {
                                             dst_slot = 14u + (mix(rng ^ post ^ stp) & 1u);
                                         } else {
+                                            u32 exc_cap = is_hvc_extra ? SYN_PER_STRIPE : 14u;
                                             u32 arr_k = atomic_add_gen_u32(&s_in_cnt[post], 1u);
-                                            if (arr_k < 14u) dst_slot = arr_k;
+                                            if (arr_k < exc_cap) dst_slot = arr_k;
                                             else {
                                                 u32 r_res = mix(rng ^ (arr_k * 0x85ebca6bu) ^ post);
-                                                if ((r_res % (arr_k + 1u)) < 14u) dst_slot = (r_res >> 16) % 14u;
+                                                if ((r_res % (arr_k + 1u)) < exc_cap) dst_slot = (r_res >> 16) % exc_cap;
                                             }
                                         }
                                     } else {
@@ -1449,8 +1458,8 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                 my_syn += fan;
                 if (fan > my_mxf) my_mxf = fan;
             }
-            // Realistic encephalization allometry: deep CNS neurons are ~1-10% of body mass; undifferentiated STEM is fragile blastema!
-            float cm = (z > 0u) ? 0.002f
+            // Realistic mammalian encephalization allometry: 2,000-4,000 deep CNS neurons are ~2-5% of body mass!
+            float cm = (z > 0u) ? 0.00025f
                        : (tk == TK_STRUCT ? 1.80f
                        : (tk == TK_GRASP ? 1.30f
                        : (tk == TK_MUSCLE ? 1.10f
