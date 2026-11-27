@@ -864,8 +864,8 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
         u64 t = pool.tissue[u64(sl) * TISSUE_CELLS + tid];
         u8 tk = tis_kind(t);
         // Conserved Vertebrate MGE/CGE Tangential Interneuron Migration across ALL deep cortical sheets (z > 0):
-        // Calibrated to canonical mammalian neocortex (~76-78% PYR / ~12% PV / ~10% SST net with OP_DIFF):
-        // Prevents 35%-I over-inhibition on 1,500-4,000n cortices while keeping crisp gamma Top-k & dendritic gating!
+        // Calibrated to canonical mammalian neocortex (~77% PYR / ~12% PV / ~11% SST net with OP_DIFF):
+        // Paired with layer_pv_cnt*16 >= layer_exc_cnt -> ZERO accidental low-PV epilepsy AND ZERO over-inhibition!
         if (z > 0u && (tk == TK_STEM || tk == TK_NEU_EXC)) {
             u32 mig_h = (ux * 3u + uy * 5u + z * 7u) % 13u;
             if (mig_h == 0u || mig_h == 6u) {
@@ -1546,12 +1546,14 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
         u32 ex_stem = (body.counts[TK_STEM] > 6u) ? (body.counts[TK_STEM] - 6u) : 0u;
         u32 ex_str = (body.counts[TK_STRUCT] > 6u) ? (body.counts[TK_STRUCT] - 6u) : 0u;
         u32 ex_grp = (body.counts[TK_GRASP] > 6u) ? (body.counts[TK_GRASP] - 6u) : 0u;
+        u32 ex_mod = (body.counts[TK_NEU_MOD] > 6u) ? (body.counts[TK_NEU_MOD] - 6u) : 0u;
         float sens_tumor = 0.0012f * float(ex_eye * ex_eye + ex_ear * ex_ear) +
                            0.0036f * float(ex_gld * ex_gld) +
                            0.0024f * float(ex_chm * ex_chm) +
                            0.0022f * float(ex_stem * ex_stem) +
                            0.0032f * float(ex_str * ex_str) +
-                           0.0024f * float(ex_grp * ex_grp); // Warburg teratoma & immobile-shell hypertrophy suppression!
+                           0.0024f * float(ex_grp * ex_grp) +
+                           0.0020f * float(ex_mod * ex_mod); // Warburg teratoma & immobile-shell/VTA hypertrophy suppression!
         // Myelinated neocortical scaling: 1,000-4,000+ deep cortical neurons pay realistic lean myelinated upkeep!
         float bcost = 0.025f + 0.00018f * float(surf_cells) + 0.00000035f * float(deep_cells) +
                       0.000000015f * float(tot_syn) +
