@@ -1174,7 +1174,14 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     // Strictly subthreshold alone (145*3.2 = 464 << 700 pA -> ZERO spontaneous firing without S_A spike!)
                     // and restricted strictly to the L3/L4 2-slot WM hub (keeps L5..L31 executive cortices ice-cool & sparse!)
                     i32 ican_curr = ((layer_idx == 3u || layer_idx == 4u) && is_pyr && st0_stf_hold && !pfc_gate_flush && s_any_spk[cur_b] != 0u) ? 145 : 0;
-                    i32 inp = is_sens ? eff_sens : (i_basal + bac_curr + ican_curr + sleep_drive + lman_curr + sens_curr - pv_shunt - col_shunt);
+                    // Authentic Songbird Uva -> HVC / Broca Modulatory Vocal Efference Copy (Fee 2014 / Hickok 2012):
+                    // Strictly subthreshold alone (+180*3.2 = 576 < 700 pA -> ZERO autonomous dark loop!) and strictly gated
+                    // on active L3 Slot-2 engrams (`st0_stf_hold && s_any_spk != 0`) for ONE tick after a syllable ->
+                    // biases L3 PING Top-k cleanly from Cue -> (Cue, post-Syl1) -> (Cue, post-Syl2) while keeping L3_dk & base_spk crisp!
+                    bool uva_on = (layer_idx == 3u && is_pyr && st0_stf_hold && s_any_spk[cur_b] != 0u &&
+                                   cr.last_vocal_tick > 0u && tick == cr.last_vocal_tick + 1u);
+                    i32 uva_curr = uva_on ? (((tid % 3u) == u32(cr.last_vocal_band)) ? 180 : -120) : 0;
+                    i32 inp = is_sens ? eff_sens : (i_basal + bac_curr + ican_curr + uva_curr + sleep_drive + lman_curr + sens_curr - pv_shunt - col_shunt);
                     if (is_eff) inp += (i_apical >> 2);
                     if (d2_err_veto) {
                         vs = -160;
@@ -1363,7 +1370,9 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 // Payeur-Naud-Richards (2021 Nature Neuroscience) Baseline-Relative Burst vs Isolated-Spike Credit Signal:
                 bool post_burst = (layer_idx >= 1u && is_pyr) && (post_n >= 2u && plat != 0u && ema < target_ema + 14u);
                 bool post_iso_err = (layer_idx >= 1u && is_pyr) && (post_n == 1u && plat == 0u && (eff_da < -15 || va < -120));
-                i32 homeo_delta = (ema > u32(seizure_ema)) ? -2 : ((ema + 8u > u32(seizure_ema)) ? -1 : ((ema < 6u) ? 1 : 0));
+                // Homeostatic target strictly guards against seizure (>seizure_ema) and dead silence (ema==0);
+                // NEVER punishes or strips inhibition from healthy 8-10% sparse PING coding cells (ema=1..9)!
+                i32 homeo_delta = (ema > u32(seizure_ema)) ? -2 : ((ema + 8u > u32(seizure_ema)) ? -1 : ((ema == 0u) ? 1 : 0));
 
                 auto update_syn_word = [&](u32 s, u32 src_l, u32 idx_k) __attribute__((always_inline)) -> u32 {
                     i32 w = bfe_s32(s, 8u, 8u);
@@ -1447,11 +1456,12 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         }
                     } else if (pre_inh) {
                         if (!is_eff) {
-                            // Authentic Vogels-Sprekeler (2011) Homeostatic iSTDP strictly against cortical hyper-excitation:
-                            // Prevents epileptic seizure (ema > seizure_ema - 10) without tripling inhibition on healthy foraging!
+                            // Authentic Vogels-Sprekeler (2011) Homeostatic iSTDP strictly preserving sparse coding:
+                            // Strengthens PV/SST against hyper-excitation (ema > seizure_ema - 10) and ONLY gently relaxes
+                            // inhibition on truly dead-silent cells (ema == 0, floor 16) — NEVER dismantles PV/SST on sparse cells!
                             if (pre_rec && post_recent && ema + 10u > u32(seizure_ema))
                                 dw = (ema > u32(seizure_ema)) ? 2 : 1;
-                            else if (pre_rec && ema < 10u && ((layer_idx < 2u) || abs_w > 10) && ((tick + idx_k) & 1u) == 0u) dw = -1;
+                            else if (pre_rec && ema == 0u && abs_w > 16 && ((tick + idx_k) & 7u) == 0u) dw = -1;
                         } else if (mod_gate && (elig > 7 || elig < -7)) {
                             i32 esign = (elig > 0) ? 1 : -1;
                             dw = mod_neg ? (esign * (lr > 3 ? 3 : lr)) : (-esign * lr);
@@ -1473,10 +1483,14 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                             dw = esign;
                         else if (sleep_gate && (elig > 14 || elig < -14)) dw = esign;
                         if (dw > 0) {
-                            if (abs_w >= w_hi) dw = (abs_w < w_hi + 6 && abs_da > 40 && ((tick + idx_k) & 3u) == 0u) ? 1 : 0;
-                            else if (abs_w > w_hi - 4 && !is_eff && dw > 2) dw = 2;
+                            if (abs_w >= w_hi) {
+                                dw = (abs_w < w_hi + 6 && abs_da > 40 && ((tick + idx_k) & 3u) == 0u) ? 1 : 0;
+                            } else if (abs_w > w_hi - 6 && dw > 2) {
+                                dw = 2;
+                            }
                         } else if (dw < 0) {
-                            if (abs_w < 12 && !is_eff && dw < -2) dw = -2;
+                            // Symmetric soft-bound floor on BOTH cortex (12) and motor effectors (14) — ZERO 4:1 negative erosion!
+                            if (abs_w < (is_eff ? 14 : 12) && dw < -2) dw = -2;
                         }
                         if (dw != 0) elig = (st_gate ? 0 : (elig >> 1));
                     }
@@ -1497,23 +1511,25 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                             else if (elig < 0) elig += (((-elig) + 7) >> 3);
                         }
                     }
-                    // Authentic Payeur-Naud-Richards (2021 Nature Neuroscience) Neuromodulated Vector-FA Burstprop
-                    // + Mikulasch et al. (2022/2023 PNAS) Floored Local Dendritic Predictive Coding (ZERO passive drift!):
+                    // Authentic Payeur-Naud-Richards (2021 Nature Neuroscience) Sign-Faithful Vector-FA Burstprop
+                    // + Mikulasch et al. (2022/2023 PNAS) Floored Local Dendritic Predictive Coding:
+                    // Strictly potentiates basal/apical excitatory synapses on +DA (`st_pos`) and depresses on -DA (`st_neg`) —
+                    // NEVER potentiates bursts or apical predictions during negative punishment errors!
                     if (layer_idx >= 1u && is_pyr && dw == 0) {
-                        if (!is_ap_syn && !pre_inh && mod_gate) {
-                            if (st_causal && post_burst && abs_w < w_hi)
+                        if (!is_ap_syn && !pre_inh && st_gate) {
+                            if (st_pos && st_causal && post_burst && abs_w < w_hi)
                                 dw = (abs_w < w_hi - 4) ? 2 : 1;
-                            else if (st_causal && post_iso_err && elig_pre > 8 && abs_w > 12)
+                            else if (st_neg && st_causal && (post_burst || (post_iso_err && elig_pre > 8)) && abs_w > 10)
+                                dw = -2;
+                            else if (st_pos && post_burst && !pre_rec && abs_w > 18 && ((tick + idx_k) & 3u) == 0u)
                                 dw = -1;
-                            else if (post_burst && !pre_rec && abs_w > 18 && ((tick + idx_k) & 3u) == 0u)
-                                dw = -1;
-                        } else if (is_ap_syn && (mod_gate || phasic_ach) && ((tick + idx_k) & 3u) == 0u) {
+                        } else if (is_ap_syn && (st_gate || phasic_ach) && ((tick + idx_k) & 3u) == 0u) {
                             if (!pre_inh) {
-                                if (pre_rec && post_recent && abs_w < w_hi) dw = 1;
-                                else if (pre_rec && !post_recent && va > 240 && abs_w > 14) dw = -1;
+                                if (pre_rec && post_recent && (st_pos || (!st_neg && phasic_ach && abs_w < w_hi - 6)) && abs_w < w_hi) dw = 1;
+                                else if (pre_rec && ((st_neg && va > 160) || (!post_recent && va > 240)) && abs_w > 12) dw = -1;
                             } else {
                                 if (pre_rec && va > 220 && abs_w < 54) dw = 1;
-                                else if (pre_rec && va < -110 && abs_w > 10) dw = -1;
+                                else if (pre_rec && va < -110 && abs_w > 14) dw = -1;
                             }
                         }
                     }
@@ -1526,12 +1542,12 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         dw = -1;
                     i32 signed_dw = pre_inh ? -dw : dw;
                     i32 homeo_floor = (layer_idx >= 1u && !is_eff) ? 12 : 26;
-                    i32 homeo_ceil = (layer_idx >= 2u && !is_eff) ? ((w_hi > 18) ? 18 : (w_hi - 2)) : 24;
+                    i32 homeo_ceil = (layer_idx >= 2u && !is_eff) ? 14 : 18;
                     u32 homeo_mask = (ema > u32(seizure_ema)) ? 3u : 15u;
                     if (!is_eff || ema > 192u) {
                         if (homeo_delta < 0 && (tick & homeo_mask) == 0u && ((pre_inh && abs_w < 54) || (!pre_inh && abs_w > homeo_floor)))
                             signed_dw += homeo_delta;
-                        else if (homeo_delta > 0 && (tick & 31u) == 0u && ((!pre_inh && abs_w < homeo_ceil) || (pre_inh && abs_w > 10)))
+                        else if (homeo_delta > 0 && (tick & 63u) == 0u && !pre_inh && abs_w < homeo_ceil)
                             signed_dw += homeo_delta;
                     }
                     if (signed_dw != 0) {
@@ -1589,10 +1605,11 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 if (has_st0) {
                     u32 homeo_mask = (ema > u32(seizure_ema)) ? 3u : 15u;
                     bool homeo_due = do_ltp && (!is_eff || ema > 192u) &&
-                                     ((homeo_delta < 0 && (tick & homeo_mask) == 0u) || (homeo_delta > 0 && (tick & 31u) == 0u));
+                                     ((homeo_delta < 0 && (tick & homeo_mask) == 0u) || (homeo_delta > 0 && (tick & 63u) == 0u));
                     // 100% Bit-Exact Blackwell Idle-Post External-Stripe STDP Skip:
                     u32 comp_ema_thr_chk = is_eff ? 160u : (u32(seizure_ema) - 6u);
-                    bool post_het = do_ltp && ((post_recent && ((ema > comp_ema_thr_chk) || (post_burst && mod_gate) || (layer_idx >= 1u && !is_eff && phasic_ach && plat && ema > target_ema + 14u))) ||
+                    bool post_het = do_ltp && ((post_recent && ((ema > comp_ema_thr_chk) || (post_burst && st_pos) ||
+                                                                (layer_idx >= 1u && !is_eff && phasic_ach && plat && ema > target_ema + 14u))) ||
                                     (tk == TK_GLAND && mod_gate));
                     bool cell_idle = (!post_het && !homeo_due);
                     auto syn_flags = [&](u32 nw, bool loc_st) __attribute__((always_inline)) -> u32 {
@@ -1637,8 +1654,10 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                 st_syn_quad(pool.syn_slabs + sb0 + u64(g) * TISSUE_CELLS + tid, n0, n1, n2, n3);
                             }
                         }
-                        // Lifelong contiguous local structural sprouting onto co-active neighbors (strictly gated on do_ltp!)
-                        if (do_ltp && st0_local && ((tick & 63u) == 0u)) {
+                        // Authentic Experience-Dependent Cortical Structural Sprouting (Holtmaat & Svoboda 2009):
+                        // Strictly inside neocortex (L1+, NEVER wiring random L0 noise onto muscles/grasps/syrinx!),
+                        // strictly Hebbian co-active (`post_recent != 0`) and neuromodulation-gated (`mod_pos || ext_ach_q > 18`)!
+                        if (do_ltp && st0_local && layer_idx >= 1u && post_recent != 0u && (mod_pos || ext_ach_q > 18) && ((tick & 63u) == 0u)) {
                             u32 empty_slot = SYN_PER_STRIPE;
                             u32 k_lim = st0_qcnt << 2;
                             for (u32 k = 0; k < k_lim; ++k) {
@@ -1653,14 +1672,14 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                 u32 cand = mix(tick * 2654435761u + tid * 31337u + layer_idx * 97u) & 255u;
                                 if (cand != tid && (s_ring[cand] & 0x0fu) != 0u) {
                                     u8 pt = s_tk[cand];
-                                    bool pre_ok = is_eff ? (pt == TK_NEU_EXC) : (tk_is_sensor(pt) || tk_is_neuron(pt));
+                                    bool pre_ok = (tk_is_sensor(pt) || tk_is_neuron(pt));
                                     if (pre_ok) {
                                         bool pre_inh = tk_is_inhibitory(pt);
                                         i32 ddx = i32(ux) - i32(cand & 15u);
                                         i32 ddy = i32(uy) - i32(cand >> 4);
                                         u32 delay = u32(clamp_i32(i32(fast_sqrt(float(ddx * ddx + ddy * ddy)) * 0.45f), 0, 7));
-                                        u32 comp = (pt == TK_NEU_SST) ? 1u : (pt == TK_NEU_PV ? 0u : ((layer_idx >= 1u && (empty_slot & 1u)) ? 1u : 0u));
-                                        u32 sp_stp = (layer_idx >= 2u && is_pyr && !pre_inh && comp == 0u) ? 1u : 6u;
+                                        u32 comp = (pt == TK_NEU_SST) ? 1u : (pt == TK_NEU_PV ? 0u : ((empty_slot & 1u) ? 1u : 0u));
+                                        u32 sp_stp = (layer_idx >= 2u && layer_idx <= 4u && is_pyr && !pre_inh && comp == 0u) ? 1u : 6u;
                                         syn_reg[empty_slot] = pack_synapse(cand, pre_inh ? -18 : 12, 0, delay, comp, (tid + empty_slot) & 3u, sp_stp);
                                         u32 g = empty_slot >> 2;
                                         st_syn_quad(pool.syn_slabs + sb0 + u64(g) * TISSUE_CELLS + tid,

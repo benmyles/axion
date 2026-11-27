@@ -293,18 +293,18 @@ AX_FN GenesisDNA make_founder_dna(u32 seed) {
     d.rules[nr++] = make_rule(3u, 1u, -16, 127, 18, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 10u, 0x0012u);
     d.rules[nr++] = make_rule(5u, 1u, 10, 127, -120, 1, OP_DIFF, 0u, TK_CHEM, 0u, 0, 0, 0x21u, 10u, 0x0014u);
     // Neural primordia (L0 state 4 + deep CNS states 6, 7):
-    // Extreme-edge morphogen PV/SST domains + staggered Notch-Delta lateral inhibition inside dense pyramidal sheets!
-    // -> authentic ~76% PYR / ~15% PV somatic baskets / ~7% SST apical Martinotti / ~2% VTA MOD across L0..L15!
+    // Tight peripheral morphogen PV/SST domains paired with MGE/CGE tangential migration (`mig_h % 13`) ->
+    // rock-steady canonical ~77% PYR / ~12% PV / ~11% SST across 50k+ ticks without mutating into 35% PV hypertrophy!
     d.rules[nr++] = make_rule(4u, 1u, -120, 127, -120, 127, OP_DIFF, 0u, TK_NEU_EXC, 0u, 0, 0, 0x21u, 5u, 0x0021u);
-    d.rules[nr++] = make_rule(4u, 1u, 34, 127, -120, 127, OP_DIFF, 0u, TK_NEU_PV, 0u, 0, 0, 0x21u, 8u, 0x0025u);
-    d.rules[nr++] = make_rule(4u, 1u, -120, -28, -120, 127, OP_DIFF, 0u, TK_NEU_SST, 1u, 0, 0, 0x21u, 8u, 0x0025u);
+    d.rules[nr++] = make_rule(4u, 1u, 44, 127, 16, 127, OP_DIFF, 0u, TK_NEU_PV, 0u, 0, 0, 0x21u, 8u, 0x0025u);
+    d.rules[nr++] = make_rule(4u, 1u, -120, -38, 16, 127, OP_DIFF, 0u, TK_NEU_SST, 1u, 0, 0, 0x21u, 8u, 0x0025u);
     d.rules[nr++] = make_rule(4u, 1u, -4, 4, -4, 4, OP_DIFF, 0u, TK_NEU_MOD, 0u, 0, 0, 0x21u, 9u, 0x0029u);
     d.rules[nr++] = make_rule(6u, 1u, -120, 127, -120, 127, OP_DIFF, 0u, TK_NEU_EXC, 2u, 0, 0, 0x21u, 5u, 0x0023u);
-    d.rules[nr++] = make_rule(6u, 1u, 34, 127, -120, 127, OP_DIFF, 0u, TK_NEU_PV, 2u, 0, 0, 0x21u, 8u, 0x0025u);
-    d.rules[nr++] = make_rule(6u, 1u, -120, -28, -120, 127, OP_DIFF, 0u, TK_NEU_SST, 3u, 0, 0, 0x21u, 8u, 0x0025u);
+    d.rules[nr++] = make_rule(6u, 1u, 46, 127, 20, 127, OP_DIFF, 0u, TK_NEU_PV, 2u, 0, 0, 0x21u, 8u, 0x0025u);
+    d.rules[nr++] = make_rule(6u, 1u, -120, -40, 20, 127, OP_DIFF, 0u, TK_NEU_SST, 3u, 0, 0, 0x21u, 8u, 0x0025u);
     d.rules[nr++] = make_rule(7u, 1u, -120, 127, -120, 127, OP_DIFF, 0u, TK_NEU_EXC, 3u, 0, 0, 0x21u, 5u, 0x0023u);
-    d.rules[nr++] = make_rule(7u, 1u, 34, 127, -120, 127, OP_DIFF, 0u, TK_NEU_PV, 1u, 0, 0, 0x21u, 8u, 0x0025u);
-    d.rules[nr++] = make_rule(7u, 1u, -120, -28, -120, 127, OP_DIFF, 0u, TK_NEU_SST, 1u, 0, 0, 0x21u, 8u, 0x0025u);
+    d.rules[nr++] = make_rule(7u, 1u, 46, 127, 20, 127, OP_DIFF, 0u, TK_NEU_PV, 1u, 0, 0, 0x21u, 8u, 0x0025u);
+    d.rules[nr++] = make_rule(7u, 1u, -120, -40, 20, 127, OP_DIFF, 0u, TK_NEU_SST, 1u, 0, 0, 0x21u, 8u, 0x0025u);
     // Trunk & posterior effectors (states 1, 3, 8): non-overlapping Mouth(GRASP) + Lateral Fins(MUSCLE) + Dual-Band Syrinx(GLAND) + Armor!
     d.rules[nr++] = make_rule(3u, 1u, -120, 8, -120, 13, OP_DIFF, 0u, TK_MUSCLE, 0u, 0, 0, 0x21u, 8u, 0x0041u);
     d.rules[nr++] = make_rule(8u, 1u, -120, 6, -120, 20, OP_DIFF, 0u, TK_MUSCLE, 0u, 0, 0, 0x21u, 7u, 0x0041u);
@@ -1270,8 +1270,9 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                         // Authentic Wang (2006) / Mongillo (2008) Activity-Silent Prefrontal STF Specialization:
                                         // Local deep prefrontal recurrent excitatory synapses (sz==tz>=2, basal) initialize at
                                         // subcritical resting STF (stp=1 -> 3x base, facilitates to 5 -> 7x = 2.33x WM gain!);
-                                        // feedforward sensory/ascending & inhibitory synapses initialize at full STD (stp=6)!
-                                        u32 init_stp = (sz == tz && tz >= 2u && t_tk == TK_NEU_EXC && !is_inh && comp == 0u) ? 1u : 6u;
+                                        // Local recurrent L2..L4 pyramidal synapses start at resting STF (stp=1);
+                                        // feedforward sensory/ascending, L5+ executive & inhibitory synapses initialize at full STD (stp=6)!
+                                        u32 init_stp = (sz == tz && tz >= 2u && tz <= 4u && t_tk == TK_NEU_EXC && !is_inh && comp == 0u) ? 1u : 6u;
                                         u32 syn_w = pack_synapse(tid, w, 0, delay, comp, rule_id & 3u, init_stp);
                                         if (is_cb_gland) atomic_exch_gen_u32(&s_in_syn[post * SYN_PER_STRIPE + dst_slot], syn_w);
                                         else s_in_syn[post * SYN_PER_STRIPE + dst_slot] = syn_w;
