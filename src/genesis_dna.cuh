@@ -278,18 +278,21 @@ AX_FN GenesisDNA make_founder_dna(u32 seed) {
     d.rules[nr++] = make_rule(6u, 1u, -120, 120, -120, 120, OP_MITOSIS, 0x5fu, 6u, 7u,
                               rand_i8(r, 10, 13), rand_i8(r, 4, 20), 0x31u, 5u, 0x002fu);
     // Layer z+2 association/working-memory stem(7) expands across the 16x16 cortical sheet & buds deeper z+3..z+31!
+    // Ohno-duplicated NOTCH2NL oSVZ radial-glia paralog prevents a single point mutation/deletion from amputating L3..L31!
     d.rules[nr++] = make_rule(7u, 1u, -120, 120, -120, 120, OP_MITOSIS, 0x5fu, 7u, 7u,
                               rand_i8(r, 10, 13), rand_i8(r, -8, 12), 0x31u, 4u, 0x002fu);
+    d.rules[nr++] = make_rule(7u, 1u, -120, 120, -120, 120, OP_MITOSIS, 0x5fu, 7u, 7u,
+                              rand_i8(r, 10, 13), rand_i8(r, -6, 10), 0x21u, 4u, 0x002fu);
 
     // 3. Organ & Spiking Neuron Differentiation (Fires AFTER proliferative phase — ZERO hardcoded stencils!)
-    // Authentic Vertebrate Embryonic Placode Separation (prevents optic/otic mutual extinction!):
-    //   - Anterior optic brow (state 5: m2 in [4, 24]) + forebrain optic-vesicle (state 4: m1 in [20, 33], m2 in [4, 24]) -> paired stereo Eyes!
-    //   - Lateral otic brow (state 5: m2 >= 25) + posterior temporal (state 5: m1 <= -3, m2 >= 14) + lateral-line flank (state 3: m2 >= 18) -> paired binaural Ears!
+    // Authentic Vertebrate Embryonic Placode Separation (crisp 3-4 stereo Eyes + 3-4 binaural Ears — zero eye-tumor drag!):
+    //   - Anterior optic brow (state 5: m1>=6, m2 in [4, 22]) + forebrain optic-vesicle (state 4: m1 in [22, 33], m2 in [4, 22]) -> paired stereo Eyes!
+    //   - Lateral otic brow (state 5: m2 >= 23) + posterior temporal (state 5: m1 <= 5, m2 >= 12) + lateral-line flank (state 3: m2 >= 18) -> paired binaural Ears!
     //   - Midline snout contact Chem (state 5: m1 >= 10, m2 <= 3)
-    d.rules[nr++] = make_rule(5u, 1u, -2, 127, 2, 24, OP_DIFF, 0u, TK_EYE, 0u, 0, 0, 0x21u, 11u, 0x0011u);
-    d.rules[nr++] = make_rule(4u, 1u, 20, 33, 2, 24, OP_DIFF, 0u, TK_EYE, 0u, 0, 0, 0x21u, 10u, 0x0011u);
-    d.rules[nr++] = make_rule(5u, 1u, -2, 127, 25, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 11u, 0x0012u);
-    d.rules[nr++] = make_rule(5u, 1u, -24, -3, 14, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 11u, 0x0012u);
+    d.rules[nr++] = make_rule(5u, 1u, 6, 127, 4, 22, OP_DIFF, 0u, TK_EYE, 0u, 0, 0, 0x21u, 11u, 0x0011u);
+    d.rules[nr++] = make_rule(4u, 1u, 22, 33, 4, 22, OP_DIFF, 0u, TK_EYE, 0u, 0, 0, 0x21u, 10u, 0x0011u);
+    d.rules[nr++] = make_rule(5u, 1u, -2, 127, 23, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 11u, 0x0012u);
+    d.rules[nr++] = make_rule(5u, 1u, -24, 5, 12, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 11u, 0x0012u);
     d.rules[nr++] = make_rule(3u, 1u, -16, 127, 18, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 10u, 0x0012u);
     d.rules[nr++] = make_rule(5u, 1u, 10, 127, -120, 1, OP_DIFF, 0u, TK_CHEM, 0u, 0, 0, 0x21u, 10u, 0x0014u);
     // Neural primordia (L0 state 4 + deep CNS states 6, 7):
@@ -975,7 +978,9 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
     sync_block();
 
     __attribute__((shared)) u8 s_gland_pos[16];
+    __attribute__((shared)) u8 s_mus_pos[16];
     __attribute__((shared)) u32 s_n_glands;
+    __attribute__((shared)) u32 s_n_mus;
     u32 total_cones_landed = 0u;
     for (u32 tz = 0; tz < final_L; ++tz) {
         u32 t_sl = s_cr_slabs[tz];
@@ -989,30 +994,38 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
         u8 raw_cs = pool.cell_stripes[u64(t_sl) * TISSUE_CELLS + tid];
         u8 my_st_idx = raw_cs & 0x0fu;
         u32 my_exc_syn_tot = u32(raw_cs >> 4) << 3;
-        u32 n_gl = 0u;
+        u32 n_gl = 0u, n_mu = 0u;
         if (tz == 0u) {
-            if (tid == 0u) s_n_glands = 0u;
+            if (tid == 0u) { s_n_glands = 0u; s_n_mus = 0u; }
             sync_block();
             if (t_my_tk == TK_GLAND) {
                 u32 gi = atomic_add_gen_u32(&s_n_glands, 1u);
                 if (gi < 16u) s_gland_pos[gi] = u8(tid);
+            } else if (t_my_tk == TK_MUSCLE) {
+                u32 mi = atomic_add_gen_u32(&s_n_mus, 1u);
+                if (mi < 16u) s_mus_pos[mi] = u8(tid);
             }
             sync_block();
             n_gl = min_u32(s_n_glands, 16u);
+            n_mu = min_u32(s_n_mus, 16u);
         }
 
-        u32 sz_ord_lim = (tz == 0u && !is_maturation && n_gl > 0u) ? (final_L + 3u) : final_L;
+        u32 sz_ord_lim = (tz == 0u && !is_maturation && (n_gl > 0u || n_mu > 0u)) ? (final_L + 3u) : final_L;
         for (u32 sz_ord = 0; sz_ord < sz_ord_lim; ++sz_ord) {
             // Canonical Mammalian Laminar Hierarchy (Felleman & Van Essen 1991 / Sherman & Guillery 1998)
-            // + Dense Songbird/Human HVC/Broca -> RA/nXIIts Multi-Tract Corticobulbar Readout (Hahnloser 2002 / Jarvis 2019):
+            // + Dense Corticobulbar (HVC/Broca -> TK_GLAND) & Corticospinal (PFC/M1 -> TK_MUSCLE) Multi-Tract Readout:
             // - L1 Primary Sensory Cortex visits L0 Thalamocortical Sensors FIRST (dedicated Stripe-0 sensory driver!)
             // - All other layers visit local recurrent (sz == tz) FIRST so Stripe 0 stays in registers!
-            // - On tz==0, 3 extra dedicated corticobulbar passes from L2, L3, L4 double prefrontal WM/context fan-in
-            //   onto TK_GLAND vocal folds (30 distinct pyramidal synapses per hub layer, 0 B extra VRAM!)
+            // - On tz==0, 3 extra dedicated prefrontal passes from L2, L3, L4 double WM/context fan-in onto BOTH
+            //   TK_GLAND vocal folds AND TK_MUSCLE skeletal actuators (30 distinct pyramidal synapses/hub layer, 0 B extra VRAM!)
+            // - Deep apex projection strictly from final_L-1 & final_L-2 -> <=10 stripes on L0 even at 32L (zero 1/sqrt(K) dilution!)
             bool is_hvc_extra = (tz == 0u && sz_ord >= final_L);
             u32 sz;
             if (is_hvc_extra) {
-                sz = 2u + (sz_ord - final_L); // Dedicated 2nd HVC/Broca corticobulbar pass from L2, L3, L4 -> TK_GLAND!
+                // Dedicated HVC/Broca & Premotor multi-tract passes from L2, L3, L3 -> GLAND + MUSCLE!
+                // Concentrates corticobulbar/corticospinal readout on L3 (where L4 apical context x L2 cue x Uva vocal history
+                // form nonlinear Rigotti/Larkum XOR assemblies!) instead of a linear L4 context bypass!
+                sz = (sz_ord == final_L) ? 2u : 3u;
                 if (sz >= final_L) continue;
             } else if (tz == 1u) {
                 sz = (sz_ord == 0u) ? 0u : sz_ord;
@@ -1020,8 +1033,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                 sz = (sz_ord == 0u) ? tz : ((sz_ord <= tz) ? (sz_ord - 1u) : sz_ord);
             }
             if (tz == 0u && !is_hvc_extra) {
-                // Descending Layer-5 PT corticobulbar & corticospinal projections from L0..L4 + deep prefrontal STF areas!
-                bool deep_pt = (sz == final_L - 1u) || (final_L >= 3u && sz == final_L - 2u) || ((sz & 1u) == 0u && sz <= 10u);
+                bool deep_pt = (sz == final_L - 1u) || (final_L >= 3u && sz == final_L - 2u);
                 if (sz > 4u && !deep_pt) continue;
             } else if (sz == 0u) {
                 if (tz > 1u) continue; // Primary sensory axons terminate in L1 primary sensory cortex (V1/A1)!
@@ -1106,9 +1118,10 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                         s_col = s_rank & 3u;
                     }
                     // Authentic Braitenberg & Schuz (1998) Scale-Invariant Cortical Convergence
-                    // + Rigotti (2013 Nature) 4-Column Prefrontal Mixed-Selectivity Apical Feedback strictly on L4->L3 context hub!
+                    // + Rigotti (2013 Nature) 4-Column Prefrontal Mixed-Selectivity Apical Feedback strictly on L4->L3 context hub
+                    // + Pan-Cortical Corticobulbar (HVC->GLAND) & Excitatory Corticospinal (PFC/M1->MUSCLE) Multi-Tract Readout:
                     bool is_desc_mix = (is_desc_pyr && tz == 3u && sz == 4u);
-                    u32 n_br = is_hvc_extra ? 3u
+                    u32 n_br = is_hvc_extra ? 6u
                                             : (is_thalamo ? (is_maturation ? 2u : 10u)
                                                           : (is_maturation ? 2u
                                                                            : ((is_corticobulb && is_inh) ? 1u
@@ -1130,18 +1143,25 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                        : (is_desc_mix ? ((s_col + br) & 3u)
                                                       : ((is_desc_pyr && br >= 2u) ? ((s_col + 1u) & 3u) : s_col));
                         bool is_vocal_br = (is_corticobulb && ((!is_inh && br < 3u) || is_inh));
-                        u32 br_max_land = is_vocal_br ? (is_inh ? 1u : 2u) : max_land;
+                        bool is_mus_br = (is_corticobulb && !is_inh && br >= 3u && br < 6u);
+                        if (is_vocal_br && n_gl == 0u) continue;
+                        if (is_mus_br && n_mu == 0u) continue;
+                        u32 br_max_land = (is_vocal_br || is_mus_br) ? (is_inh ? 1u : 2u) : max_land;
                         i32 gx_t = 8, gy_t = 12;
                         if (is_vocal_br && n_gl > 0u) {
                             u32 gpos = u32(s_gland_pos[(tid + br + sz * 3u + (is_hvc_extra ? 1u : 0u)) % n_gl]);
                             gx_t = i32(gpos & 15u);
                             gy_t = i32(gpos >> 4);
+                        } else if (is_mus_br && n_mu > 0u) {
+                            u32 mpos = u32(s_mus_pos[(tid + br + sz * 5u + (is_hvc_extra ? 2u : 0u)) % n_mu]);
+                            gx_t = i32(mpos & 15u);
+                            gy_t = i32(mpos >> 4);
                         }
                         i32 cx = i32(ux), cy = i32(uy), cz = i32(sz);
                         i32 prev_x = -1, prev_y = -1;
                         u32 steer_ch = rl.arg_b & 3u;
                         i32 steer_sign = (rl.arg_b & 4u) ? 1 : -1;
-                        u32 max_steps = is_vocal_br ? 18u : (12u + (u32(rl.param0 & 7) & 7u));
+                        u32 max_steps = (is_vocal_br || is_mus_br) ? 18u : (12u + (u32(rl.param0 & 7) & 7u));
                         u32 landed_here = 0u;
                         u16 last_post = 0xffffu;
 
@@ -1212,15 +1232,16 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                 } else if (sz == tz && tz >= 1u && is_inh) {
                                     g += (n_col != s_col) ? 18 : 4; // Broad cross-column PV+/SST+ competitive surround inhibition!
                                 }
-                                // Songbird/Human HVC->RA Diffusible BDNF/GDNF Corticobulbar Chemotropism (Jarvis 2019 / Hahnloser 2002):
-                                // 4 primary corticospinal branches (br=0..3) drive MUSCLE/GRASP locomotion, while 3 dedicated
-                                // BDNF-guided vocal collaterals (br=4..6) from ALL 4 Sperry columns converge uniformly across ALL TK_GLAND folds!
+                                // Songbird/Human HVC->RA & Corticospinal BDNF/GDNF Chemotropism (Jarvis 2019 / Kravitz 2010):
+                                // Dedicated BDNF-guided vocal (br=0..2 -> GLAND) and corticospinal (br=3..5 -> MUSCLE) tracts
+                                // converge uniformly across ALL 4 Sperry columns with pan-cortical Purves-Lichtman reservoir sampling!
                                 if (is_corticobulb && nz == 0) {
-                                    if (is_vocal_br && n_gl > 0u) {
+                                    if ((is_vocal_br && n_gl > 0u) || (is_mus_br && n_mu > 0u)) {
                                         i32 gdx = nx - gx_t; if (gdx < 0) gdx = -gdx;
                                         i32 gdy = ny - gy_t; if (gdy < 0) gdy = -gdy;
-                                        g += (72 - (gdx + gdy) * 16) + ((tis_kind(nt) == TK_GLAND) ? 56 : 0);
-                                    } else if (tis_kind(nt) == TK_GLAND) {
+                                        u8 want_tk_b = is_vocal_br ? TK_GLAND : TK_MUSCLE;
+                                        g += (72 - (gdx + gdy) * 16) + ((tis_kind(nt) == want_tk_b) ? 56 : 0);
+                                    } else if (tis_kind(nt) == TK_GRASP) {
                                         g += 34;
                                     }
                                 }
@@ -1238,15 +1259,16 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                 if (post == u32(last_post)) continue;
                                 u64 tgt = s_nxt[post];
                                 u8 t_tk = tis_kind(tgt);
-                                // Fundamental bilaterian & Basal-Ganglia histology (ZERO hardcoded weights or tasks!):
+                                // Fundamental bilaterian & vertebrate neuromuscular histology (ZERO hardcoded weights or tasks!):
                                 // 1. Primary sensory receptors (EYE/EAR/CHEM) & VTA MOD synapse strictly onto NEURONS
-                                // 2. GABAergic interneurons (PV/SST) synapse onto ALL neurons (Basal-Ganglia premotor NoGo)
-                                //    AND onto vocal syrinx TK_GLAND (sculptable D2-NoGo phoneme veto without paralyzing muscles!)
+                                // 2. GABAergic interneurons (PV/SST) synapse onto ALL neurons (premotor inhibition) AND onto
+                                //    vocal syrinx TK_GLAND (Area-X D2-NoGo); skeletal muscles (TK_MUSCLE) are 100% excitatory!
                                 bool target_ok = false;
                                 if (tk_is_sensor(s_tk) || s_tk == TK_NEU_MOD) target_ok = tk_is_neuron(t_tk);
                                 else if (is_corticobulb && is_inh) target_ok = (t_tk == TK_GLAND);
                                 else if (tk_is_inhibitory(s_tk)) target_ok = (tk_is_neuron(t_tk) || t_tk == TK_GLAND);
-                                else if (is_corticobulb && !is_inh && br < 3u) target_ok = (t_tk == TK_GLAND);
+                                else if (is_vocal_br) target_ok = (t_tk == TK_GLAND);
+                                else if (is_mus_br) target_ok = (t_tk == TK_MUSCLE);
                                 else if (rl.arg_a == 1u) target_ok = tk_is_neuron(t_tk);
                                 else if (rl.arg_a == 2u) target_ok = tk_is_effector(t_tk);
                                 else target_ok = (tk_is_neuron(t_tk) || tk_is_effector(t_tk));
@@ -1260,19 +1282,18 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                         target_ok = false;
                                 }
 
-                                bool is_cb_gland = (is_corticobulb && t_tk == TK_GLAND);
+                                bool is_cb_res = (is_corticobulb && (t_tk == TK_GLAND || t_tk == TK_MUSCLE));
                                 if (target_ok && (rl.tag_bits == 0u || (tis_tag(tgt) & rl.tag_bits) != 0u || stp >= 4u) &&
-                                    (is_cb_gland || s_in_cnt[post] < SYN_PER_STRIPE)) {
+                                    (is_cb_res || s_in_cnt[post] < SYN_PER_STRIPE)) {
                                     u32 dst_slot = SYN_PER_STRIPE;
-                                    if (is_cb_gland) {
+                                    if (is_cb_res) {
                                         // Authentic Purves-Lichtman (1980) Pan-Cortical BDNF Trophic Competition:
-                                        // - Slots 0..13: exact uniform reservoir sampling across ALL arriving cortical pyramidal
-                                        //   axons (anterior auditory/visual cortex gets equal footing with posterior cortex!)
-                                        // - Slots 14..15: dedicated Basal-Ganglia D2-NoGo inhibitory veto slots (~12% inh)!
+                                        // - TK_GLAND: slots 0..13 uniform pyramidal reservoir + slots 14..15 Area-X D2-NoGo!
+                                        // - TK_MUSCLE: all 16 slots uniform excitatory pyramidal reservoir across ALL 4 Sperry columns!
                                         if (is_inh) {
                                             dst_slot = 14u + (mix(rng ^ post ^ stp) & 1u);
                                         } else {
-                                            u32 exc_cap = is_hvc_extra ? SYN_PER_STRIPE : 14u;
+                                            u32 exc_cap = (is_hvc_extra || t_tk == TK_MUSCLE) ? SYN_PER_STRIPE : 14u;
                                             u32 arr_k = atomic_add_gen_u32(&s_in_cnt[post], 1u);
                                             if (arr_k < exc_cap) dst_slot = arr_k;
                                             else {
@@ -1309,8 +1330,8 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                                           : ((is_corticobulb && t_tk == TK_GLAND) ? 22
                                                              : ((tz == 0u && t_tk == TK_GLAND) ? 8 : (tz == 0u ? 18 : 11))));
                                         i32 mag = is_inh
-                                                      ? (t_tk == TK_GLAND ? clamp_i32(4 + (raw_m >> 1) + i32(rng & 1u), 4, 7)
-                                                                          : clamp_i32(15 + raw_m + i32(rng & 7u), 15, 23))
+                                                      ? ((t_tk == TK_GLAND || t_tk == TK_MUSCLE) ? clamp_i32(4 + (raw_m >> 1) + i32(rng & 1u), 4, 7)
+                                                                                                 : clamp_i32(15 + raw_m + i32(rng & 7u), 15, 23))
                                                       : clamp_i32(base_exc + raw_m + spine_j,
                                                                   is_thalamo ? 28 : ((sz < tz && tz > 0u) ? 14 : ((is_corticobulb && t_tk == TK_GLAND) ? 12 : ((tz == 0u && t_tk == TK_GLAND) ? 5 : 7))),
                                                                   is_thalamo ? 48 : ((sz < tz && tz > 0u) ? 30 : ((is_corticobulb && t_tk == TK_GLAND) ? 34 : ((tz == 0u && t_tk == TK_GLAND) ? 16 : (tz == 0u ? 34 : 18)))));
@@ -1329,10 +1350,10 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                         // feedforward sensory/ascending, L5+ executive & inhibitory synapses initialize at full STD (stp=6)!
                                         u32 init_stp = (sz == tz && tz >= 2u && tz <= 4u && t_tk == TK_NEU_EXC && !is_inh && comp == 0u) ? 1u : 6u;
                                         u32 syn_w = pack_synapse(tid, w, 0, delay, comp, rule_id & 3u, init_stp);
-                                        if (is_cb_gland) atomic_exch_gen_u32(&s_in_syn[post * SYN_PER_STRIPE + dst_slot], syn_w);
+                                        if (is_cb_res) atomic_exch_gen_u32(&s_in_syn[post * SYN_PER_STRIPE + dst_slot], syn_w);
                                         else s_in_syn[post * SYN_PER_STRIPE + dst_slot] = syn_w;
                                     }
-                                    if (is_cb_gland || dst_slot < SYN_PER_STRIPE) {
+                                    if (is_cb_res || dst_slot < SYN_PER_STRIPE) {
                                         last_post = u16(post);
                                         ++landed_here;
                                     }
@@ -1346,7 +1367,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
 
             // 5. In-Place Shared-Memory Deduplication (100% distinct presynaptic partners per stripe — FREES 16 live registers!)
             //    and commit into Coalesced Variable-Fan-In Blackwell v4.u32 SynSlabs!
-            u32 raw_landed = (tz == 0u && tis_kind(t_my_word) == TK_GLAND)
+            u32 raw_landed = (tz == 0u && (tis_kind(t_my_word) == TK_GLAND || tis_kind(t_my_word) == TK_MUSCLE))
                                  ? SYN_PER_STRIPE
                                  : min_u32(s_in_cnt[tid], SYN_PER_STRIPE);
             u32 uniq = 0u;
@@ -1598,7 +1619,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
         u32 ex_eye = (body.counts[TK_EYE] > 4u) ? (body.counts[TK_EYE] - 4u) : 0u;
         u32 ex_ear = (body.counts[TK_EAR] > 4u) ? (body.counts[TK_EAR] - 4u) : 0u;
         u32 ex_chm = (body.counts[TK_CHEM] > 2u) ? (body.counts[TK_CHEM] - 2u) : 0u;
-        u32 ex_gld = (body.counts[TK_GLAND] > 3u) ? (body.counts[TK_GLAND] - 3u) : 0u;
+        u32 ex_gld = (body.counts[TK_GLAND] > 4u) ? (body.counts[TK_GLAND] - 4u) : 0u;
         u32 ex_stem = (body.counts[TK_STEM] > 6u) ? (body.counts[TK_STEM] - 6u) : 0u;
         u32 ex_str = (body.counts[TK_STRUCT] > 6u) ? (body.counts[TK_STRUCT] - 6u) : 0u;
         u32 ex_grp = (body.counts[TK_GRASP] > 6u) ? (body.counts[TK_GRASP] - 6u) : 0u;

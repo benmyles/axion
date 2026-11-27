@@ -877,9 +877,8 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 }
             }
 
-            // Authentic Avian RA / Mammalian Nucleus-Ambiguus Full-Tick 4-Substep Dendritic Integration on TK_GLAND:
-            // Integrates ALL 4 substeps across ALL cortical layers (L1..L_top) and heterogeneous delays (0..4) BEFORE
-            // glottic WTA locking (prevents sub=0 from discarding 75% of the cortical assembly -> 4x vocal readout SNR!)
+            // Authentic Avian RA / Mammalian Nucleus-Ambiguus Full-Tick 4-Substep Dendritic Integration strictly on TK_GLAND
+            // (before glottic WTA lock); TK_MUSCLE keeps exact substep temporal coincidence for Larkum BAC doublets & axonal delays!
             if (tk == TK_GLAND) {
                 i32 s_bt = (ext_tot[0] + ext_tot[1] + ext_tot[2] + ext_tot[3]) >> 2;
                 i32 s_ap = (ext_apic[0] + ext_apic[1] + ext_apic[2] + ext_apic[3]) >> 2;
@@ -967,7 +966,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                         if (layer_idx >= 2u && sw_i > 0 && !is_ap_l) {
                                             // Authentic Mongillo-Wang Bistable Prefrontal/Hippocampal STF Attractor (16x contrast!):
                                             // Dedicated L3/L4 2-Slot WM hub holds 4.0x (stp>=4) for 24-31t; L2 bigram holds 2.5x (stp>=5);
-                                            // L5..L_top uses standard STD (stp=7 at rest) -> >>3 keeps resting recurrence strictly subcritical (ZERO dark cascade!)
+                                            // L5..L_top uses standard STD (stp=7 at rest) -> >>3 keeps resting recurrence strictly subcritical!
                                             bool is_wm_hub = (layer_idx == 3u || layer_idx == 4u);
                                             curr = is_wm_hub ? ((stp_v >= 4u) ? (curr << 2) : (curr >> 2))
                                                              : ((layer_idx == 2u && stp_v >= 5u) ? ((curr * 5) >> 1) : ((layer_idx >= 5u) ? (curr >> 3) : (curr >> 2)));
@@ -1029,7 +1028,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     i32 raw_a = i_apical;
                     if (layer_idx == 0u && is_eff && tk != TK_GLAND) {
                         if (tk == TK_MUSCLE && my_exc_cnt > 24u) {
-                            // Scale-invariant Brunel 1/sqrt(K) corticospinal scaling for 150..8,000-neuron sparse cortices!
+                            // Scale-invariant Brunel 1/sqrt(K) corticospinal scaling preserving exact substep BAC coincidence!
                             float m_inv = 1.0f / fast_sqrt(float(my_exc_cnt));
                             i_basal = i32(float(raw_b) * (64.0f * m_inv));
                             i_apical = abl.silence_apical ? 0 : i32(float(raw_a) * (44.0f * m_inv));
@@ -1152,7 +1151,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     // OR awake rewarded consummatory pauses (mot_thrust < 0.25, suppressed by locomotor theta during running!)
                     i32 sleep_drive = (is_resting && ((tick & 31u) == 0u) && layer_idx > 0u && is_pyr && ema >= 8u && ema < 20u)
                                           ? 18
-                                          : (((layer_idx == 3u || layer_idx == 4u) && is_pyr && st0_stf_hold && eff_da > 24 && cr.mot_thrust < 0.25f && ema >= 6u && ema < 24u) ? 45 : 0);
+                                          : (((layer_idx == 3u || layer_idx == 4u) && is_pyr && st0_stf_hold && eff_da > 28 && cr.mot_thrust < 0.25f && ema >= 8u && ema < 22u) ? 32 : 0);
                     u32 pv_sh_cap = (layer_idx >= 2u) ? 200u : 140u;
                     i32 pv_shunt = (layer_idx >= 1u && is_pyr && !has_topk_pv && pv_cnt > 1u)
                                        ? i32(min_u32(pv_sh_cap, (pv_cnt - 1u) * 10u))
@@ -1189,11 +1188,11 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     bool ican_self_ca = ((ring & 0xffu) != 0u) || (ema >= ican_ema_min) || (i_basal >= ican_b_min);
                     i32 ican_curr = ((layer_idx == 3u || layer_idx == 4u) && is_pyr && st0_stf_hold && !ican_flushed && ican_self_ca) ? 145 : 0;
                     // Authentic Songbird Uva -> HVC / Broca Modulatory Vocal Efference Copy (Fee 2014 / Hickok 2012):
-                    // Strictly subthreshold alone and gated on THIS neuron's active L3 Slot-2 engram (`st0_stf_hold && ican_self_ca`)
-                    // across the full 5-tick syllable transition window (`1..5t` after articulation) -> chains 2- & 3-syllable phrases!
-                    bool uva_on = (layer_idx == 3u && is_pyr && st0_stf_hold && ican_self_ca &&
-                                   cr.last_vocal_tick > 0u && tick > cr.last_vocal_tick && tick <= cr.last_vocal_tick + 5u);
-                    i32 uva_curr = uva_on ? (((tid % 3u) == u32(cr.last_vocal_band)) ? 175 : -105) : 0;
+                    // Strictly subthreshold alone (0 pA in silent darkness!) and active whenever L3 receives either active
+                    // bottom-up cue drive (`i_basal >= 80`, surviving +DA Slot-2 flush during training!) or held Slot-2 WM!
+                    bool uva_on = (layer_idx == 3u && is_pyr && ((st0_stf_hold && ican_self_ca) || i_basal >= 80) &&
+                                   cr.last_vocal_tick > 0u && tick > cr.last_vocal_tick && tick <= cr.last_vocal_tick + 6u);
+                    i32 uva_curr = uva_on ? (((tid % 3u) == u32(cr.last_vocal_band)) ? 210 : -125) : 0;
                     i32 inp = is_sens ? eff_sens : (i_basal + bac_curr + ican_curr + uva_curr + sleep_drive + lman_curr + sens_curr - pv_shunt - col_shunt);
                     if (is_eff) inp += (i_apical >> 2);
                     if (d2_err_veto) {
@@ -1403,7 +1402,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     bool pre_inh = is_ext ? (w < 0) : tk_is_inhibitory(s_tk[pre]);
                     if (do_ltp) {
                     // Fix sub=0/1 cross-tick causal STDP (test full unmasked `shifted` bits 0..5!)
-                    // + full-syllable corticostriatal co-activity on TK_GLAND (prevents false sub=0/1 acausal inversion!)
+                    // + full-tick dendritic co-activity on 4-substep integrated TK_GLAND & TK_MUSCLE!
                     bool st_causal = (post4 != 0u) &&
                                      ((tk == TK_GLAND) ? ((shifted & 0x3fu) != 0u)
                                                        : ((shifted & (post4 | (post4 << 1) | (post4 << 2))) != 0u));
@@ -1593,9 +1592,9 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         } else if (is_wm_hub && pfc_gate_flush) {
                             // Authentic Ca2+-Buffered PBWM Gating (O'Reilly & Frank 2006 / Braver & Cohen 2000):
                             // - L3 (Slot 2) and -DA errors flush immediately to resting (stp=1).
-                            // - L4 (Slot 1) freshly encoded high-Ca2+ phrase context (cs_u >= 6) steps down (-1) on +DA
-                            //   (preserving context across 2- & 3-syllable phrases!) while completed delayed trials (cs_u <= 5) flush cleanly!
-                            if (layer_idx == 4u && eff_da > 18 && cs_u >= 6u)
+                            // - L4 (Slot 1) freshly encoded high-Ca2+ phrase context (cs_u >= 5) steps down (-1) on +DA
+                            //   (preserving context through BOTH Window 1 & Window 2 of 3-syllable phrases!) while completed trials flush cleanly!
+                            if (layer_idx == 4u && eff_da > 18 && cs_u >= 5u)
                                 s_stp = s - 0x20000000u;
                             else
                                 s_stp = (s & 0x1fffffffu) | 0x20000000u;
@@ -2131,6 +2130,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
     }
 
     // 4. Physical Object Manipulation: Catch Evasive OBJ_PREY, Carry/Crack OBJ_POD, Feast on OBJ_FUEL!
+    bool mega_seq_ok = false;
     u32 fidx = (u32(i32(cr.y + st * 1.5f + HF * 2.0f) & i32(MY)) << SY) |
                u32(i32(cr.x + ct * 1.5f + WF * 2.0f) & i32(MX));
     if (wb.objects && wb.max_objects > 0u) {
@@ -2209,6 +2209,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                                        cr.prev_vocal_age >= 1u && cr.prev_vocal_age <= 24u);
                     bool resonant_match = ((cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 24u && (u32(cr.last_vocal_band) == pod_b0 || u32(cr.last_vocal_band) == pod_b1)) ||
                                            (cr.last_heard_tick > 0u && tick <= cr.last_heard_tick + 24u && (u32(cr.last_heard_band) == pod_b0 || u32(cr.last_heard_band) == pod_b1)));
+                    if (seq2_match) mega_seq_ok = true;
                     float res_mul = seq2_match ? 5.50f : (resonant_match ? 2.45f : 1.0f);
                     float solo_base = (abl.challenge_tier >= 2u) ? 0.08f : 0.14f;
                     float dmg = has_stone_hammer ? ((is_tempered ? 2.60f : 1.35f) + 0.35f * bp.grasp_power)
@@ -2464,8 +2465,10 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
             // - Open empty void (vctx==3): Zahavi pneumatic swim-bladder cost (0.12f = 22x context call -> selects silence without eroding hunting!)
             float voc_cost = (abl.challenge_tier >= 2u && vctx == 3u) ? 0.06f : 0.0055f;
             cr.atp -= (voc_cost * dom_v + ((abl.challenge_tier >= 2u && vctx == 3u) ? 0.006f : 0.0014f)); ++cr.vocal_pulses;
+            bool is_mimic = (cr.last_heard_tick > 0u && tick > cr.last_heard_tick &&
+                             tick <= cr.last_heard_tick + 12u && u8(dom_b) == cr.last_heard_band);
             if (abl.challenge_tier >= 1u) {
-                // Trisolaris-13 Symmetric 3x3 Sensory-Bioacoustic Feedback (100% Energy-Conserving, ZERO Free ATP!):
+                // Trisolaris-14 Symmetric 3x3 Sensory-Bioacoustic Feedback + Dialogic Echo & 2-Syl Vault Resonance:
                 // Matching acoustic physics delivers real relief/spores (+VTA RPE); mismatched calls trigger modest physical
                 // disturbance/cough sensory prediction error (`voc_err` -> crisp Habenula/VTA -DA) WITHOUT starving vocalists!
                 if (vctx == 0u) {
@@ -2494,9 +2497,8 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                         cr.atp -= 0.16f; voc_err = 0.45f; // Open-glottis v0/v1 inhales corrosive mist -> VTA->Area-X -DA!
                     }
                 }
+                if (is_mimic && u32(dom_b) == vctx) voc_ok = 0.60f; // Cooperative peer echo amplifies VTA->Area-X confirmation!
             }
-            bool is_mimic = (cr.last_heard_tick > 0u && tick > cr.last_heard_tick &&
-                             tick <= cr.last_heard_tick + 12u && u8(dom_b) == cr.last_heard_band);
             if (cr.last_vocal_tick > 0u && (u8(dom_b) != cr.last_vocal_band || tick >= cr.last_vocal_tick + 6u)) {
                 cr.prev_vocal_band = cr.last_vocal_band;
                 u32 gap = (tick > cr.last_vocal_tick) ? (tick - cr.last_vocal_tick) : 1u;
@@ -2533,6 +2535,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
     // Dedicated Songbird VTA -> Area-X Vocal Performance Evaluation RPE (Fee & Goldberg 2011 Neuron):
     // Delivers crisp 1-tick vocal outcome +/-DA strictly to Area-X (TK_GLAND) & vocal cortical columns (Vector-FA)
     // WITHOUT corrupting locomotor/feeding VTA dopamine (cr.mod_da) on TK_MUSCLE / TK_GRASP!
+    if (mega_seq_ok && voc_ok < 0.65f) voc_ok = 0.65f;
     float v_net = voc_ok - voc_err;
     cr.voc_da_q = (fabsf_dev(v_net) > 0.05f) ? i8(clamp_i32(i32(v_net * 64.0f), -64, 64)) : i8(0);
     float pain = (cd_here > 0.24f ? (cd_here - 0.24f) * 2.4f : 0.0f) +
