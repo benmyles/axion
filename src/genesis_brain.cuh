@@ -673,8 +673,10 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
             bool is_mod = (tk == TK_NEU_MOD);
             bool is_sens = tk_is_sensor(u8(tk));
             bool is_eff = tk_is_effector(u8(tk));
+            // Strict Fee & Goldberg (2011) VTA -> Area-X isolation: vocal RPE (`vta_voc_q`) guides Area-X synaptic
+            // plasticity ONLY (NEVER triggers membrane D2 shutdown of digestive catalysis or skeletal motor learning!)
             i32 vta_voc_q = abl.silence_neuromod ? 0 : i32(cr.voc_da_q);
-            i32 eff_da = abl.silence_neuromod ? 0 : ((tk == TK_GLAND) ? clamp_i32(mod_da_q + vta_voc_q, -64, 64) : mod_da_q);
+            i32 eff_da = abl.silence_neuromod ? 0 : mod_da_q;
             i32 eff_ach = abl.silence_neuromod ? 0 : mod_ach_q;
             i32 eff_ne = abl.silence_neuromod ? 0 : mod_ne_q;
             i32 dyn_thresh = soma_thresh - (eff_ne << 1);
@@ -964,10 +966,10 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                         bool is_ap_l = (s & 0x04000000u) != 0u;
                                         if (layer_idx >= 2u && sw_i > 0 && !is_ap_l) {
                                             // Authentic Mongillo-Wang Bistable Prefrontal/Hippocampal STF Attractor (16x contrast!):
-                                            // Dedicated L3/L4 2-Slot WM hub holds 4-5x (stp>=4, scale-invariant across 64..192-syn hubs) for 24-31t;
-                                            // L2 bigram holds 2.5x (stp>=5); L5..L_top uses standard STD -> >>3 keeps resting recurrence subcritical!
+                                            // Dedicated L3/L4 2-Slot WM hub holds 4.0x (stp>=4) for 24-31t; L2 bigram holds 2.5x (stp>=5);
+                                            // L5..L_top uses standard STD (stp=7 at rest) -> >>3 keeps resting recurrence strictly subcritical (ZERO dark cascade!)
                                             bool is_wm_hub = (layer_idx == 3u || layer_idx == 4u);
-                                            curr = is_wm_hub ? ((stp_v >= 4u) ? ((my_exc_cnt >= 64u) ? (curr * 5) : (curr << 2)) : (curr >> 2))
+                                            curr = is_wm_hub ? ((stp_v >= 4u) ? (curr << 2) : (curr >> 2))
                                                              : ((layer_idx == 2u && stp_v >= 5u) ? ((curr * 5) >> 1) : ((layer_idx >= 5u) ? (curr >> 3) : (curr >> 2)));
                                         } else if (layer_idx == 1u && sw_i > 0) {
                                             curr >>= 3;
@@ -1005,7 +1007,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                             bool is_ap_l = (s & 0x04000000u) != 0u;
                                             if (layer_idx >= 2u && sw_i > 0 && !is_ap_l) {
                                                 bool is_wm_hub = (layer_idx == 3u || layer_idx == 4u);
-                                                curr = is_wm_hub ? ((stp_v >= 4u) ? ((my_exc_cnt >= 64u) ? (curr * 5) : (curr << 2)) : (curr >> 2))
+                                                curr = is_wm_hub ? ((stp_v >= 4u) ? (curr << 2) : (curr >> 2))
                                                                  : ((layer_idx == 2u && stp_v >= 5u) ? ((curr * 5) >> 1) : ((layer_idx >= 5u) ? (curr >> 3) : (curr >> 2)));
                                             } else if (layer_idx == 1u && sw_i > 0) {
                                                 curr >>= 3;
@@ -1181,7 +1183,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     u32 ican_ema_min = (layer_idx == 4u) ? 2u : 4u;
                     i32 ican_b_min = (layer_idx == 4u) ? 85 : 100;
                     bool ican_self_ca = ((ring & 0xffu) != 0u) || (ema >= ican_ema_min) || (i_basal >= ican_b_min);
-                    i32 ican_curr = ((layer_idx == 3u || layer_idx == 4u) && is_pyr && st0_stf_hold && !ican_flushed && ican_self_ca) ? 155 : 0;
+                    i32 ican_curr = ((layer_idx == 3u || layer_idx == 4u) && is_pyr && st0_stf_hold && !ican_flushed && ican_self_ca) ? 145 : 0;
                     // Authentic Songbird Uva -> HVC / Broca Modulatory Vocal Efference Copy (Fee 2014 / Hickok 2012):
                     // Strictly subthreshold alone and gated on THIS neuron's active L3 Slot-2 engram (`st0_stf_hold && ican_self_ca`)
                     // across the full 5-tick syllable transition window (`1..5t` after articulation) -> chains 2- & 3-syllable phrases!
@@ -1352,7 +1354,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     int_da = clamp_i32((i32(tot_mp_l) - i32(tot_mn_l)) * 2, -8, 8);
                     int_ach = clamp_i32(i32(tot_mp_l + tot_mn_l) * 4, 0, 26);
                 }
-                i32 tot_da = clamp_i32(eff_da + int_da, -64, 64);
+                i32 tot_da = clamp_i32(eff_da + int_da + ((tk == TK_GLAND) ? vta_voc_q : 0), -64, 64);
                 i32 tot_ach = clamp_i32(eff_ach + int_ach, 0, 64);
                 u32 mod_pos = (do_ltp && tot_da > 18) ? 1u : 0u;
                 u32 mod_neg = (do_ltp && tot_da < -18) ? 1u : 0u;
@@ -1435,7 +1437,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                             bool prev_pre = (pre_n != 0u);
                             i32 p_mag = (src_l == 0u) ? 1 : i32(min_u32(6u, (pre_n << 1) + 2u));
                             i32 p_riv = (src_l == 0u) ? 1 : i32(min_u32(4u, pre_n + 2u));
-                            i32 e_mag = (src_l == 0u) ? 2 : i32(min_u32(9u, (pre_n << 1) + 3u));
+                            i32 e_mag = (src_l == 0u) ? 2 : i32(min_u32(8u, (pre_n << 1) + 3u));
                             if (prev_gfold_mask != 0u) {
                                 bool is_prev_rival = (!prev_post && ((prev_gfold_mask & (1u << my_gfold)) == 0u));
                                 if (mod_pos) {
@@ -1449,7 +1451,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                 } else if (mod_neg) {
                                     if (!pre_inh) {
                                         if (prev_post && prev_pre && abs_w > 1) dw = -e_mag;
-                                        else if (is_prev_rival && prev_pre && abs_w < 44) dw = 3;
+                                        else if (is_prev_rival && prev_pre && abs_w < 50) dw = 4;
                                     } else {
                                         if (prev_post && prev_pre && abs_w < 14) dw = 2;
                                         else if (is_prev_rival && prev_pre && abs_w > 2) dw = -2;
@@ -1530,7 +1532,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                 dw = -2;
                             else if (st_pos && post_burst && !pre_rec && abs_w > 18 && ((tick + idx_k) & 3u) == 0u)
                                 dw = -1;
-                        } else if (is_ap_syn && (st_gate || (phasic_ach && ((tick + idx_k) & 3u) == 0u))) {
+                        } else if (is_ap_syn && (st_gate || phasic_ach) && ((tick + idx_k) & 3u) == 0u) {
                             if (!pre_inh) {
                                 if (pre_rec && post_recent && (st_pos || (!st_neg && phasic_ach && abs_w < w_hi - 6)) && abs_w < w_hi) dw = 1;
                                 else if (pre_rec && ((st_neg && va > 160) || (!post_recent && va > 240)) && abs_w > 12) dw = -1;
@@ -2463,27 +2465,29 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                 // Matching acoustic physics delivers real relief/spores (+VTA RPE); mismatched calls trigger modest physical
                 // disturbance/cough sensory prediction error (`voc_err` -> crisp Habenula/VTA -DA) WITHOUT starving vocalists!
                 if (vctx == 0u) {
-                    if (dom_b == 0u && wb.chem_c[idx] > 0.14f) {
-                        u32 v0_sn = (wb.light[idx] >= 0.25f)
-                                        ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
-                                        : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
-                        float v0_sens_m = (v0_sn >= 2u) ? 1.00f : ((v0_sn == 1u) ? 0.65f : 0.30f);
-                        float sb = clampf(wb.chem_c[idx] * 0.20f, 0.0f, 0.06f) * flow_vent;
-                        atomic_add_f32(&wb.chem_c[idx], -sb);
-                        float sg_e = sb * 12.0f * digest_mul * v0_sens_m;
-                        cr.atp += sg_e; cr.energy_gained += sg_e;
-                        if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(sg_e * 100.0f));
-                        voc_ok = 0.45f; // Physical spore harvest -> crisp VTA->Area-X +DA!
-                    } else if (dom_b != 0u && wb.chem_c[idx] > 0.18f) {
-                        cr.atp -= 0.05f; voc_err = 0.50f; // Non-resonant v1/v2 disturbs reef polyps -> VTA->Area-X -DA!
+                    if (dom_b == 0u) {
+                        if (wb.chem_c[idx] > 0.14f) {
+                            u32 v0_sn = (wb.light[idx] >= 0.25f)
+                                            ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
+                                            : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
+                            float v0_sens_m = (v0_sn >= 2u) ? 1.00f : ((v0_sn == 1u) ? 0.65f : 0.30f);
+                            float sb = clampf(wb.chem_c[idx] * 0.20f, 0.0f, 0.06f) * flow_vent;
+                            atomic_add_f32(&wb.chem_c[idx], -sb);
+                            float sg_e = sb * 12.0f * digest_mul * v0_sens_m;
+                            cr.atp += sg_e; cr.energy_gained += sg_e;
+                            if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(sg_e * 100.0f));
+                        }
+                        voc_ok = 0.45f; // Matched food/object call -> crisp VTA->Area-X +DA!
+                    } else if (wb.chem_c[idx] > 0.18f) {
+                        cr.atp -= 0.14f; voc_err = 0.45f; // Non-resonant v1/v2 disturbs reef polyps -> VTA->Area-X -DA!
                     }
                 } else if (vctx == 1u) {
                     if (dom_b == 1u) voc_ok = 0.45f;          // Ultrasonic v1 startles apex -> VTA->Area-X +DA!
-                    else { cr.atp -= 0.06f; voc_err = 0.50f; } // Non-startle v0/v2 lures predator -> VTA->Area-X -DA!
+                    else { cr.atp -= 0.16f; voc_err = 0.45f; } // Non-startle v0/v2 lures predator -> VTA->Area-X -DA!
                 } else if (vctx == 2u) {
                     if (dom_b == 2u) voc_ok = 0.45f;          // Cavity v2 disperses mist & warms -> VTA->Area-X +DA!
                     else if (wb.chem_d[idx] > 0.12f || env_temp > 0.62f || env_temp < 0.36f) {
-                        cr.atp -= 0.06f; voc_err = 0.50f; // Open-glottis v0/v1 inhales corrosive mist -> VTA->Area-X -DA!
+                        cr.atp -= 0.16f; voc_err = 0.45f; // Open-glottis v0/v1 inhales corrosive mist -> VTA->Area-X -DA!
                     }
                 }
             }

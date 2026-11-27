@@ -1601,10 +1601,10 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                            0.0032f * float(ex_str * ex_str) +
                            0.0024f * float(ex_grp * ex_grp) +
                            0.0020f * float(ex_mod * ex_mod); // Warburg teratoma & immobile-shell/VTA hypertrophy suppression!
-        // Myelinated neocortical scaling: 1,000-4,000+ deep cortical neurons pay realistic lean myelinated upkeep!
-        float bcost = 0.025f + 0.00018f * float(surf_cells) + 0.00000035f * float(deep_cells) +
-                      0.000000015f * float(tot_syn) +
-                      0.000006f * float(final_L > 1u ? final_L - 1u : 0u) +
+        // Myelinated neocortical scaling: oligodendrocyte saltatory conduction keeps 1,000-4,000+ deep cortical neurons lean!
+        float bcost = 0.025f + 0.00018f * float(surf_cells) + 0.00000012f * float(deep_cells) +
+                      0.000000004f * float(tot_syn) +
+                      0.000002f * float(final_L > 1u ? final_L - 1u : 0u) +
                       0.000025f * float(n_rules) +
                       0.00016f * float(body.counts[TK_MUSCLE]) +
                       0.00032f * float(body.counts[TK_GRASP] + body.counts[TK_STRUCT]) +
