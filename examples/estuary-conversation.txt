@@ -1,9 +1,0 @@
-what was in north?
-what is in north?
-what was in east?
-what is in east?
-what was in south?
-what is in south?
-what was in west?
-what is in west?
-/quit

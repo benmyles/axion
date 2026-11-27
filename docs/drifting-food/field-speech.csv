@@ -1,5 +1,0 @@
-run,experiment,drift_diary,born,tick,events,committed,mistaken,eaten,recalled_choices,drift_conversation,anchors,expected_right,actual_right,before_right,three_turns,contrasting_pairs,discrepancies,both_sides,erased_topic_answers,erased_topic_right,missing_scene_answers,unique_replies,locations_right
-10577,final-raft-naive,919720,387796,388347,40,17,9,36,25,919720,160,0,0,0,0,0,29,0,0,0,0,53,0
-10576,final-raft-taught,919720,387796,388347,40,17,9,36,25,919720,160,108,108,108,108,96,29,29,0,0,0,53,30
-10575,final-river-naive,913493,387807,388348,24,10,5,24,13,913493,96,0,0,0,0,0,7,0,0,0,0,36,0
-10574,final-river-taught,913493,387807,388348,24,10,5,24,13,913493,96,64,67,67,64,46,7,7,0,0,0,36,20

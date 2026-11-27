@@ -1,3 +1,0 @@
-composition_batch,replicas,acquired_models,events,addresses,shutters,plastic_state_bytes,discourse_bytes,checked_values,checked_replies,checked_events,median_ms,Mevents_per_s
-temporal,1048576,64,128,28,4,2328,0,2336187,24789,65536,224.743,597.205
-packed,1048576,64,128,28,4,28,18,2336187,24789,65536,125.493,1069.53

@@ -1,8 +1,0 @@
-/audience 317087 0 first
-/audience-load second teal
-where will teal go?
-where did it go?
-/audience-pour
-where did it go?
-where did teal start?
-/quit

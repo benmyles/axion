@@ -1,7 +1,0 @@
-material_message=0  cue=0  mark=0  sensed=1  receiver_choice=0  erased_choice=0  inverse_choice=1  portions=2  remaining=62  practice=0
-sealed_cycle=0  geology=0  input=9  carrier_before=0  bound_before=2  flow=1  carrier_after=2  bound_after=0  remaining=31  paid=2  contacts=0
-material_message=0  cue=1  mark=1  sensed=0  receiver_choice=1  erased_choice=0  inverse_choice=0  portions=2  remaining=60  practice=0
-sealed_cycle=0  geology=0  input=9  carrier_before=0  bound_before=2  flow=1  carrier_after=2  bound_after=0  remaining=31  paid=2  contacts=0
-material_message=0  cue=1  mark=1  sensed=0  receiver_choice=1  erased_choice=0  inverse_choice=0  portions=2  remaining=58  practice=0
-sealed_cycle=0  geology=0  input=9  carrier_before=0  bound_before=2  flow=1  carrier_after=2  bound_after=0  remaining=31  paid=2  contacts=0
-material_message=0  cue=0  mark=0  sensed=1  receiver_choice=0  erased_choice=0  inverse_choice=1  portions=2  remaining=56  practice=0

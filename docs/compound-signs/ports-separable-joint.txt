@@ -1,8 +1,0 @@
-compound_message=0  cue=0  mark=2  sensed=1  feeder=2  erase_first=2  erase_second=0  erase_both=0  portions=0  remaining=64  external_drops=30  first_orientation=2  second_orientation=2  practice=0
-compound_message=0  cue=1  mark=0  sensed=3  feeder=0  erase_first=0  erase_second=0  erase_both=0  portions=0  remaining=64  external_drops=30  first_orientation=2  second_orientation=2  practice=0
-compound_message=0  cue=2  mark=3  sensed=0  feeder=1  erase_first=2  erase_second=3  erase_both=0  portions=0  remaining=64  external_drops=30  first_orientation=2  second_orientation=2  practice=0
-compound_message=0  cue=3  mark=1  sensed=2  feeder=3  erase_first=0  erase_second=3  erase_both=0  portions=2  remaining=62  external_drops=30  first_orientation=2  second_orientation=2  practice=0
-compound_message=0  cue=0  mark=2  sensed=1  feeder=2  erase_first=2  erase_second=0  erase_both=0  portions=0  remaining=62  external_drops=30  first_orientation=2  second_orientation=2  practice=0
-compound_message=0  cue=2  mark=3  sensed=0  feeder=1  erase_first=2  erase_second=3  erase_both=0  portions=0  remaining=62  external_drops=30  first_orientation=2  second_orientation=2  practice=0
-compound_message=0  cue=1  mark=0  sensed=3  feeder=0  erase_first=0  erase_second=0  erase_both=0  portions=0  remaining=62  external_drops=30  first_orientation=2  second_orientation=2  practice=0
-compound_message=0  cue=3  mark=1  sensed=2  feeder=3  erase_first=0  erase_second=3  erase_both=0  portions=2  remaining=60  external_drops=30  first_orientation=2  second_orientation=2  practice=0

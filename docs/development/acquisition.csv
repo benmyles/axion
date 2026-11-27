@@ -1,3 +1,0 @@
-sequence_family,method,worlds,exact,minimal,pairs,transitions,correct,bit_errors,pinned_exact,pinned_correct,pinned_transitions,trips,moves,splits,cells,first_cells,first_senses,learning_ms,Mmoves_per_s
-network,probe,4096,4090,4090,32768,131072,131030,749,0,44724,131072,857667,5699797,28672,32768,8,4,9.44893,603.222
-ring,replay,4096,3320,2766,34911,69822,53106,610869,0,24170,32768,0,1048576,0,19236,4,2,17.5124,59.8761

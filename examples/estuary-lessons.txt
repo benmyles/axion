@@ -1,9 +1,0 @@
-/braid 3238195741
-/braid-station speaker 0 0123 15
-/braid-feed speaker 300
-/braid-practice speaker 12
-/braid-gloss speaker 12 1826540586 north east south west amber jade plum teal
-/braid-pattern speaker before explicit port 64 1826544365 what was in *
-/braid-pattern speaker actual explicit port 64 1826548144 what is in *
-/braid-memory speaker
-/quit

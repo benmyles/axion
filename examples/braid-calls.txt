@@ -1,6 +1,0 @@
-/braid 451537
-/braid-station speaker 4 0123 15
-/braid-station partner 4 0123 15
-/braid-say speaker @8
-/braid-say partner @8
-/quit

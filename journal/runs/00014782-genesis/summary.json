@@ -1,0 +1,60 @@
+{
+  "kind": "genesis",
+  "command": "genesis",
+  "title": "Axion Genesis v39 · Neocortex Spiking Mind",
+  "subtitle": "512×512 Trisolaris-7 · 512 slots · 30,000 ticks · Gen 240 · 255 morphs · up to 11 layers",
+  "performance": {
+    "device": "NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU",
+    "command": "genesis",
+    "wall": 764.4246477610001,
+    "interactive": false,
+    "work": 15360000,
+    "rate": 25725.023614767768,
+    "unit": "creature-ticks/s",
+    "seconds": 597.0840000000001,
+    "time_scope": "Coupled Blackwell world + SNN + CA-DNA",
+    "bytes": 18944,
+    "byte_scope": "Full embodied creature (4B/syn)"
+  },
+  "source": "/var/tmp/v39-e1.gen",
+  "archive": "",
+  "family": "Natural births",
+  "measure": 68762.0,
+  "unit": " births",
+  "stats": [
+    [
+      "Survivors / Births",
+      "510 / 68,762"
+    ],
+    [
+      "Morphs / Gen",
+      "255 / G240"
+    ],
+    [
+      "Layers / Fan-In",
+      "8.24 (11L) · 192"
+    ]
+  ],
+  "scores": [],
+  "narrative": [
+    "512 unified CA-DNA organisms evolved 30,000 ticks (50 ticks/s): 68,762 births, Gen 240, up to 11 layers & 192-syn hubs.",
+    "Avg 971.8 neurons (E 702.91/PV 157.28/SST 103.04): 4,152 prey, 1,516 pods, 8 shelters, 3,078,298 vocal replies.",
+    "Zero hardcoding: 1 zygote → multi-thousand-neuron neocortex + NMDA subunits + PV k-WTA + Burstprop/dPC (4 B/syn)."
+  ],
+  "bullets": [
+    "Spikes: 9,911,024,592, live STDP edits: 100,511,274,140."
+  ],
+  "receipt": "a918229603dd7729363ce3297b78f83dc25a4ba487692a81d4831bf33f624c61",
+  "activity": {},
+  "alive": null,
+  "capacity": 0,
+  "depth": 0,
+  "peak": 0,
+  "observations": 0,
+  "id": 14782,
+  "path": "runs/00014782-genesis",
+  "date": "2026-11-27T05:31:45Z",
+  "version": 1,
+  "genesis_mode": "evolve",
+  "device": "NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU"
+}

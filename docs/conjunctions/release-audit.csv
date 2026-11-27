@@ -1,6 +1,0 @@
-conjunction,probes,arbitrary,sparse_role,completion,ambiguous,revision,unstructured_silence
-intact,4096,4096,4096,4096,4096,4095,4096
-fixed,4096,1205,4096,0,1063,0,3044
-no-recurrence,4096,4096,4096,0,4096,4095,4096
-no-joint,4096,1205,4096,0,1063,0,3044
-one-tick,4096,4096,4096,2027,4096,4095,4096

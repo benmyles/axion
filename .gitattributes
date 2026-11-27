@@ -1,4 +1,4 @@
-# Git LFS tracking for all images, videos, checkpoints, and large binary/compressed assets
+# Track all visual media, checkpoints, and compressed telemetry archives in Git LFS
 *.webp filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
@@ -7,16 +7,4 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.webm filter=lfs diff=lfs merge=lfs -text
 *.gen filter=lfs diff=lfs merge=lfs -text
-*.cmind filter=lfs diff=lfs merge=lfs -text
-*.flood filter=lfs diff=lfs merge=lfs -text
-*.zst filter=lfs diff=lfs merge=lfs -text
-*.mind filter=lfs diff=lfs merge=lfs -text
-*.eco filter=lfs diff=lfs merge=lfs -text
-*.axn filter=lfs diff=lfs merge=lfs -text
-*.eggs filter=lfs diff=lfs merge=lfs -text
-*.nest filter=lfs diff=lfs merge=lfs -text
-*.roost filter=lfs diff=lfs merge=lfs -text
-*.clay filter=lfs diff=lfs merge=lfs -text
 *.gz filter=lfs diff=lfs merge=lfs -text
-
-*.csv whitespace=trailing-space,space-before-tab,cr-at-eol

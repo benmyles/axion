@@ -1,5 +1,0 @@
-population,automatic_dispatch,sites,living,bands,irregular,fixed_live_lane_slots,packed_lane_slots,ticks,fixed_ms,packed_ms,speed_ratio,compared_bytes,fixed_registers,packed_registers,fixed_local_bytes,packed_local_bytes,implicit_bands,reserved_neural_bytes
-mature-watershed,packed,262144,71722,143846,188,2295104,271872,64,139.997,31.3775,4.46168,184811520,71,72,72,72,1840,17070080
-founders-32,fixed,1024,928,1856,0,1856,2048,48,0.512352,0.896992,0.571189,230400,65,72,72,72,0,32768
-founders-64,fixed,4096,1213,7524,0,9704,9600,48,0.807008,1.29686,0.622276,1314816,71,72,72,72,0,524288
-founders-128,packed,16384,16384,184420,0,524288,229568,48,10.6546,8.35482,1.27526,11550720,71,72,72,72,184420,702720

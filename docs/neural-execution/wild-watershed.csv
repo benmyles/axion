@@ -1,3 +1,0 @@
-branch,tick,living,expressed_cells,site_ticks,simulation_seconds,million_site_ticks_per_second,neural_reserved_device_bytes,neural_logical_dense_bytes,spill_virtual_bytes,spill_system_pages,storage_page_bytes,collections,reclaimed_logical_pages,discarded_system_pages,implicit_bands,native_file_bytes,neural_file_bytes
-inner-bank,376192,71371,4580928,2147483648,33.7725,63.5868,17070080,134217728,125829120,0,4096,2,31156,12193,1386,392721388,8676856
-outer-estuary,384384,381959,24566304,8589934592,137.966,62.2612,51908608,536870912,503316480,3108,4096,2,146496,55995,9606,1570895180,34727768

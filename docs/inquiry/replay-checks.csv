@@ -1,7 +1,0 @@
-experiment,first_execution,second_execution,bytes_each,sha256_both
-wild complete and split,native SM 120,native 1499+2597 ticks,481823144,538f8a831290ff9a237edd1fef672407dfa2f1be08f3a400f8d43cb2627eabee
-wild uninterrupted repeat,native SM 120,native 4096 ticks,481823144,538f8a831290ff9a237edd1fef672407dfa2f1be08f3a400f8d43cb2627eabee
-197-tick active habitat,native SM 120,two modules from SM 80 PTX,6047912,04233709021b54fda05c1e26eceb39e93637e8d263b7a1a97bc8b7d56cd470ed
-1188 acoustic exchanges,native SM 120,two modules from SM 80 PTX,189458,1b9c7a663d3b4f4baa55a4133b49f48c9e26cd154b1bfadf7ad2ecd0b2bb53ea
-4096 ticks from Millrace,native original trajectory,native reconstruction from Millrace,480774440,ef1ac56e5a7bf948bbc100464db247ed1cf77806f06557c7f2780914d352791b
-14336 ticks from Millrace,native original trajectory,native reconstruction from Millrace,481823144,538f8a831290ff9a237edd1fef672407dfa2f1be08f3a400f8d43cb2627eabee

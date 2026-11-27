@@ -84,7 +84,7 @@ Every official release is validated on:
 | Phase | Focus | Key Targets |
 | :--- | :--- | :--- |
 | **v38 (Published)** | Neocortex Scale & Dendritic Credit | `934–1,730` active neurons on `512×512`, `7/7` ablations positive, `0 B` spill across all 5 SM 12.0 kernels. |
-| **v39 (Current)** | Prefrontal STF, PBWM Shielding, Vector-FA Burstprop, Pan-Cortical BDNF, Trisolaris-7 | `MMN > 15–20%`, `L1 SNR > 8–10×`, `7/7` ablations positive on fresh 1,000+ neuron lineages, clean Git LFS repo. |
-| **v40–v41** | Deep Laminar SNR & Hippocampal Sequence Replay | Push `L2..L_top` repeat noise `< 0.10` (`SNR > 6×` all layers), break `65–85%+` on `Q&A`, `Ctx`, `Epi19`, `Trans20`, and `2-Syl`/`3-Syl` syntax. |
+| **v39 (Published)** | Prefrontal STF, PBWM Shielding, Vector-FA Burstprop, Pan-Cortical BDNF, 1t Mg²⁺ NMDA, Same-Substep PV Top-$k$, Trisolaris-7 | `972–1,634` neurons, `68.8k` births, `100.5B` STDP edits, `4,152` prey, `322` apex kills, `212` duets, `Q&A 46%/49%`, `Ctx 41%`, `Epi19 40%`, `Trans20 41%`, `1,802×` WM, `intact > zero_delay`, lean `1.6 MB` pure Genesis repo. |
+| **v40 (Active)** | Sparse Laminar Rate Control, Deep SNR (`>6×`) & Hippocampal Sequence Replay | Calm `1,000+` neuron firing (`167M → 35–45M` spikes) to restore `7/7` strongly positive ablations, push `cos(A, B) > 0.60` / `cos(A, A') < 0.08` across `L1..L_top`, break `65–85%+` on `Q&A`, `Ctx`, `Epi19`, `Trans20`, and `2-Syl`/`3-Syl` syntax. |
 | **v42–v43** | `2,000–4,000+` Neuron Cortices & `1024×1024` Multi-Biome Worlds | Sustained cortical expansion via modular areas, emergent multi-word dialects (`vocal_mi_bits > 0.25` bits), multi-step tool/shelter planning. |
 | **v44+** | Grounded Open-Ended Spiking Conversation | Rich bidirectional human-creature dialogue grounded in episodic memory, causal reasoning, and learned compositional syntax — zero LLMs. |

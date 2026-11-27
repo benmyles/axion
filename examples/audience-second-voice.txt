@@ -1,5 +1,0 @@
-/braid 7823
-/braid-feed speaker 512
-/braid-feed partner 512
-/audience-practice 71867 48 live
-/quit

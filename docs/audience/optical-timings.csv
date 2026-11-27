@@ -1,3 +1,0 @@
-experiment,run,receipt,daylight_profile,tested_tiles,cuda_ms,median_us,p90_us,Mtiles_per_s
-estuary-profile-off,12403,cbb3d112687b5083aa5a5033ab6e369d183d456e648cea3eef6933dd9de2cc4f,128,4194304,10.5884,81.92,86.016,396.122
-estuary-profile-visible,12409,9f538289dd0fb3bf551d3a702558f6db8540f6deb9b38ab34c040815d6e6b0c5,128,4194304,10.9988,83.968,89.536,381.34

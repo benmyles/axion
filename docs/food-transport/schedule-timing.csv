@@ -1,7 +1,0 @@
-run,dispatch,site_ticks,simulation_seconds,million_site_ticks_per_second,cargo_launches,hydraulic_beats,arrivals
-time-0-full,full,536870912,9.63628,55.7135,512,64,1065645
-time-1-scheduled,scheduled,536870912,9.63889,55.6984,64,64,1065645
-time-2-scheduled,scheduled,536870912,9.64783,55.6468,64,64,1065645
-time-3-full,full,536870912,9.65619,55.5986,512,64,1065645
-time-4-full,full,536870912,9.66587,55.5429,512,64,1065645
-time-5-scheduled,scheduled,536870912,9.66935,55.523,64,64,1065645
