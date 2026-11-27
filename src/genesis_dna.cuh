@@ -317,12 +317,18 @@ AX_FN GenesisDNA make_founder_dna(u32 seed) {
     d.rules[nr++] = make_rule(8u, 1u, -120, -16, 23, 127, OP_DIFF, 0u, TK_STRUCT, 0u, 0, 0, 0x21u, 8u, 0x0048u);
 
     // 4. Crawling Discrete Axon Growth Cones with Authentic Mammalian Receptor Families (stage_pri bits 6..7 = rule_id 0..3!):
+    // Ohno-redundant sensory (optic/auditory) & cortico-cortical pyramidal (IT feedforward + CT/FB apical) guidance genes
+    // prevent accidental single-mutation cortical disconnection (maintains canonical ~82% E / ~18% I synaptic ratio!).
     // Sensory optic/ear/chem nerves (rule_id=2: NMDA+ACh/BAC predictive associative binding!)
     d.rules[nr++] = make_rule(0xffu, 2u, -120, 127, -120, 127, OP_GROWTH_CONE, 0xbfu, 1u, 0x07u,
                               rand_i8(r, 34, 56), rand_i8(r, -24, -6), 0x31u, u8(0x80u | 7u), 0x0020u);
-    // Ascending & local recurrent pyramidal tracts (rule_id=2: predictive associative & cross-layer apical BAC feedback!)
+    d.rules[nr++] = make_rule(0xffu, 2u, -120, 127, -120, 127, OP_GROWTH_CONE, 0xbfu, 1u, 0x05u,
+                              rand_i8(r, 30, 52), rand_i8(r, -18, 6), 0x21u, u8(0x80u | 7u), 0x0020u);
+    // Ascending feedforward & local recurrent pyramidal tracts + descending apical feedback tract (rule_id=2!)
     d.rules[nr++] = make_rule(0xffu, 3u, -120, 127, -120, 127, OP_GROWTH_CONE, 0xbfu, 1u, u8(0x04u | (mix(r += 19u) & 3u)),
                               rand_i8(r, 26, 50), rand_i8(r, -10, 44), 0x31u, u8(0x80u | 6u), 0x0020u);
+    d.rules[nr++] = make_rule(0xffu, 3u, -120, 127, -120, 127, OP_GROWTH_CONE, 0xbfu, 1u, u8(0x00u | (mix(r += 29u) & 3u)),
+                              rand_i8(r, 24, 48), rand_i8(r, -16, 36), 0x23u, u8(0x80u | 6u), 0x0020u);
     // Descending lateralized Go motor tracts (rule_id=0/1: D1 Appetitive & Fast Reversal -> MUSCLE / GRASP / GLAND!)
     d.rules[nr++] = make_rule(0xffu, 3u, -120, 127, -120, 127, OP_GROWTH_CONE, 0xbfu, 2u, 0x01u,
                               rand_i8(r, 34, 56), rand_i8(r, -24, 24), 0x13u, u8(0x00u | 6u), 0x0040u);
@@ -755,7 +761,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                 // Deep neocortical sheets (z >= 1) expand tangentially across the cranial vault independently of
                 // compact z==0 somatic body plans, governed by an evolvable cranial proliferation gene (org_rad in 3..6)!
                 if (!spawned && z >= 1u && !is_maturation && ux >= 1u && ux <= 14u && uy >= 1u && uy <= 14u) {
-                    u32 org_rad = 3u + ((u32(i32(dna.bio_params[11]) + 128) >> 4) & 3u);
+                    u32 org_rad = 4u + ((u32(i32(dna.bio_params[11]) + 128) >> 4) & 3u); // Evolvable 4..7 -> 95..196 neurons/layer!
                     u32 min_pbud = 14u - org_rad;
                     for (u32 d = 0; d < 4u; ++d) {
                         if (n_id[d] < 0) continue;
@@ -1050,6 +1056,8 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                 bool is_inh = tk_is_inhibitory(s_tk);
                 u32 rng = mix(dev_seed ^ (sz * 0x85ebca6bu) ^ (tz * 0x9e3779b9u) ^ (tid * 31337u));
                 u32 cones_run = 0u;
+                bool ran_sens_cone = false;
+                bool ran_pyr_cort_cone = false;
 
                 // Authentic Mammalian Cortical Interneuron Locality + Sparse Basal-Ganglia Striatal D2-NoGo Projection:
                 // Deep GABAergic PV+/SST+ interneurons arborize strictly locally (sz==tz), EXCEPT sparse (~25%) Striatal
@@ -1063,7 +1071,16 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                     // AND skip effector-only rules (arg_a==2) on deep layers tz>0 where zero effectors exist (100% bit-exact)!
                     if (sz != tz && (rl.dir_mask & 0x30u) == 0u) continue;
                     if (tz > 0u && rl.arg_a == 2u && !tk_is_sensor(s_tk) && !is_inh && s_tk != TK_NEU_MOD) continue;
+                    // Ohno-redundant backup gating: sensory nerves (match_tk==2) and cortico-cortical pyramidal tracts
+                    // (match_tk==3, arg_a==1) run ONCE when intact, with their Ohno paralog automatically stepping in if
+                    // a mutation disrupts the primary rule -> preserves full PV/SST basket arbors & canonical ~80/20 E/I!
+                    bool is_sens_rule = (tk_is_sensor(s_tk) && rl.match_tk == 2u);
+                    bool is_pyr_cort_rule = (rl.match_tk == 3u && rl.arg_a == 1u);
+                    if (is_sens_rule && ran_sens_cone) continue;
+                    if (is_pyr_cort_rule && ran_pyr_cort_cone) continue;
                     if (!rule_matches(rl, s_t, stage_flag)) continue;
+                    if (is_sens_rule) ran_sens_cone = true;
+                    if (is_pyr_cort_rule) ran_pyr_cort_cone = true;
                     ++cones_run;
 
                     // Authentic Sperry (1963) Ephrin-A/B Labeled-Line Sensory Columns + Litwin-Kumar & Doiron (2012)
@@ -1439,7 +1456,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                        : (tk == TK_MUSCLE ? 1.10f
                        : (tk == TK_GLAND ? 0.35f
                        : (tk == TK_STEM ? 0.18f
-                       : (tk_is_neuron(tk) ? 0.20f : 0.65f))))));
+                       : (tk_is_neuron(tk) ? 0.20f : 0.25f))))));
             my_mass += cm;
             my_cx += px * cm;
             my_cy += py * cm;

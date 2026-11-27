@@ -255,7 +255,8 @@ struct alignas(16) CreatureState {
     u16 num_layers;
     u16 carried_obj; // INVALID_OBJ or index into WorldObjects
     u8 growth_stage; // 0=hatchling, 1=juvenile, 2=adult (grows live during life!)
-    u8 _pad_cs[3];
+    i8 voc_da_q;     // Dedicated Songbird VTA -> Area-X vocal performance RPE (-64..+64; isolates vocal from locomotor DA!)
+    u8 _pad_cs[2];
     u32 layer_slabs[MAX_LAYERS_PER_CREATURE]; // GPU TissueSlab indices (up to 32 layers = 8,192 cells/neurons!)
 };
 
