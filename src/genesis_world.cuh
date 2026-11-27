@@ -231,7 +231,7 @@ AX_FN void world_step_tile(WorldBuffers wb, u32 tick, u32 shift_chem, u32 challe
         bool pre_cold = (!chaot_cold && s3_next < -0.78f);
         if (chaot_heat) sun_phase = 1.32f;
         else if (chaot_cold) sun_phase = 0.04f;
-        else sun_phase = clampf(0.38f + 0.58f * s3_now + (pre_heat ? 0.14f : (pre_cold ? -0.09f : 0.0f)), 0.04f, 1.14f);
+        else sun_phase = clampf(0.36f + 0.58f * s3_now + (pre_heat ? 0.14f : (pre_cold ? -0.09f : 0.0f)), 0.04f, 1.14f);
         if ((pre_heat || pre_cold) && ((tick & 3u) == 0u) && ((gx & 7u) == 4u) && ((gy & 7u) == 4u)) {
             tri_precursor_p = pre_heat ? 0.95f : 0.72f; // Distinct Syzygy solar-crack vs Cryo-Eclipse glacial barometric precursor!
         }

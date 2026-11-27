@@ -894,13 +894,13 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 if (v0_a || v1_a || v2_a) {
                     u32 fa_f = (tid * 3u + layer_idx * 5u + u32(dna.bio_params[8] & 7)) % 3u;
                     bool my_f = (fa_f == 0u) ? v0_a : ((fa_f == 1u) ? v1_a : v2_a);
-                    // On +DA reward: reinforce causal columns (eff_da), leave non-participating columns neutral (0, NEVER depress on reward!);
-                    // On -DA error: suppress punished columns (eff_da), boost rival columns (-(eff_da >> 1)) for exploration!
-                    fa_da = my_f ? eff_da : ((eff_da > 0) ? 0 : -(eff_da >> 1));
+                    // On +DA reward: reinforce causal columns (eff_da); on -DA error: suppress ONLY causal columns (eff_da).
+                    // Non-participating columns stay neutral (0) — NEVER inject fake +DA reward on venom/pain errors!
+                    fa_da = my_f ? eff_da : 0;
                 } else {
                     bool mot_a = (cr.mot_thrust > 0.14f);
                     bool my_m = (((tid ^ layer_idx) & 1u) != 0u) ? mot_a : !mot_a;
-                    fa_da = my_m ? eff_da : ((eff_da > 0) ? 0 : -(eff_da >> 1));
+                    fa_da = my_m ? eff_da : 0;
                 }
             }
             u32 mod_pos_acc = 0u, mod_neg_acc = 0u;
@@ -1042,9 +1042,9 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         i_apical = abl.silence_apical ? 0 : i32(float(raw_a) * ((g_gain * 0.65f) * g_inv));
                     } else if (is_pyr) {
                         // Authentic Brunel (2000) 1/sqrt(K_exc) Balanced-Network Scaling across ALL cortical layers (L0..L31)!
-                        // Calibrated for ~10% PING sparse coding -> exact unity gain (L1..L4 crisp; L5+ unity executive without dark amplification!)
+                        // Calibrated for ~10% PING sparse coding -> exact unity gain (L1..L4 crisp; L5+ sparse executive without dark blowup!)
                         float p_inv = 1.0f / fast_sqrt(float(max_u32(10u, my_exc_cnt)));
-                        float b_g = (layer_idx >= 5u) ? 3.85f : ((layer_idx >= 2u) ? 4.65f : ((layer_idx == 1u) ? 4.15f : 3.10f));
+                        float b_g = (layer_idx >= 5u) ? 3.65f : ((layer_idx >= 2u) ? 4.65f : ((layer_idx == 1u) ? 4.15f : 3.10f));
                         float a_g = 4.5f;
                         i_basal = i32(float(raw_b) * (b_g * p_inv));
                         i_apical = abl.silence_apical ? 0 : i32(float(raw_a) * (a_g * p_inv));
@@ -1466,10 +1466,10 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         else if (rid == 2u) {
                             if (st_neg) dw = -esign * lr;
                             else if (st_pos) dw = esign * lr;
-                            else if (phasic_ach && plat && ((tick + idx_k) & 3u) == 0u && (esign < 0 || abs_w < w_hi - 1))
+                            else if (phasic_ach && plat && ((tick + idx_k) & 3u) == 0u && (esign < 0 || abs_w < w_hi - 6))
                                 dw = esign;
                         } else if (rid == 3u && st_gate) dw = st_pos ? (esign * (1 + btsp_boost)) : (-esign * (1 + btsp_boost));
-                        else if (!is_eff && fast_plast != 0u && phasic_ach && plat && ((tick + idx_k) & 3u) == 0u && (esign < 0 || abs_w < w_hi - 2))
+                        else if (!is_eff && fast_plast != 0u && phasic_ach && plat && ((tick + idx_k) & 3u) == 0u && (esign < 0 || abs_w < w_hi - 6))
                             dw = esign;
                         else if (sleep_gate && (elig > 14 || elig < -14)) dw = esign;
                         if (dw > 0) {
@@ -2033,8 +2033,8 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                                  : (bp.counts[TK_EAR] > 0u && !abl.deaf_ears);
         if (take_b > 0.005f) {
             atomic_add_f32(&wb.chem_b[idx], -take_b);
-            float b_sens_m = (abl.challenge_tier >= 1u) ? (sens_forage ? 1.20f : 0.62f) : 1.0f;
-            float b_e = (abl.challenge_tier >= 2u) ? 4.4f : 6.2f; // Trisolaris-6 lean ambient slime -> favors hunting, memory & pods!
+            float b_sens_m = (abl.challenge_tier >= 1u) ? (sens_forage ? 1.12f : 0.56f) : 1.0f;
+            float b_e = (abl.challenge_tier >= 2u) ? 4.2f : 6.0f; // Trisolaris lean ambient slime -> favors hunting, memory & pods!
             float gain = take_b * b_e * digest_mul * b_sens_m;
             cr.atp += gain; cr.energy_gained += gain;
             if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(gain * 100.0f));
@@ -2044,7 +2044,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         if (take_c > 0.005f) {
             atomic_add_f32(&wb.chem_c[idx], -take_c);
             // Trisolaris-9 Symbiotic Reef Bioacoustics (v0 bass shakes loose golden reef blooms; v1 panic closes polyps!)
-            float sens_forage_mul = (abl.challenge_tier >= 1u) ? (sens_forage ? 1.38f : 0.48f) : 1.0f;
+            float sens_forage_mul = (abl.challenge_tier >= 1u) ? (sens_forage ? 1.24f : 0.42f) : 1.0f;
             bool v0_bloom_self = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band == 0u);
             bool v0_bloom_coop = (abl.challenge_tier >= 1u && wb.cell_occ[idx] >= 2u &&
                                   cr.last_heard_tick > 0u && tick <= cr.last_heard_tick + 36u && cr.last_heard_band == 0u);
@@ -2419,7 +2419,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                                               : (bp.counts[TK_EAR] > 0u && !abl.deaf_ears);
                         float sb = clampf(wb.chem_c[idx] * 0.20f, 0.0f, 0.06f) * flow_vent;
                         atomic_add_f32(&wb.chem_c[idx], -sb);
-                        float sg_e = sb * 12.0f * digest_mul * (v0_sens_ok ? 1.15f : 0.35f);
+                        float sg_e = sb * 12.0f * digest_mul * (v0_sens_ok ? 1.00f : 0.30f);
                         cr.atp += sg_e; cr.energy_gained += sg_e;
                         if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(sg_e * 100.0f));
                     } else if (dom_b == 1u) {
@@ -2458,25 +2458,29 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
 
     atomic_add_f32(&wb.temp[idx], 0.002f * bp.basal_cost);
 
-    // 8. Authentic Monophasic Schultz VTA TD Reward Prediction Error & Nociceptive -DA (ZERO Basal-Cost False -DA!)
-    // Normal calm metabolic swimming (basal_cost + spike upkeep) stays strictly at DA == 0 (zero false punishment LTD!);
-    // genuine food/prey/pod gain triggers +DA, while real toxin/venom/frostbite/predator damage triggers sharp -DA!
+    // 8. Authentic Signed Schultz VTA TD Reward Prediction Error + Relief Learning (Seymour 2005 / Dayan & Niv 2008):
+    // - Positive surprise (prey/bloom/escape-to-shelter relief: net_r > da_baseline) fires crisp phasic +DA!
+    // - Sudden venom/toxin/predator shock fires crisp 1-tick phasic -DA for rapid reversal learning!
+    // - Sustained ambient heat/acid stress adapts da_baseline smoothly downward -> ZERO 40-tick tonic motor lobotomy!
     float d_atp = cr.atp - cr.prev_atp;
     float basal_band = bp.basal_cost + 0.14f;
     float r_sig = (d_atp > 0.04f) ? clampf(d_atp, 0.0f, 2.5f)
                                   : ((d_atp < -basal_band) ? clampf(d_atp + basal_band, -2.0f, 0.0f) : 0.0f);
-    float pain = (cd_here > 0.24f ? (cd_here - 0.24f) * 3.0f : 0.0f) +
-                 (therm_stress > 0.24f ? (therm_stress - 0.24f) * 2.2f : 0.0f);
+    float pain = (cd_here > 0.24f ? (cd_here - 0.24f) * 2.4f : 0.0f) +
+                 (therm_stress > 0.24f ? (therm_stress - 0.24f) * 1.8f : 0.0f);
     float net_r = r_sig - pain;
     float rpe = 0.0f;
     if (net_r > 0.04f) {
         rpe = (net_r > cr.da_baseline) ? (net_r - cr.da_baseline) : 0.0f;
-        cr.da_baseline = fma_f32(0.03f, clampf(net_r, 0.0f, 0.60f), 0.97f * cr.da_baseline);
+        cr.da_baseline = fma_f32(0.05f, clampf(net_r, 0.0f, 0.60f), 0.95f * cr.da_baseline);
     } else if (net_r < -0.08f || pain > 0.04f) {
-        rpe = net_r;
-        cr.da_baseline *= 0.96f;
+        rpe = (net_r < cr.da_baseline) ? (net_r - cr.da_baseline) : 0.0f;
+        cr.da_baseline = fma_f32(0.10f, clampf(net_r, -0.60f, 0.0f), 0.90f * cr.da_baseline);
     } else {
-        cr.da_baseline *= 0.992f;
+        // Authentic Habenula/VTA Relief Learning: escaping heat/acid into cool shelter (da_baseline < -0.10 -> net_r == 0)
+        // generates genuine phasic +DA relief reinforcing shelter-seeking & avoidance!
+        if (cr.da_baseline < -0.10f) rpe = -cr.da_baseline * 0.65f;
+        cr.da_baseline *= 0.94f;
     }
     float phasic = clampf(rpe * 3.0f, -1.0f, 1.0f);
     // Fast striatal DAT reuptake (*0.22): delivers ONE crisp phasic VTA burst per RPE without bleeding across ticks!
