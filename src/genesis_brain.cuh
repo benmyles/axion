@@ -2048,12 +2048,17 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         float take_d = clampf(wb.chem_d[idx], 0.0f, eat_rate * 0.40f);
         bool got_food = false;
         bool day_l = (wb.light[idx] >= 0.25f);
-        bool sens_forage = day_l ? (bp.counts[TK_EYE] > 0u && !abl.blind_eyes)
-                                 : (bp.counts[TK_EAR] > 0u && !abl.deaf_ears);
+        // Authentic Vertebrate Binocular Stereopsis & Binaural Echolocation Physics:
+        // Paired bilateral receptors (>=2 eyes by day, >=2 ears by night) deliver 1.00x depth/bearing acuity;
+        // 1-receptor cyclops/monaural organs deliver only 0.50x acuity; 0 receptors deliver blind/deaf 0.00x!
+        u32 n_eye_eff = abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]);
+        u32 n_ear_eff = abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]);
+        u32 act_sens_n = day_l ? n_eye_eff : n_ear_eff;
+        float sens_acuity = (act_sens_n >= 2u) ? 1.0f : ((act_sens_n == 1u) ? 0.50f : 0.0f);
         if (take_b > 0.005f) {
             atomic_add_f32(&wb.chem_b[idx], -take_b);
-            float b_sens_m = (abl.challenge_tier >= 1u) ? (sens_forage ? 1.12f : 0.56f) : 1.0f;
-            float b_e = (abl.challenge_tier >= 2u) ? 2.8f : 6.0f; // Trisolaris-11 lean ambient slime -> shifts economy to hunting, tools & memory!
+            float b_sens_m = (abl.challenge_tier >= 1u) ? (0.56f + 0.56f * sens_acuity) : 1.0f;
+            float b_e = (abl.challenge_tier >= 2u) ? 2.4f : 6.0f; // Trisolaris-12 golden balance -> thriving pop + cognitive hunting/tools!
             float gain = take_b * b_e * digest_mul * b_sens_m;
             cr.atp += gain; cr.energy_gained += gain;
             if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(gain * 100.0f));
@@ -2062,14 +2067,14 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         }
         if (take_c > 0.005f) {
             atomic_add_f32(&wb.chem_c[idx], -take_c);
-            // Trisolaris-11 Symbiotic Reef Bioacoustics (v0 bass shakes loose golden reef blooms; v1 panic closes polyps!)
-            float sens_forage_mul = (abl.challenge_tier >= 1u) ? (sens_forage ? 1.24f : 0.42f) : 1.0f;
+            // Trisolaris-12 Symbiotic Reef Bioacoustics (v0 bass shakes loose golden reef blooms; v1 panic closes polyps!)
+            float sens_forage_mul = (abl.challenge_tier >= 1u) ? (0.42f + 0.82f * sens_acuity) : 1.0f;
             bool v0_bloom_self = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band == 0u);
             bool v0_bloom_coop = (abl.challenge_tier >= 1u && wb.cell_occ[idx] >= 2u &&
                                   cr.last_heard_tick > 0u && tick <= cr.last_heard_tick + 36u && cr.last_heard_band == 0u);
             bool v1_scare_bloom = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 12u && cr.last_vocal_band == 1u);
             float v_bloom_m = v0_bloom_coop ? 2.15f : (v0_bloom_self ? 1.65f : (v1_scare_bloom ? 0.45f : 1.0f));
-            float c_e = (abl.challenge_tier >= 2u) ? 10.5f : 14.5f;
+            float c_e = (abl.challenge_tier >= 2u) ? 9.2f : 14.5f;
             float gain = take_c * c_e * digest_mul * sens_forage_mul * v_bloom_m;
             cr.atp += gain; cr.energy_gained += gain;
             if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(gain * 100.0f));
@@ -2078,8 +2083,8 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         }
         if (!got_food) cr.atp -= 0.025f;
         if (take_d > 0.012f) {
-            // Symmetric Diurnal Visual / Nocturnal Acoustic Hazard Avoidance (blind by day or deaf in nocturnal acid storms!)
-            float tox_sens_m = (abl.challenge_tier >= 1u && !sens_forage) ? 1.55f : 1.0f;
+            // Symmetric Diurnal Visual / Nocturnal Acoustic Hazard Avoidance (blind/monocular by day or deaf/monaural at night!)
+            float tox_sens_m = (abl.challenge_tier >= 1u) ? (1.55f - 0.55f * sens_acuity) : 1.0f;
             float dmg = take_d * 34.0f * (1.0f - 0.35f * bp.armor_factor) * detox_mul * tox_sens_m;
             cr.atp -= dmg; cr.hp -= dmg * 1.55f;
         }
@@ -2094,7 +2099,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                                  cr.carry_a < cr.carry_b ? cr.carry_a : cr.carry_b);
         cr.carry_a -= react_amt; cr.carry_b -= react_amt;
         cr.carry_c = clampf(cr.carry_c + react_amt * 1.25f, 0.0f, 2.0f);
-        float synth_atp = react_amt * ((abl.challenge_tier >= 2u) ? 7.2f : 10.5f);
+        float synth_atp = react_amt * ((abl.challenge_tier >= 2u) ? 6.0f : 10.5f);
         cr.atp += synth_atp; cr.energy_gained += synth_atp;
         if (ctr) {
             atomic_add_u64(&ctr->total_energy_x100, u64(synth_atp * 100.0f));
@@ -2113,12 +2118,15 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
             if (oi < wb.max_objects && wb.objects[oi].carrier_id == INVALID_OBJ) {
                 WorldObject &ob = wb.objects[oi];
                 if (ob.kind == OBJ_PREY && bp.grasp_power > 0.18f && (cr.mot_eat > 0.15f || cr.mot_dig > 0.22f)) {
-                    // Authentic Symmetric Diurnal Vision / Nocturnal Echolocation Prey Interception:
-                    // Fast prey evade 87.5% of blind lunges by day AND 87.5% of deaf lunges in dark night!
-                    bool day_evade = (wb.light[idx] >= 0.25f && (bp.counts[TK_EYE] == 0u || abl.blind_eyes) &&
-                                      (((tick + cid + oi) & 7u) != 0u));
-                    bool night_evade = (wb.light[idx] < 0.25f && (bp.counts[TK_EAR] == 0u || abl.deaf_ears) &&
-                                        (((tick + cid + oi) & 7u) != 0u));
+                    // Authentic Symmetric Binocular Diurnal Vision / Binaural Nocturnal Echolocation Prey Interception:
+                    // Fast prey evade 87.5% of blind/deaf lunges, 50% of monocular/monaural 1-organ lunges, 0% of stereo/binaural (>=2)!
+                    u32 p_h = tick + cid + oi;
+                    u32 p_eye = abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]);
+                    u32 p_ear = abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]);
+                    bool day_evade = (wb.light[idx] >= 0.25f) &&
+                                     ((p_eye == 0u && ((p_h & 7u) != 0u)) || (p_eye == 1u && ((p_h & 1u) != 0u)));
+                    bool night_evade = (wb.light[idx] < 0.25f) &&
+                                       ((p_ear == 0u && ((p_h & 7u) != 0u)) || (p_ear == 1u && ((p_h & 1u) != 0u)));
                     u32 expect = u32(OBJ_PREY) | (u32(INVALID_OBJ) << 16);
                     u32 want_n = u32(OBJ_NONE) | (u32(INVALID_OBJ) << 16);
                     if (!day_evade && !night_evade && atomic_cas_u32(reinterpret_cast<u32 *>(&ob.kind), expect, want_n) == expect) {
@@ -2130,7 +2138,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                         if (prey_edible) {
                             // Symmetric Diurnal Vision & Nocturnal Echolocation high-calorie seasonal Batesian prey feast:
                             // Permanently selects live STDP reversal + multimodal vision/hearing + prefrontal memory over passive grazing!
-                            float prey_e = (abl.challenge_tier >= 2u) ? 140.0f : 88.0f;
+                            float prey_e = (abl.challenge_tier >= 2u) ? 165.0f : 88.0f;
                             float gain = prey_e * digest_mul;
                             cr.atp += gain; cr.energy_gained += gain;
                             ++cr.food_events;
@@ -2154,7 +2162,8 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                         // Referential v0 food-recruitment bonus: peers arriving within 40t of a v0 call share +125% harvest efficiency!
                         bool v0_coop = (wb.cell_occ[idx] >= 2u && cr.last_heard_tick > 0u &&
                                         tick <= cr.last_heard_tick + 40u && cr.last_heard_band == 0u);
-                        float gain = ((old_e < bite_e) ? old_e : bite_e) * digest_mul * (v0_coop ? 2.25f : 1.0f);
+                        float fuel_m = (abl.challenge_tier >= 2u) ? 1.35f : 1.0f;
+                        float gain = ((old_e < bite_e) ? old_e : bite_e) * digest_mul * fuel_m * (v0_coop ? 2.25f : 1.0f);
                         cr.atp += gain; cr.energy_gained += gain;
                         if (ctr) {
                             atomic_add_u64(&ctr->total_energy_x100, u64(gain * 100.0f));
@@ -2221,13 +2230,14 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                         bool alarm_brace = (cr.last_heard_tick > 0u && tick <= cr.last_heard_tick + 20u && cr.last_heard_band == 1u);
                         bool v1_startle = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band == 1u);
                         bool v0_lure = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band == 0u);
-                        bool sens_vuln = (wb.light[idx] >= 0.25f)
-                                             ? (bp.counts[TK_EYE] == 0u || abl.blind_eyes)
-                                             : (bp.counts[TK_EAR] == 0u || abl.deaf_ears);
+                        u32 a_sens = (wb.light[idx] >= 0.25f)
+                                         ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
+                                         : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
+                        float sens_vuln_m = (a_sens >= 2u) ? 1.0f : ((a_sens == 1u) ? 1.40f : 1.80f);
                         float wall_cov = near_wall ? 0.35f : 1.0f;
                         float immob_m = (cur_spd < 0.08f) ? 1.35f : 1.0f;
                         float vocal_m = alarm_brace ? 0.12f : (v1_startle ? 0.25f : (v0_lure ? 1.65f : 1.0f));
-                        float brace_m = vocal_m * (sens_vuln ? 1.80f : 1.0f) * wall_cov * immob_m;
+                        float brace_m = vocal_m * sens_vuln_m * wall_cov * immob_m;
                         float dmg_hp = 22.0f * (1.0f - 0.50f * bp.armor_factor) * brace_m;
                         cr.hp -= dmg_hp;
                         cr.atp -= 6.5f * brace_m;
@@ -2434,13 +2444,14 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
             if (abl.challenge_tier >= 1u) {
                 if (vctx == 0u) {
                     if (dom_b == 0u && wb.chem_c[idx] > 0.14f) {
-                        // Dislodged reef spores still require active sensory targeting (EYE by day, EAR by night) & buccal water flow!
-                        bool v0_sens_ok = (wb.light[idx] >= 0.25f)
-                                              ? (bp.counts[TK_EYE] > 0u && !abl.blind_eyes)
-                                              : (bp.counts[TK_EAR] > 0u && !abl.deaf_ears);
+                        // Dislodged reef spores still require active binocular/binaural targeting & buccal water flow!
+                        u32 v0_sn = (wb.light[idx] >= 0.25f)
+                                        ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
+                                        : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
+                        float v0_sens_m = (v0_sn >= 2u) ? 1.00f : ((v0_sn == 1u) ? 0.65f : 0.30f);
                         float sb = clampf(wb.chem_c[idx] * 0.20f, 0.0f, 0.06f) * flow_vent;
                         atomic_add_f32(&wb.chem_c[idx], -sb);
-                        float sg_e = sb * 12.0f * digest_mul * (v0_sens_ok ? 1.00f : 0.30f);
+                        float sg_e = sb * 12.0f * digest_mul * v0_sens_m;
                         cr.atp += sg_e; cr.energy_gained += sg_e;
                         if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(sg_e * 100.0f));
                     } else if (dom_b == 1u) {

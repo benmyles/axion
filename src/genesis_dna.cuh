@@ -724,12 +724,12 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                 }
             } else if (can_divide && nbr_alive > 0u) {
                 // 2b. Pull-based Asymmetric Horizontal Mitosis into EMPTY site (scans ONLY OP_MITOSIS rules — 5x faster!)
+                bool spawned = false;
                 for (u32 d = 0; d < 4u; ++d) {
                     if (n_id[d] < 0) continue;
                     u64 pt = s_tis[n_id[d]];
                     if (tis_kind(pt) == TK_EMPTY || (tis_budget(pt) & 0x0fu) == 0u) continue;
                     u32 opp_bit = (d == 0u) ? 2u : (d == 1u ? 1u : (d == 2u ? 8u : 4u));
-                    bool spawned = false;
                     for (u32 k_m = 0; k_m < n_mit; ++k_m) {
                         const CARule &rl = s_rules[s_mit_idx[k_m]];
                         if ((rl.dir_mask & opp_bit) == 0u) continue;
@@ -750,6 +750,27 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                         break;
                     }
                     if (spawned) break;
+                }
+                // Authentic Mammalian oSVZ Outer Radial Glia (oRG) Tangential Expansion (Kriegstein / Rakic):
+                // Deep neocortical sheets (z >= 1) expand tangentially across the cranial vault independently of
+                // compact z==0 somatic body plans, governed by an evolvable cranial proliferation gene (org_rad in 3..6)!
+                if (!spawned && z >= 1u && !is_maturation && ux >= 1u && ux <= 14u && uy >= 1u && uy <= 14u) {
+                    u32 org_rad = 3u + ((u32(i32(dna.bio_params[11]) + 128) >> 4) & 3u);
+                    u32 min_pbud = 14u - org_rad;
+                    for (u32 d = 0; d < 4u; ++d) {
+                        if (n_id[d] < 0) continue;
+                        u64 pt = s_tis[n_id[d]];
+                        u32 pbud = tis_budget(pt) & 0x0fu;
+                        if (tis_kind(pt) != TK_STEM || pbud <= min_pbud) continue;
+                        u8 cbud = u8(pbud - 1u);
+                        s_nxt[tid] = pack_tissue(TK_STEM, tis_state(pt), cbud, tis_tag(pt) | 0x0020u,
+                                                 i8(clamp_i32(tis_m(pt, 0u) - 6, -124, 124)),
+                                                 i8(tis_m(pt, 1u)),
+                                                 i8(clamp_i32(tis_m(pt, 2u) + ((d <= 1u) ? 10 : 0), -124, 124)),
+                                                 i8(tis_m(pt, 3u)));
+                        spawned = true;
+                        break;
+                    }
                 }
             }
             sync_block();
@@ -864,14 +885,17 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
         u64 t = pool.tissue[u64(sl) * TISSUE_CELLS + tid];
         u8 tk = tis_kind(t);
         // Conserved Vertebrate MGE/CGE Ventral Tangential Interneuron Migration + Postnatal Apoptosis Homeostasis
-        // (Anderson 1997 Science / Southwell 2012 Nature):
+        // (Anderson 1997 Science / Southwell 2012 Nature) + Medial Subcortical VTA/BF Neuromodulatory Nuclei:
         // Evolvable via dna.bio_params[9] within the canonical mammalian E/I band (mod_n in 8..11 -> 18.2%..25.0% GABAergic,
         // split 1:1 between somatic PV+ basket cells and apical SST+ Martinotti cells) -> prevents both 0%-I epilepsy AND
         // 43%-I PV-tumor lobotomy across 50,000+ ticks while sustaining 1,000-4,000+ neuron deep cortices!
-        if (z > 0u && (tk == TK_STEM || tk == TK_NEU_EXC || tk == TK_NEU_PV || tk == TK_NEU_SST)) {
+        if (z > 0u && (tk == TK_STEM || tk == TK_NEU_EXC || tk == TK_NEU_PV || tk == TK_NEU_SST || tk == TK_NEU_MOD)) {
             u32 ei_mod = 8u + (u32(i32(dna.bio_params[9]) + 128) & 3u); // Evolvable 8..11 -> 25.0%..18.2% I!
             u32 mig_h = (ux * 3u + uy * 5u + z * 7u) % ei_mod;
-            if (mig_h == 0u) {
+            bool vta_site = (z <= 2u && ux >= 6u && ux <= 10u && uy >= 6u && uy <= 10u && ((ux + uy + z) & 7u) == 0u);
+            if (vta_site) {
+                tk = TK_NEU_MOD;
+            } else if (mig_h == 0u) {
                 tk = TK_NEU_PV;
             } else if (mig_h == (ei_mod >> 1)) {
                 tk = TK_NEU_SST;
