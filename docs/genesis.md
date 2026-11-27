@@ -9,8 +9,8 @@ Axion Genesis is an embodied, GPU-native Artificial Life and spiking-neuroscienc
 Every organism begins from a single stem cell (`TK_STEM`) carrying a compact `GenesisDNA` genome:
 - **Evolvable CA Rulebook:** Up to `64` local rules (`OP_MITOSIS`, `OP_DIFF`, `OP_SIGNAL`, `OP_GROWTH_CONE`, `OP_APOPTOSIS`) conditioned on Wolpert morphogen gradients, tissue class, and developmental stage, evolved via homologous crossover, point mutation, and Ohno gene duplication/divergence.
 - **Unified 3D Tissue Stack:** Up to `32` stacked `16×16` layers (`8,192` cells/neurons per organism; `L0` forms the physical body surface with sensors and effectors, `L1..L31` form deep neocortical sheets).
-- **Physical Crawling Growth Cones:** Excitatory pyramidal (`TK_NEU_EXC`), inhibitory (`TK_NEU_PV`, `TK_NEU_SST`), modulatory (`TK_NEU_MOD`), and sensory (`TK_EYE`, `TK_EAR`, `TK_CHEM`) cells crawl multi-branch axons through 3D morphogen space:
-  - **Sperry (1963) Labeled-Line Columns:** 4 interleaved minicolumn identities separate sensory modalities and cortical assemblies cleanly.
+- **Physical Crawling Growth Cones:** Excitatory pyramidal (`TK_NEU_EXC`), inhibitory (`TK_NEU_PV`, `TK_NEU_SST`, canonical mammalian `~22%` I migration via `mig_h % 13`), modulatory (`TK_NEU_MOD`), and sensory (`TK_EYE`, `TK_EAR`, `TK_CHEM`) cells crawl multi-branch axons through 3D morphogen space:
+  - **Collision-Free Anatomical Sperry Labeled-Line Columns:** Rank-ordered sensor projection (`s_rank & 3`) guarantees distinct ears, eyes, and chemoreceptors always project to orthogonal `L1` columns regardless of evolved body geometry.
   - **Actin Forward Persistence & Stride-2 Cortico-Cortical Gliding:** Eliminates checkerboard trapping so ascending projections (`L_k -> L_{k+1}`) achieve dense biological fan-in (`12–16` synapses/stripe, up to `192` synapses/cell across `12` coalesced `v4.u32` stripes) while preserving crisp 1-cell bilateral retinotopic/tonotopic topography on `L0 -> L1`.
   - **Pan-Cortical BDNF Trophic Competition:** Uniform reservoir sampling (Purves & Lichtman 1980) gives anterior auditory/visual cortex and deep prefrontal areas equal access to vocal syrinx folds (`TK_GLAND`) while capping Striatal D2 inhibitory collaterals to dedicated veto slots (`~88%` exc / `~12%` D2).
   - **Lifelong Post-Natal Maturation & Structural Sprouting:** Brains continue adding layers and sprouting synapses onto co-active neighbors during adulthood.
@@ -19,23 +19,23 @@ Every organism begins from a single stem cell (`TK_STEM`) carrying a compact `Ge
 
 ## 2. Biophysical Spiking Substrate (`src/genesis_brain.cuh`)
 
-Every neuron packs into **`8 bytes`** (`vs`, `va`, `ua`, 8-substep `ring`, firing `ema`, tissue kind, `refrac`, apical `plat`, `slow_tau`, `fast_plast`), and every synapse packs into **`4 bytes`** (`pre`, signed 8-bit `w`, 7-bit `elig`, 3-bit physical conduction `delay`, 1-bit basal/apical `comp`, 2-bit receptor `rule_id`, 3-bit `stp`).
+Every neuron packs into **`8 bytes`** (`vs`, `va`, `ua`, 8-substep `ring`, firing `ema`, tissue kind, `refrac`, apical `plat`, `slow_tau`, `fast_plast`), and every synapse packs into **`4 bytes`** (`pre`, signed 8-bit `w`, 7-bit `elig`, 3-bit physical conduction `delay`, 1-bit basal/apical `comp`, 2-bit receptor `rule_id`, 3-bit `stp`). Cross-layer spike histories are double-buffered (`spike_ring` read-only / `spike_ring_next` write-only, pointer-swapped in 0 ns after `step_brains`) for 100% race-free concurrent CTA execution.
 
 Key neuroscience primitives built directly into `brain_step_layer` (`80 regs`, `0 B` local memory spill, `9,032 B` shared memory):
 
-1. **Two-Compartment Larkum BAC Coincidence Detection:** Basal inputs (`comp=0`) drive somatic integration (`vs`), while descending predictions and cross-column conjunctions (`comp=1`) drive sustained apical Ca²⁺ plateaus (`va`, 2–4 tick window). Apical plateaus act strictly multiplicatively on active basal inputs (`i_basal > 80..180 pA`), triggering high-frequency sodium bursts (`refrac=0`) without runaway autonomous reverberation.
-2. **Active 4-Synapse NMDA Dendritic Subunits:** Coincident excitatory spikes within each 4-synapse `SynQuad` trigger nonlinear `+75%` local dendritic spikes with zero extra VRAM.
-3. **Three-Interneuron Cortical Microcircuit (PV+ / SST+ / VIP+):**
-   - **PV+ Basket Cells:** Pouille-Scanziani feedforward Top-$k$ sparse competition (`~15%` active) with somatic GABA_A reset and wide `64 pA` margin bins for deterministic feature selection.
+1. **Two-Compartment Larkum BAC Coincidence Detection & Strictly Apical Feedback:** Basal inputs (`comp=0`) drive somatic integration (`vs`), while descending predictions (`!is_eff && src_l > layer_idx`, Sherman & Guillery Class-1B) and cross-column conjunctions (`comp=1`) drive sustained apical Ca²⁺ plateaus (`va`, 2–4 tick window). Apical plateaus act strictly multiplicatively on active basal inputs and cap to crisp 2-spike BAC doublets (`!prev_gamma_won`), eliminating runaway vertical ping-pong loops.
+2. **Active 4-Synapse NMDA Dendritic Subunits:** Coincident excitatory spikes within each 4-synapse `SynQuad` over a 1-tick window trigger nonlinear `+25%` Mg²⁺-unblocked dendritic plateaus with zero extra VRAM.
+3. **PING Gamma-Cycle Three-Interneuron Microcircuit (PV+ / SST+ / VIP+):**
+   - **PV+ Basket Cells:** Buzsáki-Wang PING gamma-cycle winner budget (`~11.1%` scale-invariant sparse assembly/tick via `k_tick` / delay-fair `k_sub`) with zero-saturation piecewise-log `0..5,632+ pA` excess-voltage bins for deterministic feature selection (`L1..L4` SNR up to `10–12×`).
    - **SST+ Martinotti Cells & VIP+ Disinhibition:** SST gates apical tufts closed against routine distractors; phasic ACh novelty and NE arousal trigger VIP disinhibition (`sst >> 2`) to open apical encoding on salient events.
-4. **Laminar Short-Term Plasticity & PBWM Working Memory:**
-   - **Primary & Ascending Feedforward (`L1`, `src_l < L`):** Gentle short-term depression (STD) supporting habituation and predictive mismatch negativity (`MMN`).
-   - **Deep Prefrontal Local Recurrence (`L2+` basal exc):** Mongillo-Barak-Tsodyks (2008) calcium facilitation (`STF`, `stp: 1 → 5`) carrying activity-silent working memory across delays and distractors while remaining strictly subcritical in darkness.
-   - **PBWM Shielding (`L4..L_top`):** Occupied prefrontal slots (tracked via existing 1-bit `has_d0` flag, 0 extra VRAM) damp routine bottom-up distractors (`0.75×`) until phasic ACh novelty or VTA dopamine RPE flushes the gate.
+4. **Laminar Short-Term Plasticity & 1-Bit `F_STF_HOLD` PBWM Working Memory:**
+   - **Primary & Ascending Feedforward (`L1`, `src_l < L`):** Gentle short-term depression (STD) supporting habituation and predictive mismatch negativity (`MMN`), with high-safety-factor neuromuscular release (`stp = 7`) on excitatory effectors (`STD/STF` runs identically in both intact and `freeze_plasticity` controls!).
+   - **Deep Prefrontal Local Recurrence (`L2+` basal exc):** Bistable `12×` Mongillo-Barak-Tsodyks calcium facilitation (`stp >= 5`: `3.0×` vs. `stp <= 4`: `0.25×` subcritical resting), strictly charged on unshielded ascending drive (`got_asc`).
+   - **1-Bit `F_STF_HOLD` (`0x80`) PBWM Gating (`L4..L_top`):** Tracks active prefrontal STF in unused bit 7 of `stripe_src_layer` (`0 B` extra VRAM), giving a true `6×` Encode (`1.5×`) vs. Shield (`0.25×`) ratio until STF decays or VTA DA RPE flushes the gate.
 5. **Multi-Layer Vector Credit Assignment (Zero Backprop):**
    - **Feedback-Aligned Efference-Copy Burstprop:** Routes physical tick-`(t-1)` vocal/motor efference copies through fixed anatomical projections onto `L1..L_top` apical tufts (Payeur-Naud-Richards 2021 + Lillicrap 2016), giving hidden layers action-specific signed burst error rather than a single blurred scalar broadcast.
-   - **Rate-Weighted Competitive D1/D2 Area-X (`TK_GLAND`):** Shen (2008) / Shouval (2002) presynaptic burst-count-weighted competitive plasticity with D2 error-fold veto and songbird LMAN exploratory switching (0 pA during crystallized testing).
-   - **Vogels-Sprekeler Homeostatic iSTDP & Chronic-Hub Homeostasis:** Prevents epileptic seizure while keeping selective feature detectors drift-free across trials.
+   - **Rate-Weighted Competitive D1/D2 Area-X (`TK_GLAND`):** Shen (2008) / Shouval (2002) presynaptic burst-count-weighted competitive plasticity with D2 error-fold veto and symmetric reward-preserving soft-bounds.
+   - **Vogels-Sprekeler Homeostatic iSTDP & Seizure-Guardrail Scaling:** Prevents epileptic seizure while eliminating passive weight erosion on healthy selective detectors.
 
 ---
 
@@ -84,7 +84,8 @@ Every official release is validated on:
 | Phase | Focus | Key Targets |
 | :--- | :--- | :--- |
 | **v38 (Published)** | Neocortex Scale & Dendritic Credit | `934–1,730` active neurons on `512×512`, `7/7` ablations positive, `0 B` spill across all 5 SM 12.0 kernels. |
-| **v39 (Published)** | Prefrontal STF, PBWM Shielding, Vector-FA Burstprop, Pan-Cortical BDNF, 1t Mg²⁺ NMDA, Same-Substep PV Top-$k$, Trisolaris-7 | `972–1,634` neurons, `68.8k` births, `100.5B` STDP edits, `4,152` prey, `322` apex kills, `212` duets, `Q&A 46%/49%`, `Ctx 41%`, `Epi19 40%`, `Trans20 41%`, `1,802×` WM, `intact > zero_delay`, lean `1.6 MB` pure Genesis repo. |
-| **v40 (Active)** | Sparse Laminar Rate Control, Deep SNR (`>6×`) & Hippocampal Sequence Replay | Calm `1,000+` neuron firing (`167M → 35–45M` spikes) to restore `7/7` strongly positive ablations, push `cos(A, B) > 0.60` / `cos(A, A') < 0.08` across `L1..L_top`, break `65–85%+` on `Q&A`, `Ctx`, `Epi19`, `Trans20`, and `2-Syl`/`3-Syl` syntax. |
-| **v42–v43** | `2,000–4,000+` Neuron Cortices & `1024×1024` Multi-Biome Worlds | Sustained cortical expansion via modular areas, emergent multi-word dialects (`vocal_mi_bits > 0.25` bits), multi-step tool/shelter planning. |
+| **v39 (Published)** | Prefrontal STF, PBWM Shielding, Vector-FA Burstprop, Pan-Cortical BDNF, 1t Mg²⁺ NMDA, Same-Substep PV Top-$k$, Trisolaris-7 | `972–1,634` neurons, `68.8k` births, `100.5B` STDP edits, `4,152` prey, `322` apex kills, `212` duets, `Q&A 46%/49%`, `Ctx 41%`, `Epi19 40%`, `Trans20 41%`, `1,802×` WM, lean `1.6 MB` pure Genesis repo. |
+| **v40 (Published)** | Race-Free Spike Rings, PING Gamma Top-$k$, `F_STF_HOLD` PBWM Gating, Canonical `22%` E/I, Honest `STD` Parity, Trisolaris-8 | **`7/7` honest ablations decisively positive (`+1.4%` STDP, `+3.1%` Delay, `+6.0%` BAC, `+10.9%` Neuromod, `+26.6%` Ears, `+30.6%` Eyes, `8.6×` Drift)**, `9.70` areas / `652` mean neurons (`22.6% I`), `58.3k` births, `3,985` shelters, **`recall_hit 38.4%`**, `Q&A 49%/52%`, `Ctx 47%`, `Gen18 51%`, `Trans20 51%`, `1,227×` WM, up to **`11.2×` laminar SNR**, `0 B` spill. |
+| **v41 (Active)** | Hippocampal Sharp-Wave Sequence Replay, Multi-Slot PBWM, Deep Vector-FA Credit & Survival-Critical Language | Push dark delayed `L3/L4` SNR `>6×`, break **`70–90%+`** on `Q&A`, `Ctx`, `Epi19`, `Trans20`, and `2-Syl`/`3-Syl` syntax, push wild `vocal_mi_bits > 0.15–0.25+` bits. |
+| **v42–v43** | `2,000–4,000+` Neuron Cortices & `1024×1024` Multi-Biome Worlds | Decoupled cranial oSVZ encephalization sustaining `2,000–4,000+` neurons across `16–32` modular cortical areas, emergent multi-word dialects, multi-step tool/shelter planning. |
 | **v44+** | Grounded Open-Ended Spiking Conversation | Rich bidirectional human-creature dialogue grounded in episodic memory, causal reasoning, and learned compositional syntax — zero LLMs. |

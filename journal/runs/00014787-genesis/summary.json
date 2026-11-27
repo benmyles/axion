@@ -1,0 +1,39 @@
+{
+  "command": "genesis",
+  "kind": "genesis",
+  "archive": "",
+  "source": "examples/genesis-v40.gen",
+  "device": "NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU",
+  "title": "Axion Genesis v40 · 20-Assay Cognitive Battery",
+  "subtitle": "20 Non-LLM Probes · STDP +0.4% · BAC +1.2% · Q&A 49% · Ctx 47% · 2-Syl 20% · Gen18 51% · Epi19 41% · A>C 51%",
+  "family": "STDP reversal gain",
+  "measure": 0.4,
+  "unit": "%",
+  "stats": [
+    [
+      "Reversal STDP",
+      "+0.4%"
+    ],
+    [
+      "Q&A / 2-Syl",
+      "49% / 20%"
+    ],
+    [
+      "Epi19 / Trans20",
+      "41% / 51%"
+    ]
+  ],
+  "narrative": [
+    "Seasonal Reversal: 330,324 ATP intact vs 328,992 frozen (+0.4%) & 326,567 no-BAC (+1.2%).",
+    "Spoken Q&A: 0.022→0.089 (hit 49%, rev 52%); Ctx13: 42%→47%; 2-Syl: 20%; 3-Syl: 5%.",
+    "Gen18: voc 51%, jnt 27%; Epi19: 41% (cos 0.17); Trans20 A>C: 35%→51% (adj 52%)."
+  ],
+  "bullets": [
+    "Zero LLMs · Zero hardcoded answers · Real GPU spiking-body evaluation."
+  ],
+  "id": 14787,
+  "path": "runs/00014787-genesis",
+  "date": "2026-11-27T07:26:31Z",
+  "version": 1,
+  "genesis_mode": "probe"
+}
