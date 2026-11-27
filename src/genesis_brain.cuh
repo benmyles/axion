@@ -2053,7 +2053,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         if (take_b > 0.005f) {
             atomic_add_f32(&wb.chem_b[idx], -take_b);
             float b_sens_m = (abl.challenge_tier >= 1u) ? (sens_forage ? 1.12f : 0.56f) : 1.0f;
-            float b_e = (abl.challenge_tier >= 2u) ? 4.2f : 6.0f; // Trisolaris lean ambient slime -> favors hunting, memory & pods!
+            float b_e = (abl.challenge_tier >= 2u) ? 2.8f : 6.0f; // Trisolaris-11 lean ambient slime -> shifts economy to hunting, tools & memory!
             float gain = take_b * b_e * digest_mul * b_sens_m;
             cr.atp += gain; cr.energy_gained += gain;
             if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(gain * 100.0f));
@@ -2062,14 +2062,15 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         }
         if (take_c > 0.005f) {
             atomic_add_f32(&wb.chem_c[idx], -take_c);
-            // Trisolaris-9 Symbiotic Reef Bioacoustics (v0 bass shakes loose golden reef blooms; v1 panic closes polyps!)
+            // Trisolaris-11 Symbiotic Reef Bioacoustics (v0 bass shakes loose golden reef blooms; v1 panic closes polyps!)
             float sens_forage_mul = (abl.challenge_tier >= 1u) ? (sens_forage ? 1.24f : 0.42f) : 1.0f;
             bool v0_bloom_self = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band == 0u);
             bool v0_bloom_coop = (abl.challenge_tier >= 1u && wb.cell_occ[idx] >= 2u &&
                                   cr.last_heard_tick > 0u && tick <= cr.last_heard_tick + 36u && cr.last_heard_band == 0u);
             bool v1_scare_bloom = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 12u && cr.last_vocal_band == 1u);
             float v_bloom_m = v0_bloom_coop ? 2.15f : (v0_bloom_self ? 1.65f : (v1_scare_bloom ? 0.45f : 1.0f));
-            float gain = take_c * 14.5f * digest_mul * sens_forage_mul * v_bloom_m;
+            float c_e = (abl.challenge_tier >= 2u) ? 10.5f : 14.5f;
+            float gain = take_c * c_e * digest_mul * sens_forage_mul * v_bloom_m;
             cr.atp += gain; cr.energy_gained += gain;
             if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(gain * 100.0f));
             cr.carry_c = clampf(cr.carry_c + take_c * 0.35f, 0.0f, 2.0f);
@@ -2093,7 +2094,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                                  cr.carry_a < cr.carry_b ? cr.carry_a : cr.carry_b);
         cr.carry_a -= react_amt; cr.carry_b -= react_amt;
         cr.carry_c = clampf(cr.carry_c + react_amt * 1.25f, 0.0f, 2.0f);
-        float synth_atp = react_amt * 10.5f;
+        float synth_atp = react_amt * ((abl.challenge_tier >= 2u) ? 7.2f : 10.5f);
         cr.atp += synth_atp; cr.energy_gained += synth_atp;
         if (ctr) {
             atomic_add_u64(&ctr->total_energy_x100, u64(synth_atp * 100.0f));
@@ -2127,9 +2128,10 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                         bool prey_is_warm = ((ob.flags & 8u) == 0u);
                         bool prey_edible = (abl.challenge_tier == 0u) || (prey_is_warm == (bloom_phase == 0u));
                         if (prey_edible) {
-                            // Symmetric Diurnal Vision (+88 ATP) & Nocturnal Echolocation (+88 ATP) prey energy:
-                            // Permanently co-selects BOTH stereo Eyes AND binaural Ears across every lineage!
-                            float gain = 88.0f * digest_mul;
+                            // Symmetric Diurnal Vision & Nocturnal Echolocation high-calorie seasonal Batesian prey feast:
+                            // Permanently selects live STDP reversal + multimodal vision/hearing + prefrontal memory over passive grazing!
+                            float prey_e = (abl.challenge_tier >= 2u) ? 140.0f : 88.0f;
+                            float gain = prey_e * digest_mul;
                             cr.atp += gain; cr.energy_gained += gain;
                             ++cr.food_events;
                             if (ctr) {

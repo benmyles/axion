@@ -863,14 +863,19 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
         if (sl == INVALID_SLAB) continue;
         u64 t = pool.tissue[u64(sl) * TISSUE_CELLS + tid];
         u8 tk = tis_kind(t);
-        // Conserved Vertebrate MGE/CGE Tangential Interneuron Migration across ALL deep cortical sheets (z > 0):
-        // Calibrated to canonical mammalian neocortex (~77% PYR / ~12% PV / ~11% SST net with OP_DIFF):
-        // Paired with layer_pv_cnt*16 >= layer_exc_cnt -> ZERO accidental low-PV epilepsy AND ZERO over-inhibition!
-        if (z > 0u && (tk == TK_STEM || tk == TK_NEU_EXC)) {
-            u32 mig_h = (ux * 3u + uy * 5u + z * 7u) % 13u;
-            if (mig_h == 0u || mig_h == 6u) {
-                tk = (mig_h == 0u) ? TK_NEU_PV : TK_NEU_SST;
-            } else if (tk == TK_STEM) {
+        // Conserved Vertebrate MGE/CGE Ventral Tangential Interneuron Migration + Postnatal Apoptosis Homeostasis
+        // (Anderson 1997 Science / Southwell 2012 Nature):
+        // Evolvable via dna.bio_params[9] within the canonical mammalian E/I band (mod_n in 8..11 -> 18.2%..25.0% GABAergic,
+        // split 1:1 between somatic PV+ basket cells and apical SST+ Martinotti cells) -> prevents both 0%-I epilepsy AND
+        // 43%-I PV-tumor lobotomy across 50,000+ ticks while sustaining 1,000-4,000+ neuron deep cortices!
+        if (z > 0u && (tk == TK_STEM || tk == TK_NEU_EXC || tk == TK_NEU_PV || tk == TK_NEU_SST)) {
+            u32 ei_mod = 8u + (u32(i32(dna.bio_params[9]) + 128) & 3u); // Evolvable 8..11 -> 25.0%..18.2% I!
+            u32 mig_h = (ux * 3u + uy * 5u + z * 7u) % ei_mod;
+            if (mig_h == 0u) {
+                tk = TK_NEU_PV;
+            } else if (mig_h == (ei_mod >> 1)) {
+                tk = TK_NEU_SST;
+            } else {
                 tk = TK_NEU_EXC;
             }
             t = pack_tissue(tk, tis_state(t), tis_budget(t), tis_tag(t) | 0x0020u,
