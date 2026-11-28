@@ -2142,16 +2142,16 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         bool got_food = false;
         bool day_l = (wb.light[idx] >= 0.25f);
         // Authentic Vertebrate 4-Channel Split-Optics Retina & 4-Band Basilar-Papilla Spectral Acuity:
-        // Normalized to 1.00x at full 4-channel filter bank (0 -> 0.50 -> 0.86 -> 0.95 -> 1.00):
-        // Gives a decisive +16% spectral edge to 4-eye / 4-ear orthogonal filter banks without starving 2-receptor lineages!
+        // Preserves thriving 2-channel baseline (0.86) while rewarding full 4-channel filter banks (1.10 = +28% spectral edge!)
+        // — selects 4-eye / 4-ear encephalized lineages WITHOUT causing ecological famine bottlenecks!
         u32 n_eye_eff = abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]);
         u32 n_ear_eff = abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]);
         u32 n_chem_eff = u32(bp.counts[TK_CHEM]);
         u32 act_sens_n = day_l ? n_eye_eff : n_ear_eff;
-        float sens_acuity = (act_sens_n >= 4u) ? 1.00f
-                                               : ((act_sens_n == 3u) ? 0.90f
-                                                                     : ((act_sens_n == 2u) ? 0.74f
-                                                                                           : ((act_sens_n == 1u) ? 0.45f : 0.00f)));
+        float sens_acuity = (act_sens_n >= 4u) ? 1.10f
+                                               : ((act_sens_n == 3u) ? 0.96f
+                                                                     : ((act_sens_n == 2u) ? 0.86f
+                                                                                           : ((act_sens_n == 1u) ? 0.50f : 0.00f)));
         // Authentic Contact Gustation & Olfactory Toxin Rejection (TK_CHEM):
         // Chemosensory organisms detect dissolved nutrient plumes and taste-reject corrosive chem_d BEFORE ingestion!
         float chem_forage_m = (abl.challenge_tier >= 1u) ? ((n_chem_eff >= 2u) ? 1.12f : ((n_chem_eff == 1u) ? 1.05f : 0.94f)) : 1.0f;
@@ -2227,10 +2227,10 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                     u32 p_ear = abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]);
                     bool day_evade = (wb.light[idx] >= 0.25f) &&
                                      ((p_eye == 0u && ((p_h & 7u) != 0u)) || (p_eye == 1u && ((p_h & 1u) != 0u)) ||
-                                      (p_eye == 2u && ((p_h & 3u) == 0u)) || (p_eye == 3u && ((p_h & 7u) == 0u)));
+                                      (p_eye == 2u && ((p_h & 7u) == 0u)));
                     bool night_evade = (wb.light[idx] < 0.25f) &&
                                        ((p_ear == 0u && ((p_h & 7u) != 0u)) || (p_ear == 1u && ((p_h & 1u) != 0u)) ||
-                                        (p_ear == 2u && ((p_h & 3u) == 0u)) || (p_ear == 3u && ((p_h & 7u) == 0u)));
+                                        (p_ear == 2u && ((p_h & 7u) == 0u)));
                     u32 expect = u32(OBJ_PREY) | (u32(INVALID_OBJ) << 16);
                     u32 want_n = u32(OBJ_NONE) | (u32(INVALID_OBJ) << 16);
                     if (!day_evade && !night_evade && atomic_cas_u32(reinterpret_cast<u32 *>(&ob.kind), expect, want_n) == expect) {
@@ -2242,8 +2242,10 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                         if (prey_edible) {
                             // Symmetric Diurnal Vision & Nocturnal Echolocation high-calorie seasonal Batesian prey feast:
                             // Permanently selects live STDP reversal + multimodal vision/hearing + prefrontal memory over passive grazing!
+                            u32 p_act = (wb.light[idx] >= 0.25f) ? p_eye : p_ear;
+                            float p_4ch = (p_act >= 4u) ? 1.12f : 1.00f;
                             float prey_e = (abl.challenge_tier >= 2u) ? 170.0f : 88.0f;
-                            float gain = prey_e * digest_mul;
+                            float gain = prey_e * digest_mul * p_4ch;
                             cr.atp += gain; cr.energy_gained += gain;
                             ++cr.food_events;
                             if (ctr) {
@@ -2338,7 +2340,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                         u32 a_sens = (wb.light[idx] >= 0.25f)
                                          ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
                                          : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
-                        float sens_vuln_m = (a_sens >= 4u) ? 0.82f : ((a_sens == 3u) ? 0.94f : ((a_sens == 2u) ? 1.12f : ((a_sens == 1u) ? 1.45f : 1.85f)));
+                        float sens_vuln_m = (a_sens >= 4u) ? 0.78f : ((a_sens == 3u) ? 0.92f : ((a_sens == 2u) ? 1.00f : ((a_sens == 1u) ? 1.40f : 1.80f)));
                         float wall_cov = near_wall ? 0.35f : 1.0f;
                         float immob_m = (cur_spd < 0.08f) ? 1.35f : 1.0f;
                         float vocal_m = alarm_brace ? 0.12f : (v1_startle ? 0.25f : (v_lure ? 1.25f : 1.0f));
