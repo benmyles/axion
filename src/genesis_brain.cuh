@@ -2478,7 +2478,8 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                     if (avail > 0.10f) {
                         atomic_add_f32(&creatures[other].hp, -bite * 7.5f * crowd_div);
                         atomic_add_f32(&creatures[other].atp, -avail);
-                        float gain = avail * 0.50f;
+                        // Honest enzymatic carnivory assimilation (100% energy-conserving <= 0.50*avail, scales with digestive gland_sat!):
+                        float gain = avail * (0.12f + 0.38f * gland_sat);
                         cr.atp += gain; cr.energy_gained += gain;
                         ++cr.bites_landed;
                         atomic_add_f32(&wb.acoust_p[fidx], 0.42f);
