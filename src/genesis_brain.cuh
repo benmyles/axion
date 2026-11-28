@@ -485,8 +485,11 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 u32 i3R = sample_idx(fma_f32(rct, 20.0f, x) + rst * 4.0f, fma_f32(rst, 20.0f, y) - rct * 4.0f);
                 bool blk1 = (ld_nc_f32(wb.terrain + i1) > 3.5f || wb.material[i1] == MAT_POLYMER);
                 bool blk2 = blk1 || (ld_nc_f32(wb.terrain + i2) > 3.5f || wb.material[i2] == MAT_POLYMER);
-                // Bilateral-non-colliding retinal mosaic: left/right mirror eyes span distinct spectral/looming channels!
-                u32 mode = ((ux < 8u ? ux : (17u - ux)) + uy) & 3u;
+                // Collision-free rank-ordered retinal mosaic (matching ear_rank & 3u): guarantees 2-eye minds always span
+                // Warm-ON + Cool-ON and 4-eye minds ALWAYS span all 4 channels (Object, Warm-ON, Looming, Cool-ON)!
+                u32 eye_rank = 0u;
+                for (u32 ei = 0u; ei < tid; ++ei) if (s_tk[ei] == TK_EYE) ++eye_rank;
+                u32 mode = eye_rank & 3u;
                 bool broad_eye = (bp.counts[TK_EYE] < 4u);
                 auto first_obj = [&](u32 a, u32 b, u32 c) -> u32 {
                     u32 o = wb.tile_obj_id[a];
@@ -534,21 +537,21 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 u32 o2 = first_obj(i2, i2L, i2R);
                 u32 o3 = first_obj(i3, i3L, i3R);
                 if (broad_eye) {
-                    // Compact 1-3 cell vertebrate proto-retina: combines wide-band reef/prey reflectance + seasonal hue/looming!
-                    // Evolves into full 4-channel high-resolution split optics once an organism grows >= 4 photoreceptors!
-                    float v_opt = (opt_f(i1, o1) + (blk1 ? 0.0f : opt_f(i2, o2)) + (blk2 ? 0.0f : opt_f(i3, o3) * 0.85f)) * 1.65f;
+                    // Compact 1-3 cell vertebrate proto-retina with symmetric Kuffler Warm-ON / Cool-ON opponency:
+                    // Even 2-eye minds cleanly discriminate Warm vs Cool Batesian prey & Sunlit Food vs Cool Mineral!
+                    float v_opt = clampf((opt_f(i1, o1) + (blk1 ? 0.0f : opt_f(i2, o2)) + (blk2 ? 0.0f : opt_f(i3, o3) * 0.85f)) * 0.60f, 0.0f, 2.4f);
+                    float v_hue = clampf((rcue(i1, o1) + (blk1 ? 0.0f : rcue(i2, o2))) * 1.15f, -2.6f, 2.6f);
                     if ((mode & 1u) == 0u) {
-                        float v_hue = (rcue(i1, o1) + (blk1 ? 0.0f : rcue(i2, o2))) * 0.95f;
-                        v = v_opt + v_hue;
+                        v = v_opt * 0.65f + v_hue;
                     } else {
                         float v_lm = clampf(loom(i1, o1, 1.2f) + (blk1 ? 1.20f * vis_l(i1) : loom(i2, o2, 0.95f)), 0.0f, 2.8f);
-                        v = v_opt * 0.55f - v_lm * 0.95f;
+                        v = v_opt * 0.65f - v_hue - v_lm * 0.95f;
                     }
                 } else if (mode == 0u) {
                     // Bioluminescent object (prey/pod/megapod/fuel) & sunlit Golden Reef bloom sheen over physical cone!
                     v = (opt_f(i1, o1) + (blk1 ? 0.0f : opt_f(i2, o2)) + (blk2 ? 0.0f : opt_f(i3, o3) * 0.85f)) * 1.80f;
                 } else if (mode == 1u) {
-                    // Ambiguous seasonal Warm-Amber (+) vs Cool-Mineral (-) opponent spectral hue on BOTH reefs & OBJ_PREY!
+                    // Kuffler (1953) Warm-Amber-ON opponent retinal ganglion channel (Warm prey/sunlit reef -> +, Cool -> silent)!
                     // NEVER reveals edibility — ONLY live STDP + BAC + PV/SST inhibition can track 180t seasonal flips!
                     v = (rcue(i1, o1) + (blk1 ? 0.0f : rcue(i2, o2)) + (blk2 ? 0.0f : rcue(i3, o3) * 0.85f)) * 1.85f;
                 } else if (mode == 2u) {
@@ -556,10 +559,12 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     v = clampf(loom(i1, o1, 1.3f) + (blk1 ? 1.35f * vis_l(i1) : loom(i2, o2, 1.0f)) +
                                (blk2 ? 0.0f : loom(i3, o3, 0.7f)), 0.0f, 3.0f);
                 } else {
-                    // Spatial brightness/beacon depth gradient + circadian daylight compass!
+                    // Kuffler (1953) Cool-Mineral-ON opponent retinal ganglion channel + spatial beacon depth gradient!
+                    // Fires strongly on Cool Batesian prey & Cool chem_a ore, silent on Warm prey/Food -> symmetric 180t STDP reversal!
+                    float r_sum = (rcue(i1, o1) + (blk1 ? 0.0f : rcue(i2, o2)) + (blk2 ? 0.0f : rcue(i3, o3) * 0.85f)) * 1.85f;
                     float l_near = ld_nc_f32(wb.light + i1);
                     float l_far = blk1 ? l_near : ld_nc_f32(wb.light + i2);
-                    v = clampf((l_far - l_near) * 2.2f + (l_near - 0.30f) * 0.9f, -1.5f, 2.4f);
+                    v = clampf((l_far - l_near) * 2.2f - r_sum, -1.5f, 3.0f);
                 }
             } else if (tk == TK_EAR && !abl.deaf_ears) {
                 // Binaural stereo 4-wavefield cochlear tonotopy (acoust_p, v0, v1, v2) + inner-ear vestibular compass!
@@ -1637,7 +1642,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                 s_stp = s - 0x20000000u;
                             else
                                 s_stp = (s & 0x1fffffffu) | 0x20000000u;
-                        } else if ((layer_idx == 3u && ext_ach_q > 18 && !post_recent && cs_u >= 4u) ||
+                        } else if ((layer_idx == 3u && ext_ach_q > 18 && !post_recent && cs_u <= 5u && cs_u >= 4u) ||
                                    (layer_idx == 4u && ext_ach_q > 20 && cs_u <= 5u && cs_u >= 4u) ||
                                    (layer_idx == 5u && ext_ach_q > 20 && cs_u == 4u)) {
                             // Hasselmo (2006) Cholinergic New-Episode Retirement:
@@ -1848,25 +1853,27 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
         }
 
         // Blackwell Empty-Warp Zero-Redux Fast-Path (reuses s_mod_w computed once above — ZERO duplicate redux!)
-        u32 wspk = 0u, wed = 0u, wrw = 0u, wexc = 0u;
+        u32 wspk = 0u, wsens = 0u, wed = 0u, wrw = 0u, wexc = 0u;
         if (warp_has_exc) {
             wspk = warp_add_u32(spk_acc);
+            wsens = (layer_idx == 0u) ? warp_add_u32(tk_is_sensor(u8(tk)) ? spk_acc : 0u) : 0u;
             wed = abl.freeze_plasticity ? 0u : warp_add_u32(edit_acc);
             wrw = abl.freeze_plasticity ? 0u : warp_add_u32(rewire_acc);
             wexc = popc_u32(exc_bm);
         }
         if (lane_id() == 0u) {
-            s_warp_spk[tid >> 5] = wspk;
+            s_warp_spk[tid >> 5] = (wspk & 0xffffu) | (wsens << 16);
             s_warp_ed[tid >> 5] = wed;
             s_warp_rw[tid >> 5] = (wrw & 0xffffu) | (wexc << 16);
         }
         sync_block();
 
         if (tid == 0u) {
-            u32 tot_spk = 0u, tot_ed = 0u, tot_rw = 0u, tot_exc_l = 0u, tot_mp = 0u, tot_mn = 0u;
+            u32 tot_spk = 0u, tot_sens_spk = 0u, tot_ed = 0u, tot_rw = 0u, tot_exc_l = 0u, tot_mp = 0u, tot_mn = 0u;
             #pragma unroll
             for (u32 w = 0; w < 8u; ++w) {
-                tot_spk += s_warp_spk[w];
+                tot_spk += (s_warp_spk[w] & 0xffffu);
+                tot_sens_spk += (s_warp_spk[w] >> 16);
                 if (!abl.freeze_plasticity) {
                     tot_ed += s_warp_ed[w];
                     tot_rw += (s_warp_rw[w] & 0xffffu);
@@ -1930,11 +1937,15 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 cr.mot_vocal2 = air_sac(rv2);
                 cr.mot_secrete = clampf(float(eu[8]) / (85.0f * nl), 0.0f, 1.0f);
 
-                // Authentic Nucleus Basalis Positive-Onset Cholinergic Novelty (Hasselmo 2006 / Yu & Dayan 2005):
-                // Double-buffered via upper 6 bits of `peer_tpl_band` and published between ticks in body_ecology_step
-                // so ALL cortical layers L1..L_top read 100% race-free, identical tick-(t-1) `cr.mod_ach`!
-                float snorm = float(tot_spk) * 0.01f;
-                float new_ach = clampf((snorm > cr.prev_sens ? (snorm - cr.prev_sens) : 0.0f) * 2.4f, 0.0f, 1.0f);
+                // Authentic Pure-Sensory Nucleus Basalis Positive-Onset Cholinergic Novelty (Hasselmo 2006 / Yu & Dayan 2005):
+                // Measures strictly sensory-receptor spikes (`TK_EYE + TK_EAR + TK_CHEM`, 0 motor contamination!), normalized
+                // by sensor count with a clean noise deadband (`d_sn > 0.20f`) so +1..2 jitter stays silent (`0`) while crisp
+                // dark acoustic cues trigger phasic ACh equitably with sunlit vision!
+                // Double-buffered via upper 6 bits of `peer_tpl_band` and published between ticks in body_ecology_step.
+                u32 n_sens = u32(bp.counts[TK_EYE]) + u32(bp.counts[TK_EAR]) + u32(bp.counts[TK_CHEM]);
+                float snorm = float(tot_sens_spk) / float(max_u32(6u, min_u32(14u, n_sens * 2u)));
+                float d_sn = snorm - cr.prev_sens;
+                float new_ach = (d_sn > 0.20f) ? clampf((d_sn - 0.16f) * 2.1f, 0.0f, 1.0f) : 0.0f;
                 u32 new_ach_q = u32(clamp_i32(i32(new_ach * 63.0f + 0.5f), 0, 63));
                 cr.peer_tpl_band = u8((cr.peer_tpl_band & 0x03u) | (new_ach_q << 2));
                 cr.prev_sens = snorm;
