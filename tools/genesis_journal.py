@@ -1,4 +1,4 @@
-# Axion Genesis v50 — Publication-Grade Scientific Observatory Plates (plate.webp)
+# Axion Genesis v51 — Publication-Grade Scientific Observatory Plates (plate.webp)
 # 2200x1320 Dark-Observatory high-density vector + hillshaded-PNG field infographics:
 #   - Mode A (bench)    : Blackwell SM 12.0 4B/syn + 8B/neuron bit blueprint, throughput & occupancy
 #   - Mode B (evolve)   : Hillshaded 256x256 GPU world PNG, top-4 species gallery, 3D cortical stack
@@ -297,7 +297,7 @@ def genesis_summary(data):
         gsyn_p = _gen_f(pla, "Gsyn_ops/s")
         grid_s = wld.get("grid", "256x256")
         return (
-            "Axion Genesis v50 · Blackwell GPU Benchmark",
+            "Axion Genesis v51 · Blackwell GPU Benchmark",
             f"Neocortex STF + VIP/SST Gating + Burstprop + NMDA + k-WTA · 4 B/syn · {grid_s} world · {inf.get('local_B','0')} B spill",
             "Synaptic throughput",
             gsyn,
@@ -333,7 +333,7 @@ def genesis_summary(data):
         bgain = _gen_f(rev, "bac_gain_pct")
         pr = _gen_f(wm, "persist_ratio", 1.0)
         return (
-            "Axion Genesis v50 · 20-Assay Cognitive Battery",
+            "Axion Genesis v51 · 20-Assay Cognitive Battery",
             f"20 Non-LLM Probes · STDP {sgain:+.1f}% · BAC {bgain:+.1f}% · Q&A {_gen_f(qa,'hit_rate')*100:.0f}% · Ctx {_gen_f(cx,'post_hit')*100:.0f}% · 2-Syl {_gen_f(p2,'post_seq_hit')*100:.0f}% · Gen18 {_gen_f(g18,'post_voc_hit')*100:.0f}% · Epi19 {_gen_f(e19,'post_hit')*100:.0f}% · A>C {_gen_f(t20,'post_trans')*100:.0f}%",
             "STDP reversal gain",
             sgain,
@@ -360,7 +360,7 @@ def genesis_summary(data):
         mx_fi = _gen_i(s, "max_fanin", 16)
         wd_s = _gen_i(s, "world", 256)
         return (
-            "Axion Genesis v50 · Neocortex Spiking Mind",
+            "Axion Genesis v51 · Neocortex Spiking Mind",
             f"{wd_s}×{wd_s} Trisolaris-16 · {pop} slots · {t_n:,} ticks · Gen {mg} · {sp} morphs · up to {mx_ar} layers",
             "Natural births",
             float(births),
@@ -377,7 +377,7 @@ def genesis_summary(data):
     if insp:
         r = insp[-1]
         return (
-            "Axion Genesis v50 · Specimen Inspection",
+            "Axion Genesis v51 · Specimen Inspection",
             f"Tick {r.get('tick','0')} · {r.get('alive','0')} alive · {r.get('species','0')} morphs · Gen {r.get('max_gen','0')}",
             "Living organisms",
             _gen_f(r, "alive"),
@@ -394,7 +394,7 @@ def genesis_summary(data):
         grp = _gen_i(r, "group", 1)
         peer_tot = sum(_gen_i(t, "peer_replies") for t in turns)
         return (
-            "Axion Genesis v50 · Multi-Agent Spiking Mind" if grp > 1 else "Axion Genesis v50 · 3-Band Spiking Dialogue",
+            "Axion Genesis v51 · Multi-Agent Spiking Mind" if grp > 1 else "Axion Genesis v51 · 3-Band Spiking Dialogue",
             f"{grp} Agent{'s' if grp>1 else ''} · Gen {r.get('specimen_gen','1')} · {r.get('layers','1')}L · {r.get('neurons','0')} neu · {len(turns)} turns · {peer_tot} peer replies",
             "Sensory turns",
             float(len(turns)),
@@ -456,9 +456,9 @@ def genesis_plate_drawing(data, b):
     conv_agents = _gen_rows(lines, "genesis_conv_agent")
 
     run_id = b.get("id", 0)
-    run_tag = f"AXION GENESIS v50   ·   RUN {run_id:05d}   ·   {b.get('date','')[:10]}" if run_id else "AXION GENESIS v50   ·   BLACKWELL SM 12.0"
+    run_tag = f"AXION GENESIS v51   ·   RUN {run_id:05d}   ·   {b.get('date','')[:10]}" if run_id else "AXION GENESIS v51   ·   BLACKWELL SM 12.0"
     d.text(32, 30, run_tag, 13.0, OBS_EMERALD, MONO, 700, space=1.6)
-    d.text(32, 68, short(b.get("title", "Axion Genesis v50"), 58), 32.0, OBS_TEXT, SERIF, 600)
+    d.text(32, 68, short(b.get("title", "Axion Genesis v51"), 58), 32.0, OBS_TEXT, SERIF, 600)
     d.text(32, 91, short(b.get("subtitle", ""), 120), 13.5, OBS_SUB, SANS, 400)
 
     meas = b.get("measure", 0.0)

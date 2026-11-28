@@ -450,7 +450,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
 
         u32 cidx_r = (u32(i32(cr.y + HF * 2.0f) & i32(MY)) << SY) |
                      u32(i32(cr.x + WF * 2.0f) & i32(MX));
-        bool is_resting = (ld_nc_f32(wb.light + cidx_r) < 0.25f && cr.mot_thrust < 0.25f && cr.mod_ne < 0.35f);
+        bool is_resting = (ld_nc_f32(wb.light + cidx_r) < 0.25f && ((cr.growth_stage & 0x80u) == 0u) && cr.mod_ne < 0.35f);
 
         // 1. TRUE ANATOMICAL EMBODIED SENSING (Strictly Inside Grown EYE / EAR / CHEM Organs — ZERO Shortcuts!)
         i32 sens_curr = 0;
@@ -600,8 +600,8 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     else if (e3 == 1u) v = av1 * 5.2f + avp * 1.4f + (flow + vest) * 0.20f - av0 * 1.6f;
                     else v = av2 * 5.6f + avp * 1.8f - (av0 + av1) * 1.1f;
                 } else if (n_ears == 2u) {
-                    if (ear_rank == 0u) v = av0 * 5.0f + av2 * 2.4f + avp * 3.0f + (flow + vest) * 0.20f - av1 * 2.2f;
-                    else v = av1 * 5.0f + av2 * 2.4f + avp * 0.85f + (flow + vest) * 0.20f - av0 * 2.2f;
+                    if (ear_rank == 0u) v = av0 * 5.0f + av2 * 2.4f + avp * 1.8f + (flow + vest) * 0.20f - av1 * 2.2f;
+                    else v = av1 * 5.0f + av2 * 2.4f + avp * 0.45f + (flow + vest) * 0.20f - av0 * 2.2f;
                 } else {
                     // Authentic single-receptor vertebrate cochlear phase-locking (Rose 1967):
                     // Prevents +1900 saturation clipping so even compact 1-ear organisms distinguish v0 / v1 / v2 pitch!
@@ -794,7 +794,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                         i32 curr = sw_i * i32((s >> 29) + 2u);
                                         bool is_ap = (s & 0x04000000u) != 0u;
                                         if (layer_idx == 1u && src_l == 0u && sw_i > 0)
-                                            curr = curr + (curr >> 2); // Crisp 1.25x thalamocortical sensory driver onto L1!
+                                            curr = curr + (curr >> 2); // Crisp 1.25x Class-1A thalamocortical sensory driver onto L1!
                                         else if (layer_idx >= 2u && layer_idx <= 4u && src_l < layer_idx && sw_i > 0)
                                             curr = pfc_shield ? (curr >> 2) : ((curr * 3) >> 1); // 6x PBWM Encode (1.5x) vs Shield (0.25x) on L2..L4!
                                         else if (layer_idx == 5u && src_l < layer_idx && sw_i > 0)
@@ -889,13 +889,14 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 ext_apic[0] = ext_apic[1] = ext_apic[2] = ext_apic[3] = s_ap;
             }
             // Authentic Payeur-Naud-Richards (2021) + Lillicrap (2016) Vector Feedback-Aligned Efference-Copy Burstprop:
-            // Pre-computed ONCE per tick outside the 4-substep loop so BOTH apical BAC plateaus AND L1..L_top basal STDP
-            // receive true action-specific signed credit (zero backprop, zero extra VRAM, saves registers!)
+            // Reads strictly race-free tick-(t-1) action latch (`cr.growth_stage >> 4`) published between ticks by body_ecology_step,
+            // guaranteeing L1..L_top ALWAYS blame/credit tick-(t-1)'s causal action (never raced by L0's tick-t LMAN switch!).
             i32 fa_da = eff_da;
+            u32 prev_fa_act = u32(cr.growth_stage >> 4);
             if (layer_idx >= 1u && is_pyr && (eff_da > 15 || eff_da < -15)) {
-                bool v0_a = (cr.mot_vocal0 > 0.12f);
-                bool v1_a = (cr.mot_vocal1 > 0.12f);
-                bool v2_a = (cr.mot_vocal2 > 0.12f);
+                bool v0_a = (prev_fa_act & 1u) != 0u;
+                bool v1_a = (prev_fa_act & 2u) != 0u;
+                bool v2_a = (prev_fa_act & 4u) != 0u;
                 if (v0_a || v1_a || v2_a) {
                     u32 fa_f = (tid * 3u + layer_idx * 5u + u32(dna.bio_params[8] & 7)) % 3u;
                     bool my_f = (fa_f == 0u) ? v0_a : ((fa_f == 1u) ? v1_a : v2_a);
@@ -904,7 +905,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     // Keep Fee-Goldberg vocal evaluation (vta_voc_q) strictly in Area-X (TK_GLAND) -> ZERO cortical over-editing!
                     fa_da = my_f ? eff_da : 0;
                 } else {
-                    bool mot_a = (cr.mot_thrust > 0.14f);
+                    bool mot_a = (prev_fa_act & 8u) != 0u;
                     bool my_m = (((tid ^ layer_idx) & 1u) != 0u) ? mot_a : !mot_a;
                     fa_da = my_m ? eff_da : 0;
                 }
@@ -1163,7 +1164,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     // OR awake rewarded consummatory pauses (mot_thrust < 0.25, suppressed by locomotor theta during running!)
                     i32 sleep_drive = (is_resting && ((tick & 31u) == 0u) && layer_idx > 0u && is_pyr && ema >= 8u && ema < 20u)
                                           ? 18
-                                          : (((layer_idx >= 3u && layer_idx <= 5u) && is_pyr && st0_stf_hold && eff_da > 28 && cr.mot_thrust < 0.25f && ema >= 8u && ema < 22u) ? 32 : 0);
+                                          : (((layer_idx >= 3u && layer_idx <= 5u) && is_pyr && st0_stf_hold && eff_da > 28 && ((prev_fa_act & 8u) == 0u) && ema >= 8u && ema < 22u) ? 32 : 0);
                     u32 pv_sh_cap = (layer_idx >= 2u) ? 200u : 140u;
                     i32 pv_shunt = (layer_idx >= 1u && is_pyr && !has_topk_pv && pv_cnt > 1u)
                                        ? i32(min_u32(pv_sh_cap, (pv_cnt - 1u) * 10u))
@@ -1174,7 +1175,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     //   Olveczky juvenile LMAN exploratory nudge on rival folds WITHOUT shutting down adult/juvenile catalysis!
                     i32 lman_curr = 0;
                     bool d2_err_veto = false;
-                    bool juv_lman_err = (cr.age < 120u && cr.peer_tpl_band < 3u && cr.peer_tpl_age <= 4u && vta_voc_q < -18);
+                    bool juv_lman_err = (cr.age < 120u && (cr.peer_tpl_band & 0x03u) < 3u && cr.peer_tpl_age <= 4u && vta_voc_q < -18);
                     if (tk == TK_GLAND && eff_da < -10) {
                         bool was_punished = ((s_mod_w[2] & (1u << my_gfold)) != 0u) || ((ring & 0xf0u) != 0u);
                         if (was_punished && s_mod_w[2] != 0u) {
@@ -1930,10 +1931,12 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 cr.mot_secrete = clampf(float(eu[8]) / (85.0f * nl), 0.0f, 1.0f);
 
                 // Authentic Nucleus Basalis Positive-Onset Cholinergic Novelty (Hasselmo 2006 / Yu & Dayan 2005):
-                // Phasic ACh fires on NEW sensory appearance (`snorm > prev_sens`), NEVER on cue offset into silence
-                // (prevents dark delay tick 0 from falsely firing ACh and wiping L3/L4 working memory engrams!)
+                // Double-buffered via upper 6 bits of `peer_tpl_band` and published between ticks in body_ecology_step
+                // so ALL cortical layers L1..L_top read 100% race-free, identical tick-(t-1) `cr.mod_ach`!
                 float snorm = float(tot_spk) * 0.01f;
-                cr.mod_ach = clampf((snorm > cr.prev_sens ? (snorm - cr.prev_sens) : 0.0f) * 2.4f, 0.0f, 1.0f);
+                float new_ach = clampf((snorm > cr.prev_sens ? (snorm - cr.prev_sens) : 0.0f) * 2.4f, 0.0f, 1.0f);
+                u32 new_ach_q = u32(clamp_i32(i32(new_ach * 63.0f + 0.5f), 0, 63));
+                cr.peer_tpl_band = u8((cr.peer_tpl_band & 0x03u) | (new_ach_q << 2));
                 cr.prev_sens = snorm;
             }
             if (ctr) {
@@ -1967,9 +1970,11 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
     i32 iy = i32(cr.y + HF * 2.0f) & i32(MY);
     u32 idx = (u32(iy) << SY) | u32(ix);
 
-    // 1. Rigid-Body / Hydrodynamic Motion + Fast Phasic DAT Reuptake & Real Motor Antagonism!
+    // 1. Rigid-Body / Hydrodynamic Motion + Fast Phasic DAT Reuptake & Race-Free ACh/Vector-FA Double-Buffer Latch!
     cr.int_da = clampf(cr.int_da * 0.35f, -0.22f, 0.22f);
     cr.int_ach = clampf(cr.int_ach * 0.50f, 0.0f, 0.38f);
+    cr.mod_ach = float(cr.peer_tpl_band >> 2) * (1.0f / 63.0f);
+    cr.peer_tpl_band &= 0x03u;
 
     // Physical motor exclusivity: conflicting skeletal/mouth actions (thrust+dig+build+eat) interfere,
     // while internal gland catalysis & vocalizing (syrinx sonar/speech) operate independently so organisms can swim AND speak!
@@ -2144,9 +2149,9 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         u32 n_chem_eff = u32(bp.counts[TK_CHEM]);
         u32 act_sens_n = day_l ? n_eye_eff : n_ear_eff;
         float sens_acuity = (act_sens_n >= 4u) ? 1.00f
-                                               : ((act_sens_n == 3u) ? 0.95f
-                                                                     : ((act_sens_n == 2u) ? 0.86f
-                                                                                           : ((act_sens_n == 1u) ? 0.50f : 0.00f)));
+                                               : ((act_sens_n == 3u) ? 0.90f
+                                                                     : ((act_sens_n == 2u) ? 0.74f
+                                                                                           : ((act_sens_n == 1u) ? 0.45f : 0.00f)));
         // Authentic Contact Gustation & Olfactory Toxin Rejection (TK_CHEM):
         // Chemosensory organisms detect dissolved nutrient plumes and taste-reject corrosive chem_d BEFORE ingestion!
         float chem_forage_m = (abl.challenge_tier >= 1u) ? ((n_chem_eff >= 2u) ? 1.12f : ((n_chem_eff == 1u) ? 1.05f : 0.94f)) : 1.0f;
@@ -2222,10 +2227,10 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                     u32 p_ear = abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]);
                     bool day_evade = (wb.light[idx] >= 0.25f) &&
                                      ((p_eye == 0u && ((p_h & 7u) != 0u)) || (p_eye == 1u && ((p_h & 1u) != 0u)) ||
-                                      (p_eye == 2u && ((p_h & 7u) == 0u)));
+                                      (p_eye == 2u && ((p_h & 3u) == 0u)) || (p_eye == 3u && ((p_h & 7u) == 0u)));
                     bool night_evade = (wb.light[idx] < 0.25f) &&
                                        ((p_ear == 0u && ((p_h & 7u) != 0u)) || (p_ear == 1u && ((p_h & 1u) != 0u)) ||
-                                        (p_ear == 2u && ((p_h & 7u) == 0u)));
+                                        (p_ear == 2u && ((p_h & 3u) == 0u)) || (p_ear == 3u && ((p_h & 7u) == 0u)));
                     u32 expect = u32(OBJ_PREY) | (u32(INVALID_OBJ) << 16);
                     u32 want_n = u32(OBJ_NONE) | (u32(INVALID_OBJ) << 16);
                     if (!day_evade && !night_evade && atomic_cas_u32(reinterpret_cast<u32 *>(&ob.kind), expect, want_n) == expect) {
@@ -2333,7 +2338,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                         u32 a_sens = (wb.light[idx] >= 0.25f)
                                          ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
                                          : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
-                        float sens_vuln_m = (a_sens >= 4u) ? 0.84f : ((a_sens == 3u) ? 0.94f : ((a_sens == 2u) ? 1.0f : ((a_sens == 1u) ? 1.40f : 1.80f)));
+                        float sens_vuln_m = (a_sens >= 4u) ? 0.82f : ((a_sens == 3u) ? 0.94f : ((a_sens == 2u) ? 1.12f : ((a_sens == 1u) ? 1.45f : 1.85f)));
                         float wall_cov = near_wall ? 0.35f : 1.0f;
                         float immob_m = (cur_spd < 0.08f) ? 1.35f : 1.0f;
                         float vocal_m = alarm_brace ? 0.12f : (v1_startle ? 0.25f : (v_lure ? 1.25f : 1.0f));
@@ -2587,7 +2592,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                             u32 v0_sn = (wb.light[idx] >= 0.25f)
                                             ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
                                             : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
-                            float v0_sens_m = (v0_sn >= 2u) ? 1.00f : ((v0_sn == 1u) ? 0.65f : 0.30f);
+                            float v0_sens_m = (v0_sn >= 4u) ? 1.00f : ((v0_sn >= 2u) ? 0.85f : ((v0_sn == 1u) ? 0.55f : 0.25f));
                             float sb = clampf(wb.chem_c[idx] * 0.20f, 0.0f, 0.06f) * flow_vent;
                             atomic_add_f32(&wb.chem_c[idx], -sb);
                             float sg_e = sb * 12.0f * digest_mul * v0_sens_m;
@@ -2697,13 +2702,20 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
     cr.mod_ne = clampf(therm_stress * 1.8f + (cr.atp < 9.0f ? (9.0f - cr.atp) * 0.12f : 0.0f) +
                        (cr.hp < 70.0f ? (70.0f - cr.hp) * 0.015f : 0.0f), 0.0f, 1.0f);
 
+    // Latch race-free tick-t Vector-FA causal action mask (`v0|v1|v2|thrust`) into upper nibble of `growth_stage`
+    // so next tick's L1..L_top cortical layers ALWAYS assign credit to tick-t's exact causal action!
+    u8 fa_act = (cr.mot_vocal0 > 0.12f ? 1u : 0u) | (cr.mot_vocal1 > 0.12f ? 2u : 0u) |
+                (cr.mot_vocal2 > 0.12f ? 4u : 0u) | (cr.mot_thrust > 0.14f ? 8u : 0u);
+    cr.growth_stage = u8((cr.growth_stage & 0x03u) | (fa_act << 4));
+
     ++cr.age;
 
     // 9. POST-NATAL LIVE JUVENILE -> ADULT GROWTH (Experience & Surplus ATP Sculpt the Growing Body+Brain!)
     float mat_thresh = 16.0f + float(dna.bio_params[11] & 7) * 0.6f;
-    if ((cr.growth_stage == 0u && cr.age == 120u && cr.atp > mat_thresh) ||
-        (cr.growth_stage == 1u && cr.age == 280u && cr.atp > mat_thresh + 2.0f)) {
-        ++cr.growth_stage;
+    u8 cur_gs = cr.growth_stage & 0x03u;
+    if ((cur_gs == 0u && cr.age == 120u && cr.atp > mat_thresh) ||
+        (cur_gs == 1u && cr.age == 280u && cr.atp > mat_thresh + 2.0f)) {
+        cr.growth_stage = u8((cr.growth_stage & 0xf0u) | (cur_gs + 1u));
         cr.atp -= 2.5f;
         cr.prev_atp = cr.atp; // Developmental maturation is NOT a nociceptive -DA punishment shock!
         needs_dev[cid] = 2u; // Incremental live CA maturation!

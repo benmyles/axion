@@ -286,9 +286,9 @@ AX_FN GenesisDNA make_founder_dna(u32 seed) {
 
     // 3. Organ & Spiking Neuron Differentiation (Fires AFTER proliferative phase — ZERO hardcoded stencils!)
     // Authentic Vertebrate Embryonic Placode Separation (crisp 3-4 stereo Eyes + 3-4 binaural Ears — zero eye-tumor drag!):
-    //   - Anterior optic brow (state 5: m1>=6, m2 in [4, 22]) + forebrain optic-vesicle (state 4: m1 in [22, 33], m2 in [4, 22]) -> paired stereo Eyes!
-    //   - Lateral otic brow (state 5: m2 >= 23) + posterior temporal (state 5: m1 <= 5, m2 >= 12) + lateral-line flank (state 3: m2 >= 18) -> paired binaural Ears!
-    //   - Midline snout contact Chem (state 5: m1 >= 10, m2 <= 3)
+    //   - Anterior optic brow (state 5: m1>=6, m2 in [4, 17]) + forebrain optic-vesicle (state 4: m1 in [22, 33], m2 in [4, 17]) -> paired stereo Eyes!
+    //   - Lateral otic brow (state 5: m2 >= 18) + posterior temporal (state 5: m1 <= 5, m2 >= 10) + lateral-line flank (state 3: m2 >= 13) -> paired binaural Ears!
+    //   - Midline snout contact Chem (state 5: m1 >= 10, m2 <= 1) -> 1-2 taste buds!
     d.rules[nr++] = make_rule(5u, 1u, 6, 127, 4, 17, OP_DIFF, 0u, TK_EYE, 0u, 0, 0, 0x21u, 11u, 0x0011u);
     d.rules[nr++] = make_rule(4u, 1u, 22, 33, 4, 17, OP_DIFF, 0u, TK_EYE, 0u, 0, 0, 0x21u, 10u, 0x0011u);
     d.rules[nr++] = make_rule(5u, 1u, -2, 127, 18, 127, OP_DIFF, 0u, TK_EAR, 0u, 0, 0, 0x21u, 11u, 0x0012u);
@@ -1648,7 +1648,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                       0.00032f * float(body.counts[TK_GRASP] + body.counts[TK_STRUCT]) +
                       0.00002f * float(body.counts[TK_EYE] + body.counts[TK_EAR]) +
                       0.00004f * float(body.counts[TK_GLAND]) +
-                      0.00140f * float(body.counts[TK_CHEM]) + sens_tumor;
+                      0.00004f * float(body.counts[TK_CHEM]) + sens_tumor;
 
         // Honest bilateral hydrodynamic streamlining: 1-pixel-wide rods (sym_p < 3) lack bilateral stabilizing fins!
         u32 sym_pct = (sym_p >= 3u) ? (100u * sym_m / sym_p) : (35u + sym_p * 15u);
