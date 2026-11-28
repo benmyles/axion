@@ -2141,7 +2141,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
     // muscleless sessile rocks (muscle==0) deplete their stagnant viscous boundary layer (0.05x) -> ends barnacle takeovers!
     float flow_vent = (abl.challenge_tier >= 1u)
                           ? ((bp.counts[TK_MUSCLE] == 0u)
-                                 ? 0.05f
+                                 ? 0.01f
                                  : clampf(0.16f + 0.84f * clampf(bp.thrust_cap, 0.0f, 1.0f), 0.16f, 1.0f))
                           : 1.0f;
     float eat_rate = (0.025f + 0.42f * bp.grasp_power) * motor_eff * flow_vent;
@@ -2162,7 +2162,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         float sens_acuity = (act_sens_n >= 4u) ? 1.00f
                                                : ((act_sens_n == 3u) ? 0.95f
                                                                      : ((act_sens_n == 2u) ? 0.86f
-                                                                                           : ((act_sens_n == 1u) ? 0.50f : 0.00f)));
+                                                                                           : ((act_sens_n == 1u) ? 0.30f : 0.00f)));
         // Authentic Contact Gustation & Olfactory Toxin Rejection (TK_CHEM):
         // Chemosensory organisms detect dissolved nutrient plumes and taste-reject corrosive chem_d BEFORE ingestion!
         float chem_forage_m = (abl.challenge_tier >= 1u) ? ((n_chem_eff >= 2u) ? 1.12f : ((n_chem_eff == 1u) ? 1.05f : 0.94f)) : 1.0f;
