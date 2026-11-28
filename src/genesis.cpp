@@ -260,6 +260,8 @@ struct GenesisGpu {
             crs[i].carried_obj = INVALID_OBJ;
             crs[i].peer_tpl_band = 3u;
             crs[i].peer_tpl_age = 255u;
+            crs[i].prev_vocal_band = 3u;
+            crs[i].prev_vocal_age = 255u;
             if (i >= spawn_n || next_sl >= max_layers) continue;
             full[i] = dnas_in[i % dnas_in.size()];
             u32 sl = next_sl++;

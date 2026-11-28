@@ -35,6 +35,8 @@ KERNEL void genesis_pop_init(GenesisDNA *dnas, CreatureState *creatures, u8 *nee
     cr.carried_obj = INVALID_OBJ;
     cr.peer_tpl_band = 3u;
     cr.peer_tpl_age = 255u;
+    cr.prev_vocal_band = 3u;
+    cr.prev_vocal_age = 255u;
     for (u32 l = 0; l < MAX_LAYERS_PER_CREATURE; ++l) cr.layer_slabs[l] = INVALID_SLAB;
     if (i < initial_alive) {
         u32 r = mix(seed ^ (i * 0x9e3779b9u + 1337u));
@@ -217,6 +219,10 @@ KERNEL void genesis_check_extinct(GenesisDNA *dnas, CreatureState *creatures, u8
         cr.layer_slabs[0] = sl0;
         cr.num_layers = 1u;
         cr.carried_obj = INVALID_OBJ;
+        cr.peer_tpl_band = 3u;
+        cr.peer_tpl_age = 255u;
+        cr.prev_vocal_band = 3u;
+        cr.prev_vocal_age = 255u;
         cr.x = rand_unit(r) * float(world_w);
         cr.y = rand_unit(r) * float(world_h);
         cr.theta = rand_unit(r) * 6.2831853f;
