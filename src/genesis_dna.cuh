@@ -272,8 +272,11 @@ AX_FN GenesisDNA make_founder_dna(u32 seed) {
     d.rules[nr++] = make_rule(5u, 1u, 4, 120, -120, 44, OP_MITOSIS, 0x43u, 5u, 5u,
                               rand_i8(r, 2, 4), rand_i8(r, 8, 20), 0x21u, 4u, 0x0010u);
     // Central neural stem(4) proliferates compact L0 head ganglion AND buds Layer +z deep cortex(6)!
+    // Ohno-duplicated paralog prevents a single bit-flip from turning L1 into an orphan state and amputating L2..L31!
     d.rules[nr++] = make_rule(4u, 1u, -120, 120, -120, 120, OP_MITOSIS, 0x5fu, 4u, 6u,
                               rand_i8(r, 3, 5), rand_i8(r, 10, 26), 0x31u, 6u, 0x0027u);
+    d.rules[nr++] = make_rule(4u, 1u, -120, 120, -120, 120, OP_MITOSIS, 0x5fu, 4u, 6u,
+                              rand_i8(r, 3, 5), rand_i8(r, 8, 24), 0x21u, 6u, 0x0027u);
     // Deep cortex stem(6) undergoes oSVZ transit-amplifying cranial sheet expansion AND buds Layer z+2(7)!
     // Ohno-duplicated NOTCH2NL paralog prevents a single mutation/deletion from amputating L2..L31 down to a 2L worm!
     d.rules[nr++] = make_rule(6u, 1u, -120, 120, -120, 120, OP_MITOSIS, 0x5fu, 6u, 7u,
@@ -720,7 +723,7 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                     } else if (rl.opcode == OP_MITOSIS && can_divide && (my_bud & 0x0fu) > 0u) {
                         // Vertical asymmetric mitosis (+z): oSVZ radial-glia budding of deeper neocortical layers!
                         // L0 waits until step>=2 so head/brow/trunk pattern first; deep L1+ bud continuously from step>=1!
-                        if ((rl.dir_mask & 0x10u) && z + 1u < max_layers && step >= (z == 0u ? 2u : 1u)) {
+                        if (!wants_bud_z && (rl.dir_mask & 0x10u) && z + 1u < max_layers && step >= (z == 0u ? 2u : 1u)) {
                             wants_bud_z = true;
                             bud_child_st = rl.arg_b & 15u;
                             bud_child_tag = rl.tag_bits | 0x0020u;
@@ -1154,7 +1157,8 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                         u32 want_col = (is_asc_pyr && br >= 4u) ? ((s_col + 1u) & 3u)
                                        : (is_desc_mix ? ((s_col + br) & 3u)
                                                       : ((is_desc_pyr && br >= 2u) ? ((s_col + 1u) & 3u) : s_col));
-                        bool is_vocal_br = (is_corticobulb && !no_direct_voc && ((!is_inh && br < 3u) || is_inh));
+                        bool is_l1_shallow_voc = (is_corticobulb && sz == 1u && final_L <= 2u);
+                        bool is_vocal_br = (is_corticobulb && !no_direct_voc && ((!is_inh && br < (is_l1_shallow_voc ? 1u : 3u)) || is_inh));
                         bool is_mus_br = (is_corticobulb && !is_inh && br >= 3u && br < 6u);
                         if (is_corticobulb && no_direct_voc && (is_inh || br < 3u)) continue;
                         if (is_vocal_br && n_gl == 0u) continue;
@@ -1341,16 +1345,17 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                         i32 raw_m = i32(rl.param0 < 0 ? -rl.param0 : rl.param0) / 8;
                                         u32 sp_h = mix(rng ^ (tid * 997u) ^ (post * 313u));
                                         i32 spine_j = ((sp_h & 3u) == 0u) ? (7 + i32((sp_h >> 2) & 7u)) : (i32((sp_h >> 2) & 7u) - 7);
+                                        bool is_prem_voc = (is_corticobulb && t_tk == TK_GLAND && sz >= 2u);
                                         i32 base_exc = is_thalamo ? 36
                                                        : ((sz < tz && tz > 0u) ? 24
-                                                          : ((is_corticobulb && t_tk == TK_GLAND) ? 22
+                                                          : (is_prem_voc ? 22
                                                              : ((tz == 0u && t_tk == TK_GLAND) ? 8 : (tz == 0u ? 18 : 11))));
                                         i32 mag = is_inh
                                                       ? ((t_tk == TK_GLAND || t_tk == TK_MUSCLE) ? clamp_i32(4 + (raw_m >> 1) + i32(rng & 1u), 4, 7)
                                                                                                  : clamp_i32(15 + raw_m + i32(rng & 7u), 15, 23))
                                                       : clamp_i32(base_exc + raw_m + spine_j,
-                                                                  is_thalamo ? 28 : ((sz < tz && tz > 0u) ? 14 : ((is_corticobulb && t_tk == TK_GLAND) ? 12 : ((tz == 0u && t_tk == TK_GLAND) ? 5 : 7))),
-                                                                  is_thalamo ? 48 : ((sz < tz && tz > 0u) ? 30 : ((is_corticobulb && t_tk == TK_GLAND) ? 34 : ((tz == 0u && t_tk == TK_GLAND) ? 16 : (tz == 0u ? 34 : 18)))));
+                                                                  is_thalamo ? 28 : ((sz < tz && tz > 0u) ? 14 : (is_prem_voc ? 12 : ((tz == 0u && t_tk == TK_GLAND) ? 5 : 7))),
+                                                                  is_thalamo ? 48 : ((sz < tz && tz > 0u) ? 30 : (is_prem_voc ? 34 : ((tz == 0u && t_tk == TK_GLAND) ? 16 : (tz == 0u ? 34 : 18)))));
                                         i32 w = is_inh ? -mag : mag;
                                         // Balanced 4-receptor family expression across motor/vocal effectors, interneurons & cortex:
                                         // Effectors express D1 Go & Fast-Reversal (0,1); interneurons express D2 & iSTDP (0..3);

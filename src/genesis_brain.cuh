@@ -1074,9 +1074,9 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         float p_inv = 1.0f / fast_sqrt(float(max_u32(10u, my_exc_cnt)));
                         float b_g = (layer_idx >= 6u) ? 2.95f : ((layer_idx == 5u) ? 4.00f : ((layer_idx >= 2u) ? 4.65f : ((layer_idx == 1u) ? 3.95f : 3.10f)));
                         // Calibrated Larkum (2013) Layer-1 Apical Tuft Gain for Sparse 6-10% Prefrontal Feedback:
-                        // Strictly modulatory (0 autonomous spikes in darkness!); enables sparse L4/L5 context assemblies
-                        // to reliably trigger nonlinear BAC coincidence bursts on Premotor/Broca L3 (L4/L5_apical x L2_basal)!
-                        float a_g = (layer_idx == 3u) ? 9.5f : ((layer_idx == 2u || layer_idx == 4u) ? 7.0f : 4.5f);
+                        // Strictly modulatory (0 autonomous spikes in darkness!); paired with 6-branch is_desc_mix canopy,
+                        // tuned right at the selective BAC threshold so matched L4/L5 context ignites L3 without tonic saturation!
+                        float a_g = (layer_idx == 3u) ? 6.5f : ((layer_idx == 2u || layer_idx == 4u) ? 5.5f : 4.5f);
                         i_basal = i32(float(raw_b) * (b_g * p_inv));
                         i_apical = abl.silence_apical ? 0 : i32(float(raw_a) * (a_g * p_inv));
                     } else if (!is_eff) {
@@ -1161,8 +1161,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                             if (fa_da > 12) da_apic_teach = fa_da * da_gain_l;
                             else if (fa_da < -12) da_apic_teach = (va > 0) ? -(va >> 1) : -140;
                         }
-                        i32 apic_in = (layer_idx == 3u) ? ((i_apical * 3) >> 2) : (i_apical >> 1);
-                        va = clamp_i32(va - (va >> apic_leak_shift) + apic_in + da_apic_teach - sst_shunt - (col_shunt >> 1) - sahp_va, -1500, 1500);
+                        va = clamp_i32(va - (va >> apic_leak_shift) + (i_apical >> 1) + da_apic_teach - sst_shunt - (col_shunt >> 1) - sahp_va, -1500, 1500);
                         plat = (va >= apic_thresh) ? 1u : 0u;
                     } else { va = 0; plat = 0u; }
                     // Authentic Larkum (1999 Nature / 2013 TINS) Strictly Multiplicative Apical×Basal BAC Coincidence Detection:
@@ -1170,7 +1169,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                     // when i_basal <= 80, delivering full burst amplification on bottom-up / STF basal coincidences (>= 180 pA)!
                     i32 raw_bac = 0;
                     if (plat) {
-                        i32 eff_bac = (layer_idx == 3u) ? ((bac_gain * 3) >> 1) : bac_gain;
+                        i32 eff_bac = (layer_idx == 3u) ? ((bac_gain * 5) >> 2) : bac_gain;
                         if (i_basal >= 180) raw_bac = eff_bac;
                         else if (i_basal > 80) raw_bac = (eff_bac * (i_basal - 80)) / 100;
                     }
@@ -2126,7 +2125,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
     u32 n_ear_r = abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]);
     bool v2_self_shelter = (n_ear_r >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 20u && cr.last_vocal_band == 2u);
     bool v2_heard_shelter = (n_ear_r >= 1u && cr.last_heard_tick > 0u && tick <= cr.last_heard_tick + 32u && cr.last_heard_band == 2u);
-    float cav_atten = (n_ear_r >= 4u) ? 0.35f : ((n_ear_r >= 2u) ? 0.42f : ((n_ear_r == 1u) ? 0.60f : 1.00f));
+    float cav_atten = (n_ear_r >= 2u) ? 0.35f : ((n_ear_r == 1u) ? 0.60f : 1.00f);
     bool shelter_beacon = (abl.challenge_tier >= 1u) && (near_wall || in_refuge) && (env_temp > 0.60f || env_temp < 0.38f) &&
                           (v2_self_shelter || v2_heard_shelter);
     bool acid_disperse = (abl.challenge_tier >= 1u) && (v2_self_shelter || v2_heard_shelter);
@@ -2157,16 +2156,18 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
     // 3. Selective Active Foraging, Essential Endocrine/Digestive & 3-Fold Vocal-Syrinx Glands (3 glands saturate!) & Catalysis
     float gland_sat = clampf(float(bp.counts[TK_GLAND]) * 0.34f, 0.0f, 1.0f);
     // Honest enzymatic physiology: 3+ digestive/vocal glands sustain full 1.28x assimilation, while gland==0 lacks
-    // digestive enzymes (0.35x -> naturally eliminates mute zero-gland parasites during ecological bottlenecks!)
-    float digest_mul = 0.35f + 0.93f * gland_sat;
+    // digestive enzymes (0.45x -> naturally eliminates mute zero-gland parasites without over-selecting 6+ gland hypertrophy!)
+    float digest_mul = 0.45f + 0.83f * gland_sat;
     float detox_mul = 1.12f - 0.37f * gland_sat;
     // Authentic Vogel (1994) Hydrodynamic Boundary-Layer Ventilation:
-    // Muscular swimming/ram-ventilation sweeps fresh nutrient-rich water across the mouth (1.00x);
-    // muscleless sessile rocks (muscle==0) deplete their stagnant viscous boundary layer (0.05x) -> ends barnacle takeovers!
+    // Bilateral muscular swimming/ram-ventilation sweeps fresh nutrient-rich water across the mouth (1.00x);
+    // muscleless rocks (0.01x) and unsteerable 1-muscle midline rods (0.30x) deplete their stagnant boundary layer!
     float flow_vent = (abl.challenge_tier >= 1u)
                           ? ((bp.counts[TK_MUSCLE] == 0u)
                                  ? 0.01f
-                                 : clampf(0.16f + 0.84f * clampf(bp.thrust_cap, 0.0f, 1.0f), 0.16f, 1.0f))
+                                 : ((bp.counts[TK_MUSCLE] == 1u)
+                                        ? 0.30f
+                                        : clampf(0.20f + 0.80f * clampf(bp.thrust_cap * 0.75f, 0.0f, 1.0f), 0.20f, 1.0f)))
                           : 1.0f;
     float eat_rate = (0.025f + 0.42f * bp.grasp_power) * motor_eff * flow_vent;
     if (cr.mot_eat > 0.15f) {
@@ -2175,20 +2176,19 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         float take_a = clampf(wb.chem_a[idx], 0.0f, eat_rate * 0.30f);
         float take_d = clampf(wb.chem_d[idx], 0.0f, eat_rate * 0.40f);
         bool got_food = false;
-        // True 50/50 astronomical twilight sensory crossover on Trisolaris (ch>=2: light>=0.38 bright diurnal optics vs
-        // light<0.38 pelagic twilight/night acoustic echolocation — preserves full photosynthesis & warm ocean!)
-        float day_thr = (abl.challenge_tier >= 2u) ? 0.38f : 0.25f;
-        bool day_l = (wb.light[idx] >= day_thr);
+        // Balanced ~50/50 ocean diurnal/nocturnal sensory crossover (median water-attenuated light on Trisolaris is ~0.27 ->
+        // 0.25 gives equal diurnal optical & nocturnal acoustic selection while sustaining thriving 500-850 population!)
+        bool day_l = (wb.light[idx] >= 0.26f);
         // Authentic Vertebrate 4-Channel Split-Optics Retina & 4-Band Basilar-Papilla Spectral Acuity:
-        // Normalized to 1.00x at full 4-channel filter bank (0 -> 0.50 -> 0.86 -> 0.95 -> 1.00):
-        // Preserves thriving agile 13-14L predator ecology while closing the blind/deaf (`act_sens_n == 0`) freeloader loophole!
+        // Normalized to 1.00x at full 4-channel filter bank (0 -> 0.30 -> 0.86 -> 0.95 -> 1.00):
+        // Preserves thriving agile 12-16L predator ecology while closing the blind/deaf (`act_sens_n == 0`) freeloader loophole!
         u32 n_eye_eff = abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]);
         u32 n_ear_eff = abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]);
         u32 n_chem_eff = u32(bp.counts[TK_CHEM]);
         u32 act_sens_n = day_l ? n_eye_eff : n_ear_eff;
         float sens_acuity = (act_sens_n >= 4u) ? 1.00f
-                                               : ((act_sens_n == 3u) ? 0.92f
-                                                                     : ((act_sens_n == 2u) ? 0.80f
+                                               : ((act_sens_n == 3u) ? 0.95f
+                                                                     : ((act_sens_n == 2u) ? 0.86f
                                                                                            : ((act_sens_n == 1u) ? 0.30f : 0.00f)));
         // Authentic Contact Gustation & Olfactory Toxin Rejection (TK_CHEM):
         // Chemosensory organisms detect dissolved nutrient plumes and taste-reject corrosive chem_d BEFORE ingestion!
@@ -2196,7 +2196,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         float chem_detox_m = (abl.challenge_tier >= 1u) ? ((n_chem_eff >= 2u) ? 0.68f : ((n_chem_eff == 1u) ? 0.82f : 1.16f)) : 1.0f;
         if (take_b > 0.005f) {
             atomic_add_f32(&wb.chem_b[idx], -take_b);
-            float b_sens_m = (abl.challenge_tier >= 1u) ? ((act_sens_n == 0u) ? 0.20f : (0.52f + 0.60f * sens_acuity)) : 1.0f;
+            float b_sens_m = (abl.challenge_tier >= 1u) ? ((act_sens_n == 0u) ? 0.25f : (0.56f + 0.56f * sens_acuity)) : 1.0f;
             float b_e = (abl.challenge_tier >= 2u) ? 2.4f : 6.0f; // Trisolaris-13 golden balance -> thriving pop + cognitive hunting/tools!
             float gain = take_b * b_e * digest_mul * b_sens_m * chem_forage_m;
             cr.atp += gain; cr.energy_gained += gain;
@@ -2207,7 +2207,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         if (take_c > 0.005f) {
             atomic_add_f32(&wb.chem_c[idx], -take_c);
             // Trisolaris-13 Symmetric 3x3 Symbiotic Reef Bioacoustics (v0 bass shakes loose golden reef blooms; v1/v2 disturb polyps!)
-            float sens_forage_mul = (abl.challenge_tier >= 1u) ? ((act_sens_n == 0u) ? 0.14f : (0.40f + 0.84f * sens_acuity)) : 1.0f;
+            float sens_forage_mul = (abl.challenge_tier >= 1u) ? ((act_sens_n == 0u) ? 0.18f : (0.42f + 0.82f * sens_acuity)) : 1.0f;
             bool v0_bloom_self = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band == 0u);
             bool v0_bloom_coop = (abl.challenge_tier >= 1u && wb.cell_occ[idx] >= 2u &&
                                   cr.last_heard_tick > 0u && tick <= cr.last_heard_tick + 36u && cr.last_heard_band == 0u);
@@ -2263,11 +2263,10 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                     u32 p_h = tick + cid + oi;
                     u32 p_eye = abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]);
                     u32 p_ear = abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]);
-                    float p_dthr = (abl.challenge_tier >= 2u) ? 0.38f : 0.25f;
-                    bool day_evade = (wb.light[idx] >= p_dthr) &&
+                    bool day_evade = (wb.light[idx] >= 0.26f) &&
                                      ((p_eye == 0u && ((p_h & 7u) != 0u)) || (p_eye == 1u && ((p_h & 1u) != 0u)) ||
                                       (p_eye == 2u && ((p_h & 7u) == 0u)));
-                    bool night_evade = (wb.light[idx] < p_dthr) &&
+                    bool night_evade = (wb.light[idx] < 0.26f) &&
                                        ((p_ear == 0u && ((p_h & 7u) != 0u)) || (p_ear == 1u && ((p_h & 1u) != 0u)) ||
                                         (p_ear == 2u && ((p_h & 7u) == 0u)));
                     u32 expect = u32(OBJ_PREY) | (u32(INVALID_OBJ) << 16);
@@ -2374,7 +2373,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                         bool alarm_brace = (cr.last_heard_tick > 0u && tick <= cr.last_heard_tick + 20u && cr.last_heard_band == 1u);
                         bool v1_startle = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band == 1u);
                         bool v_lure = (abl.challenge_tier >= 2u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band != 1u);
-                        u32 a_sens = (wb.light[idx] >= ((abl.challenge_tier >= 2u) ? 0.38f : 0.25f))
+                        u32 a_sens = (wb.light[idx] >= 0.26f)
                                          ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
                                          : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
                         float sens_vuln_m = (a_sens >= 4u) ? 0.84f : ((a_sens == 3u) ? 0.94f : ((a_sens == 2u) ? 1.00f : ((a_sens == 1u) ? 1.40f : 1.80f)));
@@ -2628,7 +2627,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                 if (vctx == 0u) {
                     if (dom_b == 0u) {
                         if (wb.chem_c[idx] > 0.14f) {
-                            u32 v0_sn = (wb.light[idx] >= ((abl.challenge_tier >= 2u) ? 0.38f : 0.25f))
+                            u32 v0_sn = (wb.light[idx] >= 0.26f)
                                             ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
                                             : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
                             float v0_sens_m = (v0_sn >= 2u) ? 1.00f : ((v0_sn == 1u) ? 0.65f : 0.30f);
