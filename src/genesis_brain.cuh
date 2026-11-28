@@ -654,7 +654,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
             // L0 neurons use fast awake leak (2 + slow_tau); L0 effectors keep smooth motor integration!
             i32 soma_leak_shift = (layer_idx >= 2u)
                                       ? (2 + (slow_tau ? 1 : 0))
-                                      : ((layer_idx == 1u) ? (2 + (dna.bio_params[0] & 1) + (slow_tau ? 1 : 0))
+                                      : ((layer_idx == 1u) ? (3 + (slow_tau ? 1 : 0))
                                                            : (tk_is_sensor(u8(tk)) ? 2
                                                                                    : (tk_is_effector(u8(tk)) ? (3 + (dna.bio_params[0] & 3))
                                                                                                              : (2 + (slow_tau ? 1 : 0)))));
@@ -662,8 +662,8 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                       ? (3 + (slow_tau ? 1 : 0))
                                       : (2 + (dna.bio_params[1] & 3));
             i32 soma_thresh = 700 + i32(dna.bio_params[2]) * 4;
-            i32 apic_thresh = 410 + i32(dna.bio_params[3]) * 3;
-            i32 bac_gain = clamp_i32(320 + i32(dna.bio_params[4]) * 3, 64, 600);
+            i32 apic_thresh = clamp_i32(360 + i32(dna.bio_params[3]) * 2, 220, 420);
+            i32 bac_gain = clamp_i32(320 + i32(dna.bio_params[4]) * 3, 180, 560);
             i32 adapt_inc = 24 + ((dna.bio_params[5] + 64) & 31);
             i32 seizure_ema = 72 + ((dna.bio_params[6] + 64) & 15);
 
@@ -740,10 +740,8 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                 st0_ext = (has_st0 && src_l0 != layer_idx && s_cr_slabs[src_l0] != INVALID_SLAB);
                 st0_local = (has_st0 && !st0_ext);
                 // Authentic O'Reilly & Frank (2006) + Miller & Cohen (2001) + Murray (2014) 3-Tier Prefrontal Executive Hierarchy:
-                // - L3 = Fast ACh-gated working-memory buffer (Slot 2: 24t, encodes Probe Y / Syllable 2 + Uva->HVC chaining!)
-                // - L4 = Dorsolateral PFC shielded context memory (Slot 1: 31t, holds Context X / Episode A at 0.25x shield!)
-                // - L5 = Frontopolar BA10 slow executive goal/task-set hub (Slot 0: 48-63t, distractor & mid-phrase +DA proof,
-                //   feeding 4-column Rigotti executive predictions down onto L4 & L3 while L6+ stays crisp sparse global workspace!)
+                // Cell-assembly-specific PBWM shielding keeps active context engrams protected at 0.25x while leaving
+                // silent prefrontal columns open for live sensory reversals, prey hunting & multi-item comparison!
                 pfc_shield = ((layer_idx == 4u || layer_idx == 5u) && is_pyr && st0_local && st0_stf_hold && !pfc_gate_flush);
                 if (has_st0) {
                     if (st0_local || s_l_spk[src_l0] != 0u) {
@@ -1061,7 +1059,7 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         // Authentic Brunel (2000) 1/sqrt(K_exc) Balanced-Network Scaling across ALL cortical layers (L0..L31)!
                         // Calibrated for ~10% PING sparse coding on L1..L4 and ultra-selective ~6% executive coding on L5+!
                         float p_inv = 1.0f / fast_sqrt(float(max_u32(10u, my_exc_cnt)));
-                        float b_g = (layer_idx >= 6u) ? 2.95f : ((layer_idx == 5u) ? 3.25f : ((layer_idx >= 2u) ? 4.65f : ((layer_idx == 1u) ? 4.15f : 3.10f)));
+                        float b_g = (layer_idx >= 6u) ? 2.95f : ((layer_idx == 5u) ? 3.40f : ((layer_idx >= 2u) ? 4.65f : ((layer_idx == 1u) ? 3.95f : 3.10f)));
                         float a_g = 4.5f;
                         i_basal = i32(float(raw_b) * (b_g * p_inv));
                         i_apical = abl.silence_apical ? 0 : i32(float(raw_a) * (a_g * p_inv));
@@ -1212,10 +1210,11 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                                         ? ((layer_idx == 5u) ? 115 : 125)
                                         : 0;
                     // Authentic Songbird Uva -> HVC / Broca Modulatory Vocal Efference Copy (Fee 2014 / Hickok 2012):
-                    // Strictly subthreshold alone (0 pA in silent darkness!) and bridges 6t multi-syllable phrase windows!
+                    // Strictly subthreshold alone (0 pA in silent darkness or non-vocal turns!) and bridges 1..5t phrase transitions
+                    // cleanly without bleeding across 5t inter-trial pauses, mapped onto Sperry-orthogonal L3 sub-assemblies!
                     bool uva_on = (layer_idx == 3u && is_pyr && ((st0_stf_hold && ican_self_ca) || i_basal >= 80) &&
-                                   cr.last_vocal_tick > 0u && tick > cr.last_vocal_tick && tick <= cr.last_vocal_tick + 6u);
-                    i32 uva_curr = uva_on ? (((tid % 3u) == u32(cr.last_vocal_band)) ? 210 : -125) : 0;
+                                   cr.last_vocal_tick > 0u && tick > cr.last_vocal_tick && tick <= cr.last_vocal_tick + 5u);
+                    i32 uva_curr = uva_on ? (((((tid >> 1) + (tid >> 5)) % 3u) == u32(cr.last_vocal_band)) ? 210 : -125) : 0;
                     i32 inp = is_sens ? eff_sens : (i_basal + bac_curr + ican_curr + uva_curr + sleep_drive + lman_curr + sens_curr - pv_shunt - col_shunt);
                     if (is_eff) inp += (i_apical >> 2);
                     if (d2_err_veto) {
@@ -1622,31 +1621,33 @@ AX_FN void brain_step_layer(const GenesisDNA *dnas, const BodyPhenotype *bodies,
                         // Prevents dark persistent activity in L3/L4 from recruiting un-cued bystander cells during pitch-black delays!
                         bool sens_on = (layer_idx == 3u) ? (s_l_spk[1] != 0u)
                                                          : ((layer_idx == 4u) ? (s_l_spk[2] != 0u)
-                                                                              : ((layer_idx == 5u) ? (asc_sum > 260) : true));
+                                                                              : ((layer_idx == 5u) ? (s_l_spk[3] != 0u && asc_sum > 210) : true));
                         bool got_asc = (!pfc_shield) && sens_on && (asc_sum > 140);
                         if (cs_u <= 2u && pre_rec && post_recent && (got_asc || (!pfc_shield && sens_on && ext_ach_q > 12))) {
                             s_stp = (s & 0x1fffffffu) | 0xe0000000u; // One-shot crisp encode to stp=7!
                         } else if (is_wm_hub && pfc_gate_flush) {
                             // Authentic Ca2+-Buffered 3-Tier PBWM Gating (O'Reilly & Frank 2006 / Murray 2014):
                             // - L3 (Slot 2) and -DA errors flush immediately to resting (stp=1).
-                            // - L4 (Slot 1 nimble context buffer): steps -2 on fresh +DA (7->5 -> clears cleanly on new-trial ACh!)
-                            // - L5 (Slot 0 BA10 slow executive): steps -1 on fresh +DA (7->6->5 across 3-syl phrases, ACh clears only 4!)
+                            // - L4 (Slot 1 DLPFC): steps -2 on fresh +DA (7->5 -> cleanly retires on next episode's ACh!), flushes <=5!
+                            // - L5 (Slot 0 BA10): steps -1 across 3-syl phrases (7->6->5->4), flushes <=4!
                             if (layer_idx == 4u && eff_da > 18 && cs_u >= 6u)
                                 s_stp = s - 0x40000000u;
-                            else if (layer_idx == 5u && eff_da > 18 && cs_u >= 6u)
+                            else if (layer_idx == 5u && eff_da > 18 && cs_u >= 5u)
                                 s_stp = s - 0x20000000u;
                             else
                                 s_stp = (s & 0x1fffffffu) | 0x20000000u;
                         } else if ((layer_idx == 3u && ext_ach_q > 18 && !post_recent && cs_u >= 4u) ||
-                                   (layer_idx == 4u && ext_ach_q > 18 && !post_recent && cs_u <= 5u && cs_u >= 4u) ||
-                                   (layer_idx == 5u && ext_ach_q > 18 && !post_recent && cs_u == 4u)) {
-                            // Clean timescale-matched ACh-onset overwrite: L3 immediate, L4 retires completed (4..5) episodes,
-                            // L5 BA10 keeps multi-syllable (5..7) goals distractor-shielded and retires only completed (4) episodes!
+                                   (layer_idx == 4u && ext_ach_q > 20 && cs_u <= 5u && cs_u >= 4u) ||
+                                   (layer_idx == 5u && ext_ach_q > 20 && cs_u == 4u)) {
+                            // Hasselmo (2006) Cholinergic New-Episode Retirement:
+                            // - L3 keeps active Syl-1 assemblies during Syl-2 (`!post_recent`, crucial for Cmd16 & Epi19!)
+                            // - L4 (24-31t) & L5 (24-31t BA10) shield fresh memories (6..7 / 5..7) while cleanly retiring
+                            //   completed (+DA-stepped) or aging traces even if still firing (fixes inter-trial stale bleed)!
                             s_stp = (s & 0x1fffffffu) | 0x20000000u;
                         } else {
                             // Natural Cortical Timescale Hierarchy (Murray et al. 2014 Nature Neurosci):
-                            // L2: ~12t ((tick&3)==0); L3/L4: ~24-31t ((tick&7)==0); L5 BA10: ~48-63t ((tick&15)==0)!
-                            bool stf_dec = (layer_idx == 5u) ? ((tick & 15u) == 0u) : (is_wm_hub ? ((tick & 7u) == 0u) : ((tick & 3u) == 0u));
+                            // L2: ~12t ((tick&3)==0, >=5); L3/L4/L5: ~24-31t ((tick&7)==0, >=4, L5 steps -1 on +DA across 3-syl phrases)!
+                            bool stf_dec = (layer_idx == 2u) ? ((tick & 3u) == 0u) : ((tick & 7u) == 0u);
                             if (stf_dec) {
                                 s_stp = (cs_u > 1u) ? (s - 0x20000000u) : ((cs_u == 0u) ? (s + 0x20000000u) : s);
                             } else {
@@ -2140,16 +2141,21 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         // Gives a decisive +16% spectral edge to 4-eye / 4-ear orthogonal filter banks without starving 2-receptor lineages!
         u32 n_eye_eff = abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]);
         u32 n_ear_eff = abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]);
+        u32 n_chem_eff = u32(bp.counts[TK_CHEM]);
         u32 act_sens_n = day_l ? n_eye_eff : n_ear_eff;
         float sens_acuity = (act_sens_n >= 4u) ? 1.00f
                                                : ((act_sens_n == 3u) ? 0.95f
                                                                      : ((act_sens_n == 2u) ? 0.86f
                                                                                            : ((act_sens_n == 1u) ? 0.50f : 0.00f)));
+        // Authentic Contact Gustation & Olfactory Toxin Rejection (TK_CHEM):
+        // Chemosensory organisms detect dissolved nutrient plumes and taste-reject corrosive chem_d BEFORE ingestion!
+        float chem_forage_m = (abl.challenge_tier >= 1u) ? ((n_chem_eff >= 2u) ? 1.12f : ((n_chem_eff == 1u) ? 1.05f : 0.94f)) : 1.0f;
+        float chem_detox_m = (abl.challenge_tier >= 1u) ? ((n_chem_eff >= 2u) ? 0.68f : ((n_chem_eff == 1u) ? 0.82f : 1.16f)) : 1.0f;
         if (take_b > 0.005f) {
             atomic_add_f32(&wb.chem_b[idx], -take_b);
             float b_sens_m = (abl.challenge_tier >= 1u) ? (0.56f + 0.56f * sens_acuity) : 1.0f;
             float b_e = (abl.challenge_tier >= 2u) ? 2.4f : 6.0f; // Trisolaris-13 golden balance -> thriving pop + cognitive hunting/tools!
-            float gain = take_b * b_e * digest_mul * b_sens_m;
+            float gain = take_b * b_e * digest_mul * b_sens_m * chem_forage_m;
             cr.atp += gain; cr.energy_gained += gain;
             if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(gain * 100.0f));
             cr.carry_b = clampf(cr.carry_b + take_b * 0.40f, 0.0f, 2.0f);
@@ -2165,7 +2171,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
             bool v_scare_bloom = (abl.challenge_tier >= 2u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 12u && cr.last_vocal_band != 0u);
             float v_bloom_m = v0_bloom_coop ? 2.15f : (v0_bloom_self ? 1.65f : (v_scare_bloom ? 0.80f : 1.0f));
             float c_e = (abl.challenge_tier >= 2u) ? 9.2f : 14.5f;
-            float gain = take_c * c_e * digest_mul * sens_forage_mul * v_bloom_m;
+            float gain = take_c * c_e * digest_mul * sens_forage_mul * v_bloom_m * chem_forage_m;
             cr.atp += gain; cr.energy_gained += gain;
             if (ctr) atomic_add_u64(&ctr->total_energy_x100, u64(gain * 100.0f));
             cr.carry_c = clampf(cr.carry_c + take_c * 0.35f, 0.0f, 2.0f);
@@ -2173,9 +2179,9 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         }
         if (!got_food) cr.atp -= 0.025f;
         if (take_d > 0.012f) {
-            // Symmetric Diurnal Visual / Nocturnal Acoustic Hazard Avoidance (blind/monocular by day or deaf/monaural at night!)
+            // Symmetric Diurnal Visual / Nocturnal Acoustic + Gustatory Hazard Avoidance!
             float tox_sens_m = (abl.challenge_tier >= 1u) ? (1.55f - 0.55f * sens_acuity) : 1.0f;
-            float dmg = take_d * 34.0f * (1.0f - 0.35f * bp.armor_factor) * detox_mul * tox_sens_m;
+            float dmg = take_d * 34.0f * (1.0f - 0.35f * bp.armor_factor) * detox_mul * tox_sens_m * chem_detox_m;
             cr.atp -= dmg; cr.hp -= dmg * 1.55f;
         }
         if (take_a > 0.004f && bp.counts[TK_GRASP] > 0u) {

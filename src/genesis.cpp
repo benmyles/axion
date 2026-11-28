@@ -4595,7 +4595,7 @@ int run_converse(Session &s, const std::string &load_path, const std::string &sc
 
 int command(int argc, char **argv) {
     if (argc < 3 || std::string_view(argv[2]) == "--help") {
-        std::cout << R"(Axion Genesis v49  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
+        std::cout << R"(Axion Genesis v50  |  Blackwell SM 12.0 Bare-Metal Accelerated Neocortex Spiking Mind
 
   ./axion genesis bench    [--pop N] [--substeps S] [--repeats R] [--world 256|512|1024]
   ./axion genesis evolve   [--pop N] [--max-areas L] [--max-syn-slabs S] [--world 256|512|1024] [--ticks T] [--seed S] [--challenge 0|1|2] [--controls] [--load FILE] [--save FILE] [--video FILE] [--video-title TITLE]
@@ -4635,7 +4635,7 @@ runtime-scalable 256x256 / 512x512 / 1024x1024 planet.
     if (sub == "evolve") {
         u32 pop_n = 512, max_layers = 0, max_syn_slabs = 0, world_size = WORLD_W, ticks = 2000, seed = 42, challenge = 1;
         bool controls = false;
-        std::string load_path, save_path, video_path, video_title = "AXION GENESIS V49";
+        std::string load_path, save_path, video_path, video_title = "AXION GENESIS V50";
         for (int i = 3; i < argc; ++i) {
             std::string_view f = argv[i];
             if (f == "--controls") { controls = true; continue; }
