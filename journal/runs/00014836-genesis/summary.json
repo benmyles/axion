@@ -2,37 +2,37 @@
   "command": "genesis",
   "kind": "genesis",
   "archive": "",
-  "source": "examples/genesis-v50.gen",
+  "source": "examples/genesis-v51.gen",
   "device": "NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU",
-  "title": "Axion Genesis v50 · Multi-Agent Spiking Mind",
-  "subtitle": "4 Agents · Gen 180 · 14L · 1025 neu · 12 turns · 104 peer replies",
+  "title": "Axion Genesis v51 · Multi-Agent Spiking Mind",
+  "subtitle": "4 Agents · Gen 175 · 7L · 874 neu · 12 turns · 103 peer replies",
   "family": "Sensory turns",
   "measure": 12.0,
   "unit": " turns",
   "stats": [
     [
       "Layers / Neurons",
-      "14L / 1025"
+      "7L / 874"
     ],
     [
       "E/I Cells",
-      "740E/142PV/136SST"
+      "647E/108PV/112SST"
     ],
     [
       "Organs",
-      "4E/2A/4G"
+      "2E/6A/4G"
     ]
   ],
   "narrative": [
     "Live non-LLM sensory-acoustic dialogue with 4 evolved Blackwell spiking organisms.",
-    "Lead organs: eye=4, ear=2, gland=4; live peer vocal replies=104."
+    "Lead organs: eye=2, ear=6, gland=4; live peer vocal replies=103."
   ],
   "bullets": [
     "Zero LLMs · Zero text lookup tables · Direct GPU spiking assembly, DA RPE & multi-syllable vocal readout."
   ],
-  "id": 14832,
-  "path": "runs/00014832-genesis",
-  "date": "2026-11-28T01:42:40Z",
+  "id": 14836,
+  "path": "runs/00014836-genesis",
+  "date": "2026-11-28T04:45:20Z",
   "version": 1,
   "genesis_mode": "converse"
 }

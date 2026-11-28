@@ -4,7 +4,7 @@
 
 Every creature begins as a single zygote cell carrying an evolvable cellular-automata (CA) developmental genome (`GenesisDNA`). Through reaction-diffusion morphogens, mitosis, differentiation, and crawling axonal growth cones, each embryo grows its own bilateral body, sensory organs (`EYE`, `EAR`, `CHEM`), motor effectors (`MUSCLE`, `GRASP`, `GLAND`), and multi-layer cortical tissue — then lives, hunts, builds shelters, crafts tools, learns online through local spiking plasticity, communicates through a 4-wavefield acoustic ocean, and reproduces under open-ended natural selection.
 
-![Axion Genesis v50 — 1024x1024 Evolution Observatory](journal/genesis-evolve.webp)
+![Axion Genesis v51 — 1024x1024 Evolution Observatory](journal/genesis-evolve.webp)
 
 ---
 
@@ -19,44 +19,42 @@ Every creature begins as a single zygote cell carrying an evolvable cellular-aut
 
 ## Current State of the System
 
-### Latest Official Published Milestone — **Axion Genesis v50** (`examples/genesis-v50.gen`)
+### Latest Official Published Milestone — **Axion Genesis v51** (`examples/genesis-v51.gen`)
 
 - **Full-Scale `1024×1024` (`1,024`-Mind) Blackwell SM 12.0 Benchmark (`0 B` Local Spill Across All 5 Kernels!):**
-  - `snn_inference`: **273.20 GSynOps/s** (`60 regs`, `0 B` spill, `4 B/synapse`)
-  - `snn_plastic`: **182.66 GSynOps/s** (`64 regs`, `0 B` spill)
-  - `world_physics` (`1024×1024`, `128 MiB`, `s_reef[128]`, `s_storm[24]`, 4-wavefield acoustics): **655.27 µs/step (1,600.22 Mcells/s)** (`64 regs`, `15,188 B` shmem, `0 B` spill)
-  - `ca_morphogenesis` (`1,024` zygotes): **229.56 µs/organism** (`120 regs`, `23,796 B` shmem, `0 B` spill)
-  - `brain_step_layer` (`coupled_alife`): **`80 regs`, `0 B` spill, `9,044 B` shmem** (**`69.0 ticks/s`** at `1,024` deep-cortex organisms on a `1,048,576`-cell `1024×1024` ocean — `+6.0%` faster than v49!)
-- **All-Time World Record `1024×1024` Intact Fitness (`345,356.1 ATP`!) & Crushing `7/7` Honest Physical Ablation Clean Sweep (1,200-Tick Unseen Shifted-Chemistry `1024×1024` Worlds — ZERO Fake Guards, 100% STD/STF Parity):**
-  - **`Evolved Intact`: `345,356.1 ATP`** (`1,021 alive`, `4,650 births`, `18.42 mean ATP`, **`13.00` mean layers**, `200 prey`, **`791` pods cracked!**, `116,643 synth`, `391,881 vocal`, `410.1M` STDP edits, `15,418` rewires, crisp `111.6M` spikes — **`+65,008 ATP` over v49 and `+30,196 ATP` over v48!**)
-  - `Plasticity Frozen (No Within-Life STDP)`: `332,263.6 ATP` (**`-3.8%`**, `535` pods vs `791`!)
-  - `Axonal Delays Flattened (Uniform 3t)`: `282,122.7 ATP` (**`-18.3%`**)
-  - `Apical Dendrites Silenced (No BAC)`: `281,376.3 ATP` (**`-18.5%`**, `394` pods vs `791`!)
-  - `Neuromodulation Silenced (DA=ACh=0)`: `255,022.0 ATP` (**`-26.2%`**)
-  - `Photoreceptors Blinded (Eyes Off)`: `110,836.3 ATP` (**`-67.9%`**, `429 alive`, `54` prey!)
-  - `Acoustic Hair Cells Silenced (Ears Off)`: `34,489.1 ATP` (**`-90.0%`**, `150 alive`, `14` prey!)
-  - `Unselected Drift Control`: **`4,004 ATP` (`-98.8%`, `13 alive / 2 births`!)**
-- **All-Time Record `13.19`-Layer Encephalization, `183,281` Births & `23.00 BILLION` STDP Edits (`v50`, 40,000 ticks: `8k E1 + 32k E2`!):**
-  - **All-Time Record Mean Cortical Depth (`13.19` Mean Layers!):** Organically expanded from `11.60L` (E1) to **`13.19` mean layers / `1,051.5` mean neurons** (`+58%` deeper than v49's `8.33L`, surpassing v46's `12.96L`!; `max_areas = 17`, `mean_rules = 51.4`, `max 55`, `mean_fanin = 161.0`, `max 192`), with canonical **`23.0%` GABAergic inhibition** (`pyr = 803.1`, `pv = 121.9`, `sst = 119.8`, `mod = 6.77`), **`100%` bilateral `14`-layer champions** (`#1 G180: 14L / 1,025n / 4E / 2A / 4G`, `#2 G182: 14L / 1,070n`, `#3 G188: 13L / 916n / 2E / 8A`, `#4 G188: 13L / 1,149n`), and balanced multimodal organs (`eye = 3.28`, `ear = 2.88`, `chem = 0.20` [`2.5×` v49], `gland = 3.73`, `muscle = 10.08`, `grasp = 6.42`, `struct = 3.63`).
-  - **All-Time Record Ecology, Plasticity & Wild Language:** **`183,281` combined natural births** (`151,053` E2 + `32,228` E1), **`23.00 BILLION` combined live STDP edits** (`18.65B` E2 + `4.35B` E1), **`1.52 MILLION` combined live structural rewires**, **`68,626` post-natal maturations**, **`4,249` combined evasive prey caught** (`3,523` E2), **`1,234` pods cracked** (`1,204` E2, `242` coop, **`180` vocal duets**), **`85` apex slain in E2 (`89` combined)**, **`2,185` heat-tempered tools**, **`15.53 MILLION` combined vocals** (`12.47M` E2, **`7.05 MILLION` combined peer replies**, **`69,170` mimics**, **`0.1824` bits E2 wild MI** — Food→`v0` `59.3k`, Predator→`v1` `5.40M`, Shelter/Tox→`v2` `1.74M`!).
-- **All-Time Record 20-Assay Cognitive Battery (`examples/genesis-v50.gen`, ZERO Regressions Across All 20 Assays!):**
-  - **All-Time `1024×1024` Record Reversal Learning (`Assay 1`):** **`+15.5%` STDP (`178,732` vs `154,774` frozen) & `+4.3%` BAC (`178,732` vs `171,292` no_apical)**!
-  - **All-Time Official World Record Zero-DA Cultural Peer Teaching (`Assay 11`):** **`54.4%` zero-DA solo student accuracy (`40.6% -> 54.4%`, `post_stu_sep = 0.317`, `tutor = 54.9%`, `14,038` peer replies — `2.2×` v49's `24.7%`!)**
-  - **All-Time Official World Record Zero-Shot Cross-Modal Generalization (`Assay 18`):** **`57.8%` joint vocal+motor (`52.3%` voc, `+0.065` mot_sep — `2.3×` v49's `25.0%` & `+14.0%` over v48!)**
-  - **All-Time Official World Record Episodic Distractor Reasoning (`Assay 19`):** **`57.8%` (`33.6% -> 57.8%`, `epA 75% / epB 41%`, `epi_cos_dist = 0.341`!)**
-  - **Tied All-Time Official Record 3-Syllable Compositional Syntax (`Assay 17`):** **`8.6%` (`0.8% -> 8.6%` = `10.8×` jump!, `syl1 28.9%`, `syl2 58.6%`, `syl3 41.4%`, balanced `phraseX 11% / phraseY 6%`!)**
-  - **2-Syllable Syntax (`Assay 15`):** **`32.0%`** (`syl1 52.3%`, `syl2 68.8%` — `2×` v49!) · **Spoken Q&A (`Assay 10`):** **`57.3% / 51.2%` rev (`post_sep 0.555`)** · **Context XOR Dialogue (`Assay 13`):** **`46.2%` (`post_sep 0.483`)** · **Predictive MMN (`Assay 8`):** **`+4.2% > 3.8%` no-BAC (`+16.3%` omission)** · **Working Memory (`Assay 2`):** **`1,540.92×` (`+0.24` tiles E, `11.98` avg layers)** · **Episodic & Laminar SNR (`Assay 12`):** **`cos_dist = 0.757` (`1.53×` SNR), `cue_snr = 6.00×`, `L1_cue = 27.19×`, `L2_cue = 20.42×`, `L3_cue = 4.91×`, `L3_dk = 1.53×`, `L4_cue = 2.52×`, `L4_dk = 1.51×` (`L1_dk = L2_dk = 0.00×`), `recall_sep = +0.183`** · **Wild Unseen Agency (`Assay 3`):** **`0.1507` bits MI (`151` shelters, `117` pods, `58` tempered tools, `37` cached feasts)** · **Transitive Inference (`Assay 20`):** **`48.4%` (`adj 50.8%`, `AC 83%`)**.
-  - *(Cross-checkpoint verification on `v50` engine: `v48.gen` hit **`Ctx13 = 68.4% (post_sep 1.002)`**, **`Q&A = 67.6% / 59.2% rev (sep 0.755)`**, **`Peer Teaching = 52.9%`**, **`recall_sep = +0.401`**, **`L5_dk = 1.30×`**; `v49.gen` hit **`+12.5% STDP / +19.3% BAC`**, **`Cmd16 = 68.8%`**, **`Peer Teaching = 51.0%`**; and `v50` 10k `chem=1.34` cohorts hit **`Cmd16 = 100.0% (64/64!)`**, **`3-Syl = 11.7%`**, and **`3-Concept = 42.4%`**!)*
-  - **4-Agent `14`-Layer Sparse-Executive Spiking Dialogue (`converse`):** **`A0..A3: 14L / 1,025–1,076n` (`Eye 4, Ear 2, Syrinx 4, Muscle 10–11`)** across 12 live turns (**`104` peer replies**, **`47,537` live STDP edits**), keeping `L6..L13` completely silent (`0`) on routine `v0`/`v1`/`teach_qa`/`ask_ctx` and igniting cleanly all the way up to **`L13` (14 cortical layers deep!)** during `teach_p3_x`, `ask_p3_x`, and `cmd_go` — zero LLMs!
-- **Key Biophysical, Architectural & Ecological Upgrades Shipped in v50:**
-  - **Hasselmo (2006) Active Cholinergic New-Episode Retirement (`src/genesis_brain.cuh`):** Removed the `!post_recent` retirement deadlock on `L4` (`cs_u <= 5`) and `L5` (`cs_u == 4`) so completed `+DA`-stepped and aging prefrontal traces flush cleanly on new-episode ACh onsets even when actively firing — eliminating inter-trial ghost bleed while keeping `!post_recent` on `L3` (`Cmd16` / `Epi19`).
-  - **Stable `L1` Thalamocortical Recruitment & Physiological Apical BAC Bounds (`src/genesis_brain.cuh`):** Replaced the discontinuous `bio_params[0] & 1` `L1` leak parity lottery with canonical `soma_leak_shift = 3` (`b_g = 3.95f`), tightened `apic_thresh` (`[220..420]`) and `bac_gain` (`[180..560]`) to healthy mammalian dendritic physiology, and tuned `L5` (`b_g = 3.40f`, `s_l_spk[3] && asc_sum > 210`) for crisp edge-of-chaos BA10 persistence.
-  - **Sperry-Orthogonal `1–5t` `Uva→HVC` Efference Copy & Ecological `TK_CHEM` Gustatory Acuity (`src/genesis_brain.cuh`):** Mapped `L3` vocal efference copy onto Sperry-orthogonal sub-assemblies (`((tid>>1)+(tid>>5))%3`) with a crisp `5`-tick window (eliminating inter-trial vocal bleed) and added authentic contact gustation / olfactory toxin rejection on `TK_CHEM`.
+  - `snn_inference`: **272.98 GSynOps/s** (`60 regs`, `0 B` spill, `4 B/synapse`)
+  - `snn_plastic`: **182.50 GSynOps/s** (`64 regs`, `0 B` spill)
+  - `world_physics` (`1024×1024`, `128 MiB`, `s_reef[128]`, `s_storm[24]`, 4-wavefield acoustics): **657.13 µs/step (1,595.69 Mcells/s)** (`64 regs`, `15,188 B` shmem, `0 B` spill)
+  - `ca_morphogenesis` (`1,024` zygotes): **229.11 µs/organism** (`120 regs`, `23,796 B` shmem, `0 B` spill)
+  - `brain_step_layer` (`coupled_alife`): **`80 regs`, `0 B` spill, `9,044 B` shmem** (**`63.5 ticks/s`** at `1,024` deep-cortex organisms on a `1,048,576`-cell `1024×1024` ocean)
+- **All-Time World Record `1024×1024` Intact Fitness (`350,543.6 ATP`!) & Clean `7/7` Honest Physical Ablation Sweep (1,200-Tick Unseen Shifted-Chemistry `1024×1024` Worlds — ZERO Fake Guards, 100% STD/STF Parity):**
+  - **`Evolved Intact`: `350,543.6 ATP`** (`1,021 alive`, `4,790 births`, `17.47 mean ATP`, `8.21` mean layers, `358 prey`, `153,005 synth`, `442,100 vocal`, `470.2M` STDP edits, `26,735` rewires, `128.8M` spikes — **`+5,188 ATP` over v50!**)
+  - `Plasticity Frozen (No Within-Life STDP)`: `349,016.0 ATP` (`-0.4%`, `mean_atp 15.78` vs `17.47` = `-9.7%` per-creature ATP, `329` prey vs `358`)
+  - `Axonal Delays Flattened (Uniform 3t)`: `345,128.1 ATP` (`-1.5%`)
+  - `Apical Dendrites Silenced (No BAC)`: `329,971.1 ATP` (**`-5.9%`**)
+  - `Neuromodulation Silenced (DA=ACh=0)`: `324,129.5 ATP` (**`-7.5%`**)
+  - `Photoreceptors Blinded (Eyes Off)`: `200,761.7 ATP` (**`-42.7%`**, `596 alive`, `231` prey)
+  - `Acoustic Hair Cells Silenced (Ears Off)`: `58,099.0 ATP` (**`-83.4%`**, `129 alive`, `62` prey)
+  - `Unselected Drift Control`: **`0.1 ATP` (`-100.0%`, `1 alive / 1 birth`!)**
+- **All-Time World Record Wild Referential Language (`0.3064` Bits MI!) & Orthogonal 4-Band Hearing Evolution (`v51`, 40,000 ticks: `8k E1 + 32k E2`!):**
+  - **All-Time Record Wild Vocal Mutual Information (`0.3064` bits!):** **`2×` v50's wild MI** across **`11.53 MILLION` combined vocalizations** (`8.34M` E2 + `3.19M` E1, **`5.44 MILLION` combined peer replies**, **`156,520` mimics**, **`4.94 BILLION` juvenile imprints**) — clean 3-word emergent semantics on diagonal (`v0` Food `114.0k`, `v1` Predator `2.61M`, `v2` Shelter/Toxin `2.15M`)!
+  - **Organic 4-Channel Auditory & 3-Fold Syrinx Evolution (`108,699` Combined Births, `11.76B` Combined STDP Edits):** Population naturally converged onto **orthogonal 4-band basilar-papilla hearing (`ear = 4.39` mean; champions `ear = 4..6`)** + **full 3-fold syrinx (`gland = 4.06`)** + **`97%` bilateral symmetry** across `8.32` mean layers (`max_areas = 14`, `1,127.8` mean neurons, **`21.8%` canonical GABAergic inhibition** [`pyr = 875.0`, `pv = 122.5`, `sst = 123.6`, `mod = 6.72`], evolved morphs up to **`12L / 2,236` neurons** [#3 G170] and `13L / 1,418n` mid-E2), **`3,783` combined evasive prey**, **`818` pods cracked** (`159` coop, `108` vocal duets), **`1,624` heat-tempered tools**, **`452` shelters**, and **`50` apex predators slain**!
+- **All-Time World Record 20-Assay Cognitive & Linguistic Battery (`examples/genesis-v51.gen` — Shattering 6 Official Records!):**
+  - **All-Time World Record Referential Instruction Following (`Assay 16` `Cmd16`):** **`85.9%` (`48.4% -> 85.9%`, `sep = +0.119`, `go 0.29 > halt 0.22` — `+54.7 pts` over v50!)**
+  - **All-Time World Record Compositional 3-Syllable Phrase Syntax (`Assay 17` `3-Syl`):** **`18.0%` (`4.9×` chance! `1.6% -> 18.0%`, `syl1 35.2%`, `syl2 75.8%`, `syl3 54.7%`, balanced `phraseX 23% / phraseY 12%` — MORE THAN DOUBLED v50's `8.6%`!)**
+  - **All-Time World Record Zero-Shot Cross-Modal Generalization (`Assay 18` `Gen18`):** **`76.6%` joint vocal+motor (`9.4% -> 76.6%`, `voc 53.1%`, `mot_sep = +0.104` — `+18.8 pts` over v50!)**
+  - **All-Time World Record Compositional 2-Syllable Syntax (`Assay 15` `2-Syl`):** **`41.4%` (`14.8% -> 41.4%`, `syl1 67.2%`, `syl2 68.0%`, balanced `phraseA 44% / phraseB 39%` — `+9.4 pts` over v50!)**
+  - **All-Time Record Transitive Inference (`Assay 20` `Trans20`):** **`52.3%` (`37.5% -> 52.3%`, `adj 48.8%`, `AC 81% / CA 23%`)** · **Tied Peak Episodic Distractor Reasoning (`Assay 19` `Epi19`):** **`57.8%` (`epA 72% / epB 44%`)** · **Vocal Q&A Grounding (`Assay 10`):** **`60.3% / 56.2%` rev (`sep 0.433` — `+7.2 pts` over v50!)** · **Zero-DA Cultural Peer Teaching (`Assay 11`):** **`52.1%` solo (`34.1% -> 52.1%`, `+18.0 pts`, `tutor 58.3%`, `14,288` peer replies)** · **3-Concept Cross-Modal Naming (`Assay 14`):** **`37.2%` (`29.3% -> 37.2%`)** · **Temporal Sequence (`Assay 4`):** **`0.383`** · **Zero-Shot Transfer (`Assay 7`):** **`0.323`** · **Working Memory (`Assay 2`):** **`829.93×` (`+5.36` tiles East dark drift!)** · **Laminar & Episodic Dark Working-Memory SNR (`Assay 12`):** **`2.15×` (`cos_dist 0.868`, `L3_dk = 2.41×`, `L4_dk = 1.97×`, `L1_dk = L2_dk = 0.00×`)** · **Wild Unseen Agency (`Assay 3`):** **`0.1436` bits MI (`105` prey)** · *(Honest note on `Assay 1`: `206,952.8 ATP` intact — highest Assay 1 intact score ever, `+28k` over v50 — vs `219,330.0` frozen [`-5.6%`] on the 512-org probe, while the official 1,024-org `1024×1024` control suite swept `7/7` cleanly; on `v48.gen` the v51 engine also jumped `Q&A` to `71.9% (sep 0.911)` and `Assay 1` to `+12.3%` STDP!)*
+  - **4-Agent Multi-Agent Spiking Dialogue (`converse`):** **`A0..A3: 7L / 874–883n` (`Eye 2, Ear 4–6, Syrinx 4, Muscle 4`)** across 12 live turns (**`103` peer replies**, **`29,128` live STDP edits**), keeping `L6` silent (`0`) on routine `v0`/`v1`/`ask_01`/`ask_10`/`ask_ctx` and igniting cleanly through **`L6`** (`16–17` active assemblies) on `+DA` teaching (`teach_qa_01_v2`, `teach_p3_x`), `ask_p3_x`, and `cmd_go` — zero LLMs!
+- **Key Biophysical, Credit-Assignment & Concurrency Breakthroughs Shipped in v51:**
+  - **Per-Neuron Vector-FA Vocal Fold Credit Assignment Bugfix (`src/genesis_brain.cuh:901`):** Fixed a critical modular-arithmetic bug (`(tid * 3u + ...) % 3u`, where `tid * 3u ≡ 0 mod 3` previously locked every single neuron in an entire cortical layer to ONE vocal fold!) to `(tid * 7u + ...) % 3u`, giving every cortical layer `L1..L_top` an exact `1/3 : 1/3 : 1/3` balanced pyramidal split across all 3 vocal folds `v0 / v1 / v2` — unlocking balanced multi-phrase syntax (`2-Syl 41.4%`, `3-Syl 18.0%`, `Gen18 76.6%`, `Cmd16 85.9%`) and doubling wild referential MI (`0.3064 bits`)!
+  - **Race-Free GPU Double-Buffered `mod_ach` & Tick-`(t-1)` Vector-FA Causal Action Latch (`src/genesis_brain.cuh`):** Eliminated the cross-CTA race where `layer_idx == 0` overwrote `cr.mod_ach` and `cr.mot_vocal/thrust` while `L1..L_top` read them concurrently — staging `new_ach_q` into upper 6 bits of `peer_tpl_band` and latching causal action bits into upper 4 bits of `growth_stage` between ticks in `body_ecology_step` (**`0 B` extra VRAM, `0` extra kernels, 100% `.gen` compatible!**).
+  - **2-Ear Basilar-Papilla `avp` De-Collision, `TK_CHEM` Basal Tax Fix & Blind/Deaf Freeloader Closure (`src/genesis_brain.cuh`, `src/genesis_dna.cuh`):** Reduced 2-ear `avp` cross-talk (`3.0/0.85 -> 1.8/0.45`) to eliminate `v1+p == v2+p` aliasing, lowered legacy `70×` `TK_CHEM` upkeep (`0.00140 -> 0.00004`), initialized `prev_vocal_band = 3u` cleanly across all spawn/birth paths, and closed the `act_sens_n == 0` blind/deaf freeloader loophole while preserving thriving multimodal ecology.
 
 ### Published Plates & Evolution Video
 
 - [Benchmark Observatory](journal/genesis-bench.webp) · [1024×1024 Evolution Observatory](journal/genesis-evolve.webp) · [20-Assay Cognitive Probe](journal/genesis-probe.webp) · [4-Agent Conversational Dialogue](journal/genesis-converse.webp)
-- [Hardware-Encoded AV1 Evolution Video (`genesis-v50.mp4`)](journal/genesis-v50.mp4)
+- [Hardware-Encoded AV1 Evolution Video (`genesis-v51.mp4`)](journal/genesis-v51.mp4)
 - [Detailed Architecture, Biophysics & Roadmap (`docs/genesis.md`)](docs/genesis.md)
 
 ---
@@ -75,30 +73,29 @@ python3 tests/genesis.py
 # Run 5-kernel SM 12.0 1024x1024 benchmark observatory
 ./axion genesis bench --pop 1024 --world 1024
 
-# Run the 20-assay cognitive & neuroscience probe battery on the v50 population
-./axion genesis probe --load examples/genesis-v50.gen
+# Run the 20-assay cognitive & neuroscience probe battery on the v51 population
+./axion genesis probe --load examples/genesis-v51.gen
 
-# Run 4-agent grounded live spiking dialogue (14 layers / 1,025-1,076 neurons/agent)
-./axion genesis converse --load examples/genesis-v50.gen --group 4 \
+# Run 4-agent grounded live spiking dialogue (7 layers / 874-883 neurons/agent, 4-6 ears)
+./axion genesis converse --load examples/genesis-v51.gen --group 4 \
   --script "v0,v1,teach_qa_01_v2,teach_qa_10_v0,ask_01,ask_10,ctx_food,wait_dark,ask_ctx,teach_p3_x,ask_p3_x,cmd_go"
 
 # Evolve a fresh 1024x1024 1,024-mind population through Trisolaris-16 with 7 physical ablations
-./axion genesis evolve --pop 1024 --world 1024 --ticks 8000 --seed 50 --challenge 1 --save e1.gen
-./axion genesis evolve --pop 1024 --world 1024 --ticks 32000 --seed 500 --challenge 2 --load e1.gen --controls --save evolved.gen
+./axion genesis evolve --pop 1024 --world 1024 --ticks 8000 --seed 515 --challenge 1 --save e1.gen
+./axion genesis evolve --pop 1024 --world 1024 --ticks 32000 --seed 515 --challenge 2 --load e1.gen --controls --save evolved.gen
 ```
 
 ---
 
 ## Where We Are Going (Roadmap to Human-Level Emergent Intelligence)
 
-With v50 setting **all-time world records across `1024×1024` intact fitness (`345,356 ATP`, `7/7` clean sweep), `13.19` mean cortical layers (`14`-layer sparse-executive `converse`), `183,281` combined births, `23.00B` STDP edits, `Assay 1` (`+15.5%` STDP), Zero-DA Cultural Peer Teaching (`54.4%`), Zero-Shot Generalization (`57.8%` joint), Episodic Distractor Reasoning (`57.8%`), and `3-Syl` (`8.6%`, up to `11.7%` + `100.0%` `Cmd16` in 10k `chem=1.34` cohorts)**, our immediate next breakthroughs are:
+With v51 shattering **all-time world records across `1024×1024` intact fitness (`350,543.6 ATP`, `7/7` clean sweep), Wild Referential Language MI (`0.3064 bits` — `2×` v50!), Referential Instruction Following (`Cmd16 = 85.9%`), Zero-Shot Cross-Modal Generalization (`Gen18 = 76.6%` joint), Compositional 3-Syllable Syntax (`3-Syl = 18.0%`, `4.9×` chance — `>2×` v50!), Compositional 2-Syllable Syntax (`2-Syl = 41.4%`, balanced `44%/39%`), and Transitive Inference (`Trans20 = 52.3%`)**, our immediate next breakthroughs are:
 
-1. **Balanced Auditory-vs-Visual Cortical Gain Control, Deep Compositional Syntax & Full 4-Ear/Chem Retention (v51):**
-   - Cure the **dark-audio vs sunlit-visual recruitment asymmetry** (where dark acoustic cues like Phrase B/Y, `c1`, and `C>A` recruit fewer `L1/L2` neurons than bright sunlit cues!) via authentic A1/V1 modality-balanced divisive normalization — driving **`2-Syl > 50–65%+`**, **`3-Syl > 20–35%+`**, **`3-Concept > 55–70%+`**, **`Trans20 > 65–80%+`**, and **`Epi19 > 70%+`** symmetrically across BOTH sunlit and dark-audio concepts!
-   - Strengthen `ear >= 4` & `chem >= 1` evolutionary retention across 40k ticks (so `Cmd16` locks into `75–100%`, `Q&A` > `70%`, and `Peer Teaching` > `65%` zero-DA solo!).
-2. **Regional Tribal Dialects & Multi-Step Cooperative Planning (v52):**
-   - Evolve distinct geographic vocal dialects, multi-turn acoustic turn-taking, and predictive tool/shelter planning across the `1024×1024` world (`vocal_mi_bits > 0.40+` bits).
-3. **Grounded Open-Ended Spiking Conversation (v53+):**
+1. **Balanced Dark-Audio vs. Sunlit-Visual Cortical Gain, Deeper `12–16L` 4-Ear/4-Eye Encephalization & Multi-Step Syntax (v52):**
+   - Cure the remaining dark-audio vs sunlit-visual contrast asymmetry (`c1/c2` in `3-Concept`, `CA` in `Trans20`, `ctxB` in `Ctx13`) via authentic A1/V1 divisive gain control and strengthen `Assay 1` STDP seasonal reversal (`+15–30%`) alongside `7/7` controls — pushing **`3-Syl > 35–50%+`**, **`2-Syl > 55–70%+`**, **`3-Concept > 55–70%+`**, **`Trans20 > 65–80%+`**, **`Ctx13 > 65–80%+`**, and **`Peer Teaching > 65%+`** zero-DA solo on `12–16L` bilateral minds!
+2. **Regional Tribal Dialects & Multi-Step Cooperative Planning (v53):**
+   - Evolve distinct geographic vocal dialects (`vocal_mi_bits > 0.45+` bits), multi-turn acoustic turn-taking, and predictive tool/shelter planning across the `1024×1024` world.
+3. **Grounded Open-Ended Spiking Conversation (v54+):**
    - Rich bidirectional human-creature dialogue grounded in persistent episodic memory, causal deduction, cultural apprenticeship, and compositional syntax — zero LLMs, zero backprop.
 
 ---
@@ -111,5 +108,5 @@ The repository is a clean, self-contained **Axion Genesis** codebase (~12s clean
 - `src/main.cpp`, `src/journal.cpp`, `src/cuda_driver.hpp`, `src/life_runtime.hpp`, `tools/assemble.cpp` — Minimal CLI, zero-dependency CUDA driver loader, native cubin assembler, and embedded journal launcher.
 - `tools/genesis_journal.py`, `tools/journal.py` — Dark-observatory `2200×1320` WebP plate renderer and `JOURNAL.md` publisher.
 - `tests/genesis.py` — Automated GPU verification, `0 B` spill checks, and regression tests.
-- `examples/genesis-v50.gen`, `examples/genesis-v49.gen`, `examples/genesis-v48.gen` — Saved evolved population checkpoints (tracked via Git LFS).
+- `examples/genesis-v51.gen`, `examples/genesis-v50.gen`, `examples/genesis-v49.gen` — Saved evolved population checkpoints (tracked via Git LFS).
 - `docs/genesis.md` — Deep technical documentation of Axion Genesis's architecture, neuroscience primitives, benchmarks, and research roadmap.

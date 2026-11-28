@@ -1,0 +1,39 @@
+{
+  "command": "genesis",
+  "kind": "genesis",
+  "archive": "",
+  "source": "/var/tmp/axion_v51_e1/e1.gen",
+  "device": "NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU",
+  "title": "Axion Genesis v51 · Neocortex Spiking Mind",
+  "subtitle": "1024×1024 Trisolaris-16 · 1024 slots · 32,000 ticks · Gen 182 · 76 morphs · up to 14 layers",
+  "family": "Natural births",
+  "measure": 79437.0,
+  "unit": " births",
+  "stats": [
+    [
+      "Survivors / Births",
+      "465 / 79,437"
+    ],
+    [
+      "Morphs / Gen",
+      "76 / G182"
+    ],
+    [
+      "Layers / Fan-In",
+      "8.32 (14L) · 192"
+    ]
+  ],
+  "narrative": [
+    "1024 unified CA-DNA organisms evolved 32,000 ticks (32 ticks/s): 79,437 births, Gen 182, up to 14 layers & 192-syn hubs.",
+    "Avg 1127.8 neurons (E 875.01/PV 122.45/SST 123.60): 2,976 prey, 536 pods, 447 shelters, 3,962,162 vocal replies.",
+    "Zero hardcoding: 1 zygote → multi-thousand-neuron neocortex + NMDA subunits + PV k-WTA + Burstprop/dPC (4 B/syn)."
+  ],
+  "bullets": [
+    "Spikes: 2,792,561,574, live STDP edits: 7,985,984,369."
+  ],
+  "id": 14834,
+  "path": "runs/00014834-genesis",
+  "date": "2026-11-28T04:44:01Z",
+  "version": 1,
+  "genesis_mode": "evolve"
+}
