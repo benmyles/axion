@@ -275,8 +275,11 @@ AX_FN GenesisDNA make_founder_dna(u32 seed) {
     d.rules[nr++] = make_rule(4u, 1u, -120, 120, -120, 120, OP_MITOSIS, 0x5fu, 4u, 6u,
                               rand_i8(r, 3, 5), rand_i8(r, 10, 26), 0x31u, 6u, 0x0027u);
     // Deep cortex stem(6) undergoes oSVZ transit-amplifying cranial sheet expansion AND buds Layer z+2(7)!
+    // Ohno-duplicated NOTCH2NL paralog prevents a single mutation/deletion from amputating L2..L31 down to a 2L worm!
     d.rules[nr++] = make_rule(6u, 1u, -120, 120, -120, 120, OP_MITOSIS, 0x5fu, 6u, 7u,
                               rand_i8(r, 10, 13), rand_i8(r, 4, 20), 0x31u, 5u, 0x002fu);
+    d.rules[nr++] = make_rule(6u, 1u, -120, 120, -120, 120, OP_MITOSIS, 0x5fu, 6u, 7u,
+                              rand_i8(r, 10, 13), rand_i8(r, 2, 18), 0x21u, 5u, 0x002fu);
     // Layer z+2 association/working-memory stem(7) expands across the 16x16 cortical sheet & buds deeper z+3..z+31!
     // Ohno-duplicated NOTCH2NL oSVZ radial-glia paralog prevents a single point mutation/deletion from amputating L3..L31!
     d.rules[nr++] = make_rule(7u, 1u, -120, 120, -120, 120, OP_MITOSIS, 0x5fu, 7u, 7u,
@@ -1023,8 +1026,9 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
             u32 sz;
             if (is_hvc_extra) {
                 // Dedicated HVC/Broca & Premotor multi-tract passes from L2, L3, L3 -> GLAND + MUSCLE!
-                // Concentrates corticobulbar/corticospinal readout on L3 (where L4 apical context x L2 cue x Uva vocal history
-                // form nonlinear Rigotti/Larkum XOR assemblies!) instead of a linear L4 context bypass!
+                // Concentrates corticobulbar vocal readout strictly on associative/premotor L2 & L3 where
+                // L4/L5 persistent apical context x L2 basal cue x Uva vocal history form nonlinear Rigotti/Larkum XOR
+                // assemblies — eliminating linear L4/L5 -> GLAND XOR interference across 2-Syl & 3-Syl phrases!
                 sz = (sz_ord == final_L) ? 2u : 3u;
                 if (sz >= final_L) continue;
             } else if (tz == 1u) {
@@ -1033,8 +1037,9 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                 sz = (sz_ord == 0u) ? tz : ((sz_ord <= tz) ? (sz_ord - 1u) : sz_ord);
             }
             if (tz == 0u && !is_hvc_extra) {
-                bool deep_pt = (sz == final_L - 1u) || (final_L >= 3u && sz == final_L - 2u);
-                if (sz > 5u && !deep_pt) continue;
+                // Higher association cortex L5..L31 modulates L4->L3 via descending apical feedback (preventing linear
+                // executive-goal bypasses & silent deep-tip stripes from diluting L0 vocal/motor 1/sqrt(K) gain!)
+                if (sz > 4u) continue;
             } else if (sz == 0u) {
                 if (tz > 1u) continue; // Primary sensory axons terminate in L1 primary sensory cortex (V1/A1)!
             } else if (!is_hvc_extra) {
@@ -1122,33 +1127,36 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                     // + Perin-Markram (2011 PNAS) Clustered Prefrontal Recurrent Micro-Assemblies (L2..L5 local basal STF!)
                     // + Supramodal BA10 L5 Corticobulbar Speech Readout (L5->GLAND without 60-tick tonic motor jamming on MUSCLE/GRASP!)
                     bool is_desc_mix = (is_desc_pyr && ((tz == 3u && sz == 4u) || (tz == 4u && sz == 5u) || (tz == 3u && sz == 5u)));
-                    bool is_ba10_voc = (is_corticobulb && !is_hvc_extra && sz == 5u &&
-                                        !(sz == final_L - 1u || (final_L >= 3u && sz == final_L - 2u)));
+                    // Authentic Songbird/Human Corticobulbar Funnel (Jarvis 2019 / Miller & Cohen 2001):
+                    // Vocal syrinx TK_GLAND reads strictly from associative/premotor L2 & L3 (nonlinear L4/L5_apical x L2_basal
+                    // BAC assemblies) — NEVER bypassing association cortex via raw sensory L1 (final_L>=3) or linear L4/L5!
+                    bool no_direct_voc = (is_corticobulb && ((sz == 1u && final_L >= 3u) || sz >= 4u));
                     bool is_pfc_loc = (is_local_pyr && tz >= 2u && tz <= 5u);
                     u32 n_br = is_hvc_extra ? 6u
-                                            : (is_thalamo ? (is_maturation ? 2u : 10u)
+                                            : (is_thalamo ? (is_maturation ? 2u : 12u)
                                                           : (is_maturation ? 2u
                                                                            : ((is_corticobulb && is_inh) ? 1u
-                                                                                                         : (is_ba10_voc ? 3u
-                                                                                                                        : (is_corticobulb ? 8u
-                                                                                                                                          : ((sz == tz && tz >= 1u && is_inh) ? 4u
-                                                                                                                                                                              : (is_asc_pyr ? 6u
-                                                                                                                                                                                            : (is_local_pyr ? 4u
-                                                                                                                                                                                                            : ((sz == tz) ? 4u
-                                                                                                                                                                                                                          : (is_desc_mix ? 4u
-                                                                                                                                                                                                                                         : ((dz_c >= 2u && tz > 0u) ? 1u : 3u)))))))))));
+                                                                                                         : (is_corticobulb ? 8u
+                                                                                                                           : ((sz == tz && tz >= 1u && is_inh) ? 4u
+                                                                                                                                                               : (is_asc_pyr ? 6u
+                                                                                                                                                                             : (is_local_pyr ? 4u
+                                                                                                                                                                                             : ((sz == tz) ? 4u
+                                                                                                                                                                                                           : (is_desc_mix ? 6u
+                                                                                                                                                                                                                          : ((dz_c >= 2u && tz > 0u) ? 1u : 3u))))))))));
                     u32 max_land = is_thalamo ? 8u
                                               : ((is_corticobulb && is_inh) ? 1u
                                                                             : (is_corticobulb ? 5u
                                                                                               : ((sz == tz && tz >= 1u && is_inh) ? 6u
                                                                                                                                   : (is_asc_pyr ? 6u
-                                                                                                                                                : (is_local_pyr ? 4u : 5u)))));
+                                                                                                                                                : (is_desc_mix ? 6u
+                                                                                                                                                               : (is_local_pyr ? 4u : 5u))))));
                     for (u32 br = 0; br < n_br; ++br) {
                         u32 want_col = (is_asc_pyr && br >= 4u) ? ((s_col + 1u) & 3u)
                                        : (is_desc_mix ? ((s_col + br) & 3u)
                                                       : ((is_desc_pyr && br >= 2u) ? ((s_col + 1u) & 3u) : s_col));
-                        bool is_vocal_br = (is_corticobulb && ((!is_inh && br < 3u) || is_inh));
+                        bool is_vocal_br = (is_corticobulb && !no_direct_voc && ((!is_inh && br < 3u) || is_inh));
                         bool is_mus_br = (is_corticobulb && !is_inh && br >= 3u && br < 6u);
+                        if (is_corticobulb && no_direct_voc && (is_inh || br < 3u)) continue;
                         if (is_vocal_br && n_gl == 0u) continue;
                         if (is_mus_br && n_mu == 0u) continue;
                         u32 br_max_land = (is_vocal_br || is_mus_br) ? (is_inh ? 1u : 2u) : max_land;
@@ -1277,8 +1285,8 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                                 else if (is_vocal_br) target_ok = (t_tk == TK_GLAND);
                                 else if (is_mus_br) target_ok = (t_tk == TK_MUSCLE);
                                 else if (rl.arg_a == 1u) target_ok = tk_is_neuron(t_tk);
-                                else if (rl.arg_a == 2u) target_ok = tk_is_effector(t_tk);
-                                else target_ok = (tk_is_neuron(t_tk) || tk_is_effector(t_tk));
+                                else if (rl.arg_a == 2u) target_ok = tk_is_effector(t_tk) && !(no_direct_voc && t_tk == TK_GLAND);
+                                else target_ok = (tk_is_neuron(t_tk) || (tk_is_effector(t_tk) && !(no_direct_voc && t_tk == TK_GLAND)));
 
                                 // Strict Sperry Ephrin-A/B molecular specificity onto excitatory pyramidal minicolumns
                                 // (PV+/SST+ interneurons receive ALL columns freely for cross-column competitive inhibition;
