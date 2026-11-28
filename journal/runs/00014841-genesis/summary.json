@@ -4,19 +4,19 @@
   "archive": "",
   "source": "",
   "device": "NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU",
-  "title": "Axion Genesis v52 · Blackwell GPU Benchmark",
+  "title": "Axion Genesis v53 · Blackwell GPU Benchmark",
   "subtitle": "Neocortex STF + VIP/SST Gating + Burstprop + NMDA + k-WTA · 4 B/syn · 1024x1024 world · 0 B spill",
   "family": "Synaptic throughput",
-  "measure": 272.87,
+  "measure": 272.98,
   "unit": " GSynOps/s",
   "stats": [
     [
       "Inference GSynOps/s",
-      272.9
+      273.0
     ],
     [
       "Plastic GSynOps/s",
-      182.3
+      182.5
     ],
     [
       "Bytes / synapse",
@@ -24,16 +24,16 @@
     ]
   ],
   "narrative": [
-    "Blackwell SM 12.0 sustained 272.9 GSynOps/s (17.05 Gneuron-ticks/s) across 1024 layers with 0 B spill.",
-    "Live 4-receptor Bittner BTSP + active apical BAC + 8-tick axonal delays ran at 182.3 GSynOps/s (4 B/synapse).",
-    "1024x1024 world stepped in 656.23 µs; CA+growth-cones grew 1024 bodies+brains in 235.074 ms; ALife hit 55 ticks/s."
+    "Blackwell SM 12.0 sustained 273.0 GSynOps/s (17.06 Gneuron-ticks/s) across 1024 layers with 0 B spill.",
+    "Live 4-receptor Bittner BTSP + active apical BAC + 8-tick axonal delays ran at 182.5 GSynOps/s (4 B/synapse).",
+    "1024x1024 world stepped in 655.33 µs; CA+growth-cones grew 1024 bodies+brains in 234.938 ms; ALife hit 55 ticks/s."
   ],
   "bullets": [
     "Coupled 1024x1024 world + brains + ecology = 0.056 Mcreature-ticks/s."
   ],
-  "id": 14837,
-  "path": "runs/00014837-genesis",
-  "date": "2026-11-28T05:41:04Z",
+  "id": 14841,
+  "path": "runs/00014841-genesis",
+  "date": "2026-11-28T07:15:32Z",
   "version": 1,
   "genesis_mode": "bench"
 }
