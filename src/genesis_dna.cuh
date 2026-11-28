@@ -1040,9 +1040,10 @@ AX_FN void develop_organism_block(const GenesisDNA &dna, BodyPhenotype &body, Cr
                 sz = (sz_ord == 0u) ? tz : ((sz_ord <= tz) ? (sz_ord - 1u) : sz_ord);
             }
             if (tz == 0u && !is_hvc_extra) {
-                // Higher association cortex L5..L31 modulates L4->L3 via descending apical feedback (preventing linear
-                // executive-goal bypasses & silent deep-tip stripes from diluting L0 vocal/motor 1/sqrt(K) gain!)
-                if (sz > 4u) continue;
+                // Corticospinal deep apex motor readout (L_top-1, L_top-2 -> TK_MUSCLE/GRASP) preserves full behavioral
+                // agency on 10-32L neocortices, while no_direct_voc keeps vocal TK_GLAND strictly on associative L2/L3!
+                bool deep_pt = (sz == final_L - 1u) || (final_L >= 3u && sz == final_L - 2u);
+                if (sz > 4u && !deep_pt) continue;
             } else if (sz == 0u) {
                 if (tz > 1u) continue; // Primary sensory axons terminate in L1 primary sensory cortex (V1/A1)!
             } else if (!is_hvc_extra) {

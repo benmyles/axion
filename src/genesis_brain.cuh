@@ -2157,17 +2157,17 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
     float gland_sat = clampf(float(bp.counts[TK_GLAND]) * 0.34f, 0.0f, 1.0f);
     // Honest enzymatic physiology: 3+ digestive/vocal glands sustain full 1.28x assimilation, while gland==0 lacks
     // digestive enzymes (0.45x -> naturally eliminates mute zero-gland parasites without over-selecting 6+ gland hypertrophy!)
-    float digest_mul = 0.45f + 0.83f * gland_sat;
+    float digest_mul = 0.48f + 0.80f * gland_sat;
     float detox_mul = 1.12f - 0.37f * gland_sat;
     // Authentic Vogel (1994) Hydrodynamic Boundary-Layer Ventilation:
     // Bilateral muscular swimming/ram-ventilation sweeps fresh nutrient-rich water across the mouth (1.00x);
-    // muscleless rocks (0.01x) and unsteerable 1-muscle midline rods (0.30x) deplete their stagnant boundary layer!
+    // muscleless rocks (0.01x) and unsteerable 1-muscle midline rods (0.32x) deplete their stagnant boundary layer!
     float flow_vent = (abl.challenge_tier >= 1u)
                           ? ((bp.counts[TK_MUSCLE] == 0u)
                                  ? 0.01f
                                  : ((bp.counts[TK_MUSCLE] == 1u)
-                                        ? 0.30f
-                                        : clampf(0.20f + 0.80f * clampf(bp.thrust_cap * 0.75f, 0.0f, 1.0f), 0.20f, 1.0f)))
+                                        ? 0.32f
+                                        : clampf(0.16f + 0.84f * clampf(bp.thrust_cap, 0.0f, 1.0f), 0.16f, 1.0f)))
                           : 1.0f;
     float eat_rate = (0.025f + 0.42f * bp.grasp_power) * motor_eff * flow_vent;
     if (cr.mot_eat > 0.15f) {
@@ -2178,7 +2178,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         bool got_food = false;
         // Balanced ~50/50 ocean diurnal/nocturnal sensory crossover (median water-attenuated light on Trisolaris is ~0.27 ->
         // 0.25 gives equal diurnal optical & nocturnal acoustic selection while sustaining thriving 500-850 population!)
-        bool day_l = (wb.light[idx] >= 0.26f);
+        bool day_l = (wb.light[idx] >= 0.25f);
         // Authentic Vertebrate 4-Channel Split-Optics Retina & 4-Band Basilar-Papilla Spectral Acuity:
         // Normalized to 1.00x at full 4-channel filter bank (0 -> 0.30 -> 0.86 -> 0.95 -> 1.00):
         // Preserves thriving agile 12-16L predator ecology while closing the blind/deaf (`act_sens_n == 0`) freeloader loophole!
@@ -2196,7 +2196,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         float chem_detox_m = (abl.challenge_tier >= 1u) ? ((n_chem_eff >= 2u) ? 0.68f : ((n_chem_eff == 1u) ? 0.82f : 1.16f)) : 1.0f;
         if (take_b > 0.005f) {
             atomic_add_f32(&wb.chem_b[idx], -take_b);
-            float b_sens_m = (abl.challenge_tier >= 1u) ? ((act_sens_n == 0u) ? 0.25f : (0.56f + 0.56f * sens_acuity)) : 1.0f;
+            float b_sens_m = (abl.challenge_tier >= 1u) ? ((act_sens_n == 0u) ? 0.28f : (0.56f + 0.56f * sens_acuity)) : 1.0f;
             float b_e = (abl.challenge_tier >= 2u) ? 2.4f : 6.0f; // Trisolaris-13 golden balance -> thriving pop + cognitive hunting/tools!
             float gain = take_b * b_e * digest_mul * b_sens_m * chem_forage_m;
             cr.atp += gain; cr.energy_gained += gain;
@@ -2207,7 +2207,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
         if (take_c > 0.005f) {
             atomic_add_f32(&wb.chem_c[idx], -take_c);
             // Trisolaris-13 Symmetric 3x3 Symbiotic Reef Bioacoustics (v0 bass shakes loose golden reef blooms; v1/v2 disturb polyps!)
-            float sens_forage_mul = (abl.challenge_tier >= 1u) ? ((act_sens_n == 0u) ? 0.18f : (0.42f + 0.82f * sens_acuity)) : 1.0f;
+            float sens_forage_mul = (abl.challenge_tier >= 1u) ? ((act_sens_n == 0u) ? 0.20f : (0.42f + 0.82f * sens_acuity)) : 1.0f;
             bool v0_bloom_self = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band == 0u);
             bool v0_bloom_coop = (abl.challenge_tier >= 1u && wb.cell_occ[idx] >= 2u &&
                                   cr.last_heard_tick > 0u && tick <= cr.last_heard_tick + 36u && cr.last_heard_band == 0u);
@@ -2263,10 +2263,10 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                     u32 p_h = tick + cid + oi;
                     u32 p_eye = abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]);
                     u32 p_ear = abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]);
-                    bool day_evade = (wb.light[idx] >= 0.26f) &&
+                    bool day_evade = (wb.light[idx] >= 0.25f) &&
                                      ((p_eye == 0u && ((p_h & 7u) != 0u)) || (p_eye == 1u && ((p_h & 1u) != 0u)) ||
                                       (p_eye == 2u && ((p_h & 7u) == 0u)));
-                    bool night_evade = (wb.light[idx] < 0.26f) &&
+                    bool night_evade = (wb.light[idx] < 0.25f) &&
                                        ((p_ear == 0u && ((p_h & 7u) != 0u)) || (p_ear == 1u && ((p_h & 1u) != 0u)) ||
                                         (p_ear == 2u && ((p_h & 7u) == 0u)));
                     u32 expect = u32(OBJ_PREY) | (u32(INVALID_OBJ) << 16);
@@ -2373,7 +2373,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                         bool alarm_brace = (cr.last_heard_tick > 0u && tick <= cr.last_heard_tick + 20u && cr.last_heard_band == 1u);
                         bool v1_startle = (abl.challenge_tier >= 1u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band == 1u);
                         bool v_lure = (abl.challenge_tier >= 2u && cr.last_vocal_tick > 0u && tick <= cr.last_vocal_tick + 16u && cr.last_vocal_band != 1u);
-                        u32 a_sens = (wb.light[idx] >= 0.26f)
+                        u32 a_sens = (wb.light[idx] >= 0.25f)
                                          ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
                                          : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
                         float sens_vuln_m = (a_sens >= 4u) ? 0.84f : ((a_sens == 3u) ? 0.94f : ((a_sens == 2u) ? 1.00f : ((a_sens == 1u) ? 1.40f : 1.80f)));
@@ -2628,7 +2628,7 @@ AX_FN void body_ecology_step(GenesisDNA *dnas, const BodyPhenotype *bodies, Crea
                 if (vctx == 0u) {
                     if (dom_b == 0u) {
                         if (wb.chem_c[idx] > 0.14f) {
-                            u32 v0_sn = (wb.light[idx] >= 0.26f)
+                            u32 v0_sn = (wb.light[idx] >= 0.25f)
                                             ? (abl.blind_eyes ? 0u : u32(bp.counts[TK_EYE]))
                                             : (abl.deaf_ears ? 0u : u32(bp.counts[TK_EAR]));
                             float v0_sens_m = (v0_sn >= 2u) ? 1.00f : ((v0_sn == 1u) ? 0.65f : 0.30f);
